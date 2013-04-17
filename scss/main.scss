@@ -11,16 +11,27 @@
 @import "compass";
 @import "normalize";
 @import "susy";
-@import "h5bp";
-@import "helpers";
+@import "dependencies/h5bp";
+@import "dependencies/helpers";
+@import "dependencies/grid";
+@import "dependencies/fonts"; // Only if custom fonts are used
 
 
 /*==========  Partials  ==========*/
-@import "fonts";
-@import "grid";
-@import "layout";
-//@import "typography";
-//@import "header";
-//@import "footer";
-//@import "etc";
-@import "print"; // Keep this in last position
+@import "partials/typography";
+@import "partials/forms";
+@import "partials/buttons";
+@import "partials/layout";
+@import "partials/header";
+@import "partials/footer";
+
+
+/*==========  Modules  ==========*/
+//@import "modules/spotlight";
+//@import "modules/news";
+//@import "modules/comments";
+//@import "modules/poll";
+
+
+/*==========  Print (keep in last position)  ==========*/
+@import "print";
