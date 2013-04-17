@@ -1,15 +1,25 @@
+/*====================================
+=            Main project            =
+====================================*/
+
+
+/*==========  Settings  ==========*/
 @import "settings";
 
-// Dependencies
+
+/*==========  Dependencies  ==========*/
 @import "compass";
 @import "normalize";
 @import "susy";
 @import "h5bp";
 @import "helpers";
 
-// Partials
+
+/*==========  Partials  ==========*/
 @import "fonts";
+@import "grid";
 @import "layout";
+//@import "typography";
 //@import "header";
 //@import "footer";
 //@import "etc";

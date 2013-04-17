@@ -1,0 +1,21 @@
+/*===================================================================
+=            Default Susy grid (http://susy.oddbird.net)            =
+===================================================================*/
+
+
+/*==========  Grid class  ==========*/
+.grid {
+    @include container;
+}
+
+
+/*==========  Columns  ==========*/
+@for $i from 1 through $total-columns {
+    .columns-#{$i} { 
+        @include span-columns($i, $total-columns);
+
+        &.omega {
+            @include omega;
+        }
+    }
+}
