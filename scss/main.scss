@@ -7,14 +7,17 @@
 @import "settings";
 
 
-/*==========  Dependencies  ==========*/
+/*==========  Compass Dependencies  ==========*/
 @import "compass";
 @import "normalize";
 @import "susy";
+
+
+/*==========  Custom Dependencies  ==========*/
 @import "dependencies/h5bp";
 @import "dependencies/helpers";
 @import "dependencies/grid";
-@import "dependencies/fonts"; // Only if custom fonts are used
+@import "dependencies/fonts";
 
 
 /*==========  Partials  ==========*/
@@ -24,13 +27,9 @@
 @import "partials/layout";
 @import "partials/header";
 @import "partials/footer";
-
-
-/*==========  Modules  ==========*/
-//@import "modules/spotlight";
-//@import "modules/news";
-//@import "modules/comments";
-//@import "modules/poll";
+@import "partials/notifications";
+@import "partials/spotlight";
+@import "partials/teasers";
 
 
 /*==========  Print (keep in last position)  ==========*/

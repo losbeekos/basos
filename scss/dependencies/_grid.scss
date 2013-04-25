@@ -5,17 +5,92 @@
 
 /*==========  Grid class  ==========*/
 .grid {
+	position: relative;
+	min-width: 320px;
+
     @include container;
+    @include breakpoint(tablet-and-up){
+		padding-left: pxtoem(20);
+		padding-right: pxtoem(20);
+    }
 }
 
 
 /*==========  Columns  ==========*/
 @for $i from 1 through $total-columns {
-    .columns-#{$i} { 
-        @include span-columns($i, $total-columns);
+    .columns-#{$i} {
+		margin-bottom: pxtoem(20);
 
-        &.omega {
-            @include omega;
-        }
+    	/*==========  Mobile  ==========*/
+		@include span-columns($total-columns, $total-columns);
+
+		/*==========  Tablet and up  ==========*/
+    	@include breakpoint(tablet-and-up){
+			@include span-columns($i, $total-columns);
+    		
+	        &.omega {
+	            @include omega;
+
+	            .ie8 & {
+	            	float: left !important;
+	            }
+	        }
+    	}
+
+    	/*==========  Desktop  ==========*/
+    	@include breakpoint(desktop){
+			@include span-columns($i, $total-columns);
+    	}
     }
+
+    .prefix-#{$i} {
+		@include prefix($i);
+    }
+
+    .suffix-#{$i} {
+		@include suffix($i);
+    }
+
+    .pre-#{$i} {
+    	@include pre($i)
+    }
+
+    .post-#{$i} {
+    	@include post($i)
+    }
+}
+
+/*==========  Main  ==========*/
+.main {
+	@include breakpoint(tablet){
+		@include span-columns($total-columns, $total-columns);
+		@include omega;
+	}
+}
+
+/*==========  Aside  ==========*/
+.aside {
+	margin-right: 0 !important;
+
+	.columns-12 {
+		margin-right: 0;
+
+		&:nth-child(2n) {
+			@include omega;
+		}
+	}
+
+	@include breakpoint(tablet){
+		@include span-columns($total-columns, $total-columns);
+
+		.columns-12 {
+			margin-right: 0;
+			margin-bottom: pxtoem(20);
+			@include span-columns($total-columns/2, $total-columns);
+
+			&:nth-child(2n) {
+	            @include omega;
+	        }
+		}
+	}
 }

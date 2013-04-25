@@ -1,3 +1,60 @@
-.btn {
-	
+/*==================================
+=            Typography            =
+==================================*/
+
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+	//@extend %font-museo;
+	margin-top: 0;
+
+	&.no-margin {
+		margin-bottom: 0;
+	}
+}
+
+h1, .h1 {
+	font-size: pxtoem(30);
+	margin-bottom: pxtoem(10);
+
+	@include breakpoint(tablet) {
+		font-size: pxtoem(35);
+	}
+
+	@include breakpoint(desktop-and-up) {
+		font-size: pxtoem(40);
+	}
+}
+
+h2, .h2 {
+	font-size: pxtoem(22);
+	margin-bottom: pxtoem(10);
+
+	@include breakpoint(desktop-and-up) {
+		font-size: pxtoem(26);
+	}
+}
+
+h3, .h3 {
+	font-size: pxtoem(22);
+	margin-bottom: pxtoem(10);
+}
+
+h4, .h4 {
+	font-size: pxtoem(18);
+	margin-bottom: pxtoem(8);
+}
+
+h5, .h5 {
+	font-size: pxtoem(16);
+	margin-bottom: pxtoem(8);
+}
+
+h6, .h6 {
+	font-size: pxtoem(14);
+	margin-bottom: pxtoem(5);
 }

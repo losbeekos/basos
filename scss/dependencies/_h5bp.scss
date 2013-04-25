@@ -36,6 +36,7 @@ hr {
 
 img {
     vertical-align: middle;
+    display: block;
 }
 
 fieldset {
@@ -49,10 +50,12 @@ textarea {
 }
 
 .chromeframe {
-    margin: 0.2em 0;
     background: #ccc;
     color: #000;
-    padding: 0.2em 0;
+    padding: 1em;
+    margin: 0;
+    position: relative;
+    z-index: 999;
 }
 
 /* ==========================================================================

@@ -1,11 +1,67 @@
-// Legacy support
-$legacy-support-for-ie6     : false;
-$legacy-support-for-ie7     : false;
-$legacy-support-for-ie8     : true;
-$legacy-support-for-mozilla : false;
+/*=====================================
+=            Helper mixins            =
+=====================================*/
 
-// Susy settings (980px)
-$total-columns              : 12;             // a 12-column grid
-$column-width               : 3.75em;         // each column is 3.75em wide
-$gutter-width               : 1.250em;        // 20px gutters between columns
-$grid-padding               : $gutter-width;  // grid-padding equal to gutters
+/*==========  PX to EM  ==========*/
+@function pxtoem($target){
+   @return ($target/16)+0em;
+}
+
+/*==========  Breakpoints  ==========*/
+@mixin breakpoint($point) {
+  @if $point == desktop-and-up {
+    @media (min-width: pxtoem(900)) { @content; }
+  }
+  
+  @else if $point == tablet {
+    @media (min-width: pxtoem(650)) and (max-width: pxtoem(900)) { @content; }
+  }
+
+  @else if $point == tablet-and-up {
+    @media (min-width: pxtoem(650)) { @content; }
+  }
+
+  @else if $point == mobile {
+    @media (max-width: pxtoem(649))  { @content; }
+  }
+}
+
+/*==========  Inline list  ==========*/
+@mixin inline-list($margin: pxtoem(10)) {
+	@extend .unstyled-list;
+
+	li {
+		display: inline;
+		margin-right: $margin;
+	}
+}
+
+
+
+
+/*======================================
+=            Helper classes            =
+======================================*/
+
+
+/*==========  Hide classes  ==========*/
+@include breakpoint(mobile) {
+	.hide-mobile,
+	.hide-mobile-and-tablet {
+		display: none;
+	}
+}
+
+@include breakpoint(tablet) {
+	.hide-tablet,
+	.hide-mobile-and-tablet {
+		display: none;
+	}
+}
+
+/*==========  Unstyled list  ==========*/
+.unstyled-list {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}

@@ -1,0 +1,29 @@
+/*
+@include font-face(
+	"fontello-webfont",
+	font-files("fontello.woff",
+		       "fontello.ttf",
+			   "fontello.otf"
+	),
+	"fontello.eot"
+);
+
+%font-fontello {
+	font-family: "fontello-webfont", arial, verdana;
+	font-weight: normal;
+}
+
+@include font-face(
+	"museo-500-webfont",
+	font-files("museosans-500.woff",
+		       "museosans-500.ttf",
+			   "museosans-500.otf"
+	),
+	"museosans-500.eot"
+);
+
+%font-museo {
+	font-family: "museo-500-webfont", arial, verdana;
+	font-weight: normal;
+}
+*/

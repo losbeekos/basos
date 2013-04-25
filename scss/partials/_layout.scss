@@ -1,3 +1,44 @@
+/*==============================
+=            Layout            =
+==============================*/
+
+* {
+	@include box-sizing(border-box);
+}
+
 body {
-    
+	font-family: arial, verdana, sans-serif;
+	color: #333333;
+}
+
+a {
+	color: $primary-color;
+	text-decoration: none;
+	display: inline;
+	cursor: pointer;
+
+	@include transition-property(all);
+	@include transition-duration(0.2s);
+
+	&:hover {
+		color: #333333;
+	}
+
+	&:after,
+	&:before {
+		@include transition-property(all);
+		@include transition-duration(0.2s);
+	}
+}
+
+img {
+	max-width: 100%;
+}
+
+address {
+	font-style: normal;
+}
+
+p {
+	margin-top: 0;
 }

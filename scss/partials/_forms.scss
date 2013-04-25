@@ -1,3 +1,100 @@
-form {
+.form {
+	input[type="text"],
+	input[type="password"],
+	input[type="date"],
+	input[type="datetime"],
+	input[type="datetime-local"],
+	input[type="month"],
+	input[type="week"],
+	input[type="email"],
+	input[type="number"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="time"],
+	input[type="url"],
+	textarea {
+		color: #333333;
+		padding: pxtoem(10);
+		border-radius: 3px;
+		border: 1px solid #f3f3f3;
+		box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+		outline: 0;
+
+		@include transition-property(all);
+		@include transition-duration(0.1s);
+
+		&:focus {
+			border: 1px solid #dedede;
+			box-shadow: 0 0 5px rgba(0, 0, 5px, 0.5);
+		}
+
+		&[class|=columns] {
+			margin-bottom: 0;
+		}
+	}
+
+	textarea {
+		height: pxtoem(160)
+	}
+
+	.label {
+		margin-bottom: 0;
+
+		label {
+			line-height: pxtoem(40);
+		}
+
+		@include breakpoint(tablet-and-up) {
+			text-align: right;
+		}
+	}
 	
+	.error {
+		.label {
+			color: #a60000;
+		}
+
+		input[type="text"],
+		input[type="password"],
+		input[type="date"],
+		input[type="datetime"],
+		input[type="datetime-local"],
+		input[type="month"],
+		input[type="week"],
+		input[type="email"],
+		input[type="number"],
+		input[type="search"],
+		input[type="tel"],
+		input[type="time"],
+		input[type="url"],
+		textarea {
+			border-color: #a60000;
+		}
+	}
+
+	.actions {
+		@include breakpoint(tablet-and-up) {
+			@include pre(5);
+		}
+	}
+}
+
+::-webkit-input-placeholder {
+   color: $placeholder-color;
+}
+
+:-moz-placeholder {
+   color: $placeholder-color;  
+}
+
+::-moz-placeholder {
+   color: $placeholder-color;  
+}
+
+:-ms-input-placeholder {  
+   color: $placeholder-color;  
+}
+
+.placeholder {  
+   color: $placeholder-color;  
 }

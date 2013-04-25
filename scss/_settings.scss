@@ -11,7 +11,15 @@ $legacy-support-for-mozilla : false;
 
 
 /*==========  Susy settings (980px)  ==========*/
-$total-columns              : 12;             // a 12-column grid
-$column-width               : 3.75em;         // each column is 3.75em wide
-$gutter-width               : 1.250em;        // 20px gutters between columns
-$grid-padding               : $gutter-width;  // grid-padding equal to gutters
+$total-columns : 12;             // a 12-column grid
+$column-width  : 4.95em;         // each column is 3.75em wide
+$gutter-width  : 1.250em;        // 20px gutters between columns
+$grid-padding  : 0.625em;        // 10px grid padding
+
+
+/*==========  Project settings  ==========*/
+$project-base-font-size    : 1em;     // 16px
+$white                     : #ffffff;
+$primary-color             : #0659a4;
+$primary-header-text-color : #94adc4;
+$placeholder-color         : #94adc4;

@@ -11,6 +11,12 @@
         <meta name="viewport" content="width=device-width">
 
         <link rel="stylesheet" href="css/main.css">
+
+        <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png">
+        <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png">
+        <link rel="shortcut icon" href="favicon.ico">
         
          <?php
          /**
@@ -22,14 +28,17 @@
          **/
          ?>
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <!--[if (gte IE 6)&(lte IE 8)]>
+            <script src="js/plugins/selectivizr/selectivizr.min.js"></script>
+        <![endif]-->
     </head>
     <body>
         <!--[if lt IE 8]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
         <![endif]-->
 
-        <div id="container">
-            <header id="header">
+        <div class="container">
+            <header class="header">
                 <a class="logo" href="/"><img src="img/logo.png" alt="" /></a>
                 <nav class="nav-primary">
                     <ul>
@@ -40,14 +49,14 @@
                 </nav>
             </header>
 
-            <div id="content">
-                <div class="grid">
+            <div class="content">
+                <section class="grid">
                     
-                </div>
+                </section>
             </div>
 
-            <footer id="footer">
-                <nav class="nav-primary">
+            <footer class="footer">
+                <nav class="nav-footer">
                     <ul>
                         <li class="active"><a href="#">link</a></li>
                         <li><a href="#">link</a></li>
@@ -58,9 +67,6 @@
             </footer>
         </div>
 
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
-        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.1.js"><\/script>')</script>
-        <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
 
         <?php

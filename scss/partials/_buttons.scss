@@ -1,3 +1,43 @@
+.btn-holder {
+	text-align: center;
+	margin-top: pxtoem(40);
+}
+
 .btn {
-	
+	display: inline-block;
+	color: $white;
+	border-radius: 3px;
+	box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.2);
+	text-shadow: 1px 0 1px rgba(0, 0, 0, 0.5);
+	background-color: #0659a4;
+	border: 0;
+	outline: 0;
+	@include background-image(linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)));
+	@include transition-property(all);
+	@include transition-duration(0.2s);
+
+	&:hover {
+		color: $white;
+		background-color: #064d8d;
+		box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.5);
+	}
+
+	&:active,
+	&:focus {
+		box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.5);
+		@include transition-duration(0.05s);
+	}
+
+	&.small {
+		padding: pxtoem(8) pxtoem(30);
+	}
+
+	&.medium {
+		padding: pxtoem(15) pxtoem(40);
+
+		@include breakpoint(tablet-and-up) {
+			padding: pxtoem(18) pxtoem(50);
+			font-size: pxtoem(18);
+		}
+	}
 }
