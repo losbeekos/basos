@@ -1,4 +1,4 @@
-# Default starting point
+# Starting point
 Default starting point for new projects based on **[HTML5 Boilerplate](http://html5boilerplate.com)**.
 A custom H5BP build is used which includes:
 
@@ -15,6 +15,10 @@ These plugins are integrated in the build and get updated every now and then.
 * **[fastclick](https://github.com/ftlabs/fastclick)** - Polyfill to remove click delays on browsers with touch UIs.
 * **[selectivizr](https://github.com/keithclark/selectivizr)** - selectivizr is a JavaScript utility that emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8.
 * **[jQuery.placeholder](https://github.com/mathiasbynens/jquery-placeholder)** - A jQuery plugin that enables HTML5 placeholder behavior for browsers that aren’t trying hard enough yet.
+
+
+# Additional plugins
+Additional plugins are listed here which you can use.
 
 ## Javascript plugins
 Raw javascript plugins.
