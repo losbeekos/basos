@@ -2,10 +2,10 @@
 Default starting point for new projects based on **[HTML5 Boilerplate](http://html5boilerplate.com)**.
 A custom H5BP build is used which includes:
 
-_NOTE: When you optimize your project you should **[rebuild Modernizr](http://modernizr.com/download)** with only the test you need, so you have optimal performance._
-
 * **[respond](https://github.com/scottjehl/Respond)** - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more) 
 * **[modernizr](http://modernizr.com/)** - Library that detects HTML5 and CSS3 features in the user’s browser.
+
+_NOTE: When you optimize your project you should **[rebuild Modernizr](http://modernizr.com/download)** with only the test you need, so you have optimal performance._
 
 #### Default Compass plugins
 * **[normalize](http://necolas.github.io/normalize.css)**
@@ -22,7 +22,7 @@ These plugins are integrated in the build and get updated every now and then.
 Additional plugins are listed here which you can use.
 
 #### Javascript plugins
-Raw javascript plugins.
+Vanilla javascript plugins.
 
 * **[swipe](https://github.com/bradbirdsall/Swipe)** - Swipe is the most accurate touch slider.
 * **[typeahead](https://github.com/twitter/typeahead.js)** - A fast and fully-featured autocomplete library.
@@ -34,7 +34,7 @@ If you're looking for a plugin and it's not on this list look **[here](http://ww
 * **[jQuery.fancybox2](https://github.com/fancyapps/fancyBox)** - fancyBox is a tool that offers a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages.
 * **[jQuery.fitvids](https://github.com/davatron5000/FitVids.js)** - A lightweight, easy-to-use jQuery plugin for fluid width video embeds.
 * **[jQuery.select2](https://github.com/ivaynberg/select2)** - Select2 is a jQuery based replacement for select boxes. It supports searching, remote data sets, and infinite scrolling of results.
-* **[jQuery.avgrud](https://github.com/voronianski/jquery.avgrund.js)** - Avgrund is a jQuery plugin with new modal concept for popups.
+* **[jQuery.avgrund](https://github.com/voronianski/jquery.avgrund.js)** - Avgrund is a jQuery plugin with new modal concept for popups.
 * **[jQuery.alertify](https://github.com/fabien-d/alertify.js)** - Alert/Notification System.
 * **[jQuery.iCheck](https://github.com/damirfoy/iCheck/)** - Highly customizable checkboxes and radio buttons.
 * **[jQuery.hook](https://github.com/jordansinger/Hook.js)** - Pull to refresh. For the web.
@@ -45,3 +45,6 @@ If you're looking for a plugin and it's not on this list look **[here](http://ww
 * **[jQuery.swipebox](https://github.com/brutaldesign/swipebox)** - A touchable jQuery lightbox.
 * **[jQuery.fineuploader](https://github.com/Widen/fine-uploader)** - Multiple file upload plugin with progress-bar, drag-and-drop.
 * **[jQuery.parsley](https://github.com/guillaumepotier/Parsley.js/)** - Validate your forms, frontend, without writting a single line of javascript!
+
+# How to use
+	$ git clone git@github.com:losbeekos/default-project.git newprojectname
