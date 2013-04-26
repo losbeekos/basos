@@ -5,7 +5,7 @@ A custom H5BP build is used which includes:
 * **[respond](https://github.com/scottjehl/Respond)** - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more) 
 * **[modernizr](http://modernizr.com/)** - Library that detects HTML5 and CSS3 features in the user’s browser.
 
-#### Default Compass plugins:
+#### Default Compass plugins
 * **[normalize](http://necolas.github.io/normalize.css)**
 * **[susy](http://susy.oddbird.net)**
 
@@ -15,8 +15,6 @@ These plugins are integrated in the build and get updated every now and then.
 * **[fastclick](https://github.com/ftlabs/fastclick)** - Polyfill to remove click delays on browsers with touch UIs.
 * **[selectivizr](https://github.com/keithclark/selectivizr)** - selectivizr is a JavaScript utility that emulates CSS3 pseudo-classes and attribute selectors in Internet Explorer 6-8.
 * **[jQuery.placeholder](https://github.com/mathiasbynens/jquery-placeholder)** - A jQuery plugin that enables HTML5 placeholder behavior for browsers that aren’t trying hard enough yet.
-
-***
 
 # Additional plugins
 Additional plugins are listed here which you can use.
