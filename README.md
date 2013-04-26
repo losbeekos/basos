@@ -1,5 +1,5 @@
 # Default starting point
-Default starting point for new projects based on HTML5 Boilerplate.
+Default starting point for new projects based on **[HTML5 Boilerplate](http://html5boilerplate.com)**.
 A custom H5BP build is used which includes:
 
 * **[respond](https://github.com/scottjehl/Respond)** - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more) 
@@ -9,7 +9,7 @@ A custom H5BP build is used which includes:
 * **[normalize](http://necolas.github.io/normalize.css)**
 * **[susy](http://susy.oddbird.net)**
 
-## Default (Javascript/jQuery) plugins
+## Default Javascript & jQuery plugins
 These plugins are integrated in the build and get updated every now and then.
 
 * **[fastclick](https://github.com/ftlabs/fastclick)** - Polyfill to remove click delays on browsers with touch UIs.
