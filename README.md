@@ -1,10 +1,15 @@
 # Default starting point
-Default starting point for new projects based on HTML5 Boilerplate, and making use of the awesome Susy grid.
+Default starting point for new projects based on HTML5 Boilerplate.
+A custom H5BP build is used which includes:
 
-# Plugins
-A set of plugins that come within the build, or which you can use/download.
+* **[respond](https://github.com/scottjehl/Respond)** - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more) 
+* **[modernizr](http://modernizr.com/)** - Library that detects HTML5 and CSS3 features in the user’s browser.
 
-## Standard (Javascript/jQuery) plugins
+## Default Compass plugins:
+* **[normalize](http://necolas.github.io/normalize.css)**
+* **[susy](http://susy.oddbird.net)**
+
+## Default (Javascript/jQuery) plugins
 These plugins are integrated in the build and get updated every now and then.
 
 * **[fastclick](https://github.com/ftlabs/fastclick)** - Polyfill to remove click delays on browsers with touch UIs.
