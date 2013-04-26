@@ -5,11 +5,11 @@ A custom H5BP build is used which includes:
 * **[respond](https://github.com/scottjehl/Respond)** - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more) 
 * **[modernizr](http://modernizr.com/)** - Library that detects HTML5 and CSS3 features in the user’s browser.
 
-## Default Compass plugins:
+__Default Compass plugins:__
 * **[normalize](http://necolas.github.io/normalize.css)**
 * **[susy](http://susy.oddbird.net)**
 
-## Default Javascript & jQuery plugins
+__Default Javascript & jQuery plugins__
 These plugins are integrated in the build and get updated every now and then.
 
 * **[fastclick](https://github.com/ftlabs/fastclick)** - Polyfill to remove click delays on browsers with touch UIs.
@@ -21,13 +21,13 @@ These plugins are integrated in the build and get updated every now and then.
 # Additional plugins
 Additional plugins are listed here which you can use.
 
-## Javascript plugins
+__Javascript plugins__
 Raw javascript plugins.
 
 * **[swipe](https://github.com/bradbirdsall/Swipe)** - Swipe is the most accurate touch slider.
 * **[typeahead](https://github.com/twitter/typeahead.js)** - A fast and fully-featured autocomplete library.
 
-## jQuery plugins
+__jQuery plugins__
 If you're looking for a plugin and it's not on this list look **[here](http://www.unheap.com)**.
 
 * **[jQuery.cycle2](https://github.com/malsup/cycle2)** - Cycle2 is a versatile slideshow plugin for jQuery built around ease-of-use.
