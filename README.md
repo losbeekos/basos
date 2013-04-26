@@ -2,7 +2,7 @@
 Default starting point for new projects based on **[HTML5 Boilerplate](http://html5boilerplate.com)**.
 A custom H5BP build is used which includes:
 
-_NOTE: When you optimize your project you should **[rebuild Modernizr](http://modernizr.com/download) with only the test you need, so you have optimal performance._
+_NOTE: When you optimize your project you should **[rebuild Modernizr](http://modernizr.com/download)** with only the test you need, so you have optimal performance._
 
 * **[respond](https://github.com/scottjehl/Respond)** - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more) 
 * **[modernizr](http://modernizr.com/)** - Library that detects HTML5 and CSS3 features in the user’s browser.
