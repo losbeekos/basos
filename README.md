@@ -22,8 +22,8 @@ These plugins are integrated in the build and get updated every now and then.
 Additional plugins are listed here which you can use.
 
 #### Javascript plugins
-Vanilla javascript plugins.
 
+* **[hammer](http://eightmedia.github.io/hammer.js)** - Library for multi-touch gestures.
 * **[swipe](https://github.com/bradbirdsall/Swipe)** - Swipe is the most accurate touch slider.
 * **[typeahead](https://github.com/twitter/typeahead.js)** - A fast and fully-featured autocomplete library.
 
