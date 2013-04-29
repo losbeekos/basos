@@ -48,3 +48,7 @@ If you're looking for a plugin and it's not on this list look **[here](http://ww
 
 # How to use
 	$ git clone git@github.com:losbeekos/default-project.git newprojectname
+
+# Tools
+
+* **[jQuery Builder](http://projects.jga.me/jquery-builder/)** - jQuery Builder lets you easily build a custom version of jQuery that just includes the modules you need.
