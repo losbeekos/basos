@@ -41,7 +41,7 @@
             <header class="header">
                 <a class="logo" href="/"><img src="img/logo.png" alt="" /></a>
                 <nav class="nav-primary">
-                    <ul>
+                    <ul class="inline-list">
                         <li class="active"><a href="#">link</a></li>
                         <li><a href="#">link</a></li>
                         <li><a href="#">link</a></li>
@@ -50,14 +50,170 @@
             </header>
 
             <div class="content">
-                <section class="grid">
+                <section>
+                    <h1>Grid</h1>
+                    <div class="grid clearfix">
+                        <div class="columns-12 omega" style="background: rgba(0,0,0,0.1)">column 12</div>
+                    </div>
+                    <div class="grid clearfix">
+                        <div class="columns-6" style="background: rgba(0,0,0,0.1)">column 6</div>
+                        <div class="columns-6 omega" style="background: rgba(0,0,0,0.1)">column 6</div>
+                    </div>
+                    <div class="grid clearfix">
+                        <div class="columns-4" style="background: rgba(0,0,0,0.1)">column 4</div>
+                        <div class="columns-8 omega" style="background: rgba(0,0,0,0.1)">column 8</div>
+                    </div>
+                    <div class="grid clearfix">
+                        <div class="columns-2" style="background: rgba(0,0,0,0.1)">column 2</div>
+                        <div class="columns-10 omega" style="background: rgba(0,0,0,0.1)">column 10</div>
+                    </div>
+                    <div class="grid clearfix">
+                        <div class="columns-7" style="background: rgba(0,0,0,0.1)">column 7</div>
+                        <div class="columns-5 omega" style="background: rgba(0,0,0,0.1)">column 5</div>
+                    </div>
+                    <div class="grid clearfix">
+                        <div class="columns-9" style="background: rgba(0,0,0,0.1)">column 9</div>
+                        <div class="columns-3 omega" style="background: rgba(0,0,0,0.1)">column 3</div>
+                    </div>
+                </section>
+
+                <section>
+                    <h1>Buttons</h1>
+                    <h2>Default</h2>
+                    <a class="btn small" href="#">button small</a>
+                    <a class="btn medium" href="#">button medium</a>
+                    <a class="btn large" href="#">button large</a>
                     
+                    <h2>Primary</h2>
+                    <a class="btn primary small" href="#">button small</a>
+                    <a class="btn primary medium" href="#">button medium</a>
+                    <a class="btn primary large" href="#">button large</a>
+
+                    <h2>Secondary</h2>
+                    <a class="btn secondary small" href="#">button small</a>
+                    <a class="btn secondary medium" href="#">button medium</a>
+                    <a class="btn secondary large" href="#">button large</a>
+
+                    <h2>Tertiary</h2>
+                    <a class="btn tertiary small" href="#">button small</a>
+                    <a class="btn tertiary medium" href="#">button medium</a>
+                    <a class="btn tertiary large" href="#">button large</a>
+
+                    <h2>Quadiary</h2>
+                    <a class="btn quadiary small" href="#">button small</a>
+                    <a class="btn quadiary medium" href="#">button medium</a>
+                    <a class="btn quadiary large" href="#">button large</a>
+                </section>
+
+                <section>
+                    <h1>Notifications</h1>
+                    <p><i>Note: Download proper icons on <a href="http://www.fontello.com">fontello.com</a> and change the icons in the notifications partial.</i></p>
+                    <div class="notification error">
+                        <ul>
+                            <li>Vul een e-mailadres in</li>
+                            <li>Eventueel nog een andere error</li>
+                            <li>Nog een error</li>
+                        </ul>
+                    </div>
+                    <div class="notification success">
+                        <ul>
+                            <li>Vul een e-mailadres in</li>
+                            <li>Eventueel nog een andere error</li>
+                            <li>Nog een error</li>
+                        </ul>
+                    </div>
+                    <div class="notification">
+                        <ul>
+                            <li>Vul een e-mailadres in</li>
+                            <li>Eventueel nog een andere error</li>
+                            <li>Nog een error</li>
+                        </ul>
+                    </div>
+                </section>
+
+                <section>
+                    <h1>Form</h1>
+                    <div class="form clearfix">
+                        <form>
+                            <fieldset>
+                                <legend>Persoonlijke gegevens</legend>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Naam *</label>
+                                    </div>
+                                    <div class="columns-7 omega form-input">
+                                        <input class="columns-10" type="text" placeholder="" />
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Adres</label>
+                                    </div>
+                                    <div class="columns-7 omega form-input">
+                                        <input class="columns-10" type="text" placeholder="" />
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Postcode</label>
+                                    </div>
+                                    <div class="columns-7 omega form-input">
+                                        <input class="columns-3" type="text" placeholder="" />
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Woonplaats</label>
+                                    </div>
+                                    <div class="columns-7 omega form-input">
+                                        <input class="columns-10" type="text" placeholder="" />
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix error">
+                                    <div class="columns-5 form-label">
+                                        <label>Telefoonnummer</label>
+                                    </div>
+                                    <div class="columns-7 omega form-input">
+                                        <input class="columns-10" type="tel" placeholder="0123456789" />
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>E-mailadres *</label>
+                                    </div>
+                                    <div class="columns-7 omega form-input">
+                                        <input class="columns-10" type="email" placeholder="jouwnaam@adres.nl" />
+                                    </div>
+                                </div>
+                            </fieldset>
+                            <div class="form-row clearfix">
+                                <div class="columns-5 form-label">
+                                    <label>Disabled *</label>
+                                </div>
+                                <div class="columns-7 omega form-input">
+                                    <input class="columns-10" type="email" placeholder="disabled.." disabled="disabled" />
+                                </div>
+                            </div>
+                            <div class="form-row clearfix">
+                                <div class="columns-5 form-label">
+                                    <label>Vraag / opmerking</label>
+                                </div>
+                                <div class="columns-7 omega form-input">
+                                    <textarea class="columns-12 omega" cols="30" rows="10"></textarea>
+                                </div>
+                            </div>
+                            <p></p>
+                            <div class="form-actions">
+                                <input class="btn primary medium" type="submit" value="verzenden" />
+                            </div>
+                        </form>
+                    </div>
                 </section>
             </div>
 
             <footer class="footer">
                 <nav class="nav-footer">
-                    <ul>
+                    <ul class="inline-list">
                         <li class="active"><a href="#">link</a></li>
                         <li><a href="#">link</a></li>
                         <li><a href="#">link</a></li>

@@ -56,7 +56,7 @@ Modernizr.load([
 	{
 	    test : Modernizr.input.placeholder,
 	    nope : 'js/plugins/jquery.placeholder/jquery.placeholder.min.js'
-	}
+	},
 
 
 	/*==========  jQuery  ==========*/
@@ -97,6 +97,7 @@ Modernizr.load([
 
 				,example: {
 				    init: function(){
+				    	/*
 						var self = this;
 
 						if(self.fancybox.length > 0){
@@ -105,6 +106,7 @@ Modernizr.load([
 									
 								});
 						}
+						*/
 				    }
 				}
 

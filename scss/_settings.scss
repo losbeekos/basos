@@ -10,16 +10,35 @@ $legacy-support-for-ie8     : true;
 $legacy-support-for-mozilla : false;
 
 
-/*==========  Susy settings (980px)  ==========*/
-$total-columns : 12;             // a 12-column grid
-$column-width  : 4.95em;         // each column is 3.75em wide
-$gutter-width  : 1.250em;        // 20px gutters between columns
-$grid-padding  : 0.625em;        // 10px grid padding
-
-
-/*==========  Project settings  ==========*/
+/*==========  Project  ==========*/
 $project-base-font-size    : 1em;     // 16px
 $white                     : #ffffff;
 $primary-color             : #0659a4;
 $primary-header-text-color : #94adc4;
 $placeholder-color         : #94adc4;
+
+
+/*==========  Container  ==========*/
+$container-min-width              : 20em;      // 320px
+$container-max-width              : 80em;      // 1280px
+$container-margin                 : 0 auto;
+$container-padding                : 0 0.625em; // 10px (mobile first)
+$container-tablet-padding         : 0 1.25em;  // 20px
+$container-desktop-and-up-padding : 0 2.5em;   // 20px
+
+
+/*==========  Susy grid  ==========*/
+$total-columns : 12;      // a 12-column grid
+$column-width  : 10em;    // width is controlled with container max-width setting, so a high value is set here.
+$gutter-width  : 1.250em; // 20px gutters between columns
+$grid-padding  : 0;       // 10px grid padding
+
+
+/*==========  Button colors  ==========*/
+// If you need more customization,
+// dive into the buttons partial.
+$btn-default-bg-color   : #222222;
+$btn-primary-bg-color   : #0659a4;
+$btn-secondary-bg-color : #177f12;
+$btn-tertiary-bg-color  : #925900;
+$btn-quadiary-bg-color  : #920000;

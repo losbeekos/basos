@@ -1,4 +1,19 @@
-.form {
+form {
+	margin: 0 0 pxtoem(40) 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: pxtoem(20);
+  font-size: pxtoem(20);
+  line-height: 2em;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+$input-selectors: '
 	input[type="text"],
 	input[type="password"],
 	input[type="date"],
@@ -12,70 +27,60 @@
 	input[type="tel"],
 	input[type="time"],
 	input[type="url"],
-	textarea {
-		color: #333333;
-		padding: pxtoem(10);
-		border-radius: 3px;
-		border: 1px solid #f3f3f3;
-		box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
-		outline: 0;
+	textarea
+';
 
-		@include transition-property(all);
-		@include transition-duration(0.1s);
+#{$input-selectors}{
+	color: #333333;
+	padding: pxtoem(10);
+	border-radius: 3px;
+	border: 1px solid #f3f3f3;
+	box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+	outline: 0;
 
-		&:focus {
-			border: 1px solid #dedede;
-			box-shadow: 0 0 5px rgba(0, 0, 5px, 0.5);
-		}
+	@include transition-property(all);
+	@include transition-duration(0.2s);
 
-		&[class|=columns] {
-			margin-bottom: 0;
-		}
+	&:focus {
+		border: 1px solid #cccccc;
+		box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 	}
 
-	textarea {
-		height: pxtoem(160)
+	&:disabled {
+		background-color: #f1f1f1;
+		cursor: not-allowed;
+	}
+}
+
+textarea {
+	height: pxtoem(160)
+}
+
+.form-label {
+	margin-bottom: 0;
+
+	label {
+		line-height: pxtoem(40);
 	}
 
-	.label {
-		margin-bottom: 0;
+	@include breakpoint(tablet-and-up) {
+		text-align: right;
+	}
+}
 
-		label {
-			line-height: pxtoem(40);
-		}
-
-		@include breakpoint(tablet-and-up) {
-			text-align: right;
-		}
+.error {
+	.form-label {
+		color: #a60000;
 	}
 	
-	.error {
-		.label {
-			color: #a60000;
-		}
-
-		input[type="text"],
-		input[type="password"],
-		input[type="date"],
-		input[type="datetime"],
-		input[type="datetime-local"],
-		input[type="month"],
-		input[type="week"],
-		input[type="email"],
-		input[type="number"],
-		input[type="search"],
-		input[type="tel"],
-		input[type="time"],
-		input[type="url"],
-		textarea {
-			border-color: #a60000;
-		}
+	#{$input-selectors}{
+		border-color: #a60000;
 	}
+}
 
-	.actions {
-		@include breakpoint(tablet-and-up) {
-			@include pre(5);
-		}
+.form-actions {
+	@include breakpoint(tablet-and-up) {
+		@include pre(5);
 	}
 }
 

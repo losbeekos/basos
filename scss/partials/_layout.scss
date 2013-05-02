@@ -42,3 +42,18 @@ address {
 p {
 	margin-top: 0;
 }
+
+.container {
+	max-width: $container-max-width;
+	min-width: $container-min-width;
+	padding: $container-padding;
+	margin: $container-margin;
+
+	@include breakpoint(tablet) {
+		padding: $container-tablet-padding;
+	}
+
+	@include breakpoint(desktop-and-up) {
+		padding: $container-desktop-and-up-padding;
+	}
+}

@@ -7,25 +7,76 @@
 	display: inline-block;
 	color: $white;
 	border-radius: 3px;
+	background-color: $btn-default-bg-color;
 	box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.2);
 	text-shadow: 1px 0 1px rgba(0, 0, 0, 0.5);
-	background-color: #0659a4;
 	border: 0;
 	outline: 0;
-	@include background-image(linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)));
+	@include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));
 	@include transition-property(all);
 	@include transition-duration(0.2s);
 
 	&:hover {
 		color: $white;
-		background-color: #064d8d;
-		box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.5);
+		background-color: lighten($btn-default-bg-color, 5%);
 	}
 
 	&:active,
 	&:focus {
-		box-shadow: inset 2px 2px 0 rgba(0, 0, 0, 0.5);
+		box-shadow: 0 0 30px rgba($btn-default-bg-color, 0.3);
 		@include transition-duration(0.05s);
+	}
+
+	&.primary {
+		background-color: $btn-primary-bg-color;
+
+		&:hover {
+			background-color: lighten($btn-primary-bg-color, 5%);
+		}
+			
+		&:active,
+		&:focus {
+			box-shadow: 0 0 30px rgba($btn-primary-bg-color, 0.3);
+		}
+	}
+
+	&.secondary {
+		background-color: $btn-secondary-bg-color;
+
+		&:hover {
+			background-color: lighten($btn-secondary-bg-color, 5%);
+		}
+
+		&:active,
+		&:focus {
+			box-shadow: 0 0 30px rgba($btn-secondary-bg-color, 0.3);
+		}
+	}
+
+	&.tertiary {
+		background-color: $btn-tertiary-bg-color;
+
+		&:hover {
+			background-color: lighten($btn-tertiary-bg-color, 5%);
+		}
+
+		&:active,
+		&:focus {
+			box-shadow: 0 0 30px rgba($btn-tertiary-bg-color, 0.3);
+		}
+	}
+
+	&.quadiary {
+		background-color: $btn-quadiary-bg-color;
+
+		&:hover {
+			background-color: lighten($btn-quadiary-bg-color, 5%);
+		}
+
+		&:active,
+		&:focus {
+			box-shadow: 0 0 30px rgba($btn-quadiary-bg-color, 0.3);
+		}
 	}
 
 	&.small {
@@ -33,6 +84,15 @@
 	}
 
 	&.medium {
+		padding: pxtoem(12) pxtoem(35);
+
+		@include breakpoint(tablet-and-up) {
+			padding: pxtoem(14) pxtoem(35);
+			font-size: pxtoem(17);
+		}
+	}
+
+	&.large {
 		padding: pxtoem(15) pxtoem(40);
 
 		@include breakpoint(tablet-and-up) {
