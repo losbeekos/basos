@@ -30,6 +30,7 @@ Additional plugins are listed here which you can use.
 #### jQuery plugins
 If you're looking for a plugin and it's not on this list look **[here](http://www.unheap.com)**.
 
+* **[jQuery++](http://jquerypp.com)** - Collection of extremely useful DOM helpers and special events for jQuery 1.8 and later.
 * **[jQuery.cycle2](https://github.com/malsup/cycle2)** - Cycle2 is a versatile slideshow plugin for jQuery built around ease-of-use.
 * **[jQuery.fancybox2](https://github.com/fancyapps/fancyBox)** - fancyBox is a tool that offers a nice and elegant way to add zooming functionality for images, html content and multi-media on your webpages.
 * **[jQuery.fitvids](https://github.com/davatron5000/FitVids.js)** - A lightweight, easy-to-use jQuery plugin for fluid width video embeds.
@@ -46,7 +47,10 @@ If you're looking for a plugin and it's not on this list look **[here](http://ww
 * **[jQuery.fineuploader](https://github.com/Widen/fine-uploader)** - Multiple file upload plugin with progress-bar, drag-and-drop.
 * **[jQuery.parsley](https://github.com/guillaumepotier/Parsley.js/)** - Validate your forms, frontend, without writting a single line of javascript!
 
-# How to use
+# Usage
+_Make sure you have **[Git](http://help.github.com/articles/set-up-git)** and **[Compass](http://compass-style.org/install)** on your computer.
+Then install **[Susy](http://susy.oddbird.net)** and **[Normalize](https://github.com/ksmandersen/compass-normalize)**._
+
 	$ git clone git@github.com:losbeekos/default-project.git newprojectname
 
 # Tools
