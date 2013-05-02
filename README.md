@@ -21,7 +21,7 @@ These plugins are integrated in the build and get updated every now and then.
 # Additional plugins
 Additional plugins are listed here which you can use.
 
-#### Javascript plugins
+#### Javascript plugins 
 
 * **[hammer](http://eightmedia.github.io/hammer.js)** - Library for multi-touch gestures.
 * **[swipe](https://github.com/bradbirdsall/Swipe)** - Swipe is the most accurate touch slider.
@@ -48,7 +48,7 @@ If you're looking for a plugin and it's not on this list look **[here](http://ww
 * **[jQuery.parsley](https://github.com/guillaumepotier/Parsley.js/)** - Validate your forms, frontend, without writting a single line of javascript!
 
 # Usage
-_Make sure you have **[Git](http://help.github.com/articles/set-up-git)** and **[Compass](http://compass-style.org/install)** on your computer.
+_NOTE: Make sure you have **[Git](http://help.github.com/articles/set-up-git)** and **[Compass](http://compass-style.org/install)** on your computer.
 After you've installed those, install **[Susy](http://susy.oddbird.net)** and **[Normalize](https://github.com/ksmandersen/compass-normalize)**._
 
 Now clone that sheep.
