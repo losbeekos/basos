@@ -1,6 +1,6 @@
 # Todo
 
-* Integrate live validation
+* Integrate live validation (https://github.com/jzaefferer/jquery-validation)
 
 # Starting point
 Default starting point for new projects based on **[HTML5 Boilerplate](http://html5boilerplate.com)**.
@@ -30,6 +30,8 @@ Additional plugins are listed here which you can use.
 * **[hammer](http://eightmedia.github.io/hammer.js)** - Library for multi-touch gestures.
 * **[swipe](https://github.com/bradbirdsall/Swipe)** - Swipe is the most accurate touch slider.
 * **[typeahead](https://github.com/twitter/typeahead.js)** - A fast and fully-featured autocomplete library.
+* **[spin](https://github.com/fgnass/spin.js)** - A spinning activity indicator.
+* **[stroll](https://github.com/hakimel/stroll.js)** - CSS3 list scroll effects.
 
 #### jQuery plugins
 If you're looking for a plugin and it's not on this list look **[here](http://www.unheap.com)**.
@@ -49,7 +51,15 @@ If you're looking for a plugin and it's not on this list look **[here](http://ww
 * **[jQuery.tooltipster](https://github.com/iamceege/tooltipster)** - Tooltip plugin.
 * **[jQuery.swipebox](https://github.com/brutaldesign/swipebox)** - A touchable jQuery lightbox.
 * **[jQuery.fineuploader](https://github.com/Widen/fine-uploader)** - Multiple file upload plugin with progress-bar, drag-and-drop.
-* **[jQuery.parsley](https://github.com/guillaumepotier/Parsley.js/)** - Validate your forms, frontend, without writting a single line of javascript!
+* **[jQuery.parsley](https://github.com/guillaumepotier/Parsley.js)** - Validate your forms, frontend, without writting a single line of javascript!
+* **[jQuery.timeago](https://github.com/rmm5t/jquery-timeago)** - Timeago is a jQuery plugin that makes it easy to support automatically updating fuzzy timestamps (e.g. "4 minutes ago").
+* **[jQuery.waypoints](https://github.com/imakewebthings/jquery-waypoints)** - Waypoints is a jQuery plugin that makes it easy to execute a function whenever you scroll to an element.
+* **[jQuery.lazyload](https://github.com/tuupola/jquery_lazyload)** - Query plugin for lazy loading images
+* **[jQuery.knob](https://github.com/aterrien/jQuery-Knob)** - Nice, downward compatible, touchable, jQuery dial.
+* **[jQuery.form](https://github.com/malsup/form)** - The jQuery Form Plugin allows you to easily and unobtrusively upgrade HTML forms to use AJAX.
+* **[jQuery.notify](https://github.com/ehynds/jquery-notify)** - A growl/ubuntu-like notification system written on top of the UI widget factory.
+* **[jQuery.pin](https://github.com/webpop/jquery.pin)** - Pin any element within a container.
+* **[jQuery.infinitescroll](https://github.com/paulirish/infinite-scroll)** - Infinite scroll. 
 
 # Usage
 _NOTE: Make sure you have **[Git](http://help.github.com/articles/set-up-git)** and **[Compass](http://compass-style.org/install)** on your computer.
