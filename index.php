@@ -83,6 +83,7 @@
                     <a class="btn small" href="#">button small</a>
                     <a class="btn medium" href="#">button medium</a>
                     <a class="btn large" href="#">button large</a>
+                    <input class="btn large" value="button disabled" type="submit" disabled="disabled" />
                     
                     <h2>Primary</h2>
                     <a class="btn primary small" href="#">button small</a>

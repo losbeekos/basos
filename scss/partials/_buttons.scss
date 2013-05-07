@@ -12,6 +12,8 @@
 	text-shadow: 1px 0 1px rgba(0, 0, 0, 0.5);
 	border: 0;
 	outline: 0;
+	cursor: pointer;
+	line-height: pxtoem(16);
 	@include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));
 	@include transition-property(all);
 	@include transition-duration(0.2s);
@@ -25,6 +27,16 @@
 	&:focus {
 		box-shadow: 0 0 30px rgba($btn-default-bg-color, 0.3);
 		@include transition-duration(0.05s);
+	}
+
+	&:disabled {
+		background: #a0a0a0;
+		cursor: not-allowed;
+
+		&:active,
+		&:focus {
+			box-shadow: none;
+		}
 	}
 
 	&.primary {
