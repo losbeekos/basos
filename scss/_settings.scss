@@ -31,7 +31,7 @@ $container-desktop-and-up-padding : 0 2.5em;   // 20px
 $total-columns : 12;      // a 12-column grid
 $column-width  : 10em;    // width is controlled with container max-width setting, so a high value is set here.
 $gutter-width  : 1.250em; // 20px gutters between columns
-$grid-padding  : 0;       // 10px grid padding
+$grid-padding  : 0;       // 0 grid padding
 
 
 /*==========  Button colors  ==========*/
@@ -42,3 +42,13 @@ $btn-primary-bg-color   : #0659a4;
 $btn-secondary-bg-color : #177f12;
 $btn-tertiary-bg-color  : #925900;
 $btn-quadiary-bg-color  : #920000;
+
+
+/*==========  Icons  ==========*/
+// Use Fontello font icons.
+// fontello.com
+$icon-notification-info       : '';
+$icon-notification-success    : '✔';
+$icon-notification-error      : '✖';
+$icon-form-validation-success : $icon-notification-success;
+$icon-form-validation-error   : $icon-notification-error;

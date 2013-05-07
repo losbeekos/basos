@@ -134,76 +134,159 @@
                 <section>
                     <h1>Form</h1>
                     <div class="form clearfix">
-                        <form>
+                        <form class="form-validate" novalidate="novalidate">
+
                             <fieldset>
                                 <legend>Persoonlijke gegevens</legend>
                                 <div class="form-row clearfix">
                                     <div class="columns-5 form-label">
                                         <label>Naam *</label>
                                     </div>
-                                    <div class="columns-7 omega form-input">
-                                        <input class="columns-10" type="text" placeholder="" />
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <input type="text" placeholder="" />
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
                                     <div class="columns-5 form-label">
                                         <label>Adres</label>
                                     </div>
-                                    <div class="columns-7 omega form-input">
-                                        <input class="columns-10" type="text" placeholder="" />
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <input type="text" placeholder="" />
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
                                     <div class="columns-5 form-label">
                                         <label>Postcode</label>
                                     </div>
-                                    <div class="columns-7 omega form-input">
-                                        <input class="columns-3" type="text" placeholder="" />
+                                    <div class="columns-7 omega">
+                                        <div class="columns-3 form-input">
+                                            <input type="text" placeholder="" />
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
                                     <div class="columns-5 form-label">
                                         <label>Woonplaats</label>
                                     </div>
-                                    <div class="columns-7 omega form-input">
-                                        <input class="columns-10" type="text" placeholder="" />
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <input type="text" placeholder="" />
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix error">
                                     <div class="columns-5 form-label">
                                         <label>Telefoonnummer</label>
                                     </div>
-                                    <div class="columns-7 omega form-input">
-                                        <input class="columns-10" type="tel" placeholder="0123456789" />
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <input type="tel" placeholder="0123456789" />
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
                                     <div class="columns-5 form-label">
                                         <label>E-mailadres *</label>
                                     </div>
-                                    <div class="columns-7 omega form-input">
-                                        <input class="columns-10" type="email" placeholder="jouwnaam@adres.nl" />
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <input type="email" placeholder="jouwnaam@adres.nl" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Disabled *</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <input type="email" placeholder="disabled.." disabled="disabled" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Vraag / opmerking</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-10 form-input">
+                                            <textarea cols="30" rows="10"></textarea>
+                                        </div>
                                     </div>
                                 </div>
                             </fieldset>
-                            <div class="form-row clearfix">
-                                <div class="columns-5 form-label">
-                                    <label>Disabled *</label>
+                            
+
+                            <fieldset>
+                                <legend>Live validation (<a href="http://parsleyjs.org/">http://parsleyjs.org</a>)</legend>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Postcode</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-3 form-input">
+                                            <input type="text" placeholder="0123AB" data-type="alphanum" data-minlength="6" />    
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="columns-7 omega form-input">
-                                    <input class="columns-10" type="email" placeholder="disabled.." disabled="disabled" />
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Telefoonnummer</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-4 form-input">
+                                            <input type="tel" placeholder="0123456789" data-type="digits" />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="form-row clearfix">
-                                <div class="columns-5 form-label">
-                                    <label>Vraag / opmerking</label>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>E-mailadres *</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <input type="email" placeholder="jouwnaam@adres.nl" />
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="columns-7 omega form-input">
-                                    <textarea class="columns-12 omega" cols="30" rows="10"></textarea>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Wachtwoord *</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <input id="password" type="password" />
+                                        </div>
+                                    </div>
                                 </div>
-                            </div>
-                            <p></p>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Herhaal wachtwoord *</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <input type="password" data-equalto="#password" data-error-message="Wachtwoorden zijn niet identiek." />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Website *</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <input type="url" />
+                                        </div>
+                                    </div>
+                                </div>
+                            </fieldset>
+
                             <div class="form-actions">
+                                <p class="form-required-field"><i>* = Verplicht veld</i></p>
                                 <input class="btn primary medium" type="submit" value="verzenden" />
                             </div>
                         </form>

@@ -1,6 +1,6 @@
 # Todo
 
-* Integrate live validation (https://github.com/jzaefferer/jquery-validation)
+* Nothing yet..
 
 # Starting point
 Default starting point for new projects based on **[HTML5 Boilerplate](http://html5boilerplate.com)**.
@@ -59,7 +59,9 @@ If you're looking for a plugin and it's not on this list look **[here](http://ww
 * **[jQuery.form](https://github.com/malsup/form)** - The jQuery Form Plugin allows you to easily and unobtrusively upgrade HTML forms to use AJAX.
 * **[jQuery.notify](https://github.com/ehynds/jquery-notify)** - A growl/ubuntu-like notification system written on top of the UI widget factory.
 * **[jQuery.pin](https://github.com/webpop/jquery.pin)** - Pin any element within a container.
-* **[jQuery.infinitescroll](https://github.com/paulirish/infinite-scroll)** - Infinite scroll. 
+* **[jQuery.infinitescroll](https://github.com/paulirish/infinite-scroll)** - Infinite scroll.
+* **[jQuery.mixitup](https://github.com/barrel/mixitup)** - a CSS3 and jQuery filter & sort plugin.
+* **[jQuery.isotope](https://github.com/desandro/isotope)** - An exquisite jQuery plugin for magical layouts. Enables filtering, sorting, and dynamic layouts.
 
 # Usage
 _NOTE: Make sure you have **[Git](http://help.github.com/articles/set-up-git)** and **[Compass](http://compass-style.org/install)** on your computer.

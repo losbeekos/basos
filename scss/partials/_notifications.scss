@@ -21,8 +21,8 @@
 		top: 0;
 		color: #b2af69;
 		font-size: pxtoem(60);
-		content: '';
-		//@extend %font-fontello;
+		content: $icon-notification-info;
+		@extend %font-fontello;
 	}
 
 	ul {
@@ -35,7 +35,7 @@
 		border-color: #d3cccc;
 
 		&:before {
-			content: '✖';
+			content: $icon-notification-error;
 			color: #b26969;
 		}
 	}
@@ -46,7 +46,7 @@
 		border-color: #ccd3cd;
 
 		&:before {
-			content: '✔';
+			content: $icon-notification-success;
 			color: #6eb269;
 		}
 	}

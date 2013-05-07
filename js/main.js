@@ -82,6 +82,7 @@ Modernizr.load([
 						modules.nav.init();
 						modules.fastClick.init();
 						modules.fitVids.init();
+						modules.formValidation.init();
 
 						// App modules
 						modules.example.init();
@@ -121,16 +122,16 @@ Modernizr.load([
 				================================*/
 				
 				,fancybox: {
-					fancybox: $('.fancybox'),
+					el: $('.fancybox'),
 
 					init: function(){
 						var self = this;
 
-						if(self.fancybox.length > 0){
+						if(self.el.length > 0){
 				        	yepnope.injectJs('js/plugins/jquery.fancybox/jquery.fancybox.min.js' + settings.version);
 				        	yepnope.injectJs('js/plugins/jquery.fancybox/helpers/jquery.fancybox-media.min.js' + settings.version,
 								function(){
-									self.fancybox.fancybox({
+									self.el.fancybox({
 							            helpers: {
 							                media: true
 							            }
@@ -150,12 +151,12 @@ Modernizr.load([
 				==========================================*/
 				
 				,nav: {
-					nav: $('.nav-primary'),
+					el: $('.nav-primary'),
 
 					init: function(){
 						var self = this;
 
-						if(self.nav.length > 0){
+						if(self.el.length > 0){
 							// Do some stuff to the nav
 						}
 					}
@@ -204,6 +205,41 @@ Modernizr.load([
 				}
 				
 				/*-----  End of Fitvids  ------*/
+
+
+
+
+
+				/*=======================================
+				=            Form validation            =
+				=======================================*/
+				
+				,formValidation: {
+					el: $('.form-validate'),
+
+					init: function(){
+						var self = this;
+
+						if(self.el.length > 0){
+				        	yepnope.injectJs('js/plugins/jquery.parsley/i18n/messages.nl.js' + settings.version);
+				        	yepnope.injectJs('js/plugins/jquery.parsley/parsley.js' + settings.version,
+								function(){
+				        			self.el.parsley({
+				        				trigger: 'change',
+				        				errors: {
+									        classHandler: function (el, isRadioOrCheckbox){
+									            return $(el).closest('.form-input');
+									        }
+									    }
+				        			});
+								});
+						}
+					}
+				}
+				
+				/*-----  End of Form validation  ------*/
+				
+				
 				
 				
 				
