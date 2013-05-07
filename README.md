@@ -15,6 +15,9 @@ _NOTE: When you optimize your project you should **[rebuild Modernizr](http://mo
 * **[normalize](http://necolas.github.io/normalize.css)**
 * **[susy](http://susy.oddbird.net)**
 
+#### Additional Compass plugins
+* **[animate](https://github.com/ericam/compass-animate)** - Compass port of Dan Eden's Animate.css
+
 #### Default Javascript & jQuery plugins
 These plugins are integrated in the build and get updated every now and then.
 
