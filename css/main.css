@@ -1066,82 +1066,99 @@ textarea {
 }
 /* line 32, ../scss/partials/_buttons.scss */
 .btn:disabled {
-  background: #a0a0a0;
+  background-color: #222222;
+  opacity: 0.5;
   cursor: not-allowed;
 }
-/* line 37, ../scss/partials/_buttons.scss */
+/* line 38, ../scss/partials/_buttons.scss */
 .btn:disabled:active, .btn:disabled:focus {
   box-shadow: none;
 }
-/* line 42, ../scss/partials/_buttons.scss */
+/* line 43, ../scss/partials/_buttons.scss */
 .btn.primary {
   background-color: #0659a4;
 }
-/* line 45, ../scss/partials/_buttons.scss */
+/* line 46, ../scss/partials/_buttons.scss */
 .btn.primary:hover {
   background-color: #0766bd;
 }
-/* line 50, ../scss/partials/_buttons.scss */
+/* line 51, ../scss/partials/_buttons.scss */
 .btn.primary:active, .btn.primary:focus {
   box-shadow: 0 0 30px rgba(6, 89, 164, 0.3);
 }
 /* line 55, ../scss/partials/_buttons.scss */
+.btn.primary:disabled {
+  background-color: #0659a4;
+}
+/* line 60, ../scss/partials/_buttons.scss */
 .btn.secondary {
   background-color: #177f12;
 }
-/* line 58, ../scss/partials/_buttons.scss */
+/* line 63, ../scss/partials/_buttons.scss */
 .btn.secondary:hover {
   background-color: #1b9515;
 }
-/* line 63, ../scss/partials/_buttons.scss */
+/* line 68, ../scss/partials/_buttons.scss */
 .btn.secondary:active, .btn.secondary:focus {
   box-shadow: 0 0 30px rgba(23, 127, 18, 0.3);
 }
-/* line 68, ../scss/partials/_buttons.scss */
+/* line 72, ../scss/partials/_buttons.scss */
+.btn.secondary:disabled {
+  background-color: #177f12;
+}
+/* line 77, ../scss/partials/_buttons.scss */
 .btn.tertiary {
   background-color: #925900;
 }
-/* line 71, ../scss/partials/_buttons.scss */
+/* line 80, ../scss/partials/_buttons.scss */
 .btn.tertiary:hover {
   background-color: #ab6900;
 }
-/* line 76, ../scss/partials/_buttons.scss */
+/* line 85, ../scss/partials/_buttons.scss */
 .btn.tertiary:active, .btn.tertiary:focus {
   box-shadow: 0 0 30px rgba(146, 89, 0, 0.3);
 }
-/* line 81, ../scss/partials/_buttons.scss */
+/* line 89, ../scss/partials/_buttons.scss */
+.btn.tertiary:disabled {
+  background-color: #925900;
+}
+/* line 94, ../scss/partials/_buttons.scss */
 .btn.quadiary {
   background-color: #920000;
 }
-/* line 84, ../scss/partials/_buttons.scss */
+/* line 97, ../scss/partials/_buttons.scss */
 .btn.quadiary:hover {
   background-color: #ab0000;
 }
-/* line 89, ../scss/partials/_buttons.scss */
+/* line 102, ../scss/partials/_buttons.scss */
 .btn.quadiary:active, .btn.quadiary:focus {
   box-shadow: 0 0 30px rgba(146, 0, 0, 0.3);
 }
-/* line 94, ../scss/partials/_buttons.scss */
+/* line 106, ../scss/partials/_buttons.scss */
+.btn.quadiary:disabled {
+  background-color: #920000;
+}
+/* line 111, ../scss/partials/_buttons.scss */
 .btn.small {
   padding: 0.5em 1.875em;
 }
-/* line 98, ../scss/partials/_buttons.scss */
+/* line 115, ../scss/partials/_buttons.scss */
 .btn.medium {
   padding: 0.75em 2.1875em;
 }
 @media (min-width: 40.625em) {
-  /* line 98, ../scss/partials/_buttons.scss */
+  /* line 115, ../scss/partials/_buttons.scss */
   .btn.medium {
     padding: 0.875em 2.1875em;
     font-size: 1.0625em;
   }
 }
-/* line 107, ../scss/partials/_buttons.scss */
+/* line 124, ../scss/partials/_buttons.scss */
 .btn.large {
   padding: 0.9375em 2.5em;
 }
 @media (min-width: 40.625em) {
-  /* line 107, ../scss/partials/_buttons.scss */
+  /* line 124, ../scss/partials/_buttons.scss */
   .btn.large {
     padding: 1.125em 3.125em;
     font-size: 1.125em;

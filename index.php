@@ -89,21 +89,25 @@
                     <a class="btn primary small" href="#">button small</a>
                     <a class="btn primary medium" href="#">button medium</a>
                     <a class="btn primary large" href="#">button large</a>
+                    <input class="btn primary large" value="button disabled" type="submit" disabled="disabled" />
 
                     <h2>Secondary</h2>
                     <a class="btn secondary small" href="#">button small</a>
                     <a class="btn secondary medium" href="#">button medium</a>
                     <a class="btn secondary large" href="#">button large</a>
+                    <input class="btn secondary large" value="button disabled" type="submit" disabled="disabled" />
 
                     <h2>Tertiary</h2>
                     <a class="btn tertiary small" href="#">button small</a>
                     <a class="btn tertiary medium" href="#">button medium</a>
                     <a class="btn tertiary large" href="#">button large</a>
+                    <input class="btn tertiary large" value="button disabled" type="submit" disabled="disabled" />
 
                     <h2>Quadiary</h2>
                     <a class="btn quadiary small" href="#">button small</a>
                     <a class="btn quadiary medium" href="#">button medium</a>
                     <a class="btn quadiary large" href="#">button large</a>
+                    <input class="btn quadiary large" value="button disabled" type="submit" disabled="disabled" />
                 </section>
 
                 <section>
