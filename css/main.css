@@ -408,26 +408,27 @@ textarea {
 =====================================*/
 /*==========  PX to EM  ==========*/
 /*==========  Breakpoints  ==========*/
+/*==========  Triangle  ==========*/
 /*======================================
 =            Helper classes            =
 ======================================*/
 /*==========  Hide classes  ==========*/
 @media (max-width: 40.5625em) {
-  /* line 40, ../scss/dependencies/_helpers.scss */
+  /* line 80, ../scss/dependencies/_helpers.scss */
   .hide-mobile,
   .hide-mobile-and-tablet {
     display: none;
   }
 }
 @media (min-width: 40.625em) and (max-width: 56.25em) {
-  /* line 47, ../scss/dependencies/_helpers.scss */
+  /* line 87, ../scss/dependencies/_helpers.scss */
   .hide-tablet,
   .hide-mobile-and-tablet {
     display: none;
   }
 }
 /*==========  Unstyled list  ==========*/
-/* line 53, ../scss/dependencies/_helpers.scss */
+/* line 93, ../scss/dependencies/_helpers.scss */
 .unstyled-list, .inline-list, .parsley-error-list {
   margin: 0;
   padding: 0;
@@ -435,7 +436,7 @@ textarea {
 }
 
 /*==========  Inline list  ==========*/
-/* line 63, ../scss/dependencies/_helpers.scss */
+/* line 103, ../scss/dependencies/_helpers.scss */
 .inline-list li {
   display: inline;
   margin-right: 0.625em;

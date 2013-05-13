@@ -20,8 +20,8 @@
         <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png" />
         <link rel="shortcut icon" href="favicon.ico" />
         
-        <meta name="msapplication-TileColor" content="#ffffff"/>
-        <meta name="msapplication-TileImage" content="image-144x144px.png"/>
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="image-144x144px.png" />
 
         <?php
             /* Open Graph tags */
