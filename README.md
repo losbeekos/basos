@@ -6,7 +6,7 @@
 Default starting point for new projects based on **[HTML5 Boilerplate](http://html5boilerplate.com)**.
 A custom H5BP build is used which includes:
 
-* **[respond](https://github.com/scottjehl/Respond)** - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more) 
+* **[respond](https://github.com/scottjehl/Respond)** - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)
 * **[modernizr](http://modernizr.com/)** - Library that detects HTML5 and CSS3 features in the user’s browser.
 
 _NOTE: When you optimize your project you should **[rebuild Modernizr](http://modernizr.com/download)** with only the test you need, so you have optimal performance._
@@ -28,13 +28,14 @@ Additional plugins are listed here which you can use.
 #### Compass plugins
 * **[animate](https://github.com/ericam/compass-animate)** - Compass port of Dan Eden's Animate.css
 
-#### Javascript plugins 
+#### Javascript plugins
 
 * **[hammer](http://eightmedia.github.io/hammer.js)** - Library for multi-touch gestures.
 * **[swipe](https://github.com/bradbirdsall/Swipe)** - Swipe is the most accurate touch slider.
 * **[typeahead](https://github.com/twitter/typeahead.js)** - A fast and fully-featured autocomplete library.
 * **[spin](https://github.com/fgnass/spin.js)** - A spinning activity indicator.
 * **[stroll](https://github.com/hakimel/stroll.js)** - CSS3 list scroll effects.
+* **[simpleStateManager](https://github.com/jonathan-fielding/SimpleStateManager)** - A responsive state manager which allows you to run different javascript at different browser widths
 
 #### jQuery plugins
 If you're looking for a plugin and it's not on this list look **[here](http://www.unheap.com)**.
@@ -70,7 +71,7 @@ If you're looking for a plugin and it's not on this list look **[here](http://ww
 _NOTE: Make sure you have **[Git](http://help.github.com/articles/set-up-git)** and **[Compass](http://compass-style.org/install)** on your computer.
 After you've installed those, install **[Susy](http://susy.oddbird.net)** and **[Normalize](https://github.com/ksmandersen/compass-normalize)**._
 
-Now clone this sheep. 
+Now clone this sheep.
 
 	$ git clone git@github.com:losbeekos/default-project.git newprojectname
 
