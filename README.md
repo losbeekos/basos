@@ -35,7 +35,8 @@ Additional plugins are listed here which you can use.
 * **[typeahead](https://github.com/twitter/typeahead.js)** - A fast and fully-featured autocomplete library.
 * **[spin](https://github.com/fgnass/spin.js)** - A spinning activity indicator.
 * **[stroll](https://github.com/hakimel/stroll.js)** - CSS3 list scroll effects.
-* **[simpleStateManager](https://github.com/jonathan-fielding/SimpleStateManager)** - A responsive state manager which allows you to run different javascript at different browser widths
+* **[simpleStateManager](https://github.com/jonathan-fielding/SimpleStateManager)** - A responsive state manager which allows you to run different javascript at different browser widths.
+* **[flippant](http://labs.mintchaos.com/flippant.js)** - A mini js+css library for flipping things over.
 
 #### jQuery plugins
 If you're looking for a plugin and it's not on this list look **[here](http://www.unheap.com)**.
