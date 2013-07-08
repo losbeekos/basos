@@ -34,7 +34,7 @@
 ========================================*/
 
 var settings = {
-	version: '?v=0.1', // If the file changes, update this number
+    version: '?v=0.1', // If the file changes, update this number
 }
 
 /*-----  End of Default settings  ------*/
@@ -51,204 +51,215 @@ yepnope.errorTimeout = 2000;
 Modernizr.load([
 
 
-	/*==========  Feature tests  ==========*/
+    /*==========  Feature tests  ==========*/
 
-	{
-	    test : Modernizr.input.placeholder,
-	    nope : 'js/plugins/jquery.placeholder/jquery.placeholder.min.js'
-	},
-
-
-	/*==========  jQuery  ==========*/
-	
-	{
-		load: ['http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'],
-		complete: function(url, result, key){
-			if (!window.jQuery){
-				Modernizr.load('js/vendor/jquery-1.9.1.min.js');
-			}
-
-			/*===============================
-			=            Modules            =
-			===============================*/
-
-			var modules = {
-				init: function(){
-					var modules = this;
-
-					$(function(){
-						// Default modules
-						modules.fancybox.init();
-						modules.nav.init();
-						modules.fastClick.init();
-						modules.fitVids.init();
-						modules.formValidation.init();
-
-						// App modules
-						modules.example.init();
-					});
-				}
+    {
+        test : Modernizr.input.placeholder,
+        nope : 'js/plugins/jquery.placeholder/jquery.placeholder.min.js'
+    },
 
 
+    /*==========  jQuery  ==========*/
 
+    {
+        load: ['http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'],
+        complete: function(url, result, key){
+            if (!window.jQuery){
+                Modernizr.load('js/vendor/jquery-1.9.1.min.js');
+            }
 
-				/*=================================
-				=             Example             =
-				=================================*/
+            /*===============================
+            =            Modules            =
+            ===============================*/
 
-				,example: {
-				    init: function(){
-				    	/*
-						var self = this;
+            var modules = {
+                init: function(){
+                    var modules = this;
 
-						if(self.fancybox.length > 0){
-							yepnope.injectJs('js/plugins/someplugin/someplugin.js' + settings.version,
-								function(){
-									
-								});
-						}
-						*/
-				    }
-				}
+                    $(function(){
+                        // Default modules
+                        modules.fancybox.init();
+                        modules.nav.init();
+                        modules.fastClick.init();
+                        modules.fitVids.init();
+                        modules.formValidation.init();
 
-				/*-----  End of Example  ------*/
-				
+                        // App modules
+                        modules.example.init();
+                    });
+                }
 
 
 
 
-				/*================================
-				=            Fancybox            =
-				================================*/
-				
-				,fancybox: {
-					el: $('.fancybox'),
+                /*=================================
+                =             Example             =
+                =================================*/
 
-					init: function(){
-						var self = this;
+                ,example: {
+                    init: function(){
+                        /*
+                        var self = this;
 
-						if(self.el.length > 0){
-				        	yepnope.injectJs('js/plugins/jquery.fancybox/jquery.fancybox.min.js' + settings.version);
-				        	yepnope.injectJs('js/plugins/jquery.fancybox/helpers/jquery.fancybox-media.min.js' + settings.version,
-								function(){
-									self.el.fancybox({
-							            helpers: {
-							                media: true
-							            }
-							        });
-								});
-						}
-					}
-				}
-				
-				/*-----  End of Fancybox  ------*/
+                        if(self.fancybox.length > 0){
+                            yepnope.injectJs('js/plugins/someplugin/someplugin.js' + settings.version,
+                                function(){
 
+                                });
+                        }
+                        */
+                    }
+                }
 
-
-
-				/*==========================================
-				=            Primary navigation            =
-				==========================================*/
-				
-				,nav: {
-					el: $('.nav-primary'),
-
-					init: function(){
-						var self = this;
-
-						if(self.el.length > 0){
-							// Do some stuff to the nav
-						}
-					}
-				}
-				
-				/*-----  End of Primary navigation  ------*/
-				
-
-
-
-
-				/*=================================
-				=            Fastclick            =
-				=================================*/
-				
-				,fastClick: {
-					init: function(){
-						yepnope.injectJs(
-							'js/plugins/fastclick/fastclick.min.js' + settings.version,
-							function(url, result, key){
-								new FastClick(document.body);
-							}
-						);
-					}
-				}
-				
-				/*-----  End of Fastclick  ------*/
-				
-				
-
-
-
-				/*===============================
-				=            Fitvids            =
-				===============================*/
-				
-				,fitVids: {
-					init: function(){
-						yepnope.injectJs(
-							'js/plugins/jquery.fitvids/jquery.fitvids.min.js' + settings.version,
-							function(url, result, key){
-	        					$('.content').fitVids();
-							}
-						);
-					}
-				}
-				
-				/*-----  End of Fitvids  ------*/
+                /*-----  End of Example  ------*/
 
 
 
 
 
-				/*=======================================
-				=            Form validation            =
-				=======================================*/
-				
-				,formValidation: {
-					el: $('.form-validate'),
+                /*================================
+                =            Fancybox            =
+                ================================*/
 
-					init: function(){
-						var self = this;
+                ,fancybox: {
+                    el: $('.fancybox'),
 
-						if(self.el.length > 0){
-				        	yepnope.injectJs('js/plugins/jquery.parsley/i18n/messages.nl.js' + settings.version);
-				        	yepnope.injectJs('js/plugins/jquery.parsley/parsley.js' + settings.version,
-								function(){
-				        			self.el.parsley({
-				        				trigger: 'change',
-				        				errors: {
-									        classHandler: function (el, isRadioOrCheckbox){
-									            return $(el).closest('.form-input');
-									        }
-									    }
-				        			});
-								});
-						}
-					}
-				}
-				
-				/*-----  End of Form validation  ------*/
-				
-				
-				
-				
-				
+                    init: function(){
+                        var self = this;
 
-			}
+                        if(self.el.length > 0){
+                            yepnope.injectJs('js/plugins/jquery.fancybox/jquery.fancybox.min.js' + settings.version);
+                            yepnope.injectJs('js/plugins/jquery.fancybox/helpers/jquery.fancybox-media.min.js' + settings.version,
+                                function(){
+                                    self.el.fancybox({
+                                        helpers: {
+                                            media: true
+                                        }
+                                    });
+                                });
+                        }
+                    }
+                }
 
-			/*-----  End of Modules  ------*/
-				
-			modules.init();
-		}
-	}
+                /*-----  End of Fancybox  ------*/
+
+
+
+
+                /*==========================================
+                =            Primary navigation            =
+                ==========================================*/
+
+                ,nav: {
+                    el: $('.nav-primary'),
+
+                    init: function(){
+                        var self = this;
+
+                        if(self.el.length > 0){
+                            // Do some stuff to the nav
+                        }
+                    }
+                }
+
+                /*-----  End of Primary navigation  ------*/
+
+
+
+
+
+                /*=================================
+                =            Fastclick            =
+                =================================*/
+
+                ,fastClick: {
+                    init: function(){
+                        yepnope.injectJs(
+                            'js/plugins/fastclick/fastclick.min.js' + settings.version,
+                            function(url, result, key){
+                                new FastClick(document.body);
+                            }
+                        );
+                    }
+                }
+
+                /*-----  End of Fastclick  ------*/
+
+
+
+
+
+                /*===============================
+                =            Fitvids            =
+                ===============================*/
+
+                ,fitVids: {
+                    init: function(){
+                        yepnope.injectJs(
+                            'js/plugins/jquery.fitvids/jquery.fitvids.min.js' + settings.version,
+                            function(url, result, key){
+                                $('.content').fitVids();
+                            }
+                        );
+                    }
+                }
+
+                /*-----  End of Fitvids  ------*/
+
+
+
+
+
+                /*=======================================
+                =            Form validation            =
+                =======================================*/
+
+                ,formValidation: {
+                    el: $('.form-validate'),
+
+                    init: function(){
+                        var self = this;
+
+                        if(self.el.length > 0){
+                            yepnope.injectJs('js/plugins/jquery.parsley/i18n/messages.nl.js' + settings.version);
+                            yepnope.injectJs('js/plugins/jquery.parsley/parsley.js' + settings.version,
+                                function(){
+                                    self.el.parsley({
+                                        trigger: 'change',
+                                        errors: {
+                                            classHandler: function (el, isRadioOrCheckbox){
+                                                return $(el).closest('.form-input');
+                                            }
+                                        },
+
+                                        validators: {
+                                            iban: function () {
+                                                return val % multiple === 0;
+                                            }
+                                        },
+
+                                        messages: {
+                                          iban: "Dit is geen geldig IBAN-nummer."
+                                        }
+
+                                    });
+                                });
+                        }
+                    }
+                }
+
+                /*-----  End of Form validation  ------*/
+
+
+
+
+
+
+            }
+
+            /*-----  End of Modules  ------*/
+
+            modules.init();
+        }
+    }
 ]);

@@ -3,51 +3,51 @@
 =====================================*/
 
 .notification {
-	padding: pxtoem(10);
-	border: 1px solid #d3d3cc;
-	margin-bottom: pxtoem(30);
-	border-radius: 3px;
-	color: #262207;
-	background: #f3f3e6;
-	position: relative;
+    padding: pxtoem(10);
+    border: 1px solid #d3d3cc;
+    margin-bottom: pxtoem(30);
+    border-radius: 3px;
+    color: #262207;
+    background: #f3f3e6;
+    position: relative;
 
-	@include breakpoint(tablet-and-up) {
-		padding: pxtoem(20);
-	}
+    @include breakpoint(tablet-and-up) {
+        padding: pxtoem(20);
+    }
 
-	&:before {
-		position: absolute;
-		left: 20px;
-		top: 0;
-		color: #b2af69;
-		font-size: pxtoem(60);
-		content: $icon-notification-info;
-		@extend %font-fontello;
-	}
+    &:before {
+        position: absolute;
+        left: 20px;
+        top: 0;
+        color: #b2af69;
+        font-size: pxtoem(60);
+        content: $icon-notification-info;
+        @extend %font-fontello;
+    }
 
-	ul {
-		margin: 0 0 0 pxtoem(60);
-	}
+    ul {
+        margin: 0 0 0 pxtoem(60);
+    }
 
-	&.error {
-		color: #260707;
-		background: #f3e6e6;
-		border-color: #d3cccc;
+    &.error {
+        color: #260707;
+        background: #f3e6e6;
+        border-color: #d3cccc;
 
-		&:before {
-			content: $icon-notification-error;
-			color: #b26969;
-		}
-	}
+        &:before {
+            content: $icon-notification-error;
+            color: #b26969;
+        }
+    }
 
-	&.success {
-		color: #082607;
-		background: #e6f3e6;
-		border-color: #ccd3cd;
+    &.success {
+        color: #082607;
+        background: #e6f3e6;
+        border-color: #ccd3cd;
 
-		&:before {
-			content: $icon-notification-success;
-			color: #6eb269;
-		}
-	}
+        &:before {
+            content: $icon-notification-success;
+            color: #6eb269;
+        }
+    }
 }

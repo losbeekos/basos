@@ -5,18 +5,18 @@
 
 /*==========  Grid class  ==========*/
 .grid {
-	position: relative;
+    position: relative;
     @include container;
 }
 
 [class|="columns"] {
-	margin-bottom: $gutter-width;
+    margin-bottom: $gutter-width;
 
-	&.omega {
+    &.omega {
         @include omega;
 
         .lt-ie9 & {
-        	float: left !important;
+            float: left !important;
         }
     }
 }
@@ -24,17 +24,17 @@
 /*==========  Columns  ==========*/
 @for $i from 1 through $total-columns {
     .columns-#{$i} {
-    	/*==========  Mobile  ==========*/
-		@include span-columns($total-columns, $total-columns);
+        /*==========  Mobile  ==========*/
+        @include span-columns($total-columns, $total-columns);
 
-		/*==========  Tablet and up  ==========*/
-    	@include breakpoint(tablet-and-up){
-			@include span-columns($i, $total-columns);
-    	}
+        /*==========  Tablet and up  ==========*/
+        @include breakpoint(tablet-and-up){
+            @include span-columns($i, $total-columns);
+        }
 
-    	/*==========  Desktop  ==========*/
-    	@include breakpoint(desktop-and-up){
-    		// Nothing to see here..
-    	}
+        /*==========  Desktop  ==========*/
+        @include breakpoint(desktop-and-up){
+            // Nothing to see here..
+        }
     }
 }

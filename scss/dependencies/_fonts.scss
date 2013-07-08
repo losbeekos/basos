@@ -1,14 +1,17 @@
+/*====================================
+=            Custom fonts            =
+====================================*/
 
 @include font-face(
-	"fontello-webfont",
-	font-files("fontello.woff",
-		       "fontello.ttf",
-			   "fontello.otf"
-	),
-	"fontello.eot"
+    "fontello-webfont",
+    font-files("fontello.woff",
+               "fontello.ttf",
+               "fontello.otf"
+    ),
+    "fontello.eot"
 );
 
 %font-fontello {
-	//font-family: "fontello-webfont", arial, verdana;
-	font-weight: normal;
+    //font-family: "fontello-webfont", arial, verdana;
+    font-weight: normal;
 }

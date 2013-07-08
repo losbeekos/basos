@@ -3,57 +3,57 @@
 ==============================*/
 
 * {
-	@include box-sizing(border-box);
+    @include box-sizing(border-box);
 }
 
 body {
-	font-family: arial, verdana, sans-serif;
-	color: #333333;
+    font-family: arial, verdana, sans-serif;
+    color: #333333;
 }
 
 a {
-	color: $primary-color;
-	text-decoration: none;
-	display: inline;
-	cursor: pointer;
+    color: $primary-color;
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
 
-	@include transition-property(all);
-	@include transition-duration(0.2s);
+    @include transition-property(all);
+    @include transition-duration(0.2s);
 
-	&:hover {
-		color: #333333;
-	}
+    &:hover {
+        color: #333333;
+    }
 
-	&:after,
-	&:before {
-		@include transition-property(all);
-		@include transition-duration(0.2s);
-	}
+    &:after,
+    &:before {
+        @include transition-property(all);
+        @include transition-duration(0.2s);
+    }
 }
 
 img {
-	max-width: 100%;
+    max-width: 100%;
 }
 
 address {
-	font-style: normal;
+    font-style: normal;
 }
 
 p {
-	margin-top: 0;
+    margin-top: 0;
 }
 
 .container {
-	max-width: $container-max-width;
-	min-width: $container-min-width;
-	padding: $container-padding;
-	margin: $container-margin;
+    max-width: $container-max-width;
+    min-width: $container-min-width;
+    padding: $container-padding;
+    margin: $container-margin;
 
-	@include breakpoint(tablet) {
-		padding: $container-tablet-padding;
-	}
+    @include breakpoint(tablet) {
+        padding: $container-tablet-padding;
+    }
 
-	@include breakpoint(desktop-and-up) {
-		padding: $container-desktop-and-up-padding;
-	}
+    @include breakpoint(desktop-and-up) {
+        padding: $container-desktop-and-up-padding;
+    }
 }

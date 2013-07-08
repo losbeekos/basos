@@ -12,7 +12,7 @@
   @if $point == desktop-and-up {
     @media (min-width: pxtoem(900)) { @content; }
   }
-  
+
   @else if $point == tablet {
     @media (min-width: pxtoem(650)) and (max-width: pxtoem(900)) { @content; }
   }
@@ -33,36 +33,36 @@
 // @param direction       :  up, down, left, right
 // @param color           :  hex, rgb
 @mixin arrow($width: 20px, $height: 20px, $direction: up, $color: red) {
-	width: 0;
-	height: 0;
+    width: 0;
+    height: 0;
 
-	// Right
-	@if($direction == right){
-		border-top: $height/2 solid transparent;
-		border-bottom: $height/2 solid transparent;
-		border-left: $width solid $color;
-	}
+    // Right
+    @if($direction == right){
+        border-top: $height/2 solid transparent;
+        border-bottom: $height/2 solid transparent;
+        border-left: $width solid $color;
+    }
 
-	// Left
-	@if($direction == left){
-		border-top: $height/2 solid transparent;
-		border-bottom: $height/2 solid transparent;
-		border-right: $width solid $color;
-	}
+    // Left
+    @if($direction == left){
+        border-top: $height/2 solid transparent;
+        border-bottom: $height/2 solid transparent;
+        border-right: $width solid $color;
+    }
 
-	// Up
-	@if($direction == up){
-		border-left: $width/2 solid transparent;
-		border-right: $width/2 solid transparent;
-		border-bottom: $height solid $color;
-	}
+    // Up
+    @if($direction == up){
+        border-left: $width/2 solid transparent;
+        border-right: $width/2 solid transparent;
+        border-bottom: $height solid $color;
+    }
 
-	// Down
-	@if($direction == down){
-		border-left: $width/2 solid transparent;
-		border-right: $width/2 solid transparent;
-		border-top: $height solid $color;
-	}
+    // Down
+    @if($direction == down){
+        border-left: $width/2 solid transparent;
+        border-right: $width/2 solid transparent;
+        border-top: $height solid $color;
+    }
 }
 
 
@@ -76,32 +76,32 @@
 
 /*==========  Hide classes  ==========*/
 @include breakpoint(mobile) {
-	.hide-mobile,
-	.hide-mobile-and-tablet {
-		display: none;
-	}
+    .hide-mobile,
+    .hide-mobile-and-tablet {
+        display: none;
+    }
 }
 
 @include breakpoint(tablet) {
-	.hide-tablet,
-	.hide-mobile-and-tablet {
-		display: none;
-	}
+    .hide-tablet,
+    .hide-mobile-and-tablet {
+        display: none;
+    }
 }
 
 /*==========  Unstyled list  ==========*/
 .unstyled-list {
-	margin: 0;
-	padding: 0;
-	list-style-type: none;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
 }
 
 /*==========  Inline list  ==========*/
 .inline-list {
-	@extend .unstyled-list;
+    @extend .unstyled-list;
 
-	li {
-		display: inline;
-		margin-right: pxtoem(10);
-	}
+    li {
+        display: inline;
+        margin-right: pxtoem(10);
+    }
 }

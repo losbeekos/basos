@@ -3,7 +3,7 @@
 ============================*/
 
 form {
-	margin: 0 0 pxtoem(40) 0;
+    margin: 0 0 pxtoem(40) 0;
 }
 
 legend {
@@ -18,82 +18,82 @@ legend {
 }
 
 $input-selectors: '
-	input[type="text"],
-	input[type="password"],
-	input[type="date"],
-	input[type="datetime"],
-	input[type="datetime-local"],
-	input[type="month"],
-	input[type="week"],
-	input[type="email"],
-	input[type="number"],
-	input[type="search"],
-	input[type="tel"],
-	input[type="time"],
-	input[type="url"],
-	textarea
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="week"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea
 ';
 
 #{$input-selectors}{
-	color: #333333;
-	padding: pxtoem(10);
-	border-radius: 3px;
-	border: 1px solid #f3f3f3;
-	box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
-	outline: 0;
-	width: 100%;
+    color: #333333;
+    padding: pxtoem(10);
+    border-radius: 3px;
+    border: 1px solid #f3f3f3;
+    box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+    outline: 0;
+    width: 100%;
 
-	@include transition-property(all);
-	@include transition-duration(0.2s);
+    @include transition-property(all);
+    @include transition-duration(0.2s);
 
-	&:focus {
-		border: 1px solid #cccccc;
-		box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-	}
+    &:focus {
+        border: 1px solid #cccccc;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
 
-	&:disabled {
-		background-color: #f1f1f1;
-		cursor: not-allowed;
-	}
+    &:disabled {
+        background-color: #f1f1f1;
+        cursor: not-allowed;
+    }
 }
 
 textarea {
-	height: pxtoem(160)
+    height: pxtoem(160)
 }
 
 .form-label {
-	margin-bottom: 0;
+    margin-bottom: 0;
 
-	label {
-		line-height: pxtoem(40);
-	}
+    label {
+        line-height: pxtoem(40);
+    }
 
-	@include breakpoint(tablet-and-up) {
-		text-align: right;
-	}
+    @include breakpoint(tablet-and-up) {
+        text-align: right;
+    }
 }
 
 .form-input {
-	position: relative;
-	margin-bottom: 0;
+    position: relative;
+    margin-bottom: 0;
 
-	&:after {
-		position: absolute;
-		right: pxtoem(10);
-		top: pxtoem(10);
-	}
+    &:after {
+        position: absolute;
+        right: pxtoem(10);
+        top: pxtoem(10);
+    }
 }
 
 .form-actions {
-	margin-top: pxtoem(20);
+    margin-top: pxtoem(20);
 
-	@include breakpoint(tablet-and-up) {
-		@include pre(5);
-	}
+    @include breakpoint(tablet-and-up) {
+        @include pre(5);
+    }
 }
 
 .form-required-field {
-	font-size: 0.875em;
+    font-size: 0.875em;
 }
 
 
@@ -105,19 +105,19 @@ textarea {
 }
 
 :-moz-placeholder {
-   color: $placeholder-color;  
+   color: $placeholder-color;
 }
 
 ::-moz-placeholder {
-   color: $placeholder-color;  
+   color: $placeholder-color;
 }
 
-:-ms-input-placeholder {  
-   color: $placeholder-color;  
+:-ms-input-placeholder {
+   color: $placeholder-color;
 }
 
-.placeholder {  
-   color: $placeholder-color;  
+.placeholder {
+   color: $placeholder-color;
 }
 
 
@@ -125,55 +125,55 @@ textarea {
 /*==========  Validation  ==========*/
 
 .parsley-error {
-	&:after {
-		content: $icon-form-validation-error;
-		color: #a60000;
-		@extend %font-fontello;
-	}
-	
-	#{$input-selectors}{
-		padding-right: pxtoem(30);
-		border-color: #a60000;
-	}
+    &:after {
+        content: $icon-form-validation-error;
+        color: #a60000;
+        @extend %font-fontello;
+    }
+
+    #{$input-selectors}{
+        padding-right: pxtoem(30);
+        border-color: #a60000;
+    }
 }
 
 .parsley-success {
-	&:after {
-		content: $icon-form-validation-success;
-		color: #6eb269;
-		@extend %font-fontello;
-	}
-	
-	#{$input-selectors}{
-		padding-right: pxtoem(30);
-		border-color: #00a608;
-	}
+    &:after {
+        content: $icon-form-validation-success;
+        color: #6eb269;
+        @extend %font-fontello;
+    }
+
+    #{$input-selectors}{
+        padding-right: pxtoem(30);
+        border-color: #00a608;
+    }
 }
 
 .parsley-error-list {
-	@extend .unstyled-list;
+    @extend .unstyled-list;
 
-	clear: both;
-	padding: pxtoem(10);
-	font-size: pxtoem(14);
-	font-style: italic;
+    clear: both;
+    padding: pxtoem(10);
+    font-size: pxtoem(14);
+    font-style: italic;
 }
 
 .parsley-error-list {
-	position: relative;
-	background: #eeeeee;
-	border-radius: 3px;
-	margin-top: pxtoem(15);
-	box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
+    position: relative;
+    background: #eeeeee;
+    border-radius: 3px;
+    margin-top: pxtoem(15);
+    box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
 
-	&:after {
-		content: '';
-		width: 0;
-		height: 0;
-		position: absolute;
-		top: -20px;
-		left: pxtoem(20);
-		border: 10px solid transparent;
-		border-bottom-color: #eeeeee;
-	}
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -20px;
+        left: pxtoem(20);
+        border: 10px solid transparent;
+        border-bottom-color: #eeeeee;
+    }
 }

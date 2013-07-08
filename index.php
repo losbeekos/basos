@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -10,43 +11,25 @@
         <meta name="viewport" content="width=device-width" />
 
         <link rel="stylesheet" href="css/main.css" />
-        
-        <?php
-            /* Images */
-        ?>
+
         <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
         <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
         <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
         <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png" />
         <link rel="shortcut icon" href="favicon.ico" />
-        
+
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="image-144x144px.png" />
 
-        <?php
-            /* Open Graph tags */
-        ?>
         <meta property="og:image" content="image-50x50px.png" />
         <meta property="og:title" content="Page title" />
         <meta property="og:url" content="Current URL" />
         <meta property="og:site_name" content="Site name" />
         <meta property="og:type" content="website" />
 
-        <?php
-            /* Twitter cards */
-        ?>
         <meta property="twitter:card" content="app" />
         <meta property="twitter:site" content="@twitteraccount" />
-        
-        <?php
-            /**
-             *
-             * Custom h5bp build with:
-             *     - Matchmedia (https://github.com/paulirish/matchMedia.js)
-             *     - RespondJS (https://github.com/scottjehl/Respond)
-             *
-            **/
-        ?>
+
         <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
         <!--[if (gte IE 6)&(lte IE 8)]>
             <script src="js/plugins/selectivizr/selectivizr.min.js"></script>
@@ -104,7 +87,7 @@
                     <a class="btn medium" href="#">button medium</a>
                     <a class="btn large" href="#">button large</a>
                     <input class="btn large" value="button disabled" type="submit" disabled="disabled" />
-                    
+
                     <h2>Primary</h2>
                     <a class="btn primary small" href="#">button small</a>
                     <a class="btn primary medium" href="#">button medium</a>
@@ -244,7 +227,7 @@
                                     </div>
                                 </div>
                             </fieldset>
-                            
+
 
                             <fieldset>
                                 <legend>Live validation (<a href="http://parsleyjs.org/">http://parsleyjs.org</a>)</legend>
@@ -254,7 +237,7 @@
                                     </div>
                                     <div class="columns-7 omega">
                                         <div class="columns-3 form-input">
-                                            <input type="text" placeholder="0123AB" data-type="alphanum" data-minlength="6" />    
+                                            <input type="text" placeholder="0123AB" data-regexp="^\d{4}[a-zA-Z]{2}$" data-error-message="Dit is geen geldige postcode." data-maxlength="6" maxlength="6" />
                                         </div>
                                     </div>
                                 </div>
@@ -264,7 +247,17 @@
                                     </div>
                                     <div class="columns-7 omega">
                                         <div class="columns-4 form-input">
-                                            <input type="tel" placeholder="0123456789" data-type="digits" />
+                                            <input type="tel" placeholder="0123456789" data-type="digits" data-minlength="10" data-error-message="Dit is geen geldig telefoonnummer." />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>IBAN-nummer (NL)</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-4 form-input">
+                                            <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-error-message="Dit is geen gelding IBAN nummer." />
                                         </div>
                                     </div>
                                 </div>
@@ -332,17 +325,5 @@
         </div>
 
         <script src="js/main.js"></script>
-
-        <?php
-        /*
-        Google Analytics: change UA-XXXXX-X to be your site's ID.
-        <script>
-            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
-        */
-        ?>
     </body>
 </html>
