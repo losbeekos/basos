@@ -9,11 +9,11 @@
 
 /*==========  Compass Dependencies  ==========*/
 @import "compass";
-@import "normalize";
 @import "susy";
 
 
 /*==========  Custom Dependencies  ==========*/
+@import "dependencies/normalize";
 @import "dependencies/h5bp";
 @import "dependencies/helpers";
 @import "dependencies/grid";

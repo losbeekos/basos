@@ -95,10 +95,9 @@ Modernizr.load([
                 /*=================================
                 =             Example             =
                 =================================*/
-
+                /*
                 ,example: {
                     init: function(){
-                        /*
                         var self = this;
 
                         if(self.fancybox.length > 0){
@@ -107,11 +106,64 @@ Modernizr.load([
 
                                 });
                         }
-                        */
                     }
                 }
-
+                */
                 /*-----  End of Example  ------*/
+
+
+
+
+                /*==========================================
+                =            Primary navigation            =
+                ==========================================*/
+                /*
+                ,nav: {
+                    el: $('.nav-primary'),
+
+                    init: function(){
+                        var self = this;
+
+                        if(self.el.length > 0){
+                            // Do some stuff to the nav
+                        }
+                    }
+                }
+                */
+                /*-----  End of Primary navigation  ------*/
+
+
+
+
+
+                /*=================================
+                =              Cycle              =
+                =================================*/
+                /*
+                ,cycle: {
+                    el: $('.spotlight-wrap', '#spotlight'),
+
+                    init: function(){
+                        var self = this;
+
+                        if(self.el.length > 0){
+                            yepnope.injectJs('js/plugins/jquery.cycle2/jquery.cycle2.min.js',
+                                function(){
+                                    self.el.cycle({
+                                        slides           : '> .spotlight-item',
+                                        pager            : '> .spotlight-pager',
+                                        pagerActiveClass : 'spotlight-pager-active',
+                                        pauseOnHover     : true,
+                                        swipe            : true,
+                                        log              : false
+                                    });
+                                });
+                        }
+                    }
+                }
+                */
+                /*-----  End of Cycle  ------*/
+
 
 
 
@@ -125,44 +177,27 @@ Modernizr.load([
                     el: $('.fancybox'),
 
                     init: function(){
-                        var self = this;
+                        var self = this,
+                            urlFancybox = 'js/plugins/jquery.fancybox/jquery.fancybox.pack.js',
+                            urlFancyboxMediaHelper = 'js/plugins/jquery.fancybox/helpers/jquery.fancybox-media.min.js';
 
-                        if(self.el.length > 0){
-                            yepnope.injectJs('js/plugins/jquery.fancybox/jquery.fancybox.min.js' + settings.version);
-                            yepnope.injectJs('js/plugins/jquery.fancybox/helpers/jquery.fancybox-media.min.js' + settings.version,
-                                function(){
+                        yepnope({
+                            test : self.el,
+                            yep  : [urlFancybox, urlFancyboxMediaHelper],
+                            callback: function (url, result, key) {
+                                if(url === urlFancyboxMediaHelper){
                                     self.el.fancybox({
                                         helpers: {
                                             media: true
                                         }
-                                    });
-                                });
-                        }
+                                    })
+                                }
+                            }
+                        });
                     }
                 }
 
                 /*-----  End of Fancybox  ------*/
-
-
-
-
-                /*==========================================
-                =            Primary navigation            =
-                ==========================================*/
-
-                ,nav: {
-                    el: $('.nav-primary'),
-
-                    init: function(){
-                        var self = this;
-
-                        if(self.el.length > 0){
-                            // Do some stuff to the nav
-                        }
-                    }
-                }
-
-                /*-----  End of Primary navigation  ------*/
 
 
 

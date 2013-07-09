@@ -12,7 +12,6 @@ A custom H5BP build is used which includes:
 _NOTE: When you optimize your project you should **[rebuild Modernizr](http://modernizr.com/download)** with only the test you need, so you have optimal performance._
 
 #### Default Compass plugins
-* **[normalize](http://necolas.github.io/normalize.css)**
 * **[susy](http://susy.oddbird.net)**
 
 #### Default Javascript & jQuery plugins
