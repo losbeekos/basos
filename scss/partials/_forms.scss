@@ -39,9 +39,9 @@ $input-selectors: '
     padding: pxtoem(10);
     border-radius: 3px;
     border: 1px solid #f3f3f3;
-    box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
     outline: 0;
     width: 100%;
+    box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
 
     @include transition-property(all);
     @include transition-duration(0.2s);
@@ -58,7 +58,12 @@ $input-selectors: '
 }
 
 textarea {
-    height: pxtoem(160)
+    height: pxtoem(160);
+}
+
+select {
+    width: 100%;
+    margin-top: pxtoem(8);
 }
 
 .form-label {
@@ -68,7 +73,7 @@ textarea {
         line-height: pxtoem(40);
     }
 
-    @include breakpoint(tablet-and-up) {
+    @include breakpoint(medium-and-up) {
         text-align: right;
     }
 }
@@ -84,16 +89,28 @@ textarea {
     }
 }
 
+.form-input-list {
+    @include breakpoint(medium-and-up) {
+        margin-top: pxtoem(8);
+    }
+
+    li {
+        + li {
+            margin-top: pxtoem(5);
+        }
+    }
+}
+
 .form-actions {
     margin-top: pxtoem(20);
 
-    @include breakpoint(tablet-and-up) {
+    @include breakpoint(medium-and-up) {
         @include pre(5);
     }
 }
 
 .form-required-field {
-    font-size: 0.875em;
+    font-size: pxtoem(14);
 }
 
 
@@ -151,7 +168,7 @@ textarea {
 }
 
 .parsley-error-list {
-    @extend .unstyled-list;
+    @extend .list-unstyled;
 
     clear: both;
     padding: pxtoem(10);

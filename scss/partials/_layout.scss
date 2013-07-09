@@ -49,11 +49,11 @@ p {
     padding: $container-padding;
     margin: $container-margin;
 
-    @include breakpoint(tablet) {
-        padding: $container-tablet-padding;
+    @include breakpoint(medium) {
+        padding: $container-medium-padding;
     }
 
-    @include breakpoint(desktop-and-up) {
-        padding: $container-desktop-and-up-padding;
+    @include breakpoint(large-and-up) {
+        padding: $container-large-and-up-padding;
     }
 }

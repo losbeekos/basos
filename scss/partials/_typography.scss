@@ -21,11 +21,11 @@ h1, .h1 {
     font-size: pxtoem(30);
     margin-bottom: pxtoem(10);
 
-    @include breakpoint(tablet) {
+    @include breakpoint(medium) {
         font-size: pxtoem(35);
     }
 
-    @include breakpoint(desktop-and-up) {
+    @include breakpoint(large-and-up) {
         font-size: pxtoem(40);
     }
 }
@@ -34,7 +34,7 @@ h2, .h2 {
     font-size: pxtoem(22);
     margin-bottom: pxtoem(10);
 
-    @include breakpoint(desktop-and-up) {
+    @include breakpoint(large-and-up) {
         font-size: pxtoem(26);
     }
 }

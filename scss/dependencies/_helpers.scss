@@ -9,20 +9,20 @@
 
 /*==========  Breakpoints  ==========*/
 @mixin breakpoint($point) {
-  @if $point == desktop-and-up {
+  @if $point == large-and-up {
     @media (min-width: pxtoem(900)) { @content; }
   }
 
-  @else if $point == tablet {
+  @else if $point == medium {
     @media (min-width: pxtoem(650)) and (max-width: pxtoem(900)) { @content; }
   }
 
-  @else if $point == tablet-and-up {
+  @else if $point == medium-and-up {
     @media (min-width: pxtoem(650)) { @content; }
   }
 
-  @else if $point == mobile {
-    @media (max-width: pxtoem(649))  { @content; }
+  @else if $point == small {
+    @media (max-width: pxtoem(650))  { @content; }
   }
 }
 
@@ -75,30 +75,30 @@
 
 
 /*==========  Hide classes  ==========*/
-@include breakpoint(mobile) {
-    .hide-mobile,
-    .hide-mobile-and-tablet {
+@include breakpoint(small) {
+    .hide-small,
+    .hide-small-and-medium {
         display: none;
     }
 }
 
-@include breakpoint(tablet) {
-    .hide-tablet,
-    .hide-mobile-and-tablet {
+@include breakpoint(medium) {
+    .hide-medium,
+    .hide-small-and-medium {
         display: none;
     }
 }
 
 /*==========  Unstyled list  ==========*/
-.unstyled-list {
+.list-unstyled {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
 /*==========  Inline list  ==========*/
-.inline-list {
-    @extend .unstyled-list;
+.list-inline {
+    @extend .list-unstyled;
 
     li {
         display: inline;

@@ -1,6 +1,7 @@
 # Todo
 
-* Nothing yet..
+* Standard modal windows using http://tympanus.net/Development/ModalWindowEffects.
+* Pure CSS tooltips.
 
 # Starting point
 Default starting point for new projects based on **[HTML5 Boilerplate](http://html5boilerplate.com)**.

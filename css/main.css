@@ -576,23 +576,23 @@ textarea {
 =            Helper classes            =
 ======================================*/
 /*==========  Hide classes  ==========*/
-@media (max-width: 40.5625em) {
+@media (max-width: 40.625em) {
   /* line 80, ../scss/dependencies/_helpers.scss */
-  .hide-mobile,
-  .hide-mobile-and-tablet {
+  .hide-small,
+  .hide-small-and-medium {
     display: none;
   }
 }
 @media (min-width: 40.625em) and (max-width: 56.25em) {
   /* line 87, ../scss/dependencies/_helpers.scss */
-  .hide-tablet,
-  .hide-mobile-and-tablet {
+  .hide-medium,
+  .hide-small-and-medium {
     display: none;
   }
 }
 /*==========  Unstyled list  ==========*/
 /* line 93, ../scss/dependencies/_helpers.scss */
-.unstyled-list, .inline-list, .parsley-error-list {
+.list-unstyled, .list-inline, .parsley-error-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -600,7 +600,7 @@ textarea {
 
 /*==========  Inline list  ==========*/
 /* line 103, ../scss/dependencies/_helpers.scss */
-.inline-list li {
+.list-inline li {
   display: inline;
   margin-right: 0.625em;
 }
@@ -642,12 +642,9 @@ textarea {
 /*==========  Columns  ==========*/
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-1 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -660,12 +657,9 @@ textarea {
 
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-2 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -678,12 +672,9 @@ textarea {
 
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-3 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -696,12 +687,9 @@ textarea {
 
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-4 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -714,12 +702,9 @@ textarea {
 
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-5 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -732,12 +717,9 @@ textarea {
 
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-6 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -750,12 +732,9 @@ textarea {
 
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-7 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -768,12 +747,9 @@ textarea {
 
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-8 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -786,12 +762,9 @@ textarea {
 
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-9 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -804,12 +777,9 @@ textarea {
 
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-10 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -822,12 +792,9 @@ textarea {
 
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-11 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -840,12 +807,9 @@ textarea {
 
 /* line 26, ../scss/dependencies/_grid.scss */
 .columns-12 {
-  /*==========  Mobile  ==========*/
   width: 100%;
   float: left;
   margin-right: 0.93458%;
-  /*==========  Tablet and up  ==========*/
-  /*==========  Desktop  ==========*/
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
@@ -861,8 +825,8 @@ textarea {
 ====================================*/
 @font-face {
   font-family: "fontello-webfont";
-  src: url('/limis.org/fonts/fontello.eot');
-  src: url('/limis.org/fonts/fontello.eot?#iefix') format('eot'), url('/limis.org/fonts/fontello.woff') format('woff'), url('/limis.org/fonts/fontello.ttf') format('truetype'), url('/limis.org/fonts/fontello.otf') format('opentype');
+  src: url('/default-project/fonts/fontello.eot');
+  src: url('/default-project/fonts/fontello.eot?#iefix') format('eot'), url('/default-project/fonts/fontello.woff') format('woff'), url('/default-project/fonts/fontello.ttf') format('truetype'), url('/default-project/fonts/fontello.otf') format('opentype');
 }
 
 /* line 14, ../scss/dependencies/_fonts.scss */
@@ -986,9 +950,9 @@ textarea {
   padding: 0.625em;
   border-radius: 3px;
   border: 1px solid #f3f3f3;
-  box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
   outline: 0;
   width: 100%;
+  box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -1041,81 +1005,98 @@ textarea {
 }
 
 /* line 64, ../scss/partials/_forms.scss */
+select {
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+/* line 69, ../scss/partials/_forms.scss */
 .form-label {
   margin-bottom: 0;
 }
-/* line 67, ../scss/partials/_forms.scss */
+/* line 72, ../scss/partials/_forms.scss */
 .form-label label {
   line-height: 2.5em;
 }
 @media (min-width: 40.625em) {
-  /* line 64, ../scss/partials/_forms.scss */
+  /* line 69, ../scss/partials/_forms.scss */
   .form-label {
     text-align: right;
   }
 }
 
-/* line 76, ../scss/partials/_forms.scss */
+/* line 81, ../scss/partials/_forms.scss */
 .form-input {
   position: relative;
   margin-bottom: 0;
 }
-/* line 80, ../scss/partials/_forms.scss */
+/* line 85, ../scss/partials/_forms.scss */
 .form-input:after {
   position: absolute;
   right: 0.625em;
   top: 0.625em;
 }
 
-/* line 87, ../scss/partials/_forms.scss */
+@media (min-width: 40.625em) {
+  /* line 92, ../scss/partials/_forms.scss */
+  .form-input-list {
+    margin-top: 0.5em;
+  }
+}
+/* line 98, ../scss/partials/_forms.scss */
+.form-input-list li + li {
+  margin-top: 0.3125em;
+}
+
+/* line 104, ../scss/partials/_forms.scss */
 .form-actions {
   margin-top: 1.25em;
 }
 @media (min-width: 40.625em) {
-  /* line 87, ../scss/partials/_forms.scss */
+  /* line 104, ../scss/partials/_forms.scss */
   .form-actions {
     margin-left: 42.05607%;
   }
 }
 
-/* line 95, ../scss/partials/_forms.scss */
+/* line 112, ../scss/partials/_forms.scss */
 .form-required-field {
   font-size: 0.875em;
 }
 
 /*==========  Placeholder  ==========*/
-/* line 103, ../scss/partials/_forms.scss */
+/* line 120, ../scss/partials/_forms.scss */
 ::-webkit-input-placeholder {
   color: #94adc4;
 }
 
-/* line 107, ../scss/partials/_forms.scss */
+/* line 124, ../scss/partials/_forms.scss */
 :-moz-placeholder {
   color: #94adc4;
 }
 
-/* line 111, ../scss/partials/_forms.scss */
+/* line 128, ../scss/partials/_forms.scss */
 ::-moz-placeholder {
   color: #94adc4;
 }
 
-/* line 115, ../scss/partials/_forms.scss */
+/* line 132, ../scss/partials/_forms.scss */
 :-ms-input-placeholder {
   color: #94adc4;
 }
 
-/* line 119, ../scss/partials/_forms.scss */
+/* line 136, ../scss/partials/_forms.scss */
 .placeholder {
   color: #94adc4;
 }
 
 /*==========  Validation  ==========*/
-/* line 128, ../scss/partials/_forms.scss */
+/* line 145, ../scss/partials/_forms.scss */
 .parsley-error:after {
   content: "✖";
   color: #a60000;
 }
-/* line 134, ../scss/partials/_forms.scss */
+/* line 151, ../scss/partials/_forms.scss */
 .parsley-error input[type="text"],
 .parsley-error input[type="password"],
 .parsley-error input[type="date"],
@@ -1134,12 +1115,12 @@ textarea {
   border-color: #a60000;
 }
 
-/* line 141, ../scss/partials/_forms.scss */
+/* line 158, ../scss/partials/_forms.scss */
 .parsley-success:after {
   content: "✔";
   color: #6eb269;
 }
-/* line 147, ../scss/partials/_forms.scss */
+/* line 164, ../scss/partials/_forms.scss */
 .parsley-success input[type="text"],
 .parsley-success input[type="password"],
 .parsley-success input[type="date"],
@@ -1158,7 +1139,7 @@ textarea {
   border-color: #00a608;
 }
 
-/* line 153, ../scss/partials/_forms.scss */
+/* line 170, ../scss/partials/_forms.scss */
 .parsley-error-list {
   clear: both;
   padding: 0.625em;
@@ -1166,7 +1147,7 @@ textarea {
   font-style: italic;
 }
 
-/* line 162, ../scss/partials/_forms.scss */
+/* line 179, ../scss/partials/_forms.scss */
 .parsley-error-list {
   position: relative;
   background: #eeeeee;
@@ -1174,7 +1155,7 @@ textarea {
   margin-top: 0.9375em;
   box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
 }
-/* line 169, ../scss/partials/_forms.scss */
+/* line 186, ../scss/partials/_forms.scss */
 .parsley-error-list:after {
   content: '';
   width: 0;
@@ -1435,6 +1416,7 @@ p {
   color: #262207;
   background: #f3f3e6;
   position: relative;
+  min-height: 5.125em;
 }
 @media (min-width: 40.625em) {
   /* line 5, ../scss/partials/_notifications.scss */
@@ -1442,7 +1424,7 @@ p {
     padding: 1.25em;
   }
 }
-/* line 18, ../scss/partials/_notifications.scss */
+/* line 19, ../scss/partials/_notifications.scss */
 .notification:before {
   position: absolute;
   left: 20px;
@@ -1451,28 +1433,28 @@ p {
   font-size: 3.75em;
   content: "";
 }
-/* line 28, ../scss/partials/_notifications.scss */
+/* line 29, ../scss/partials/_notifications.scss */
 .notification ul {
   margin: 0 0 0 3.75em;
 }
-/* line 32, ../scss/partials/_notifications.scss */
+/* line 33, ../scss/partials/_notifications.scss */
 .notification.error {
   color: #260707;
   background: #f3e6e6;
   border-color: #d3cccc;
 }
-/* line 37, ../scss/partials/_notifications.scss */
+/* line 38, ../scss/partials/_notifications.scss */
 .notification.error:before {
   content: "✖";
   color: #b26969;
 }
-/* line 43, ../scss/partials/_notifications.scss */
+/* line 44, ../scss/partials/_notifications.scss */
 .notification.success {
   color: #082607;
   background: #e6f3e6;
   border-color: #ccd3cd;
 }
-/* line 48, ../scss/partials/_notifications.scss */
+/* line 49, ../scss/partials/_notifications.scss */
 .notification.success:before {
   content: "✔";
   color: #6eb269;

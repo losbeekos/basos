@@ -10,8 +10,9 @@
     color: #262207;
     background: #f3f3e6;
     position: relative;
+    min-height: pxtoem(82);
 
-    @include breakpoint(tablet-and-up) {
+    @include breakpoint(medium-and-up) {
         padding: pxtoem(20);
     }
 

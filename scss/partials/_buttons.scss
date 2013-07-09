@@ -119,7 +119,7 @@
     &.medium {
         padding: pxtoem(12) pxtoem(35);
 
-        @include breakpoint(tablet-and-up) {
+        @include breakpoint(medium-and-up) {
             padding: pxtoem(14) pxtoem(35);
             font-size: pxtoem(17);
         }
@@ -128,7 +128,7 @@
     &.large {
         padding: pxtoem(15) pxtoem(40);
 
-        @include breakpoint(tablet-and-up) {
+        @include breakpoint(medium-and-up) {
             padding: pxtoem(18) pxtoem(50);
             font-size: pxtoem(18);
         }

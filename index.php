@@ -37,14 +37,18 @@
     </head>
     <body>
         <!--[if lt IE 8]>
-            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+            <div class="notification error">
+                <ul>
+                    <li>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</li>
+                </ul>
+            </div>
         <![endif]-->
 
         <div class="container">
             <header class="header">
                 <a class="logo" href="/"><img src="img/logo.png" alt="" /></a>
                 <nav class="nav-primary">
-                    <ul class="inline-list">
+                    <ul class="list-inline">
                         <li class="active"><a href="#">link</a></li>
                         <li><a href="#">link</a></li>
                         <li><a href="#">link</a></li>
@@ -148,6 +152,19 @@
                                 <legend>Persoonlijke gegevens</legend>
                                 <div class="form-row clearfix">
                                     <div class="columns-5 form-label">
+                                        <label>Aanhef</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <select name="" id="">
+                                                <option value="">Dhr.</option>
+                                                <option value="">Mevr.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
                                         <label>Naam *</label>
                                     </div>
                                     <div class="columns-7 omega">
@@ -203,6 +220,51 @@
                                     <div class="columns-7 omega">
                                         <div class="columns-6 form-input">
                                             <input type="email" placeholder="jouwnaam@adres.nl" />
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Some checkboxes *</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <ul class="form-input-list list-unstyled">
+                                                <li><label><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #1</label></li>
+                                                <li><label><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #2</label></li>
+                                                <li><label><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #3</label></li>
+                                                <li><label><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #4</label></li>
+                                                <li><label><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #5</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Some radio buttons *</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <ul class="form-input-list list-unstyled">
+                                                <li><label><input type="radio" data-group="radio-group-name" /> Radio #1</label></li>
+                                                <li><label><input type="radio" data-group="radio-group-name" /> Radio #2</label></li>
+                                                <li><label><input type="radio" data-group="radio-group-name" /> Radio #3</label></li>
+                                                <li><label><input type="radio" data-group="radio-group-name" /> Radio #4</label></li>
+                                                <li><label><input type="radio" data-group="radio-group-name" /> Radio #5</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="columns-5 form-label">
+                                        <label>Inline radio buttons *</label>
+                                    </div>
+                                    <div class="columns-7 omega">
+                                        <div class="columns-6 form-input">
+                                            <ul class="form-input-list list-inline">
+                                                <li><label><input type="radio" data-group="radio-group-name" /> Yes</label></li>
+                                                <li><label><input type="radio" data-group="radio-group-name" /> No</label></li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
@@ -314,7 +376,7 @@
 
             <footer class="footer">
                 <nav class="nav-footer">
-                    <ul class="inline-list">
+                    <ul class="list-inline">
                         <li class="active"><a href="#">link</a></li>
                         <li><a href="#">link</a></li>
                         <li><a href="#">link</a></li>

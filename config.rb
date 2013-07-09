@@ -2,7 +2,7 @@
 require "susy"
 
 # Set this to the root of your project when deployed:
-http_path = "/limis.org/"
+http_path = "/default-project/"
 css_dir = "css"
 sass_dir = "scss"
 fonts_dir = "fonts"

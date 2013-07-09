@@ -78,14 +78,14 @@ Modernizr.load([
 
                     $(function(){
                         // Default modules
-                        modules.fancybox.init();
-                        modules.nav.init();
+                        //modules.fancybox.init();
+                        //modules.nav.init();
                         modules.fastClick.init();
                         modules.fitVids.init();
                         modules.formValidation.init();
 
                         // App modules
-                        modules.example.init();
+                        //modules.example.init();
                     });
                 }
 
@@ -172,7 +172,7 @@ Modernizr.load([
                 /*================================
                 =            Fancybox            =
                 ================================*/
-
+                /*
                 ,fancybox: {
                     el: $('.fancybox'),
 
@@ -196,7 +196,7 @@ Modernizr.load([
                         });
                     }
                 }
-
+                */
                 /*-----  End of Fancybox  ------*/
 
 

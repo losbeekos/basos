@@ -23,8 +23,8 @@ $container-min-width              : 20em;      // 320px
 $container-max-width              : 80em;      // 1280px
 $container-margin                 : 0 auto;
 $container-padding                : 0 0.625em; // 10px (mobile first)
-$container-tablet-padding         : 0 1.25em;  // 20px
-$container-desktop-and-up-padding : 0 2.5em;   // 20px
+$container-medium-padding         : 0 1.25em;  // 20px
+$container-large-and-up-padding   : 0 2.5em;   // 40px
 
 
 /*==========  Susy grid  ==========*/
