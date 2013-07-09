@@ -70,7 +70,7 @@ If you're looking for a plugin and it's not on this list look **[here](http://ww
 
 # Usage
 _NOTE: Make sure you have **[Git](http://help.github.com/articles/set-up-git)** and **[Compass](http://compass-style.org/install)** on your computer.
-After you've installed those, install **[Susy](http://susy.oddbird.net)** and **[Normalize](https://github.com/ksmandersen/compass-normalize)**._
+After you've installed those, install **[Susy](http://susy.oddbird.net)**._
 
 Now clone this sheep.
 
