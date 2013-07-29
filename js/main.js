@@ -1,3 +1,6 @@
+"use strict";
+
+
 /*===============================================
 =            Avoid console.log errors           =
 ===============================================*/
@@ -73,20 +76,24 @@ Modernizr.load([
             ===============================*/
 
             var modules = {
+                $window: $(window),
+                $html: $('html'),
+                $body: $('body'),
+                $container: $('.container'),
+
                 init: function(){
-                    var modules = this;
 
-                    $(function(){
-                        // Default modules
-                        //modules.fancybox.init();
-                        //modules.nav.init();
-                        modules.fastClick.init();
-                        modules.fitVids.init();
-                        modules.formValidation.init();
+                    // Default modules
+                    //modules.fancybox.init();
+                    //modules.nav.init();
+                    modules.fastClick.init();
+                    modules.fitVids.init();
+                    modules.formValidation.init();
+                    modules.modals.init();
 
-                        // App modules
-                        //modules.example.init();
-                    });
+                    // App modules
+                    //modules.example.init();
+
                 }
 
 
@@ -236,6 +243,88 @@ Modernizr.load([
                                 $('.content').fitVids();
                             }
                         );
+                    }
+                }
+
+                /*-----  End of Fitvids  ------*/
+
+
+
+
+
+                /*================================
+                =             Modals             =
+                ================================*/
+
+                ,modals: {
+                    trigger: $('.modal-trigger'),
+                    modal: $('.modal'),
+                    scrollTopPosition: null,
+
+                    init: function(){
+                        var self = this;
+
+                        if (self.trigger.length > 0 && self.modal.length > 0) {
+                            modules.$body.append('<div class="modal-overlay"></div>');
+
+                            self.triggers();
+                        }
+                    },
+
+                    triggers: function () {
+                        var self = this;
+
+                        self.trigger.on('click', function (e) {
+                            e.preventDefault();
+
+                            var $trigger = $(this);
+
+                            self.openModal($trigger, $trigger.data('modalId'));
+                        });
+
+                        $('.modal-overlay').on('click', function (e) {
+                            e.preventDefault();
+                            self.closeModal();
+                        });
+
+                        modules.$body.on('keydown', function(e){
+                            if (e.keyCode === 27) {
+                                self.closeModal();
+                            }
+                        });
+                    },
+
+                    openModal: function (_trigger, _modalId) {
+                        var self = this,
+                            scrollTopPosition = modules.$window.scrollTop(),
+                            perspective = _trigger.data('modal-perspective'),
+                            $targetModal = $('#' + _modalId);
+
+                        self.scrollTopPosition = scrollTopPosition;
+
+                        if (perspective) {
+                            modules.$html.attr('data-modal-perspective', true);
+                        }
+
+                        modules.$html
+                            .attr('data-modal-show', 'true')
+                            .attr('data-modal-effect', $targetModal.data('modal-effect'));
+
+                        $targetModal.addClass('modal-show');
+
+                        modules.$container.scrollTop(scrollTopPosition);
+                    },
+
+                    closeModal: function () {
+                        var self = this;
+
+                        $('.modal-show').removeClass('modal-show');
+                        modules.$html
+                            .removeAttr('data-modal-show')
+                            .removeAttr('data-modal-effect')
+                            .removeAttr('data-modal-perspective');
+
+                        modules.$window.scrollTop(self.scrollTopPosition);
                     }
                 }
 

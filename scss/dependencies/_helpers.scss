@@ -65,6 +65,13 @@
     }
 }
 
+/*==========  Animation  ==========*/
+
+@mixin animation($name, $duration, $direction, $function) {
+    -webkit-animation: $name $duration $direction $function;
+    -moz-animation: $name $duration $direction $function;
+    animation: $name $duration $direction $function;
+}
 
 
 
