@@ -375,10 +375,16 @@
 
                 <section>
                     <h1>Modals</h1>
-                    <a class="btn small modal-trigger" data-modal-id="modal-1" data-modal-perspective="true">modal 1</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-2">modal 2</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-3">modal 3</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-4">modal 4</a>
+                    <a class="btn small modal-trigger" data-modal-id="modal-1">slip-top</a>
+                    <a class="btn small modal-trigger" data-modal-id="modal-2">slip-bottom</a>
+                    <a class="btn small modal-trigger" data-modal-id="modal-3">slide-top</a>
+                    <a class="btn small modal-trigger" data-modal-id="modal-4">slide-right</a>
+                    <a class="btn small modal-trigger" data-modal-id="modal-5">slide-bottom</a>
+                    <a class="btn small modal-trigger" data-modal-id="modal-6">slide-left</a>
+                    <a class="btn small modal-trigger" data-modal-id="modal-7">flip-horizontal</a>
+                    <a class="btn small modal-trigger" data-modal-id="modal-8">flip-vertical</a>
+                    <a class="btn small modal-trigger" data-modal-id="modal-9">fadescale</a>
+                    <a class="btn small modal-trigger" data-modal-id="modal-10">superscaled</a>
                 </section>
 
             </div>
@@ -395,32 +401,74 @@
             </footer>
         </div>
 
-        <div id="modal-1" class="modal" data-modal-effect="slipfromtop">
+        <div id="modal-1" class="modal" data-modal-effect="slip-top">
             <div class="modal-content">
                 <h2>Dit is een titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium">Akkoord</a>
+                <a href="#" class="btn primary medium modal-close">Akkoord</a>
             </div>
         </div>
-        <div id="modal-2" class="modal" data-modal-effect="slidefromtop">
+        <div id="modal-2" class="modal" data-modal-effect="slip-bottom">
+            <div class="modal-content">
+                <h2>Dit is een titel</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+            </div>
+        </div>
+        <div id="modal-3" class="modal" data-modal-effect="slide-top">
             <div class="modal-content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium">Akkoord</a>
+                <a href="#" class="btn primary medium modal-close">Akkoord</a>
             </div>
         </div>
-        <div id="modal-3" class="modal" data-modal-effect="horizontalflip">
+        <div id="modal-4" class="modal" data-modal-effect="slide-right">
+            <div class="modal-content">
+                <h2>Dit is een titel</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+            </div>
+        </div>
+        <div id="modal-5" class="modal" data-modal-effect="slide-bottom">
+            <div class="modal-content">
+                <h2>Dit is een titel</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+            </div>
+        </div>
+        <div id="modal-6" class="modal" data-modal-effect="slide-left">
+            <div class="modal-content">
+                <h2>Dit is een titel</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+            </div>
+        </div>
+        <div id="modal-7" class="modal" data-modal-effect="flip-horizontal">
             <div class="modal-content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium">Akkoord</a>
+                <a href="#" class="btn primary medium modal-close">Akkoord</a>
             </div>
         </div>
-        <div id="modal-4" class="modal" data-modal-effect="fadeandscale">
+        <div id="modal-8" class="modal" data-modal-effect="flip-vertical">
             <div class="modal-content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium">Akkoord</a>
+                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+            </div>
+        </div>
+        <div id="modal-9" class="modal" data-modal-effect="fadescale">
+            <div class="modal-content">
+                <h2>Dit is een titel 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+            </div>
+        </div>
+        <div id="modal-10" class="modal" data-modal-effect="superscale">
+            <div class="modal-content">
+                <h2>Dit is een titel 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <a href="#" class="btn primary medium modal-close">Akkoord</a>
             </div>
         </div>
 

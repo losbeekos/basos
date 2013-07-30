@@ -11,6 +11,7 @@
 /*==========  Susy grid  ==========*/
 /*==========  Button colors  ==========*/
 /*==========  Icons  ==========*/
+/*==========  Modals  ==========*/
 /*==========  Compass Dependencies  ==========*/
 /*==========  Custom Dependencies  ==========*/
 /* ==========================================================================
@@ -578,21 +579,21 @@ textarea {
 ======================================*/
 /*==========  Hide classes  ==========*/
 @media (max-width: 40.625em) {
-  /* line 87, ../scss/dependencies/_helpers.scss */
+  /* line 88, ../scss/dependencies/_helpers.scss */
   .hide-small,
   .hide-small-and-medium {
     display: none;
   }
 }
 @media (min-width: 40.625em) and (max-width: 56.25em) {
-  /* line 94, ../scss/dependencies/_helpers.scss */
+  /* line 95, ../scss/dependencies/_helpers.scss */
   .hide-medium,
   .hide-small-and-medium {
     display: none;
   }
 }
 /*==========  Unstyled list  ==========*/
-/* line 100, ../scss/dependencies/_helpers.scss */
+/* line 102, ../scss/dependencies/_helpers.scss */
 .list-unstyled, .list-inline, .parsley-error-list {
   margin: 0;
   padding: 0;
@@ -600,7 +601,7 @@ textarea {
 }
 
 /*==========  Inline list  ==========*/
-/* line 110, ../scss/dependencies/_helpers.scss */
+/* line 113, ../scss/dependencies/_helpers.scss */
 .list-inline li {
   display: inline;
   margin-right: 0.625em;
@@ -1181,19 +1182,13 @@ select {
 .btn {
   display: inline-block;
   color: white;
-  border-radius: 3px;
-  background-color: #333333;
-  box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.2);
-  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.5);
+  border-radius: 0.188em;
+  background-color: #222222;
+  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
   border: 0;
   outline: 0;
   cursor: pointer;
   line-height: 1em;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.2)), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
-  background-image: linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
   -webkit-transition-property: all;
   -moz-transition-property: all;
   -o-transition-property: all;
@@ -1203,114 +1198,114 @@ select {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 25, ../scss/partials/_buttons.scss */
+/* line 24, ../scss/partials/_buttons.scss */
 .btn:hover {
   color: white;
-  background-color: #404040;
+  background-color: #2f2f2f;
 }
-/* line 31, ../scss/partials/_buttons.scss */
+/* line 30, ../scss/partials/_buttons.scss */
 .btn:active, .btn:focus {
-  box-shadow: 0 0 30px rgba(51, 51, 51, 0.3);
+  box-shadow: 0 0 30px rgba(34, 34, 34, 0.3);
   -webkit-transition-duration: 0.05s;
   -moz-transition-duration: 0.05s;
   -o-transition-duration: 0.05s;
   transition-duration: 0.05s;
 }
-/* line 36, ../scss/partials/_buttons.scss */
+/* line 35, ../scss/partials/_buttons.scss */
 .btn:disabled {
-  background-color: #333333;
+  background-color: #222222;
   opacity: 0.5;
   cursor: not-allowed;
 }
-/* line 42, ../scss/partials/_buttons.scss */
+/* line 41, ../scss/partials/_buttons.scss */
 .btn:disabled:active, .btn:disabled:focus {
   box-shadow: none;
 }
-/* line 47, ../scss/partials/_buttons.scss */
+/* line 46, ../scss/partials/_buttons.scss */
 .btn.primary {
   background-color: #0659a4;
 }
-/* line 50, ../scss/partials/_buttons.scss */
+/* line 49, ../scss/partials/_buttons.scss */
 .btn.primary:hover {
   background-color: #0766bd;
 }
-/* line 55, ../scss/partials/_buttons.scss */
+/* line 54, ../scss/partials/_buttons.scss */
 .btn.primary:active, .btn.primary:focus {
   box-shadow: 0 0 30px rgba(6, 89, 164, 0.3);
 }
-/* line 59, ../scss/partials/_buttons.scss */
+/* line 58, ../scss/partials/_buttons.scss */
 .btn.primary:disabled {
   background-color: #0659a4;
 }
-/* line 64, ../scss/partials/_buttons.scss */
+/* line 63, ../scss/partials/_buttons.scss */
 .btn.secondary {
   background-color: #177f12;
 }
-/* line 67, ../scss/partials/_buttons.scss */
+/* line 66, ../scss/partials/_buttons.scss */
 .btn.secondary:hover {
   background-color: #1b9515;
 }
-/* line 72, ../scss/partials/_buttons.scss */
+/* line 71, ../scss/partials/_buttons.scss */
 .btn.secondary:active, .btn.secondary:focus {
   box-shadow: 0 0 30px rgba(23, 127, 18, 0.3);
 }
-/* line 76, ../scss/partials/_buttons.scss */
+/* line 75, ../scss/partials/_buttons.scss */
 .btn.secondary:disabled {
   background-color: #177f12;
 }
-/* line 81, ../scss/partials/_buttons.scss */
+/* line 80, ../scss/partials/_buttons.scss */
 .btn.tertiary {
-  background-color: #b87101;
+  background-color: #a40606;
 }
-/* line 84, ../scss/partials/_buttons.scss */
+/* line 83, ../scss/partials/_buttons.scss */
 .btn.tertiary:hover {
-  background-color: #d18101;
+  background-color: #bd0707;
 }
-/* line 89, ../scss/partials/_buttons.scss */
+/* line 88, ../scss/partials/_buttons.scss */
 .btn.tertiary:active, .btn.tertiary:focus {
-  box-shadow: 0 0 30px rgba(184, 113, 1, 0.3);
+  box-shadow: 0 0 30px rgba(164, 6, 6, 0.3);
 }
-/* line 93, ../scss/partials/_buttons.scss */
+/* line 92, ../scss/partials/_buttons.scss */
 .btn.tertiary:disabled {
-  background-color: #b87101;
+  background-color: #a40606;
 }
-/* line 98, ../scss/partials/_buttons.scss */
+/* line 97, ../scss/partials/_buttons.scss */
 .btn.quadiary {
-  background-color: #920000;
+  background-color: #069ea4;
 }
-/* line 101, ../scss/partials/_buttons.scss */
+/* line 100, ../scss/partials/_buttons.scss */
 .btn.quadiary:hover {
-  background-color: #ab0000;
+  background-color: #07b6bd;
 }
-/* line 106, ../scss/partials/_buttons.scss */
+/* line 105, ../scss/partials/_buttons.scss */
 .btn.quadiary:active, .btn.quadiary:focus {
-  box-shadow: 0 0 30px rgba(146, 0, 0, 0.3);
+  box-shadow: 0 0 30px rgba(6, 158, 164, 0.3);
 }
-/* line 110, ../scss/partials/_buttons.scss */
+/* line 109, ../scss/partials/_buttons.scss */
 .btn.quadiary:disabled {
-  background-color: #920000;
+  background-color: #069ea4;
 }
-/* line 115, ../scss/partials/_buttons.scss */
+/* line 114, ../scss/partials/_buttons.scss */
 .btn.small {
   padding: 0.5em 1.875em;
 }
-/* line 119, ../scss/partials/_buttons.scss */
+/* line 118, ../scss/partials/_buttons.scss */
 .btn.medium {
   padding: 0.75em 2.1875em;
 }
 @media (min-width: 40.625em) {
-  /* line 119, ../scss/partials/_buttons.scss */
+  /* line 118, ../scss/partials/_buttons.scss */
   .btn.medium {
     padding: 0.875em 2.1875em;
     font-size: 1.0625em;
   }
 }
-/* line 128, ../scss/partials/_buttons.scss */
+/* line 127, ../scss/partials/_buttons.scss */
 .btn.large {
   padding: 0.9375em 2.5em;
 }
 @media (min-width: 40.625em) {
-  /* line 128, ../scss/partials/_buttons.scss */
+  /* line 127, ../scss/partials/_buttons.scss */
   .btn.large {
     padding: 1.125em 3.125em;
     font-size: 1.125em;
@@ -1467,27 +1462,11 @@ p {
 /*===============================
 =            Teasers            =
 ===============================*/
+/*==========  Modals  ==========*/
 /*==============================
 =            Modals            =
 ==============================*/
-/* line 7, ../scss/partials/_modals.scss */
-[data-modal-perspective],
-[data-modal-perspective] body,
-[data-modal-perspective] .container {
-  height: 100%;
-  overflow: hidden;
-}
-
-/* line 12, ../scss/partials/_modals.scss */
-[data-modal-perspective] body {
-  -webkit-perspective: 600;
-  -moz-perspective: 600;
-  -ms-perspective: 600;
-  -o-perspective: 600;
-  perspective: 600;
-}
-
-/* line 16, ../scss/partials/_modals.scss */
+/* line 5, ../scss/partials/modals/_modals.scss */
 .modal {
   position: fixed;
   top: 50%;
@@ -1509,23 +1488,24 @@ p {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* line 29, ../scss/partials/_modals.scss */
+/* line 18, ../scss/partials/modals/_modals.scss */
 .modal.modal-show {
   visibility: visible;
   opacity: 1;
 }
 
-/* line 35, ../scss/partials/_modals.scss */
+/* line 24, ../scss/partials/modals/_modals.scss */
 .modal-content {
-  background: #ffffff;
+  background: white;
   position: relative;
   margin: 0 auto;
-  padding: 40px;
+  padding: 2.5em;
+  border-radius: 0;
 }
 
-/* line 42, ../scss/partials/_modals.scss */
+/* line 32, ../scss/partials/modals/_modals.scss */
 .modal-overlay {
-  background: rgba(0, 0, 0, 0.2);
+  background: black;
   position: fixed;
   visibility: hidden;
   top: 0;
@@ -1543,152 +1523,309 @@ p {
   -o-transition-duration: 0.5s;
   transition-duration: 0.5s;
 }
-/* line 55, ../scss/partials/_modals.scss */
+/* line 45, ../scss/partials/modals/_modals.scss */
 [data-modal-show] .modal-overlay {
   visibility: visible;
-  opacity: 1;
+  opacity: 0.4;
 }
 
-/*==========================================================================
-=            Slip in from the top with perspective on container            =
-==========================================================================*/
-@-webkit-keyframes openTop {
-  /* line 66, ../scss/partials/_modals.scss */
+/*==========================================
+=            Slip (top, bottom)            =
+==========================================*/
+@-webkit-keyframes slipTop {
+  /* line 6, ../scss/partials/modals/effects/_slip.scss */
   50% {
     -webkit-transform: rotateX(10deg);
     -webkit-animation-timing-function: ease-out;
   }
 }
 
-@-moz-keyframes openTop {
-  /* line 73, ../scss/partials/_modals.scss */
+@-moz-keyframes slipTop {
+  /* line 13, ../scss/partials/modals/effects/_slip.scss */
   50% {
     -moz-transform: rotateX(10deg);
     -moz-animation-timing-function: ease-out;
   }
 }
 
-@keyframes openTop {
-  /* line 80, ../scss/partials/_modals.scss */
+@keyframes slipTop {
+  /* line 20, ../scss/partials/modals/effects/_slip.scss */
   50% {
     transform: rotateX(10deg);
     animation-timing-function: ease-out;
   }
 }
 
-/* line 88, ../scss/partials/_modals.scss */
-[data-modal-effect=slipfromtop] .container,
-[data-modal-effect=slipfromtop] .modal-overlay {
+@-webkit-keyframes slipBottom {
+  /* line 27, ../scss/partials/modals/effects/_slip.scss */
+  50% {
+    -webkit-transform: rotateX(-10deg);
+    -webkit-animation-timing-function: ease-out;
+  }
+}
+
+@-moz-keyframes slipBottom {
+  /* line 34, ../scss/partials/modals/effects/_slip.scss */
+  50% {
+    -moz-transform: rotateX(-10deg);
+    -moz-animation-timing-function: ease-out;
+  }
+}
+
+@keyframes slipBottom {
+  /* line 41, ../scss/partials/modals/effects/_slip.scss */
+  50% {
+    transform: rotateX(-10deg);
+    animation-timing-function: ease-out;
+  }
+}
+
+/* line 49, ../scss/partials/modals/effects/_slip.scss */
+html[data-modal-effect|=slip],
+[data-modal-effect|=slip] body,
+[data-modal-effect|=slip] .container {
+  height: 100%;
+  overflow: hidden;
+}
+
+/* line 54, ../scss/partials/modals/effects/_slip.scss */
+[data-modal-effect|=slip] body {
+  -webkit-perspective: 600;
+  -moz-perspective: 600;
+  -ms-perspective: 600;
+  -o-perspective: 600;
+  perspective: 600;
+}
+
+/* line 60, ../scss/partials/modals/effects/_slip.scss */
+[data-modal-effect|=slip] .container,
+[data-modal-effect|=slip] .modal-overlay {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
+}
+
+/* line 67, ../scss/partials/modals/effects/_slip.scss */
+[data-modal-effect=slip-top] .container,
+[data-modal-effect=slip-top] .modal-overlay {
   -webkit-transform-origin: 50% 100%;
   -moz-transform-origin: 50% 100%;
   -ms-transform-origin: 50% 100%;
   -o-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
-  -webkit-animation: openTop 0.5s forwards ease-in;
-  -moz-animation: openTop 0.5s forwards ease-in;
-  animation: openTop 0.5s forwards ease-in;
+  -webkit-animation: slipTop 0.5s forwards ease-in;
+  -moz-animation: slipTop 0.5s forwards ease-in;
+  animation: slipTop 0.5s forwards ease-in;
 }
 
-/* line 96, ../scss/partials/_modals.scss */
-.modal[data-modal-effect=slipfromtop] .modal-content {
-  opacity: 0;
-  -webkit-transform: translateY(-600%);
-  -moz-transform: translateY(-600%);
-  -ms-transform: translateY(-600%);
-  -o-transform: translateY(-600%);
-  transform: translateY(-600%);
+/* line 75, ../scss/partials/modals/effects/_slip.scss */
+[data-modal-effect=slip-bottom] .container,
+[data-modal-effect=slip-bottom] .modal-overlay {
+  -webkit-transform-origin: 50% 0;
+  -moz-transform-origin: 50% 0;
+  -ms-transform-origin: 50% 0;
+  -o-transform-origin: 50% 0;
+  transform-origin: 50% 0;
+  -webkit-animation: slipBottom 0.5s forwards ease-in;
+  -moz-animation: slipBottom 0.5s forwards ease-in;
+  animation: slipBottom 0.5s forwards ease-in;
 }
-/* line 102, ../scss/partials/_modals.scss */
-.modal[data-modal-effect=slipfromtop].modal-show .modal-content {
+
+/* line 83, ../scss/partials/modals/effects/_slip.scss */
+.modal[data-modal-effect|=slip] .modal-content {
+  opacity: 0;
+}
+/* line 88, ../scss/partials/modals/effects/_slip.scss */
+.modal[data-modal-effect|=slip].modal-show .modal-content {
   opacity: 1;
-  -webkit-transform: translateY(0);
-  -moz-transform: translateY(0);
-  -ms-transform: translateY(0);
-  -o-transform: translateY(0);
-  transform: translateY(0);
   -webkit-transition: all 0.5s;
   -webkit-transition-delay: 0.1s;
   -moz-transition: all 0.5s 0.1s;
   -o-transition: all 0.5s 0.1s;
   transition: all 0.5s 0.1s;
 }
-
-/*=========================================
-=            Slide in from top            =
-=========================================*/
-/* line 116, ../scss/partials/_modals.scss */
-.modal[data-modal-effect=slidefromtop] .modal-content {
-  opacity: 0;
-  -webkit-transform: translateY(-600%);
-  -moz-transform: translateY(-600%);
-  -ms-transform: translateY(-600%);
-  -o-transform: translateY(-600%);
-  transform: translateY(-600%);
+/* line 96, ../scss/partials/modals/effects/_slip.scss */
+.modal[data-modal-effect=slip-top] .modal-content {
+  -webkit-transform: translateY(-300%);
+  -moz-transform: translateY(-300%);
+  -ms-transform: translateY(-300%);
+  -o-transform: translateY(-300%);
+  transform: translateY(-300%);
 }
-/* line 122, ../scss/partials/_modals.scss */
-.modal[data-modal-effect=slidefromtop].modal-show .modal-content {
-  opacity: 1;
+/* line 101, ../scss/partials/modals/effects/_slip.scss */
+.modal[data-modal-effect=slip-top].modal-show .modal-content {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
   transform: translateY(0);
+}
+/* line 108, ../scss/partials/modals/effects/_slip.scss */
+.modal[data-modal-effect=slip-bottom] .modal-content {
+  -webkit-transform: translateY(300%);
+  -moz-transform: translateY(300%);
+  -ms-transform: translateY(300%);
+  -o-transform: translateY(300%);
+  transform: translateY(300%);
+}
+/* line 113, ../scss/partials/modals/effects/_slip.scss */
+.modal[data-modal-effect=slip-bottom].modal-show .modal-content {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+
+/*========================================================
+=            Slide (top, right, bottom, left)            =
+========================================================*/
+/* line 7, ../scss/partials/modals/effects/_slide.scss */
+.modal[data-modal-effect|=slide] .modal-content {
+  opacity: 0;
+}
+/* line 12, ../scss/partials/modals/effects/_slide.scss */
+.modal[data-modal-effect|=slide].modal-show .modal-content {
+  opacity: 1;
   -webkit-transition: all 0.5s;
   -webkit-transition-delay: 0.1s;
   -moz-transition: all 0.5s 0.1s;
   -o-transition: all 0.5s 0.1s;
   transition: all 0.5s 0.1s;
 }
+/* line 20, ../scss/partials/modals/effects/_slide.scss */
+.modal[data-modal-effect=slide-top] .modal-content {
+  -webkit-transform: translateY(-300%);
+  -moz-transform: translateY(-300%);
+  -ms-transform: translateY(-300%);
+  -o-transform: translateY(-300%);
+  transform: translateY(-300%);
+}
+/* line 25, ../scss/partials/modals/effects/_slide.scss */
+.modal[data-modal-effect=slide-top].modal-show .modal-content {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+/* line 32, ../scss/partials/modals/effects/_slide.scss */
+.modal[data-modal-effect=slide-right] .modal-content {
+  -webkit-transform: translateX(300%);
+  -moz-transform: translateX(300%);
+  -ms-transform: translateX(300%);
+  -o-transform: translateX(300%);
+  transform: translateX(300%);
+}
+/* line 37, ../scss/partials/modals/effects/_slide.scss */
+.modal[data-modal-effect=slide-right].modal-show .modal-content {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
+/* line 44, ../scss/partials/modals/effects/_slide.scss */
+.modal[data-modal-effect=slide-bottom] .modal-content {
+  -webkit-transform: translateY(300%);
+  -moz-transform: translateY(300%);
+  -ms-transform: translateY(300%);
+  -o-transform: translateY(300%);
+  transform: translateY(300%);
+}
+/* line 49, ../scss/partials/modals/effects/_slide.scss */
+.modal[data-modal-effect=slide-bottom].modal-show .modal-content {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  -ms-transform: translateY(0);
+  -o-transform: translateY(0);
+  transform: translateY(0);
+}
+/* line 56, ../scss/partials/modals/effects/_slide.scss */
+.modal[data-modal-effect=slide-left] .modal-content {
+  -webkit-transform: translateX(-300%);
+  -moz-transform: translateX(-300%);
+  -ms-transform: translateX(-300%);
+  -o-transform: translateX(-300%);
+  transform: translateX(-300%);
+}
+/* line 61, ../scss/partials/modals/effects/_slide.scss */
+.modal[data-modal-effect=slide-left].modal-show .modal-content {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
+  transform: translateX(0);
+}
 
-/*==========================================
-=            3D horizontal flip            =
-==========================================*/
-/* line 135, ../scss/partials/_modals.scss */
-.modal[data-modal-effect=horizontalflip] {
+/*===================================================
+=            Flip (horizontal, vertical)            =
+===================================================*/
+/* line 6, ../scss/partials/modals/effects/_flip.scss */
+.modal[data-modal-effect|=flip] {
   -webkit-perspective: 1300;
   -moz-perspective: 1300;
   -ms-perspective: 1300;
   -o-perspective: 1300;
   perspective: 1300;
 }
-/* line 138, ../scss/partials/_modals.scss */
-.modal[data-modal-effect=horizontalflip] .modal-content {
+/* line 9, ../scss/partials/modals/effects/_flip.scss */
+.modal[data-modal-effect|=flip] .modal-content {
   opacity: 0;
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
   -o-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transform: rotateY(-70deg);
-  -moz-transform: rotateY(-70deg);
-  -ms-transform: rotateY(-70deg);
-  -o-transform: rotateY(-70deg);
-  transform: rotateY(-70deg);
   -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 146, ../scss/partials/_modals.scss */
-.modal[data-modal-effect=horizontalflip].modal-show .modal-content {
+/* line 16, ../scss/partials/modals/effects/_flip.scss */
+.modal[data-modal-effect|=flip].modal-show .modal-content {
   opacity: 1;
+}
+/* line 23, ../scss/partials/modals/effects/_flip.scss */
+.modal[data-modal-effect=flip-horizontal] .modal-content {
+  -webkit-transform: rotateY(-70deg);
+  -moz-transform: rotateY(-70deg);
+  -ms-transform: rotateY(-70deg);
+  -o-transform: rotateY(-70deg);
+  transform: rotateY(-70deg);
+}
+/* line 28, ../scss/partials/modals/effects/_flip.scss */
+.modal[data-modal-effect=flip-horizontal].modal-show .modal-content {
   -webkit-transform: rotateY(0deg);
   -moz-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
   -o-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }
+/* line 35, ../scss/partials/modals/effects/_flip.scss */
+.modal[data-modal-effect=flip-vertical] .modal-content {
+  -webkit-transform: rotateX(-70deg);
+  -moz-transform: rotateX(-70deg);
+  -ms-transform: rotateX(-70deg);
+  -o-transform: rotateX(-70deg);
+  transform: rotateX(-70deg);
+}
+/* line 40, ../scss/partials/modals/effects/_flip.scss */
+.modal[data-modal-effect=flip-vertical].modal-show .modal-content {
+  -webkit-transform: rotateX(0deg);
+  -moz-transform: rotateX(0deg);
+  -ms-transform: rotateX(0deg);
+  -o-transform: rotateX(0deg);
+  transform: rotateX(0deg);
+}
 
 /*=======================================
 =            Fade in & scale            =
 =======================================*/
-/* line 159, ../scss/partials/_modals.scss */
-.modal[data-modal-effect=fadeandscale] .modal-content {
+/* line 6, ../scss/partials/modals/effects/_fadescale.scss */
+.modal[data-modal-effect=fadescale] .modal-content {
   opacity: 0;
   -webkit-transform: scale(0.7, 0.7);
   -moz-transform: scale(0.7, 0.7);
@@ -1700,8 +1837,34 @@ p {
   -o-transition: all 0.3s;
   transition: all 0.3s;
 }
-/* line 166, ../scss/partials/_modals.scss */
-.modal[data-modal-effect=fadeandscale].modal-show .modal-content {
+/* line 13, ../scss/partials/modals/effects/_fadescale.scss */
+.modal[data-modal-effect=fadescale].modal-show .modal-content {
+  opacity: 1;
+  -webkit-transform: scale(1, 1);
+  -moz-transform: scale(1, 1);
+  -ms-transform: scale(1, 1);
+  -o-transform: scale(1, 1);
+  transform: scale(1, 1);
+}
+
+/*=====================================
+=             Super scale             =
+=====================================*/
+/* line 6, ../scss/partials/modals/effects/_superscale.scss */
+.modal[data-modal-effect=superscale] .modal-content {
+  opacity: 0;
+  -webkit-transform: scale(2, 2);
+  -moz-transform: scale(2, 2);
+  -ms-transform: scale(2, 2);
+  -o-transform: scale(2, 2);
+  transform: scale(2, 2);
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  transition: all 0.3s;
+}
+/* line 13, ../scss/partials/modals/effects/_superscale.scss */
+.modal[data-modal-effect=superscale].modal-show .modal-content {
   opacity: 1;
   -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);

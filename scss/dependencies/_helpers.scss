@@ -2,10 +2,12 @@
 =            Helper mixins            =
 =====================================*/
 
+
 /*==========  PX to EM  ==========*/
-@function pxtoem($target){
+@function pxtoem($target) {
    @return ($target/16)+0em;
 }
+
 
 /*==========  Breakpoints  ==========*/
 @mixin breakpoint($point) {
@@ -37,33 +39,34 @@
     height: 0;
 
     // Right
-    @if($direction == right){
+    @if($direction == right) {
         border-top: $height/2 solid transparent;
         border-bottom: $height/2 solid transparent;
         border-left: $width solid $color;
     }
 
     // Left
-    @if($direction == left){
+    @if($direction == left) {
         border-top: $height/2 solid transparent;
         border-bottom: $height/2 solid transparent;
         border-right: $width solid $color;
     }
 
     // Up
-    @if($direction == up){
+    @if($direction == up) {
         border-left: $width/2 solid transparent;
         border-right: $width/2 solid transparent;
         border-bottom: $height solid $color;
     }
 
     // Down
-    @if($direction == down){
+    @if($direction == down) {
         border-left: $width/2 solid transparent;
         border-right: $width/2 solid transparent;
         border-top: $height solid $color;
     }
 }
+
 
 /*==========  Animation  ==========*/
 
@@ -72,8 +75,6 @@
     -moz-animation: $name $duration $direction $function;
     animation: $name $duration $direction $function;
 }
-
-
 
 
 /*======================================
@@ -96,12 +97,14 @@
     }
 }
 
+
 /*==========  Unstyled list  ==========*/
 .list-unstyled {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
+
 
 /*==========  Inline list  ==========*/
 .list-inline {

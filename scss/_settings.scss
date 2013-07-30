@@ -37,11 +37,12 @@ $grid-padding  : 0;       // 0 grid padding
 /*==========  Button colors  ==========*/
 // If you need more customization,
 // dive into the buttons partial.
-$btn-default-bg-color   : #333333;
+$btn-border-radius      : 0.188em; // 3px
+$btn-default-bg-color   : #222222;
 $btn-primary-bg-color   : #0659a4;
 $btn-secondary-bg-color : #177f12;
-$btn-tertiary-bg-color  : #b87101;
-$btn-quadiary-bg-color  : #920000;
+$btn-tertiary-bg-color  : #a40606;
+$btn-quadiary-bg-color  : #069ea4;
 
 
 /*==========  Icons  ==========*/
@@ -52,3 +53,11 @@ $icon-notification-success    : '✔';
 $icon-notification-error      : '✖';
 $icon-form-validation-success : $icon-notification-success;
 $icon-form-validation-error   : $icon-notification-error;
+
+
+/*==========  Modals  ==========*/
+$modal-overlay-bg-color      : #000000;
+$modal-overlay-opacity       : 0.4;
+$modal-content-bg-color      : #ffffff;
+$modal-content-padding       : 2.500em; // 40px
+$modal-content-border-radius : 0;

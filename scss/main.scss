@@ -30,7 +30,17 @@
 @import "partials/notifications";
 @import "partials/spotlight";
 @import "partials/teasers";
-@import "partials/modals";
+
+
+/*==========  Modals  ==========*/
+@import "partials/modals/modals";
+// Delete/comment effects you don't use,
+// to avoid a bloated generated CSS file.
+@import "partials/modals/effects/slip";
+@import "partials/modals/effects/slide";
+@import "partials/modals/effects/flip";
+@import "partials/modals/effects/fadescale";
+@import "partials/modals/effects/superscale";
 
 
 /*==========  Print (keep in last position)  ==========*/

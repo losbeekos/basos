@@ -10,15 +10,14 @@
 .btn {
     display: inline-block;
     color: $white;
-    border-radius: 3px;
+    border-radius: $btn-border-radius;
     background-color: $btn-default-bg-color;
-    box-shadow: inset 1px 1px 0 rgba(0, 0, 0, 0.2);
-    text-shadow: 1px 0 1px rgba(0, 0, 0, 0.5);
+    text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
     border: 0;
     outline: 0;
     cursor: pointer;
     line-height: pxtoem(16);
-    @include background-image(linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0)));
+    //@include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));
     @include transition-property(all);
     @include transition-duration(0.2s);
 

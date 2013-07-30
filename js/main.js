@@ -85,13 +85,13 @@ Modernizr.load([
 
                     // Default modules
                     //modules.fancybox.init();
-                    //modules.nav.init();
                     modules.fastClick.init();
                     modules.fitVids.init();
                     modules.formValidation.init();
                     modules.modals.init();
 
                     // App modules
+                    //modules.nav.init();
                     //modules.example.init();
 
                 }
@@ -292,19 +292,19 @@ Modernizr.load([
                                 self.closeModal();
                             }
                         });
+
+                        $('.modal-close').on('click', function(e) {
+                            e.preventDefault();
+                            self.closeModal();
+                        });
                     },
 
                     openModal: function (_trigger, _modalId) {
                         var self = this,
                             scrollTopPosition = modules.$window.scrollTop(),
-                            perspective = _trigger.data('modal-perspective'),
                             $targetModal = $('#' + _modalId);
 
                         self.scrollTopPosition = scrollTopPosition;
-
-                        if (perspective) {
-                            modules.$html.attr('data-modal-perspective', true);
-                        }
 
                         modules.$html
                             .attr('data-modal-show', 'true')
@@ -321,8 +321,7 @@ Modernizr.load([
                         $('.modal-show').removeClass('modal-show');
                         modules.$html
                             .removeAttr('data-modal-show')
-                            .removeAttr('data-modal-effect')
-                            .removeAttr('data-modal-perspective');
+                            .removeAttr('data-modal-effect');
 
                         modules.$window.scrollTop(self.scrollTopPosition);
                     }
