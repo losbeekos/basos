@@ -1,6 +1,5 @@
 # Todo
 
-* Standard modal windows using http://tympanus.net/Development/ModalWindowEffects.
 * Pure CSS tooltips.
 
 # Starting point
