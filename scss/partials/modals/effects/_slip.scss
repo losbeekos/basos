@@ -1,0 +1,118 @@
+/*==========================================
+=            Slip (top, bottom)            =
+==========================================*/
+
+@-webkit-keyframes slipTop {
+    50% {
+        -webkit-transform: rotateX(10deg);
+        -webkit-animation-timing-function: ease-out;
+    }
+}
+
+@-moz-keyframes slipTop {
+    50% {
+        -moz-transform: rotateX(10deg);
+        -moz-animation-timing-function: ease-out;
+    }
+}
+
+@keyframes slipTop {
+    50% {
+        transform: rotateX(10deg);
+        animation-timing-function: ease-out;
+    }
+}
+
+@-webkit-keyframes slipBottom {
+    50% {
+        -webkit-transform: rotateX(-10deg);
+        -webkit-animation-timing-function: ease-out;
+    }
+}
+
+@-moz-keyframes slipBottom {
+    50% {
+        -moz-transform: rotateX(-10deg);
+        -moz-animation-timing-function: ease-out;
+    }
+}
+
+@keyframes slipBottom {
+    50% {
+        transform: rotateX(-10deg);
+        animation-timing-function: ease-out;
+    }
+}
+
+html[data-modal-effect|=slip],
+[data-modal-effect|=slip] body,
+[data-modal-effect|=slip] .container {
+    height: 100%;
+    overflow: hidden;
+}
+
+[data-modal-effect|=slip] body {
+    @include perspective(600);
+}
+
+[data-modal-effect|=slip] {
+    .container,
+    .modal-overlay {
+        @include transform-style(preserve-3d);
+    }
+}
+
+[data-modal-effect=slip-top] {
+    .container,
+    .modal-overlay {
+        @include transform-origin(50%, 100%);
+        @include animation(slipTop, 0.5s, forwards, ease-in);
+    }
+}
+
+[data-modal-effect=slip-bottom] {
+    .container,
+    .modal-overlay {
+        @include transform-origin(50%, 0);
+        @include animation(slipBottom, 0.5s, forwards, ease-in);
+    }
+}
+
+.modal {
+    &[data-modal-effect|=slip] {
+        .modal-content {
+            opacity: 0;
+            @include single-transition(all, 0.5s, 0.1s)
+        }
+
+        &.modal-show {
+            .modal-content {
+                opacity: 1;
+            }
+        }
+    }
+
+    &[data-modal-effect=slip-top] {
+        .modal-content {
+            @include translateY(-300%);
+        }
+
+        &.modal-show {
+            .modal-content {
+                @include translateY(0);
+            }
+        }
+    }
+
+    &[data-modal-effect=slip-bottom] {
+        .modal-content {
+            @include translateY(300%);
+        }
+
+        &.modal-show {
+            .modal-content {
+                @include translateY(0);
+            }
+        }
+    }
+}

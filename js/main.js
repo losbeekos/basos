@@ -37,7 +37,7 @@
 ========================================*/
 
 var settings = {
-    version: '?v=0.1', // If the file changes, update this number
+    version: '?v=0.1' // If the file changes, update this number
 }
 
 /*-----  End of Default settings  ------*/
@@ -55,11 +55,12 @@ Modernizr.load([
 
 
     /*==========  Feature tests  ==========*/
-
+    /*
     {
         test : Modernizr.input.placeholder,
         nope : 'js/plugins/jquery.placeholder/jquery.placeholder.min.js'
     },
+    */
 
 
     /*==========  jQuery  ==========*/
@@ -261,7 +262,7 @@ Modernizr.load([
                     modal: $('.modal'),
                     scrollTopPosition: null,
 
-                    init: function(){
+                    init: function () {
                         var self = this;
 
                         if (self.trigger.length > 0 && self.modal.length > 0) {
@@ -307,7 +308,7 @@ Modernizr.load([
                         self.scrollTopPosition = scrollTopPosition;
 
                         modules.$html
-                            .attr('data-modal-show', 'true')
+                            .addClass('modal-show')
                             .attr('data-modal-effect', $targetModal.data('modal-effect'));
 
                         $targetModal.addClass('modal-show');
@@ -320,7 +321,7 @@ Modernizr.load([
 
                         $('.modal-show').removeClass('modal-show');
                         modules.$html
-                            .removeAttr('data-modal-show')
+                            .removeClass('modal-show')
                             .removeAttr('data-modal-effect');
 
                         modules.$window.scrollTop(self.scrollTopPosition);
