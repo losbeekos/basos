@@ -1012,27 +1012,33 @@ select {
   margin-top: 0.5em;
 }
 
-/* line 69, ../scss/partials/_forms.scss */
+/* line 71, ../scss/partials/_forms.scss */
+input[type=radio][disabled]:hover,
+input[type=checkbox][disabled]:hover {
+  cursor: not-allowed;
+}
+
+/* line 76, ../scss/partials/_forms.scss */
 .form-label {
   margin-bottom: 0;
 }
-/* line 72, ../scss/partials/_forms.scss */
+/* line 79, ../scss/partials/_forms.scss */
 .form-label label {
   line-height: 2.5em;
 }
 @media (min-width: 40.625em) {
-  /* line 69, ../scss/partials/_forms.scss */
+  /* line 76, ../scss/partials/_forms.scss */
   .form-label {
     text-align: right;
   }
 }
 
-/* line 81, ../scss/partials/_forms.scss */
+/* line 88, ../scss/partials/_forms.scss */
 .form-input {
   position: relative;
   margin-bottom: 0;
 }
-/* line 85, ../scss/partials/_forms.scss */
+/* line 92, ../scss/partials/_forms.scss */
 .form-input:after {
   position: absolute;
   right: 0.625em;
@@ -1040,65 +1046,65 @@ select {
 }
 
 @media (min-width: 40.625em) {
-  /* line 92, ../scss/partials/_forms.scss */
+  /* line 99, ../scss/partials/_forms.scss */
   .form-input-list {
     margin-top: 0.5em;
   }
 }
-/* line 98, ../scss/partials/_forms.scss */
+/* line 105, ../scss/partials/_forms.scss */
 .form-input-list li + li {
   margin-top: 0.3125em;
 }
 
-/* line 104, ../scss/partials/_forms.scss */
+/* line 111, ../scss/partials/_forms.scss */
 .form-actions {
   margin-top: 1.25em;
 }
 @media (min-width: 40.625em) {
-  /* line 104, ../scss/partials/_forms.scss */
+  /* line 111, ../scss/partials/_forms.scss */
   .form-actions {
     margin-left: 42.05607%;
   }
 }
 
-/* line 112, ../scss/partials/_forms.scss */
+/* line 119, ../scss/partials/_forms.scss */
 .form-required-field {
   font-size: 0.875em;
 }
 
 /*==========  Placeholder  ==========*/
-/* line 120, ../scss/partials/_forms.scss */
+/* line 127, ../scss/partials/_forms.scss */
 ::-webkit-input-placeholder {
   color: #94adc4;
 }
 
-/* line 124, ../scss/partials/_forms.scss */
+/* line 131, ../scss/partials/_forms.scss */
 :-moz-placeholder {
   color: #94adc4;
 }
 
-/* line 128, ../scss/partials/_forms.scss */
+/* line 135, ../scss/partials/_forms.scss */
 ::-moz-placeholder {
   color: #94adc4;
 }
 
-/* line 132, ../scss/partials/_forms.scss */
+/* line 139, ../scss/partials/_forms.scss */
 :-ms-input-placeholder {
   color: #94adc4;
 }
 
-/* line 136, ../scss/partials/_forms.scss */
+/* line 143, ../scss/partials/_forms.scss */
 .placeholder {
   color: #94adc4;
 }
 
 /*==========  Validation  ==========*/
-/* line 145, ../scss/partials/_forms.scss */
+/* line 152, ../scss/partials/_forms.scss */
 .parsley-error:after {
   content: "✖";
   color: #a60000;
 }
-/* line 151, ../scss/partials/_forms.scss */
+/* line 158, ../scss/partials/_forms.scss */
 .parsley-error input[type="text"],
 .parsley-error input[type="password"],
 .parsley-error input[type="date"],
@@ -1117,12 +1123,12 @@ select {
   border-color: #a60000;
 }
 
-/* line 158, ../scss/partials/_forms.scss */
+/* line 165, ../scss/partials/_forms.scss */
 .parsley-success:after {
   content: "✔";
   color: #6eb269;
 }
-/* line 164, ../scss/partials/_forms.scss */
+/* line 171, ../scss/partials/_forms.scss */
 .parsley-success input[type="text"],
 .parsley-success input[type="password"],
 .parsley-success input[type="date"],
@@ -1141,7 +1147,7 @@ select {
   border-color: #00a608;
 }
 
-/* line 170, ../scss/partials/_forms.scss */
+/* line 177, ../scss/partials/_forms.scss */
 .parsley-error-list {
   clear: both;
   padding: 0.625em;
@@ -1149,7 +1155,7 @@ select {
   font-style: italic;
 }
 
-/* line 179, ../scss/partials/_forms.scss */
+/* line 186, ../scss/partials/_forms.scss */
 .parsley-error-list {
   position: relative;
   background: #eeeeee;
@@ -1157,7 +1163,7 @@ select {
   margin-top: 0.9375em;
   box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
 }
-/* line 186, ../scss/partials/_forms.scss */
+/* line 193, ../scss/partials/_forms.scss */
 .parsley-error-list:after {
   content: '';
   width: 0;

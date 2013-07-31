@@ -66,6 +66,13 @@ select {
     margin-top: pxtoem(8);
 }
 
+input[type=radio][disabled],
+input[type=checkbox][disabled] {
+    &:hover {
+        cursor: not-allowed;
+    }
+}
+
 .form-label {
     margin-bottom: 0;
 

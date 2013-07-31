@@ -244,6 +244,8 @@
                                                 <li><label><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #3</label></li>
                                                 <li><label><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #4</label></li>
                                                 <li><label><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #5</label></li>
+                                                <li><label><input type="checkbox" data-group="checkbox-group-name" disabled="disabled" /> Disabled #6</label></li>
+                                                <li><label><input type="checkbox" data-group="checkbox-group-name" disabled="disabled" /> Disabled #7</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -260,6 +262,8 @@
                                                 <li><label><input type="radio" data-group="radio-group-name" /> Radio #3</label></li>
                                                 <li><label><input type="radio" data-group="radio-group-name" /> Radio #4</label></li>
                                                 <li><label><input type="radio" data-group="radio-group-name" /> Radio #5</label></li>
+                                                <li><label><input type="radio" data-group="radio-group-name" disabled="disabled" /> Disabled #6</label></li>
+                                                <li><label><input type="radio" data-group="radio-group-name" disabled="disabled" /> Disabled #7</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -386,7 +390,7 @@
 
                 <section>
                     <h1>Tooltips</h1>
-                    <a class="tooltip btn small" data-tooltip-position="top" data-tooltip-content="some tooltip content right here">top</a>
+                    <a class="tooltip btn small" data-tooltip-position="top" data-tooltip-content="some tooltip content right here" data-tooltip-height="32">top</a>
                     <a class="tooltip btn small" data-tooltip-position="right" data-tooltip-content="some tooltip content right here">right</a>
                     <a class="tooltip btn small" data-tooltip-position="bottom" data-tooltip-content="some tooltip content right here">bottom</a>
                     <a class="tooltip btn small" data-tooltip-position="left" data-tooltip-content="some tooltip content right here">left</a>
