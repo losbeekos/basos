@@ -7,14 +7,14 @@
         @include perspective(1300);
 
         .modal-content {
-            opacity: 0;
+            @include opacity(0);
             @include transform-style(preserve-3d);
             @include single-transition(all, 0.3s);
         }
 
         &.modal-show {
             .modal-content {
-                opacity: 1;
+                @include opacity(1);
             }
         }
     }

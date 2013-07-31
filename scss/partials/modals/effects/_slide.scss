@@ -5,13 +5,13 @@
 .modal {
     &[data-modal-effect|=slide] {
         .modal-content {
-            opacity: 0;
+            @include opacity(0);
             @include single-transition(all, 0.5s, 0);
         }
 
         &.modal-show {
             .modal-content {
-                opacity: 1;
+                @include opacity(1);
                 @include single-transition(all, 0.5s, 0.1s)
             }
         }

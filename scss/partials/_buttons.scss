@@ -17,9 +17,12 @@
     outline: 0;
     cursor: pointer;
     line-height: pxtoem(16);
-    //@include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));
     @include transition-property(all);
     @include transition-duration(0.2s);
+
+    @if $btn-gradient {
+        @include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));
+    }
 
     &:hover {
         color: $white;
@@ -34,8 +37,9 @@
 
     &:disabled {
         background-color: $btn-default-bg-color;
-        opacity: 0.5;
         cursor: not-allowed;
+        color: darken($white, 20%);
+        @include opacity(0.5);
 
         &:active,
         &:focus {

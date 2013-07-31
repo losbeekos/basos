@@ -81,13 +81,13 @@ html[data-modal-effect|=slip],
 .modal {
     &[data-modal-effect|=slip] {
         .modal-content {
-            opacity: 0;
+            @include opacity(0);
             @include single-transition(all, 0.5s, 0.1s)
         }
 
         &.modal-show {
             .modal-content {
-                opacity: 1;
+                @include opacity(1);
             }
         }
     }
