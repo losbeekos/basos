@@ -1,6 +1,9 @@
 # Todo
 
-* Pure CSS tooltips.
+* Pure CSS tooltips (wip)
+* Accordion
+* Breadcrumbs
+* Pagination
 
 # Starting point
 Default starting point for new projects based on **[HTML5 Boilerplate](http://html5boilerplate.com)**.
