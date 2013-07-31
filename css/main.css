@@ -1462,7 +1462,108 @@ p {
 /*===============================
 =            Teasers            =
 ===============================*/
-/*==========  Modals  ==========*/
+/*==========  Optional partials  ==========*/
+/*================================
+=            Tooltips            =
+================================*/
+/* line 5, ../scss/partials/_tooltips.scss */
+.tooltip {
+  display: inline-block;
+  position: relative;
+}
+/* line 11, ../scss/partials/_tooltips.scss */
+.tooltip:hover:after, .tooltip:hover:before {
+  visibility: visible;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 17, ../scss/partials/_tooltips.scss */
+.tooltip:before {
+  content: '';
+  visibility: hidden;
+  position: absolute;
+  border: 5px solid transparent;
+  z-index: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/* line 27, ../scss/partials/_tooltips.scss */
+.tooltip:after {
+  content: attr(data-tooltip-content);
+  visibility: hidden;
+  position: absolute;
+  background: #0659a4;
+  color: #ffffff;
+  width: 200px;
+  text-align: center;
+  padding: 5px 10px;
+  cursor: default;
+  border-radius: 3px;
+  z-index: 1;
+  font-size: 0.875em;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/* line 45, ../scss/partials/_tooltips.scss */
+.tooltip[data-tooltip-position=top]:before {
+  top: -10px;
+  left: 50%;
+  margin-left: -5px;
+  border-top-color: #0659a4;
+}
+/* line 52, ../scss/partials/_tooltips.scss */
+.tooltip[data-tooltip-position=top]:after {
+  top: -35px;
+  left: 50%;
+  margin-left: -100px;
+}
+/* line 60, ../scss/partials/_tooltips.scss */
+.tooltip[data-tooltip-position=right]:before {
+  top: 50%;
+  right: -10px;
+  margin-top: -5px;
+  border-right-color: #0659a4;
+}
+/* line 67, ../scss/partials/_tooltips.scss */
+.tooltip[data-tooltip-position=right]:after {
+  top: 3px;
+  right: -230px;
+}
+/* line 74, ../scss/partials/_tooltips.scss */
+.tooltip[data-tooltip-position=bottom]:before {
+  bottom: -10px;
+  left: 50%;
+  margin-left: -5px;
+  border-bottom-color: #0659a4;
+}
+/* line 81, ../scss/partials/_tooltips.scss */
+.tooltip[data-tooltip-position=bottom]:after {
+  top: 42px;
+  left: 50%;
+  margin-left: -100px;
+}
+/* line 89, ../scss/partials/_tooltips.scss */
+.tooltip[data-tooltip-position=left]:before {
+  top: 50%;
+  left: -10px;
+  margin-top: -5px;
+  border-left-color: #0659a4;
+}
+/* line 96, ../scss/partials/_tooltips.scss */
+.tooltip[data-tooltip-position=left]:after {
+  top: 3px;
+  left: -230px;
+}
+
+/*==========  Modals (optional)  ==========*/
 /*==============================
 =            Modals            =
 ==============================*/

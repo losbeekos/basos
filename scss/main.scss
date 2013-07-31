@@ -32,7 +32,11 @@
 @import "partials/teasers";
 
 
-/*==========  Modals  ==========*/
+/*==========  Optional partials  ==========*/
+@import "partials/tooltips";
+
+
+/*==========  Modals (optional)  ==========*/
 @import "partials/modals/modals";
 // Delete/comment effects you don't use,
 // to avoid a bloated generated CSS file.

@@ -57,6 +57,9 @@
             </header>
 
             <div class="content">
+
+                <br/><br/>
+
                 <section>
                     <h1>Grid</h1>
                     <div class="grid clearfix">
@@ -83,6 +86,8 @@
                         <div class="columns-3 omega" style="background: rgba(0,0,0,0.1)">column 3</div>
                     </div>
                 </section>
+
+                <br/><br/>
 
                 <section>
                     <h1>Buttons</h1>
@@ -117,9 +122,11 @@
                     <input class="btn quadiary large" value="button disabled" type="submit" disabled="disabled" />
                 </section>
 
+                <br/><br/>
+
                 <section>
                     <h1>Notifications</h1>
-                    <p><i>Note: Download proper icons on <a href="http://www.fontello.com">fontello.com</a> and change the icons in the notifications partial.</i></p>
+                    <p><i>Note: Download proper icons on <a href="http://www.fontello.com">fontello.com</a> and change the icons in settings.</i></p>
                     <div class="notification error">
                         <ul>
                             <li>Vul een e-mailadres in</li>
@@ -142,6 +149,8 @@
                         </ul>
                     </div>
                 </section>
+
+                <br/><br/>
 
                 <section>
                     <h1>Form</h1>
@@ -373,6 +382,18 @@
                     </div>
                 </section>
 
+                <br/><br/>
+
+                <section>
+                    <h1>Tooltips</h1>
+                    <a class="tooltip btn small" data-tooltip-position="top" data-tooltip-content="some tooltip content right here">top</a>
+                    <a class="tooltip btn small" data-tooltip-position="right" data-tooltip-content="some tooltip content right here">right</a>
+                    <a class="tooltip btn small" data-tooltip-position="bottom" data-tooltip-content="some tooltip content right here">bottom</a>
+                    <a class="tooltip btn small" data-tooltip-position="left" data-tooltip-content="some tooltip content right here">left</a>
+                </section>
+
+                <br/><br/>
+
                 <section>
                     <h1>Modals</h1>
                     <a class="btn small modal-trigger" data-modal-id="modal-1">slip-top</a>
@@ -386,6 +407,8 @@
                     <a class="btn small modal-trigger" data-modal-id="modal-9">fadescale</a>
                     <a class="btn small modal-trigger" data-modal-id="modal-10">superscaled</a>
                 </section>
+
+                <br/><br/>
 
             </div>
 
