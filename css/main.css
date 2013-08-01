@@ -11,6 +11,7 @@
 /*==========  Susy grid  ==========*/
 /*==========  Button colors  ==========*/
 /*==========  Icons  ==========*/
+/*==========  Tooltips  ==========*/
 /*==========  Modals  ==========*/
 /*==========  Compass Dependencies  ==========*/
 /*==========  Custom Dependencies  ==========*/
@@ -1328,20 +1329,22 @@ input[type=checkbox][disabled]:hover {
 /*==============================
 =            Layout            =
 ==============================*/
-/* line 5, ../scss/partials/_layout.scss */
-* {
+/* line 7, ../scss/partials/_layout.scss */
+*,
+:before,
+:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
-/* line 9, ../scss/partials/_layout.scss */
+/* line 11, ../scss/partials/_layout.scss */
 body {
   font-family: arial, verdana, sans-serif;
   color: #333333;
 }
 
-/* line 14, ../scss/partials/_layout.scss */
+/* line 16, ../scss/partials/_layout.scss */
 a {
   color: #0659a4;
   text-decoration: none;
@@ -1356,11 +1359,11 @@ a {
   -o-transition-duration: 0.2s;
   transition-duration: 0.2s;
 }
-/* line 23, ../scss/partials/_layout.scss */
+/* line 25, ../scss/partials/_layout.scss */
 a:hover {
   color: #333333;
 }
-/* line 28, ../scss/partials/_layout.scss */
+/* line 30, ../scss/partials/_layout.scss */
 a:after, a:before {
   -webkit-transition-property: all;
   -moz-transition-property: all;
@@ -1372,22 +1375,22 @@ a:after, a:before {
   transition-duration: 0.2s;
 }
 
-/* line 34, ../scss/partials/_layout.scss */
+/* line 36, ../scss/partials/_layout.scss */
 img {
   max-width: 100%;
 }
 
-/* line 38, ../scss/partials/_layout.scss */
+/* line 40, ../scss/partials/_layout.scss */
 address {
   font-style: normal;
 }
 
-/* line 42, ../scss/partials/_layout.scss */
+/* line 44, ../scss/partials/_layout.scss */
 p {
   margin-top: 0;
 }
 
-/* line 46, ../scss/partials/_layout.scss */
+/* line 48, ../scss/partials/_layout.scss */
 .container {
   max-width: 80em;
   min-width: 20em;
@@ -1395,13 +1398,13 @@ p {
   margin: 0 auto;
 }
 @media (min-width: 40.625em) and (max-width: 56.25em) {
-  /* line 46, ../scss/partials/_layout.scss */
+  /* line 48, ../scss/partials/_layout.scss */
   .container {
     padding: 0 1.25em;
   }
 }
 @media (min-width: 56.25em) {
-  /* line 46, ../scss/partials/_layout.scss */
+  /* line 48, ../scss/partials/_layout.scss */
   .container {
     padding: 0 2.5em;
   }
@@ -1484,95 +1487,94 @@ p {
   display: inline-block;
   position: relative;
 }
-/* line 11, ../scss/partials/_tooltips.scss */
-.tooltip:hover:after, .tooltip:hover:before {
+/* line 10, ../scss/partials/_tooltips.scss */
+.tooltip .tooltip-content, .tooltip:after {
+  visibility: hidden;
+  position: absolute;
+  z-index: 1;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+}
+/* line 20, ../scss/partials/_tooltips.scss */
+.tooltip.tooltip-active .tooltip-content, .tooltip.tooltip-active:after {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 17, ../scss/partials/_tooltips.scss */
-.tooltip:before {
-  content: '';
-  visibility: hidden;
-  position: absolute;
-  border: 5px solid transparent;
-  z-index: 1;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-}
-/* line 27, ../scss/partials/_tooltips.scss */
+/* line 26, ../scss/partials/_tooltips.scss */
 .tooltip:after {
-  content: attr(data-tooltip-content);
-  visibility: hidden;
-  position: absolute;
-  background: #0659a4;
-  color: #ffffff;
-  width: 200px;
-  text-align: center;
-  padding: 5px 10px;
-  cursor: default;
-  border-radius: 3px;
-  z-index: 1;
-  font-size: 0.875em;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+  content: '';
+  border: 5px solid transparent;
 }
-/* line 45, ../scss/partials/_tooltips.scss */
-.tooltip[data-tooltip-position=top]:before {
-  top: -10px;
+/* line 31, ../scss/partials/_tooltips.scss */
+.tooltip .tooltip-content {
+  text-align: center;
+  background: #0659a4;
+  color: white;
+  width: 220px;
+  padding: 0.625em;
+  border-radius: 0.188em;
+  font-size: 0.75em;
+}
+
+/* line 44, ../scss/partials/_tooltips.scss */
+[data-tooltip-position=top]:after,
+[data-tooltip-position=bottom]:after {
   left: 50%;
   margin-left: -5px;
+}
+/* line 49, ../scss/partials/_tooltips.scss */
+[data-tooltip-position=top] .tooltip-content,
+[data-tooltip-position=bottom] .tooltip-content {
+  left: 50%;
+  margin-left: -110px;
+}
+
+/* line 56, ../scss/partials/_tooltips.scss */
+[data-tooltip-position=top]:after {
+  top: -10px;
   border-top-color: #0659a4;
 }
-/* line 52, ../scss/partials/_tooltips.scss */
-.tooltip[data-tooltip-position=top]:after {
-  top: -35px;
-  left: 50%;
-  margin-left: -100px;
-}
-/* line 60, ../scss/partials/_tooltips.scss */
-.tooltip[data-tooltip-position=right]:before {
-  top: 50%;
-  right: -10px;
-  margin-top: -5px;
-  border-right-color: #0659a4;
-}
-/* line 67, ../scss/partials/_tooltips.scss */
-.tooltip[data-tooltip-position=right]:after {
-  top: 3px;
-  right: -230px;
-}
-/* line 74, ../scss/partials/_tooltips.scss */
-.tooltip[data-tooltip-position=bottom]:before {
+
+/* line 63, ../scss/partials/_tooltips.scss */
+[data-tooltip-position=bottom]:after {
   bottom: -10px;
-  left: 50%;
-  margin-left: -5px;
   border-bottom-color: #0659a4;
 }
-/* line 81, ../scss/partials/_tooltips.scss */
-.tooltip[data-tooltip-position=bottom]:after {
-  top: 42px;
-  left: 50%;
-  margin-left: -100px;
-}
-/* line 89, ../scss/partials/_tooltips.scss */
-.tooltip[data-tooltip-position=left]:before {
+
+/* line 71, ../scss/partials/_tooltips.scss */
+[data-tooltip-position=left]:after,
+[data-tooltip-position=right]:after {
   top: 50%;
-  left: -10px;
   margin-top: -5px;
+}
+/* line 76, ../scss/partials/_tooltips.scss */
+[data-tooltip-position=left] .tooltip-content,
+[data-tooltip-position=right] .tooltip-content {
+  top: 50%;
+}
+
+/* line 82, ../scss/partials/_tooltips.scss */
+[data-tooltip-position=right]:after {
+  right: -10px;
+  border-right-color: #0659a4;
+}
+/* line 87, ../scss/partials/_tooltips.scss */
+[data-tooltip-position=right] .tooltip-content {
+  right: -230px;
+}
+
+/* line 93, ../scss/partials/_tooltips.scss */
+[data-tooltip-position=left]:after {
+  left: -10px;
   border-left-color: #0659a4;
 }
-/* line 96, ../scss/partials/_tooltips.scss */
-.tooltip[data-tooltip-position=left]:after {
-  top: 3px;
+/* line 98, ../scss/partials/_tooltips.scss */
+[data-tooltip-position=left] .tooltip-content {
   left: -230px;
 }
 

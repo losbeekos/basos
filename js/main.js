@@ -84,16 +84,19 @@ Modernizr.load([
 
                 init: function(){
 
-                    // Default modules
-                    //modules.fancybox.init();
-                    modules.fastClick.init();
-                    modules.fitVids.init();
-                    modules.formValidation.init();
-                    modules.modals.init();
+                    $(function(){
+                        // Default modules
+                        //modules.fancybox.init();
+                        modules.fastClick.init();
+                        modules.fitVids.init();
+                        modules.formValidation.init();
+                        modules.modals.init();
+                        modules.tooltips.init();
 
-                    // App modules
-                    //modules.nav.init();
-                    //modules.example.init();
+                        // App modules
+                        //modules.nav.init();
+                        //modules.example.init();
+                    });
 
                 }
 
@@ -329,6 +332,88 @@ Modernizr.load([
                 }
 
                 /*-----  End of Fitvids  ------*/
+
+
+
+
+
+                /*================================
+                =            Tooltips            =
+                ================================*/
+
+                ,tooltips: {
+                    el: $('.tooltip'),
+                    tooltipTrigger: null,
+                    tooltipActiveClass: 'tooltip-active',
+                    tooltipContentClass: 'tooltip-content',
+                    arrowWidth: 10,
+
+                    init: function () {
+                        var self = this;
+
+                        if (self.el.length > 0) {
+                            self.el.each(function () {
+                                var $tooltipTrigger = $(this);
+
+                                if ($tooltipTrigger.data('tooltipTrigger') === 'click') {
+                                    self.tooltipTrigger = 'click';
+                                } else {
+                                    self.tooltipTrigger = 'hover';
+                                }
+
+                                self.triggers($tooltipTrigger);
+                                self.appendContent($tooltipTrigger);
+                            });
+                        }
+                    },
+
+                    appendContent: function ($tooltipTrigger) {
+                        var self = this;
+
+                        $tooltipTrigger.append('<div class="' + self.tooltipContentClass + '">' + $tooltipTrigger.data('tooltipContent') + '</div>');
+                        self.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip-content'));
+                    },
+
+                    triggers: function ($tooltipTrigger) {
+                        var self = this;
+
+                        if (self.tooltipTrigger === 'hover') {
+                            $tooltipTrigger.on({
+                                mouseenter: function () {
+                                    $(this).addClass(self.tooltipActiveClass);
+                                },
+                                mouseleave: function () {
+                                    $(this).removeClass(self.tooltipActiveClass);
+                                }
+                            });
+                        } else {
+                            $tooltipTrigger.on('click', function () {
+                                $(this).toggleClass(self.tooltipActiveClass);
+                            });
+                        }
+                    },
+
+                    calculatePosition: function ($tooltipTrigger, $tooltipContent) {
+                        var self = this,
+                            tooltipTriggerHeight = $tooltipTrigger.outerHeight(),
+                            tooltipContentHeight = $tooltipContent.outerHeight();
+
+                        switch ($tooltipTrigger.data('tooltipPosition')) {
+                            case 'top':
+                                $tooltipContent.css({ bottom: tooltipTriggerHeight + self.arrowWidth });
+                                break;
+                            case 'right':
+                            case 'left':
+                                $tooltipContent.css({ 'margin-top': -(tooltipContentHeight/2) });
+                                break;
+                            case 'bottom':
+                                $tooltipContent.css({ top: tooltipTriggerHeight + self.arrowWidth });
+                                break;
+                        }
+                    }
+                }
+
+                /*-----  End of Tooltips  ------*/
 
 
 

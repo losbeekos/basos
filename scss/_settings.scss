@@ -56,6 +56,17 @@ $icon-form-validation-success : $icon-notification-success;
 $icon-form-validation-error   : $icon-notification-error;
 
 
+/*==========  Tooltips  ==========*/
+$tooltip-width                  : 220px;
+$tooltip-arrow-width            : 5px;
+$tooltip-transition-speed       : 0.2s;
+$tooltip-bg-color               : #0659a4;
+$tooltip-padding                : 0.625em; // 10px
+$tooltip-border-radius          : 0.188em; // 3px
+$tooltip-font-size              : 0.750em; // 12px
+$tooltip-font-color             : #ffffff;
+
+
 /*==========  Modals  ==========*/
 $modal-overlay-bg-color      : #000000;
 $modal-overlay-opacity       : 0.4;

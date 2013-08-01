@@ -1,6 +1,5 @@
 # Todo
 
-* Pure CSS tooltips (wip)
 * Accordion
 * Breadcrumbs
 * Pagination
@@ -12,7 +11,7 @@ A custom H5BP build is used which includes:
 * **[respond](https://github.com/scottjehl/Respond)** - A fast & lightweight polyfill for min/max-width CSS3 Media Queries (for IE 6-8, and more)
 * **[modernizr](http://modernizr.com/)** - Library that detects HTML5 and CSS3 features in the user’s browser.
 
-_NOTE: When you optimize your project you should **[rebuild Modernizr](http://modernizr.com/download)** with only the test you need, so you have optimal performance._
+_NOTE: When you optimize your project you should **[rebuild Modernizr](http://modernizr.com/download)** with only the tests you need, so you have optimal performance._
 
 #### Default Compass plugins
 * **[susy](http://susy.oddbird.net)**
@@ -28,7 +27,7 @@ These plugins are integrated in the build and get updated every now and then.
 Additional plugins are listed here which you can use.
 
 #### Compass plugins
-* **[animate](https://github.com/ericam/compass-animate)** - Compass port of Dan Eden's Animate.css
+* -
 
 #### Javascript plugins
 

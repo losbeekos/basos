@@ -390,10 +390,11 @@
 
                 <section>
                     <h1>Tooltips</h1>
-                    <a class="tooltip btn small" data-tooltip-position="top" data-tooltip-content="some tooltip content right here" data-tooltip-height="32">top</a>
-                    <a class="tooltip btn small" data-tooltip-position="right" data-tooltip-content="some tooltip content right here">right</a>
-                    <a class="tooltip btn small" data-tooltip-position="bottom" data-tooltip-content="some tooltip content right here">bottom</a>
-                    <a class="tooltip btn small" data-tooltip-position="left" data-tooltip-content="some tooltip content right here">left</a>
+                    <a class="tooltip btn small" data-tooltip-position="top" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a>
+                    <a class="tooltip btn small" data-tooltip-position="right" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">right</a>
+                    <a class="tooltip btn small" data-tooltip-position="bottom" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">bottom</a>
+                    <a class="tooltip btn small" data-tooltip-position="left" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">left</a>
+                    <a class="tooltip btn small" data-tooltip-position="top" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness." data-tooltip-trigger="click">click trigger</a>
                 </section>
 
                 <br/><br/>
