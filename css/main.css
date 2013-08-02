@@ -631,29 +631,29 @@ textarea {
 }
 
 /* line 12, ../scss/dependencies/_grid.scss */
-[class|="columns"] {
+[class|="column"] {
   margin-bottom: 1.25em;
 }
 /* line 15, ../scss/dependencies/_grid.scss */
-[class|="columns"].omega {
+[class|="column"].omega {
   float: right;
   margin-right: 0;
 }
 /* line 18, ../scss/dependencies/_grid.scss */
-.lt-ie9 [class|="columns"].omega {
+.lt-ie9 [class|="column"].omega {
   float: left !important;
 }
 
 /*==========  Columns  ==========*/
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-1 {
+.column-1 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-1 {
+  .column-1 {
     width: 7.47664%;
     float: left;
     margin-right: 0.93458%;
@@ -661,14 +661,14 @@ textarea {
 }
 
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-2 {
+.column-2 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-2 {
+  .column-2 {
     width: 15.88785%;
     float: left;
     margin-right: 0.93458%;
@@ -676,14 +676,14 @@ textarea {
 }
 
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-3 {
+.column-3 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-3 {
+  .column-3 {
     width: 24.29907%;
     float: left;
     margin-right: 0.93458%;
@@ -691,14 +691,14 @@ textarea {
 }
 
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-4 {
+.column-4 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-4 {
+  .column-4 {
     width: 32.71028%;
     float: left;
     margin-right: 0.93458%;
@@ -706,14 +706,14 @@ textarea {
 }
 
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-5 {
+.column-5 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-5 {
+  .column-5 {
     width: 41.1215%;
     float: left;
     margin-right: 0.93458%;
@@ -721,14 +721,14 @@ textarea {
 }
 
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-6 {
+.column-6 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-6 {
+  .column-6 {
     width: 49.53271%;
     float: left;
     margin-right: 0.93458%;
@@ -736,14 +736,14 @@ textarea {
 }
 
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-7 {
+.column-7 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-7 {
+  .column-7 {
     width: 57.94393%;
     float: left;
     margin-right: 0.93458%;
@@ -751,14 +751,14 @@ textarea {
 }
 
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-8 {
+.column-8 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-8 {
+  .column-8 {
     width: 66.35514%;
     float: left;
     margin-right: 0.93458%;
@@ -766,14 +766,14 @@ textarea {
 }
 
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-9 {
+.column-9 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-9 {
+  .column-9 {
     width: 74.76636%;
     float: left;
     margin-right: 0.93458%;
@@ -781,14 +781,14 @@ textarea {
 }
 
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-10 {
+.column-10 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-10 {
+  .column-10 {
     width: 83.17757%;
     float: left;
     margin-right: 0.93458%;
@@ -796,14 +796,14 @@ textarea {
 }
 
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-11 {
+.column-11 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-11 {
+  .column-11 {
     width: 91.58879%;
     float: left;
     margin-right: 0.93458%;
@@ -811,14 +811,14 @@ textarea {
 }
 
 /* line 26, ../scss/dependencies/_grid.scss */
-.columns-12 {
+.column-12 {
   width: 100%;
   float: left;
   margin-right: 0.93458%;
 }
 @media (min-width: 40.625em) {
   /* line 26, ../scss/dependencies/_grid.scss */
-  .columns-12 {
+  .column-12 {
     width: 100%;
     float: left;
     margin-right: 0.93458%;

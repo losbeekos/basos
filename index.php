@@ -63,27 +63,27 @@
                 <section>
                     <h1>Grid</h1>
                     <div class="grid clearfix">
-                        <div class="columns-12 omega" style="background: rgba(0,0,0,0.1)">column 12</div>
+                        <div class="column-12 omega" style="background: rgba(0,0,0,0.1)">column-12</div>
                     </div>
                     <div class="grid clearfix">
-                        <div class="columns-6" style="background: rgba(0,0,0,0.1)">column 6</div>
-                        <div class="columns-6 omega" style="background: rgba(0,0,0,0.1)">column 6</div>
+                        <div class="column-6" style="background: rgba(0,0,0,0.1)">column-6</div>
+                        <div class="column-6 omega" style="background: rgba(0,0,0,0.1)">column-6</div>
                     </div>
                     <div class="grid clearfix">
-                        <div class="columns-4" style="background: rgba(0,0,0,0.1)">column 4</div>
-                        <div class="columns-8 omega" style="background: rgba(0,0,0,0.1)">column 8</div>
+                        <div class="column-4" style="background: rgba(0,0,0,0.1)">column-4</div>
+                        <div class="column-8 omega" style="background: rgba(0,0,0,0.1)">column-8</div>
                     </div>
                     <div class="grid clearfix">
-                        <div class="columns-2" style="background: rgba(0,0,0,0.1)">column 2</div>
-                        <div class="columns-10 omega" style="background: rgba(0,0,0,0.1)">column 10</div>
+                        <div class="column-2" style="background: rgba(0,0,0,0.1)">column-2</div>
+                        <div class="column-10 omega" style="background: rgba(0,0,0,0.1)">column-10</div>
                     </div>
                     <div class="grid clearfix">
-                        <div class="columns-7" style="background: rgba(0,0,0,0.1)">column 7</div>
-                        <div class="columns-5 omega" style="background: rgba(0,0,0,0.1)">column 5</div>
+                        <div class="column-7" style="background: rgba(0,0,0,0.1)">column-7</div>
+                        <div class="column-5 omega" style="background: rgba(0,0,0,0.1)">column-5</div>
                     </div>
                     <div class="grid clearfix">
-                        <div class="columns-9" style="background: rgba(0,0,0,0.1)">column 9</div>
-                        <div class="columns-3 omega" style="background: rgba(0,0,0,0.1)">column 3</div>
+                        <div class="column-9" style="background: rgba(0,0,0,0.1)">column-9</div>
+                        <div class="column-3 omega" style="background: rgba(0,0,0,0.1)">column-3</div>
                     </div>
                 </section>
 
@@ -123,10 +123,10 @@
 
                     <h2>Block button</h2>
                     <div class="grid clearfix">
-                        <div class="columns-6">
+                        <div class="column-6">
                             <a class="btn btn-block btn-primary btn-large" href="#">block button</a>
                         </div>
-                        <div class="columns-6 omega">
+                        <div class="column-6 omega">
                             <a class="btn btn-block btn-primary btn-large" href="#">block button</a>
                         </div>
                     </div>
@@ -170,11 +170,11 @@
                             <fieldset>
                                 <legend>Persoonlijke gegevens</legend>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Aanhef</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <select name="" id="">
                                                 <option value="">Dhr.</option>
                                                 <option value="">Mevr.</option>
@@ -183,71 +183,71 @@
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Naam *</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <input type="text" placeholder="" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Adres</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <input type="text" placeholder="" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Postcode</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-3 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-3 form-input">
                                             <input type="text" placeholder="" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Woonplaats</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <input type="text" placeholder="" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix error">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Telefoonnummer</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <input type="tel" placeholder="0123456789" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>E-mailadres *</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <input type="email" placeholder="jouwnaam@adres.nl" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Some checkboxes *</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <ul class="form-input-list list-unstyled">
                                                 <li><label><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #1</label></li>
                                                 <li><label><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #2</label></li>
@@ -261,11 +261,11 @@
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Some radio buttons *</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <ul class="form-input-list list-unstyled">
                                                 <li><label><input type="radio" data-group="radio-group-name" /> Radio #1</label></li>
                                                 <li><label><input type="radio" data-group="radio-group-name" /> Radio #2</label></li>
@@ -279,11 +279,11 @@
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Inline radio buttons *</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <ul class="form-input-list list-inline">
                                                 <li><label><input type="radio" data-group="radio-group-name" /> Yes</label></li>
                                                 <li><label><input type="radio" data-group="radio-group-name" /> No</label></li>
@@ -292,21 +292,21 @@
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Disabled *</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <input type="email" placeholder="disabled.." disabled="disabled" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Vraag / opmerking</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-10 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-10 form-input">
                                             <textarea cols="30" rows="10"></textarea>
                                         </div>
                                     </div>
@@ -317,71 +317,71 @@
                             <fieldset>
                                 <legend>Live validation (<a href="http://parsleyjs.org/">http://parsleyjs.org</a>)</legend>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Postcode</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-3 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-3 form-input">
                                             <input type="text" placeholder="0123AB" data-regexp="^\d{4}[a-zA-Z]{2}$" data-error-message="Dit is geen geldige postcode." data-maxlength="6" maxlength="6" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Telefoonnummer</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-4 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-4 form-input">
                                             <input type="tel" placeholder="0123456789" data-type="digits" data-minlength="10" data-error-message="Dit is geen geldig telefoonnummer." />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>IBAN-nummer (NL)</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-4 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-4 form-input">
                                             <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-error-message="Dit is geen gelding IBAN nummer." />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>E-mailadres *</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <input type="email" placeholder="jouwnaam@adres.nl" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Wachtwoord *</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <input id="password" type="password" />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Herhaal wachtwoord *</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <input type="password" data-equalto="#password" data-error-message="Wachtwoorden zijn niet identiek." />
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-row clearfix">
-                                    <div class="columns-5 form-label">
+                                    <div class="column-5 form-label">
                                         <label>Website *</label>
                                     </div>
-                                    <div class="columns-7 omega">
-                                        <div class="columns-6 form-input">
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
                                             <input type="url" />
                                         </div>
                                     </div>
@@ -648,12 +648,12 @@
                             <div class="accordion-content">
                                 <h2>With a grid inside</h2>
                                 <div class="grid clearfix">
-                                    <div class="columns-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                    <div class="columns-6 omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                    <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                    <div class="column-6 omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                                 </div>
                                 <div class="grid clearfix">
-                                    <div class="columns-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                    <div class="columns-6 omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                    <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                    <div class="column-6 omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                                 </div>
                             </div>
                         </div>

@@ -9,7 +9,7 @@
     @include container;
 }
 
-[class|="columns"] {
+[class|="column"] {
     margin-bottom: $gutter-width;
 
     &.omega {
@@ -23,7 +23,7 @@
 
 /*==========  Columns  ==========*/
 @for $i from 1 through $total-columns {
-    .columns-#{$i} {
+    .column-#{$i} {
         @include span-columns($total-columns, $total-columns);
 
         @include breakpoint(medium-and-up){
