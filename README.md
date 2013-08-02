@@ -1,6 +1,5 @@
 # Todo
 
-* Tables
 * Breadcrumbs
 * Pagination
 
