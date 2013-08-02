@@ -92,34 +92,44 @@
                 <section>
                     <h1>Buttons</h1>
                     <h2>Default</h2>
-                    <a class="btn small" href="#">button small</a>
-                    <a class="btn medium" href="#">button medium</a>
-                    <a class="btn large" href="#">button large</a>
-                    <input class="btn large" value="button disabled" type="submit" disabled="disabled" />
+                    <a class="btn btn-small" href="#">button small</a>
+                    <a class="btn btn-medium" href="#">button medium</a>
+                    <a class="btn btn-large" href="#">button large</a>
+                    <input class="btn btn-large" value="button disabled" type="submit" disabled="disabled" />
 
                     <h2>Primary</h2>
-                    <a class="btn primary small" href="#">button small</a>
-                    <a class="btn primary medium" href="#">button medium</a>
-                    <a class="btn primary large" href="#">button large</a>
-                    <input class="btn primary large" value="button disabled" type="submit" disabled="disabled" />
+                    <a class="btn btn-primary btn-small" href="#">button small</a>
+                    <a class="btn btn-primary btn-medium" href="#">button medium</a>
+                    <a class="btn btn-primary btn-large" href="#">button large</a>
+                    <input class="btn btn-primary btn-large" value="button disabled" type="submit" disabled="disabled" />
 
                     <h2>Secondary</h2>
-                    <a class="btn secondary small" href="#">button small</a>
-                    <a class="btn secondary medium" href="#">button medium</a>
-                    <a class="btn secondary large" href="#">button large</a>
-                    <input class="btn secondary large" value="button disabled" type="submit" disabled="disabled" />
+                    <a class="btn btn-secondary btn-small" href="#">button small</a>
+                    <a class="btn btn-secondary btn-medium" href="#">button medium</a>
+                    <a class="btn btn-secondary btn-large" href="#">button large</a>
+                    <input class="btn btn-secondary btn-large" value="button disabled" type="submit" disabled="disabled" />
 
                     <h2>Tertiary</h2>
-                    <a class="btn tertiary small" href="#">button small</a>
-                    <a class="btn tertiary medium" href="#">button medium</a>
-                    <a class="btn tertiary large" href="#">button large</a>
-                    <input class="btn tertiary large" value="button disabled" type="submit" disabled="disabled" />
+                    <a class="btn btn-tertiary btn-small" href="#">button small</a>
+                    <a class="btn btn-tertiary btn-medium" href="#">button medium</a>
+                    <a class="btn btn-tertiary btn-large" href="#">button large</a>
+                    <input class="btn btn-tertiary btn-large" value="button disabled" type="submit" disabled="disabled" />
 
                     <h2>Quadiary</h2>
-                    <a class="btn quadiary small" href="#">button small</a>
-                    <a class="btn quadiary medium" href="#">button medium</a>
-                    <a class="btn quadiary large" href="#">button large</a>
-                    <input class="btn quadiary large" value="button disabled" type="submit" disabled="disabled" />
+                    <a class="btn btn-quadiary btn-small" href="#">button small</a>
+                    <a class="btn btn-quadiary btn-medium" href="#">button medium</a>
+                    <a class="btn btn-quadiary btn-large" href="#">button large</a>
+                    <input class="btn btn-quadiary btn-large" value="button disabled" type="submit" disabled="disabled" />
+
+                    <h2>Block button</h2>
+                    <div class="grid clearfix">
+                        <div class="columns-6">
+                            <a class="btn btn-block btn-primary btn-large" href="#">block button</a>
+                        </div>
+                        <div class="columns-6 omega">
+                            <a class="btn btn-block btn-primary btn-large" href="#">block button</a>
+                        </div>
+                    </div>
                 </section>
 
                 <br/><br/>
@@ -380,7 +390,7 @@
 
                             <div class="form-actions">
                                 <p class="form-required-field"><i>* = Verplicht veld</i></p>
-                                <input class="btn primary medium" type="submit" value="verzenden" />
+                                <input class="btn btn-primary btn-medium" type="submit" value="verzenden" />
                             </div>
                         </form>
                     </div>
@@ -390,27 +400,27 @@
 
                 <section>
                     <h1>Tooltips</h1>
-                    <a class="tooltip btn small" data-tooltip-position="top" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a>
-                    <a class="tooltip btn small" data-tooltip-position="right" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">right</a>
-                    <a class="tooltip btn small" data-tooltip-position="bottom" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">bottom</a>
-                    <a class="tooltip btn small" data-tooltip-position="left" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">left</a>
-                    <a class="tooltip btn small" data-tooltip-position="top" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness." data-tooltip-trigger="click">click trigger</a>
+                    <a class="tooltip btn btn-small" data-tooltip-position="top" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a>
+                    <a class="tooltip btn btn-small" data-tooltip-position="right" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">right</a>
+                    <a class="tooltip btn btn-small" data-tooltip-position="bottom" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">bottom</a>
+                    <a class="tooltip btn btn-small" data-tooltip-position="left" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">left</a>
+                    <a class="tooltip btn btn-small" data-tooltip-position="top" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness." data-tooltip-trigger="click">click trigger</a>
                 </section>
 
                 <br/><br/>
 
                 <section>
                     <h1>Modals</h1>
-                    <a class="btn small modal-trigger" data-modal-id="modal-1">slip-top</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-2">slip-bottom</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-3">slide-top</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-4">slide-right</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-5">slide-bottom</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-6">slide-left</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-7">flip-horizontal</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-8">flip-vertical</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-9">fadescale</a>
-                    <a class="btn small modal-trigger" data-modal-id="modal-10">superscaled</a>
+                    <a class="btn btn-small modal-trigger" data-modal-id="modal-1">slip-top</a>
+                    <a class="btn btn-small modal-trigger" data-modal-id="modal-2">slip-bottom</a>
+                    <a class="btn btn-small modal-trigger" data-modal-id="modal-3">slide-top</a>
+                    <a class="btn btn-small modal-trigger" data-modal-id="modal-4">slide-right</a>
+                    <a class="btn btn-small modal-trigger" data-modal-id="modal-5">slide-bottom</a>
+                    <a class="btn btn-small modal-trigger" data-modal-id="modal-6">slide-left</a>
+                    <a class="btn btn-small modal-trigger" data-modal-id="modal-7">flip-horizontal</a>
+                    <a class="btn btn-small modal-trigger" data-modal-id="modal-8">flip-vertical</a>
+                    <a class="btn btn-small modal-trigger" data-modal-id="modal-9">fadescale</a>
+                    <a class="btn btn-small modal-trigger" data-modal-id="modal-10">superscaled</a>
                 </section>
 
                 <br/><br/>
@@ -479,70 +489,70 @@
             <div class="modal-content">
                 <h2>Dit is een titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
             </div>
         </div>
         <div id="modal-2" class="modal" data-modal-effect="slip-bottom">
             <div class="modal-content">
                 <h2>Dit is een titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
             </div>
         </div>
         <div id="modal-3" class="modal" data-modal-effect="slide-top">
             <div class="modal-content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
             </div>
         </div>
         <div id="modal-4" class="modal" data-modal-effect="slide-right">
             <div class="modal-content">
                 <h2>Dit is een titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
             </div>
         </div>
         <div id="modal-5" class="modal" data-modal-effect="slide-bottom">
             <div class="modal-content">
                 <h2>Dit is een titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
             </div>
         </div>
         <div id="modal-6" class="modal" data-modal-effect="slide-left">
             <div class="modal-content">
                 <h2>Dit is een titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
             </div>
         </div>
         <div id="modal-7" class="modal" data-modal-effect="flip-horizontal">
             <div class="modal-content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
             </div>
         </div>
         <div id="modal-8" class="modal" data-modal-effect="flip-vertical">
             <div class="modal-content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
             </div>
         </div>
         <div id="modal-9" class="modal" data-modal-effect="fadescale">
             <div class="modal-content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
             </div>
         </div>
         <div id="modal-10" class="modal" data-modal-effect="superscale">
             <div class="modal-content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn primary medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
             </div>
         </div>
 

@@ -17,6 +17,7 @@
     outline: 0;
     cursor: pointer;
     line-height: pxtoem(16);
+    text-align: center;
     @include transition-property(all);
     @include transition-duration(0.2s);
 
@@ -46,94 +47,98 @@
             box-shadow: none;
         }
     }
+}
 
-    &.primary {
+.btn-primary {
+    background-color: $btn-primary-bg-color;
+
+    &:hover {
+        background-color: lighten($btn-primary-bg-color, 5%);
+    }
+
+    &:active,
+    &:focus {
+        box-shadow: 0 0 30px rgba($btn-primary-bg-color, 0.3);
+    }
+
+    &:disabled {
         background-color: $btn-primary-bg-color;
+    }
+}
 
-        &:hover {
-            background-color: lighten($btn-primary-bg-color, 5%);
-        }
+.btn-secondary {
+    background-color: $btn-secondary-bg-color;
 
-        &:active,
-        &:focus {
-            box-shadow: 0 0 30px rgba($btn-primary-bg-color, 0.3);
-        }
-
-        &:disabled {
-            background-color: $btn-primary-bg-color;
-        }
+    &:hover {
+        background-color: lighten($btn-secondary-bg-color, 5%);
     }
 
-    &.secondary {
+    &:active,
+    &:focus {
+        box-shadow: 0 0 30px rgba($btn-secondary-bg-color, 0.3);
+    }
+
+    &:disabled {
         background-color: $btn-secondary-bg-color;
+    }
+}
 
-        &:hover {
-            background-color: lighten($btn-secondary-bg-color, 5%);
-        }
+.btn-tertiary {
+    background-color: $btn-tertiary-bg-color;
 
-        &:active,
-        &:focus {
-            box-shadow: 0 0 30px rgba($btn-secondary-bg-color, 0.3);
-        }
-
-        &:disabled {
-            background-color: $btn-secondary-bg-color;
-        }
+    &:hover {
+        background-color: lighten($btn-tertiary-bg-color, 5%);
     }
 
-    &.tertiary {
+    &:active,
+    &:focus {
+        box-shadow: 0 0 30px rgba($btn-tertiary-bg-color, 0.3);
+    }
+
+    &:disabled {
         background-color: $btn-tertiary-bg-color;
+    }
+}
 
-        &:hover {
-            background-color: lighten($btn-tertiary-bg-color, 5%);
-        }
+.btn-quadiary {
+    background-color: $btn-quadiary-bg-color;
 
-        &:active,
-        &:focus {
-            box-shadow: 0 0 30px rgba($btn-tertiary-bg-color, 0.3);
-        }
-
-        &:disabled {
-            background-color: $btn-tertiary-bg-color;
-        }
+    &:hover {
+        background-color: lighten($btn-quadiary-bg-color, 5%);
     }
 
-    &.quadiary {
+    &:active,
+    &:focus {
+        box-shadow: 0 0 30px rgba($btn-quadiary-bg-color, 0.3);
+    }
+
+    &:disabled {
         background-color: $btn-quadiary-bg-color;
-
-        &:hover {
-            background-color: lighten($btn-quadiary-bg-color, 5%);
-        }
-
-        &:active,
-        &:focus {
-            box-shadow: 0 0 30px rgba($btn-quadiary-bg-color, 0.3);
-        }
-
-        &:disabled {
-            background-color: $btn-quadiary-bg-color;
-        }
     }
+}
 
-    &.small {
-        padding: pxtoem(8) pxtoem(30);
+.btn-small {
+    padding: pxtoem(8) pxtoem(30);
+}
+
+.btn-medium {
+    padding: pxtoem(12) pxtoem(35);
+
+    @include breakpoint(medium-and-up) {
+        padding: pxtoem(14) pxtoem(35);
+        font-size: pxtoem(17);
     }
+}
 
-    &.medium {
-        padding: pxtoem(12) pxtoem(35);
+.btn-large {
+    padding: pxtoem(15) pxtoem(40);
 
-        @include breakpoint(medium-and-up) {
-            padding: pxtoem(14) pxtoem(35);
-            font-size: pxtoem(17);
-        }
+    @include breakpoint(medium-and-up) {
+        padding: pxtoem(18) pxtoem(50);
+        font-size: pxtoem(18);
     }
+}
 
-    &.large {
-        padding: pxtoem(15) pxtoem(40);
-
-        @include breakpoint(medium-and-up) {
-            padding: pxtoem(18) pxtoem(50);
-            font-size: pxtoem(18);
-        }
-    }
+.btn-block {
+    display: block;
 }
