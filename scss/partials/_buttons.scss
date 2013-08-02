@@ -18,8 +18,7 @@
     cursor: pointer;
     line-height: pxtoem(16);
     text-align: center;
-    @include transition-property(all);
-    @include transition-duration(0.2s);
+    @include single-transition(all, 0.2s);
 
     @if $btn-gradient {
         @include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));

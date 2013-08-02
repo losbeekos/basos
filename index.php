@@ -590,6 +590,21 @@
                 <br/><br/>
 
                 <section>
+                    <h1>Pagination</h1>
+                    <div class="pagination">
+                        <a class="pagination-prev" href="#">&lsaquo;</a>
+                        <a href="#">1</a>
+                        <a href="#">2</a>
+                        <a href="#">3</a>
+                        <a href="#">4</a>
+                        <a href="#">5</a>
+                        <a class="pagination-next" href="#">&rsaquo;</a>
+                    </div>
+                </section>
+
+                <br/><br/>
+
+                <section>
                     <h1>Tooltips</h1>
                     <a class="tooltip btn btn-small" data-tooltip-position="top" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a>
                     <a class="tooltip btn btn-small" data-tooltip-position="right" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">right</a>
