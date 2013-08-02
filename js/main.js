@@ -92,6 +92,7 @@ Modernizr.load([
                         modules.formValidation.init();
                         modules.modals.init();
                         modules.tooltips.init();
+                        modules.accordion.init();
 
                         // App modules
                         //modules.nav.init();
@@ -414,6 +415,72 @@ Modernizr.load([
                 }
 
                 /*-----  End of Tooltips  ------*/
+
+
+
+
+                /*=================================
+                =            Accordion            =
+                =================================*/
+
+                ,accordion: {
+                    el: $('.accordion'),
+                    group: $('.accordion-group'),
+                    trigger: $('.accordion-trigger'),
+                    content: $('.accordion-content'),
+                    contentShowClass: 'accordion-show',
+
+                    init: function () {
+                        var self = this;
+
+                        if (self.el.length > 0) {
+                            self.group.each(function () {
+                                var $group = $(this),
+                                    $groupContent = $group.find('.accordion-content');
+
+                                $groupContent
+                                    .attr('data-accordion-content-height', $groupContent.height())
+                                    .height(0);
+                            });
+
+                            self.toggler();
+                        }
+                    },
+
+                    toggler: function () {
+                        var self = this;
+
+                        self.trigger.on('click', function () {
+                            var $trigger = $(this),
+                                $content = $trigger.next();
+
+                            if (!$content.hasClass(self.contentShowClass)) {
+                                self.hideGroup(self.content);
+                                self.showGroup($trigger, $content);
+                            } else {
+                                self.hideGroup($content);
+                            }
+                        });
+                    },
+
+                    showGroup: function ($trigger, $content) {
+                        var self = this;
+
+                        $content
+                            .height($trigger.next().data('accordionContentHeight'))
+                            .addClass(self.contentShowClass);
+                    },
+
+                    hideGroup: function ($content) {
+                        var self = this;
+
+                        $content
+                            .height(0)
+                            .removeClass(self.contentShowClass);
+                    }
+                }
+
+                /*-----  End of Accordion  ------*/
 
 
 

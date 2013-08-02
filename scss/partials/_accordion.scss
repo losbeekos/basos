@@ -1,0 +1,41 @@
+/*=================================
+=            Accordion            =
+=================================*/
+
+.accordion-group {
+    overflow: hidden;
+    border: 1px solid $accordion-border-color;
+    border-radius: $accordion-border-radius;
+    margin-bottom: $accordion-group-margin-bottom;
+}
+
+.accordion-trigger {
+    display: block;
+    background-color: $accordion-trigger-bg-color;
+    color: $accordion-trigger-font-color;
+    padding: $accordion-padding;
+
+    @if $accordion-gradient {
+        @include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));
+    }
+
+    &:hover {
+        background-color: lighten($accordion-trigger-bg-color, 5%);
+        color: darken($accordion-trigger-font-color, 5%);
+    }
+}
+
+.accordion-content {
+    overflow: hidden;
+    padding: 0 $accordion-padding;
+    border-top: 1px solid transparent;
+    @include single-transition(height, $accordion-transition-speed);
+
+    *:first-child {
+        margin-top: $accordion-padding;
+    }
+
+    &.accordion-show {
+        border-top-color: $accordion-border-color;
+    }
+}

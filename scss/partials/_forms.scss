@@ -62,8 +62,18 @@ textarea {
 }
 
 select {
+    display: block;
     width: 100%;
-    margin-top: pxtoem(8);
+    height: 40px;
+    padding: pxtoem(10);
+    border-color: #f2f2f2;
+    outline: none;
+    color: #333333;
+
+    &:focus {
+        border-color: #cccccc;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
 }
 
 input[type=radio][disabled],

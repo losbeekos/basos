@@ -40,7 +40,7 @@ $grid-padding  : 0;       // 0 grid padding
 $btn-gradient           : true;
 $btn-border-radius      : 0.188em; // 3px
 $btn-default-bg-color   : #222222;
-$btn-primary-bg-color   : #0659a4;
+$btn-primary-bg-color   : $primary-color;
 $btn-secondary-bg-color : #177f12;
 $btn-tertiary-bg-color  : #a40606;
 $btn-quadiary-bg-color  : #069ea4;
@@ -60,7 +60,7 @@ $icon-form-validation-error   : $icon-notification-error;
 $tooltip-width                  : 220px;
 $tooltip-arrow-width            : 5px;
 $tooltip-transition-speed       : 0.2s;
-$tooltip-bg-color               : #0659a4;
+$tooltip-bg-color               : $primary-color;
 $tooltip-padding                : 0.625em; // 10px
 $tooltip-border-radius          : 0.188em; // 3px
 $tooltip-font-size              : 0.750em; // 12px
@@ -75,4 +75,13 @@ $modal-content-padding       : 2.500em; // 40px
 $modal-content-border-radius : 0;
 
 
+/*==========  Accordion  ==========*/
+$accordion-transition-speed    : 0.3s;
+$accordion-padding             : 10px;
+$accordion-border-color        : #f3f3f3;
+$accordion-gradient            : true;
+$accordion-border-radius       : 3px;
+$accordion-group-margin-bottom : 0;
+$accordion-trigger-bg-color    : $primary-color;
+$accordion-trigger-font-color  : $white;
 
