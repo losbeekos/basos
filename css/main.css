@@ -11,6 +11,7 @@
 /*==========  Susy grid  ==========*/
 /*==========  Button colors  ==========*/
 /*==========  Icons  ==========*/
+/*==========  Tables  ==========*/
 /*==========  Tooltips  ==========*/
 /*==========  Modals  ==========*/
 /*==========  Accordion  ==========*/
@@ -1348,6 +1349,51 @@ input[type=checkbox][disabled]:hover {
 /* line 142, ../scss/partials/_buttons.scss */
 .btn-block {
   display: block;
+}
+
+/*==============================
+=            Tables            =
+==============================*/
+/* line 5, ../scss/partials/_tables.scss */
+.table {
+  width: 100%;
+  margin-bottom: 30px;
+}
+/* line 10, ../scss/partials/_tables.scss */
+.table td,
+.table th {
+  padding: 10px;
+  text-align: left;
+}
+/* line 15, ../scss/partials/_tables.scss */
+.table td {
+  border-top: 1px solid #dddddd;
+}
+
+/* line 22, ../scss/partials/_tables.scss */
+.table-hover tr:hover td {
+  background: #f6f6f6;
+}
+
+/* line 29, ../scss/partials/_tables.scss */
+.table-zebra tr:nth-child(odd) td {
+  background: #f8f8f8;
+}
+
+/* line 34, ../scss/partials/_tables.scss */
+.table-bordered {
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+}
+/* line 39, ../scss/partials/_tables.scss */
+.table-bordered td,
+.table-bordered th {
+  border-left: 1px solid #dddddd;
+}
+/* line 42, ../scss/partials/_tables.scss */
+.table-bordered td:first-child,
+.table-bordered th:first-child {
+  border-left: none;
 }
 
 /*==============================
