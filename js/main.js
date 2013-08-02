@@ -436,11 +436,16 @@ Modernizr.load([
                         if (self.el.length > 0) {
                             self.group.each(function () {
                                 var $group = $(this),
-                                    $groupContent = $group.find('.accordion-content');
+                                    $groupContent = $group.find('.accordion-content'),
+                                    contentHeight = $groupContent.height();
 
-                                $groupContent
-                                    .attr('data-accordion-content-height', $groupContent.height())
-                                    .css({'max-height': 0});
+                                $groupContent.attr('data-accordion-content-height', contentHeight)
+
+                                if ($groupContent.hasClass(self.contentShowClass)) {
+                                    $groupContent.css({'max-height': contentHeight});
+                                } else {
+                                    $groupContent.css({'max-height': 0});
+                                }
                             });
 
                             self.toggler();
