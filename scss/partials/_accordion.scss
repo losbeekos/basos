@@ -29,7 +29,11 @@
     overflow: hidden;
     padding: 0 $accordion-padding;
     border-top: 1px solid transparent;
-    @include single-transition(height, $accordion-transition-speed);
+    @include single-transition(max-height, $accordion-transition-speed);
+
+    .lt-ie9 & {
+        height: 0;
+    }
 
     *:first-child {
         margin-top: $accordion-padding;
@@ -37,5 +41,14 @@
 
     &.accordion-show {
         border-top-color: $accordion-border-color;
+
+        &.accordion-force-maxheight {
+            max-height: 1000px !important;
+        }
+
+        .lt-ie9 & {
+            height: auto;
+            max-height: 1000px !important;
+        }
     }
 }

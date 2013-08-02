@@ -440,10 +440,11 @@ Modernizr.load([
 
                                 $groupContent
                                     .attr('data-accordion-content-height', $groupContent.height())
-                                    .height(0);
+                                    .css({'max-height': 0});
                             });
 
                             self.toggler();
+                            self.forceMaxheight();
                         }
                     },
 
@@ -467,7 +468,7 @@ Modernizr.load([
                         var self = this;
 
                         $content
-                            .height($trigger.next().data('accordionContentHeight'))
+                            .css({'max-height': $trigger.next().data('accordionContentHeight')})
                             .addClass(self.contentShowClass);
                     },
 
@@ -475,8 +476,16 @@ Modernizr.load([
                         var self = this;
 
                         $content
-                            .height(0)
+                            .css({'max-height': 0})
                             .removeClass(self.contentShowClass);
+                    },
+
+                    forceMaxheight: function () {
+                        var self = this;
+
+                        modules.$window.resize(function() {
+                            self.content.addClass('accordion-force-maxheight');
+                        });
                     }
                 }
 
