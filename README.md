@@ -1,6 +1,5 @@
 # Todo
 
-* Accordion
 * Breadcrumbs
 * Pagination
 
