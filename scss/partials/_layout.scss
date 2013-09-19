@@ -19,8 +19,7 @@ a {
     display: inline;
     cursor: pointer;
 
-    @include transition-property(all);
-    @include transition-duration(0.2s);
+    @include single-transition(all, 0.2s);
 
     &:hover {
         color: #333333;
@@ -28,8 +27,7 @@ a {
 
     &:after,
     &:before {
-        @include transition-property(all);
-        @include transition-duration(0.2s);
+        @include single-transition(all, 0.2s);
     }
 }
 

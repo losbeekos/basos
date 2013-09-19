@@ -7,7 +7,7 @@ button,
 input,
 select,
 textarea {
-    color: #222;
+    color: $text-color;
 }
 
 body {
@@ -16,12 +16,12 @@ body {
 }
 
 ::-moz-selection {
-    background: #d1e4fe;
+    background: $selection-color;
     text-shadow: none;
 }
 
 ::selection {
-    background: #d1e4fe;
+    background: $selection-color;
     text-shadow: none;
 }
 
@@ -47,6 +47,10 @@ fieldset {
 
 textarea {
     resize: vertical;
+}
+
+.no-resize {
+    resize: none;
 }
 
 .chromeframe {

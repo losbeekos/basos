@@ -16,6 +16,7 @@
 /*==========  Modals  ==========*/
 /*==========  Accordion  ==========*/
 /*==========  Pagination  ==========*/
+/*==========  Breadcrumbs  ==========*/
 /*==========  Compass Dependencies  ==========*/
 /*==========  Custom Dependencies  ==========*/
 /* normalize.css v2.1.2 | MIT License | git.io/normalize */
@@ -433,7 +434,7 @@ button,
 input,
 select,
 textarea {
-  color: #222;
+  color: #222222;
 }
 
 /* line 13, ../scss/dependencies/_h5bp.scss */
@@ -483,6 +484,11 @@ textarea {
 }
 
 /* line 52, ../scss/dependencies/_h5bp.scss */
+.no-resize {
+  resize: none;
+}
+
+/* line 56, ../scss/dependencies/_h5bp.scss */
 .chromeframe {
   background: #ccc;
   color: #000;
@@ -892,14 +898,13 @@ textarea {
   outline: 0;
   width: 100%;
   box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 /* line 49, ../scss/partials/_forms.scss */
 input[type="text"]:focus,
@@ -1147,18 +1152,19 @@ input[type=checkbox][disabled]:hover {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
 }
-/* line 27, ../scss/partials/_buttons.scss */
+/* line 30, ../scss/partials/_buttons.scss */
 .btn:hover {
   color: white;
   background-color: #2f2f2f;
 }
-/* line 33, ../scss/partials/_buttons.scss */
+/* line 36, ../scss/partials/_buttons.scss */
 .btn:active, .btn:focus {
   box-shadow: 0 0 30px rgba(34, 34, 34, 0.3);
   -webkit-transition-duration: 0.05s;
@@ -1166,7 +1172,7 @@ input[type=checkbox][disabled]:hover {
   -o-transition-duration: 0.05s;
   transition-duration: 0.05s;
 }
-/* line 38, ../scss/partials/_buttons.scss */
+/* line 41, ../scss/partials/_buttons.scss */
 .btn:disabled {
   background-color: #222222;
   cursor: not-allowed;
@@ -1174,109 +1180,109 @@ input[type=checkbox][disabled]:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 45, ../scss/partials/_buttons.scss */
+/* line 48, ../scss/partials/_buttons.scss */
 .btn:disabled:active, .btn:disabled:focus {
   box-shadow: none;
 }
 
-/* line 51, ../scss/partials/_buttons.scss */
+/* line 54, ../scss/partials/_buttons.scss */
 .btn-primary {
   background-color: #0659a4;
 }
-/* line 54, ../scss/partials/_buttons.scss */
+/* line 57, ../scss/partials/_buttons.scss */
 .btn-primary:hover {
   background-color: #0766bd;
 }
-/* line 59, ../scss/partials/_buttons.scss */
+/* line 62, ../scss/partials/_buttons.scss */
 .btn-primary:active, .btn-primary:focus {
   box-shadow: 0 0 30px rgba(6, 89, 164, 0.3);
 }
-/* line 63, ../scss/partials/_buttons.scss */
+/* line 66, ../scss/partials/_buttons.scss */
 .btn-primary:disabled {
   background-color: #0659a4;
 }
 
-/* line 68, ../scss/partials/_buttons.scss */
+/* line 71, ../scss/partials/_buttons.scss */
 .btn-secondary {
   background-color: #177f12;
 }
-/* line 71, ../scss/partials/_buttons.scss */
+/* line 74, ../scss/partials/_buttons.scss */
 .btn-secondary:hover {
   background-color: #1b9515;
 }
-/* line 76, ../scss/partials/_buttons.scss */
+/* line 79, ../scss/partials/_buttons.scss */
 .btn-secondary:active, .btn-secondary:focus {
   box-shadow: 0 0 30px rgba(23, 127, 18, 0.3);
 }
-/* line 80, ../scss/partials/_buttons.scss */
+/* line 83, ../scss/partials/_buttons.scss */
 .btn-secondary:disabled {
   background-color: #177f12;
 }
 
-/* line 85, ../scss/partials/_buttons.scss */
+/* line 88, ../scss/partials/_buttons.scss */
 .btn-tertiary {
   background-color: #a40606;
 }
-/* line 88, ../scss/partials/_buttons.scss */
+/* line 91, ../scss/partials/_buttons.scss */
 .btn-tertiary:hover {
   background-color: #bd0707;
 }
-/* line 93, ../scss/partials/_buttons.scss */
+/* line 96, ../scss/partials/_buttons.scss */
 .btn-tertiary:active, .btn-tertiary:focus {
   box-shadow: 0 0 30px rgba(164, 6, 6, 0.3);
 }
-/* line 97, ../scss/partials/_buttons.scss */
+/* line 100, ../scss/partials/_buttons.scss */
 .btn-tertiary:disabled {
   background-color: #a40606;
 }
 
-/* line 102, ../scss/partials/_buttons.scss */
+/* line 105, ../scss/partials/_buttons.scss */
 .btn-quadiary {
   background-color: #069ea4;
 }
-/* line 105, ../scss/partials/_buttons.scss */
+/* line 108, ../scss/partials/_buttons.scss */
 .btn-quadiary:hover {
   background-color: #07b6bd;
 }
-/* line 110, ../scss/partials/_buttons.scss */
+/* line 113, ../scss/partials/_buttons.scss */
 .btn-quadiary:active, .btn-quadiary:focus {
   box-shadow: 0 0 30px rgba(6, 158, 164, 0.3);
 }
-/* line 114, ../scss/partials/_buttons.scss */
+/* line 117, ../scss/partials/_buttons.scss */
 .btn-quadiary:disabled {
   background-color: #069ea4;
 }
 
-/* line 119, ../scss/partials/_buttons.scss */
+/* line 122, ../scss/partials/_buttons.scss */
 .btn-small {
   padding: 0.5em 1.875em;
 }
 
-/* line 123, ../scss/partials/_buttons.scss */
+/* line 126, ../scss/partials/_buttons.scss */
 .btn-medium {
   padding: 0.75em 2.1875em;
 }
 @media (min-width: 40.625em) {
-  /* line 123, ../scss/partials/_buttons.scss */
+  /* line 126, ../scss/partials/_buttons.scss */
   .btn-medium {
     padding: 0.875em 2.1875em;
     font-size: 1.0625em;
   }
 }
 
-/* line 132, ../scss/partials/_buttons.scss */
+/* line 135, ../scss/partials/_buttons.scss */
 .btn-large {
   padding: 0.9375em 2.5em;
 }
 @media (min-width: 40.625em) {
-  /* line 132, ../scss/partials/_buttons.scss */
+  /* line 135, ../scss/partials/_buttons.scss */
   .btn-large {
     padding: 1.125em 3.125em;
     font-size: 1.125em;
   }
 }
 
-/* line 141, ../scss/partials/_buttons.scss */
+/* line 144, ../scss/partials/_buttons.scss */
 .btn-block {
   display: block;
 }
@@ -1351,47 +1357,39 @@ a {
   text-decoration: none;
   display: inline;
   cursor: pointer;
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
-/* line 25, ../scss/partials/_layout.scss */
+/* line 24, ../scss/partials/_layout.scss */
 a:hover {
   color: #333333;
 }
-/* line 30, ../scss/partials/_layout.scss */
+/* line 29, ../scss/partials/_layout.scss */
 a:after, a:before {
-  -webkit-transition-property: all;
-  -moz-transition-property: all;
-  -o-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.2s;
-  -moz-transition-duration: 0.2s;
-  -o-transition-duration: 0.2s;
-  transition-duration: 0.2s;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
 }
 
-/* line 36, ../scss/partials/_layout.scss */
+/* line 34, ../scss/partials/_layout.scss */
 img {
   max-width: 100%;
 }
 
-/* line 40, ../scss/partials/_layout.scss */
+/* line 38, ../scss/partials/_layout.scss */
 address {
   font-style: normal;
 }
 
-/* line 44, ../scss/partials/_layout.scss */
+/* line 42, ../scss/partials/_layout.scss */
 p {
   margin-top: 0;
 }
 
-/* line 48, ../scss/partials/_layout.scss */
+/* line 46, ../scss/partials/_layout.scss */
 .container {
   max-width: 80em;
   min-width: 20em;
@@ -1399,13 +1397,13 @@ p {
   margin: 0 auto;
 }
 @media (min-width: 40.625em) and (max-width: 56.25em) {
-  /* line 48, ../scss/partials/_layout.scss */
+  /* line 46, ../scss/partials/_layout.scss */
   .container {
     padding: 0 1.25em;
   }
 }
 @media (min-width: 56.25em) {
-  /* line 48, ../scss/partials/_layout.scss */
+  /* line 46, ../scss/partials/_layout.scss */
   .container {
     padding: 0 2.5em;
   }
@@ -1417,6 +1415,9 @@ p {
 /*==============================
 =            Footer            =
 ==============================*/
+/*==================================
+=            Navigation            =
+==================================*/
 /*=====================================
 =            Notifications            =
 =====================================*/
@@ -1596,11 +1597,6 @@ p {
   background-color: #0659a4;
   color: white;
   padding: 10px;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
 }
 /* line 22, ../scss/partials/_accordion.scss */
 .accordion-trigger:hover {
@@ -1659,15 +1655,38 @@ p {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   transition: all 0.2s;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, rgba(255, 255, 255, 0.1)), color-stop(100%, rgba(255, 255, 255, 0)));
-  background-image: -webkit-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  background-image: -moz-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  background-image: -o-linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-  background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
 }
 /* line 20, ../scss/partials/_pagination.scss */
 .pagination a:hover {
   background-color: #0766bd;
+}
+
+/*===================================
+=            Breadcrumbs            =
+===================================*/
+/* line 5, ../scss/partials/_breadcrumbs.scss */
+.breadcrumbs {
+  background: whitesmoke;
+  padding: 0.938em 1.25em;
+}
+/* line 10, ../scss/partials/_breadcrumbs.scss */
+.breadcrumbs a,
+.breadcrumbs span {
+  display: inline-block;
+}
+/* line 14, ../scss/partials/_breadcrumbs.scss */
+.breadcrumbs a {
+  margin-right: 0.625em;
+}
+/* line 17, ../scss/partials/_breadcrumbs.scss */
+.breadcrumbs a:after {
+  margin-left: 0.625em;
+  content: '/';
+  color: #cccccc;
+}
+/* line 24, ../scss/partials/_breadcrumbs.scss */
+.breadcrumbs span {
+  color: #aaaaaa;
 }
 
 /*==========  Modals (optional)  ==========*/

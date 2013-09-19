@@ -9,6 +9,7 @@
 
 /*==========  Compass Dependencies  ==========*/
 @import "compass";
+@import "compass/css3/user-interface";
 @import "susy";
 
 
@@ -28,6 +29,7 @@
 @import "partials/layout";
 @import "partials/header";
 @import "partials/footer";
+@import "partials/navigation";
 @import "partials/notifications";
 @import "partials/spotlight";
 @import "partials/teasers";
@@ -37,6 +39,7 @@
 @import "partials/tooltips";
 @import "partials/accordion";
 @import "partials/pagination";
+@import "partials/breadcrumbs";
 
 
 /*==========  Modals (optional)  ==========*/

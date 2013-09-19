@@ -11,11 +11,14 @@ $legacy-support-for-mozilla : false;
 
 
 /*==========  Project  ==========*/
+$gradient                  : false;
 $project-base-font-size    : 1em;     // 16px
+$text-color                : #222222;
 $white                     : #ffffff;
 $primary-color             : #0659a4;
 $primary-header-text-color : #94adc4;
 $placeholder-color         : #94adc4;
+$selection-color           : #d1e4fe;
 
 
 /*==========  Container  ==========*/
@@ -37,7 +40,7 @@ $grid-padding  : 0;       // 0 grid padding
 /*==========  Button colors  ==========*/
 // If you need more customization,
 // dive into the buttons partial.
-$btn-gradient           : true;
+$btn-gradient           : $gradient;
 $btn-border-radius      : 0.188em; // 3px
 $btn-default-bg-color   : #222222;
 $btn-primary-bg-color   : $primary-color;
@@ -88,7 +91,7 @@ $modal-content-border-radius : 0;
 $accordion-transition-speed    : 0.3s;
 $accordion-padding             : 10px;
 $accordion-border-color        : #f3f3f3;
-$accordion-gradient            : true;
+$accordion-gradient            : $gradient;
 $accordion-border-radius       : 3px;
 $accordion-group-margin-bottom : 0;
 $accordion-trigger-bg-color    : $primary-color;
@@ -96,7 +99,7 @@ $accordion-trigger-font-color  : $white;
 
 
 /*==========  Pagination  ==========*/
-$pagination-gradient         : true;
+$pagination-gradient         : $gradient;
 $pagination-align            : center;
 $pagination-font-color       : $white;
 $pagination-padding          : 10px 15px;
@@ -104,3 +107,13 @@ $pagination-border-radius    : 3px;
 $pagination-margin-bottom    : 30px;
 $pagination-bg-color         : $primary-color;
 $pagination-transition-speed : 0.2s;
+
+
+/*==========  Breadcrumbs  ==========*/
+$breadcrumbs-bg-color      : #f5f5f5;
+$breadcrumbs-padding       : 0.938em 1.250em; // 15px 20px
+$breadcrumbs-margin        : 0.625em; // 10px
+$breadcrumbs-divider-color : #cccccc;
+$breadcrumbs-current-color : #aaaaaa;
+
+

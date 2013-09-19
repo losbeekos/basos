@@ -43,8 +43,8 @@ $input-selectors: '
     width: 100%;
     box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
 
-    @include transition-property(all);
-    @include transition-duration(0.2s);
+    @include single-transition(all, 0.2s);
+    @include appearance(none);
 
     &:focus {
         border: 1px solid #cccccc;

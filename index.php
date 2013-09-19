@@ -32,13 +32,13 @@
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
-        <!--[if (gte IE 6)&(lte IE 8)]>
+        <!--[if (gte IE 7)&(lte IE 8)]>
             <script src="js/vendor/respond.min.js"></script>
             <script src="js/plugins/selectivizr/selectivizr.min.js"></script>
         <![endif]-->
     </head>
     <body>
-        <!--[if lt IE 9]>
+        <!--[if lte IE 8]>
             <div class="notification error">
                 <ul>
                     <li>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</li>
@@ -601,6 +601,17 @@
                         <a href="#">4</a>
                         <a href="#">5</a>
                         <a class="pagination-next" href="#">&rsaquo;</a>
+                    </div>
+                </section>
+
+                <br/><br/>
+
+                <section>
+                    <h1>Breadcrumbs</h1>
+                    <div class="breadcrumbs">
+                        <a href="#">Home</a>
+                        <a href="#">Lorem</a>
+                        <span>Ipsum dolir asmit emet</span>
                     </div>
                 </section>
 

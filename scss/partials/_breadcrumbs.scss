@@ -1,0 +1,28 @@
+/*===================================
+=            Breadcrumbs            =
+===================================*/
+
+.breadcrumbs {
+    background: $breadcrumbs-bg-color;
+    padding: $breadcrumbs-padding;
+
+    a,
+    span {
+        display: inline-block;
+    }
+
+    a {
+        margin-right: $breadcrumbs-margin;
+
+        &:after {
+            margin-left: $breadcrumbs-margin;
+            content: '/';
+            color: $breadcrumbs-divider-color;
+        }
+    }
+
+    span {
+        color: $breadcrumbs-current-color;
+    }
+}
+
