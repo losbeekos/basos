@@ -18,7 +18,7 @@
   var Validator = function ( options ) {
     /**
     * Error messages
-    * 
+    *
     * @property messages
     * @type {Object}
     */
@@ -38,8 +38,8 @@
       , notblank:       "This value should not be blank."
       , required:       "This value is required."
       , regexp:         "This value seems to be invalid."
-      , min:            "This value should be greater than %s."
-      , max:            "This value should be lower than %s."
+      , min:            "This value should be greater than or equal to %s."
+      , max:            "This value should be lower than or equal to %s."
       , range:          "This value should be between %s and %s."
       , minlength:      "This value is too short. It should have %s characters or more."
       , maxlength:      "This value is too long. It should have %s characters or less."
@@ -59,7 +59,7 @@
 
     /**
     * Validator list. Built-in validators functions
-    * 
+    *
     * @property validators
     * @type {Object}
     */
@@ -69,7 +69,7 @@
       }
 
       , notblank: function ( val ) {
-        return null !== val && '' !== val.replace( /^\s+/g, '' ).replace( /\s+$/g, '' );
+        return 'string' === typeof val && '' !== val.replace( /^\s+/g, '' ).replace( /\s+$/g, '' );
       }
 
       // Works on all inputs. val is object for checkboxes
@@ -103,7 +103,7 @@
             regExp = /^\w+$/;
             break;
           case 'email':
-            regExp = /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))$/i;
+            regExp = /^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))){2,6}$/i;
             break;
           case 'url':
             val = new RegExp( '(https?|s?ftp|git)', 'i' ).test( val ) ? val : 'http://' + val;
@@ -386,7 +386,7 @@
     */
     , bindHtml5Constraints: function () {
       // add html5 required support + class required support
-      if ( this.$element.hasClass( 'required' ) || this.$element.attr( 'required' ) ) {
+      if ( this.$element.hasClass( 'required' ) || this.$element.prop( 'required' ) ) {
         this.options.required = true;
       }
 
@@ -601,7 +601,7 @@
     * @returns {String} val
     */
     , getVal: function () {
-      return this.$element.val();
+      return this.$element.data('value') || this.$element.val();
     }
 
     /**
@@ -625,11 +625,22 @@
       }
 
       // start validation process only if field has enough chars and validation never started
-      if ( !this.isRadioOrCheckbox && val.length < this.options.validationMinlength && !this.validatedOnce ) {
+      if ( !this.isRadioOrCheckbox && this.getLength(val) < this.options.validationMinlength && !this.validatedOnce ) {
         return true;
       }
 
-      this.validate( true );
+      this.validate();
+    }
+
+    /**
+     * Get the length of a given value
+     *
+     * @method getLength
+     * @return {int} The length of the value
+     */
+    , getLength: function(val) {
+      if (!val || !val.hasOwnProperty('length')) return 0;
+      return val.length;
     }
 
     /**
@@ -683,11 +694,9 @@
         return this.valid;
       }
 
-      this.errorBubbling = 'undefined' !== typeof errorBubbling ? errorBubbling : true;
-
       valid = this.applyValidators();
 
-      if ( this.errorBubbling ) {
+      if ( 'undefined' !== typeof errorBubbling ? errorBubbling : this.options.showErrors ) {
         this.manageValidationResult();
       }
 
@@ -726,9 +735,15 @@
         if ( false === result ) {
           valid = false;
           this.constraints[ constraint ].valid = valid;
+          this.options.listeners.onFieldError( this.element, this.constraints, this );
         } else if ( true === result ) {
           this.constraints[ constraint ].valid = true;
           valid = false !== valid;
+
+          // if onFieldSuccess returns (bool) false, consider that field si invalid
+          if (false === this.options.listeners.onFieldSuccess( this.element, this.constraints, this )) {
+            valid = false;
+          }
         }
       }
 
@@ -738,7 +753,7 @@
     /**
     * Fired when all validators have be executed
     * Returns true or false if field is valid or not
-    * Display errors messages below faild fields
+    * Display errors messages below failed fields
     * Adds parsley-success or parsley-error class on fields
     *
     * @method manageValidationResult
@@ -762,12 +777,15 @@
       if ( true === this.valid ) {
         this.removeErrors();
         this.errorClassHandler.removeClass( this.options.errorClass ).addClass( this.options.successClass );
-        this.options.listeners.onFieldSuccess( this.element, this.constraints, this );
         return true;
       } else if ( false === this.valid ) {
         this.errorClassHandler.removeClass( this.options.successClass ).addClass( this.options.errorClass );
-        this.options.listeners.onFieldError( this.element, this.constraints, this );
         return false;
+      }
+
+      // remove li error, and ul error if no more li inside
+      if ( this.ulError && $( this.ulError ).children().length === 0 ) {
+        this.removeErrors();
       }
 
       return valid;
@@ -791,14 +809,15 @@
     * @param {String} constraintName Method Name
     */
     , removeError: function ( constraintName ) {
-      var liError = this.ulError + ' .' + constraintName;
+      var liError = this.ulError + ' .' + constraintName
+        , that = this;
 
-      this.options.animate ? $( liError ).fadeOut( this.options.animateDuration, function () { $( this ).remove() } ) : $( liError ).remove();
+      this.options.animate ? $( liError ).fadeOut( this.options.animateDuration, function () {
+        $( this ).remove();
 
-      // remove li error, and ul error if no more li inside
-      if ( this.ulError && $( this.ulError ).children().length === 0 ) {
-        this.removeErrors();
-      }
+        if ( that.ulError && $( that.ulError ).children().length === 0 ) {
+          that.removeErrors();
+        } } ) : $( liError ).remove();
     }
 
     /**
@@ -811,7 +830,7 @@
       for ( var constraint in error ) {
         var liTemplate = $( this.options.errors.errorElem ).addClass( constraint );
 
-        $( this.ulError ).append( this.options.animate ? $( liTemplate ).text( error[ constraint ] ).hide().fadeIn( this.options.animateDuration ) : $( liTemplate ).text( error[ constraint ] ) );
+        $( this.ulError ).append( this.options.animate ? $( liTemplate ).html( error[ constraint ] ).hide().fadeIn( this.options.animateDuration ) : $( liTemplate ).html( error[ constraint ] ) );
       }
     }
 
@@ -884,7 +903,7 @@
     * @method manageErrorContainer
     */
     , manageErrorContainer: function () {
-      var errorContainer = this.options.errorContainer || this.options.errors.container( this.element, this.isRadioOrCheckbox )
+      var errorContainer = this.options.errorContainer || this.options.errors.container( this.element, this.isRadioOrCheckbox )
         , ulTemplate = this.options.animate ? this.ulTemplate.show() : this.ulTemplate;
 
       if ( 'undefined' !== typeof errorContainer ) {
@@ -1158,7 +1177,11 @@
         this.focusedField.focus();
       }
 
-      this.options.listeners.onFormSubmit( valid, event, this );
+      // if onFormSubmit returns (bool) false, form won't be submitted, even if valid
+      var onFormSubmit = this.options.listeners.onFormSubmit( valid, event, this );
+      if ('undefined' !== typeof onFormSubmit) {
+        return onFormSubmit;
+      }
 
       return valid;
     }
@@ -1196,7 +1219,7 @@
 
       this.$element.off( '.' + this.type ).removeData( this.type );
     }
-    
+
     /**
     * reset Parsley binded on the form and its fields
     *
@@ -1256,7 +1279,7 @@
     }
 
     // if a form elem is given, bind all its input children
-    if ( $( this ).is( 'form' ) ) {
+    if ( $( this ).is( 'form' ) || true === $( this ).data( 'bind' ) ) {
       newInstance = bind ( $( this ), 'parsleyForm' );
 
     // if it is a Parsley supported single element, bind it too, except inputs type hidden
@@ -1272,14 +1295,14 @@
 
   /**
   * Parsley plugin configuration
-  * 
+  *
   * @property $.fn.parsley.defaults
   * @type {Object}
   */
   $.fn.parsley.defaults = {
     // basic data-api overridable properties here..
     inputs: 'input, textarea, select'           // Default supported inputs.
-    , excluded: 'input[type=hidden], :disabled' // Do not validate input[type=hidden] & :disabled.
+    , excluded: 'input[type=hidden], input[type=file], :disabled' // Do not validate input[type=hidden] & :disabled.
     , trigger: false                            // $.Event() that will trigger validation. eg: keyup, change..
     , animate: true                             // fade in / fade out error messages
     , animateDuration: 300                      // fadein/fadout ms time
@@ -1289,6 +1312,7 @@
     , errorClass: 'parsley-error'               // Class name on each invalid input
     , errorMessage: false                       // Customize an unique error message showed if one constraint fails
     , validators: {}                            // Add your custom validators functions
+    , showErrors: true                          // Set to false if you don't want Parsley to display error messages
     , messages: {}                              // Add your own error messages here
 
     //some quite advanced configuration here..
@@ -1301,7 +1325,7 @@
       }
     , listeners: {
         onFieldValidate: function ( elem, ParsleyForm ) { return false; } // Executed on validation. Return true to ignore field validation
-      , onFormSubmit: function ( isFormValid, event, ParsleyForm ) {}     // Executed once on form validation
+      , onFormSubmit: function ( isFormValid, event, ParsleyForm ) {}     // Executed once on form validation. Return (bool) false to block submit, even if valid
       , onFieldError: function ( elem, constraints, ParsleyField ) {}     // Executed when a field is detected as invalid
       , onFieldSuccess: function ( elem, constraints, ParsleyField ) {}   // Executed when a field passes validation
     }

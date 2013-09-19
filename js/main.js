@@ -66,10 +66,10 @@ Modernizr.load([
     /*==========  jQuery  ==========*/
 
     {
-        load: ['http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js'],
+        load: ['http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'],
         complete: function(url, result, key){
             if (!window.jQuery){
-                Modernizr.load('js/vendor/jquery-1.9.1.min.js');
+                Modernizr.load('js/vendor/jquery-1.10.2.min.js');
             }
 
             /*===============================

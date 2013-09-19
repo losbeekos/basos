@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9"> <![endif]-->
-<!--[if IE 9]>         <html class="no-js lt-ie10"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js"> <!--<![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="nl"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9" lang="nl"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10" lang="nl"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="nl"> <!--<![endif]-->
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -21,7 +21,7 @@
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="image-144x144px.png" />
 
-        <meta property="og:image" content="image-50x50px.png" />
+        <meta property="og:image" content="image-114x114px.png" />
         <meta property="og:title" content="Page title" />
         <meta property="og:url" content="Current URL" />
         <meta property="og:site_name" content="Site name" />
@@ -30,13 +30,15 @@
         <meta property="twitter:card" content="app" />
         <meta property="twitter:site" content="@twitteraccount" />
 
-        <script src="js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+
         <!--[if (gte IE 6)&(lte IE 8)]>
+            <script src="js/vendor/respond.min.js"></script>
             <script src="js/plugins/selectivizr/selectivizr.min.js"></script>
         <![endif]-->
     </head>
     <body>
-        <!--[if lt IE 8]>
+        <!--[if lt IE 9]>
             <div class="notification error">
                 <ul>
                     <li>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</li>
@@ -62,26 +64,26 @@
 
                 <section>
                     <h1>Grid</h1>
-                    <div class="grid clearfix">
+                    <div class="grid">
                         <div class="column-12 omega" style="background: rgba(0,0,0,0.1)">column-12</div>
                     </div>
-                    <div class="grid clearfix">
+                    <div class="grid">
                         <div class="column-6" style="background: rgba(0,0,0,0.1)">column-6</div>
                         <div class="column-6 omega" style="background: rgba(0,0,0,0.1)">column-6</div>
                     </div>
-                    <div class="grid clearfix">
+                    <div class="grid">
                         <div class="column-4" style="background: rgba(0,0,0,0.1)">column-4</div>
                         <div class="column-8 omega" style="background: rgba(0,0,0,0.1)">column-8</div>
                     </div>
-                    <div class="grid clearfix">
+                    <div class="grid">
                         <div class="column-2" style="background: rgba(0,0,0,0.1)">column-2</div>
                         <div class="column-10 omega" style="background: rgba(0,0,0,0.1)">column-10</div>
                     </div>
-                    <div class="grid clearfix">
+                    <div class="grid">
                         <div class="column-7" style="background: rgba(0,0,0,0.1)">column-7</div>
                         <div class="column-5 omega" style="background: rgba(0,0,0,0.1)">column-5</div>
                     </div>
-                    <div class="grid clearfix">
+                    <div class="grid">
                         <div class="column-9" style="background: rgba(0,0,0,0.1)">column-9</div>
                         <div class="column-3 omega" style="background: rgba(0,0,0,0.1)">column-3</div>
                     </div>
@@ -122,7 +124,7 @@
                     <input class="btn btn-quadiary btn-large" value="button disabled" type="submit" disabled="disabled" />
 
                     <h2>Block button</h2>
-                    <div class="grid clearfix">
+                    <div class="grid">
                         <div class="column-6">
                             <a class="btn btn-block btn-primary btn-large" href="#">block button</a>
                         </div>
@@ -662,11 +664,11 @@
                             <a class="accordion-trigger">Accordion item #4</a>
                             <div class="accordion-content">
                                 <h2>With a grid inside</h2>
-                                <div class="grid clearfix">
+                                <div class="grid">
                                     <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                                     <div class="column-6 omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                                 </div>
-                                <div class="grid clearfix">
+                                <div class="grid">
                                     <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                                     <div class="column-6 omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                                 </div>

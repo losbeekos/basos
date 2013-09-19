@@ -115,3 +115,30 @@
         margin-right: pxtoem(10);
     }
 }
+
+/*==========  Image replacement  ==========*/
+%ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+
+    &:before {
+        content: '';
+        display: block;
+        width: 0;
+        height: 150%;
+    }
+}
+
+/*==========  Clearfix  ==========*/
+.clearfix {
+    &:before,
+    &:after {
+        content: '';
+        display: table;
+    }
+
+    &:after {
+        clear: both;
+    }
+}
