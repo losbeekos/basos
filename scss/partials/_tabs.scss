@@ -23,6 +23,8 @@
     bottom: -1px;
     color: lighten($text-color, 20%);
 
+    @include user-select(none);
+
     &.active {
         background: #ffffff;
         border: 1px solid #eeeeee;

@@ -94,6 +94,7 @@ Modernizr.load([
                         modules.tooltips.init();
                         modules.accordion.init();
                         modules.tabs.init();
+                        modules.formInputs.init();
 
                         // App modules
                         //modules.nav.init();
@@ -540,6 +541,42 @@ Modernizr.load([
                 }
 
                 /*-----  End of Form validation  ------*/
+
+
+                /*=========================================
+                =            Checkbox & radios            =
+                =========================================*/
+
+                ,formInputs: {
+                    el: $('.form-checkbox, .form-radio'),
+
+                    init: function () {
+                        var self = this;
+
+                        self.el.find('input')
+                            .each(function () {
+                                var $input = $(this),
+                                    $parent = $input.parent();
+
+                                $input.is(':checked') == true && $parent.addClass('form-input-checked');
+                                $input.is(':disabled') == true && $parent.addClass('form-input-disabled');
+                            })
+                            .on('focus', function () {
+                                $(this).parent().addClass('form-input-focused');
+                            })
+                            .on('blur', function () {
+                                $(this).parent().removeClass('form-input-focused');
+                            })
+                            .on('change', function () {
+                                $(this).parent().toggleClass('form-input-checked');
+                            });
+                    }
+                }
+
+
+                /*-----  End of Checkbox & radios  ------*/
+
+
 
 
 

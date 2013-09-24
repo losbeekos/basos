@@ -4,6 +4,7 @@
 
 .pagination {
     text-align: $pagination-align;
+
     a {
         display: inline-block;
         color: $pagination-font-color;
@@ -11,6 +12,8 @@
         border-radius: $pagination-border-radius;
         margin-bottom: $pagination-margin-bottom;
         background-color: $pagination-bg-color;
+
+        @include user-select(none);
         @include single-transition(all, $pagination-transition-speed);
 
         @if $btn-gradient {
