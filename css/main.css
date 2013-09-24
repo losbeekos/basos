@@ -961,7 +961,7 @@ select {
   border: 1px solid #cbcbcb;
   box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.07);
   text-overflow: '';
-  text-indent: 1px;
+  text-indent: 0.01px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -979,46 +979,52 @@ select option[disabled] {
 }
 
 /* line 94, ../scss/partials/_forms.scss */
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 #888888;
+}
+
+/* line 99, ../scss/partials/_forms.scss */
 select::-ms-expand {
   display: none;
 }
 
-/* line 100, ../scss/partials/_forms.scss */
+/* line 105, ../scss/partials/_forms.scss */
 input[type=radio][disabled]:hover,
 input[type=checkbox][disabled]:hover {
   cursor: not-allowed;
 }
 
-/* line 105, ../scss/partials/_forms.scss */
+/* line 110, ../scss/partials/_forms.scss */
 .form-label {
   margin-bottom: 0;
 }
-/* line 108, ../scss/partials/_forms.scss */
+/* line 113, ../scss/partials/_forms.scss */
 .form-label label {
   line-height: 2.5em;
 }
 @media (min-width: 40.625em) {
-  /* line 105, ../scss/partials/_forms.scss */
+  /* line 110, ../scss/partials/_forms.scss */
   .form-label {
     text-align: right;
   }
 }
 
-/* line 118, ../scss/partials/_forms.scss */
+/* line 123, ../scss/partials/_forms.scss */
 .form-input,
 .form-select {
   position: relative;
   margin-bottom: 0;
 }
 
-/* line 124, ../scss/partials/_forms.scss */
+/* line 129, ../scss/partials/_forms.scss */
 .form-input:after {
   position: absolute;
   right: 0.625em;
   top: 0.625em;
 }
 
-/* line 132, ../scss/partials/_forms.scss */
+/* line 137, ../scss/partials/_forms.scss */
 .form-select:after {
   content: '';
   position: absolute;
@@ -1028,47 +1034,47 @@ input[type=checkbox][disabled]:hover {
   border-top-color: #333333;
   z-index: 1;
 }
-/* line 141, ../scss/partials/_forms.scss */
+/* line 146, ../scss/partials/_forms.scss */
 .lt-ie10 .form-select:after {
   display: none;
 }
 
 @media (min-width: 40.625em) {
-  /* line 147, ../scss/partials/_forms.scss */
+  /* line 152, ../scss/partials/_forms.scss */
   .form-input-list {
     margin-top: 0.5em;
   }
 }
-/* line 153, ../scss/partials/_forms.scss */
+/* line 158, ../scss/partials/_forms.scss */
 .form-input-list li + li {
   margin-top: 0.3125em;
 }
 
-/* line 159, ../scss/partials/_forms.scss */
+/* line 164, ../scss/partials/_forms.scss */
 .form-actions {
   margin-top: 1.25em;
 }
 @media (min-width: 40.625em) {
-  /* line 159, ../scss/partials/_forms.scss */
+  /* line 164, ../scss/partials/_forms.scss */
   .form-actions {
     margin-left: 42.05607%;
   }
 }
 
-/* line 167, ../scss/partials/_forms.scss */
+/* line 172, ../scss/partials/_forms.scss */
 .form-required-field {
   font-size: 0.875em;
 }
 
 /*==========  Checkbox & radios  ==========*/
-/* line 175, ../scss/partials/_forms.scss */
+/* line 180, ../scss/partials/_forms.scss */
 .form-checkbox,
 .form-radio {
   position: relative;
   cursor: pointer;
   padding-left: 1.75em;
 }
-/* line 180, ../scss/partials/_forms.scss */
+/* line 185, ../scss/partials/_forms.scss */
 .form-checkbox input,
 .form-radio input {
   position: absolute;
@@ -1076,18 +1082,18 @@ input[type=checkbox][disabled]:hover {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
 }
-/* line 186, ../scss/partials/_forms.scss */
+/* line 191, ../scss/partials/_forms.scss */
 .form-checkbox.form-input-disabled,
 .form-radio.form-input-disabled {
   cursor: not-allowed;
 }
-/* line 189, ../scss/partials/_forms.scss */
+/* line 194, ../scss/partials/_forms.scss */
 .form-checkbox.form-input-disabled:before,
 .form-radio.form-input-disabled:before {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 194, ../scss/partials/_forms.scss */
+/* line 199, ../scss/partials/_forms.scss */
 .form-checkbox:before,
 .form-radio:before {
   position: absolute;
@@ -1101,7 +1107,7 @@ input[type=checkbox][disabled]:hover {
   border-radius: 0.1875em;
   border: 1px solid #cbcbcb;
 }
-/* line 207, ../scss/partials/_forms.scss */
+/* line 212, ../scss/partials/_forms.scss */
 .form-checkbox:after,
 .form-radio:after {
   content: "✔";
@@ -1112,6 +1118,7 @@ input[type=checkbox][disabled]:hover {
   height: 1.25em;
   line-height: 20px;
   text-align: center;
+  color: #0659a4;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: all 0.2s;
@@ -1119,77 +1126,77 @@ input[type=checkbox][disabled]:hover {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 220, ../scss/partials/_forms.scss */
+/* line 226, ../scss/partials/_forms.scss */
 .lt-ie9 .form-checkbox:after, .lt-ie9
 .form-radio:after {
   visibility: hidden;
 }
-/* line 226, ../scss/partials/_forms.scss */
+/* line 232, ../scss/partials/_forms.scss */
 .form-checkbox.form-input-focused:before,
 .form-radio.form-input-focused:before {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 232, ../scss/partials/_forms.scss */
+/* line 238, ../scss/partials/_forms.scss */
 .form-checkbox.form-input-checked:after,
 .form-radio.form-input-checked:after {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 235, ../scss/partials/_forms.scss */
+/* line 241, ../scss/partials/_forms.scss */
 .lt-ie9 .form-checkbox.form-input-checked:after, .lt-ie9
 .form-radio.form-input-checked:after {
   visibility: visible;
 }
 
 /*==========  Radios  ==========*/
-/* line 245, ../scss/partials/_forms.scss */
+/* line 251, ../scss/partials/_forms.scss */
 .form-radio:before {
   border-radius: 1.25em;
 }
-/* line 249, ../scss/partials/_forms.scss */
+/* line 255, ../scss/partials/_forms.scss */
 .form-radio:after {
-  background: #222222;
+  background: #0659a4;
   content: '';
-  top: 3px;
-  left: 4px;
-  width: 0.75em;
-  height: 0.75em;
-  border-radius: 0.75em;
+  top: 4px;
+  left: 5px;
+  width: 0.625em;
+  height: 0.625em;
+  border-radius: 0.625em;
 }
 
 /*==========  Placeholder  ==========*/
-/* line 265, ../scss/partials/_forms.scss */
+/* line 271, ../scss/partials/_forms.scss */
 ::-webkit-input-placeholder {
   color: #94adc4;
 }
 
-/* line 269, ../scss/partials/_forms.scss */
+/* line 275, ../scss/partials/_forms.scss */
 :-moz-placeholder {
   color: #94adc4;
 }
 
-/* line 273, ../scss/partials/_forms.scss */
+/* line 279, ../scss/partials/_forms.scss */
 ::-moz-placeholder {
   color: #94adc4;
 }
 
-/* line 277, ../scss/partials/_forms.scss */
+/* line 283, ../scss/partials/_forms.scss */
 :-ms-input-placeholder {
   color: #94adc4;
 }
 
-/* line 281, ../scss/partials/_forms.scss */
+/* line 287, ../scss/partials/_forms.scss */
 .placeholder {
   color: #94adc4;
 }
 
 /*==========  Validation  ==========*/
-/* line 291, ../scss/partials/_forms.scss */
+/* line 297, ../scss/partials/_forms.scss */
 .parsley-error.form-input:after {
   content: "✖";
   color: #a60000;
 }
-/* line 299, ../scss/partials/_forms.scss */
+/* line 305, ../scss/partials/_forms.scss */
 .parsley-error input[type="text"],
 .parsley-error input[type="password"],
 .parsley-error input[type="date"],
@@ -1210,12 +1217,12 @@ input[type=checkbox][disabled]:hover {
   border-color: #a60000;
 }
 
-/* line 307, ../scss/partials/_forms.scss */
+/* line 313, ../scss/partials/_forms.scss */
 .parsley-success.form-input:after {
   content: "✔";
   color: #6eb269;
 }
-/* line 315, ../scss/partials/_forms.scss */
+/* line 321, ../scss/partials/_forms.scss */
 .parsley-success input[type="text"],
 .parsley-success input[type="password"],
 .parsley-success input[type="date"],
@@ -1236,7 +1243,7 @@ input[type=checkbox][disabled]:hover {
   border-color: #00a608;
 }
 
-/* line 321, ../scss/partials/_forms.scss */
+/* line 327, ../scss/partials/_forms.scss */
 .parsley-error-list {
   clear: both;
   padding: 0.625em;
@@ -1244,7 +1251,7 @@ input[type=checkbox][disabled]:hover {
   font-style: italic;
 }
 
-/* line 330, ../scss/partials/_forms.scss */
+/* line 336, ../scss/partials/_forms.scss */
 .parsley-error-list {
   position: relative;
   background: #eeeeee;
@@ -1252,7 +1259,7 @@ input[type=checkbox][disabled]:hover {
   margin-top: 0.9375em;
   box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
 }
-/* line 337, ../scss/partials/_forms.scss */
+/* line 343, ../scss/partials/_forms.scss */
 .parsley-error-list:after {
   content: '';
   width: 0;

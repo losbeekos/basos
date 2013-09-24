@@ -567,8 +567,23 @@ Modernizr.load([
                             .on('blur', function () {
                                 $(this).parent().removeClass('form-input-focused');
                             })
-                            .on('change', function () {
-                                $(this).parent().toggleClass('form-input-checked');
+                            .on('click', function (e) {
+                                var $input = $(this),
+                                    $parent = $input.parent();
+
+                                switch ($input.context.type) {
+                                    case 'checkbox':
+                                        $parent.toggleClass('form-input-checked');
+
+                                        break;
+                                    case 'radio':
+                                        console.log($input.is(':checked'));
+
+                                        $parent.parent().siblings().find('.form-input-checked').removeClass('form-input-checked');
+                                        $parent.addClass('form-input-checked');
+
+                                        break;
+                                }
                             });
                     }
                 }

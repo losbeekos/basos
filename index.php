@@ -270,13 +270,13 @@
                                     <div class="column-7 omega">
                                         <div class="column-6 form-input">
                                             <ul class="form-input-list list-unstyled">
-                                                <li><label class="form-radio"><input type="radio" data-group="radio-group-name" /> Radio #1</label></li>
-                                                <li><label class="form-radio"><input type="radio" data-group="radio-group-name" /> Radio #2</label></li>
-                                                <li><label class="form-radio"><input type="radio" data-group="radio-group-name" /> Radio #3</label></li>
-                                                <li><label class="form-radio"><input type="radio" data-group="radio-group-name" /> Radio #4</label></li>
-                                                <li><label class="form-radio"><input type="radio" data-group="radio-group-name" /> Radio #5</label></li>
-                                                <li><label class="form-radio"><input type="radio" data-group="radio-group-name" disabled="disabled" /> Disabled #6</label></li>
-                                                <li><label class="form-radio"><input type="radio" data-group="radio-group-name" disabled="disabled" /> Disabled #7</label></li>
+                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" /> Radio #1</label></li>
+                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" /> Radio #2</label></li>
+                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" /> Radio #3</label></li>
+                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" /> Radio #4</label></li>
+                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" /> Radio #5</label></li>
+                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" disabled="disabled" /> Disabled #6</label></li>
+                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" disabled="disabled" /> Disabled #7</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -288,8 +288,8 @@
                                     <div class="column-7 omega">
                                         <div class="column-6 form-input">
                                             <ul class="form-input-list list-inline">
-                                                <li><label class="form-radio"><input type="radio" data-group="radio-group-name" /> Yes</label></li>
-                                                <li><label class="form-radio"><input type="radio" data-group="radio-group-name" /> No</label></li>
+                                                <li><label class="form-radio"><input type="radio" name="radio2" data-group="radio-group-name" /> Yes</label></li>
+                                                <li><label class="form-radio"><input type="radio" name="radio2" data-group="radio-group-name" /> No</label></li>
                                             </ul>
                                         </div>
                                     </div>
