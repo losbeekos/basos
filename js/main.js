@@ -567,7 +567,7 @@ Modernizr.load([
                             .on('blur', function () {
                                 $(this).parent().removeClass('form-input-focused');
                             })
-                            .on('click', function (e) {
+                            .on('change', function (e) {
                                 var $input = $(this),
                                     $parent = $input.parent();
 
@@ -577,8 +577,6 @@ Modernizr.load([
 
                                         break;
                                     case 'radio':
-                                        console.log($input.is(':checked'));
-
                                         $parent.parent().siblings().find('.form-input-checked').removeClass('form-input-checked');
                                         $parent.addClass('form-input-checked');
 
