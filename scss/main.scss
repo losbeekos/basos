@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /*====================================
 =            Main project            =
 ====================================*/
@@ -30,6 +32,7 @@
 @import "partials/header";
 @import "partials/footer";
 @import "partials/navigation";
+@import "partials/tabs";
 @import "partials/notifications";
 @import "partials/spotlight";
 @import "partials/teasers";

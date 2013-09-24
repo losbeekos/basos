@@ -1,0 +1,51 @@
+/*============================
+=            Tabs            =
+============================*/
+
+.tabs {
+    @extend .list-inline;
+
+    li {
+        margin: 0;
+
+        + li {
+            margin-left: pxtoem(5);
+        }
+    }
+}
+
+.tab {
+    position: relative;
+    display: inline-block;
+    background: #eeeeee;
+    border: 1px solid transparent;
+    padding: pxtoem(10) pxtoem(20);
+    bottom: -1px;
+    color: lighten($text-color, 20%);
+
+    &.active {
+        background: #ffffff;
+        border: 1px solid #eeeeee;
+        border-bottom-color: #ffffff;
+        color: $text-color;
+    }
+}
+
+.tab-content {
+    border-top: 1px solid #eeeeee;
+    padding: pxtoem(20);
+}
+
+.tab-item {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    @include opacity(0);
+    @include single-transition(opacity, 0.5s);
+
+    &.active {
+        height: auto;
+        width: 100%;
+        @include opacity(1);
+    }
+}

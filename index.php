@@ -618,6 +618,28 @@
                 <br/><br/>
 
                 <section>
+                    <h1>Tabs</h1>
+                    <ul class="tabs">
+                        <li><a class="tab active" href="#tab-home">Home</a></li>
+                        <li><a class="tab" href="#tab-lorem">Lorem</a></li>
+                        <li><a class="tab" href="#tab-ipsum">Ipsum</a></li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-item active" id="tab-home">
+                            <p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
+                        </div>
+                        <div class="tab-item" id="tab-lorem">
+                            <p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
+                        </div>
+                        <div class="tab-item" id="tab-ipsum">
+                            <p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
+                        </div>
+                    </div>
+                </section>
+
+                <br/><br/>
+
+                <section>
                     <h1>Tooltips</h1>
                     <a class="tooltip btn btn-small" data-tooltip-position="top" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a>
                     <a class="tooltip btn btn-small" data-tooltip-position="right" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">right</a>

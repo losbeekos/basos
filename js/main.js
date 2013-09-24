@@ -93,6 +93,7 @@ Modernizr.load([
                         modules.modals.init();
                         modules.tooltips.init();
                         modules.accordion.init();
+                        modules.tabs.init();
 
                         // App modules
                         //modules.nav.init();
@@ -539,6 +540,42 @@ Modernizr.load([
                 }
 
                 /*-----  End of Form validation  ------*/
+
+
+
+                /*============================
+                =            Tabs            =
+                ============================*/
+
+
+
+                ,tabs: {
+                    nav: $('.tabs'),
+                    tab: $('.tab'),
+                    content: $('.tab-content'),
+
+                    init: function(){
+                        var self = this;
+
+                        if (self.tab.length > 0) {
+                            self.tab.on('click', function (e) {
+                                var $tab = $(this);
+
+                                e.preventDefault();
+
+                                self.tab.removeClass('active');
+                                $tab.addClass('active');
+
+                                $($tab.attr('href'))
+                                    .addClass('active')
+                                    .siblings()
+                                    .removeClass('active');
+                            });
+                        }
+                    }
+                }
+
+                /*-----  End of Tabs  ------*/
 
 
 
