@@ -1,0 +1,110 @@
+/*============================
+=            Form            =
+============================*/
+
+form {
+    margin: 0 0 pxtoem(40) 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: pxtoem(20);
+  font-size: pxtoem(20);
+  line-height: 2em;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+$input-selectors: '
+    input[type="text"],
+    input[type="password"],
+    input[type="date"],
+    input[type="datetime"],
+    input[type="datetime-local"],
+    input[type="month"],
+    input[type="week"],
+    input[type="email"],
+    input[type="number"],
+    input[type="search"],
+    input[type="tel"],
+    input[type="time"],
+    input[type="url"],
+    textarea
+';
+
+#{$input-selectors}{
+    color: #333333;
+    padding: pxtoem(10);
+    border-radius: 3px;
+    border: 1px solid #f3f3f3;
+    outline: 0;
+    width: 100%;
+    box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+
+    @include single-transition(all, 0.2s);
+    @include appearance(none);
+    @include user-select(none);
+
+    &:focus {
+        border: 1px solid #cccccc;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    &:disabled {
+        background-color: #f1f1f1;
+        cursor: not-allowed;
+    }
+}
+
+textarea {
+    height: pxtoem(160);
+}
+
+select {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: pxtoem(10);
+    border-radius: 3px;
+    outline: none;
+    color: #888888;
+    border: 1px solid #cbcbcb;
+    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.07);
+
+    // This is so hacky.. (for Firefox)
+    // It removes the default select arrow.
+    text-overflow: '';
+    text-indent: 0.01px;
+    // End of brutal hack
+
+    @include appearance(none);
+
+    &:focus {
+        border-color: #cccccc;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
+    option[disabled] {
+        color: $placeholder-color;
+        text-shadow: none;
+        border: none;
+    }
+}
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #888888;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+input[type=radio][disabled],
+input[type=checkbox][disabled] {
+    &:hover {
+        cursor: not-allowed;
+    }
+}

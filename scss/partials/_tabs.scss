@@ -19,11 +19,18 @@
     display: inline-block;
     background: #eeeeee;
     border: 1px solid transparent;
-    padding: pxtoem(10) pxtoem(20);
+    padding: pxtoem(10) pxtoem(15);
     bottom: -1px;
     color: lighten($text-color, 20%);
 
     @include user-select(none);
+
+    &:focus,
+    &:active {
+        outline: none;
+        color: #000000;
+        background: darken(#eeeeee, 5%);
+    }
 
     &.active {
         background: #ffffff;

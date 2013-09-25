@@ -25,7 +25,6 @@
 
 /*==========  Partials  ==========*/
 @import "partials/typography";
-@import "partials/forms";
 @import "partials/buttons";
 @import "partials/tables";
 @import "partials/layout";
@@ -36,6 +35,14 @@
 @import "partials/notifications";
 @import "partials/spotlight";
 @import "partials/teasers";
+
+
+/*==========  Forms  ==========*/
+@import "partials/form";
+@import "partials/form/general";
+@import "partials/form/checkbox_radio";
+@import "partials/form/placeholder";
+@import "partials/form/validation";
 
 
 /*==========  Optional partials  ==========*/

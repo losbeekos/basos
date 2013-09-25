@@ -1,0 +1,59 @@
+.parsley-error {
+    &.form-input {
+        &:after {
+            content: $icon-form-validation-error;
+            color: #a60000;
+            @extend %font-fontello;
+        }
+    }
+
+    #{$input-selectors},
+    select {
+        padding-right: pxtoem(30);
+        border-color: #a60000;
+    }
+}
+
+.parsley-success {
+    &.form-input {
+        &:after {
+            content: $icon-form-validation-success;
+            color: #6eb269;
+            @extend %font-fontello;
+        }
+    }
+
+    #{$input-selectors},
+    select {
+        padding-right: pxtoem(30);
+        border-color: #00a608;
+    }
+}
+
+.parsley-error-list {
+    @extend .list-unstyled;
+
+    clear: both;
+    padding: pxtoem(10);
+    font-size: pxtoem(14);
+    font-style: italic;
+}
+
+.parsley-error-list {
+    position: relative;
+    background: #eeeeee;
+    border-radius: 3px;
+    margin-top: pxtoem(15);
+    box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
+
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -20px;
+        left: pxtoem(20);
+        border: 10px solid transparent;
+        border-bottom-color: #eeeeee;
+    }
+}
