@@ -187,6 +187,22 @@
                                 </div>
                                 <div class="form-row clearfix">
                                     <div class="column-5 form-label">
+                                        <label>Aanhef</label>
+                                    </div>
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-input">
+                                            <select name="" id="" multiple="multiple">
+                                                <option value="">HTML</option>
+                                                <option value="">CSS</option>
+                                                <option value="">Javascript</option>
+                                                <option value="">PHP</option>
+                                                <option value="">Json</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="column-5 form-label">
                                         <label>Naam *</label>
                                     </div>
                                     <div class="column-7 omega">
@@ -319,6 +335,20 @@
 
                             <fieldset>
                                 <legend>Live validation (<a href="http://parsleyjs.org/">http://parsleyjs.org</a>)</legend>
+                                <div class="form-row clearfix">
+                                    <div class="column-5 form-label">
+                                        <label>Aanhef</label>
+                                    </div>
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-select">
+                                            <select name="" id="" required="required">
+                                                <option value="" disabled="disabled" selected="selected">Kies een optie</option>
+                                                <option value="0">Dhr.</option>
+                                                <option value="1">Mevr.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="form-row clearfix">
                                     <div class="column-5 form-label">
                                         <label>Postcode</label>

@@ -71,7 +71,9 @@ select {
     outline: none;
     color: #888888;
     border: 1px solid #cbcbcb;
-    box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.07);
+    cursor: pointer;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
+    @include single-transition(box-shadow, 0.2s);
 
     // This is so hacky.. (for Firefox)
     // It removes the default select arrow.
@@ -81,7 +83,12 @@ select {
 
     @include appearance(none);
 
-    &:focus {
+    &[multiple=multiple] {
+        height: auto;
+    }
+
+    &:focus,
+    &:hover {
         border-color: #cccccc;
         box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
     }

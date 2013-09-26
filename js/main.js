@@ -94,7 +94,7 @@ Modernizr.load([
                         modules.tooltips.init();
                         modules.accordion.init();
                         modules.tabs.init();
-                        modules.formInputs.init();
+                        modules.checkRadio.init();
 
                         // App modules
                         //modules.nav.init();
@@ -520,7 +520,7 @@ Modernizr.load([
                                         trigger: 'change',
                                         errors: {
                                             classHandler: function (el, isRadioOrCheckbox){
-                                                return $(el).closest('.form-input');
+                                                return $(el).closest('.form-input, .form-select');
                                             }
                                         },
 
@@ -547,7 +547,7 @@ Modernizr.load([
                 =            Checkbox & radios            =
                 =========================================*/
 
-                ,formInputs: {
+                ,checkRadio: {
                     el: $('.form-checkbox, .form-radio'),
 
                     init: function () {
@@ -588,6 +588,8 @@ Modernizr.load([
 
 
                 /*-----  End of Checkbox & radios  ------*/
+
+
 
 
 

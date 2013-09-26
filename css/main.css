@@ -1175,13 +1175,13 @@ p {
   -moz-user-select: none;
   user-select: none;
 }
-/* line 29, ../scss/partials/_tabs.scss */
-.tab:focus, .tab:active {
+/* line 28, ../scss/partials/_tabs.scss */
+.tab:focus {
   outline: none;
   color: #000000;
   background: #e1e1e1;
 }
-/* line 35, ../scss/partials/_tabs.scss */
+/* line 34, ../scss/partials/_tabs.scss */
 .tab.active {
   background: #ffffff;
   border: 1px solid #eeeeee;
@@ -1189,13 +1189,13 @@ p {
   color: #222222;
 }
 
-/* line 43, ../scss/partials/_tabs.scss */
+/* line 42, ../scss/partials/_tabs.scss */
 .tab-content {
   border-top: 1px solid #eeeeee;
   padding: 1.25em;
 }
 
-/* line 48, ../scss/partials/_tabs.scss */
+/* line 47, ../scss/partials/_tabs.scss */
 .tab-item {
   overflow: hidden;
   height: 0;
@@ -1207,7 +1207,7 @@ p {
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-/* line 55, ../scss/partials/_tabs.scss */
+/* line 54, ../scss/partials/_tabs.scss */
 .tab-item.active {
   height: auto;
   width: 100%;
@@ -1383,37 +1383,46 @@ select {
   outline: none;
   color: #888888;
   border: 1px solid #cbcbcb;
-  box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.07);
+  cursor: pointer;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
+  -webkit-transition: box-shadow 0.2s;
+  -moz-transition: box-shadow 0.2s;
+  -o-transition: box-shadow 0.2s;
+  transition: box-shadow 0.2s;
   text-overflow: '';
   text-indent: 0.01px;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
 }
-/* line 84, ../scss/partials/_form.scss */
-select:focus {
+/* line 86, ../scss/partials/_form.scss */
+select[multiple=multiple] {
+  height: auto;
+}
+/* line 91, ../scss/partials/_form.scss */
+select:focus, select:hover {
   border-color: #cccccc;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 89, ../scss/partials/_form.scss */
+/* line 96, ../scss/partials/_form.scss */
 select option[disabled] {
   color: #94adc4;
   text-shadow: none;
   border: none;
 }
 
-/* line 96, ../scss/partials/_form.scss */
+/* line 103, ../scss/partials/_form.scss */
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #888888;
 }
 
-/* line 101, ../scss/partials/_form.scss */
+/* line 108, ../scss/partials/_form.scss */
 select::-ms-expand {
   display: none;
 }
 
-/* line 107, ../scss/partials/_form.scss */
+/* line 114, ../scss/partials/_form.scss */
 input[type=radio][disabled]:hover,
 input[type=checkbox][disabled]:hover {
   cursor: not-allowed;
@@ -1951,17 +1960,17 @@ input[type=checkbox][disabled]:hover {
   -o-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
-/* line 18, ../scss/partials/modals/_modals.scss */
+/* line 19, ../scss/partials/modals/_modals.scss */
 .modal.modal-show {
   visibility: visible;
 }
-/* line 22, ../scss/partials/modals/_modals.scss */
+/* line 23, ../scss/partials/modals/_modals.scss */
 .lt-ie9 .modal {
   top: 0;
   margin-left: -315px;
 }
 
-/* line 28, ../scss/partials/modals/_modals.scss */
+/* line 29, ../scss/partials/modals/_modals.scss */
 .modal-content {
   background: white;
   position: relative;
@@ -1970,7 +1979,7 @@ input[type=checkbox][disabled]:hover {
   border-radius: 0;
 }
 
-/* line 36, ../scss/partials/modals/_modals.scss */
+/* line 37, ../scss/partials/modals/_modals.scss */
 .modal-overlay {
   background: black;
   position: fixed;
@@ -1995,7 +2004,7 @@ input[type=checkbox][disabled]:hover {
   -o-transition-duration: 0, 0.5s;
   transition-duration: 0, 0.5s;
 }
-/* line 50, ../scss/partials/modals/_modals.scss */
+/* line 52, ../scss/partials/modals/_modals.scss */
 .modal-show .modal-overlay {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
