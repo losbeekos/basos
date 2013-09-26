@@ -2,7 +2,7 @@
     margin-bottom: 0;
 
     label {
-        line-height: pxtoem(40);
+        @include rem(line-height, 40px);
     }
 
     @include breakpoint(medium-and-up) {
@@ -19,8 +19,8 @@
 .form-input {
     &:after {
         position: absolute;
-        right: pxtoem(10);
-        top: pxtoem(10);
+        right: 10px;
+        top: 9px;
     }
 }
 
@@ -30,11 +30,12 @@
     &:after {
         content: $icon-form-select;
         position: absolute;
-        top: pxtoem(9);
-        right: pxtoem(12);
+        top: 9px;
+        right: 12px;
         z-index: 1;
-        font-size: pxtoem(16);
+
         @extend %font-fontello;
+        @include rem(font-size, 16px);
 
         .lt-ie10 & {
             display: none;
@@ -44,18 +45,18 @@
 
 .form-input-list {
     @include breakpoint(medium-and-up) {
-        margin-top: pxtoem(8);
+        @include rem(margin-top, 8px);
     }
 
     li {
         + li {
-            margin-top: pxtoem(5);
+            @include rem(margin-top, 5px);
         }
     }
 }
 
 .form-actions {
-    margin-top: pxtoem(20);
+    @include rem(margin-top, 20px);
 
     @include breakpoint(medium-and-up) {
         @include pre(5);
@@ -63,5 +64,5 @@
 }
 
 .form-required-field {
-    font-size: pxtoem(14);
+    @include rem(font-size, 14px);
 }

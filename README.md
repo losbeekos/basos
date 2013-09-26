@@ -1,5 +1,7 @@
 # Todo
 
+* Inline form text (data form)
+* Convert pxtoem to rem mixin
 * Standard border-radius in settings
 
 # Starting point

@@ -3,18 +3,19 @@
 ============================*/
 
 form {
-    margin: 0 0 pxtoem(40) 0;
+    @include rem(margin, 0 0 40px 0);
 }
 
 legend {
-  display: block;
-  width: 100%;
-  padding: 0;
-  margin-bottom: pxtoem(20);
-  font-size: pxtoem(20);
-  line-height: 2em;
-  border: 0;
-  border-bottom: 1px solid #e5e5e5;
+    display: block;
+    width: 100%;
+    padding: 0;
+    border: 0;
+    border-bottom: 1px solid #e5e5e5;
+
+    @include rem(margin-bottom, 20px);
+    @include rem(font-size, 20px);
+    @include rem(line-height, 32px);
 }
 
 $input-selectors: '
@@ -36,16 +37,16 @@ $input-selectors: '
 
 #{$input-selectors}{
     color: #333333;
-    padding: pxtoem(10);
-    border-radius: 3px;
+    border-radius: $base-border-radius;
     border: 1px solid #f3f3f3;
     outline: 0;
     width: 100%;
     box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
 
-    @include single-transition(all, 0.2s);
+    @include rem(padding, 10px);
     @include appearance(none);
     @include user-select(none);
+    @include single-transition(all, 0.2s);
 
     &:focus {
         border: 1px solid #cccccc;
@@ -59,28 +60,27 @@ $input-selectors: '
 }
 
 textarea {
-    height: pxtoem(160);
+    @include rem(height, 160px);
 }
 
 select {
     display: block;
     width: 100%;
     height: 40px;
-    padding: pxtoem(10);
-    border-radius: 3px;
+    border-radius: $base-border-radius;
     outline: none;
     color: #888888;
     border: 1px solid #cbcbcb;
     cursor: pointer;
     box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
-    @include single-transition(box-shadow, 0.2s);
-
     // This is so hacky.. (for Firefox)
-    // It removes the default select arrow.
+    // Removes the default select arrow.
     text-overflow: '';
     text-indent: 0.01px;
     // End of brutal hack
 
+    @include rem(padding, 10px);
+    @include single-transition(box-shadow, 0.2s);
     @include appearance(none);
 
     &[multiple=multiple] {

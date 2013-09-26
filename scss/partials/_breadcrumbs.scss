@@ -5,6 +5,7 @@
 .breadcrumbs {
     background: $breadcrumbs-bg-color;
     padding: $breadcrumbs-padding;
+    border-radius: $base-border-radius;
 
     a,
     span {

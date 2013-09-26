@@ -19,10 +19,12 @@
     display: inline-block;
     background: #eeeeee;
     border: 1px solid transparent;
-    padding: pxtoem(10) pxtoem(15);
     bottom: -1px;
     color: lighten($text-color, 20%);
+    border-top-left-radius: $base-border-radius;
+    border-top-right-radius: $base-border-radius;
 
+    @include rem(padding, 10px 15px);
     @include user-select(none);
 
     &:focus {
@@ -41,19 +43,22 @@
 
 .tab-content {
     border-top: 1px solid #eeeeee;
-    padding: pxtoem(20);
+
+    @include rem(padding, 20px);
 }
 
 .tab-item {
     overflow: hidden;
     height: 0;
     width: 0;
+
     @include opacity(0);
     @include single-transition(opacity, 0.5s);
 
     &.active {
         height: auto;
         width: 100%;
+
         @include opacity(1);
     }
 }

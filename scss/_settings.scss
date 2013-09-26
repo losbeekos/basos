@@ -12,7 +12,8 @@ $legacy-support-for-mozilla : false;
 
 /*==========  Project  ==========*/
 $gradient                  : false;
-$project-base-font-size    : 1em;     // 16px
+$base-font-size            : 16px;
+$base-border-radius        : 3px;
 $text-color                : #222222;
 $white                     : #ffffff;
 $primary-color             : #0659a4;
@@ -22,8 +23,8 @@ $selection-color           : #d1e4fe;
 
 
 /*==========  Container  ==========*/
-$container-min-width              : 20em;      // 320px
-$container-max-width              : 80em;      // 1280px
+$container-min-width              : 320px;
+$container-max-width              : 1280px;
 $container-margin                 : 0 auto;
 $container-padding                : 0 0.625em; // 10px (mobile first)
 $container-medium-padding         : 0 1.25em;  // 20px
@@ -41,7 +42,7 @@ $grid-padding  : 0;       // 0 grid padding
 // If you need more customization,
 // dive into the buttons partial.
 $btn-gradient           : $gradient;
-$btn-border-radius      : 0.188em; // 3px
+$btn-border-radius      : $base-border-radius;
 $btn-default-bg-color   : #222222;
 $btn-primary-bg-color   : $primary-color;
 $btn-secondary-bg-color : #177f12;
@@ -63,9 +64,9 @@ $icon-form-select             : '';
 
 /*==========  Tables  ==========*/
 $table-margin-bottom  : 30px;
-$table-padding        : 10px;
+$table-padding        : 0.625em; // 10px
 $table-border-color   : #dddddd;
-$table-border-radius  : 3px;
+$table-border-radius  : $base-border-radius;
 $table-zebra-bg-color : #f8f8f8;
 $table-hover-bg-color : #f6f6f6;
 
@@ -76,7 +77,7 @@ $tooltip-arrow-width            : 5px;
 $tooltip-transition-speed       : 0.2s;
 $tooltip-bg-color               : $primary-color;
 $tooltip-padding                : 0.625em; // 10px
-$tooltip-border-radius          : 0.188em; // 3px
+$tooltip-border-radius          : $base-border-radius;
 $tooltip-font-size              : 0.750em; // 12px
 $tooltip-font-color             : #ffffff;
 
@@ -86,15 +87,15 @@ $modal-overlay-bg-color      : #000000;
 $modal-overlay-opacity       : 0.4;
 $modal-content-bg-color      : #ffffff;
 $modal-content-padding       : 2.500em; // 40px
-$modal-content-border-radius : 0;
+$modal-content-border-radius : $base-border-radius;
 
 
 /*==========  Accordion  ==========*/
 $accordion-transition-speed    : 0.3s;
-$accordion-padding             : 10px;
+$accordion-padding             : 0.625em; // 10px
 $accordion-border-color        : #f3f3f3;
 $accordion-gradient            : $gradient;
-$accordion-border-radius       : 3px;
+$accordion-border-radius       : $base-border-radius;
 $accordion-group-margin-bottom : 0;
 $accordion-trigger-bg-color    : $primary-color;
 $accordion-trigger-font-color  : $white;
@@ -105,7 +106,7 @@ $pagination-gradient         : $gradient;
 $pagination-align            : center;
 $pagination-font-color       : $white;
 $pagination-padding          : 10px 15px;
-$pagination-border-radius    : 3px;
+$pagination-border-radius    : $base-border-radius;
 $pagination-margin-bottom    : 30px;
 $pagination-bg-color         : $primary-color;
 $pagination-transition-speed : 0.2s;

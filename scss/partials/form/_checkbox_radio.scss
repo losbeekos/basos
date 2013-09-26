@@ -2,7 +2,7 @@
 .form-radio {
     position: relative;
     cursor: pointer;
-    padding-left: pxtoem(28);
+    padding-left: 28px;
 
     @include user-select(none);
 
@@ -36,10 +36,10 @@
         top: -1px;
         content: '';
         background: #f1f1f1;
-        width: pxtoem(20);
-        height: pxtoem(20);
+        width: 20px;
+        height: 20px;
         display: block;
-        border-radius: pxtoem(3);
+        border-radius: $base-border-radius;
         border: 1px solid #cbcbcb;
 
         .no-borderradius & {
@@ -52,8 +52,8 @@
         position: absolute;
         top: -1px;
         left: 0;
-        width: pxtoem(20);
-        height: pxtoem(20);
+        width: 20px;
+        height: 20px;
         line-height: 20px;
         text-align: center;
         color: $primary-color;
@@ -84,7 +84,7 @@
 
 .form-radio {
     &:before {
-        border-radius: pxtoem(20);
+        border-radius: 20px;
     }
 
     &:after {
@@ -92,8 +92,8 @@
         content: '';
         top: 4px;
         left: 5px;
-        width: pxtoem(10);
-        height: pxtoem(10);
-        border-radius: pxtoem(10);
+        width: 10px;
+        height: 10px;
+        border-radius: 10px;
     }
 }

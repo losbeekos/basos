@@ -9,8 +9,9 @@
 
     #{$input-selectors},
     select {
-        padding-right: pxtoem(30);
         border-color: #a60000;
+
+        @include rem(padding-right, 30px);
     }
 }
 
@@ -25,8 +26,9 @@
 
     #{$input-selectors},
     select {
-        padding-right: pxtoem(30);
         border-color: #00a608;
+
+        @include rem(padding-right, 30px);
     }
 }
 
@@ -34,17 +36,19 @@
     @extend .list-unstyled;
 
     clear: both;
-    padding: pxtoem(10);
-    font-size: pxtoem(14);
     font-style: italic;
+
+    @include rem(padding, 10px);
+    @include rem(font-size, 14px);
 }
 
 .parsley-error-list {
     position: relative;
     background: #eeeeee;
     border-radius: 3px;
-    margin-top: pxtoem(15);
     box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
+
+    @include rem(margin-top, 15px);
 
     &:after {
         content: '';
@@ -52,7 +56,7 @@
         height: 0;
         position: absolute;
         top: -20px;
-        left: pxtoem(20);
+        left: 20px;
         border: 10px solid transparent;
         border-bottom-color: #eeeeee;
     }

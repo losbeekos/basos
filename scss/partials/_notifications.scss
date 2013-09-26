@@ -3,17 +3,18 @@
 =====================================*/
 
 .notification {
-    padding: pxtoem(10);
     border: 1px solid #d3d3cc;
-    margin-bottom: pxtoem(30);
-    border-radius: 3px;
+    border-radius: $base-border-radius;
     color: #262207;
     background: #f3f3e6;
     position: relative;
-    min-height: pxtoem(82);
+
+    @include rem(padding, 10px);
+    @include rem(margin-bottom, 30px);
+    @include rem(min-height, 82px);
 
     @include breakpoint(medium-and-up) {
-        padding: pxtoem(20);
+        @include rem(padding, 20px);
     }
 
     &:before {
@@ -21,13 +22,14 @@
         left: 20px;
         top: 0;
         color: #b2af69;
-        font-size: pxtoem(60);
         content: $icon-notification-info;
         @extend %font-fontello;
+
+        @include rem(font-size, 60px);
     }
 
     ul {
-        margin: 0 0 0 pxtoem(60);
+        @include rem(margin, 0 0 0 60px);
     }
 
     &.error {

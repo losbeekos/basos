@@ -18,43 +18,43 @@ h6, .h6 {
 }
 
 h1, .h1 {
-    font-size: pxtoem(30);
-    margin-bottom: pxtoem(10);
+    @include rem(font-size, 30px);
+    @include rem(margin-bottom, 10px);
 
     @include breakpoint(medium) {
-        font-size: pxtoem(35);
+        @include rem(font-size, 35px);
     }
 
     @include breakpoint(large-and-up) {
-        font-size: pxtoem(40);
+        @include rem(font-size, 40px);
     }
 }
 
 h2, .h2 {
-    font-size: pxtoem(22);
-    margin-bottom: pxtoem(10);
+    @include rem(font-size, 22px);
+    @include rem(margin-bottom, 10px);
 
     @include breakpoint(large-and-up) {
-        font-size: pxtoem(26);
+        @include rem(font-size, 26px);
     }
 }
 
 h3, .h3 {
-    font-size: pxtoem(22);
-    margin-bottom: pxtoem(10);
+    @include rem(font-size, 22px);
+    @include rem(margin-bottom, 10px);
 }
 
 h4, .h4 {
-    font-size: pxtoem(18);
-    margin-bottom: pxtoem(8);
+    @include rem(font-size, 18px);
+    @include rem(margin-bottom, 8px);
 }
 
 h5, .h5 {
-    font-size: pxtoem(16);
-    margin-bottom: pxtoem(8);
+    @include rem(font-size, 16px);
+    @include rem(margin-bottom, 8px);
 }
 
 h6, .h6 {
-    font-size: pxtoem(14);
-    margin-bottom: pxtoem(5);
+    @include rem(font-size, 14px);
+    @include rem(margin-bottom, 5px);
 }

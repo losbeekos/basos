@@ -3,28 +3,53 @@
 =====================================*/
 
 
-/*==========  PX to EM  ==========*/
-@function pxtoem($target) {
-   @return ($target/16)+0em;
+/*==========  REM  ==========*/
+
+// Source: https://github.com/bitmanic/rem
+// Baseline, measured in pixels
+// The value should be the same as the font-size value for the html element
+// If the html element's font-size is set to 62.5% (of the browser's default font-size of 16px),
+// then the variable below would be 10px.
+@mixin rem($property, $px-values) {
+    // Convert the baseline into rems
+    $baseline-rem: $base-font-size / 1rem * 1;
+    // Print the first line in pixel values
+    #{$property}: $px-values;
+    // If there is only one (numeric) value, return the property/value line for it.
+    @if type-of($px-values) == "number" {
+        #{$property}: $px-values / $baseline-rem;
+    } @else {
+        // Create an empty list that we can dump values into
+        $rem-values: ();
+        @each $value in $px-values {// If the value is zero or not a number, return it
+            @if $value == 0 or type-of( $value ) != "number" {
+                $rem-values: append($rem-values, $value);
+            } @else {
+                $rem-values: append($rem-values, $value / $baseline-rem);
+            }
+        }
+        // Return the property and its list of converted values
+        #{$property}: $rem-values;
+    }
 }
 
 
 /*==========  Breakpoints  ==========*/
 @mixin breakpoint($point) {
   @if $point == large-and-up {
-    @media (min-width: pxtoem(900)) { @content; }
+    @media (min-width: 900px) { @content; }
   }
 
   @else if $point == medium {
-    @media (min-width: pxtoem(650)) and (max-width: pxtoem(900)) { @content; }
+    @media (min-width: 650px) and (max-width: 900px) { @content; }
   }
 
   @else if $point == medium-and-up {
-    @media (min-width: pxtoem(650)) { @content; }
+    @media (min-width: 650px) { @content; }
   }
 
   @else if $point == small {
-    @media (max-width: pxtoem(650))  { @content; }
+    @media (max-width: 650px)  { @content; }
   }
 }
 

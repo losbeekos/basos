@@ -4,7 +4,8 @@
 
 .btn-holder {
     text-align: center;
-    margin-top: pxtoem(40);
+
+    @include rem(margin-top, 40px);
 }
 
 .btn {
@@ -16,10 +17,10 @@
     border: 0;
     outline: 0;
     cursor: pointer;
-    line-height: pxtoem(16);
     text-align: center;
 
     @extend .no-webkit-flicker;
+    @include rem(line-height, 16px);
     @include single-transition(all, 0.2s);
     @include appearance(none);
     @include user-select(none);
@@ -54,86 +55,54 @@
 .btn-primary {
     background-color: $btn-primary-bg-color;
 
-    &:hover {
-        background-color: lighten($btn-primary-bg-color, 5%);
-    }
-
-    &:focus {
-        box-shadow: 0 0 10px rgba($btn-primary-bg-color, 1);
-    }
-
-    &:disabled {
-        background-color: $btn-primary-bg-color;
-    }
+    &:hover    { background-color: lighten($btn-primary-bg-color, 5%); }
+    &:focus    { box-shadow: 0 0 10px rgba($btn-primary-bg-color, 1);  }
+    &:disabled { background-color: $btn-primary-bg-color;              }
 }
 
 .btn-secondary {
     background-color: $btn-secondary-bg-color;
 
-    &:hover {
-        background-color: lighten($btn-secondary-bg-color, 5%);
-    }
-
-    &:focus {
-        box-shadow: 0 0 10px rgba($btn-secondary-bg-color, 1);
-    }
-
-    &:disabled {
-        background-color: $btn-secondary-bg-color;
-    }
+    &:hover    { background-color: lighten($btn-secondary-bg-color, 5%); }
+    &:focus    { box-shadow: 0 0 10px rgba($btn-secondary-bg-color, 1);  }
+    &:disabled { background-color: $btn-secondary-bg-color;              }
 }
 
 .btn-tertiary {
     background-color: $btn-tertiary-bg-color;
 
-    &:hover {
-        background-color: lighten($btn-tertiary-bg-color, 5%);
-    }
-
-    &:focus {
-        box-shadow: 0 0 10px rgba($btn-tertiary-bg-color, 1);
-    }
-
-    &:disabled {
-        background-color: $btn-tertiary-bg-color;
-    }
+    &:hover    { background-color: lighten($btn-tertiary-bg-color, 5%); }
+    &:focus    { box-shadow: 0 0 10px rgba($btn-tertiary-bg-color, 1);  }
+    &:disabled { background-color: $btn-tertiary-bg-color;              }
 }
 
 .btn-quadiary {
     background-color: $btn-quadiary-bg-color;
 
-    &:hover {
-        background-color: lighten($btn-quadiary-bg-color, 5%);
-    }
-
-    &:focus {
-        box-shadow: 0 0 10px rgba($btn-quadiary-bg-color, 1);
-    }
-
-    &:disabled {
-        background-color: $btn-quadiary-bg-color;
-    }
+    &:hover    { background-color: lighten($btn-quadiary-bg-color, 5%); }
+    &:focus    { box-shadow: 0 0 10px rgba($btn-quadiary-bg-color, 1);  }
+    &:disabled { background-color: $btn-quadiary-bg-color;              }
 }
 
 .btn-small {
-    padding: pxtoem(8) pxtoem(30);
+    @include rem(padding, 8px 30px);
 }
 
 .btn-medium {
-    padding: pxtoem(12) pxtoem(35);
+    @include rem(padding, 12px 35px);
 
     @include breakpoint(medium-and-up) {
-        padding: pxtoem(14) pxtoem(35);
-        font-size: pxtoem(17);
+        @include rem(padding, 14px 35px);
+        @include rem(font-size, 17px);
     }
 }
 
 .btn-large {
-    padding: pxtoem(15) pxtoem(40);
+    @include rem(padding, 15px 40px);
 
     @include breakpoint(medium-and-up) {
-        padding: pxtoem(18) pxtoem(50);
-        font-size: pxtoem(18);
+        @include rem(padding, 18px 50px);
+        @include rem(font-size, 18px);
     }
 }
 
