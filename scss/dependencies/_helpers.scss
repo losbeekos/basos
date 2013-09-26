@@ -142,3 +142,9 @@
         clear: both;
     }
 }
+
+/*==========  No webkit flickr  ==========*/
+
+.no-webkit-flicker {
+    -webkit-transform:translate3d(0, 0, 0);
+}

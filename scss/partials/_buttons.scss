@@ -19,6 +19,7 @@
     line-height: pxtoem(16);
     text-align: center;
 
+    @extend .no-webkit-flicker;
     @include single-transition(all, 0.2s);
     @include appearance(none);
     @include user-select(none);
@@ -32,9 +33,9 @@
         background-color: lighten($btn-default-bg-color, 5%);
     }
 
-    &:active,
     &:focus {
-        box-shadow: 0 0 30px rgba($btn-default-bg-color, 0.3);
+        outline: none;
+        box-shadow: 0 0 10px rgba($btn-default-bg-color, 1);
         @include transition-duration(0.05s);
     }
 
@@ -44,7 +45,6 @@
         color: darken($white, 20%);
         @include opacity(0.5);
 
-        &:active,
         &:focus {
             box-shadow: none;
         }
@@ -58,9 +58,8 @@
         background-color: lighten($btn-primary-bg-color, 5%);
     }
 
-    &:active,
     &:focus {
-        box-shadow: 0 0 30px rgba($btn-primary-bg-color, 0.3);
+        box-shadow: 0 0 10px rgba($btn-primary-bg-color, 1);
     }
 
     &:disabled {
@@ -75,9 +74,8 @@
         background-color: lighten($btn-secondary-bg-color, 5%);
     }
 
-    &:active,
     &:focus {
-        box-shadow: 0 0 30px rgba($btn-secondary-bg-color, 0.3);
+        box-shadow: 0 0 10px rgba($btn-secondary-bg-color, 1);
     }
 
     &:disabled {
@@ -92,9 +90,8 @@
         background-color: lighten($btn-tertiary-bg-color, 5%);
     }
 
-    &:active,
     &:focus {
-        box-shadow: 0 0 30px rgba($btn-tertiary-bg-color, 0.3);
+        box-shadow: 0 0 10px rgba($btn-tertiary-bg-color, 1);
     }
 
     &:disabled {
@@ -109,9 +106,8 @@
         background-color: lighten($btn-quadiary-bg-color, 5%);
     }
 
-    &:active,
     &:focus {
-        box-shadow: 0 0 30px rgba($btn-quadiary-bg-color, 0.3);
+        box-shadow: 0 0 10px rgba($btn-quadiary-bg-color, 1);
     }
 
     &:disabled {
