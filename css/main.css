@@ -782,8 +782,8 @@ textarea {
 }
 
 /* line 14, ../scss/dependencies/_fonts.scss */
-.notification:before, .form-select:after, .form-checkbox:after,
-.form-radio:after, .parsley-error.form-input:after, .parsley-success.form-input:after {
+.notification:before, .form-select:after, input[type=checkbox] + label:after,
+input[type=radio] + label:after, .parsley-error.form-input:after, .parsley-success.form-input:after {
   font-family: "fontello-webfont", arial, verdana;
   font-weight: normal;
 }
@@ -1558,8 +1558,51 @@ input[type=checkbox][disabled]:hover {
 }
 
 /* line 2, ../scss/partials/form/_checkbox_radio.scss */
-.form-checkbox,
-.form-radio {
+input[type=checkbox],
+input[type=radio] {
+  position: absolute;
+  outline: none;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 7, ../scss/partials/form/_checkbox_radio.scss */
+input[type=checkbox][disabled],
+input[type=radio][disabled] {
+  cursor: not-allowed;
+}
+/* line 10, ../scss/partials/form/_checkbox_radio.scss */
+input[type=checkbox][disabled] + label,
+input[type=radio][disabled] + label {
+  cursor: not-allowed;
+}
+/* line 13, ../scss/partials/form/_checkbox_radio.scss */
+input[type=checkbox][disabled] + label:before,
+input[type=radio][disabled] + label:before {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+/* line 20, ../scss/partials/form/_checkbox_radio.scss */
+input[type=checkbox]:focus + label:before,
+input[type=radio]:focus + label:before {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+/* line 26, ../scss/partials/form/_checkbox_radio.scss */
+input[type=checkbox]:checked + label:after,
+input[type=radio]:checked + label:after {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 31, ../scss/partials/form/_checkbox_radio.scss */
+.no-borderradius input[type=checkbox], .no-borderradius
+input[type=radio] {
+  background: transparent;
+  position: relative;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+/* line 37, ../scss/partials/form/_checkbox_radio.scss */
+input[type=checkbox] + label,
+input[type=radio] + label {
   position: relative;
   cursor: pointer;
   padding-left: 28px;
@@ -1567,41 +1610,14 @@ input[type=checkbox][disabled]:hover {
   -moz-user-select: none;
   user-select: none;
 }
-/* line 9, ../scss/partials/form/_checkbox_radio.scss */
-.form-checkbox input,
-.form-radio input {
-  position: absolute;
-  outline: none;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
-}
-/* line 14, ../scss/partials/form/_checkbox_radio.scss */
-.no-borderradius .form-checkbox input, .no-borderradius
-.form-radio input {
-  background: transparent;
-  position: relative;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-/* line 21, ../scss/partials/form/_checkbox_radio.scss */
-.no-borderradius .form-checkbox, .no-borderradius
-.form-radio {
+/* line 44, ../scss/partials/form/_checkbox_radio.scss */
+.no-borderradius input[type=checkbox] + label, .no-borderradius
+input[type=radio] + label {
   padding: 0;
 }
-/* line 25, ../scss/partials/form/_checkbox_radio.scss */
-.form-checkbox.form-input-disabled,
-.form-radio.form-input-disabled {
-  cursor: not-allowed;
-}
-/* line 28, ../scss/partials/form/_checkbox_radio.scss */
-.form-checkbox.form-input-disabled:before,
-.form-radio.form-input-disabled:before {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
-}
-/* line 33, ../scss/partials/form/_checkbox_radio.scss */
-.form-checkbox:before,
-.form-radio:before {
+/* line 48, ../scss/partials/form/_checkbox_radio.scss */
+input[type=checkbox] + label:before,
+input[type=radio] + label:before {
   position: absolute;
   left: 0;
   top: -1px;
@@ -1613,14 +1629,14 @@ input[type=checkbox][disabled]:hover {
   border-radius: 3px;
   border: 1px solid #cbcbcb;
 }
-/* line 45, ../scss/partials/form/_checkbox_radio.scss */
-.no-borderradius .form-checkbox:before, .no-borderradius
-.form-radio:before {
+/* line 60, ../scss/partials/form/_checkbox_radio.scss */
+.no-borderradius input[type=checkbox] + label:before, .no-borderradius
+input[type=radio] + label:before {
   display: none;
 }
-/* line 50, ../scss/partials/form/_checkbox_radio.scss */
-.form-checkbox:after,
-.form-radio:after {
+/* line 65, ../scss/partials/form/_checkbox_radio.scss */
+input[type=checkbox] + label:after,
+input[type=radio] + label:after {
   content: "";
   position: absolute;
   top: -1px;
@@ -1637,30 +1653,19 @@ input[type=checkbox][disabled]:hover {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 65, ../scss/partials/form/_checkbox_radio.scss */
-.no-borderradius .form-checkbox:after, .no-borderradius
-.form-radio:after {
+/* line 80, ../scss/partials/form/_checkbox_radio.scss */
+.no-borderradius input[type=checkbox] + label:after, .no-borderradius
+input[type=radio] + label:after {
   display: none;
-}
-/* line 71, ../scss/partials/form/_checkbox_radio.scss */
-.form-checkbox.form-input-focused:before,
-.form-radio.form-input-focused:before {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-/* line 77, ../scss/partials/form/_checkbox_radio.scss */
-.form-checkbox.form-input-checked:after,
-.form-radio.form-input-checked:after {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
 }
 
 /*==========  Radios  ==========*/
-/* line 86, ../scss/partials/form/_checkbox_radio.scss */
-.form-radio:before {
+/* line 91, ../scss/partials/form/_checkbox_radio.scss */
+input[type=radio] + label:before {
   border-radius: 20px;
 }
-/* line 90, ../scss/partials/form/_checkbox_radio.scss */
-.form-radio:after {
+/* line 95, ../scss/partials/form/_checkbox_radio.scss */
+input[type=radio] + label:after {
   background: #0659a4;
   content: '';
   top: 4px;

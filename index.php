@@ -268,13 +268,13 @@
                                     <div class="column-7 omega">
                                         <div class="column-6 form-input">
                                             <ul class="form-input-list list-unstyled">
-                                                <li><label class="form-checkbox form-input-checked"><input checked="checked" type="checkbox" data-group="checkbox-group-name" /> Checkbox #1</label></li>
-                                                <li><label class="form-checkbox"><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #2</label></li>
-                                                <li><label class="form-checkbox"><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #3</label></li>
-                                                <li><label class="form-checkbox"><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #4</label></li>
-                                                <li><label class="form-checkbox"><input type="checkbox" data-group="checkbox-group-name" /> Checkbox #5</label></li>
-                                                <li><label class="form-checkbox"><input type="checkbox" data-group="checkbox-group-name" disabled="disabled" /> Disabled #6</label></li>
-                                                <li><label class="form-checkbox"><input type="checkbox" data-group="checkbox-group-name" disabled="disabled" /> Disabled #7</label></li>
+                                                <li><input type="checkbox" checked="checked" id="checkbox1" /><label for="checkbox1">Checkbox</label></li>
+                                                <li><input type="checkbox" id="checkbox2" /><label for="checkbox2">Checkbox</label></li>
+                                                <li><input type="checkbox" id="checkbox3" /><label for="checkbox3">Checkbox</label></li>
+                                                <li><input type="checkbox" id="checkbox4" /><label for="checkbox4">Checkbox</label></li>
+                                                <li><input type="checkbox" id="checkbox5" /><label for="checkbox5">Checkbox</label></li>
+                                                <li><input type="checkbox" disabled="disabled" id="checkbox6" /><label for="checkbox6">Checkbox disabled</label></li>
+                                                <li><input type="checkbox" disabled="disabled" id="checkbox7" /><label for="checkbox7">Checkbox disabled</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -286,13 +286,13 @@
                                     <div class="column-7 omega">
                                         <div class="column-6 form-input">
                                             <ul class="form-input-list list-unstyled">
-                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" /> Radio #1</label></li>
-                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" /> Radio #2</label></li>
-                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" /> Radio #3</label></li>
-                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" /> Radio #4</label></li>
-                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" /> Radio #5</label></li>
-                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" disabled="disabled" /> Disabled #6</label></li>
-                                                <li><label class="form-radio"><input type="radio" name="radio" data-group="radio-group-name" disabled="disabled" /> Disabled #7</label></li>
+                                                <li><input type="radio" name="radio" id="radio1" /><label for="radio1">Radio</label></li>
+                                                <li><input type="radio" name="radio" id="radio2" /><label for="radio2">Radio</label></li>
+                                                <li><input type="radio" name="radio" id="radio3" /><label for="radio3">Radio</label></li>
+                                                <li><input type="radio" name="radio" id="radio4" /><label for="radio4">Radio</label></li>
+                                                <li><input type="radio" name="radio" id="radio5" /><label for="radio5">Radio</label></li>
+                                                <li><input type="radio" name="radio" disabled="disabled" id="radio6" /><label for="radio6">Radio disabled</label></li>
+                                                <li><input type="radio" name="radio" disabled="disabled" id="radio7" /><label for="radio7">Radio disabled</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -304,8 +304,8 @@
                                     <div class="column-7 omega">
                                         <div class="column-6 form-input">
                                             <ul class="form-input-list list-inline">
-                                                <li><label class="form-radio"><input type="radio" name="radio2" data-group="radio-group-name" /> Yes</label></li>
-                                                <li><label class="form-radio"><input type="radio" name="radio2" data-group="radio-group-name" /> No</label></li>
+                                                <li><input type="radio" name="radio2" id="radio8" /><label for="radio8">Yes</label></li>
+                                                <li><input type="radio" name="radio2" id="radio9" /><label for="radio9">No</label></li>
                                             </ul>
                                         </div>
                                     </div>

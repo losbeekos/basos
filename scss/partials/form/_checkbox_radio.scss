@@ -1,99 +1,105 @@
-.form-checkbox,
-.form-radio {
-    position: relative;
-    cursor: pointer;
-    padding-left: 28px;
+input[type=checkbox],
+input[type=radio] {
+    position: absolute;
+    outline: none;
+    @include opacity(0);
 
-    @include user-select(none);
+    &[disabled] {
+        cursor: not-allowed;
 
-    input {
-        position: absolute;
-        outline: none;
-        @include opacity(0);
+        + label {
+            cursor: not-allowed;
 
-        .no-borderradius & {
-            background: transparent;
-            position: relative;
+            &:before {
+                @include opacity(0.5);
+            }
+        }
+    }
+
+    &:focus {
+        + label:before {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    &:checked {
+        + label:after {
             @include opacity(1);
         }
     }
 
     .no-borderradius & {
-        padding: 0;
+        background: transparent;
+        position: relative;
+        @include opacity(1);
     }
 
-    &.form-input-disabled {
-        cursor: not-allowed;
+    + label {
+        position: relative;
+        cursor: pointer;
+        padding-left: 28px;
 
-        &:before {
-            @include opacity(0.5);
-        }
-    }
-
-    &:before {
-        position: absolute;
-        left: 0;
-        top: -1px;
-        content: '';
-        background: #f1f1f1;
-        width: 20px;
-        height: 20px;
-        display: block;
-        border-radius: $base-border-radius;
-        border: 1px solid #cbcbcb;
+        @include user-select(none);
 
         .no-borderradius & {
-            display: none;
+            padding: 0;
         }
-    }
 
-    &:after {
-        content: $icon-form-checkbox;
-        position: absolute;
-        top: -1px;
-        left: 0;
-        width: 20px;
-        height: 20px;
-        line-height: 20px;
-        text-align: center;
-        color: $primary-color;
-        @extend %font-fontello;
-
-        @include opacity(0);
-        @include single-transition(all, 0.2s);
-
-        .no-borderradius & {
-            display: none;
-        }
-    }
-
-    &.form-input-focused {
         &:before {
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-        }
-    }
+            position: absolute;
+            left: 0;
+            top: -1px;
+            content: '';
+            background: #f1f1f1;
+            width: 20px;
+            height: 20px;
+            display: block;
+            border-radius: $base-border-radius;
+            border: 1px solid #cbcbcb;
 
-    &.form-input-checked {
+            .no-borderradius & {
+                display: none;
+            }
+        }
+
         &:after {
-            @include opacity(1);
+            content: $icon-form-checkbox;
+            position: absolute;
+            top: -1px;
+            left: 0;
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            color: $primary-color;
+            @extend %font-fontello;
+
+            @include opacity(0);
+            @include single-transition(all, 0.2s);
+
+            .no-borderradius & {
+                display: none;
+            }
         }
     }
 }
 
 /*==========  Radios  ==========*/
 
-.form-radio {
-    &:before {
-        border-radius: 20px;
-    }
+input[type=radio] {
+    + label {
+        &:before {
+            border-radius: 20px;
+        }
 
-    &:after {
-        background: $primary-color;
-        content: '';
-        top: 4px;
-        left: 5px;
-        width: 10px;
-        height: 10px;
-        border-radius: 10px;
+        &:after {
+            background: $primary-color;
+            content: '';
+            top: 4px;
+            left: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+        }
     }
 }

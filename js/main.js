@@ -94,7 +94,6 @@ Modernizr.load([
                         modules.tooltips.init();
                         modules.accordion.init();
                         modules.tabs.init();
-                        modules.checkRadio.init();
 
                         // App modules
                         //modules.nav.init();
@@ -541,55 +540,6 @@ Modernizr.load([
                 }
 
                 /*-----  End of Form validation  ------*/
-
-
-                /*=========================================
-                =            Checkbox & radios            =
-                =========================================*/
-
-                ,checkRadio: {
-                    el: $('.form-checkbox, .form-radio'),
-
-                    init: function () {
-                        var self = this;
-
-                        self.el.find('input')
-                            .each(function () {
-                                var $input = $(this),
-                                    $parent = $input.parent();
-
-                                $input.is(':checked') == true && $parent.addClass('form-input-checked');
-                                $input.is(':disabled') == true && $parent.addClass('form-input-disabled');
-                            })
-                            .on('focus', function () {
-                                $(this).parent().addClass('form-input-focused');
-                            })
-                            .on('blur', function () {
-                                $(this).parent().removeClass('form-input-focused');
-                            })
-                            .on('change', function (e) {
-                                var $input = $(this),
-                                    $parent = $input.parent();
-
-                                switch ($input.context.type) {
-                                    case 'checkbox':
-                                        $parent.toggleClass('form-input-checked');
-
-                                        break;
-                                    case 'radio':
-                                        $parent.parent().siblings().find('.form-input-checked').removeClass('form-input-checked');
-                                        $parent.addClass('form-input-checked');
-
-                                        break;
-                                }
-                            });
-                    }
-                }
-
-
-                /*-----  End of Checkbox & radios  ------*/
-
-
 
 
 
