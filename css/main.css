@@ -1485,27 +1485,28 @@ select::-ms-expand {
   }
 }
 
-/* line 14, ../scss/partials/form/_general.scss */
+/* line 15, ../scss/partials/form/_general.scss */
 .form-input,
-.form-select {
+.form-select,
+.form-switch {
   position: relative;
   margin-bottom: 0;
 }
 
-/* line 20, ../scss/partials/form/_general.scss */
+/* line 21, ../scss/partials/form/_general.scss */
 .form-input:after {
   position: absolute;
   right: 10px;
   top: 9px;
 }
 
-/* line 27, ../scss/partials/form/_general.scss */
+/* line 28, ../scss/partials/form/_general.scss */
 .form-select {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
 }
-/* line 30, ../scss/partials/form/_general.scss */
+/* line 31, ../scss/partials/form/_general.scss */
 .form-select:after {
   content: "";
   position: absolute;
@@ -1515,43 +1516,76 @@ select::-ms-expand {
   font-size: 16px;
   font-size: 1rem;
 }
-/* line 40, ../scss/partials/form/_general.scss */
+/* line 41, ../scss/partials/form/_general.scss */
 .lt-ie10 .form-select:after {
   display: none;
 }
 
+/* line 51, ../scss/partials/form/_general.scss */
+.form-switch input[type=checkbox]:checked + label:before {
+  background: #0659a4;
+}
+/* line 55, ../scss/partials/form/_general.scss */
+.form-switch input[type=checkbox]:checked + label:after {
+  left: 30px;
+}
+/* line 61, ../scss/partials/form/_general.scss */
+.form-switch input[type=checkbox] + label {
+  padding: 0;
+  color: rgba(0, 0, 0, 0);
+}
+/* line 65, ../scss/partials/form/_general.scss */
+.form-switch input[type=checkbox] + label:before {
+  border-radius: 20px;
+  width: 46px;
+}
+/* line 70, ../scss/partials/form/_general.scss */
+.form-switch input[type=checkbox] + label:after {
+  background: white;
+  content: '';
+  top: -1px;
+  left: -1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #cbcbcb;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
 @media (min-width: 650px) {
-  /* line 46, ../scss/partials/form/_general.scss */
+  /* line 87, ../scss/partials/form/_general.scss */
   .form-input-list {
     margin-top: 8px;
     margin-top: 0.5rem;
   }
 }
-/* line 52, ../scss/partials/form/_general.scss */
+/* line 93, ../scss/partials/form/_general.scss */
 .form-input-list li + li {
   margin-top: 5px;
   margin-top: 0.3125rem;
 }
 
-/* line 58, ../scss/partials/form/_general.scss */
+/* line 99, ../scss/partials/form/_general.scss */
 .form-data {
   line-height: 40px;
   line-height: 2.5rem;
 }
 
-/* line 62, ../scss/partials/form/_general.scss */
+/* line 103, ../scss/partials/form/_general.scss */
 .form-actions {
   margin-top: 20px;
   margin-top: 1.25rem;
 }
 @media (min-width: 650px) {
-  /* line 62, ../scss/partials/form/_general.scss */
+  /* line 103, ../scss/partials/form/_general.scss */
   .form-actions {
     margin-left: 42.05607%;
   }
 }
 
-/* line 70, ../scss/partials/form/_general.scss */
+/* line 111, ../scss/partials/form/_general.scss */
 .form-required-field {
   font-size: 14px;
   font-size: 0.875rem;
@@ -1613,7 +1647,7 @@ input[type=radio] + label {
 /* line 44, ../scss/partials/form/_checkbox_radio.scss */
 .no-borderradius input[type=checkbox] + label, .no-borderradius
 input[type=radio] + label {
-  padding: 0;
+  padding: 0 0 0 5px;
 }
 /* line 48, ../scss/partials/form/_checkbox_radio.scss */
 input[type=checkbox] + label:before,
@@ -1628,13 +1662,17 @@ input[type=radio] + label:before {
   display: block;
   border-radius: 3px;
   border: 1px solid #cbcbcb;
+  -webkit-transition: all 0.4s;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  transition: all 0.4s;
 }
-/* line 60, ../scss/partials/form/_checkbox_radio.scss */
+/* line 62, ../scss/partials/form/_checkbox_radio.scss */
 .no-borderradius input[type=checkbox] + label:before, .no-borderradius
 input[type=radio] + label:before {
   display: none;
 }
-/* line 65, ../scss/partials/form/_checkbox_radio.scss */
+/* line 67, ../scss/partials/form/_checkbox_radio.scss */
 input[type=checkbox] + label:after,
 input[type=radio] + label:after {
   content: "";
@@ -1653,18 +1691,18 @@ input[type=radio] + label:after {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 80, ../scss/partials/form/_checkbox_radio.scss */
+/* line 82, ../scss/partials/form/_checkbox_radio.scss */
 .no-borderradius input[type=checkbox] + label:after, .no-borderradius
 input[type=radio] + label:after {
   display: none;
 }
 
 /*==========  Radios  ==========*/
-/* line 91, ../scss/partials/form/_checkbox_radio.scss */
+/* line 93, ../scss/partials/form/_checkbox_radio.scss */
 input[type=radio] + label:before {
   border-radius: 20px;
 }
-/* line 95, ../scss/partials/form/_checkbox_radio.scss */
+/* line 97, ../scss/partials/form/_checkbox_radio.scss */
 input[type=radio] + label:after {
   background: #0659a4;
   content: '';

@@ -263,7 +263,7 @@
                                 </div>
                                 <div class="form-row clearfix">
                                     <div class="column-5 form-label">
-                                        <label>Some checkboxes *</label>
+                                        <label>Some checkboxes</label>
                                     </div>
                                     <div class="column-7 omega">
                                         <div class="column-6 form-input">
@@ -281,7 +281,7 @@
                                 </div>
                                 <div class="form-row clearfix">
                                     <div class="column-5 form-label">
-                                        <label>Some radio buttons *</label>
+                                        <label>Some radio buttons</label>
                                     </div>
                                     <div class="column-7 omega">
                                         <div class="column-6 form-input">
@@ -293,6 +293,42 @@
                                                 <li><input type="radio" name="radio" id="radio5" /><label for="radio5">Radio</label></li>
                                                 <li><input type="radio" name="radio" disabled="disabled" id="radio6" /><label for="radio6">Radio disabled</label></li>
                                                 <li><input type="radio" name="radio" disabled="disabled" id="radio7" /><label for="radio7">Radio disabled</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="column-5 form-label">
+                                        <label>Switch</label>
+                                    </div>
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-switch">
+                                            <ul class="form-input-list list-unstyled">
+                                                <li><input type="checkbox" id="switch1" /><label for="switch1">Switch</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="column-5 form-label">
+                                        <label>Switch</label>
+                                    </div>
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-switch">
+                                            <ul class="form-input-list list-unstyled">
+                                                <li><input type="checkbox" id="switch2" /><label for="switch2">Switch</label></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="column-5 form-label">
+                                        <label>Switch</label>
+                                    </div>
+                                    <div class="column-7 omega">
+                                        <div class="column-6 form-switch">
+                                            <ul class="form-input-list list-unstyled">
+                                                <li><input type="checkbox" id="switch3" /><label for="switch3">Switch</label></li>
                                             </ul>
                                         </div>
                                     </div>
