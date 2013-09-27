@@ -1534,18 +1534,24 @@ select::-ms-expand {
 }
 
 /* line 58, ../scss/partials/form/_general.scss */
+.form-data {
+  line-height: 40px;
+  line-height: 2.5rem;
+}
+
+/* line 62, ../scss/partials/form/_general.scss */
 .form-actions {
   margin-top: 20px;
   margin-top: 1.25rem;
 }
 @media (min-width: 650px) {
-  /* line 58, ../scss/partials/form/_general.scss */
+  /* line 62, ../scss/partials/form/_general.scss */
   .form-actions {
     margin-left: 42.05607%;
   }
 }
 
-/* line 66, ../scss/partials/form/_general.scss */
+/* line 70, ../scss/partials/form/_general.scss */
 .form-required-field {
   font-size: 14px;
   font-size: 0.875rem;

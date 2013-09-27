@@ -330,6 +330,24 @@
                                         </div>
                                     </div>
                                 </div>
+                                <div class="form-row clearfix">
+                                    <div class="column-5 form-label">
+                                        <label>Form data</label>
+                                    </div>
+                                    <div class="column-7 omega form-data">Some data</div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="column-5 form-label">
+                                        <label>Form data</label>
+                                    </div>
+                                    <div class="column-7 omega form-data">Some data</div>
+                                </div>
+                                <div class="form-row clearfix">
+                                    <div class="column-5 form-label">
+                                        <label>Form data</label>
+                                    </div>
+                                    <div class="column-7 omega form-data">Some data</div>
+                                </div>
                             </fieldset>
 
 

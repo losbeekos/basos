@@ -55,6 +55,10 @@
     }
 }
 
+.form-data {
+    @include rem(line-height, 40px);
+}
+
 .form-actions {
     @include rem(margin-top, 20px);
 
