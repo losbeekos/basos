@@ -1469,12 +1469,6 @@ select::-ms-expand {
   display: none;
 }
 
-/* line 114, ../scss/partials/_form.scss */
-input[type=radio][disabled]:hover,
-input[type=checkbox][disabled]:hover {
-  cursor: not-allowed;
-}
-
 /* line 1, ../scss/partials/form/_general.scss */
 .form-label {
   margin-bottom: 0;

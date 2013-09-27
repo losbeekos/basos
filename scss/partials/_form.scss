@@ -108,10 +108,3 @@ select:-moz-focusring {
 select::-ms-expand {
     display: none;
 }
-
-input[type=radio][disabled],
-input[type=checkbox][disabled] {
-    &:hover {
-        cursor: not-allowed;
-    }
-}
