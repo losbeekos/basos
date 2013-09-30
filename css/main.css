@@ -526,7 +526,7 @@ textarea {
 }
 /*==========  Unstyled list  ==========*/
 /* line 127, ../scss/dependencies/_helpers.scss */
-.list-unstyled, .list-inline, .button-group, .tabs, .parsley-error-list {
+.list-unstyled, .list-inline, .button-group, .tabs, .dropdown ul, .parsley-error-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1078,24 +1078,24 @@ h6, .h6 {
 }
 
 /* line 136, ../scss/partials/_buttons.scss */
-.button-group li {
+.button-group > li {
   margin: 0 0 0 -1px;
   float: left;
 }
 /* line 140, ../scss/partials/_buttons.scss */
-.button-group li .btn {
+.button-group > li .btn {
   border-radius: 0;
 }
 /* line 144, ../scss/partials/_buttons.scss */
-.button-group li:first-child {
+.button-group > li:first-child {
   margin: 0;
 }
 /* line 147, ../scss/partials/_buttons.scss */
-.button-group li:first-child .btn {
+.button-group > li:first-child .btn {
   border-radius: 2px 0 0 2px;
 }
 /* line 153, ../scss/partials/_buttons.scss */
-.button-group li:last-child .btn {
+.button-group > li:last-child .btn {
   border-radius: 0 2px 2px 0;
 }
 
@@ -1365,6 +1365,57 @@ p {
 /*===============================
 =            Teasers            =
 ===============================*/
+/*=================================
+=            Dropdowns            =
+=================================*/
+/* line 5, ../scss/partials/_dropdowns.scss */
+.dropdown {
+  position: relative;
+}
+/* line 9, ../scss/partials/_dropdowns.scss */
+.dropdown:hover .dropdown-content {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+  -webkit-transition: all 0.2s 0;
+  -moz-transition: all 0.2s 0;
+  -o-transition: all 0.2s 0;
+  transition: all 0.2s 0;
+}
+/* line 19, ../scss/partials/_dropdowns.scss */
+.dropdown li {
+  display: block;
+}
+
+/* line 24, ../scss/partials/_dropdowns.scss */
+.dropdown-content {
+  overflow: hidden;
+  position: absolute;
+  width: 12.5em;
+  top: 34px;
+  left: 0;
+  margin-top: -1px;
+  background-color: whitesmoke;
+  border: 1px solid #cfcfcf;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  -webkit-transition-delay: 0.3s;
+  -moz-transition: all 0.2s 0.3s;
+  -o-transition: all 0.2s 0.3s;
+  transition: all 0.2s 0.3s;
+}
+/* line 37, ../scss/partials/_dropdowns.scss */
+.dropdown-content a {
+  display: block;
+  border-top: 1px solid #e5e5e5;
+  padding: 10px 15px;
+  padding: 0.625rem 0.9375rem;
+}
+/* line 43, ../scss/partials/_dropdowns.scss */
+.dropdown-content a:hover {
+  background-color: #e5e5e5;
+}
+
 /*==========  Forms  ==========*/
 /*============================
 =            Form            =

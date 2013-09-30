@@ -746,6 +746,42 @@
                 <br/><br/>
 
                 <section>
+                    <h1>Dropdowns</h1>
+                    <ul class="button-group">
+                        <li>
+                            <div class="dropdown">
+                                <a class="btn btn-small">dropdown</a>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li><a href="#">Why not indeed</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="dropdown">
+                                <a class="btn btn-small">dropdown</a>
+                                <div class="dropdown-content">
+                                    <ul>
+                                        <li><a href="#">Why not indeed</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                        <li><a href="#">link</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <br/><br/>
+
+                <section>
                     <h1>Modals</h1>
                     <ul class="button-group">
                         <li><a class="btn btn-small modal-trigger" data-modal-id="modal-1">slip-top</a></li>

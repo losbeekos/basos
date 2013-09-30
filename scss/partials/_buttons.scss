@@ -133,7 +133,7 @@
     @extend .list-inline;
     @extend .clearfix;
 
-    li {
+    > li {
         margin: 0 0 0 -1px;
         float: left;
 
