@@ -1245,8 +1245,8 @@ p {
 .tab {
   position: relative;
   display: inline-block;
-  background: #eeeeee;
-  border: 1px solid transparent;
+  background: #e8e8e8;
+  border: 1px solid #cfcfcf;
   bottom: -1px;
   color: #555555;
   border-top-left-radius: 2px;
@@ -1266,19 +1266,18 @@ p {
 /* line 36, ../scss/partials/_tabs.scss */
 .tab.active {
   background: #ffffff;
-  border: 1px solid #eeeeee;
   border-bottom-color: #ffffff;
   color: #222222;
 }
 
-/* line 44, ../scss/partials/_tabs.scss */
+/* line 43, ../scss/partials/_tabs.scss */
 .tab-content {
-  border-top: 1px solid #eeeeee;
+  border-top: 1px solid #cfcfcf;
   padding: 20px;
   padding: 1.25rem;
 }
 
-/* line 50, ../scss/partials/_tabs.scss */
+/* line 49, ../scss/partials/_tabs.scss */
 .tab-item {
   overflow: hidden;
   height: 0;
@@ -1290,7 +1289,7 @@ p {
   -o-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
-/* line 58, ../scss/partials/_tabs.scss */
+/* line 57, ../scss/partials/_tabs.scss */
 .tab-item.active {
   height: auto;
   width: 100%;
@@ -1903,14 +1902,14 @@ input[type=radio] + label:after {
 /* line 26, ../scss/partials/_tooltips.scss */
 .tooltip:after {
   content: '';
-  border: 0.3125em solid transparent;
+  border: 5px solid transparent;
 }
 /* line 31, ../scss/partials/_tooltips.scss */
 .tooltip .tooltip-content {
   text-align: center;
   background: #0659a4;
   color: white;
-  width: 13.75em;
+  width: 220px;
   padding: 10px;
   border-radius: 2px;
   font-size: 0.75em;
@@ -1920,24 +1919,24 @@ input[type=radio] + label:after {
 [data-tooltip-position=top]:after,
 [data-tooltip-position=bottom]:after {
   left: 50%;
-  margin-left: -0.3125em;
+  margin-left: -5px;
 }
 /* line 49, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=top] .tooltip-content,
 [data-tooltip-position=bottom] .tooltip-content {
   left: 50%;
-  margin-left: -6.875em;
+  margin-left: -110px;
 }
 
 /* line 56, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=top]:after {
-  top: -0.625em;
+  top: -10px;
   border-top-color: #0659a4;
 }
 
 /* line 63, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=bottom]:after {
-  bottom: -0.625em;
+  bottom: -10px;
   border-bottom-color: #0659a4;
 }
 
@@ -1945,7 +1944,7 @@ input[type=radio] + label:after {
 [data-tooltip-position=left]:after,
 [data-tooltip-position=right]:after {
   top: 50%;
-  margin-top: -0.3125em;
+  margin-top: -5px;
 }
 /* line 76, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=left] .tooltip-content,
@@ -1955,22 +1954,22 @@ input[type=radio] + label:after {
 
 /* line 82, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=right]:after {
-  right: -0.625em;
+  right: -10px;
   border-right-color: #0659a4;
 }
 /* line 87, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=right] .tooltip-content {
-  right: -14.375em;
+  right: -230px;
 }
 
 /* line 93, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=left]:after {
-  left: -0.625em;
+  left: -10px;
   border-left-color: #0659a4;
 }
 /* line 98, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=left] .tooltip-content {
-  left: -14.375em;
+  left: -230px;
 }
 
 /*=================================

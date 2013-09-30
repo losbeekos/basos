@@ -348,7 +348,7 @@ Modernizr.load([
                     tooltipTrigger: null,
                     tooltipActiveClass: 'tooltip-active',
                     tooltipContentClass: 'tooltip-content',
-                    arrowWidth: 10,
+                    arrowWidth: 8,
 
                     init: function () {
                         var self = this;

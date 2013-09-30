@@ -17,8 +17,8 @@
 .tab {
     position: relative;
     display: inline-block;
-    background: #eeeeee;
-    border: 1px solid transparent;
+    background: $btn-default-bg-color;
+    border: 1px solid darken($btn-default-bg-color, 10%);
     bottom: -1px;
     color: lighten($text-color, 20%);
     border-top-left-radius: $base-border-radius;
@@ -35,14 +35,13 @@
 
     &.active {
         background: #ffffff;
-        border: 1px solid #eeeeee;
         border-bottom-color: #ffffff;
         color: $text-color;
     }
 }
 
 .tab-content {
-    border-top: 1px solid #eeeeee;
+    border-top: 1px solid darken($btn-default-bg-color, 10%);
 
     @include rem(padding, 20px);
 }
