@@ -734,27 +734,31 @@
 
                 <section>
                     <h1>Tooltips</h1>
-                    <a class="tooltip btn btn-small" data-tooltip-position="top" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a>
-                    <a class="tooltip btn btn-small" data-tooltip-position="right" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">right</a>
-                    <a class="tooltip btn btn-small" data-tooltip-position="bottom" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">bottom</a>
-                    <a class="tooltip btn btn-small" data-tooltip-position="left" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">left</a>
-                    <a class="tooltip btn btn-small" data-tooltip-position="top" data-tooltip-content="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness." data-tooltip-trigger="click">click trigger</a>
+                    <ul class="button-group">
+                        <li><a class="tooltip btn btn-small" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a></li>
+                        <li><a class="tooltip btn btn-small" data-tooltip-position="right" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">right</a></li>
+                        <li><a class="tooltip btn btn-small" data-tooltip-position="bottom" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">bottom</a></li>
+                        <li><a class="tooltip btn btn-small" data-tooltip-position="left" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">left</a></li>
+                        <li><a class="tooltip btn btn-small" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness." data-tooltip-trigger="click">click trigger</a></li>
+                    </ul>
                 </section>
 
                 <br/><br/>
 
                 <section>
                     <h1>Modals</h1>
-                    <a class="btn btn-small modal-trigger" data-modal-id="modal-1">slip-top</a>
-                    <a class="btn btn-small modal-trigger" data-modal-id="modal-2">slip-bottom</a>
-                    <a class="btn btn-small modal-trigger" data-modal-id="modal-3">slide-top</a>
-                    <a class="btn btn-small modal-trigger" data-modal-id="modal-4">slide-right</a>
-                    <a class="btn btn-small modal-trigger" data-modal-id="modal-5">slide-bottom</a>
-                    <a class="btn btn-small modal-trigger" data-modal-id="modal-6">slide-left</a>
-                    <a class="btn btn-small modal-trigger" data-modal-id="modal-7">flip-horizontal</a>
-                    <a class="btn btn-small modal-trigger" data-modal-id="modal-8">flip-vertical</a>
-                    <a class="btn btn-small modal-trigger" data-modal-id="modal-9">fadescale</a>
-                    <a class="btn btn-small modal-trigger" data-modal-id="modal-10">superscaled</a>
+                    <ul class="button-group">
+                        <li><a class="btn btn-small modal-trigger" data-modal-id="modal-1">slip-top</a></li>
+                        <li><a class="btn btn-small modal-trigger" data-modal-id="modal-2">slip-bottom</a></li>
+                        <li><a class="btn btn-small modal-trigger" data-modal-id="modal-3">slide-top</a></li>
+                        <li><a class="btn btn-small modal-trigger" data-modal-id="modal-4">slide-right</a></li>
+                        <li><a class="btn btn-small modal-trigger" data-modal-id="modal-5">slide-bottom</a></li>
+                        <li><a class="btn btn-small modal-trigger" data-modal-id="modal-6">slide-left</a></li>
+                        <li><a class="btn btn-small modal-trigger" data-modal-id="modal-7">flip-horizontal</a></li>
+                        <li><a class="btn btn-small modal-trigger" data-modal-id="modal-8">flip-vertical</a></li>
+                        <li><a class="btn btn-small modal-trigger" data-modal-id="modal-9">fadescale</a></li>
+                        <li><a class="btn btn-small modal-trigger" data-modal-id="modal-10">superscaled</a></li>
+                    </ul>
                 </section>
 
                 <br/><br/>

@@ -372,7 +372,10 @@ Modernizr.load([
                     appendContent: function ($tooltipTrigger) {
                         var self = this;
 
-                        $tooltipTrigger.append('<div class="' + self.tooltipContentClass + '">' + $tooltipTrigger.data('tooltipContent') + '</div>');
+                        $tooltipTrigger
+                            .append('<div class="' + self.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
+                            .removeAttr('title');
+
                         self.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip-content'));
                     },
 
