@@ -7,6 +7,8 @@
 
     &:hover {
         .dropdown-content {
+            visibility: visible;
+
             @include opacity(1);
             @include single-transition(all, 0.2s, 0);
         }
@@ -28,6 +30,7 @@
     top: 34px;
     left: 0;
     margin-top: -1px;
+    visibility: hidden;
     background-color: lighten($btn-default-bg-color, 5%);
     border: 1px solid darken($btn-default-bg-color, 10%);
 
