@@ -1370,13 +1370,13 @@ p {
 /*============================
 =            Form            =
 ============================*/
-/* line 5, ../scss/partials/_form.scss */
+/* line 5, ../scss/partials/form/_form.scss */
 form {
   margin: 0 0 40px 0;
   margin: 0 0 2.5rem 0;
 }
 
-/* line 9, ../scss/partials/_form.scss */
+/* line 9, ../scss/partials/form/_form.scss */
 legend {
   display: block;
   width: 100%;
@@ -1391,7 +1391,7 @@ legend {
   line-height: 2rem;
 }
 
-/* line 38, ../scss/partials/_form.scss */
+/* line 38, ../scss/partials/form/_form.scss */
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -1425,7 +1425,7 @@ textarea {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 51, ../scss/partials/_form.scss */
+/* line 51, ../scss/partials/form/_form.scss */
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="date"]:focus,
@@ -1443,7 +1443,7 @@ textarea:focus {
   border: 1px solid #cccccc;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 56, ../scss/partials/_form.scss */
+/* line 56, ../scss/partials/form/_form.scss */
 input[type="text"]:disabled,
 input[type="password"]:disabled,
 input[type="date"]:disabled,
@@ -1462,13 +1462,13 @@ textarea:disabled {
   cursor: not-allowed;
 }
 
-/* line 62, ../scss/partials/_form.scss */
+/* line 62, ../scss/partials/form/_form.scss */
 textarea {
   height: 160px;
   height: 10rem;
 }
 
-/* line 66, ../scss/partials/_form.scss */
+/* line 66, ../scss/partials/form/_form.scss */
 select {
   background: transparent;
   background-image: none;
@@ -1492,29 +1492,29 @@ select {
   -moz-appearance: none;
   appearance: none;
 }
-/* line 87, ../scss/partials/_form.scss */
+/* line 87, ../scss/partials/form/_form.scss */
 select[multiple=multiple] {
   height: auto;
 }
-/* line 92, ../scss/partials/_form.scss */
+/* line 92, ../scss/partials/form/_form.scss */
 select:focus, select:hover {
   border-color: #cccccc;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 97, ../scss/partials/_form.scss */
+/* line 97, ../scss/partials/form/_form.scss */
 select option[disabled] {
   color: #94adc4;
   text-shadow: none;
   border: none;
 }
 
-/* line 104, ../scss/partials/_form.scss */
+/* line 104, ../scss/partials/form/_form.scss */
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #888888;
 }
 
-/* line 109, ../scss/partials/_form.scss */
+/* line 109, ../scss/partials/form/_form.scss */
 select::-ms-expand {
   display: none;
 }
