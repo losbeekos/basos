@@ -526,7 +526,7 @@ textarea {
 }
 /*==========  Unstyled list  ==========*/
 /* line 127, ../scss/dependencies/_helpers.scss */
-.list-unstyled, .list-inline, .tabs, .parsley-error-list {
+.list-unstyled, .list-inline, .button-group, .tabs, .parsley-error-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -534,7 +534,7 @@ textarea {
 
 /*==========  Inline list  ==========*/
 /* line 138, ../scss/dependencies/_helpers.scss */
-.list-inline li, .tabs li {
+.list-inline li, .button-group li, .tabs li {
   display: inline;
   margin-right: pxtoem(10);
 }
@@ -542,12 +542,12 @@ textarea {
 /*==========  Image replacement  ==========*/
 /*==========  Clearfix  ==========*/
 /* line 161, ../scss/dependencies/_helpers.scss */
-.clearfix:before, .clearfix:after {
+.clearfix:before, .button-group:before, .clearfix:after, .button-group:after {
   content: '';
   display: table;
 }
 /* line 166, ../scss/dependencies/_helpers.scss */
-.clearfix:after {
+.clearfix:after, .button-group:after {
   clear: both;
 }
 
@@ -893,14 +893,14 @@ h6, .h6 {
 /* line 11, ../scss/partials/_buttons.scss */
 .btn {
   display: inline-block;
-  color: white;
+  color: #222222;
   border-radius: 2px;
-  background-color: #222222;
-  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+  background-color: #e8e8e8;
   border: 0;
   outline: 0;
   cursor: pointer;
   text-align: center;
+  border: 1px solid #cfcfcf;
   line-height: 16px;
   line-height: 1rem;
   -webkit-transition: all 0.2s;
@@ -916,13 +916,13 @@ h6, .h6 {
 }
 /* line 31, ../scss/partials/_buttons.scss */
 .btn:hover {
-  color: white;
-  background-color: #2f2f2f;
+  color: #222222;
+  background-color: #dbdbdb;
 }
 /* line 36, ../scss/partials/_buttons.scss */
 .btn:focus {
   outline: none;
-  box-shadow: 0 0 10px #222222;
+  box-shadow: 0 0 10px #c2c2c2;
   -webkit-transition-duration: 0.05s;
   -moz-transition-duration: 0.05s;
   -o-transition-duration: 0.05s;
@@ -930,7 +930,7 @@ h6, .h6 {
 }
 /* line 42, ../scss/partials/_buttons.scss */
 .btn:disabled {
-  background-color: #222222;
+  background-color: #e8e8e8;
   cursor: not-allowed;
   color: #cccccc;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
@@ -941,87 +941,107 @@ h6, .h6 {
   box-shadow: none;
 }
 
-/* line 54, ../scss/partials/_buttons.scss */
+/* line 57, ../scss/partials/_buttons.scss */
+.btn-primary,
+.btn-secondary,
+.btn-tertiary,
+.btn-quadiary {
+  color: white;
+  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+}
+/* line 61, ../scss/partials/_buttons.scss */
+.btn-primary:hover,
+.btn-secondary:hover,
+.btn-tertiary:hover,
+.btn-quadiary:hover {
+  color: white;
+}
+
+/* line 66, ../scss/partials/_buttons.scss */
 .btn-primary {
   background-color: #0659a4;
+  border: 1px solid #05447d;
 }
-/* line 57, ../scss/partials/_buttons.scss */
+/* line 70, ../scss/partials/_buttons.scss */
 .btn-primary:hover {
-  background-color: #0766bd;
+  background-color: #054c8b;
 }
-/* line 58, ../scss/partials/_buttons.scss */
+/* line 71, ../scss/partials/_buttons.scss */
 .btn-primary:focus {
   box-shadow: 0 0 10px #0659a4;
 }
-/* line 59, ../scss/partials/_buttons.scss */
+/* line 72, ../scss/partials/_buttons.scss */
 .btn-primary:disabled {
   background-color: #0659a4;
 }
 
-/* line 62, ../scss/partials/_buttons.scss */
+/* line 75, ../scss/partials/_buttons.scss */
 .btn-secondary {
   background-color: #177f12;
+  border: 1px solid #115b0d;
 }
-/* line 65, ../scss/partials/_buttons.scss */
+/* line 79, ../scss/partials/_buttons.scss */
 .btn-secondary:hover {
-  background-color: #1b9515;
+  background-color: #13690f;
 }
-/* line 66, ../scss/partials/_buttons.scss */
+/* line 80, ../scss/partials/_buttons.scss */
 .btn-secondary:focus {
   box-shadow: 0 0 10px #177f12;
 }
-/* line 67, ../scss/partials/_buttons.scss */
+/* line 81, ../scss/partials/_buttons.scss */
 .btn-secondary:disabled {
   background-color: #177f12;
 }
 
-/* line 70, ../scss/partials/_buttons.scss */
+/* line 84, ../scss/partials/_buttons.scss */
 .btn-tertiary {
   background-color: #a40606;
+  border: 1px solid #7d0505;
 }
-/* line 73, ../scss/partials/_buttons.scss */
+/* line 88, ../scss/partials/_buttons.scss */
 .btn-tertiary:hover {
-  background-color: #bd0707;
+  background-color: #8b0505;
 }
-/* line 74, ../scss/partials/_buttons.scss */
+/* line 89, ../scss/partials/_buttons.scss */
 .btn-tertiary:focus {
   box-shadow: 0 0 10px #a40606;
 }
-/* line 75, ../scss/partials/_buttons.scss */
+/* line 90, ../scss/partials/_buttons.scss */
 .btn-tertiary:disabled {
   background-color: #a40606;
 }
 
-/* line 78, ../scss/partials/_buttons.scss */
+/* line 93, ../scss/partials/_buttons.scss */
 .btn-quadiary {
   background-color: #069ea4;
+  border: 1px solid #05787d;
 }
-/* line 81, ../scss/partials/_buttons.scss */
+/* line 97, ../scss/partials/_buttons.scss */
 .btn-quadiary:hover {
-  background-color: #07b6bd;
+  background-color: #05868b;
 }
-/* line 82, ../scss/partials/_buttons.scss */
+/* line 98, ../scss/partials/_buttons.scss */
 .btn-quadiary:focus {
   box-shadow: 0 0 10px #069ea4;
 }
-/* line 83, ../scss/partials/_buttons.scss */
+/* line 99, ../scss/partials/_buttons.scss */
 .btn-quadiary:disabled {
   background-color: #069ea4;
 }
 
-/* line 86, ../scss/partials/_buttons.scss */
+/* line 102, ../scss/partials/_buttons.scss */
 .btn-small {
   padding: 8px 30px;
   padding: 0.5rem 1.875rem;
 }
 
-/* line 90, ../scss/partials/_buttons.scss */
+/* line 106, ../scss/partials/_buttons.scss */
 .btn-medium {
   padding: 12px 35px;
   padding: 0.75rem 2.1875rem;
 }
 @media (min-width: 650px) {
-  /* line 90, ../scss/partials/_buttons.scss */
+  /* line 106, ../scss/partials/_buttons.scss */
   .btn-medium {
     padding: 14px 35px;
     padding: 0.875rem 2.1875rem;
@@ -1030,13 +1050,13 @@ h6, .h6 {
   }
 }
 
-/* line 99, ../scss/partials/_buttons.scss */
+/* line 115, ../scss/partials/_buttons.scss */
 .btn-large {
   padding: 15px 40px;
   padding: 0.9375rem 2.5rem;
 }
 @media (min-width: 650px) {
-  /* line 99, ../scss/partials/_buttons.scss */
+  /* line 115, ../scss/partials/_buttons.scss */
   .btn-large {
     padding: 18px 50px;
     padding: 1.125rem 3.125rem;
@@ -1045,9 +1065,31 @@ h6, .h6 {
   }
 }
 
-/* line 108, ../scss/partials/_buttons.scss */
+/* line 124, ../scss/partials/_buttons.scss */
 .btn-block {
   display: block;
+}
+
+/* line 132, ../scss/partials/_buttons.scss */
+.button-group li {
+  margin: 0 0 0 -1px;
+  float: left;
+}
+/* line 136, ../scss/partials/_buttons.scss */
+.button-group li .btn {
+  border-radius: 0;
+}
+/* line 140, ../scss/partials/_buttons.scss */
+.button-group li:first-child {
+  margin: 0;
+}
+/* line 143, ../scss/partials/_buttons.scss */
+.button-group li:first-child .btn {
+  border-radius: 2px 0 0 2px;
+}
+/* line 149, ../scss/partials/_buttons.scss */
+.button-group li:last-child .btn {
+  border-radius: 0 2px 2px 0;
 }
 
 /*==============================

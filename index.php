@@ -132,6 +132,14 @@
                             <a class="btn btn-block btn-primary btn-large" href="#">block button</a>
                         </div>
                     </div>
+
+                    <h2>Button group</h2>
+                    <ul class="button-group">
+                        <li><a class="btn btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-medium" href="#">button</a></li>
+                    </ul>
                 </section>
 
                 <br/><br/>
