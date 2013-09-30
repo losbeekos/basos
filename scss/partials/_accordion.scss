@@ -2,11 +2,21 @@
 =            Accordion            =
 =================================*/
 
-.accordion-group {
-    overflow: hidden;
+.accordion {
     border: 1px solid $accordion-border-color;
     border-radius: $accordion-border-radius;
+    overflow: hidden;
+}
+
+.accordion-group {
+    overflow: hidden;
     margin-bottom: $accordion-group-margin-bottom;
+
+    &:first-child {
+        .accordion-trigger {
+            border-top: 0;
+        }
+    }
 }
 
 .accordion-trigger {
@@ -14,13 +24,14 @@
     background-color: $accordion-trigger-bg-color;
     color: $accordion-trigger-font-color;
     padding: $accordion-padding;
+    border-top: 1px solid $accordion-border-color;
 
     @if $accordion-gradient {
         @include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));
     }
 
     &:hover {
-        background-color: lighten($accordion-trigger-bg-color, 5%);
+        background-color: darken($accordion-trigger-bg-color, 5%);
         color: darken($accordion-trigger-font-color, 5%);
     }
 }
@@ -28,7 +39,7 @@
 .accordion-content {
     overflow: hidden;
     padding: 0 $accordion-padding;
-    border-top: 1px solid transparent;
+    border-top: 1px solid $accordion-trigger-bg-color;
     @include single-transition(all, $accordion-transition-speed);
 
     .lt-ie9 & {
@@ -40,7 +51,7 @@
     }
 
     &.accordion-show {
-        border-top-color: $accordion-border-color;
+        border-top: 1px solid $accordion-border-color;
 
         &.accordion-force-maxheight {
             max-height: 1000px !important;

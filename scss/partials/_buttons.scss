@@ -61,6 +61,10 @@
     &:hover {
         color: $white;
     }
+
+    &:disabled {
+        color: darken($white, 20%);
+    }
 }
 
 .btn-primary {

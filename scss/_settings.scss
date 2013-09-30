@@ -95,12 +95,12 @@ $modal-content-border-radius : $base-border-radius;
 /*==========  Accordion  ==========*/
 $accordion-transition-speed    : $base-transition-speed;
 $accordion-padding             : $base-padding;
-$accordion-border-color        : #f3f3f3;
+$accordion-border-color        : darken($btn-default-bg-color, 10%);
 $accordion-gradient            : $gradient;
 $accordion-border-radius       : $base-border-radius;
 $accordion-group-margin-bottom : 0;
-$accordion-trigger-bg-color    : $primary-color;
-$accordion-trigger-font-color  : $white;
+$accordion-trigger-bg-color    : $btn-default-bg-color;
+$accordion-trigger-font-color  : $text-color;
 
 
 /*==========  Pagination  ==========*/
