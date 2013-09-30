@@ -46,7 +46,7 @@ $input-selectors: '
     @include rem(padding, 10px);
     @include appearance(none);
     @include user-select(none);
-    @include single-transition(all, 0.2s);
+    @include single-transition(all, $base-transition-speed);
 
     &:focus {
         border: 1px solid #cccccc;
@@ -64,9 +64,10 @@ textarea {
 }
 
 select {
+    background: transparent;
+    background-image: none;
     display: block;
     width: 100%;
-    height: 40px;
     border-radius: $base-border-radius;
     outline: none;
     color: #888888;
@@ -76,11 +77,11 @@ select {
     // This is so hacky.. (for Firefox)
     // Removes the default select arrow.
     text-overflow: '';
-    text-indent: 0.01px;
+    text-indent: 5px;
     // End of brutal hack
 
-    @include rem(padding, 10px);
-    @include single-transition(box-shadow, 0.2s);
+    @include rem(padding, 10px 10px 10px 5px);
+    @include single-transition(box-shadow, $base-transition-speed);
     @include appearance(none);
 
     &[multiple=multiple] {

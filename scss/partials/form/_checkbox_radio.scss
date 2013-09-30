@@ -57,7 +57,7 @@ input[type=radio] {
             border-radius: $base-border-radius;
             border: 1px solid #cbcbcb;
 
-            @include single-transition(all, 0.4s);
+            @include single-transition(all, $base-transition-speed*2);
 
             .no-borderradius & {
                 display: none;
@@ -77,7 +77,7 @@ input[type=radio] {
             @extend %font-fontello;
 
             @include opacity(0);
-            @include single-transition(all, 0.2s);
+            @include single-transition(all, $base-transition-speed);
 
             .no-borderradius & {
                 display: none;

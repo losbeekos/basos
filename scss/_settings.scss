@@ -12,10 +12,14 @@ $legacy-support-for-mozilla : false;
 
 /*==========  Project  ==========*/
 $gradient                  : false;
+$ten                       : 0.625em;
 $base-font-size            : 16px;
-$base-border-radius        : 3px;
+$base-padding              : 10px;
+$base-border-radius        : 2px;
+$base-transition-speed     : 0.2s;
 $text-color                : #222222;
 $white                     : #ffffff;
+$black                     : #000000;
 $primary-color             : #0659a4;
 $primary-header-text-color : #94adc4;
 $placeholder-color         : #94adc4;
@@ -23,24 +27,22 @@ $selection-color           : #d1e4fe;
 
 
 /*==========  Container  ==========*/
-$container-min-width              : 320px;
-$container-max-width              : 1280px;
+$container-min-width              : $ten*32; // 320px
+$container-max-width              : $ten*128; // 1280px
 $container-margin                 : 0 auto;
-$container-padding                : 0 0.625em; // 10px (mobile first)
-$container-medium-padding         : 0 1.25em;  // 20px
-$container-large-and-up-padding   : 0 2.5em;   // 40px
+$container-padding                : $ten; // 10px (mobile first)
+$container-medium-padding         : $ten*2; // 20px
+$container-large-and-up-padding   : $ten*4; // 40px
 
 
 /*==========  Susy grid  ==========*/
 $total-columns : 12;      // a 12-column grid
 $column-width  : 10em;    // width is controlled with container max-width setting, so a high value is set here.
-$gutter-width  : 1.250em; // 20px gutters between columns
+$gutter-width  : $ten*2;  // 20px gutters between columns
 $grid-padding  : 0;       // 0 grid padding
 
 
-/*==========  Button colors  ==========*/
-// If you need more customization,
-// dive into the buttons partial.
+/*==========  Buttons  ==========*/
 $btn-gradient           : $gradient;
 $btn-border-radius      : $base-border-radius;
 $btn-default-bg-color   : #222222;
@@ -63,8 +65,8 @@ $icon-form-select             : '';
 
 
 /*==========  Tables  ==========*/
-$table-margin-bottom  : 30px;
-$table-padding        : 0.625em; // 10px
+$table-margin-bottom  : $ten*3; // 30px
+$table-padding        : $base-padding;
 $table-border-color   : #dddddd;
 $table-border-radius  : $base-border-radius;
 $table-zebra-bg-color : #f8f8f8;
@@ -72,13 +74,13 @@ $table-hover-bg-color : #f6f6f6;
 
 
 /*==========  Tooltips  ==========*/
-$tooltip-width                  : 220px;
-$tooltip-arrow-width            : 5px;
-$tooltip-transition-speed       : 0.2s;
+$tooltip-width                  : $ten*22; // 220px
+$tooltip-arrow-width            : $ten/2; // 5px
+$tooltip-transition-speed       : $base-transition-speed;
 $tooltip-bg-color               : $primary-color;
-$tooltip-padding                : 0.625em; // 10px
+$tooltip-padding                : $base-padding;
 $tooltip-border-radius          : $base-border-radius;
-$tooltip-font-size              : 0.750em; // 12px
+$tooltip-font-size              : $ten*1.2; // 12px
 $tooltip-font-color             : #ffffff;
 
 
@@ -86,13 +88,13 @@ $tooltip-font-color             : #ffffff;
 $modal-overlay-bg-color      : #000000;
 $modal-overlay-opacity       : 0.4;
 $modal-content-bg-color      : #ffffff;
-$modal-content-padding       : 2.500em; // 40px
+$modal-content-padding       : $ten*4; // 40px
 $modal-content-border-radius : $base-border-radius;
 
 
 /*==========  Accordion  ==========*/
-$accordion-transition-speed    : 0.3s;
-$accordion-padding             : 0.625em; // 10px
+$accordion-transition-speed    : $base-transition-speed;
+$accordion-padding             : $base-padding;
 $accordion-border-color        : #f3f3f3;
 $accordion-gradient            : $gradient;
 $accordion-border-radius       : $base-border-radius;
@@ -105,17 +107,17 @@ $accordion-trigger-font-color  : $white;
 $pagination-gradient         : $gradient;
 $pagination-align            : center;
 $pagination-font-color       : $white;
-$pagination-padding          : 10px 15px;
+$pagination-padding          : $base-padding $base-padding*1.8;
 $pagination-border-radius    : $base-border-radius;
-$pagination-margin-bottom    : 30px;
+$pagination-margin-bottom    : $ten*3; // 30px
 $pagination-bg-color         : $primary-color;
-$pagination-transition-speed : 0.2s;
+$pagination-transition-speed : $base-transition-speed;
 
 
 /*==========  Breadcrumbs  ==========*/
 $breadcrumbs-bg-color      : #f5f5f5;
-$breadcrumbs-padding       : 0.938em 1.250em; // 15px 20px
-$breadcrumbs-margin        : 0.625em; // 10px
+$breadcrumbs-padding       : $ten*1.5 $ten*2; // 15px 20px
+$breadcrumbs-margin        : $ten; // 10px
 $breadcrumbs-divider-color : #cccccc;
 $breadcrumbs-current-color : #aaaaaa;
 

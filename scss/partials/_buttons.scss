@@ -19,9 +19,8 @@
     cursor: pointer;
     text-align: center;
 
-    @extend .no-webkit-flicker;
     @include rem(line-height, 16px);
-    @include single-transition(all, 0.2s);
+    @include single-transition(all, $base-transition-speed);
     @include appearance(none);
     @include user-select(none);
 

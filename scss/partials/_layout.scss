@@ -11,7 +11,7 @@
 
 body {
     font-family: arial, verdana, sans-serif;
-    color: #333333;
+    color: $text-color;
 }
 
 a {
@@ -20,15 +20,15 @@ a {
     display: inline;
     cursor: pointer;
 
-    @include single-transition(all, 0.2s);
+    @include single-transition(all, $base-transition-speed);
 
     &:hover {
-        color: #333333;
+        color: $text-color;
     }
 
     &:after,
     &:before {
-        @include single-transition(all, 0.2s);
+        @include single-transition(all, $base-transition-speed);
     }
 }
 
@@ -47,14 +47,14 @@ p {
 .container {
     max-width: $container-max-width;
     min-width: $container-min-width;
-    padding: $container-padding;
+    padding: 0 $container-padding;
     margin: $container-margin;
 
     @include breakpoint(medium) {
-        padding: $container-medium-padding;
+        padding: 0 $container-medium-padding;
     }
 
     @include breakpoint(large-and-up) {
-        padding: $container-large-and-up-padding;
+        padding: 0 $container-large-and-up-padding;
     }
 }

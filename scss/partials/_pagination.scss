@@ -3,6 +3,7 @@
 ==================================*/
 
 .pagination {
+    margin-bottom: $pagination-margin-bottom;
     text-align: $pagination-align;
 
     a {
@@ -10,7 +11,6 @@
         color: $pagination-font-color;
         padding: $pagination-padding;
         border-radius: $pagination-border-radius;
-        margin-bottom: $pagination-margin-bottom;
         background-color: $pagination-bg-color;
 
         @include user-select(none);
