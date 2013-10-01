@@ -1043,51 +1043,9 @@
         </div>
         <div id="modal-10" class="modal" data-modal-effect="superscale">
             <div class="modal-content">
-                <form class="form-validate form-no-margin" novalidate="novalidate">
-
-                    <fieldset>
-                        <legend>Persoonlijke gegevens</legend>
-                        <div class="form-row clearfix">
-                            <div class="column-5 form-label">
-                                <label>Aanhef</label>
-                            </div>
-                            <div class="column-7 omega">
-                                <div class="column-10 form-select">
-                                    <select name="" id="">
-                                        <option value="" disabled="disabled" selected="selected">Kies een optie</option>
-                                        <option value="">Dhr.</option>
-                                        <option value="">Mevr.</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row clearfix">
-                            <div class="column-5 form-label">
-                                <label>Naam *</label>
-                            </div>
-                            <div class="column-7 omega">
-                                <div class="column-10 form-input">
-                                    <input type="text" placeholder="" />
-                                </div>
-                            </div>
-                        </div>
-                        <div class="form-row clearfix">
-                            <div class="column-5 form-label">
-                                <label>Adres</label>
-                            </div>
-                            <div class="column-7 omega">
-                                <div class="column-10 form-input">
-                                    <input type="text" placeholder="" />
-                                </div>
-                            </div>
-                        </div>
-                    </fieldset>
-
-                    <div class="form-actions">
-                        <p class="form-required-field"><i>* = Verplicht veld</i></p>
-                        <input class="btn btn-primary btn-medium" type="submit" value="verzenden" />
-                    </div>
-                </form>
+                <h2>Dit is een titel 2</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
             </div>
         </div>
 

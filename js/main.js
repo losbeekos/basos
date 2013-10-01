@@ -85,7 +85,7 @@ Modernizr.load([
                 init: function(){
 
                     $(function(){
-                        // Default modules
+                        // Default mzodules
                         //modules.fancybox.init();
                         modules.fastClick.init();
                         modules.fitVids.init();
