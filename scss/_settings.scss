@@ -81,13 +81,13 @@ $tooltip-bg-color               : $primary-color;
 $tooltip-padding                : $base-padding;
 $tooltip-border-radius          : $base-border-radius;
 $tooltip-font-size              : $ten*1.2; // 12px
-$tooltip-font-color             : #ffffff;
+$tooltip-font-color             : $white;
 
 
 /*==========  Modals  ==========*/
-$modal-overlay-bg-color      : #000000;
-$modal-overlay-opacity       : 0.4;
-$modal-content-bg-color      : #ffffff;
+$modal-overlay-bg-color      : $black;
+$modal-overlay-opacity       : 0.6;
+$modal-content-bg-color      : $white;
 $modal-content-padding       : $ten*4; // 40px
 $modal-content-border-radius : $base-border-radius;
 

@@ -1949,8 +1949,13 @@ input[type=radio] + label:after {
 .tooltip {
   display: inline-block;
   position: relative;
+  cursor: help;
 }
 /* line 10, ../scss/partials/_tooltips.scss */
+.tooltip[data-tooltip-trigger=click] {
+  cursor: pointer;
+}
+/* line 15, ../scss/partials/_tooltips.scss */
 .tooltip .tooltip-content, .tooltip:after {
   visibility: hidden;
   position: absolute;
@@ -1962,18 +1967,18 @@ input[type=radio] + label:after {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 20, ../scss/partials/_tooltips.scss */
+/* line 25, ../scss/partials/_tooltips.scss */
 .tooltip.tooltip-active .tooltip-content, .tooltip.tooltip-active:after {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 26, ../scss/partials/_tooltips.scss */
+/* line 31, ../scss/partials/_tooltips.scss */
 .tooltip:after {
   content: '';
   border: 5px solid transparent;
 }
-/* line 31, ../scss/partials/_tooltips.scss */
+/* line 36, ../scss/partials/_tooltips.scss */
 .tooltip .tooltip-content {
   text-align: center;
   background: #0659a4;
@@ -1984,59 +1989,59 @@ input[type=radio] + label:after {
   font-size: 0.75em;
 }
 
-/* line 44, ../scss/partials/_tooltips.scss */
+/* line 49, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=top]:after,
 [data-tooltip-position=bottom]:after {
   left: 50%;
   margin-left: -5px;
 }
-/* line 49, ../scss/partials/_tooltips.scss */
+/* line 54, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=top] .tooltip-content,
 [data-tooltip-position=bottom] .tooltip-content {
   left: 50%;
   margin-left: -110px;
 }
 
-/* line 56, ../scss/partials/_tooltips.scss */
+/* line 61, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=top]:after {
   top: -10px;
   border-top-color: #0659a4;
 }
 
-/* line 63, ../scss/partials/_tooltips.scss */
+/* line 68, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=bottom]:after {
   bottom: -10px;
   border-bottom-color: #0659a4;
 }
 
-/* line 71, ../scss/partials/_tooltips.scss */
+/* line 76, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=left]:after,
 [data-tooltip-position=right]:after {
   top: 50%;
   margin-top: -5px;
 }
-/* line 76, ../scss/partials/_tooltips.scss */
+/* line 81, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=left] .tooltip-content,
 [data-tooltip-position=right] .tooltip-content {
   top: 50%;
 }
 
-/* line 82, ../scss/partials/_tooltips.scss */
+/* line 87, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=right]:after {
   right: -10px;
   border-right-color: #0659a4;
 }
-/* line 87, ../scss/partials/_tooltips.scss */
+/* line 92, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=right] .tooltip-content {
   right: -230px;
 }
 
-/* line 93, ../scss/partials/_tooltips.scss */
+/* line 98, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=left]:after {
   left: -10px;
   border-left-color: #0659a4;
 }
-/* line 98, ../scss/partials/_tooltips.scss */
+/* line 103, ../scss/partials/_tooltips.scss */
 [data-tooltip-position=left] .tooltip-content {
   left: -230px;
 }
@@ -2237,8 +2242,8 @@ input[type=radio] + label:after {
 /* line 52, ../scss/partials/modals/_modals.scss */
 .modal-show .modal-overlay {
   visibility: visible;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
-  opacity: 0.4;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
+  opacity: 0.6;
   -webkit-transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;

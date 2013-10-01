@@ -5,6 +5,11 @@
 .tooltip {
     display: inline-block;
     position: relative;
+    cursor: help;
+
+    &[data-tooltip-trigger=click] {
+        cursor: pointer;
+    }
 
     .tooltip-content,
     &:after {
