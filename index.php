@@ -133,12 +133,37 @@
                         </div>
                     </div>
 
-                    <h2>Button group</h2>
+                    <h2>Button groups</h2>
+                    <p>These work with the button classes so you can use those to change color and size.</p>
                     <ul class="button-group">
                         <li><a class="btn btn-medium" href="#">button</a></li>
                         <li><a class="btn btn-medium" href="#">button</a></li>
                         <li><a class="btn btn-medium" href="#">button</a></li>
                         <li><a class="btn btn-medium" href="#">button</a></li>
+                    </ul>
+                    <ul class="button-group">
+                        <li><a class="btn btn-primary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-primary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-primary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-primary btn-medium" href="#">button</a></li>
+                    </ul>
+                    <ul class="button-group">
+                        <li><a class="btn btn-secondary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-secondary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-secondary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-secondary btn-medium" href="#">button</a></li>
+                    </ul>
+                    <ul class="button-group">
+                        <li><a class="btn btn-tertiary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-tertiary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-tertiary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-tertiary btn-medium" href="#">button</a></li>
+                    </ul>
+                    <ul class="button-group">
+                        <li><a class="btn btn-quadiary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-quadiary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-quadiary btn-medium" href="#">button</a></li>
+                        <li><a class="btn btn-quadiary btn-medium" href="#">button</a></li>
                     </ul>
                 </section>
 
@@ -276,13 +301,13 @@
                                     <div class="column-7 omega">
                                         <div class="column-6 form-input">
                                             <ul class="form-input-list list-unstyled">
-                                                <li><input type="checkbox" checked="checked" id="checkbox1" /><label for="checkbox1">Checkbox</label></li>
-                                                <li><input type="checkbox" id="checkbox2" /><label for="checkbox2">Checkbox</label></li>
-                                                <li><input type="checkbox" id="checkbox3" /><label for="checkbox3">Checkbox</label></li>
-                                                <li><input type="checkbox" id="checkbox4" /><label for="checkbox4">Checkbox</label></li>
-                                                <li><input type="checkbox" id="checkbox5" /><label for="checkbox5">Checkbox</label></li>
-                                                <li><input type="checkbox" disabled="disabled" id="checkbox6" /><label for="checkbox6">Checkbox disabled</label></li>
-                                                <li><input type="checkbox" disabled="disabled" id="checkbox7" /><label for="checkbox7">Checkbox disabled</label></li>
+                                                <li><input name="checkbox" type="checkbox" checked="checked" id="checkbox1" /><label for="checkbox1">Checkbox</label></li>
+                                                <li><input name="checkbox" type="checkbox" id="checkbox2" /><label for="checkbox2">Checkbox</label></li>
+                                                <li><input name="checkbox" type="checkbox" id="checkbox3" /><label for="checkbox3">Checkbox</label></li>
+                                                <li><input name="checkbox" type="checkbox" id="checkbox4" /><label for="checkbox4">Checkbox</label></li>
+                                                <li><input name="checkbox" type="checkbox" id="checkbox5" /><label for="checkbox5">Checkbox</label></li>
+                                                <li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox6" /><label for="checkbox6">Checkbox disabled</label></li>
+                                                <li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox7" /><label for="checkbox7">Checkbox disabled</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -294,13 +319,13 @@
                                     <div class="column-7 omega">
                                         <div class="column-6 form-input">
                                             <ul class="form-input-list list-unstyled">
-                                                <li><input type="radio" name="radio" id="radio1" /><label for="radio1">Radio</label></li>
-                                                <li><input type="radio" name="radio" id="radio2" /><label for="radio2">Radio</label></li>
-                                                <li><input type="radio" name="radio" id="radio3" /><label for="radio3">Radio</label></li>
-                                                <li><input type="radio" name="radio" id="radio4" /><label for="radio4">Radio</label></li>
-                                                <li><input type="radio" name="radio" id="radio5" /><label for="radio5">Radio</label></li>
-                                                <li><input type="radio" name="radio" disabled="disabled" id="radio6" /><label for="radio6">Radio disabled</label></li>
-                                                <li><input type="radio" name="radio" disabled="disabled" id="radio7" /><label for="radio7">Radio disabled</label></li>
+                                                <li><input name="radio" type="radio" name="radio" id="radio1" /><label for="radio1">Radio</label></li>
+                                                <li><input name="radio" type="radio" name="radio" id="radio2" /><label for="radio2">Radio</label></li>
+                                                <li><input name="radio" type="radio" name="radio" id="radio3" /><label for="radio3">Radio</label></li>
+                                                <li><input name="radio" type="radio" name="radio" id="radio4" /><label for="radio4">Radio</label></li>
+                                                <li><input name="radio" type="radio" name="radio" id="radio5" /><label for="radio5">Radio</label></li>
+                                                <li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio6" /><label for="radio6">Radio disabled</label></li>
+                                                <li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio7" /><label for="radio7">Radio disabled</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -312,7 +337,7 @@
                                     <div class="column-7 omega">
                                         <div class="column-6 form-switch">
                                             <ul class="form-input-list list-unstyled">
-                                                <li><input type="checkbox" id="switch1" /><label for="switch1">Switch</label></li>
+                                                <li><input name="switch1" type="checkbox" id="switch1" /><label for="switch1">Switch</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -324,7 +349,7 @@
                                     <div class="column-7 omega">
                                         <div class="column-6 form-switch">
                                             <ul class="form-input-list list-unstyled">
-                                                <li><input type="checkbox" id="switch2" /><label for="switch2">Switch</label></li>
+                                                <li><input name="switch2" type="checkbox" id="switch2" /><label for="switch2">Switch</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -336,7 +361,7 @@
                                     <div class="column-7 omega">
                                         <div class="column-6 form-switch">
                                             <ul class="form-input-list list-unstyled">
-                                                <li><input type="checkbox" id="switch3" /><label for="switch3">Switch</label></li>
+                                                <li><input name="switch3" type="checkbox" id="switch3" /><label for="switch3">Switch</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -348,8 +373,8 @@
                                     <div class="column-7 omega">
                                         <div class="column-6 form-input">
                                             <ul class="form-input-list list-inline">
-                                                <li><input type="radio" name="radio2" id="radio8" /><label for="radio8">Yes</label></li>
-                                                <li><input type="radio" name="radio2" id="radio9" /><label for="radio9">No</label></li>
+                                                <li><input name="radio1" type="radio" name="radio2" id="radio8" /><label for="radio8">Yes</label></li>
+                                                <li><input name="radio2" type="radio" name="radio2" id="radio9" /><label for="radio9">No</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -686,14 +711,84 @@
 
                 <section>
                     <h1>Pagination</h1>
+                    <p>These work with the button classes so you can use those to change color, size is controlled with specific pagination padding.</p>
+                    <h2>Default pagination</h2>
                     <div class="pagination">
-                        <a class="pagination-prev" href="#">&lsaquo;</a>
-                        <a href="#">1</a>
-                        <a href="#">2</a>
-                        <a href="#">3</a>
-                        <a href="#">4</a>
-                        <a href="#">5</a>
-                        <a class="pagination-next" href="#">&rsaquo;</a>
+                        <a class="btn" href="#">&lsaquo;</a>
+                        <a class="btn" href="#">1</a>
+                        <a class="btn" href="#">2</a>
+                        <a class="btn" href="#">3</a>
+                        <a class="btn" href="#">4</a>
+                        <a class="btn" href="#">5</a>
+                        <a class="btn btn-divider">...</a>
+                        <a class="btn" href="#">23</a>
+                        <a class="btn" href="#">&rsaquo;</a>
+                    </div>
+                    <h2>Centered pagination</h2>
+                    <div class="pagination pagination-center">
+                        <a class="btn" href="#">&lsaquo;</a>
+                        <a class="btn" href="#">1</a>
+                        <a class="btn" href="#">2</a>
+                        <a class="btn" href="#">3</a>
+                        <a class="btn" href="#">4</a>
+                        <a class="btn" href="#">5</a>
+                        <a class="btn btn-divider">...</a>
+                        <a class="btn" href="#">23</a>
+                        <a class="btn" href="#">&rsaquo;</a>
+                    </div>
+                    <h2>Right pagination</h2>
+                    <div class="pagination pagination-right">
+                        <a class="btn" href="#">&lsaquo;</a>
+                        <a class="btn" href="#">1</a>
+                        <a class="btn" href="#">2</a>
+                        <a class="btn" href="#">3</a>
+                        <a class="btn" href="#">4</a>
+                        <a class="btn" href="#">5</a>
+                        <a class="btn btn-divider">...</a>
+                        <a class="btn" href="#">23</a>
+                        <a class="btn" href="#">&rsaquo;</a>
+                    </div>
+                    <h2>Button group pagination</h2>
+                    <div class="pagination">
+                        <ul class="button-group">
+                            <li><a class="btn" href="#">&lsaquo;</a></li>
+                            <li><a class="btn" href="#">1</a></li>
+                            <li><a class="btn" href="#">2</a></li>
+                            <li><a class="btn" href="#">3</a></li>
+                            <li><a class="btn" href="#">4</a></li>
+                            <li><a class="btn" href="#">5</a></li>
+                            <li><a class="btn btn-divider">...</a></li>
+                            <li><a class="btn" href="#">23</a></li>
+                            <li><a class="btn" href="#">&rsaquo;</a></li>
+                        </ul>
+                    </div>
+                    <h2>Centered button group pagination</h2>
+                    <div class="pagination pagination-center">
+                        <ul class="button-group">
+                            <li><a class="btn" href="#">&lsaquo;</a></li>
+                            <li><a class="btn" href="#">1</a></li>
+                            <li><a class="btn" href="#">2</a></li>
+                            <li><a class="btn" href="#">3</a></li>
+                            <li><a class="btn" href="#">4</a></li>
+                            <li><a class="btn" href="#">5</a></li>
+                            <li><a class="btn btn-divider">...</a></li>
+                            <li><a class="btn" href="#">23</a></li>
+                            <li><a class="btn" href="#">&rsaquo;</a></li>
+                        </ul>
+                    </div>
+                    <h2>Right button group pagination</h2>
+                    <div class="pagination pagination-right">
+                        <ul class="button-group">
+                            <li><a class="btn" href="#">&lsaquo;</a></li>
+                            <li><a class="btn" href="#">1</a></li>
+                            <li><a class="btn" href="#">2</a></li>
+                            <li><a class="btn" href="#">3</a></li>
+                            <li><a class="btn" href="#">4</a></li>
+                            <li><a class="btn" href="#">5</a></li>
+                            <li><a class="btn btn-divider">...</a></li>
+                            <li><a class="btn" href="#">23</a></li>
+                            <li><a class="btn" href="#">&rsaquo;</a></li>
+                        </ul>
                     </div>
                 </section>
 
@@ -719,13 +814,23 @@
                     </ul>
                     <div class="tab-content">
                         <div class="tab-item active" id="tab-home">
-                            <p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
+                            <div class="grid">
+                                <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div class="column-6 omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                            </div>
                         </div>
                         <div class="tab-item" id="tab-lorem">
                             <p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
                         </div>
                         <div class="tab-item" id="tab-ipsum">
-                            <p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
+                            <div class="grid">
+                                <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div class="column-6 omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                            </div>
+                            <div class="grid">
+                                <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div class="column-6 omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                            </div>
                         </div>
                     </div>
                 </section>
@@ -783,15 +888,29 @@
 
                 <section>
                     <h1>Modals</h1>
+                    <br />
+                    <h2 class="h3">Slip effects</h2>
                     <ul class="button-group">
                         <li><a class="btn btn-small modal-trigger" data-modal-id="modal-1">slip-top</a></li>
                         <li><a class="btn btn-small modal-trigger" data-modal-id="modal-2">slip-bottom</a></li>
+                    </ul>
+                    <br />
+                    <h2 class="h3">Slide effects</h2>
+                    <ul class="button-group">
                         <li><a class="btn btn-small modal-trigger" data-modal-id="modal-3">slide-top</a></li>
                         <li><a class="btn btn-small modal-trigger" data-modal-id="modal-4">slide-right</a></li>
                         <li><a class="btn btn-small modal-trigger" data-modal-id="modal-5">slide-bottom</a></li>
                         <li><a class="btn btn-small modal-trigger" data-modal-id="modal-6">slide-left</a></li>
+                    </ul>
+                    <br />
+                    <h2 class="h3">Flip effects</h2>
+                    <ul class="button-group">
                         <li><a class="btn btn-small modal-trigger" data-modal-id="modal-7">flip-horizontal</a></li>
                         <li><a class="btn btn-small modal-trigger" data-modal-id="modal-8">flip-vertical</a></li>
+                    </ul>
+                    <br />
+                    <h2 class="h3">Scale effects</h2>
+                    <ul class="button-group">
                         <li><a class="btn btn-small modal-trigger" data-modal-id="modal-9">fadescale</a></li>
                         <li><a class="btn btn-small modal-trigger" data-modal-id="modal-10">superscaled</a></li>
                     </ul>
@@ -924,9 +1043,51 @@
         </div>
         <div id="modal-10" class="modal" data-modal-effect="superscale">
             <div class="modal-content">
-                <h2>Dit is een titel 2</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn btn-primary btn-medium modal-close">Akkoord</a>
+                <form class="form-validate form-no-margin" novalidate="novalidate">
+
+                    <fieldset>
+                        <legend>Persoonlijke gegevens</legend>
+                        <div class="form-row clearfix">
+                            <div class="column-5 form-label">
+                                <label>Aanhef</label>
+                            </div>
+                            <div class="column-7 omega">
+                                <div class="column-10 form-select">
+                                    <select name="" id="">
+                                        <option value="" disabled="disabled" selected="selected">Kies een optie</option>
+                                        <option value="">Dhr.</option>
+                                        <option value="">Mevr.</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row clearfix">
+                            <div class="column-5 form-label">
+                                <label>Naam *</label>
+                            </div>
+                            <div class="column-7 omega">
+                                <div class="column-10 form-input">
+                                    <input type="text" placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-row clearfix">
+                            <div class="column-5 form-label">
+                                <label>Adres</label>
+                            </div>
+                            <div class="column-7 omega">
+                                <div class="column-10 form-input">
+                                    <input type="text" placeholder="" />
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+
+                    <div class="form-actions">
+                        <p class="form-required-field"><i>* = Verplicht veld</i></p>
+                        <input class="btn btn-primary btn-medium" type="submit" value="verzenden" />
+                    </div>
+                </form>
             </div>
         </div>
 

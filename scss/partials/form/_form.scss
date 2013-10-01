@@ -4,6 +4,10 @@
 
 form {
     @include rem(margin, 0 0 40px 0);
+
+    &.form-no-margin {
+        margin: 0;
+    }
 }
 
 legend {

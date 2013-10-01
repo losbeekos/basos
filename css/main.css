@@ -542,12 +542,12 @@ textarea {
 /*==========  Image replacement  ==========*/
 /*==========  Clearfix  ==========*/
 /* line 161, ../scss/dependencies/_helpers.scss */
-.clearfix:before, .button-group:before, .clearfix:after, .button-group:after {
+.clearfix:before, .button-group:before, .pagination:before, .clearfix:after, .button-group:after, .pagination:after {
   content: '';
   display: table;
 }
 /* line 166, ../scss/dependencies/_helpers.scss */
-.clearfix:after, .button-group:after {
+.clearfix:after, .button-group:after, .pagination:after {
   clear: both;
 }
 
@@ -564,7 +564,7 @@ textarea {
 /* line 7, ../scss/dependencies/_grid.scss */
 .grid {
   position: relative;
-  max-width: 133.75em;
+  max-width: 74.95em;
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;
@@ -596,14 +596,14 @@ textarea {
 .column-1 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-1 {
-    width: 7.47664%;
+    width: 6.80454%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -611,14 +611,14 @@ textarea {
 .column-2 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-2 {
-    width: 15.88785%;
+    width: 15.27685%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -626,14 +626,14 @@ textarea {
 .column-3 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-3 {
-    width: 24.29907%;
+    width: 23.74917%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -641,14 +641,14 @@ textarea {
 .column-4 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-4 {
-    width: 32.71028%;
+    width: 32.22148%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -656,14 +656,14 @@ textarea {
 .column-5 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-5 {
-    width: 41.1215%;
+    width: 40.6938%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -671,14 +671,14 @@ textarea {
 .column-6 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-6 {
-    width: 49.53271%;
+    width: 49.16611%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -686,14 +686,14 @@ textarea {
 .column-7 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-7 {
-    width: 57.94393%;
+    width: 57.63843%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -701,14 +701,14 @@ textarea {
 .column-8 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-8 {
-    width: 66.35514%;
+    width: 66.11074%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -716,14 +716,14 @@ textarea {
 .column-9 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-9 {
-    width: 74.76636%;
+    width: 74.58306%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -731,14 +731,14 @@ textarea {
 .column-10 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-10 {
-    width: 83.17757%;
+    width: 83.05537%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -746,14 +746,14 @@ textarea {
 .column-11 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-11 {
-    width: 91.58879%;
+    width: 91.52769%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -761,14 +761,14 @@ textarea {
 .column-12 {
   width: 100%;
   float: left;
-  margin-right: 0.93458%;
+  margin-right: 1.66778%;
 }
 @media (min-width: 650px) {
   /* line 26, ../scss/dependencies/_grid.scss */
   .column-12 {
     width: 100%;
     float: left;
-    margin-right: 0.93458%;
+    margin-right: 1.66778%;
   }
 }
 
@@ -898,7 +898,6 @@ h6, .h6 {
   background-color: #e8e8e8;
   border: 0;
   outline: 0;
-  cursor: pointer;
   text-align: center;
   border: 1px solid #cfcfcf;
   line-height: 16px;
@@ -914,12 +913,12 @@ h6, .h6 {
   -moz-user-select: none;
   user-select: none;
 }
-/* line 31, ../scss/partials/_buttons.scss */
-.btn:hover {
+/* line 30, ../scss/partials/_buttons.scss */
+.btn:not(.btn-divider):hover {
   color: #222222;
   background-color: #dbdbdb;
 }
-/* line 36, ../scss/partials/_buttons.scss */
+/* line 35, ../scss/partials/_buttons.scss */
 .btn:focus {
   outline: none;
   box-shadow: 0 0 10px #c2c2c2;
@@ -928,7 +927,7 @@ h6, .h6 {
   -o-transition-duration: 0.05s;
   transition-duration: 0.05s;
 }
-/* line 42, ../scss/partials/_buttons.scss */
+/* line 41, ../scss/partials/_buttons.scss */
 .btn:disabled {
   background-color: #e8e8e8;
   cursor: not-allowed;
@@ -936,12 +935,17 @@ h6, .h6 {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 48, ../scss/partials/_buttons.scss */
+/* line 47, ../scss/partials/_buttons.scss */
 .btn:disabled:focus {
   box-shadow: none;
 }
 
-/* line 57, ../scss/partials/_buttons.scss */
+/* line 53, ../scss/partials/_buttons.scss */
+.btn-divider {
+  cursor: default;
+}
+
+/* line 60, ../scss/partials/_buttons.scss */
 .btn-primary,
 .btn-secondary,
 .btn-tertiary,
@@ -949,14 +953,17 @@ h6, .h6 {
   color: white;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
 }
-/* line 61, ../scss/partials/_buttons.scss */
-.btn-primary:hover,
+/* line 65, ../scss/partials/_buttons.scss */
+.btn-primary:not(.btn-divider):hover, .btn-primary:hover,
+.btn-secondary:not(.btn-divider):hover,
 .btn-secondary:hover,
+.btn-tertiary:not(.btn-divider):hover,
 .btn-tertiary:hover,
+.btn-quadiary:not(.btn-divider):hover,
 .btn-quadiary:hover {
   color: white;
 }
-/* line 65, ../scss/partials/_buttons.scss */
+/* line 69, ../scss/partials/_buttons.scss */
 .btn-primary:disabled,
 .btn-secondary:disabled,
 .btn-tertiary:disabled,
@@ -964,91 +971,91 @@ h6, .h6 {
   color: #cccccc;
 }
 
-/* line 70, ../scss/partials/_buttons.scss */
+/* line 74, ../scss/partials/_buttons.scss */
 .btn-primary {
   background-color: #0659a4;
   border: 1px solid #05447d;
 }
-/* line 74, ../scss/partials/_buttons.scss */
-.btn-primary:hover {
+/* line 78, ../scss/partials/_buttons.scss */
+.btn-primary:not(.btn-divider):hover {
   background-color: #054c8b;
 }
-/* line 75, ../scss/partials/_buttons.scss */
+/* line 79, ../scss/partials/_buttons.scss */
 .btn-primary:focus {
   box-shadow: 0 0 10px #0659a4;
 }
-/* line 76, ../scss/partials/_buttons.scss */
+/* line 80, ../scss/partials/_buttons.scss */
 .btn-primary:disabled {
   background-color: #0659a4;
 }
 
-/* line 79, ../scss/partials/_buttons.scss */
+/* line 83, ../scss/partials/_buttons.scss */
 .btn-secondary {
   background-color: #177f12;
   border: 1px solid #115b0d;
 }
-/* line 83, ../scss/partials/_buttons.scss */
-.btn-secondary:hover {
+/* line 87, ../scss/partials/_buttons.scss */
+.btn-secondary:not(.btn-divider):hover {
   background-color: #13690f;
 }
-/* line 84, ../scss/partials/_buttons.scss */
+/* line 88, ../scss/partials/_buttons.scss */
 .btn-secondary:focus {
   box-shadow: 0 0 10px #177f12;
 }
-/* line 85, ../scss/partials/_buttons.scss */
+/* line 89, ../scss/partials/_buttons.scss */
 .btn-secondary:disabled {
   background-color: #177f12;
 }
 
-/* line 88, ../scss/partials/_buttons.scss */
+/* line 92, ../scss/partials/_buttons.scss */
 .btn-tertiary {
   background-color: #a40606;
   border: 1px solid #7d0505;
 }
-/* line 92, ../scss/partials/_buttons.scss */
-.btn-tertiary:hover {
+/* line 96, ../scss/partials/_buttons.scss */
+.btn-tertiary:not(.btn-divider):hover {
   background-color: #8b0505;
 }
-/* line 93, ../scss/partials/_buttons.scss */
+/* line 97, ../scss/partials/_buttons.scss */
 .btn-tertiary:focus {
   box-shadow: 0 0 10px #a40606;
 }
-/* line 94, ../scss/partials/_buttons.scss */
+/* line 98, ../scss/partials/_buttons.scss */
 .btn-tertiary:disabled {
   background-color: #a40606;
 }
 
-/* line 97, ../scss/partials/_buttons.scss */
+/* line 101, ../scss/partials/_buttons.scss */
 .btn-quadiary {
   background-color: #069ea4;
   border: 1px solid #05787d;
 }
-/* line 101, ../scss/partials/_buttons.scss */
-.btn-quadiary:hover {
+/* line 105, ../scss/partials/_buttons.scss */
+.btn-quadiary:not(.btn-divider):hover {
   background-color: #05868b;
 }
-/* line 102, ../scss/partials/_buttons.scss */
+/* line 106, ../scss/partials/_buttons.scss */
 .btn-quadiary:focus {
   box-shadow: 0 0 10px #069ea4;
 }
-/* line 103, ../scss/partials/_buttons.scss */
+/* line 107, ../scss/partials/_buttons.scss */
 .btn-quadiary:disabled {
   background-color: #069ea4;
 }
 
-/* line 106, ../scss/partials/_buttons.scss */
+/* line 110, ../scss/partials/_buttons.scss */
 .btn-small {
   padding: 8px 30px;
   padding: 0.5rem 1.875rem;
 }
 
-/* line 110, ../scss/partials/_buttons.scss */
+/* line 114, ../scss/partials/_buttons.scss */
 .btn-medium {
   padding: 12px 35px;
   padding: 0.75rem 2.1875rem;
 }
 @media (min-width: 650px) {
-  /* line 110, ../scss/partials/_buttons.scss */
+  /* line 114, ../scss/partials/_buttons.scss */
   .btn-medium {
     padding: 14px 35px;
     padding: 0.875rem 2.1875rem;
@@ -1057,13 +1064,13 @@ h6, .h6 {
   }
 }
 
-/* line 119, ../scss/partials/_buttons.scss */
+/* line 123, ../scss/partials/_buttons.scss */
 .btn-large {
   padding: 15px 40px;
   padding: 0.9375rem 2.5rem;
 }
 @media (min-width: 650px) {
-  /* line 119, ../scss/partials/_buttons.scss */
+  /* line 123, ../scss/partials/_buttons.scss */
   .btn-large {
     padding: 18px 50px;
     padding: 1.125rem 3.125rem;
@@ -1072,29 +1079,34 @@ h6, .h6 {
   }
 }
 
-/* line 128, ../scss/partials/_buttons.scss */
+/* line 132, ../scss/partials/_buttons.scss */
 .btn-block {
   display: block;
 }
 
 /* line 136, ../scss/partials/_buttons.scss */
+.button-group {
+  margin: 0 0 30px 0;
+  margin: 0 0 1.875rem 0;
+}
+/* line 142, ../scss/partials/_buttons.scss */
 .button-group > li {
   margin: 0 0 0 -1px;
   float: left;
 }
-/* line 140, ../scss/partials/_buttons.scss */
+/* line 146, ../scss/partials/_buttons.scss */
 .button-group > li .btn {
   border-radius: 0;
 }
-/* line 144, ../scss/partials/_buttons.scss */
+/* line 150, ../scss/partials/_buttons.scss */
 .button-group > li:first-child {
   margin: 0;
 }
-/* line 147, ../scss/partials/_buttons.scss */
+/* line 153, ../scss/partials/_buttons.scss */
 .button-group > li:first-child .btn {
   border-radius: 2px 0 0 2px;
 }
-/* line 153, ../scss/partials/_buttons.scss */
+/* line 159, ../scss/partials/_buttons.scss */
 .button-group > li:last-child .btn {
   border-radius: 0 2px 2px 0;
 }
@@ -1427,8 +1439,12 @@ form {
   margin: 0 0 40px 0;
   margin: 0 0 2.5rem 0;
 }
+/* line 8, ../scss/partials/form/_form.scss */
+form.form-no-margin {
+  margin: 0;
+}
 
-/* line 9, ../scss/partials/form/_form.scss */
+/* line 13, ../scss/partials/form/_form.scss */
 legend {
   display: block;
   width: 100%;
@@ -1443,7 +1459,7 @@ legend {
   line-height: 2rem;
 }
 
-/* line 38, ../scss/partials/form/_form.scss */
+/* line 42, ../scss/partials/form/_form.scss */
 input[type="text"],
 input[type="password"],
 input[type="date"],
@@ -1477,7 +1493,7 @@ textarea {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 51, ../scss/partials/form/_form.scss */
+/* line 55, ../scss/partials/form/_form.scss */
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="date"]:focus,
@@ -1495,7 +1511,7 @@ textarea:focus {
   border: 1px solid #cccccc;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 56, ../scss/partials/form/_form.scss */
+/* line 60, ../scss/partials/form/_form.scss */
 input[type="text"]:disabled,
 input[type="password"]:disabled,
 input[type="date"]:disabled,
@@ -1514,13 +1530,13 @@ textarea:disabled {
   cursor: not-allowed;
 }
 
-/* line 62, ../scss/partials/form/_form.scss */
+/* line 66, ../scss/partials/form/_form.scss */
 textarea {
   height: 160px;
   height: 10rem;
 }
 
-/* line 66, ../scss/partials/form/_form.scss */
+/* line 70, ../scss/partials/form/_form.scss */
 select {
   background: transparent;
   background-image: none;
@@ -1544,29 +1560,29 @@ select {
   -moz-appearance: none;
   appearance: none;
 }
-/* line 87, ../scss/partials/form/_form.scss */
+/* line 91, ../scss/partials/form/_form.scss */
 select[multiple=multiple] {
   height: auto;
 }
-/* line 92, ../scss/partials/form/_form.scss */
+/* line 96, ../scss/partials/form/_form.scss */
 select:focus, select:hover {
   border-color: #cccccc;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 97, ../scss/partials/form/_form.scss */
+/* line 101, ../scss/partials/form/_form.scss */
 select option[disabled] {
   color: #94adc4;
   text-shadow: none;
   border: none;
 }
 
-/* line 104, ../scss/partials/form/_form.scss */
+/* line 108, ../scss/partials/form/_form.scss */
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #888888;
 }
 
-/* line 109, ../scss/partials/form/_form.scss */
+/* line 113, ../scss/partials/form/_form.scss */
 select::-ms-expand {
   display: none;
 }
@@ -1683,7 +1699,7 @@ select::-ms-expand {
 @media (min-width: 650px) {
   /* line 103, ../scss/partials/form/_general.scss */
   .form-actions {
-    margin-left: 42.05607%;
+    margin-left: 42.36157%;
   }
 }
 
@@ -2097,26 +2113,26 @@ input[type=radio] + label:after {
 /* line 5, ../scss/partials/_pagination.scss */
 .pagination {
   margin-bottom: 1.875em;
-  text-align: center;
 }
 /* line 9, ../scss/partials/_pagination.scss */
-.pagination a {
-  display: inline-block;
-  color: white;
-  padding: 10px 18px;
-  border-radius: 2px;
-  background-color: #0659a4;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
+.pagination.pagination-center {
+  text-align: center;
 }
-/* line 23, ../scss/partials/_pagination.scss */
-.pagination a:hover {
-  background-color: #0766bd;
+/* line 12, ../scss/partials/_pagination.scss */
+.pagination.pagination-center ul {
+  display: inline-block;
+}
+/* line 17, ../scss/partials/_pagination.scss */
+.pagination.pagination-right {
+  text-align: right;
+}
+/* line 20, ../scss/partials/_pagination.scss */
+.pagination.pagination-right ul {
+  float: right;
+}
+/* line 25, ../scss/partials/_pagination.scss */
+.pagination a {
+  padding: 10px 18px;
 }
 
 /*===================================

@@ -37,7 +37,7 @@ $container-large-and-up-padding   : $ten*4; // 40px
 
 /*==========  Susy grid  ==========*/
 $total-columns : 12;      // a 12-column grid
-$column-width  : 10em;    // width is controlled with container max-width setting, so a high value is set here.
+$column-width  : 5.1em;   // 12 * 5.1 = 1200px
 $gutter-width  : $ten*2;  // 20px gutters between columns
 $grid-padding  : 0;       // 0 grid padding
 
@@ -104,14 +104,8 @@ $accordion-trigger-font-color  : $text-color;
 
 
 /*==========  Pagination  ==========*/
-$pagination-gradient         : $gradient;
-$pagination-align            : center;
-$pagination-font-color       : $white;
 $pagination-padding          : $base-padding $base-padding*1.8;
-$pagination-border-radius    : $base-border-radius;
 $pagination-margin-bottom    : $ten*3; // 30px
-$pagination-bg-color         : $primary-color;
-$pagination-transition-speed : $base-transition-speed;
 
 
 /*==========  Breadcrumbs  ==========*/
