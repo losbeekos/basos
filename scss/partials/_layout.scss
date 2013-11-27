@@ -50,11 +50,11 @@ p {
     padding: 0 $container-padding;
     margin: $container-margin;
 
-    @include breakpoint(medium) {
-        padding: 0 $container-medium-padding;
+    @include breakpoint(beta) {
+        padding: 0 $container-beta-padding;
     }
 
-    @include breakpoint(large-and-up) {
-        padding: 0 $container-large-and-up-padding;
+    @include breakpoint(gamma-and-up) {
+        padding: 0 $container-gamma-padding;
     }
 }

@@ -1,9 +1,10 @@
 .parsley-error {
     &.form-input {
         &:after {
+            @extend %font-fontello;
+
             content: $icon-form-validation-error;
             color: #a60000;
-            @extend %font-fontello;
         }
     }
 
@@ -18,9 +19,10 @@
 .parsley-success {
     &.form-input {
         &:after {
+            @extend %font-fontello;
+
             content: $icon-form-validation-success;
             color: #6eb269;
-            @extend %font-fontello;
         }
     }
 

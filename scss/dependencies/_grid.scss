@@ -6,13 +6,16 @@
 /*==========  Grid class  ==========*/
 .grid {
     position: relative;
+
     @include container;
 }
 
 [class|="column"] {
+    @extend .clearfix;
+
     margin-bottom: $gutter-width;
 
-    &.omega {
+    &.column-omega {
         @include omega;
 
         .lt-ie9 & {
@@ -26,11 +29,11 @@
     .column-#{$i} {
         @include span-columns($total-columns, $total-columns);
 
-        @include breakpoint(medium-and-up){
+        @include breakpoint(beta-and-up){
             @include span-columns($i, $total-columns);
         }
 
-        @include breakpoint(large-and-up){
+        @include breakpoint(gamma-and-up){
             // Nothing to see here..
         }
     }

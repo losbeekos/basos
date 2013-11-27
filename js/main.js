@@ -246,7 +246,7 @@ Modernizr.load([
                         yepnope.injectJs(
                             'js/plugins/jquery.fitvids/jquery.fitvids.min.js' + settings.version,
                             function(url, result, key){
-                                $('.content').fitVids();
+                                $('main').fitVids();
                             }
                         );
                     }

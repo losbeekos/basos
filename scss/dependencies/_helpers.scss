@@ -36,19 +36,19 @@
 
 /*==========  Breakpoints  ==========*/
 @mixin breakpoint($point) {
-  @if $point == large-and-up {
+  @if $point == gamma-and-up {
     @media (min-width: 900px) { @content; }
   }
 
-  @else if $point == medium {
+  @else if $point == beta {
     @media (min-width: 650px) and (max-width: 900px) { @content; }
   }
 
-  @else if $point == medium-and-up {
+  @else if $point == beta-and-up {
     @media (min-width: 650px) { @content; }
   }
 
-  @else if $point == small {
+  @else if $point == gamma {
     @media (max-width: 650px)  { @content; }
   }
 }
@@ -108,14 +108,14 @@
 
 
 /*==========  Hide classes  ==========*/
-@include breakpoint(small) {
+@include breakpoint(alpha) {
     .hide-small,
     .hide-small-and-medium {
         display: none;
     }
 }
 
-@include breakpoint(medium) {
+@include breakpoint(beta) {
     .hide-medium,
     .hide-small-and-medium {
         display: none;
@@ -137,7 +137,7 @@
 
     li {
         display: inline;
-        margin-right: pxtoem(10);
+        @include rem(margin-right, 10px);
     }
 }
 

@@ -3,6 +3,8 @@
 ============================*/
 
 form {
+    @extend .clearfix;
+
     @include rem(margin, 0 0 40px 0);
 
     &.form-no-margin {
@@ -39,7 +41,7 @@ $input-selectors: '
     textarea
 ';
 
-#{$input-selectors}{
+#{$input-selectors} {
     color: #333333;
     border-radius: $base-border-radius;
     border: 1px solid #f3f3f3;

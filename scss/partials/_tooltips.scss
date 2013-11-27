@@ -16,6 +16,7 @@
         visibility: hidden;
         position: absolute;
         z-index: 100;
+
         @include opacity(0);
         @include single-transition(all, $tooltip-transition-speed);
     }
@@ -24,6 +25,7 @@
         .tooltip-content,
         &:after {
             visibility: visible;
+
             @include opacity(1);
         }
     }

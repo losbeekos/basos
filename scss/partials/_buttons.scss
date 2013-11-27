@@ -8,7 +8,16 @@
     @include rem(margin-top, 40px);
 }
 
-.btn {
+.btn-divider {
+    cursor: default;
+}
+
+.btn-divider,
+.btn-alpha,
+.btn-beta,
+.btn-gamma,
+.btn-delta,
+.btn-epsilon {
     display: inline-block;
     color: $text-color;
     border-radius: $btn-border-radius;
@@ -35,13 +44,16 @@
     &:focus {
         outline: none;
         box-shadow: 0 0 10px rgba(darken($btn-default-bg-color, 15%), 1);
+
         @include transition-duration(0.05s);
     }
 
-    &:disabled {
+    &:disabled,
+    &:disabled:hover {
         background-color: $btn-default-bg-color;
         cursor: not-allowed;
         color: darken($white, 20%);
+
         @include opacity(0.5);
 
         &:focus {
@@ -50,14 +62,10 @@
     }
 }
 
-.btn-divider {
-    cursor: default;
-}
-
-.btn-primary,
-.btn-secondary,
-.btn-tertiary,
-.btn-quadiary {
+.btn-beta,
+.btn-gamma,
+.btn-delta,
+.btn-epsilon {
     color: $white;
     text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
 
@@ -66,45 +74,46 @@
         color: $white;
     }
 
-    &:disabled {
+    &:disabled,
+    &:disabled:hover {
         color: darken($white, 20%);
     }
 }
 
-.btn-primary {
+.btn-beta {
     background-color: $btn-primary-bg-color;
     border: 1px solid darken($btn-primary-bg-color, 8%);
 
-    &:not(.btn-divider):hover { background-color: darken($btn-primary-bg-color, 5%);  }
-    &:focus                   { box-shadow: 0 0 10px rgba($btn-primary-bg-color, 1);  }
-    &:disabled                { background-color: $btn-primary-bg-color;              }
+    &:not(.btn-divider):hover    { background-color: darken($btn-primary-bg-color, 5%);  }
+    &:focus                      { box-shadow: 0 0 10px rgba($btn-primary-bg-color, 1);  }
+    &:disabled, &:disabled:hover { background-color: $btn-primary-bg-color;              }
 }
 
-.btn-secondary {
+.btn-gamma {
     background-color: $btn-secondary-bg-color;
     border: 1px solid darken($btn-secondary-bg-color, 8%);
 
-    &:not(.btn-divider):hover { background-color: darken($btn-secondary-bg-color, 5%);  }
-    &:focus                   { box-shadow: 0 0 10px rgba($btn-secondary-bg-color, 1);  }
-    &:disabled                { background-color: $btn-secondary-bg-color;              }
+    &:not(.btn-divider):hover    { background-color: darken($btn-secondary-bg-color, 5%);  }
+    &:focus                      { box-shadow: 0 0 10px rgba($btn-secondary-bg-color, 1);  }
+    &:disabled, &:disabled:hover { background-color: $btn-secondary-bg-color;              }
 }
 
-.btn-tertiary {
+.btn-delta {
     background-color: $btn-tertiary-bg-color;
     border: 1px solid darken($btn-tertiary-bg-color, 8%);
 
-    &:not(.btn-divider):hover { background-color: darken($btn-tertiary-bg-color, 5%);  }
-    &:focus                   { box-shadow: 0 0 10px rgba($btn-tertiary-bg-color, 1);  }
-    &:disabled                { background-color: $btn-tertiary-bg-color;              }
+    &:not(.btn-divider):hover    { background-color: darken($btn-tertiary-bg-color, 5%);  }
+    &:focus                      { box-shadow: 0 0 10px rgba($btn-tertiary-bg-color, 1);  }
+    &:disabled, &:disabled:hover { background-color: $btn-tertiary-bg-color;              }
 }
 
-.btn-quadiary {
+.btn-epsilon {
     background-color: $btn-quadiary-bg-color;
     border: 1px solid darken($btn-quadiary-bg-color, 8%);
 
-    &:not(.btn-divider):hover { background-color: darken($btn-quadiary-bg-color, 5%);  }
-    &:focus                   { box-shadow: 0 0 10px rgba($btn-quadiary-bg-color, 1);  }
-    &:disabled                { background-color: $btn-quadiary-bg-color;              }
+    &:not(.btn-divider):hover    { background-color: darken($btn-quadiary-bg-color, 5%);  }
+    &:focus                      { box-shadow: 0 0 10px rgba($btn-quadiary-bg-color, 1);  }
+    &:disabled, &:disabled:hover { background-color: $btn-quadiary-bg-color;              }
 }
 
 .btn-small {
@@ -114,7 +123,7 @@
 .btn-medium {
     @include rem(padding, 12px 35px);
 
-    @include breakpoint(medium-and-up) {
+    @include breakpoint(beta-and-up) {
         @include rem(padding, 14px 35px);
         @include rem(font-size, 17px);
     }
@@ -123,7 +132,7 @@
 .btn-large {
     @include rem(padding, 15px 40px);
 
-    @include breakpoint(medium-and-up) {
+    @include breakpoint(beta-and-up) {
         @include rem(padding, 18px 50px);
         @include rem(font-size, 18px);
     }
@@ -133,7 +142,7 @@
     display: block;
 }
 
-.button-group {
+.btn-group {
     @extend .list-inline;
     @extend .clearfix;
 

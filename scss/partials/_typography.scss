@@ -21,11 +21,11 @@ h1, .h1 {
     @include rem(font-size, 30px);
     @include rem(margin-bottom, 10px);
 
-    @include breakpoint(medium) {
+    @include breakpoint(beta) {
         @include rem(font-size, 35px);
     }
 
-    @include breakpoint(large-and-up) {
+    @include breakpoint(gamma-and-up) {
         @include rem(font-size, 40px);
     }
 }
@@ -34,7 +34,7 @@ h2, .h2 {
     @include rem(font-size, 22px);
     @include rem(margin-bottom, 10px);
 
-    @include breakpoint(large-and-up) {
+    @include breakpoint(gamma-and-up) {
         @include rem(font-size, 26px);
     }
 }

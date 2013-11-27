@@ -1,3 +1,7 @@
+.form-row {
+    @extend .clearfix;
+}
+
 .form-label {
     margin-bottom: 0;
 
@@ -5,7 +9,7 @@
         @include rem(line-height, 40px);
     }
 
-    @include breakpoint(medium-and-up) {
+    @include breakpoint(beta-and-up) {
         text-align: right;
     }
 }
@@ -29,13 +33,15 @@
     @include user-select(none);
 
     &:after {
+        @extend %font-fontello;
+
         content: $icon-form-select;
         position: absolute;
         top: 9px;
         right: 12px;
         z-index: 1;
+        color: #bbbbbb;
 
-        @extend %font-fontello;
         @include rem(font-size, 16px);
 
         .lt-ie10 & {
@@ -85,7 +91,7 @@
 }
 
 .form-input-list {
-    @include breakpoint(medium-and-up) {
+    @include breakpoint(beta-and-up) {
         @include rem(margin-top, 8px);
     }
 
@@ -103,7 +109,7 @@
 .form-actions {
     @include rem(margin-top, 20px);
 
-    @include breakpoint(medium-and-up) {
+    @include breakpoint(beta-and-up) {
         @include pre(5);
     }
 }

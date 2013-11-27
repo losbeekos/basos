@@ -4,6 +4,7 @@
 
 .pagination {
     @extend .clearfix;
+
     margin-bottom: $pagination-margin-bottom;
 
     &.pagination-center {

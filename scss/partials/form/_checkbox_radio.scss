@@ -2,6 +2,7 @@ input[type=checkbox],
 input[type=radio] {
     position: absolute;
     outline: none;
+
     @include opacity(0);
 
     &[disabled] {
@@ -31,6 +32,7 @@ input[type=radio] {
     .no-borderradius & {
         background: transparent;
         position: relative;
+
         @include opacity(1);
     }
 
@@ -65,6 +67,8 @@ input[type=radio] {
         }
 
         &:after {
+            @extend %font-fontello;
+
             content: $icon-form-checkbox;
             position: absolute;
             top: -1px;
@@ -74,7 +78,6 @@ input[type=radio] {
             line-height: 20px;
             text-align: center;
             color: $primary-color;
-            @extend %font-fontello;
 
             @include opacity(0);
             @include single-transition(all, $base-transition-speed);

@@ -9,7 +9,7 @@
         margin: 0;
 
         + li {
-            margin-left: pxtoem(5);
+            @include rem(margin-left, 5px);
         }
     }
 }

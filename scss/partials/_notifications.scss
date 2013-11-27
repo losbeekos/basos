@@ -13,17 +13,18 @@
     @include rem(margin-bottom, 30px);
     @include rem(min-height, 82px);
 
-    @include breakpoint(medium-and-up) {
+    @include breakpoint(beta-and-up) {
         @include rem(padding, 20px);
     }
 
     &:before {
+        @extend %font-fontello;
+
         position: absolute;
         left: 20px;
         top: 0;
         color: #b2af69;
         content: $icon-notification-info;
-        @extend %font-fontello;
 
         @include rem(font-size, 60px);
     }
