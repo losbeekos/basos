@@ -16,7 +16,6 @@
 /*==========  Tooltips  ==========*/
 /*==========  Modals  ==========*/
 /*==========  Accordion  ==========*/
-/*==========  Pagination  ==========*/
 /*==========  Breadcrumbs  ==========*/
 /*==========  Compass Dependencies  ==========*/
 /*==========  Custom Dependencies  ==========*/
@@ -529,7 +528,7 @@ textarea {
 }
 /*==========  Unstyled list  ==========*/
 /* line 127, ../scss/dependencies/_helpers.scss */
-.list-unstyled, .list-inline, .btn-group, .tabs, .dropdown ul, .parsley-error-list {
+.list-unstyled, .list-inline, .tabs, .btn-group, .dropdown ul, .parsley-error-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -537,7 +536,7 @@ textarea {
 
 /*==========  Inline list  ==========*/
 /* line 138, ../scss/dependencies/_helpers.scss */
-.list-inline li, .btn-group li, .tabs li {
+.list-inline li, .tabs li, .btn-group li {
   display: inline;
   margin-right: 10px;
   margin-right: 0.625rem;
@@ -546,12 +545,12 @@ textarea {
 /*==========  Image replacement  ==========*/
 /*==========  Clearfix  ==========*/
 /* line 161, ../scss/dependencies/_helpers.scss */
-.clearfix:before, [class|="column"]:before, .btn-group:before, form:before, .form-row:before, .pagination:before, .clearfix:after, [class|="column"]:after, .btn-group:after, form:after, .form-row:after, .pagination:after {
+.clearfix:before, [class|="column"]:before, [class|=btn-container]:before, .btn-group:before, form:before, .form-row:before, .clearfix:after, [class|="column"]:after, [class|=btn-container]:after, .btn-group:after, form:after, .form-row:after {
   content: '';
   display: table;
 }
 /* line 166, ../scss/dependencies/_helpers.scss */
-.clearfix:after, [class|="column"]:after, .btn-group:after, form:after, .form-row:after, .pagination:after {
+.clearfix:after, [class|="column"]:after, [class|=btn-container]:after, .btn-group:after, form:after, .form-row:after {
   clear: both;
 }
 
@@ -786,8 +785,8 @@ textarea {
 }
 
 /* line 14, ../scss/dependencies/_fonts.scss */
-.notification:before, .form-select:after, input[type=checkbox] + label:after,
-input[type=radio] + label:after, .parsley-error.form-input:after, .parsley-success.form-input:after {
+.notification:before, input[type=checkbox] + label:after,
+input[type=radio] + label:after, .parsley-error.form-input:after, .parsley-success.form-input:after, .form-select:after {
   font-family: "fontello-webfont", arial, verdana;
   font-weight: normal;
 }
@@ -882,275 +881,6 @@ h6, .h6 {
   font-size: 0.875rem;
   margin-bottom: 5px;
   margin-bottom: 0.3125rem;
-}
-
-/*===============================
-=            Buttons            =
-===============================*/
-/* line 5, ../scss/partials/_buttons.scss */
-.btn-holder {
-  text-align: center;
-  margin-top: 40px;
-  margin-top: 2.5rem;
-}
-
-/* line 11, ../scss/partials/_buttons.scss */
-.btn-divider {
-  cursor: default;
-}
-
-/* line 20, ../scss/partials/_buttons.scss */
-.btn-divider,
-.btn-alpha,
-.btn-beta,
-.btn-gamma,
-.btn-delta,
-.btn-epsilon {
-  display: inline-block;
-  color: #222222;
-  border-radius: 2px;
-  background-color: #e8e8e8;
-  border: 0;
-  outline: 0;
-  text-align: center;
-  border: 1px solid #cfcfcf;
-  line-height: 16px;
-  line-height: 1rem;
-  -webkit-transition: all 0.2s;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
-  transition: all 0.2s;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-/* line 39, ../scss/partials/_buttons.scss */
-.btn-divider:not(.btn-divider):hover,
-.btn-alpha:not(.btn-divider):hover,
-.btn-beta:not(.btn-divider):hover,
-.btn-gamma:not(.btn-divider):hover,
-.btn-delta:not(.btn-divider):hover,
-.btn-epsilon:not(.btn-divider):hover {
-  color: #222222;
-  background-color: #dbdbdb;
-}
-/* line 44, ../scss/partials/_buttons.scss */
-.btn-divider:focus,
-.btn-alpha:focus,
-.btn-beta:focus,
-.btn-gamma:focus,
-.btn-delta:focus,
-.btn-epsilon:focus {
-  outline: none;
-  box-shadow: 0 0 10px #c2c2c2;
-  -webkit-transition-duration: 0.05s;
-  -moz-transition-duration: 0.05s;
-  -o-transition-duration: 0.05s;
-  transition-duration: 0.05s;
-}
-/* line 52, ../scss/partials/_buttons.scss */
-.btn-divider:disabled, .btn-divider:disabled:hover,
-.btn-alpha:disabled,
-.btn-alpha:disabled:hover,
-.btn-beta:disabled,
-.btn-beta:disabled:hover,
-.btn-gamma:disabled,
-.btn-gamma:disabled:hover,
-.btn-delta:disabled,
-.btn-delta:disabled:hover,
-.btn-epsilon:disabled,
-.btn-epsilon:disabled:hover {
-  background-color: #e8e8e8;
-  cursor: not-allowed;
-  color: #cccccc;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
-  opacity: 0.5;
-}
-/* line 59, ../scss/partials/_buttons.scss */
-.btn-divider:disabled:focus, .btn-divider:disabled:hover:focus,
-.btn-alpha:disabled:focus,
-.btn-alpha:disabled:hover:focus,
-.btn-beta:disabled:focus,
-.btn-beta:disabled:hover:focus,
-.btn-gamma:disabled:focus,
-.btn-gamma:disabled:hover:focus,
-.btn-delta:disabled:focus,
-.btn-delta:disabled:hover:focus,
-.btn-epsilon:disabled:focus,
-.btn-epsilon:disabled:hover:focus {
-  box-shadow: none;
-}
-
-/* line 68, ../scss/partials/_buttons.scss */
-.btn-beta,
-.btn-gamma,
-.btn-delta,
-.btn-epsilon {
-  color: white;
-  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
-}
-/* line 73, ../scss/partials/_buttons.scss */
-.btn-beta:not(.btn-divider):hover, .btn-beta:hover,
-.btn-gamma:not(.btn-divider):hover,
-.btn-gamma:hover,
-.btn-delta:not(.btn-divider):hover,
-.btn-delta:hover,
-.btn-epsilon:not(.btn-divider):hover,
-.btn-epsilon:hover {
-  color: white;
-}
-/* line 78, ../scss/partials/_buttons.scss */
-.btn-beta:disabled, .btn-beta:disabled:hover,
-.btn-gamma:disabled,
-.btn-gamma:disabled:hover,
-.btn-delta:disabled,
-.btn-delta:disabled:hover,
-.btn-epsilon:disabled,
-.btn-epsilon:disabled:hover {
-  color: #cccccc;
-}
-
-/* line 83, ../scss/partials/_buttons.scss */
-.btn-beta {
-  background-color: #0659a4;
-  border: 1px solid #05447d;
-}
-/* line 87, ../scss/partials/_buttons.scss */
-.btn-beta:not(.btn-divider):hover {
-  background-color: #054c8b;
-}
-/* line 88, ../scss/partials/_buttons.scss */
-.btn-beta:focus {
-  box-shadow: 0 0 10px #0659a4;
-}
-/* line 89, ../scss/partials/_buttons.scss */
-.btn-beta:disabled, .btn-beta:disabled:hover {
-  background-color: #0659a4;
-}
-
-/* line 92, ../scss/partials/_buttons.scss */
-.btn-gamma {
-  background-color: #177f12;
-  border: 1px solid #115b0d;
-}
-/* line 96, ../scss/partials/_buttons.scss */
-.btn-gamma:not(.btn-divider):hover {
-  background-color: #13690f;
-}
-/* line 97, ../scss/partials/_buttons.scss */
-.btn-gamma:focus {
-  box-shadow: 0 0 10px #177f12;
-}
-/* line 98, ../scss/partials/_buttons.scss */
-.btn-gamma:disabled, .btn-gamma:disabled:hover {
-  background-color: #177f12;
-}
-
-/* line 101, ../scss/partials/_buttons.scss */
-.btn-delta {
-  background-color: #a40606;
-  border: 1px solid #7d0505;
-}
-/* line 105, ../scss/partials/_buttons.scss */
-.btn-delta:not(.btn-divider):hover {
-  background-color: #8b0505;
-}
-/* line 106, ../scss/partials/_buttons.scss */
-.btn-delta:focus {
-  box-shadow: 0 0 10px #a40606;
-}
-/* line 107, ../scss/partials/_buttons.scss */
-.btn-delta:disabled, .btn-delta:disabled:hover {
-  background-color: #a40606;
-}
-
-/* line 110, ../scss/partials/_buttons.scss */
-.btn-epsilon {
-  background-color: #069ea4;
-  border: 1px solid #05787d;
-}
-/* line 114, ../scss/partials/_buttons.scss */
-.btn-epsilon:not(.btn-divider):hover {
-  background-color: #05868b;
-}
-/* line 115, ../scss/partials/_buttons.scss */
-.btn-epsilon:focus {
-  box-shadow: 0 0 10px #069ea4;
-}
-/* line 116, ../scss/partials/_buttons.scss */
-.btn-epsilon:disabled, .btn-epsilon:disabled:hover {
-  background-color: #069ea4;
-}
-
-/* line 119, ../scss/partials/_buttons.scss */
-.btn-small {
-  padding: 8px 30px;
-  padding: 0.5rem 1.875rem;
-}
-
-/* line 123, ../scss/partials/_buttons.scss */
-.btn-medium {
-  padding: 12px 35px;
-  padding: 0.75rem 2.1875rem;
-}
-@media (min-width: 650px) {
-  /* line 123, ../scss/partials/_buttons.scss */
-  .btn-medium {
-    padding: 14px 35px;
-    padding: 0.875rem 2.1875rem;
-    font-size: 17px;
-    font-size: 1.0625rem;
-  }
-}
-
-/* line 132, ../scss/partials/_buttons.scss */
-.btn-large {
-  padding: 15px 40px;
-  padding: 0.9375rem 2.5rem;
-}
-@media (min-width: 650px) {
-  /* line 132, ../scss/partials/_buttons.scss */
-  .btn-large {
-    padding: 18px 50px;
-    padding: 1.125rem 3.125rem;
-    font-size: 18px;
-    font-size: 1.125rem;
-  }
-}
-
-/* line 141, ../scss/partials/_buttons.scss */
-.btn-block {
-  display: block;
-}
-
-/* line 145, ../scss/partials/_buttons.scss */
-.btn-group {
-  margin: 0 0 30px 0;
-  margin: 0 0 1.875rem 0;
-}
-/* line 151, ../scss/partials/_buttons.scss */
-.btn-group > li {
-  margin: 0 0 0 -1px;
-  float: left;
-}
-/* line 155, ../scss/partials/_buttons.scss */
-.btn-group > li .btn {
-  border-radius: 0;
-}
-/* line 159, ../scss/partials/_buttons.scss */
-.btn-group > li:first-child {
-  margin: 0;
-}
-/* line 162, ../scss/partials/_buttons.scss */
-.btn-group > li:first-child .btn {
-  border-radius: 2px 0 0 2px;
-}
-/* line 168, ../scss/partials/_buttons.scss */
-.btn-group > li:last-child .btn {
-  border-radius: 0 2px 2px 0;
 }
 
 /*==============================
@@ -1414,6 +1144,25 @@ p {
   color: #6eb269;
 }
 
+/* line 59, ../scss/partials/_notifications.scss */
+.cookie-notification {
+  background: #eeeeee;
+  text-align: center;
+  padding: 20px 0;
+  padding: 1.25rem 0;
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+}
+/* line 66, ../scss/partials/_notifications.scss */
+.cookie-notification .btn-container-center {
+  margin: 0;
+}
+/* line 70, ../scss/partials/_notifications.scss */
+.cookie-notification .btn-group {
+  margin: 10px 0 0 0;
+  margin: 0.625rem 0 0 0;
+}
+
 /*=================================
 =            Spotlight            =
 =================================*/
@@ -1471,6 +1220,315 @@ p {
 /* line 46, ../scss/partials/_dropdowns.scss */
 .dropdown-content a:hover {
   background-color: #e5e5e5;
+}
+
+/*==========  Buttons  ==========*/
+/*=================================
+=            Container            =
+=================================*/
+/* line 5, ../scss/partials/buttons/_container.scss */
+[class|=btn-container] {
+  margin-bottom: 1.875em;
+}
+/* line 10, ../scss/partials/buttons/_container.scss */
+[class|=btn-container] a {
+  padding: 10px 18px;
+}
+
+/* line 15, ../scss/partials/buttons/_container.scss */
+.btn-container-center {
+  text-align: center;
+}
+/* line 18, ../scss/partials/buttons/_container.scss */
+.btn-container-center ul {
+  display: inline-block;
+}
+
+/* line 23, ../scss/partials/buttons/_container.scss */
+.btn-container-right {
+  text-align: right;
+}
+/* line 26, ../scss/partials/buttons/_container.scss */
+.btn-container-right ul {
+  float: right;
+}
+
+/*=============================
+=            Group            =
+=============================*/
+/* line 5, ../scss/partials/buttons/_group.scss */
+.btn-group {
+  margin: 0 0 30px 0;
+  margin: 0 0 1.875rem 0;
+}
+/* line 11, ../scss/partials/buttons/_group.scss */
+.btn-group > li {
+  margin: 0 0 0 -1px;
+  float: left;
+}
+/* line 15, ../scss/partials/buttons/_group.scss */
+.btn-group > li .btn {
+  border-radius: 0;
+}
+/* line 19, ../scss/partials/buttons/_group.scss */
+.btn-group > li:first-child {
+  margin: 0;
+}
+/* line 22, ../scss/partials/buttons/_group.scss */
+.btn-group > li:first-child .btn {
+  border-radius: 2px 0 0 2px;
+}
+/* line 28, ../scss/partials/buttons/_group.scss */
+.btn-group > li:last-child .btn {
+  border-radius: 0 2px 2px 0;
+}
+
+/*=============================
+=            Sized            =
+=============================*/
+/* line 5, ../scss/partials/buttons/_sizes.scss */
+.btn-small {
+  padding: 8px 30px;
+  padding: 0.5rem 1.875rem;
+}
+
+/* line 9, ../scss/partials/buttons/_sizes.scss */
+.btn-medium {
+  padding: 12px 35px;
+  padding: 0.75rem 2.1875rem;
+}
+@media (min-width: 650px) {
+  /* line 9, ../scss/partials/buttons/_sizes.scss */
+  .btn-medium {
+    padding: 14px 35px;
+    padding: 0.875rem 2.1875rem;
+    font-size: 17px;
+    font-size: 1.0625rem;
+  }
+}
+
+/* line 18, ../scss/partials/buttons/_sizes.scss */
+.btn-large {
+  padding: 15px 40px;
+  padding: 0.9375rem 2.5rem;
+}
+@media (min-width: 650px) {
+  /* line 18, ../scss/partials/buttons/_sizes.scss */
+  .btn-large {
+    padding: 18px 50px;
+    padding: 1.125rem 3.125rem;
+    font-size: 18px;
+    font-size: 1.125rem;
+  }
+}
+
+/*==============================
+=            Styles            =
+==============================*/
+/* line 5, ../scss/partials/buttons/_styles.scss */
+.btn-divider {
+  cursor: default;
+}
+
+/* line 14, ../scss/partials/buttons/_styles.scss */
+.btn-divider,
+.btn-alpha,
+.btn-beta,
+.btn-gamma,
+.btn-delta,
+.btn-epsilon {
+  display: inline-block;
+  color: #222222;
+  border-radius: 2px;
+  background-color: #e8e8e8;
+  border: 0;
+  outline: 0;
+  text-align: center;
+  border: 1px solid #cfcfcf;
+  line-height: 16px;
+  line-height: 1rem;
+  -webkit-transition: all 0.2s;
+  -moz-transition: all 0.2s;
+  -o-transition: all 0.2s;
+  transition: all 0.2s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+/* line 33, ../scss/partials/buttons/_styles.scss */
+.btn-divider:not(.btn-divider):hover,
+.btn-alpha:not(.btn-divider):hover,
+.btn-beta:not(.btn-divider):hover,
+.btn-gamma:not(.btn-divider):hover,
+.btn-delta:not(.btn-divider):hover,
+.btn-epsilon:not(.btn-divider):hover {
+  color: #222222;
+  background-color: #dbdbdb;
+}
+/* line 38, ../scss/partials/buttons/_styles.scss */
+.btn-divider:focus,
+.btn-alpha:focus,
+.btn-beta:focus,
+.btn-gamma:focus,
+.btn-delta:focus,
+.btn-epsilon:focus {
+  outline: none;
+  box-shadow: 0 0 10px #c2c2c2;
+  -webkit-transition-duration: 0.05s;
+  -moz-transition-duration: 0.05s;
+  -o-transition-duration: 0.05s;
+  transition-duration: 0.05s;
+}
+/* line 46, ../scss/partials/buttons/_styles.scss */
+.btn-divider:disabled, .btn-divider:disabled:hover,
+.btn-alpha:disabled,
+.btn-alpha:disabled:hover,
+.btn-beta:disabled,
+.btn-beta:disabled:hover,
+.btn-gamma:disabled,
+.btn-gamma:disabled:hover,
+.btn-delta:disabled,
+.btn-delta:disabled:hover,
+.btn-epsilon:disabled,
+.btn-epsilon:disabled:hover {
+  background-color: #e8e8e8;
+  cursor: not-allowed;
+  color: #cccccc;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
+  opacity: 0.5;
+}
+/* line 53, ../scss/partials/buttons/_styles.scss */
+.btn-divider:disabled:focus, .btn-divider:disabled:hover:focus,
+.btn-alpha:disabled:focus,
+.btn-alpha:disabled:hover:focus,
+.btn-beta:disabled:focus,
+.btn-beta:disabled:hover:focus,
+.btn-gamma:disabled:focus,
+.btn-gamma:disabled:hover:focus,
+.btn-delta:disabled:focus,
+.btn-delta:disabled:hover:focus,
+.btn-epsilon:disabled:focus,
+.btn-epsilon:disabled:hover:focus {
+  box-shadow: none;
+}
+
+/* line 62, ../scss/partials/buttons/_styles.scss */
+.btn-beta,
+.btn-gamma,
+.btn-delta,
+.btn-epsilon {
+  color: white;
+  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+}
+/* line 67, ../scss/partials/buttons/_styles.scss */
+.btn-beta:not(.btn-divider):hover, .btn-beta:hover,
+.btn-gamma:not(.btn-divider):hover,
+.btn-gamma:hover,
+.btn-delta:not(.btn-divider):hover,
+.btn-delta:hover,
+.btn-epsilon:not(.btn-divider):hover,
+.btn-epsilon:hover {
+  color: white;
+}
+/* line 72, ../scss/partials/buttons/_styles.scss */
+.btn-beta:disabled, .btn-beta:disabled:hover,
+.btn-gamma:disabled,
+.btn-gamma:disabled:hover,
+.btn-delta:disabled,
+.btn-delta:disabled:hover,
+.btn-epsilon:disabled,
+.btn-epsilon:disabled:hover {
+  color: #cccccc;
+}
+
+/* line 77, ../scss/partials/buttons/_styles.scss */
+.btn-beta {
+  background-color: #0659a4;
+  border: 1px solid #05447d;
+}
+/* line 81, ../scss/partials/buttons/_styles.scss */
+.btn-beta:not(.btn-divider):hover {
+  background-color: #054c8b;
+}
+/* line 82, ../scss/partials/buttons/_styles.scss */
+.btn-beta:focus {
+  box-shadow: 0 0 10px #0659a4;
+}
+/* line 83, ../scss/partials/buttons/_styles.scss */
+.btn-beta:disabled, .btn-beta:disabled:hover {
+  background-color: #0659a4;
+}
+
+/* line 86, ../scss/partials/buttons/_styles.scss */
+.btn-gamma {
+  background-color: #177f12;
+  border: 1px solid #115b0d;
+}
+/* line 90, ../scss/partials/buttons/_styles.scss */
+.btn-gamma:not(.btn-divider):hover {
+  background-color: #13690f;
+}
+/* line 91, ../scss/partials/buttons/_styles.scss */
+.btn-gamma:focus {
+  box-shadow: 0 0 10px #177f12;
+}
+/* line 92, ../scss/partials/buttons/_styles.scss */
+.btn-gamma:disabled, .btn-gamma:disabled:hover {
+  background-color: #177f12;
+}
+
+/* line 95, ../scss/partials/buttons/_styles.scss */
+.btn-delta {
+  background-color: #a40606;
+  border: 1px solid #7d0505;
+}
+/* line 99, ../scss/partials/buttons/_styles.scss */
+.btn-delta:not(.btn-divider):hover {
+  background-color: #8b0505;
+}
+/* line 100, ../scss/partials/buttons/_styles.scss */
+.btn-delta:focus {
+  box-shadow: 0 0 10px #a40606;
+}
+/* line 101, ../scss/partials/buttons/_styles.scss */
+.btn-delta:disabled, .btn-delta:disabled:hover {
+  background-color: #a40606;
+}
+
+/* line 104, ../scss/partials/buttons/_styles.scss */
+.btn-epsilon {
+  background-color: #069ea4;
+  border: 1px solid #05787d;
+}
+/* line 108, ../scss/partials/buttons/_styles.scss */
+.btn-epsilon:not(.btn-divider):hover {
+  background-color: #05868b;
+}
+/* line 109, ../scss/partials/buttons/_styles.scss */
+.btn-epsilon:focus {
+  box-shadow: 0 0 10px #069ea4;
+}
+/* line 110, ../scss/partials/buttons/_styles.scss */
+.btn-epsilon:disabled, .btn-epsilon:disabled:hover {
+  background-color: #069ea4;
+}
+
+/*===============================
+=            General            =
+===============================*/
+/* line 5, ../scss/partials/buttons/_general.scss */
+.btn-holder {
+  text-align: center;
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+
+/* line 11, ../scss/partials/buttons/_general.scss */
+.btn-block {
+  display: block;
 }
 
 /*==========  Forms  ==========*/
@@ -1628,129 +1686,6 @@ select:-moz-focusring {
 /* line 115, ../scss/partials/form/_form.scss */
 select::-ms-expand {
   display: none;
-}
-
-/* line 5, ../scss/partials/form/_general.scss */
-.form-label {
-  margin-bottom: 0;
-}
-/* line 8, ../scss/partials/form/_general.scss */
-.form-label label {
-  line-height: 40px;
-  line-height: 2.5rem;
-}
-@media (min-width: 650px) {
-  /* line 5, ../scss/partials/form/_general.scss */
-  .form-label {
-    text-align: right;
-  }
-}
-
-/* line 19, ../scss/partials/form/_general.scss */
-.form-input,
-.form-select,
-.form-switch {
-  position: relative;
-  margin-bottom: 0;
-}
-
-/* line 25, ../scss/partials/form/_general.scss */
-.form-input:after {
-  position: absolute;
-  right: 10px;
-  top: 9px;
-}
-
-/* line 32, ../scss/partials/form/_general.scss */
-.form-select {
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  user-select: none;
-}
-/* line 35, ../scss/partials/form/_general.scss */
-.form-select:after {
-  content: "";
-  position: absolute;
-  top: 9px;
-  right: 12px;
-  z-index: 1;
-  color: #bbbbbb;
-  font-size: 16px;
-  font-size: 1rem;
-}
-/* line 47, ../scss/partials/form/_general.scss */
-.lt-ie10 .form-select:after {
-  display: none;
-}
-
-/* line 57, ../scss/partials/form/_general.scss */
-.form-switch input[type=checkbox]:checked + label:before {
-  background: #0659a4;
-}
-/* line 61, ../scss/partials/form/_general.scss */
-.form-switch input[type=checkbox]:checked + label:after {
-  left: 30px;
-}
-/* line 67, ../scss/partials/form/_general.scss */
-.form-switch input[type=checkbox] + label {
-  padding: 0;
-  color: rgba(0, 0, 0, 0);
-}
-/* line 71, ../scss/partials/form/_general.scss */
-.form-switch input[type=checkbox] + label:before {
-  border-radius: 20px;
-  width: 46px;
-}
-/* line 76, ../scss/partials/form/_general.scss */
-.form-switch input[type=checkbox] + label:after {
-  background: white;
-  content: '';
-  top: -1px;
-  left: -1px;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
-  border: 1px solid #cbcbcb;
-  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
-  opacity: 1;
-}
-
-@media (min-width: 650px) {
-  /* line 93, ../scss/partials/form/_general.scss */
-  .form-input-list {
-    margin-top: 8px;
-    margin-top: 0.5rem;
-  }
-}
-/* line 99, ../scss/partials/form/_general.scss */
-.form-input-list li + li {
-  margin-top: 5px;
-  margin-top: 0.3125rem;
-}
-
-/* line 105, ../scss/partials/form/_general.scss */
-.form-data {
-  line-height: 40px;
-  line-height: 2.5rem;
-}
-
-/* line 109, ../scss/partials/form/_general.scss */
-.form-actions {
-  margin-top: 20px;
-  margin-top: 1.25rem;
-}
-@media (min-width: 650px) {
-  /* line 109, ../scss/partials/form/_general.scss */
-  .form-actions {
-    margin-left: 42.36157%;
-  }
-}
-
-/* line 117, ../scss/partials/form/_general.scss */
-.form-required-field {
-  font-size: 14px;
-  font-size: 0.875rem;
 }
 
 /* line 2, ../scss/partials/form/_checkbox_radio.scss */
@@ -1985,6 +1920,129 @@ input[type=radio] + label:after {
   border-bottom-color: #eeeeee;
 }
 
+/* line 5, ../scss/partials/form/_general.scss */
+.form-label {
+  margin-bottom: 0;
+}
+/* line 8, ../scss/partials/form/_general.scss */
+.form-label label {
+  line-height: 40px;
+  line-height: 2.5rem;
+}
+@media (min-width: 650px) {
+  /* line 5, ../scss/partials/form/_general.scss */
+  .form-label {
+    text-align: right;
+  }
+}
+
+/* line 19, ../scss/partials/form/_general.scss */
+.form-input,
+.form-select,
+.form-switch {
+  position: relative;
+  margin-bottom: 0;
+}
+
+/* line 25, ../scss/partials/form/_general.scss */
+.form-input:after {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+}
+
+/* line 32, ../scss/partials/form/_general.scss */
+.form-select {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+/* line 35, ../scss/partials/form/_general.scss */
+.form-select:after {
+  content: "";
+  position: absolute;
+  top: 9px;
+  right: 12px;
+  z-index: 1;
+  color: #bbbbbb;
+  font-size: 16px;
+  font-size: 1rem;
+}
+/* line 47, ../scss/partials/form/_general.scss */
+.lt-ie10 .form-select:after {
+  display: none;
+}
+
+/* line 57, ../scss/partials/form/_general.scss */
+.form-switch input[type=checkbox]:checked + label:before {
+  background: #0659a4;
+}
+/* line 61, ../scss/partials/form/_general.scss */
+.form-switch input[type=checkbox]:checked + label:after {
+  left: 30px;
+}
+/* line 67, ../scss/partials/form/_general.scss */
+.form-switch input[type=checkbox] + label {
+  padding: 0;
+  color: rgba(0, 0, 0, 0);
+}
+/* line 71, ../scss/partials/form/_general.scss */
+.form-switch input[type=checkbox] + label:before {
+  border-radius: 20px;
+  width: 46px;
+}
+/* line 76, ../scss/partials/form/_general.scss */
+.form-switch input[type=checkbox] + label:after {
+  background: white;
+  content: '';
+  top: -1px;
+  left: -1px;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid #cbcbcb;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  opacity: 1;
+}
+
+@media (min-width: 650px) {
+  /* line 93, ../scss/partials/form/_general.scss */
+  .form-input-list {
+    margin-top: 8px;
+    margin-top: 0.5rem;
+  }
+}
+/* line 99, ../scss/partials/form/_general.scss */
+.form-input-list li + li {
+  margin-top: 5px;
+  margin-top: 0.3125rem;
+}
+
+/* line 105, ../scss/partials/form/_general.scss */
+.form-data {
+  line-height: 40px;
+  line-height: 2.5rem;
+}
+
+/* line 109, ../scss/partials/form/_general.scss */
+.form-actions {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+@media (min-width: 650px) {
+  /* line 109, ../scss/partials/form/_general.scss */
+  .form-actions {
+    margin-left: 42.36157%;
+  }
+}
+
+/* line 117, ../scss/partials/form/_general.scss */
+.form-required-field {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
 /*==========  Optional partials  ==========*/
 /*================================
 =            Tooltips            =
@@ -2154,34 +2212,6 @@ input[type=radio] + label:after {
 .lt-ie9 .accordion-content.accordion-show {
   height: auto;
   max-height: 1000px !important;
-}
-
-/*==================================
-=            Pagination            =
-==================================*/
-/* line 5, ../scss/partials/_pagination.scss */
-.pagination {
-  margin-bottom: 1.875em;
-}
-/* line 10, ../scss/partials/_pagination.scss */
-.pagination.pagination-center {
-  text-align: center;
-}
-/* line 13, ../scss/partials/_pagination.scss */
-.pagination.pagination-center ul {
-  display: inline-block;
-}
-/* line 18, ../scss/partials/_pagination.scss */
-.pagination.pagination-right {
-  text-align: right;
-}
-/* line 21, ../scss/partials/_pagination.scss */
-.pagination.pagination-right ul {
-  float: right;
-}
-/* line 26, ../scss/partials/_pagination.scss */
-.pagination a {
-  padding: 10px 18px;
 }
 
 /*===================================

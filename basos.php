@@ -650,7 +650,7 @@
                     <h1>Pagination</h1>
                     <p>These work with the button classes so you can use those to change color, size is controlled with specific pagination padding.</p>
                     <h2>Default pagination</h2>
-                    <div class="pagination">
+                    <div class="btn-container">
                         <a class="btn-alpha" href="#">&lsaquo;</a>
                         <a class="btn-alpha" href="#">1</a>
                         <a class="btn-alpha" href="#">2</a>
@@ -662,7 +662,7 @@
                         <a class="btn-alpha" href="#">&rsaquo;</a>
                     </div>
                     <h2>Centered pagination</h2>
-                    <div class="pagination pagination-center">
+                    <div class="btn-container-center">
                         <a class="btn-alpha" href="#">&lsaquo;</a>
                         <a class="btn-alpha" href="#">1</a>
                         <a class="btn-alpha" href="#">2</a>
@@ -674,7 +674,7 @@
                         <a class="btn-alpha" href="#">&rsaquo;</a>
                     </div>
                     <h2>Right pagination</h2>
-                    <div class="pagination pagination-right">
+                    <div class="btn-container-right">
                         <a class="btn-alpha" href="#">&lsaquo;</a>
                         <a class="btn-alpha" href="#">1</a>
                         <a class="btn-alpha" href="#">2</a>
@@ -686,7 +686,7 @@
                         <a class="btn-alpha" href="#">&rsaquo;</a>
                     </div>
                     <h2>Button group pagination</h2>
-                    <div class="pagination">
+                    <div class="btn-container">
                         <ul class="btn-group">
                             <li><a class="btn-alpha" href="#">&lsaquo;</a></li>
                             <li><a class="btn-alpha" href="#">1</a></li>
@@ -700,7 +700,7 @@
                         </ul>
                     </div>
                     <h2>Centered button group pagination</h2>
-                    <div class="pagination pagination-center">
+                    <div class="btn-container-center">
                         <ul class="btn-group">
                             <li><a class="btn-alpha" href="#">&lsaquo;</a></li>
                             <li><a class="btn-alpha" href="#">1</a></li>
@@ -714,7 +714,7 @@
                         </ul>
                     </div>
                     <h2>Right button group pagination</h2>
-                    <div class="pagination pagination-right">
+                    <div class="btn-container-right">
                         <ul class="btn-group">
                             <li><a class="btn-alpha" href="#">&lsaquo;</a></li>
                             <li><a class="btn-alpha" href="#">1</a></li>

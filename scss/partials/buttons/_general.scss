@@ -1,0 +1,13 @@
+/*===============================
+=            General            =
+===============================*/
+
+.btn-holder {
+    text-align: center;
+
+    @include rem(margin-top, 40px);
+}
+
+.btn-block {
+    display: block;
+}

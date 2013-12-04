@@ -1,0 +1,25 @@
+/*=============================
+=            Sized            =
+=============================*/
+
+.btn-small {
+    @include rem(padding, 8px 30px);
+}
+
+.btn-medium {
+    @include rem(padding, 12px 35px);
+
+    @include breakpoint(beta-and-up) {
+        @include rem(padding, 14px 35px);
+        @include rem(font-size, 17px);
+    }
+}
+
+.btn-large {
+    @include rem(padding, 15px 40px);
+
+    @include breakpoint(beta-and-up) {
+        @include rem(padding, 18px 50px);
+        @include rem(font-size, 18px);
+    }
+}

@@ -55,3 +55,19 @@
         }
     }
 }
+
+.cookie-notification {
+    background: #eeeeee;
+    text-align: center;
+
+    @include rem(padding, 20px 0);
+    @include rem(margin-bottom, 40px);
+
+    .btn-container-center {
+        margin: 0;
+    }
+
+    .btn-group {
+        @include rem(margin, 10px 0 0 0);
+    }
+}

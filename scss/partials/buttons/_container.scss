@@ -1,0 +1,29 @@
+/*=================================
+=            Container            =
+=================================*/
+
+[class|=btn-container] {
+    @extend .clearfix;
+
+    margin-bottom: $btn-container-margin-bottom;
+
+    a {
+        padding: $btn-container-padding;
+    }
+}
+
+.btn-container-center {
+    text-align: center;
+
+    ul {
+        display: inline-block;
+    }
+}
+
+.btn-container-right {
+    text-align: right;
+
+    ul {
+        float: right;
+    }
+}

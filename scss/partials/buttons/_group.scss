@@ -1,0 +1,33 @@
+/*=============================
+=            Group            =
+=============================*/
+
+.btn-group {
+    @extend .list-inline;
+    @extend .clearfix;
+
+    @include rem(margin, 0 0 30px 0);
+
+    > li {
+        margin: 0 0 0 -1px;
+        float: left;
+
+        .btn {
+            border-radius: 0;
+        }
+
+        &:first-child {
+            margin: 0;
+
+            .btn {
+                border-radius: $btn-border-radius 0 0 $btn-border-radius;
+            }
+        }
+
+        &:last-child {
+            .btn {
+                border-radius: 0 $btn-border-radius $btn-border-radius 0;
+            }
+        }
+    }
+}

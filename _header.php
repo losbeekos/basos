@@ -45,6 +45,17 @@
                 </ul>
             </div>
         <![endif]-->
+        <div class="cookie-notification">
+            <div class="container">
+                <p class="h4">Wij gebruiken cookies om uw gebruikerservaring te verbeteren.</p>
+                <div class="btn-container-center">
+                    <ul class="btn-group">
+                        <li><a id="cookie-notification-accept" class="btn-beta">akkoord</a></li>
+                        <li><a id="cookie-notification-decline" class="btn-alpha">niet akkoord</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
 
         <div class="container">
             <header class="header">
