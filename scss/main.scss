@@ -1,76 +1,10 @@
+/*============================
+=            Main            =
+============================*/
+
 @charset "UTF-8";
 
-/*====================================
-=            Main project            =
-====================================*/
-
-
-/*==========  Settings  ==========*/
-@import "settings";
-
-
-/*==========  Compass Dependencies  ==========*/
-@import "compass";
-@import "compass/css3/user-interface";
-@import "susy";
-
-
-/*==========  Custom Dependencies  ==========*/
-@import "dependencies/normalize";
-@import "dependencies/h5bp";
-@import "dependencies/helpers";
-@import "dependencies/grid";
-@import "dependencies/fonts";
-
-
-/*==========  Partials  ==========*/
-@import "partials/typography";
-@import "partials/tables";
-@import "partials/layout";
-@import "partials/header";
-@import "partials/footer";
-@import "partials/navigation";
-@import "partials/tabs";
-@import "partials/notifications";
-@import "partials/spotlight";
-@import "partials/teasers";
-@import "partials/dropdowns";
-
-
-/*==========  Buttons  ==========*/
-@import "partials/buttons/container";
-@import "partials/buttons/group";
-@import "partials/buttons/sizes";
-@import "partials/buttons/styles";
-@import "partials/buttons/general";
-
-
-/*==========  Forms  ==========*/
-@import "partials/form/form";
-@import "partials/form/checkbox_radio";
-@import "partials/form/placeholder";
-@import "partials/form/validation";
-@import "partials/form/general";
-
-
-/*==========  Optional partials  ==========*/
-@import "partials/tooltips";
-@import "partials/accordion";
-@import "partials/breadcrumbs";
-
-
-/*==========  Modals (optional)  ==========*/
-@import "partials/modals/modals";
-// Delete/comment effects you don't use,
-// to avoid a bloated generated CSS file.
-@import "partials/modals/effects/slip";
-@import "partials/modals/effects/slide";
-@import "partials/modals/effects/flip";
-@import "partials/modals/effects/fadescale";
-@import "partials/modals/effects/superscale";
-
-
-/*==========  Print (keep in last position)  ==========*/
-@import "partials/print";
-
-
+@import "dependencies";
+@import "base";
+@import "project";
+@import "base/print";
