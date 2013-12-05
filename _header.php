@@ -6,17 +6,16 @@
     <head>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-        <title>Page title</title>
+        <title>Basos by @losbeekos</title>
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 
         <link rel="stylesheet" href="css/main.css" />
-
-        <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144-precomposed.png" />
-        <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114-precomposed.png" />
-        <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72-precomposed.png" />
-        <link rel="apple-touch-icon" href="apple-touch-icon-precomposed.png" />
         <link rel="shortcut icon" href="favicon.ico" />
+
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="">
 
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="image-144x144px.png" />
@@ -27,18 +26,23 @@
         <meta property="og:site_name" content="Site name" />
         <meta property="og:type" content="website" />
 
-        <meta property="twitter:card" content="app" />
-        <meta property="twitter:site" content="@twitteraccount" />
+        <meta name="twitter:card" content="app">
+        <meta name="twitter:site" content="@site_account">
+        <meta name="twitter:creator" content="@losbeekos">
+        <meta name="twitter:url" content="Current URL">
+        <meta name="twitter:title" content="">
+        <meta name="twitter:description" content="">
+        <meta name="twitter:image" content="image-114x114px.png">
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
 
-        <!--[if (gte IE 7)&(lte IE 8)]>
+        <!--[if lt IE 9]>
             <script src="js/vendor/respond.min.js"></script>
             <script src="js/plugins/selectivizr/selectivizr.min.js"></script>
         <![endif]-->
     </head>
     <body>
-        <!--[if lte IE 8]>
+        <!--[if lt IE 9]>
             <div class="notification error">
                 <ul>
                     <li>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</li>
