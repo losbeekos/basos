@@ -4,6 +4,7 @@
 
 
 /*==========  Project  ==========*/
+
 $gradient                  : false;
 $ten                       : 0.625em;
 $base-font-size            : 16px;
@@ -23,6 +24,7 @@ $color-epsilon             : #069ea4;
 
 
 /*==========  Container  ==========*/
+
 $container-min-width              : $ten*32;
 $container-max-width              : $ten*128;
 $container-margin                 : 0 auto;
@@ -32,6 +34,7 @@ $container-gamma-padding          : $ten*4;
 
 
 /*==========  Susy grid  ==========*/
+
 $total-columns : 12;
 $column-width  : 5.1em;   // 12 * 5.1 = 1200px
 $gutter-width  : $ten*2;
@@ -39,6 +42,7 @@ $grid-padding  : 0;
 
 
 /*==========  Buttons  ==========*/
+
 $btn-container-padding       : $base-padding $base-padding*1.8;
 $btn-container-margin-bottom : $ten*3;
 $btn-gradient                : $gradient;
@@ -53,6 +57,7 @@ $btn-bg-color-epsilon        : $color-epsilon;
 /*==========  Icons  ==========*/
 // Use Fontello font icons.
 // fontello.com
+
 $icon-notification-info       : '';
 $icon-notification-success    : '✔';
 $icon-notification-error      : '✖';
@@ -63,6 +68,7 @@ $icon-form-select             : '';
 
 
 /*==========  Tables  ==========*/
+
 $table-margin-bottom  : $ten*3; // 30px
 $table-padding        : $base-padding;
 $table-border-color   : #dddddd;
@@ -72,6 +78,7 @@ $table-hover-bg-color : #f6f6f6;
 
 
 /*==========  Tooltips  ==========*/
+
 $tooltip-width                  : 220px; // 220px
 $tooltip-arrow-width            : 5px; // 5px
 $tooltip-transition-speed       : $base-transition-speed;
@@ -83,6 +90,7 @@ $tooltip-font-color             : $white;
 
 
 /*==========  Modals  ==========*/
+
 $modal-overlay-bg-color      : $black;
 $modal-overlay-opacity       : 0.6;
 $modal-content-bg-color      : $white;
@@ -91,6 +99,7 @@ $modal-content-border-radius : $base-border-radius;
 
 
 /*==========  Accordion  ==========*/
+
 $accordion-transition-speed    : $base-transition-speed;
 $accordion-padding             : $base-padding;
 $accordion-border-color        : darken($btn-bg-color-alpha, 10%);
@@ -102,6 +111,7 @@ $accordion-trigger-font-color  : $color-text;
 
 
 /*==========  Breadcrumbs  ==========*/
+
 $breadcrumbs-bg-color      : #f5f5f5;
 $breadcrumbs-padding       : $ten*1.5 $ten*2; // 15px 20px
 $breadcrumbs-margin        : $ten; // 10px

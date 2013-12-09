@@ -42,26 +42,29 @@
         <![endif]-->
     </head>
     <body>
-        <!--[if lt IE 9]>
-            <div class="notification error">
-                <ul>
-                    <li>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</li>
-                </ul>
-            </div>
-        <![endif]-->
-        <div class="cookie-notification">
-            <div class="container">
-                <p class="h4">Wij gebruiken cookies om uw gebruikerservaring te verbeteren.</p>
-                <div class="btn-container-center">
-                    <ul class="btn-group">
-                        <li><a id="cookie-notification-accept" class="btn-beta">akkoord</a></li>
-                        <li><a id="cookie-notification-decline" class="btn-alpha">niet akkoord</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <a href="#main" class="show-screenreaders">Skip to main content</a>
 
         <div class="container">
+            <!--[if lt IE 9]>
+                <div class="notification error">
+                    <ul>
+                        <li>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</li>
+                    </ul>
+                </div>
+            <![endif]-->
+
+            <!-- <div class="cookie-notification">
+                <div class="container">
+                    <p class="h4">Wij gebruiken cookies om uw gebruikerservaring te verbeteren.</p>
+                    <div class="btn-container-center">
+                        <ul class="btn-group">
+                            <li><a id="cookie-notification-accept" class="btn-beta">akkoord</a></li>
+                            <li><a id="cookie-notification-decline" class="btn-alpha">niet akkoord</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div> -->
+
             <header class="header">
                 <a class="logo" href="/"><img src="img/logo.png" alt="" /></a>
                 <nav class="nav-primary">
@@ -73,4 +76,4 @@
                 </nav>
             </header>
 
-            <main role="main">
+            <main id="main" role="main">

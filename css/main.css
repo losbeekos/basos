@@ -520,16 +520,8 @@ textarea {
 /*======================================
 =            Helper classes            =
 ======================================*/
-/*==========  Hide classes  ==========*/
-@media (min-width: 650px) and (max-width: 900px) {
-  /* line 120, ../scss/base/_helpers.scss */
-  .hide-medium,
-  .hide-small-and-medium {
-    display: none;
-  }
-}
 /*==========  Unstyled list  ==========*/
-/* line 127, ../scss/base/_helpers.scss */
+/* line 118, ../scss/base/_helpers.scss */
 .list-unstyled, .list-inline, .tabs, .btn-group, .dropdown ul, .parsley-error-list {
   margin: 0;
   padding: 0;
@@ -537,7 +529,7 @@ textarea {
 }
 
 /*==========  Inline list  ==========*/
-/* line 138, ../scss/base/_helpers.scss */
+/* line 130, ../scss/base/_helpers.scss */
 .list-inline li, .tabs li, .btn-group li {
   display: inline;
   margin-right: 10px;
@@ -546,18 +538,83 @@ textarea {
 
 /*==========  Image replacement  ==========*/
 /*==========  Clearfix  ==========*/
-/* line 161, ../scss/base/_helpers.scss */
+/* line 157, ../scss/base/_helpers.scss */
 .clearfix:before, [class|="column"]:before, [class|=btn-container]:before, .btn-group:before, form:before, .form-row:before, .clearfix:after, [class|="column"]:after, [class|=btn-container]:after, .btn-group:after, form:after, .form-row:after {
   content: '';
   display: table;
 }
-/* line 166, ../scss/base/_helpers.scss */
+/* line 162, ../scss/base/_helpers.scss */
 .clearfix:after, [class|="column"]:after, [class|=btn-container]:after, .btn-group:after, form:after, .form-row:after {
   clear: both;
 }
 
+/*==========  Hidden  ==========*/
+/* line 170, ../scss/base/_helpers.scss */
+.hidden {
+  display: none !important;
+  visibility: hidden;
+}
+
+/* line 175, ../scss/base/_helpers.scss */
+.visuallyhidden, .show-screenreaders {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 187, ../scss/base/_helpers.scss */
+.visuallyhidden.focusable:active, .focusable.show-screenreaders:active,
+.visuallyhidden.focusable:focus,
+.focusable.show-screenreaders:focus {
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto;
+}
+
+/* line 196, ../scss/base/_helpers.scss */
+.invisible {
+  visibility: hidden;
+}
+
+/*==========  Hide classes  ==========*/
+@media (max-width: 650px) {
+  /* line 205, ../scss/base/_helpers.scss */
+  .hide-alpha,
+  .hide-alpha-and-beta {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
+@media (min-width: 650px) and (max-width: 900px) {
+  /* line 219, ../scss/base/_helpers.scss */
+  .hide-beta,
+  .hide-alpha-and-beta {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+  }
+}
 /*==========  No webkit flickr  ==========*/
-/* line 173, ../scss/base/_helpers.scss */
+/* line 238, ../scss/base/_helpers.scss */
 .no-webkit-flicker {
   -webkit-transform: translate3d(0, 0, 0);
 }
@@ -566,7 +623,7 @@ textarea {
 =            Default Susy grid (http://susy.oddbird.net)            =
 ===================================================================*/
 /*==========  Grid class  ==========*/
-/* line 7, ../scss/base/_grid.scss */
+/* line 8, ../scss/base/_grid.scss */
 .grid {
   position: relative;
   *zoom: 1;
@@ -584,24 +641,24 @@ textarea {
   clear: both;
 }
 
-/* line 13, ../scss/base/_grid.scss */
+/* line 14, ../scss/base/_grid.scss */
 [class|="column"] {
   margin-bottom: 1.25em;
 }
-/* line 18, ../scss/base/_grid.scss */
+/* line 19, ../scss/base/_grid.scss */
 [class|="column"].column-omega {
   float: right;
   margin-right: 0;
   *margin-left: -1.25em;
   display: inline;
 }
-/* line 21, ../scss/base/_grid.scss */
+/* line 22, ../scss/base/_grid.scss */
 .lt-ie9 [class|="column"].column-omega {
   float: left !important;
 }
 
 /*==========  Columns  ==========*/
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-1 {
   width: 100%;
   float: left;
@@ -609,7 +666,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-1 {
     width: 6.80454%;
     float: left;
@@ -618,7 +675,7 @@ textarea {
   }
 }
 
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-2 {
   width: 100%;
   float: left;
@@ -626,7 +683,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-2 {
     width: 15.27685%;
     float: left;
@@ -635,7 +692,7 @@ textarea {
   }
 }
 
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-3 {
   width: 100%;
   float: left;
@@ -643,7 +700,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-3 {
     width: 23.74917%;
     float: left;
@@ -652,7 +709,7 @@ textarea {
   }
 }
 
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-4 {
   width: 100%;
   float: left;
@@ -660,7 +717,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-4 {
     width: 32.22148%;
     float: left;
@@ -669,7 +726,7 @@ textarea {
   }
 }
 
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-5 {
   width: 100%;
   float: left;
@@ -677,7 +734,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-5 {
     width: 40.6938%;
     float: left;
@@ -686,7 +743,7 @@ textarea {
   }
 }
 
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-6 {
   width: 100%;
   float: left;
@@ -694,7 +751,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-6 {
     width: 49.16611%;
     float: left;
@@ -703,7 +760,7 @@ textarea {
   }
 }
 
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-7 {
   width: 100%;
   float: left;
@@ -711,7 +768,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-7 {
     width: 57.63843%;
     float: left;
@@ -720,7 +777,7 @@ textarea {
   }
 }
 
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-8 {
   width: 100%;
   float: left;
@@ -728,7 +785,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-8 {
     width: 66.11074%;
     float: left;
@@ -737,7 +794,7 @@ textarea {
   }
 }
 
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-9 {
   width: 100%;
   float: left;
@@ -745,7 +802,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-9 {
     width: 74.58306%;
     float: left;
@@ -754,7 +811,7 @@ textarea {
   }
 }
 
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-10 {
   width: 100%;
   float: left;
@@ -762,7 +819,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-10 {
     width: 83.05537%;
     float: left;
@@ -771,7 +828,7 @@ textarea {
   }
 }
 
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-11 {
   width: 100%;
   float: left;
@@ -779,7 +836,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-11 {
     width: 91.52769%;
     float: left;
@@ -788,7 +845,7 @@ textarea {
   }
 }
 
-/* line 29, ../scss/base/_grid.scss */
+/* line 31, ../scss/base/_grid.scss */
 .column-12 {
   width: 100%;
   float: left;
@@ -796,7 +853,7 @@ textarea {
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 29, ../scss/base/_grid.scss */
+  /* line 31, ../scss/base/_grid.scss */
   .column-12 {
     width: 100%;
     float: left;

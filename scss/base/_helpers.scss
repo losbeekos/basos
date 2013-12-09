@@ -4,12 +4,12 @@
 
 
 /*==========  REM  ==========*/
-
 // Source: https://github.com/bitmanic/rem
 // Baseline, measured in pixels
 // The value should be the same as the font-size value for the html element
 // If the html element's font-size is set to 62.5% (of the browser's default font-size of 16px),
 // then the variable below would be 10px.
+
 @mixin rem($property, $px-values) {
     // Convert the baseline into rems
     $baseline-rem: $base-font-size / 1rem * 1;
@@ -35,6 +35,7 @@
 
 
 /*==========  Breakpoints  ==========*/
+
 @mixin breakpoint($point) {
   @if $point == gamma-and-up {
     @media (min-width: 900px) { @content; }
@@ -51,6 +52,10 @@
   @else if $point == gamma {
     @media (max-width: 650px)  { @content; }
   }
+
+  @else if $point == alpha {
+    @media (max-width: 650px)  { @content; }
+  }
 }
 
 
@@ -59,6 +64,7 @@
 // @param height          :  px, em
 // @param direction       :  up, down, left, right
 // @param color           :  hex, rgb
+
 @mixin arrow($width: 20px, $height: 20px, $direction: up, $color: red) {
     width: 0;
     height: 0;
@@ -107,23 +113,8 @@
 ======================================*/
 
 
-/*==========  Hide classes  ==========*/
-@include breakpoint(alpha) {
-    .hide-small,
-    .hide-small-and-medium {
-        display: none;
-    }
-}
-
-@include breakpoint(beta) {
-    .hide-medium,
-    .hide-small-and-medium {
-        display: none;
-    }
-}
-
-
 /*==========  Unstyled list  ==========*/
+
 .list-unstyled {
     margin: 0;
     padding: 0;
@@ -132,6 +123,7 @@
 
 
 /*==========  Inline list  ==========*/
+
 .list-inline {
     @extend .list-unstyled;
 
@@ -141,7 +133,9 @@
     }
 }
 
+
 /*==========  Image replacement  ==========*/
+
 %ir {
     background-color: transparent;
     border: 0;
@@ -155,7 +149,9 @@
     }
 }
 
+
 /*==========  Clearfix  ==========*/
+
 .clearfix {
     &:before,
     &:after {
@@ -167,6 +163,75 @@
         clear: both;
     }
 }
+
+
+/*==========  Hidden  ==========*/
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+
+/*==========  Hide classes  ==========*/
+
+@include breakpoint(alpha) {
+    .hide-alpha,
+    .hide-alpha-and-beta {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+}
+
+@include breakpoint(beta) {
+    .hide-beta,
+    .hide-alpha-and-beta {
+        border: 0;
+        clip: rect(0 0 0 0);
+        height: 1px;
+        margin: -1px;
+        overflow: hidden;
+        padding: 0;
+        position: absolute;
+        width: 1px;
+    }
+}
+
+.show-screenreaders {
+    @extend .visuallyhidden;
+}
+
 
 /*==========  No webkit flickr  ==========*/
 
