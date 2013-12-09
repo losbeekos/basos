@@ -1603,19 +1603,6 @@ h6, .h6 {
   margin-left: -1px;
   float: left;
 }
-@media (max-width: 650px) {
-  /* line 24, ../scss/base/buttons/_group.scss */
-  .btn-group-inline > li {
-    float: none;
-    margin-left: 0;
-  }
-  /* line 34, ../scss/base/buttons/_group.scss */
-  .btn-group-inline > li a,
-  .btn-group-inline > li span {
-    margin: -1px 0 0 0;
-    display: block;
-  }
-}
 /* line 40, ../scss/base/buttons/_group.scss */
 .btn-group-inline > li:first-child {
   margin: 0;

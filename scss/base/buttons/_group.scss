@@ -26,16 +26,16 @@
         margin-left: -1px;
         float: left;
 
-        @include breakpoint(alpha) {
-            float: none;
-            margin-left: 0;
+        // @include breakpoint(alpha) {
+        //     float: none;
+        //     margin-left: 0;
 
-            a,
-            span {
-                margin: -1px 0 0 0;
-                display: block;
-            }
-        }
+        //     a,
+        //     span {
+        //         margin: -1px 0 0 0;
+        //         display: block;
+        //     }
+        // }
 
         &:first-child {
             margin: 0;
