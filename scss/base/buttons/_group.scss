@@ -14,12 +14,26 @@
     }
 }
 
+
+/*==========  Inline  ==========*/
+
 .btn-group-inline {
     @extend .list-inline;
 
     > li {
-        margin: 0 0 0 -1px;
+        margin-right: 0;
+        margin-left: -1px;
         float: left;
+
+        @include breakpoint(alpha) {
+            float: none;
+            margin-left: 0;
+
+            a {
+                margin: -1px 0 0 0;
+                display: block;
+            }
+        }
 
         &:first-child {
             margin: 0;
@@ -36,6 +50,8 @@
         }
     }
 }
+
+/*==========  Block  ==========*/
 
 .btn-group-block {
     @extend .list-unstyled;

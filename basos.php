@@ -107,48 +107,33 @@
                     </ul>
 
                     <h2>Button group block</h2>
+                    <p>These will span there parent column.</p>
                     <div class="grid clearfix">
-                        <div class="column-3">
+                        <div class="column-4">
                             <ul class="btn-group btn-group-block">
                                 <li><a class="btn-alpha btn-medium" href="#">button</a></li>
                                 <li><a class="btn-alpha btn-medium" href="#">button</a></li>
                                 <li><a class="btn-alpha btn-medium" href="#">button</a></li>
                                 <li><a class="btn-alpha btn-medium" href="#">button</a></li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="grid clearfix">
-                        <div class="column-3">
                             <ul class="btn-group btn-group-block">
                                 <li><a class="btn-beta btn-medium" href="#">button</a></li>
                                 <li><a class="btn-beta btn-medium" href="#">button</a></li>
                                 <li><a class="btn-beta btn-medium" href="#">button</a></li>
                                 <li><a class="btn-beta btn-medium" href="#">button</a></li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="grid clearfix">
-                        <div class="column-3">
                             <ul class="btn-group btn-group-block">
                                 <li><a class="btn-gamma btn-medium" href="#">button</a></li>
                                 <li><a class="btn-gamma btn-medium" href="#">button</a></li>
                                 <li><a class="btn-gamma btn-medium" href="#">button</a></li>
                                 <li><a class="btn-gamma btn-medium" href="#">button</a></li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="grid clearfix">
-                        <div class="column-3">
                             <ul class="btn-group btn-group-block">
                                 <li><a class="btn-delta btn-medium" href="#">button</a></li>
                                 <li><a class="btn-delta btn-medium" href="#">button</a></li>
                                 <li><a class="btn-delta btn-medium" href="#">button</a></li>
                                 <li><a class="btn-delta btn-medium" href="#">button</a></li>
                             </ul>
-                        </div>
-                    </div>
-                    <div class="grid clearfix">
-                        <div class="column-3">
                             <ul class="btn-group btn-group-block">
                                 <li><a class="btn-epsilon btn-medium" href="#">button</a></li>
                                 <li><a class="btn-epsilon btn-medium" href="#">button</a></li>
@@ -739,7 +724,7 @@
                     </div>
                     <h2>Button group pagination</h2>
                     <div class="btn-container">
-                        <ul class="btn-group">
+                        <ul class="btn-group btn-group-inline">
                             <li><a class="btn-alpha" href="#">&lsaquo;</a></li>
                             <li><a class="btn-alpha" href="#">1</a></li>
                             <li><a class="btn-alpha" href="#">2</a></li>
@@ -753,7 +738,7 @@
                     </div>
                     <h2>Centered button group pagination</h2>
                     <div class="btn-container-center">
-                        <ul class="btn-group">
+                        <ul class="btn-group btn-group-inline">
                             <li><a class="btn-alpha" href="#">&lsaquo;</a></li>
                             <li><a class="btn-alpha" href="#">1</a></li>
                             <li><a class="btn-alpha" href="#">2</a></li>
@@ -767,7 +752,7 @@
                     </div>
                     <h2>Right button group pagination</h2>
                     <div class="btn-container-right">
-                        <ul class="btn-group">
+                        <ul class="btn-group btn-group-inline">
                             <li><a class="btn-alpha" href="#">&lsaquo;</a></li>
                             <li><a class="btn-alpha" href="#">1</a></li>
                             <li><a class="btn-alpha" href="#">2</a></li>
@@ -920,7 +905,7 @@
 
                 <section>
                     <h1>Tooltips</h1>
-                    <ul class="btn-group">
+                    <ul class="btn-group btn-group-inline">
                         <li><a class="btn-alpha btn-small tooltip" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a></li>
                         <li><a class="btn-alpha btn-small tooltip" data-tooltip-position="right" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">right</a></li>
                         <li><a class="btn-alpha btn-small tooltip" data-tooltip-position="bottom" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">bottom</a></li>
@@ -933,7 +918,7 @@
 
                 <section>
                     <h1>Dropdowns</h1>
-                    <ul class="btn-group">
+                    <ul class="btn-group btn-group-inline">
                         <li>
                             <div class="dropdown">
                                 <a class="btn-alpha btn-small">dropdown</a>
@@ -971,13 +956,13 @@
                     <h1>Modals</h1>
                     <br />
                     <h2 class="h3">Slip effects</h2>
-                    <ul class="btn-group">
+                    <ul class="btn-group btn-group-inline">
                         <li><a class="btn-alpha btn-small modal-trigger" data-modal-id="modal-1">slip-top</a></li>
                         <li><a class="btn-alpha btn-small modal-trigger" data-modal-id="modal-2">slip-bottom</a></li>
                     </ul>
                     <br />
                     <h2 class="h3">Slide effects</h2>
-                    <ul class="btn-group">
+                    <ul class="btn-group btn-group-inline">
                         <li><a class="btn-alpha btn-small modal-trigger" data-modal-id="modal-3">slide-top</a></li>
                         <li><a class="btn-alpha btn-small modal-trigger" data-modal-id="modal-4">slide-right</a></li>
                         <li><a class="btn-alpha btn-small modal-trigger" data-modal-id="modal-5">slide-bottom</a></li>
@@ -985,13 +970,13 @@
                     </ul>
                     <br />
                     <h2 class="h3">Flip effects</h2>
-                    <ul class="btn-group">
+                    <ul class="btn-group btn-group-inline">
                         <li><a class="btn-alpha btn-small modal-trigger" data-modal-id="modal-7">flip-horizontal</a></li>
                         <li><a class="btn-alpha btn-small modal-trigger" data-modal-id="modal-8">flip-vertical</a></li>
                     </ul>
                     <br />
                     <h2 class="h3">Scale effects</h2>
-                    <ul class="btn-group">
+                    <ul class="btn-group btn-group-inline">
                         <li><a class="btn-alpha btn-small modal-trigger" data-modal-id="modal-9">fadescale</a></li>
                         <li><a class="btn-alpha btn-small modal-trigger" data-modal-id="modal-10">superscaled</a></li>
                     </ul>
