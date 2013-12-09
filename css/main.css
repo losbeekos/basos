@@ -1590,62 +1590,69 @@ h6, .h6 {
   margin: 0 0 30px 0;
   margin: 0 0 1.875rem 0;
 }
-/* line 11, ../scss/base/buttons/_group.scss */
-.btn-group > li a {
+/* line 12, ../scss/base/buttons/_group.scss */
+.btn-group > li a,
+.btn-group > li span {
   border-radius: 0;
 }
 
 /*==========  Inline  ==========*/
-/* line 23, ../scss/base/buttons/_group.scss */
+/* line 24, ../scss/base/buttons/_group.scss */
 .btn-group-inline > li {
   margin-right: 0;
   margin-left: -1px;
   float: left;
 }
 @media (max-width: 650px) {
-  /* line 23, ../scss/base/buttons/_group.scss */
+  /* line 24, ../scss/base/buttons/_group.scss */
   .btn-group-inline > li {
     float: none;
     margin-left: 0;
   }
-  /* line 32, ../scss/base/buttons/_group.scss */
-  .btn-group-inline > li a {
+  /* line 34, ../scss/base/buttons/_group.scss */
+  .btn-group-inline > li a,
+  .btn-group-inline > li span {
     margin: -1px 0 0 0;
     display: block;
   }
 }
-/* line 38, ../scss/base/buttons/_group.scss */
+/* line 40, ../scss/base/buttons/_group.scss */
 .btn-group-inline > li:first-child {
   margin: 0;
 }
-/* line 41, ../scss/base/buttons/_group.scss */
-.btn-group-inline > li:first-child a {
+/* line 44, ../scss/base/buttons/_group.scss */
+.btn-group-inline > li:first-child a,
+.btn-group-inline > li:first-child span {
   border-radius: 2px 0 0 2px;
 }
-/* line 47, ../scss/base/buttons/_group.scss */
-.btn-group-inline > li:last-child a {
+/* line 51, ../scss/base/buttons/_group.scss */
+.btn-group-inline > li:last-child a,
+.btn-group-inline > li:last-child span {
   border-radius: 0 2px 2px 0;
 }
 
 /*==========  Block  ==========*/
-/* line 59, ../scss/base/buttons/_group.scss */
+/* line 63, ../scss/base/buttons/_group.scss */
 .btn-group-block > li {
   margin-top: -1px;
 }
-/* line 62, ../scss/base/buttons/_group.scss */
-.btn-group-block > li a {
+/* line 67, ../scss/base/buttons/_group.scss */
+.btn-group-block > li a,
+.btn-group-block > li span {
   display: block;
 }
-/* line 66, ../scss/base/buttons/_group.scss */
+/* line 71, ../scss/base/buttons/_group.scss */
 .btn-group-block > li:first-child {
   margin: 0;
 }
-/* line 69, ../scss/base/buttons/_group.scss */
-.btn-group-block > li:first-child a {
+/* line 75, ../scss/base/buttons/_group.scss */
+.btn-group-block > li:first-child a,
+.btn-group-block > li:first-child span {
   border-radius: 2px 2px 0 0;
 }
-/* line 75, ../scss/base/buttons/_group.scss */
-.btn-group-block > li:last-child a {
+/* line 82, ../scss/base/buttons/_group.scss */
+.btn-group-block > li:last-child a,
+.btn-group-block > li:last-child span {
   border-radius: 0 0 2px 2px;
 }
 

@@ -8,7 +8,8 @@
     @include rem(margin, 0 0 30px 0);
 
     > li {
-        a {
+        a,
+        span {
             border-radius: 0;
         }
     }
@@ -29,7 +30,8 @@
             float: none;
             margin-left: 0;
 
-            a {
+            a,
+            span {
                 margin: -1px 0 0 0;
                 display: block;
             }
@@ -38,13 +40,15 @@
         &:first-child {
             margin: 0;
 
-            a {
+            a,
+            span {
                 border-radius: $btn-border-radius 0 0 $btn-border-radius;
             }
         }
 
         &:last-child {
-            a {
+            a,
+            span {
                 border-radius: 0 $btn-border-radius $btn-border-radius 0;
             }
         }
@@ -59,20 +63,23 @@
     > li {
         margin-top: -1px;
 
-        a {
+        a,
+        span {
             display: block;
         }
 
         &:first-child {
             margin: 0;
 
-            a {
+            a,
+            span {
                 border-radius: $btn-border-radius $btn-border-radius 0 0;
             }
         }
 
         &:last-child {
-            a {
+            a,
+            span {
                 border-radius: 0 0 $btn-border-radius $btn-border-radius;
             }
         }
