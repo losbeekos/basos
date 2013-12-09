@@ -1398,10 +1398,6 @@ h6, .h6 {
   border-top: 1px solid #cfcfcf;
 }
 /* line 57, ../scss/base/_accordion.scss */
-.accordion-content.accordion-show.accordion-force-maxheight {
-  max-height: 1000px !important;
-}
-/* line 61, ../scss/base/_accordion.scss */
 .lt-ie9 .accordion-content.accordion-show {
   height: auto;
   max-height: 1000px !important;

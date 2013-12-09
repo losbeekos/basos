@@ -54,10 +54,6 @@
     &.accordion-show {
         border-top: 1px solid $accordion-border-color;
 
-        &.accordion-force-maxheight {
-            max-height: 1000px !important;
-        }
-
         .lt-ie9 & {
             height: auto;
             max-height: 1000px !important;

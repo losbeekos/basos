@@ -438,23 +438,31 @@ Modernizr.load([
                         var self = this;
 
                         if (self.el.length > 0) {
-                            self.group.each(function () {
-                                var $group = $(this),
-                                    $groupContent = $group.find('.accordion-content'),
-                                    contentHeight = $groupContent.height();
-
-                                $groupContent.attr('data-accordion-content-height', contentHeight)
-
-                                if ($groupContent.hasClass(self.contentShowClass)) {
-                                    $groupContent.css({'max-height': contentHeight});
-                                } else {
-                                    $groupContent.css({'max-height': 0});
-                                }
-                            });
-
+                            self.setGroupHeight();
                             self.toggler();
                             self.forceMaxheight();
                         }
+                    },
+
+                    setGroupHeight: function () {
+                        var self = this;
+
+                        self.group.each(function () {
+                            var $group = $(this),
+                                $groupContent = $group.find('.accordion-content');
+
+                            $groupContent.removeAttr('style');
+
+                            var contentHeight = $groupContent.height();
+
+                            $groupContent.attr('data-accordion-content-height', contentHeight)
+
+                            if ($groupContent.hasClass(self.contentShowClass)) {
+                                $groupContent.css({'max-height': contentHeight});
+                            } else {
+                                $groupContent.css({'max-height': 0});
+                            }
+                        });
                     },
 
                     toggler: function () {
@@ -493,7 +501,7 @@ Modernizr.load([
                         var self = this;
 
                         modules.$window.resize(function() {
-                            self.content.addClass('accordion-force-maxheight');
+                            self.setGroupHeight();
                         });
                     }
                 }
