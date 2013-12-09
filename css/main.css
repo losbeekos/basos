@@ -522,7 +522,7 @@ textarea {
 ======================================*/
 /*==========  Unstyled list  ==========*/
 /* line 118, ../scss/base/_helpers.scss */
-.list-unstyled, .list-inline, .tabs, .btn-group, .dropdown ul, .parsley-error-list {
+.list-unstyled, .list-inline, .tabs, .btn-group, .dropdown ul, .list-media, .parsley-error-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -539,12 +539,12 @@ textarea {
 /*==========  Image replacement  ==========*/
 /*==========  Clearfix  ==========*/
 /* line 157, ../scss/base/_helpers.scss */
-.clearfix:before, [class|="column"]:before, [class|=btn-container]:before, .btn-group:before, form:before, .form-row:before, .clearfix:after, [class|="column"]:after, [class|=btn-container]:after, .btn-group:after, form:after, .form-row:after {
+.clearfix:before, [class|="column"]:before, .media-item:before, [class|=btn-container]:before, .btn-group:before, form:before, .form-row:before, .clearfix:after, [class|="column"]:after, .media-item:after, [class|=btn-container]:after, .btn-group:after, form:after, .form-row:after {
   content: '';
   display: table;
 }
 /* line 162, ../scss/base/_helpers.scss */
-.clearfix:after, [class|="column"]:after, [class|=btn-container]:after, .btn-group:after, form:after, .form-row:after {
+.clearfix:after, [class|="column"]:after, .media-item:after, [class|=btn-container]:after, .btn-group:after, form:after, .form-row:after {
   clear: both;
 }
 
@@ -693,7 +693,7 @@ textarea {
 }
 
 /* line 31, ../scss/base/_grid.scss */
-.column-3 {
+.column-3, .media-alpha {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
@@ -701,7 +701,7 @@ textarea {
 }
 @media (min-width: 650px) {
   /* line 31, ../scss/base/_grid.scss */
-  .column-3 {
+  .column-3, .media-alpha {
     width: 23.74917%;
     float: left;
     margin-right: 1.66778%;
@@ -795,7 +795,7 @@ textarea {
 }
 
 /* line 31, ../scss/base/_grid.scss */
-.column-9 {
+.column-9, .media-beta {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
@@ -803,7 +803,7 @@ textarea {
 }
 @media (min-width: 650px) {
   /* line 31, ../scss/base/_grid.scss */
-  .column-9 {
+  .column-9, .media-beta {
     width: 74.58306%;
     float: left;
     margin-right: 1.66778%;
@@ -1261,9 +1261,10 @@ h6, .h6 {
 /* line 21, ../scss/base/_dropdowns.scss */
 .dropdown li {
   display: block;
+  margin: 0;
 }
 
-/* line 26, ../scss/base/_dropdowns.scss */
+/* line 27, ../scss/base/_dropdowns.scss */
 .dropdown-content {
   overflow: hidden;
   position: absolute;
@@ -1282,14 +1283,14 @@ h6, .h6 {
   -o-transition: all 0.2s 0.3s;
   transition: all 0.2s 0.3s;
 }
-/* line 40, ../scss/base/_dropdowns.scss */
+/* line 41, ../scss/base/_dropdowns.scss */
 .dropdown-content a {
   display: block;
   border-top: 1px solid #e5e5e5;
   padding: 10px 15px;
   padding: 0.625rem 0.9375rem;
 }
-/* line 46, ../scss/base/_dropdowns.scss */
+/* line 47, ../scss/base/_dropdowns.scss */
 .dropdown-content a:hover {
   background-color: #e5e5e5;
 }
@@ -1487,6 +1488,67 @@ h6, .h6 {
 /* line 25, ../scss/base/_breadcrumbs.scss */
 .breadcrumbs span {
   color: #aaaaaa;
+}
+
+/*=============================
+=            Media            =
+=============================*/
+/* line 10, ../scss/base/_media.scss */
+.list-media-bordered .media-item {
+  border-top: 1px solid #dddddd;
+  margin-bottom: 0;
+  padding: 20px 0;
+  padding: 1.25rem 0;
+}
+/* line 16, ../scss/base/_media.scss */
+.list-media-bordered .media-item .media-item {
+  margin: 0;
+}
+
+/* line 22, ../scss/base/_media.scss */
+.media-item {
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+}
+/* line 27, ../scss/base/_media.scss */
+.media-item .media-item {
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+
+/* line 32, ../scss/base/_media.scss */
+.media-alpha {
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+}
+@media (min-width: 650px) {
+  /* line 32, ../scss/base/_media.scss */
+  .media-alpha {
+    margin-bottom: 0;
+  }
+}
+/* line 41, ../scss/base/_media.scss */
+.media-item-right .media-alpha {
+  float: right;
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.25em;
+  display: inline;
+}
+
+/* line 48, ../scss/base/_media.scss */
+.media-beta {
+  float: right;
+  margin-right: 0;
+  *margin-left: -1.25em;
+  display: inline;
+}
+/* line 53, ../scss/base/_media.scss */
+.media-item-right .media-beta {
+  float: left;
+  float: left;
+  margin-right: 1.66778%;
+  *margin-left: auto;
 }
 
 /*==========  Buttons  ==========*/

@@ -775,6 +775,98 @@
                 <br/><br/>
 
                 <section>
+                    <h1>Media</h1>
+                    <h2>Left</h2>
+                    <div class="media-item">
+                        <div class="media-alpha"><img src="http://placehold.it/400x300" alt="" /></div>
+                        <div class="media-beta">
+                            <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+                            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                        </div>
+                    </div>
+                    <h2>Right</h2>
+                    <div class="media-item media-item-right">
+                        <div class="media-alpha"><img src="http://placehold.it/400x300" alt="" /></div>
+                        <div class="media-beta">
+                            <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+                            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                        </div>
+                    </div>
+                    <h3>Nested</h3>
+                    <div class="media-item">
+                        <div class="media-alpha"><img src="http://placehold.it/400x300" alt="" /></div>
+                        <div class="media-beta">
+                            <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+                            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                            <div class="media-item">
+                                <div class="media-alpha"><img src="http://placehold.it/400x300" alt="" /></div>
+                                <div class="media-beta">
+                                    <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+                                    <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                                </div>
+                            </div>
+                            <div class="media-item">
+                                <div class="media-alpha"><img src="http://placehold.it/400x300" alt="" /></div>
+                                <div class="media-beta">
+                                    <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+                                    <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <h2>List</h2>
+                    <ul class="list-media">
+                        <li class="media-item">
+                            <div class="media-alpha"><img src="http://placehold.it/400x300" alt="" /></div>
+                            <div class="media-beta">
+                                <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+                                <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                            </div>
+                        </li>
+                        <li class="media-item">
+                            <div class="media-alpha"><img src="http://placehold.it/400x300" alt="" /></div>
+                            <div class="media-beta">
+                                <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+                                <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <h2>Bordered list</h2>
+                    <ul class="list-media list-media-bordered">
+                        <li class="media-item">
+                            <div class="media-alpha"><img src="http://placehold.it/400x300" alt="" /></div>
+                            <div class="media-beta">
+                                <h2><a href="#">In a list</a></h2>
+                                <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                            </div>
+                        </li>
+                        <li class="media-item">
+                            <div class="media-alpha"><img src="http://placehold.it/400x300" alt="" /></div>
+                            <div class="media-beta">
+                                <h2><a href="#">In a list</a></h2>
+                                <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                                <div class="media-item">
+                                    <div class="media-alpha"><img src="http://placehold.it/400x300" alt="" /></div>
+                                    <div class="media-beta">
+                                        <h2><a href="#">Nested</a></h2>
+                                        <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                                    </div>
+                                </div>
+                                <div class="media-item">
+                                    <div class="media-alpha"><img src="http://placehold.it/400x300" alt="" /></div>
+                                    <div class="media-beta">
+                                        <h2><a href="#">Nested</a></h2>
+                                        <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </section>
+
+                <br/><br/>
+
+                <section>
                     <h1>Tooltips</h1>
                     <ul class="btn-group">
                         <li><a class="btn-alpha btn-small tooltip" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a></li>
