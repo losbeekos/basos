@@ -7,7 +7,7 @@ button,
 input,
 select,
 textarea {
-    color: $text-color;
+    color: $color-text;
 }
 
 body {
@@ -16,12 +16,12 @@ body {
 }
 
 ::-moz-selection {
-    background: $selection-color;
+    background: $color-selection;
     text-shadow: none;
 }
 
 ::selection {
-    background: $selection-color;
+    background: $color-selection;
     text-shadow: none;
 }
 

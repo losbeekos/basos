@@ -8,7 +8,6 @@
 /*================================================
 =            Default project settings            =
 ================================================*/
-/*==========  Legacy support  ==========*/
 /*==========  Project  ==========*/
 /*==========  Container  ==========*/
 /*==========  Susy grid  ==========*/
@@ -570,7 +569,9 @@ textarea {
 /* line 7, ../scss/base/_grid.scss */
 .grid {
   position: relative;
+  *zoom: 1;
   max-width: 74.95em;
+  _width: 74.95em;
   padding-left: 0;
   padding-right: 0;
   margin-left: auto;
@@ -591,6 +592,8 @@ textarea {
 [class|="column"].column-omega {
   float: right;
   margin-right: 0;
+  *margin-left: -1.25em;
+  display: inline;
 }
 /* line 21, ../scss/base/_grid.scss */
 .lt-ie9 [class|="column"].column-omega {
@@ -603,6 +606,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -610,6 +614,7 @@ textarea {
     width: 6.80454%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 
@@ -618,6 +623,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -625,6 +631,7 @@ textarea {
     width: 15.27685%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 
@@ -633,6 +640,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -640,6 +648,7 @@ textarea {
     width: 23.74917%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 
@@ -648,6 +657,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -655,6 +665,7 @@ textarea {
     width: 32.22148%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 
@@ -663,6 +674,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -670,6 +682,7 @@ textarea {
     width: 40.6938%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 
@@ -678,6 +691,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -685,6 +699,7 @@ textarea {
     width: 49.16611%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 
@@ -693,6 +708,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -700,6 +716,7 @@ textarea {
     width: 57.63843%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 
@@ -708,6 +725,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -715,6 +733,7 @@ textarea {
     width: 66.11074%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 
@@ -723,6 +742,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -730,6 +750,7 @@ textarea {
     width: 74.58306%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 
@@ -738,6 +759,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -745,6 +767,7 @@ textarea {
     width: 83.05537%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 
@@ -753,6 +776,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -760,6 +784,7 @@ textarea {
     width: 91.52769%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 
@@ -768,6 +793,7 @@ textarea {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
+  display: inline;
 }
 @media (min-width: 650px) {
   /* line 29, ../scss/base/_grid.scss */
@@ -775,6 +801,7 @@ textarea {
     width: 100%;
     float: left;
     margin-right: 1.66778%;
+    display: inline;
   }
 }
 

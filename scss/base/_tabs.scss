@@ -17,10 +17,10 @@
 .tab {
     position: relative;
     display: inline-block;
-    background: $btn-default-bg-color;
-    border: 1px solid darken($btn-default-bg-color, 10%);
+    background: $btn-bg-color-alpha;
+    border: 1px solid darken($btn-bg-color-alpha, 10%);
     bottom: -1px;
-    color: lighten($text-color, 20%);
+    color: lighten($color-text, 20%);
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
 
@@ -36,12 +36,12 @@
     &.active {
         background: #ffffff;
         border-bottom-color: #ffffff;
-        color: $text-color;
+        color: $color-text;
     }
 }
 
 .tab-content {
-    border-top: 1px solid darken($btn-default-bg-color, 10%);
+    border-top: 1px solid darken($btn-bg-color-alpha, 10%);
 
     @include rem(padding, 20px);
 }

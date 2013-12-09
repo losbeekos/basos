@@ -13,13 +13,13 @@
 .btn-delta,
 .btn-epsilon {
     display: inline-block;
-    color: $text-color;
+    color: $color-text;
     border-radius: $btn-border-radius;
-    background-color: $btn-default-bg-color;
+    background-color: $btn-bg-color-alpha;
     border: 0;
     outline: 0;
     text-align: center;
-    border: 1px solid darken($btn-default-bg-color, 10%);
+    border: 1px solid darken($btn-bg-color-alpha, 10%);
 
     @include rem(line-height, 16px);
     @include single-transition(all, $base-transition-speed);
@@ -31,20 +31,20 @@
     }
 
     &:not(.btn-divider):hover {
-        color: $text-color;
-        background-color: darken($btn-default-bg-color, 5%);
+        color: $color-text;
+        background-color: darken($btn-bg-color-alpha, 5%);
     }
 
     &:focus {
         outline: none;
-        box-shadow: 0 0 10px rgba(darken($btn-default-bg-color, 15%), 1);
+        box-shadow: 0 0 10px rgba(darken($btn-bg-color-alpha, 15%), 1);
 
         @include transition-duration(0.05s);
     }
 
     &:disabled,
     &:disabled:hover {
-        background-color: $btn-default-bg-color;
+        background-color: $btn-bg-color-alpha;
         cursor: not-allowed;
         color: darken($white, 20%);
 
@@ -75,37 +75,37 @@
 }
 
 .btn-beta {
-    background-color: $btn-primary-bg-color;
-    border: 1px solid darken($btn-primary-bg-color, 8%);
+    background-color: $btn-bg-color-beta;
+    border: 1px solid darken($btn-bg-color-beta, 8%);
 
-    &:not(.btn-divider):hover    { background-color: darken($btn-primary-bg-color, 5%);  }
-    &:focus                      { box-shadow: 0 0 10px rgba($btn-primary-bg-color, 1);  }
-    &:disabled, &:disabled:hover { background-color: $btn-primary-bg-color;              }
+    &:not(.btn-divider):hover    { background-color: darken($btn-bg-color-beta, 5%);  }
+    &:focus                      { box-shadow: 0 0 10px rgba($btn-bg-color-beta, 1);  }
+    &:disabled, &:disabled:hover { background-color: $btn-bg-color-beta;              }
 }
 
 .btn-gamma {
-    background-color: $btn-secondary-bg-color;
-    border: 1px solid darken($btn-secondary-bg-color, 8%);
+    background-color: $btn-bg-color-gamma;
+    border: 1px solid darken($btn-bg-color-gamma, 8%);
 
-    &:not(.btn-divider):hover    { background-color: darken($btn-secondary-bg-color, 5%);  }
-    &:focus                      { box-shadow: 0 0 10px rgba($btn-secondary-bg-color, 1);  }
-    &:disabled, &:disabled:hover { background-color: $btn-secondary-bg-color;              }
+    &:not(.btn-divider):hover    { background-color: darken($btn-bg-color-gamma, 5%);  }
+    &:focus                      { box-shadow: 0 0 10px rgba($btn-bg-color-gamma, 1);  }
+    &:disabled, &:disabled:hover { background-color: $btn-bg-color-gamma;              }
 }
 
 .btn-delta {
-    background-color: $btn-tertiary-bg-color;
-    border: 1px solid darken($btn-tertiary-bg-color, 8%);
+    background-color: $btn-bg-color-delta;
+    border: 1px solid darken($btn-bg-color-delta, 8%);
 
-    &:not(.btn-divider):hover    { background-color: darken($btn-tertiary-bg-color, 5%);  }
-    &:focus                      { box-shadow: 0 0 10px rgba($btn-tertiary-bg-color, 1);  }
-    &:disabled, &:disabled:hover { background-color: $btn-tertiary-bg-color;              }
+    &:not(.btn-divider):hover    { background-color: darken($btn-bg-color-delta, 5%);  }
+    &:focus                      { box-shadow: 0 0 10px rgba($btn-bg-color-delta, 1);  }
+    &:disabled, &:disabled:hover { background-color: $btn-bg-color-delta;              }
 }
 
 .btn-epsilon {
-    background-color: $btn-quadiary-bg-color;
-    border: 1px solid darken($btn-quadiary-bg-color, 8%);
+    background-color: $btn-bg-color-epsilon;
+    border: 1px solid darken($btn-bg-color-epsilon, 8%);
 
-    &:not(.btn-divider):hover    { background-color: darken($btn-quadiary-bg-color, 5%);  }
-    &:focus                      { box-shadow: 0 0 10px rgba($btn-quadiary-bg-color, 1);  }
-    &:disabled, &:disabled:hover { background-color: $btn-quadiary-bg-color;              }
+    &:not(.btn-divider):hover    { background-color: darken($btn-bg-color-epsilon, 5%);  }
+    &:focus                      { box-shadow: 0 0 10px rgba($btn-bg-color-epsilon, 1);  }
+    &:disabled, &:disabled:hover { background-color: $btn-bg-color-epsilon;              }
 }

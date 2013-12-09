@@ -31,15 +31,15 @@
     left: 0;
     margin-top: -1px;
     visibility: hidden;
-    background-color: lighten($btn-default-bg-color, 5%);
-    border: 1px solid darken($btn-default-bg-color, 10%);
+    background-color: lighten($btn-bg-color-alpha, 5%);
+    border: 1px solid darken($btn-bg-color-alpha, 10%);
 
     @include opacity(0);
     @include single-transition(all, 0.2s, 0.3s);
 
     a {
         display: block;
-        border-top: 1px solid darken($btn-default-bg-color, 1%);
+        border-top: 1px solid darken($btn-bg-color-alpha, 1%);
 
         @include rem(padding, 10px 15px);
 

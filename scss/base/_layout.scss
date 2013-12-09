@@ -11,11 +11,11 @@
 
 body {
     font-family: arial, verdana, sans-serif;
-    color: $text-color;
+    color: $color-text;
 }
 
 a {
-    color: $primary-color;
+    color: $color-beta;
     text-decoration: none;
     display: inline;
     cursor: pointer;
@@ -23,7 +23,7 @@ a {
     @include single-transition(all, $base-transition-speed);
 
     &:hover {
-        color: $text-color;
+        color: $color-text;
     }
 
     &:after,

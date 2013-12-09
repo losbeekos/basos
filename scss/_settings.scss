@@ -3,13 +3,6 @@
 ================================================*/
 
 
-/*==========  Legacy support  ==========*/
-$legacy-support-for-ie6     : false;
-$legacy-support-for-ie7     : false;
-$legacy-support-for-ie8     : true;
-$legacy-support-for-mozilla : false;
-
-
 /*==========  Project  ==========*/
 $gradient                  : false;
 $ten                       : 0.625em;
@@ -17,13 +10,16 @@ $base-font-size            : 16px;
 $base-padding              : 10px;
 $base-border-radius        : 2px;
 $base-transition-speed     : 0.2s;
-$text-color                : #222222;
 $white                     : #ffffff;
 $black                     : #000000;
-$primary-color             : #0659a4;
-$primary-header-text-color : #94adc4;
-$placeholder-color         : #94adc4;
-$selection-color           : #d1e4fe;
+$color-text                : #222222;
+$color-placeholder         : #94adc4;
+$color-selection           : #d1e4fe;
+$color-alpha               : #e8e8e8;
+$color-beta                : #0659a4;
+$color-gamma               : #177f12;
+$color-delta               : #a40606;
+$color-epsilon             : #069ea4;
 
 
 /*==========  Container  ==========*/
@@ -47,11 +43,11 @@ $btn-container-padding       : $base-padding $base-padding*1.8;
 $btn-container-margin-bottom : $ten*3;
 $btn-gradient                : $gradient;
 $btn-border-radius           : $base-border-radius;
-$btn-default-bg-color        : #e8e8e8;
-$btn-primary-bg-color        : $primary-color;
-$btn-secondary-bg-color      : #177f12;
-$btn-tertiary-bg-color       : #a40606;
-$btn-quadiary-bg-color       : #069ea4;
+$btn-bg-color-alpha          : $color-alpha;
+$btn-bg-color-beta           : $color-beta;
+$btn-bg-color-gamma          : $color-gamma;
+$btn-bg-color-delta          : $color-delta;
+$btn-bg-color-epsilon        : $color-epsilon;
 
 
 /*==========  Icons  ==========*/
@@ -79,7 +75,7 @@ $table-hover-bg-color : #f6f6f6;
 $tooltip-width                  : 220px; // 220px
 $tooltip-arrow-width            : 5px; // 5px
 $tooltip-transition-speed       : $base-transition-speed;
-$tooltip-bg-color               : $primary-color;
+$tooltip-bg-color               : $color-beta;
 $tooltip-padding                : $base-padding;
 $tooltip-border-radius          : $base-border-radius;
 $tooltip-font-size              : $ten*1.2; // 12px
@@ -97,12 +93,12 @@ $modal-content-border-radius : $base-border-radius;
 /*==========  Accordion  ==========*/
 $accordion-transition-speed    : $base-transition-speed;
 $accordion-padding             : $base-padding;
-$accordion-border-color        : darken($btn-default-bg-color, 10%);
+$accordion-border-color        : darken($btn-bg-color-alpha, 10%);
 $accordion-gradient            : $gradient;
 $accordion-border-radius       : $base-border-radius;
 $accordion-group-margin-bottom : 0;
-$accordion-trigger-bg-color    : $btn-default-bg-color;
-$accordion-trigger-font-color  : $text-color;
+$accordion-trigger-bg-color    : $btn-bg-color-alpha;
+$accordion-trigger-font-color  : $color-text;
 
 
 /*==========  Breadcrumbs  ==========*/
