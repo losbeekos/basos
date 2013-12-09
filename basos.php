@@ -873,26 +873,26 @@
                         <li class="media-item">
                             <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                             <div class="media-beta">
-                                <h2><a href="#">In a list</a></h2>
+                                <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                 <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                             </div>
                         </li>
                         <li class="media-item">
                             <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                             <div class="media-beta">
-                                <h2><a href="#">In a list</a></h2>
+                                <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                 <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                                 <div class="media-item">
                                     <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                                     <div class="media-beta">
-                                        <h2><a href="#">Nested</a></h2>
+                                        <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                         <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                                     </div>
                                 </div>
                                 <div class="media-item">
                                     <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                                     <div class="media-beta">
-                                        <h2><a href="#">Nested</a></h2>
+                                        <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                         <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                                     </div>
                                 </div>
