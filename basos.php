@@ -73,38 +73,90 @@
                         </div>
                     </div>
 
-                    <h2>Button groups</h2>
+                    <h2>Button group inline</h2>
                     <p>These work with the button classes so you can use those to change color and size.</p>
-                    <ul class="btn-group">
+                    <ul class="btn-group btn-group-inline">
                         <li><a class="btn-alpha btn-medium" href="#">button</a></li>
                         <li><a class="btn-alpha btn-medium" href="#">button</a></li>
                         <li><a class="btn-alpha btn-medium" href="#">button</a></li>
                         <li><a class="btn-alpha btn-medium" href="#">button</a></li>
                     </ul>
-                    <ul class="btn-group">
+                    <ul class="btn-group btn-group-inline">
                         <li><a class="btn-beta btn-medium" href="#">button</a></li>
                         <li><a class="btn-beta btn-medium" href="#">button</a></li>
                         <li><a class="btn-beta btn-medium" href="#">button</a></li>
                         <li><a class="btn-beta btn-medium" href="#">button</a></li>
                     </ul>
-                    <ul class="btn-group">
+                    <ul class="btn-group btn-group-inline">
                         <li><a class="btn-gamma btn-medium" href="#">button</a></li>
                         <li><a class="btn-gamma btn-medium" href="#">button</a></li>
                         <li><a class="btn-gamma btn-medium" href="#">button</a></li>
                         <li><a class="btn-gamma btn-medium" href="#">button</a></li>
                     </ul>
-                    <ul class="btn-group">
+                    <ul class="btn-group btn-group-inline">
                         <li><a class="btn-delta btn-medium" href="#">button</a></li>
                         <li><a class="btn-delta btn-medium" href="#">button</a></li>
                         <li><a class="btn-delta btn-medium" href="#">button</a></li>
                         <li><a class="btn-delta btn-medium" href="#">button</a></li>
                     </ul>
-                    <ul class="btn-group">
+                    <ul class="btn-group btn-group-inline">
                         <li><a class="btn-epsilon btn-medium" href="#">button</a></li>
                         <li><a class="btn-epsilon btn-medium" href="#">button</a></li>
                         <li><a class="btn-epsilon btn-medium" href="#">button</a></li>
                         <li><a class="btn-epsilon btn-medium" href="#">button</a></li>
                     </ul>
+
+                    <h2>Button group block</h2>
+                    <div class="grid clearfix">
+                        <div class="column-3">
+                            <ul class="btn-group btn-group-block">
+                                <li><a class="btn-alpha btn-medium" href="#">button</a></li>
+                                <li><a class="btn-alpha btn-medium" href="#">button</a></li>
+                                <li><a class="btn-alpha btn-medium" href="#">button</a></li>
+                                <li><a class="btn-alpha btn-medium" href="#">button</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid clearfix">
+                        <div class="column-3">
+                            <ul class="btn-group btn-group-block">
+                                <li><a class="btn-beta btn-medium" href="#">button</a></li>
+                                <li><a class="btn-beta btn-medium" href="#">button</a></li>
+                                <li><a class="btn-beta btn-medium" href="#">button</a></li>
+                                <li><a class="btn-beta btn-medium" href="#">button</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid clearfix">
+                        <div class="column-3">
+                            <ul class="btn-group btn-group-block">
+                                <li><a class="btn-gamma btn-medium" href="#">button</a></li>
+                                <li><a class="btn-gamma btn-medium" href="#">button</a></li>
+                                <li><a class="btn-gamma btn-medium" href="#">button</a></li>
+                                <li><a class="btn-gamma btn-medium" href="#">button</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid clearfix">
+                        <div class="column-3">
+                            <ul class="btn-group btn-group-block">
+                                <li><a class="btn-delta btn-medium" href="#">button</a></li>
+                                <li><a class="btn-delta btn-medium" href="#">button</a></li>
+                                <li><a class="btn-delta btn-medium" href="#">button</a></li>
+                                <li><a class="btn-delta btn-medium" href="#">button</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="grid clearfix">
+                        <div class="column-3">
+                            <ul class="btn-group btn-group-block">
+                                <li><a class="btn-epsilon btn-medium" href="#">button</a></li>
+                                <li><a class="btn-epsilon btn-medium" href="#">button</a></li>
+                                <li><a class="btn-epsilon btn-medium" href="#">button</a></li>
+                                <li><a class="btn-epsilon btn-medium" href="#">button</a></li>
+                            </ul>
+                        </div>
+                    </div>
                 </section>
 
                 <br/><br/>

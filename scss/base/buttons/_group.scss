@@ -3,30 +3,61 @@
 =============================*/
 
 .btn-group {
-    @extend .list-inline;
     @extend .clearfix;
 
     @include rem(margin, 0 0 30px 0);
 
     > li {
-        margin: 0 0 0 -1px;
-        float: left;
-
-        .btn {
+        a {
             border-radius: 0;
         }
+    }
+}
+
+.btn-group-inline {
+    @extend .list-inline;
+
+    > li {
+        margin: 0 0 0 -1px;
+        float: left;
 
         &:first-child {
             margin: 0;
 
-            .btn {
+            a {
                 border-radius: $btn-border-radius 0 0 $btn-border-radius;
             }
         }
 
         &:last-child {
-            .btn {
+            a {
                 border-radius: 0 $btn-border-radius $btn-border-radius 0;
+            }
+        }
+    }
+}
+
+.btn-group-block {
+    @extend .list-unstyled;
+
+    > li {
+        margin-top: -1px;
+
+        a {
+            display: block;
+        }
+
+        &:first-child {
+            margin: 0;
+
+            a {
+                border-radius: $btn-border-radius $btn-border-radius 0 0;
+            }
+        }
+
+        &:last-child {
+            a {
+                border-radius: 0 0 $btn-border-radius $btn-border-radius;
             }
         }
     }

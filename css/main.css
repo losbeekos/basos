@@ -522,7 +522,7 @@ textarea {
 ======================================*/
 /*==========  Unstyled list  ==========*/
 /* line 118, ../scss/base/_helpers.scss */
-.list-unstyled, .list-inline, .tabs, .btn-group, .dropdown ul, .list-media, .parsley-error-list {
+.list-unstyled, .list-inline, .tabs, .btn-group-inline, .dropdown ul, .list-media, .btn-group-block, .parsley-error-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -530,7 +530,7 @@ textarea {
 
 /*==========  Inline list  ==========*/
 /* line 130, ../scss/base/_helpers.scss */
-.list-inline li, .tabs li, .btn-group li {
+.list-inline li, .tabs li, .btn-group-inline li {
   display: inline;
   margin-right: 10px;
   margin-right: 0.625rem;
@@ -1591,25 +1591,47 @@ h6, .h6 {
   margin: 0 0 1.875rem 0;
 }
 /* line 11, ../scss/base/buttons/_group.scss */
-.btn-group > li {
+.btn-group > li a {
+  border-radius: 0;
+}
+
+/* line 20, ../scss/base/buttons/_group.scss */
+.btn-group-inline > li {
   margin: 0 0 0 -1px;
   float: left;
 }
-/* line 15, ../scss/base/buttons/_group.scss */
-.btn-group > li .btn {
-  border-radius: 0;
-}
-/* line 19, ../scss/base/buttons/_group.scss */
-.btn-group > li:first-child {
+/* line 24, ../scss/base/buttons/_group.scss */
+.btn-group-inline > li:first-child {
   margin: 0;
 }
-/* line 22, ../scss/base/buttons/_group.scss */
-.btn-group > li:first-child .btn {
+/* line 27, ../scss/base/buttons/_group.scss */
+.btn-group-inline > li:first-child a {
   border-radius: 2px 0 0 2px;
 }
-/* line 28, ../scss/base/buttons/_group.scss */
-.btn-group > li:last-child .btn {
+/* line 33, ../scss/base/buttons/_group.scss */
+.btn-group-inline > li:last-child a {
   border-radius: 0 2px 2px 0;
+}
+
+/* line 43, ../scss/base/buttons/_group.scss */
+.btn-group-block > li {
+  margin-top: -1px;
+}
+/* line 46, ../scss/base/buttons/_group.scss */
+.btn-group-block > li a {
+  display: block;
+}
+/* line 50, ../scss/base/buttons/_group.scss */
+.btn-group-block > li:first-child {
+  margin: 0;
+}
+/* line 53, ../scss/base/buttons/_group.scss */
+.btn-group-block > li:first-child a {
+  border-radius: 2px 2px 0 0;
+}
+/* line 59, ../scss/base/buttons/_group.scss */
+.btn-group-block > li:last-child a {
+  border-radius: 0 0 2px 2px;
 }
 
 /*=============================
