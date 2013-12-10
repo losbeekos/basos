@@ -113,7 +113,6 @@ Modernizr.load([
                     $el: $('.accordion')
                     ,$group: $('.accordion-group')
                     ,$trigger: $('.accordion-trigger')
-                    ,$content: $('.accordion-content')
                     ,contentShowClass: 'accordion-show'
                 }
 
@@ -517,7 +516,7 @@ Modernizr.load([
                                 $content = $trigger.next();
 
                             if (!$content.hasClass(settings.accordion.contentShowClass)) {
-                                self.hideGroup(settings.accordion.$content);
+                                self.hideGroup($trigger.closest('.accordion').find('.accordion-content'));
                                 self.showGroup($trigger, $content);
                             } else {
                                 self.hideGroup($content);
