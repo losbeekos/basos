@@ -5,32 +5,32 @@
 
 /*==========  Project  ==========*/
 
-$gradient                  : false;
-$ten                       : 0.625em;
-$base-font-size            : 16px;
-$base-padding              : 10px;
-$base-border-radius        : 2px;
-$base-transition-speed     : 0.2s;
-$white                     : #ffffff;
-$black                     : #000000;
-$color-text                : #222222;
-$color-placeholder         : #94adc4;
-$color-selection           : #d1e4fe;
-$color-alpha               : #e8e8e8;
-$color-beta                : #0659a4;
-$color-gamma               : #177f12;
-$color-delta               : #a40606;
-$color-epsilon             : #069ea4;
+$gradient               : false;
+$ten                    : 0.625em;
+$base-font-size         : 16px;
+$base-padding           : 10px;
+$base-border-radius     : 2px;
+$base-transition-speed  : 0.2s;
+$white                  : #ffffff;
+$black                  : #000000;
+$color-text             : #222222;
+$color-placeholder      : #94adc4;
+$color-selection        : #d1e4fe;
+$color-alpha            : #e8e8e8;
+$color-beta             : #0659a4;
+$color-gamma            : #177f12;
+$color-delta            : #a40606;
+$color-epsilon          : #069ea4;
 
 
 /*==========  Container  ==========*/
 
-$container-min-width              : $ten*32;
-$container-max-width              : $ten*128;
-$container-margin                 : 0 auto;
-$container-padding                : $ten;
-$container-beta-padding           : $ten*2;
-$container-gamma-padding          : $ten*4;
+$container-min-width     : $ten*32;
+$container-max-width     : $ten*128;
+$container-margin        : 0 auto;
+$container-padding       : $ten;
+$container-beta-padding  : $ten*2;
+$container-gamma-padding : $ten*4;
 
 
 /*==========  Susy grid  ==========*/

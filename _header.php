@@ -44,7 +44,7 @@
     <body>
         <a href="#main" class="show-screenreaders">Skip to main content</a>
 
-        <div class="container">
+        <div id="container" class="container">
             <!--[if lt IE 9]>
                 <div class="notification error">
                     <ul>

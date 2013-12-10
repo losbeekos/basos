@@ -1,11 +1,11 @@
-"use strict";
+'use strict';
 
 
 /*===============================================
 =            Avoid console.log errors           =
 ===============================================*/
 
-(function() {
+(function () {
     var method;
     var noop = function () {};
     var methods = [
@@ -31,20 +31,6 @@
 
 
 
-
-/*========================================
-=            Default settings            =
-========================================*/
-
-var settings = {
-    version: '?v=0.1' // If the file changes, update this number
-}
-
-/*-----  End of Default settings  ------*/
-
-
-
-
 /*======================================
 =            Modernizr load            =
 ======================================*/
@@ -67,26 +53,99 @@ Modernizr.load([
 
     {
         load: ['http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'],
-        complete: function(url, result, key){
-            if (!window.jQuery){
+        complete: function (url, result, key) {
+            if (!window.jQuery) {
                 Modernizr.load('js/vendor/jquery-1.10.2.min.js');
             }
+
+
+            /*==================================
+            =             Settings             =
+            ==================================*/
+
+            var settings = {
+                version: '?v=0.1', // If the file changes, update this number
+                $document: $(document)
+                ,$window: $(window)
+                ,$html: $('html')
+                ,$body: $('body')
+                ,$container: $('#container')
+                ,$main: $('#main')
+
+
+                /*==========  Primary nav  ==========*/
+
+                ,navPrimary: {
+                    $el: $('.nav-primary')
+                }
+
+
+                /*==========  Modals  ==========*/
+
+                ,modals: {
+                    $trigger: $('.modal-trigger')
+                    ,$modal: $('.modal')
+                }
+
+
+                /*==========  Cycle  ==========*/
+
+                ,cycle: {
+                    $el: $('.spotlight-wrap', '#spotlight')
+                    ,slides: '> .spotlight-item'
+                    ,pager : '> .spotlight-pager'
+                    ,pagerActiveClass: 'spotlight-pager-active'
+                }
+
+
+                /*==========  Tooltips  ==========*/
+
+                ,tooltips: {
+                    $el: $('.tooltip')
+                    ,tooltipActiveClass: 'tooltip-active'
+                    ,tooltipContentClass: 'tooltip-content'
+                    ,arrowWidth: 8
+                }
+
+                /*==========  Accordion  ==========*/
+
+                ,accordion: {
+                    $el: $('.accordion')
+                    ,$group: $('.accordion-group')
+                    ,$trigger: $('.accordion-trigger')
+                    ,$content: $('.accordion-content')
+                    ,contentShowClass: 'accordion-show'
+                }
+
+
+                /*==========  Form validation  ==========*/
+
+                ,formValidation: {
+                    $el: $('.form-validate')
+                }
+
+
+                /*==========  Tabs  ==========*/
+
+                ,tabs: {
+                    $nav: $('.tabs')
+                    ,$tab: $('.tab')
+                    ,$content: $('.tab-content')
+                }
+
+            }
+
+
 
             /*===============================
             =            Modules            =
             ===============================*/
 
-            var modules = {
-                $window: $(window),
-                $html: $('html'),
-                $body: $('body'),
-                $container: $('.container'),
-
+            ,modules = {
                 init: function(){
 
                     $(function(){
-                        // Default mzodules
-                        //modules.fancybox.init();
+                        // Default modules
                         modules.fastClick.init();
                         modules.fitVids.init();
                         modules.formValidation.init();
@@ -94,6 +153,7 @@ Modernizr.load([
                         modules.tooltips.init();
                         modules.accordion.init();
                         modules.tabs.init();
+                        //modules.fancybox.init();
 
                         // App modules
                         //modules.nav.init();
@@ -113,10 +173,9 @@ Modernizr.load([
                     init: function(){
                         var self = this;
 
-                        if(self.fancybox.length > 0){
+                        if(settings.something.$el.length > 0){
                             yepnope.injectJs('js/plugins/someplugin/someplugin.js' + settings.version,
                                 function(){
-
                                 });
                         }
                     }
@@ -131,14 +190,13 @@ Modernizr.load([
                 =            Primary navigation            =
                 ==========================================*/
                 /*
-                ,nav: {
-                    el: $('.nav-primary'),
+                ,navPrimary: {
+                    var self = this;
 
                     init: function(){
                         var self = this;
 
-                        if(self.el.length > 0){
-                            // Do some stuff to the nav
+                        if(settings.primaryNav.$el.length > 0){
                         }
                     }
                 }
@@ -154,18 +212,16 @@ Modernizr.load([
                 =================================*/
                 /*
                 ,cycle: {
-                    el: $('.spotlight-wrap', '#spotlight'),
-
                     init: function(){
                         var self = this;
 
-                        if(self.el.length > 0){
+                        if(settings.cycle.$el.el.length > 0){
                             yepnope.injectJs('js/plugins/jquery.cycle2/jquery.cycle2.min.js',
                                 function(){
                                     self.el.cycle({
-                                        slides           : '> .spotlight-item',
-                                        pager            : '> .spotlight-pager',
-                                        pagerActiveClass : 'spotlight-pager-active',
+                                        slides           : settings.cycle.slides,
+                                        pager            : settings.cycle.pager,
+                                        pagerActiveClass : settings.cycle.pagerActiveClass,
                                         pauseOnHover     : true,
                                         swipe            : true,
                                         log              : false
@@ -246,7 +302,7 @@ Modernizr.load([
                         yepnope.injectJs(
                             'js/plugins/jquery.fitvids/jquery.fitvids.min.js' + settings.version,
                             function(url, result, key){
-                                $('main').fitVids();
+                                settings.$main.fitVids();
                             }
                         );
                     }
@@ -263,15 +319,13 @@ Modernizr.load([
                 ================================*/
 
                 ,modals: {
-                    trigger: $('.modal-trigger'),
-                    modal: $('.modal'),
-                    scrollTopPosition: null,
+                    scrollTopPosition: null
 
-                    init: function () {
+                    ,init: function () {
                         var self = this;
 
-                        if (self.trigger.length > 0 && self.modal.length > 0) {
-                            modules.$body.append('<div class="modal-overlay"></div>');
+                        if (settings.modals.$trigger.length > 0 && settings.modals.$modal.length > 0) {
+                            settings.$body.append('<div class="modal-overlay"></div>');
 
                             self.triggers();
                         }
@@ -280,56 +334,56 @@ Modernizr.load([
                     triggers: function () {
                         var self = this;
 
-                        self.trigger.on('click', function (e) {
-                            e.preventDefault();
+                        settings.modals.$trigger.on('click', function (event) {
+                            event.preventDefault();
 
                             var $trigger = $(this);
 
                             self.openModal($trigger, $trigger.data('modalId'));
                         });
 
-                        $('.modal-overlay').on('click', function (e) {
-                            e.preventDefault();
+                        $('.modal-overlay').on('click', function (event) {
+                            event.preventDefault();
                             self.closeModal();
                         });
 
-                        modules.$body.on('keydown', function(e){
+                        settings.$body.on('keydown', function(event){
                             if (e.keyCode === 27) {
                                 self.closeModal();
                             }
                         });
 
-                        $('.modal-close').on('click', function(e) {
-                            e.preventDefault();
+                        $('.modal-close').on('click', function(event) {
+                            event.preventDefault();
                             self.closeModal();
                         });
                     },
 
                     openModal: function (_trigger, _modalId) {
                         var self = this,
-                            scrollTopPosition = modules.$window.scrollTop(),
+                            scrollTopPosition = settings.$window.scrollTop(),
                             $targetModal = $('#' + _modalId);
 
                         self.scrollTopPosition = scrollTopPosition;
 
-                        modules.$html
+                        settings.$html
                             .addClass('modal-show')
                             .attr('data-modal-effect', $targetModal.data('modal-effect'));
 
                         $targetModal.addClass('modal-show');
 
-                        modules.$container.scrollTop(scrollTopPosition);
+                        settings.$container.scrollTop(scrollTopPosition);
                     },
 
                     closeModal: function () {
                         var self = this;
 
                         $('.modal-show').removeClass('modal-show');
-                        modules.$html
+                        settings.$html
                             .removeClass('modal-show')
                             .removeAttr('data-modal-effect');
 
-                        modules.$window.scrollTop(self.scrollTopPosition);
+                        settings.$window.scrollTop(self.scrollTopPosition);
                     }
                 }
 
@@ -344,17 +398,13 @@ Modernizr.load([
                 ================================*/
 
                 ,tooltips: {
-                    el: $('.tooltip'),
-                    tooltipTrigger: null,
-                    tooltipActiveClass: 'tooltip-active',
-                    tooltipContentClass: 'tooltip-content',
-                    arrowWidth: 8,
+                    tooltipTrigger: null
 
-                    init: function () {
+                    ,init: function () {
                         var self = this;
 
-                        if (self.el.length > 0) {
-                            self.el.each(function () {
+                        if (settings.tooltips.$el.length > 0) {
+                            settings.tooltips.$el.each(function () {
                                 var $tooltipTrigger = $(this);
 
                                 if ($tooltipTrigger.data('tooltipTrigger') === 'click') {
@@ -373,7 +423,7 @@ Modernizr.load([
                         var self = this;
 
                         $tooltipTrigger
-                            .append('<div class="' + self.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
+                            .append('<div class="' + settings.tooltips.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
                             .removeAttr('title');
 
                         self.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip-content'));
@@ -385,15 +435,15 @@ Modernizr.load([
                         if (self.tooltipTrigger === 'hover') {
                             $tooltipTrigger.on({
                                 mouseenter: function () {
-                                    $(this).addClass(self.tooltipActiveClass);
+                                    $(this).addClass(settings.tooltips.tooltipActiveClass);
                                 },
                                 mouseleave: function () {
-                                    $(this).removeClass(self.tooltipActiveClass);
+                                    $(this).removeClass(settings.tooltips.tooltipActiveClass);
                                 }
                             });
                         } else {
                             $tooltipTrigger.on('click', function () {
-                                $(this).toggleClass(self.tooltipActiveClass);
+                                $(this).toggleClass(settings.tooltips.tooltipActiveClass);
                             });
                         }
                     },
@@ -405,14 +455,14 @@ Modernizr.load([
 
                         switch ($tooltipTrigger.data('tooltipPosition')) {
                             case 'top':
-                                $tooltipContent.css({ bottom: tooltipTriggerHeight + self.arrowWidth });
+                                $tooltipContent.css({ bottom: tooltipTriggerHeight + settings.tooltips.arrowWidth });
                                 break;
                             case 'right':
                             case 'left':
                                 $tooltipContent.css({ 'margin-top': -(tooltipContentHeight/2) });
                                 break;
                             case 'bottom':
-                                $tooltipContent.css({ top: tooltipTriggerHeight + self.arrowWidth });
+                                $tooltipContent.css({ top: tooltipTriggerHeight + settings.tooltips.arrowWidth });
                                 break;
                         }
                     }
@@ -428,16 +478,10 @@ Modernizr.load([
                 =================================*/
 
                 ,accordion: {
-                    el: $('.accordion'),
-                    group: $('.accordion-group'),
-                    trigger: $('.accordion-trigger'),
-                    content: $('.accordion-content'),
-                    contentShowClass: 'accordion-show',
-
                     init: function () {
                         var self = this;
 
-                        if (self.el.length > 0) {
+                        if (settings.accordion.$el.length > 0) {
                             self.setGroupHeight();
                             self.toggler();
                             self.forceMaxheight();
@@ -447,7 +491,7 @@ Modernizr.load([
                     setGroupHeight: function () {
                         var self = this;
 
-                        self.group.each(function () {
+                        settings.accordion.$group.each(function () {
                             var $group = $(this),
                                 $groupContent = $group.find('.accordion-content');
 
@@ -457,7 +501,7 @@ Modernizr.load([
 
                             $groupContent.attr('data-accordion-content-height', contentHeight)
 
-                            if ($groupContent.hasClass(self.contentShowClass)) {
+                            if ($groupContent.hasClass(settings.accordion.contentShowClass)) {
                                 $groupContent.css({'max-height': contentHeight});
                             } else {
                                 $groupContent.css({'max-height': 0});
@@ -468,12 +512,12 @@ Modernizr.load([
                     toggler: function () {
                         var self = this;
 
-                        self.trigger.on('click', function () {
+                        settings.accordion.$trigger.on('click', function () {
                             var $trigger = $(this),
                                 $content = $trigger.next();
 
-                            if (!$content.hasClass(self.contentShowClass)) {
-                                self.hideGroup(self.content);
+                            if (!$content.hasClass(settings.accordion.contentShowClass)) {
+                                self.hideGroup(settings.accordion.$content);
                                 self.showGroup($trigger, $content);
                             } else {
                                 self.hideGroup($content);
@@ -486,7 +530,7 @@ Modernizr.load([
 
                         $content
                             .css({'max-height': $trigger.next().data('accordionContentHeight')})
-                            .addClass(self.contentShowClass);
+                            .addClass(settings.accordion.contentShowClass);
                     },
 
                     hideGroup: function ($content) {
@@ -494,13 +538,13 @@ Modernizr.load([
 
                         $content
                             .css({'max-height': 0})
-                            .removeClass(self.contentShowClass);
+                            .removeClass(settings.accordion.contentShowClass);
                     },
 
                     forceMaxheight: function () {
                         var self = this;
 
-                        modules.$window.resize(function() {
+                        settings.$window.resize(function() {
                             self.setGroupHeight();
                         });
                     }
@@ -517,16 +561,14 @@ Modernizr.load([
                 =======================================*/
 
                 ,formValidation: {
-                    el: $('.form-validate'),
-
                     init: function(){
                         var self = this;
 
-                        if(self.el.length > 0){
+                        if(settings.formValidation.$el.length > 0){
                             yepnope.injectJs('js/plugins/jquery.parsley/i18n/messages.nl.js' + settings.version);
                             yepnope.injectJs('js/plugins/jquery.parsley/parsley.js' + settings.version,
                                 function(){
-                                    self.el.parsley({
+                                    settings.formValidation.$el.parsley({
                                         trigger: 'change',
                                         errors: {
                                             classHandler: function (el, isRadioOrCheckbox){
@@ -563,20 +605,16 @@ Modernizr.load([
 
 
                 ,tabs: {
-                    nav: $('.tabs'),
-                    tab: $('.tab'),
-                    content: $('.tab-content'),
-
                     init: function(){
                         var self = this;
 
-                        if (self.tab.length > 0) {
-                            self.tab.on('click', function (e) {
+                        if (settings.tabs.$tab.length > 0) {
+                            settings.tabs.$tab.on('click', function (event) {
                                 var $tab = $(this);
 
-                                e.preventDefault();
+                                event.preventDefault();
 
-                                self.tab.removeClass('active');
+                                settings.tabs.$tab.removeClass('active');
                                 $tab.addClass('active');
 
                                 $($tab.attr('href'))
