@@ -2258,10 +2258,11 @@ input[type=radio] + label:after {
 .parsley-error-list {
   position: relative;
   background: #eeeeee;
-  border-radius: 3px;
   box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
   margin-top: 15px;
   margin-top: 0.9375rem;
+  border-radius: 0 3px 3px 3px;
+  border-radius: 0 0.1875rem 0.1875rem 0.1875rem;
 }
 /* line 63, ../scss/base/form/_validation.scss */
 .parsley-error-list:after {
@@ -2270,7 +2271,7 @@ input[type=radio] + label:after {
   height: 0;
   position: absolute;
   top: -20px;
-  left: 20px;
+  left: 0;
   border: 10px solid transparent;
   border-bottom-color: #eeeeee;
 }

@@ -492,6 +492,19 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="form-row">
+                                <div class="column-7 column-omega">
+                                    <div class="column-6 form-input">
+                                        <ul class="form-input-list list-unstyled">
+                                            <li><input name="checkbox2" type="checkbox" checked="checked" id="checkbox10" parsley-mincheck="2" /><label for="checkbox10">Checkbox</label></li>
+                                            <li><input name="checkbox2" type="checkbox" id="checkbox11" /><label for="checkbox11">Checkbox</label></li>
+                                            <li><input name="checkbox2" type="checkbox" id="checkbox12" /><label for="checkbox12">Checkbox</label></li>
+                                            <li><input name="checkbox2" type="checkbox" id="checkbox13" /><label for="checkbox13">Checkbox</label></li>
+                                            <li><input name="checkbox2" type="checkbox" id="checkbox14" /><label for="checkbox14">Checkbox</label></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
                         </fieldset>
 
                         <div class="form-actions">
