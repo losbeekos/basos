@@ -1,6 +1,14 @@
 'use strict';
 
 
+/*====================================
+=            Base JS path            =
+====================================*/
+
+var basosJsPath = 'js/';
+
+
+
 /*===============================================
 =            Avoid console.log errors           =
 ===============================================*/
@@ -44,7 +52,7 @@ Modernizr.load([
     /*
     {
         test : Modernizr.input.placeholder,
-        nope : 'js/plugins/jquery.placeholder/jquery.placeholder.min.js'
+        nope : basosJsPath + 'plugins/jquery.placeholder/jquery.placeholder.min.js'
     },
     */
 
@@ -55,7 +63,7 @@ Modernizr.load([
         load: ['http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js'],
         complete: function (url, result, key) {
             if (!window.jQuery) {
-                Modernizr.load('js/vendor/jquery-1.10.2.min.js');
+                Modernizr.load(basosJsPath + 'vendor/jquery-1.10.2.min.js');
             }
 
 
@@ -65,74 +73,74 @@ Modernizr.load([
 
             var settings = {
                 version: '?v=0.1', // If the file changes, update this number
-                $document: $(document)
-                ,$window: $(window)
-                ,$html: $('html')
-                ,$body: $('body')
-                ,$container: $('#container')
-                ,$main: $('#main')
+                $document: $(document),
+                $window: $(window),
+                $html: $('html'),
+                $body: $('body'),
+                $container: $('#container'),
+                $main: $('#main'),
 
 
                 /*==========  Primary nav  ==========*/
 
-                ,navPrimary: {
+                navPrimary: {
                     $el: $('.nav-primary')
-                }
+                },
 
 
                 /*==========  Modals  ==========*/
 
-                ,modals: {
-                    $trigger: $('.modal-trigger')
-                    ,$modal: $('.modal')
-                }
+                modals: {
+                    $trigger: $('.modal-trigger'),
+                    $modal: $('.modal')
+                },
 
 
                 /*==========  Cycle  ==========*/
 
-                ,cycle: {
-                    $el: $('.spotlight-wrap', '#spotlight')
-                    ,slides: '> .spotlight-item'
-                    ,pager : '> .spotlight-pager'
-                    ,pagerActiveClass: 'spotlight-pager-active'
-                }
+                cycle: {
+                    $el: $('.spotlight-wrap', '#spotlight'),
+                    slides: '> .spotlight-item',
+                    pager : '> .spotlight-pager',
+                    pagerActiveClass: 'spotlight-pager-active'
+                },
 
 
                 /*==========  Tooltips  ==========*/
 
-                ,tooltips: {
-                    $el: $('.tooltip')
-                    ,tooltipActiveClass: 'tooltip-active'
-                    ,tooltipContentClass: 'tooltip-content'
-                    ,arrowWidth: 8
-                }
+                tooltips: {
+                    $el: $('.tooltip'),
+                    tooltipActiveClass: 'tooltip-active',
+                    tooltipContentClass: 'tooltip-content',
+                    arrowWidth: 8
+                },
 
                 /*==========  Accordion  ==========*/
 
-                ,accordion: {
-                    $el: $('.accordion')
-                    ,$group: $('.accordion-group')
-                    ,$trigger: $('.accordion-trigger')
-                    ,contentShowClass: 'accordion-show'
-                }
+                accordion: {
+                    $el: $('.accordion'),
+                    $group: $('.accordion-group'),
+                    $trigger: $('.accordion-trigger'),
+                    contentShowClass: 'accordion-show'
+                },
 
 
                 /*==========  Form validation  ==========*/
 
-                ,formValidation: {
+                formValidation: {
                     $el: $('.form-validate')
-                }
+                },
 
 
                 /*==========  Tabs  ==========*/
 
-                ,tabs: {
-                    $nav: $('.tabs')
-                    ,$tab: $('.tab')
-                    ,$content: $('.tab-content')
+                tabs: {
+                    $nav: $('.tabs'),
+                    $tab: $('.tab'),
+                    $content: $('.tab-content')
                 }
 
-            }
+            },
 
 
 
@@ -140,7 +148,7 @@ Modernizr.load([
             =            Modules            =
             ===============================*/
 
-            ,modules = {
+            modules = {
                 init: function(){
 
                     $(function(){
@@ -159,7 +167,7 @@ Modernizr.load([
                         //modules.example.init();
                     });
 
-                }
+                },
 
 
 
@@ -168,17 +176,17 @@ Modernizr.load([
                 =             Example             =
                 =================================*/
                 /*
-                ,example: {
+                example: {
                     init: function(){
                         var self = this;
 
                         if(settings.something.$el.length > 0){
-                            yepnope.injectJs('js/plugins/someplugin/someplugin.js' + settings.version,
+                            yepnope.injectJs(basosJsPath + 'plugins/someplugin/someplugin.js' + settings.version,
                                 function(){
-                                });
+                            });
                         }
                     }
-                }
+                },
                 */
                 /*-----  End of Example  ------*/
 
@@ -189,16 +197,12 @@ Modernizr.load([
                 =            Primary navigation            =
                 ==========================================*/
                 /*
-                ,navPrimary: {
-                    var self = this;
-
+                navPrimary: {
                     init: function(){
-                        var self = this;
-
                         if(settings.primaryNav.$el.length > 0){
                         }
                     }
-                }
+                },
                 */
                 /*-----  End of Primary navigation  ------*/
 
@@ -210,12 +214,12 @@ Modernizr.load([
                 =              Cycle              =
                 =================================*/
                 /*
-                ,cycle: {
+                cycle: {
                     init: function(){
                         var self = this;
 
                         if(settings.cycle.$el.el.length > 0){
-                            yepnope.injectJs('js/plugins/jquery.cycle2/jquery.cycle2.min.js',
+                            yepnope.injectJs(basosJsPath + 'plugins/jquery.cycle2/jquery.cycle2.min.js',
                                 function(){
                                     self.el.cycle({
                                         slides           : settings.cycle.slides,
@@ -228,7 +232,7 @@ Modernizr.load([
                                 });
                         }
                     }
-                }
+                },
                 */
                 /*-----  End of Cycle  ------*/
 
@@ -241,13 +245,13 @@ Modernizr.load([
                 =            Fancybox            =
                 ================================*/
                 /*
-                ,fancybox: {
+                fancybox: {
                     el: $('.fancybox'),
 
                     init: function(){
                         var self = this,
-                            urlFancybox = 'js/plugins/jquery.fancybox/jquery.fancybox.pack.js',
-                            urlFancyboxMediaHelper = 'js/plugins/jquery.fancybox/helpers/jquery.fancybox-media.min.js';
+                            urlFancybox = basosJsPath + 'plugins/jquery.fancybox/jquery.fancybox.pack.js',
+                            urlFancyboxMediaHelper = basosJsPath + 'plugins/jquery.fancybox/helpers/jquery.fancybox-media.min.js';
 
                         yepnope({
                             test : self.el,
@@ -258,12 +262,12 @@ Modernizr.load([
                                         helpers: {
                                             media: true
                                         }
-                                    })
+                                    });
                                 }
                             }
                         });
                     }
-                }
+                },
                 */
                 /*-----  End of Fancybox  ------*/
 
@@ -275,16 +279,16 @@ Modernizr.load([
                 =            Fastclick            =
                 =================================*/
 
-                ,fastClick: {
+                fastClick: {
                     init: function(){
                         yepnope.injectJs(
-                            'js/plugins/fastclick/fastclick.min.js' + settings.version,
+                            basosJsPath + 'plugins/fastclick/fastclick.min.js' + settings.version,
                             function(url, result, key){
                                 new FastClick(document.body);
                             }
                         );
                     }
-                }
+                },
 
                 /*-----  End of Fastclick  ------*/
 
@@ -296,16 +300,16 @@ Modernizr.load([
                 =            Fitvids            =
                 ===============================*/
 
-                ,fitVids: {
+                fitVids: {
                     init: function(){
                         yepnope.injectJs(
-                            'js/plugins/jquery.fitvids/jquery.fitvids.min.js' + settings.version,
+                            basosJsPath + 'plugins/jquery.fitvids/jquery.fitvids.min.js' + settings.version,
                             function(url, result, key){
                                 settings.$main.fitVids();
                             }
                         );
                     }
-                }
+                },
 
                 /*-----  End of Fitvids  ------*/
 
@@ -317,10 +321,10 @@ Modernizr.load([
                 =             Modals             =
                 ================================*/
 
-                ,modals: {
-                    scrollTopPosition: null
+                modals: {
+                    scrollTopPosition: null,
 
-                    ,init: function () {
+                    init: function () {
                         var self = this;
 
                         if (settings.modals.$trigger.length > 0 && settings.modals.$modal.length > 0) {
@@ -347,7 +351,7 @@ Modernizr.load([
                         });
 
                         settings.$body.on('keydown', function(event){
-                            if (e.keyCode === 27) {
+                            if (event.keyCode === 27) {
                                 self.closeModal();
                             }
                         });
@@ -384,7 +388,7 @@ Modernizr.load([
 
                         settings.$window.scrollTop(self.scrollTopPosition);
                     }
-                }
+                },
 
                 /*-----  End of Fitvids  ------*/
 
@@ -396,10 +400,10 @@ Modernizr.load([
                 =            Tooltips            =
                 ================================*/
 
-                ,tooltips: {
-                    tooltipTrigger: null
+                tooltips: {
+                    tooltipTrigger: null,
 
-                    ,init: function () {
+                    init: function () {
                         var self = this;
 
                         if (settings.tooltips.$el.length > 0) {
@@ -465,7 +469,7 @@ Modernizr.load([
                                 break;
                         }
                     }
-                }
+                },
 
                 /*-----  End of Tooltips  ------*/
 
@@ -476,7 +480,7 @@ Modernizr.load([
                 =            Accordion            =
                 =================================*/
 
-                ,accordion: {
+                accordion: {
                     init: function () {
                         var self = this;
 
@@ -498,7 +502,7 @@ Modernizr.load([
 
                             var contentHeight = $groupContent.height();
 
-                            $groupContent.attr('data-accordion-content-height', contentHeight)
+                            $groupContent.attr('data-accordion-content-height', contentHeight);
 
                             if ($groupContent.hasClass(settings.accordion.contentShowClass)) {
                                 $groupContent.css({'max-height': contentHeight});
@@ -547,7 +551,7 @@ Modernizr.load([
                             self.setGroupHeight();
                         });
                     }
-                }
+                },
 
                 /*-----  End of Accordion  ------*/
 
@@ -559,37 +563,37 @@ Modernizr.load([
                 =            Form validation            =
                 =======================================*/
 
-                ,formValidation: {
+                formValidation: {
                     init: function(){
                         var self = this;
 
                         if(settings.formValidation.$el.length > 0){
-                            yepnope.injectJs('js/plugins/jquery.parsley/i18n/messages.nl.js' + settings.version);
-                            yepnope.injectJs('js/plugins/jquery.parsley/parsley.js' + settings.version,
-                                function(){
-                                    settings.formValidation.$el.parsley({
-                                        trigger: 'change',
-                                        errors: {
-                                            classHandler: function (el, isRadioOrCheckbox){
-                                                return $(el).closest('.form-input, .form-select');
+                            yepnope.injectJs(basosJsPath + 'plugins/jquery.parsley/i18n/messages.nl.js' + settings.version, function () {
+                                yepnope.injectJs(basosJsPath + 'plugins/jquery.parsley/parsley.js' + settings.version,
+                                    function(){
+                                        settings.formValidation.$el.parsley({
+                                            trigger: 'change',
+                                            errors: {
+                                                classHandler: function (element, isRadioOrCheckbox){
+                                                    return $(element).closest('.form-input');
+                                                },
+
+                                                container: function (element, isRadioOrCheckbox) {
+                                                    var $container = element.closest('.form-input');
+
+                                                    if ($container.length === 0) {
+                                                        $container = $("<ul class='parsley-container'></ul>").append($container);
+                                                    }
+
+                                                    return $container;
+                                                }
                                             }
-                                        },
-
-                                        validators: {
-                                            iban: function () {
-                                                return val % multiple === 0;
-                                            }
-                                        },
-
-                                        messages: {
-                                          iban: "Dit is geen geldig IBAN-nummer."
-                                        }
-
+                                        });
                                     });
-                                });
+                            });
                         }
                     }
-                }
+                },
 
                 /*-----  End of Form validation  ------*/
 
@@ -601,9 +605,7 @@ Modernizr.load([
                 =            Tabs            =
                 ============================*/
 
-
-
-                ,tabs: {
+                tabs: {
                     init: function(){
                         var self = this;
 
@@ -632,7 +634,7 @@ Modernizr.load([
 
 
 
-            }
+            };
 
             /*-----  End of Modules  ------*/
 

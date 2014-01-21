@@ -156,6 +156,13 @@
                             <li>Nog een error</li>
                         </ul>
                     </div>
+                    <div class="notification error">
+                        <ul>
+                            <li>Vul een e-mailadres in</li>
+                            <li>Eventueel nog een andere error</li>
+                            <li>Nog een error</li>
+                        </ul>
+                    </div>
                     <div class="notification success">
                         <ul>
                             <li>Vul een e-mailadres in</li>
@@ -184,12 +191,14 @@
                                     <label>Aanhef</label>
                                 </div>
                                 <div class="column-7 column-omega">
-                                    <div class="column-6 form-select">
-                                        <select name="" id="">
-                                            <option value="" disabled="disabled" selected="selected">Kies een optie</option>
-                                            <option value="">Dhr.</option>
-                                            <option value="">Mevr.</option>
-                                        </select>
+                                    <div class="column-6 form-input">
+                                        <div class="form-select">
+                                            <select name="" id="">
+                                                <option value="" disabled="disabled" selected="selected">Kies een optie</option>
+                                                <option value="">Dhr.</option>
+                                                <option value="">Mevr.</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -402,12 +411,14 @@
                                     <label>Aanhef</label>
                                 </div>
                                 <div class="column-7 column-omega">
-                                    <div class="column-6 form-select">
-                                        <select name="" id="" required="required">
-                                            <option value="" disabled="disabled" selected="selected">Kies een optie</option>
-                                            <option value="0">Dhr.</option>
-                                            <option value="1">Mevr.</option>
-                                        </select>
+                                    <div class="column-6 form-input">
+                                        <div class="form-select">
+                                            <select name="aanhef" id="" required="required">
+                                                <option value="" disabled="disabled" selected="selected">Kies een optie</option>
+                                                <option value="Dhr.">Dhr.</option>
+                                                <option value="Mevr.">Mevr.</option>
+                                            </select>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -417,7 +428,7 @@
                                 </div>
                                 <div class="column-7 column-omega">
                                     <div class="column-3 form-input">
-                                        <input type="text" placeholder="0123AB" data-regexp="^\d{4}[a-zA-Z]{2}$" data-error-message="Dit is geen geldige postcode." data-maxlength="6" maxlength="6" />
+                                        <input type="text" placeholder="0123AB" parsley-regexp="^\d{4}[a-zA-Z]{2}$" parsley-error-message="Dit is geen geldige postcode." parsley-maxlength="6" maxlength="6" />
                                     </div>
                                 </div>
                             </div>
@@ -427,7 +438,7 @@
                                 </div>
                                 <div class="column-7 column-omega">
                                     <div class="column-4 form-input">
-                                        <input type="tel" placeholder="0123456789" data-type="digits" data-minlength="10" data-error-message="Dit is geen geldig telefoonnummer." />
+                                        <input type="tel" placeholder="0123456789" parsley-type="digits" parsley-minlength="10" parsley-error-message="Dit is geen geldig telefoonnummer." />
                                     </div>
                                 </div>
                             </div>
@@ -437,7 +448,7 @@
                                 </div>
                                 <div class="column-7 column-omega">
                                     <div class="column-4 form-input">
-                                        <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-error-message="Dit is geen gelding IBAN nummer." />
+                                        <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" parsley-error-message="Dit is geen gelding IBAN nummer." />
                                     </div>
                                 </div>
                             </div>
@@ -467,7 +478,7 @@
                                 </div>
                                 <div class="column-7 column-omega">
                                     <div class="column-6 form-input">
-                                        <input type="password" data-equalto="#password" data-error-message="Wachtwoorden zijn niet identiek." />
+                                        <input type="password" parsley-equalto="#password" parsley-error-message="Wachtwoorden zijn niet identiek." />
                                     </div>
                                 </div>
                             </div>

@@ -8,11 +8,14 @@
         }
     }
 
-    #{$input-selectors},
-    select {
+    #{$input-selectors} {
         border-color: #a60000;
 
         @include rem(padding-right, 30px);
+    }
+
+    .form-select {
+        border-color: #a60000;
     }
 }
 
@@ -26,11 +29,14 @@
         }
     }
 
-    #{$input-selectors},
-    select {
+    #{$input-selectors} {
         border-color: #00a608;
 
         @include rem(padding-right, 30px);
+    }
+
+    .form-select {
+        border-color: #00a608;
     }
 }
 
@@ -38,7 +44,9 @@
     @extend .list-unstyled;
 
     clear: both;
-    font-style: italic;
+    max-width: 100%;
+    display: inline-block;
+    //font-style: italic;
 
     @include rem(padding, 10px);
     @include rem(font-size, 14px);

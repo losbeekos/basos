@@ -6,9 +6,9 @@
 /*==========  Grid class  ==========*/
 
 .grid {
-    position: relative;
+    @extend .clearfix;
 
-    @include container;
+    position: relative;
 }
 
 [class|="column"] {

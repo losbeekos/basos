@@ -49,10 +49,6 @@
     @media (min-width: 650px) { @content; }
   }
 
-  @else if $point == gamma {
-    @media (max-width: 650px)  { @content; }
-  }
-
   @else if $point == alpha {
     @media (max-width: 650px)  { @content; }
   }

@@ -70,16 +70,16 @@ textarea {
 }
 
 select {
+    position: relative;
     background: transparent;
     background-image: none;
     display: block;
     width: 100%;
-    border-radius: $base-border-radius;
     outline: none;
     color: #888888;
-    border: 1px solid #cbcbcb;
     cursor: pointer;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
+    z-index: 2;
+    border: none;
     // This is so hacky.. (for Firefox)
     // Removes the default select arrow.
     text-overflow: '';
@@ -87,17 +87,20 @@ select {
     // End of brutal hack
 
     @include rem(padding, 10px 10px 10px 5px);
-    @include single-transition(box-shadow, $base-transition-speed);
     @include appearance(none);
 
     &[multiple=multiple] {
         height: auto;
-    }
+        border: 1px solid #cbcbcb;
+        border-radius: $base-border-radius;
+        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
 
-    &:focus,
-    &:hover {
-        border-color: #cccccc;
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        @include single-transition(box-shadow, $base-transition-speed);
+
+        &:hover {
+            border-color: #cccccc;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
     }
 
     option[disabled] {

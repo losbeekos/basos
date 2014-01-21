@@ -32,19 +32,35 @@
 .form-select {
     @include user-select(none);
 
+    background: $white;
+    overflow: hidden;
+    border: 1px solid #cbcbcb;
+    border-radius: $base-border-radius;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
+
+    @include single-transition(box-shadow, $base-transition-speed);
+
+    &:focus,
+    &:hover {
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+    }
+
     &:after {
         @extend %font-fontello;
 
         content: $icon-form-select;
         position: absolute;
-        top: 9px;
+        top: 0;
         right: 12px;
         z-index: 1;
         color: #bbbbbb;
 
-        @include rem(font-size, 16px);
+        @include rem(font-size, 24px);
+        @include rem(line-height, 40px);
 
-        .lt-ie10 & {
+        .lt-ie10 &,
+        .parsley-error &,
+        .parsley-success & {
             display: none;
         }
     }
