@@ -575,7 +575,13 @@ Modernizr.load([
                                             trigger: 'change',
                                             errors: {
                                                 classHandler: function (element, isRadioOrCheckbox){
-                                                    return $(element).closest('.form-input');
+                                                    var $element = $(element);
+
+                                                    if (isRadioOrCheckbox) {
+                                                        return $element.closest('.form-input-list');
+                                                    } else {
+                                                        return $element.closest('.form-input');
+                                                    }
                                                 },
 
                                                 container: function (element, isRadioOrCheckbox) {

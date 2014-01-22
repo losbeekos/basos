@@ -14,8 +14,17 @@
         @include rem(padding-right, 30px);
     }
 
-    .form-select {
-        border-color: #a60000;
+    input[type=checkbox],
+    input[type=radio] {
+        + label {
+            &:before {
+                border-color: #a60000;
+            }
+
+            &:after {
+                color: #a60000;
+            }
+        }
     }
 }
 
@@ -57,8 +66,9 @@
     background: #eeeeee;
     box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
 
-    @include rem(margin-top, 15px);
     @include rem(border-radius, 0 3px 3px 3px);
+    @include rem(margin-top, 20px);
+    @include rem(margin-bottom, 10px);
 
     &:after {
         content: '';
