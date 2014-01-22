@@ -2209,23 +2209,27 @@ input[type=radio] + label:after {
   padding-right: 30px;
   padding-right: 1.875rem;
 }
-/* line 20, ../scss/base/form/_validation.scss */
+/* line 17, ../scss/base/form/_validation.scss */
+.parsley-error .form-select {
+  border-color: #a60000;
+}
+/* line 24, ../scss/base/form/_validation.scss */
 .parsley-error input[type=checkbox] + label:before,
 .parsley-error input[type=radio] + label:before {
   border-color: #a60000;
 }
-/* line 24, ../scss/base/form/_validation.scss */
+/* line 28, ../scss/base/form/_validation.scss */
 .parsley-error input[type=checkbox] + label:after,
 .parsley-error input[type=radio] + label:after {
   color: #a60000;
 }
 
-/* line 33, ../scss/base/form/_validation.scss */
+/* line 37, ../scss/base/form/_validation.scss */
 .parsley-success.form-input:after {
   content: "";
   color: #6eb269;
 }
-/* line 41, ../scss/base/form/_validation.scss */
+/* line 45, ../scss/base/form/_validation.scss */
 .parsley-success input[type="text"],
 .parsley-success input[type="password"],
 .parsley-success input[type="date"],
@@ -2244,12 +2248,12 @@ input[type=radio] + label:after {
   padding-right: 30px;
   padding-right: 1.875rem;
 }
-/* line 47, ../scss/base/form/_validation.scss */
+/* line 51, ../scss/base/form/_validation.scss */
 .parsley-success .form-select {
   border-color: #00a608;
 }
 
-/* line 52, ../scss/base/form/_validation.scss */
+/* line 56, ../scss/base/form/_validation.scss */
 .parsley-error-list {
   clear: both;
   max-width: 100%;
@@ -2260,7 +2264,7 @@ input[type=radio] + label:after {
   font-size: 0.875rem;
 }
 
-/* line 64, ../scss/base/form/_validation.scss */
+/* line 68, ../scss/base/form/_validation.scss */
 .parsley-error-list {
   position: relative;
   background: #eeeeee;
@@ -2272,7 +2276,7 @@ input[type=radio] + label:after {
   margin-bottom: 10px;
   margin-bottom: 0.625rem;
 }
-/* line 73, ../scss/base/form/_validation.scss */
+/* line 77, ../scss/base/form/_validation.scss */
 .parsley-error-list:after {
   content: '';
   width: 0;
