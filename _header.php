@@ -34,7 +34,7 @@
         <meta name="twitter:description" content="">
         <meta name="twitter:image" content="image-114x114px.png">
 
-        <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script src="js/vendor/modernizr.min.js"></script>
 
         <!--[if lt IE 9]>
             <script src="js/vendor/respond.min.js"></script>

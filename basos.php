@@ -149,33 +149,31 @@
                 <section>
                     <h1>Notifications</h1>
                     <p>Note: You can download different icons on <a href="http://www.fontello.com">fontello.com</a> and change them in settings.</p>
-                    <div class="notification error">
-                        <ul>
-                            <li>Vul een e-mailadres in</li>
-                            <li>Eventueel nog een andere error</li>
-                            <li>Nog een error</li>
-                        </ul>
+                    <h2>Alpha</h2>
+                    <div class="notification-alpha error">
+                        <div class="notification-text">Deze account gegevens zijn niet bij ons bekend.</div>
+                        <button class="notification-close"></button>
                     </div>
-                    <div class="notification error">
-                        <ul>
-                            <li>Vul een e-mailadres in</li>
-                            <li>Eventueel nog een andere error</li>
-                            <li>Nog een error</li>
-                        </ul>
+                    <div class="notification-alpha success">
+                        <div class="notification-text">Je bent nu geregistreerd op onze website.</div>
+                        <button class="notification-close"></button>
                     </div>
-                    <div class="notification success">
-                        <ul>
-                            <li>Vul een e-mailadres in</li>
-                            <li>Eventueel nog een andere error</li>
-                            <li>Nog een error</li>
-                        </ul>
+                    <div class="notification-alpha">
+                        <div class="notification-text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+                        <button class="notification-close"></button>
                     </div>
-                    <div class="notification">
-                        <ul>
-                            <li>Vul een e-mailadres in</li>
-                            <li>Eventueel nog een andere error</li>
-                            <li>Nog een error</li>
-                        </ul>
+                    <h2>Beta</h2>
+                    <div class="notification-beta error">
+                        <div class="notification-text">Deze account gegevens zijn niet bij ons bekend.</div>
+                        <button class="notification-close"></button>
+                    </div>
+                    <div class="notification-beta success">
+                        <div class="notification-text">Je bent nu geregistreerd op onze website.</div>
+                        <button class="notification-close"></button>
+                    </div>
+                    <div class="notification-beta">
+                        <div class="notification-text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+                        <button class="notification-close"></button>
                     </div>
                 </section>
 
@@ -493,6 +491,9 @@
                                 </div>
                             </div>
                             <div class="form-row">
+                                <div class="column-5 form-label">
+                                    <label>Some checkboxes</label>
+                                </div>
                                 <div class="column-7 column-omega">
                                     <div class="column-6 form-input">
                                         <ul class="form-input-list list-unstyled">
@@ -501,6 +502,22 @@
                                             <li><input name="checkbox2" type="checkbox" id="checkbox12" /><label for="checkbox12">Checkbox</label></li>
                                             <li><input name="checkbox2" type="checkbox" id="checkbox13" /><label for="checkbox13">Checkbox</label></li>
                                             <li><input name="checkbox2" type="checkbox" id="checkbox14" /><label for="checkbox14">Checkbox</label></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="column-5 form-label">
+                                    <label>Some radio buttons</label>
+                                </div>
+                                <div class="column-7 column-omega">
+                                    <div class="column-6 form-input">
+                                        <ul class="form-input-list list-unstyled">
+                                            <li><input required="required" name="radio" type="radio" name="radio" id="radio13" /><label for="radio13">Radio</label></li>
+                                            <li><input name="radio" type="radio" name="radio" id="radio14" /><label for="radio14">Radio</label></li>
+                                            <li><input name="radio" type="radio" name="radio" id="radio10" /><label for="radio10">Radio</label></li>
+                                            <li><input name="radio" type="radio" name="radio" id="radio11" /><label for="radio11">Radio</label></li>
+                                            <li><input name="radio" type="radio" name="radio" id="radio12" /><label for="radio12">Radio</label></li>
                                         </ul>
                                     </div>
                                 </div>
@@ -838,7 +855,7 @@
                 <section>
                     <h1>Media</h1>
                     <h2>Left</h2>
-                    <div class="media-item">
+                    <div class="media-item media-item-left">
                         <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                         <div class="media-beta">
                             <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
@@ -854,19 +871,19 @@
                         </div>
                     </div>
                     <h3>Nested</h3>
-                    <div class="media-item">
+                    <div class="media-item media-item-left">
                         <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                         <div class="media-beta">
                             <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                             <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-                            <div class="media-item">
+                            <div class="media-item media-item-left">
                                 <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                                 <div class="media-beta">
                                     <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                     <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                                 </div>
                             </div>
-                            <div class="media-item">
+                            <div class="media-item media-item-left">
                                 <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                                 <div class="media-beta">
                                     <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
@@ -877,14 +894,14 @@
                     </div>
                     <h2>List</h2>
                     <ul class="list-media">
-                        <li class="media-item">
+                        <li class="media-item media-item-left">
                             <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                             <div class="media-beta">
                                 <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                 <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                             </div>
                         </li>
-                        <li class="media-item">
+                        <li class="media-item media-item-left">
                             <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                             <div class="media-beta">
                                 <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
@@ -894,26 +911,26 @@
                     </ul>
                     <h2>Bordered list</h2>
                     <ul class="list-media list-media-bordered">
-                        <li class="media-item">
+                        <li class="media-item media-item-left">
                             <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                             <div class="media-beta">
                                 <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                 <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                             </div>
                         </li>
-                        <li class="media-item">
+                        <li class="media-item media-item-left">
                             <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                             <div class="media-beta">
                                 <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                 <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-                                <div class="media-item">
+                                <div class="media-item media-item-left">
                                     <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                                     <div class="media-beta">
                                         <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                         <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                                     </div>
                                 </div>
-                                <div class="media-item">
+                                <div class="media-item media-item-left">
                                     <div class="media-alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
                                     <div class="media-beta">
                                         <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>

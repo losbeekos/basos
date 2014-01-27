@@ -40,19 +40,19 @@
 
     .media-item-right & {
         float: right;
-
-        @include omega;
+        margin: 0;
     }
 }
 
 .media-beta {
     @extend .column-9;
 
-    @include omega;
+    .media-item-left & {
+        float: right;
+        margin: 0;
+    }
 
     .media-item-right & {
         float: left;
-
-        @include remove-omega;
     }
 }
