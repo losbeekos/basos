@@ -161,12 +161,7 @@
 }
 
 
-/*==========  Hidden  ==========*/
-
-.hidden {
-    display: none !important;
-    visibility: hidden;
-}
+/*==========  Visually hidden  ==========*/
 
 .visuallyhidden {
     border: 0;
@@ -188,11 +183,6 @@
     position: static;
     width: auto;
 }
-
-.invisible {
-    visibility: hidden;
-}
-
 
 /*==========  Hide classes  ==========*/
 

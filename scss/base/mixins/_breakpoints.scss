@@ -1,0 +1,22 @@
+/*===================================
+=            Breakpoints            =
+===================================*/
+
+
+@mixin breakpoint($point) {
+    @if $point == gamma-and-up {
+        @media (min-width: 900px) { @content; }
+    }
+
+    @else if $point == beta {
+        @media (min-width: 650px) and (max-width: 900px) { @content; }
+    }
+
+    @else if $point == beta-and-up {
+        @media (min-width: 650px) { @content; }
+    }
+
+    @else if $point == alpha {
+       @media (max-width: 650px)  { @content; }
+    }
+}

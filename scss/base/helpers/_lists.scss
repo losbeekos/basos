@@ -1,0 +1,24 @@
+/*=============================
+=            Lists            =
+=============================*/
+
+
+/*==========  Unstyled list  ==========*/
+
+.list-unstyled {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+
+/*==========  Inline list  ==========*/
+
+.list-inline {
+    @extend .list-unstyled;
+
+    li {
+        display: inline;
+        @include rem(margin-right, 10px);
+    }
+}
