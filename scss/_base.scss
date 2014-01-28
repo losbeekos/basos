@@ -2,11 +2,6 @@
 =            Base            =
 ============================*/
 
-@import "base/normalize";
-@import "base/h5bp";
-@import "base/grid";
-@import "base/fonts";
-
 
 /*==========  Mixins  ==========*/
 
@@ -25,18 +20,26 @@
 @import "base/helpers/visually_hidden";
 
 
+/*==========  Base  ==========*/
+
+@import "base/normalize";
+@import "base/h5bp";
+@import "base/grid";
+@import "base/fonts";
+
+
 /*==========  General  ==========*/
 
-@import "base/layout";
-@import "base/typography";
-@import "base/tables";
-@import "base/tabs";
-@import "base/notifications";
-@import "base/dropdowns";
-@import "base/tooltips";
-@import "base/accordion";
-@import "base/breadcrumbs";
-@import "base/media";
+@import "base/general/layout";
+@import "base/general/typography";
+@import "base/general/tables";
+@import "base/general/tabs";
+@import "base/general/notifications";
+@import "base/general/dropdowns";
+@import "base/general/tooltips";
+@import "base/general/accordion";
+@import "base/general/breadcrumbs";
+@import "base/general/media";
 
 
 /*==========  Buttons  ==========*/
