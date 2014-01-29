@@ -2,6 +2,11 @@
 =            Base            =
 ============================*/
 
+@import "base/normalize";
+@import "base/h5bp";
+@import "base/grid";
+@import "base/fonts";
+
 
 /*==========  Mixins  ==========*/
 
@@ -18,14 +23,6 @@
 @import "base/helpers/image_replacement";
 @import "base/helpers/lists";
 @import "base/helpers/visually_hidden";
-
-
-/*==========  Base  ==========*/
-
-@import "base/normalize";
-@import "base/h5bp";
-@import "base/grid";
-@import "base/fonts";
 
 
 /*==========  General  ==========*/
@@ -68,3 +65,4 @@
 @import "base/modals/effects/flip";
 @import "base/modals/effects/fadescale";
 @import "base/modals/effects/superscale";
+
