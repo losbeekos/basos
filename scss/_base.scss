@@ -2,10 +2,11 @@
 =            Base            =
 ============================*/
 
-@import "base/normalize";
-@import "base/h5bp";
-@import "base/grid";
-@import "base/fonts";
+
+/*==========  Vendor  ==========*/
+
+@import "base/vendor/normalize";
+@import "base/vendor/h5bp";
 
 
 /*==========  Mixins  ==========*/
@@ -27,6 +28,8 @@
 
 /*==========  General  ==========*/
 
+@import "base/general/grid";
+@import "base/general/fonts";
 @import "base/general/layout";
 @import "base/general/typography";
 @import "base/general/tables";
