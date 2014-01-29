@@ -2977,7 +2977,7 @@ html[data-modal-effect|=slip],
 =            Print styles, Inlined to avoid required HTTP connection: h5bp.com/r            =
 ===========================================================================================*/
 @media print {
-  /* line 6, ../scss/base/_print.scss */
+  /* line 6, ../scss/base/general/_print.scss */
   * {
     background: transparent !important;
     color: #000 !important;
@@ -2986,18 +2986,18 @@ html[data-modal-effect|=slip],
     text-shadow: none !important;
   }
 
-  /* line 14, ../scss/base/_print.scss */
+  /* line 14, ../scss/base/general/_print.scss */
   a,
   a:visited {
     text-decoration: underline;
   }
 
-  /* line 18, ../scss/base/_print.scss */
+  /* line 18, ../scss/base/general/_print.scss */
   a[href]:after {
     content: " (" attr(href) ")";
   }
 
-  /* line 22, ../scss/base/_print.scss */
+  /* line 22, ../scss/base/general/_print.scss */
   abbr[title]:after {
     content: " (" attr(title) ")";
   }
@@ -3005,33 +3005,33 @@ html[data-modal-effect|=slip],
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 32, ../scss/base/_print.scss */
+  /* line 32, ../scss/base/general/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 37, ../scss/base/_print.scss */
+  /* line 37, ../scss/base/general/_print.scss */
   pre,
   blockquote {
     border: 1px solid #999;
     page-break-inside: avoid;
   }
 
-  /* line 42, ../scss/base/_print.scss */
+  /* line 42, ../scss/base/general/_print.scss */
   thead {
     display: table-header-group;
     /* h5bp.com/t */
   }
 
-  /* line 47, ../scss/base/_print.scss */
+  /* line 47, ../scss/base/general/_print.scss */
   tr,
   img {
     page-break-inside: avoid;
   }
 
-  /* line 51, ../scss/base/_print.scss */
+  /* line 51, ../scss/base/general/_print.scss */
   img {
     max-width: 100% !important;
   }
@@ -3040,7 +3040,7 @@ html[data-modal-effect|=slip],
     margin: 0.5cm;
 }
 
-  /* line 61, ../scss/base/_print.scss */
+  /* line 61, ../scss/base/general/_print.scss */
   p,
   h2,
   h3 {
@@ -3048,7 +3048,7 @@ html[data-modal-effect|=slip],
     widows: 3;
   }
 
-  /* line 67, ../scss/base/_print.scss */
+  /* line 67, ../scss/base/general/_print.scss */
   h2,
   h3 {
     page-break-after: avoid;
