@@ -11,7 +11,7 @@
         cursor: pointer;
     }
 
-    .tooltip-content,
+    .tooltip--content,
     &:after {
         visibility: hidden;
         position: absolute;
@@ -21,8 +21,8 @@
         @include single-transition(all, $tooltip-transition-speed);
     }
 
-    &.tooltip-active {
-        .tooltip-content,
+    &.tooltip__active {
+        .tooltip--content,
         &:after {
             visibility: visible;
 
@@ -35,7 +35,7 @@
         border: $tooltip-arrow-width solid transparent;
     }
 
-    .tooltip-content {
+    .tooltip--content {
         text-align: center;
         background: $tooltip-bg-color;
         color: $tooltip-font-color;
@@ -53,7 +53,7 @@
         margin-left: -$tooltip-arrow-width;
     }
 
-    .tooltip-content {
+    .tooltip--content {
         left: 50%;
         margin-left: -$tooltip-width/2;
     }
@@ -80,7 +80,7 @@
         margin-top: -$tooltip-arrow-width;
     }
 
-    .tooltip-content {
+    .tooltip--content {
         top: 50%;
     }
 }
@@ -91,7 +91,7 @@
         border-right-color: $tooltip-bg-color;
     }
 
-    .tooltip-content {
+    .tooltip--content {
         right: -($tooltip-width+$tooltip-arrow-width*2);
     }
 }
@@ -102,7 +102,7 @@
         border-left-color: $tooltip-bg-color;
     }
 
-    .tooltip-content {
+    .tooltip--content {
         left: -($tooltip-width+$tooltip-arrow-width*2);
     }
 }

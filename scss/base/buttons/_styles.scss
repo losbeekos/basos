@@ -2,16 +2,7 @@
 =            Styles            =
 ==============================*/
 
-.btn-divider {
-    cursor: default;
-}
-
-.btn-divider,
-.btn-alpha,
-.btn-beta,
-.btn-gamma,
-.btn-delta,
-.btn-epsilon {
+.btn {
     display: inline-block;
     color: $color-text;
     border-radius: $btn-border-radius;
@@ -56,10 +47,12 @@
     }
 }
 
-.btn-beta,
-.btn-gamma,
-.btn-delta,
-.btn-epsilon {
+.btn__alpha {}
+
+.btn__beta,
+.btn__gamma,
+.btn__delta,
+.btn__epsilon {
     color: $white;
     text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
 
@@ -74,7 +67,7 @@
     }
 }
 
-.btn-beta {
+.btn__beta {
     background-color: $btn-bg-color-beta;
     border: 1px solid darken($btn-bg-color-beta, 8%);
 
@@ -83,7 +76,7 @@
     &:disabled, &:disabled:hover { background-color: $btn-bg-color-beta;              }
 }
 
-.btn-gamma {
+.btn__gamma {
     background-color: $btn-bg-color-gamma;
     border: 1px solid darken($btn-bg-color-gamma, 8%);
 
@@ -92,7 +85,7 @@
     &:disabled, &:disabled:hover { background-color: $btn-bg-color-gamma;              }
 }
 
-.btn-delta {
+.btn__delta {
     background-color: $btn-bg-color-delta;
     border: 1px solid darken($btn-bg-color-delta, 8%);
 
@@ -101,11 +94,15 @@
     &:disabled, &:disabled:hover { background-color: $btn-bg-color-delta;              }
 }
 
-.btn-epsilon {
+.btn__epsilon {
     background-color: $btn-bg-color-epsilon;
     border: 1px solid darken($btn-bg-color-epsilon, 8%);
 
     &:not(.btn-divider):hover    { background-color: darken($btn-bg-color-epsilon, 5%);  }
     &:focus                      { box-shadow: 0 0 10px rgba($btn-bg-color-epsilon, 1);  }
     &:disabled, &:disabled:hover { background-color: $btn-bg-color-epsilon;              }
+}
+
+.btn__divider {
+    cursor: default;
 }

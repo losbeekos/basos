@@ -2,9 +2,9 @@
 
             <footer class="footer">
                 <ul class="nav-footer list-inline">
-                    <li class="active"><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
-                    <li><a href="#">link</a></li>
+                    <li><a class="nav-footer--link nav-footer--link__active" href="#">link</a></li>
+                    <li><a class="nav-footer--link" href="#">link</a></li>
+                    <li><a class="nav-footer--link" href="#">link</a></li>
                 </ul>
                 <div class="copyright">&copy; copyright 2013</div>
             </footer>

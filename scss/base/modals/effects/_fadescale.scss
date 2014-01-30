@@ -3,14 +3,14 @@
 =======================================*/
 
 .modal[data-modal-effect=fadescale] {
-    .modal-content {
+    .modal--content {
         @include opacity(0);
         @include scale(0.7);
         @include single-transition(all, 0.3s);
     }
 
     &.modal-show {
-        .modal-content {
+        .modal--content {
             @include opacity(1);
             @include scale(1);
         }

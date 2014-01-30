@@ -69,9 +69,9 @@
                 <a class="logo" href="/"><img src="img/logo.png" alt="" /></a>
                 <nav class="nav-primary">
                     <ul class="list-inline">
-                        <li class="active"><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
-                        <li><a href="#">link</a></li>
+                        <li><a class="nav-primary--link nav-primary--link__active" href="#">link</a></li>
+                        <li><a class="nav-primary--link" href="#">link</a></li>
+                        <li><a class="nav-primary--link" href="#">link</a></li>
                     </ul>
                 </nav>
             </header>

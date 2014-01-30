@@ -33,7 +33,7 @@
         background: darken(#eeeeee, 5%);
     }
 
-    &.active {
+    &.tab__active {
         background: #ffffff;
         border-bottom-color: #ffffff;
         color: $color-text;
@@ -54,7 +54,7 @@
     @include opacity(0);
     @include single-transition(opacity, 0.5s);
 
-    &.active {
+    &.tab-item__active {
         height: auto;
         width: 100%;
 

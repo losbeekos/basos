@@ -8,18 +8,18 @@
     overflow: hidden;
 }
 
-.accordion-group {
+.accordion--group {
     overflow: hidden;
     margin-bottom: $accordion-group-margin-bottom;
 
     &:first-child {
-        .accordion-trigger {
+        .accordion--trigger {
             border-top: 0;
         }
     }
 }
 
-.accordion-trigger {
+.accordion--trigger {
     display: block;
     background-color: $accordion-trigger-bg-color;
     color: $accordion-trigger-font-color;
@@ -36,7 +36,7 @@
     }
 }
 
-.accordion-content {
+.accordion--content {
     overflow: hidden;
     padding: 0 $accordion-padding;
     border-top: 1px solid $accordion-trigger-bg-color;
@@ -50,13 +50,13 @@
     *:first-child {
         margin-top: $accordion-padding;
     }
+}
 
-    &.accordion-show {
-        border-top: 1px solid $accordion-border-color;
+.accordion-content__show {
+    border-top: 1px solid $accordion-border-color;
 
-        .lt-ie9 & {
-            height: auto;
-            max-height: 1000px !important;
-        }
+    .lt-ie9 & {
+        height: auto;
+        max-height: 1000px !important;
     }
 }

@@ -18,7 +18,7 @@
 
 /*==========  Inline  ==========*/
 
-.btn-group-inline {
+.btn-group__inline {
     @extend .list-inline;
 
     > li {
@@ -57,7 +57,7 @@
 
 /*==========  Block  ==========*/
 
-.btn-group-block {
+.btn-group__block {
     @extend .list-unstyled;
 
     > li {

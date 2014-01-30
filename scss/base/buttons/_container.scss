@@ -2,7 +2,7 @@
 =            Container            =
 =================================*/
 
-[class|=btn-container] {
+.btn-container {
     @extend .clearfix;
 
     margin-bottom: $btn-container-margin-bottom;
@@ -12,7 +12,7 @@
     }
 }
 
-.btn-container-center {
+.btn-container__center {
     text-align: center;
 
     ul {
@@ -20,7 +20,7 @@
     }
 }
 
-.btn-container-right {
+.btn-container__right {
     text-align: right;
 
     ul {

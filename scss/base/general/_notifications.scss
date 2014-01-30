@@ -2,8 +2,7 @@
 =            Notifications            =
 =====================================*/
 
-.notification-alpha,
-.notification-beta {
+.notification {
     border: 1px solid #d3d3cc;
     border-radius: $base-border-radius;
     color: #262207;
@@ -31,7 +30,7 @@
         @include rem(font-size, 60px);
     }
 
-    &.error {
+    &.notification__error {
         color: #260707;
         background: #f3e6e6;
         border-color: #d3cccc;
@@ -42,7 +41,7 @@
         }
     }
 
-    &.success {
+    &.notification__success {
         color: #082607;
         background: #e6f3e6;
         border-color: #ccd3cd;
@@ -53,7 +52,7 @@
         }
     }
 
-    &.close {
+    &.notification__close {
         height: 0;
         overflow: hidden;
         padding: 0;
@@ -66,20 +65,12 @@
     }
 }
 
-.notification-text {
-    @include rem(margin-left, 70px);
-
-    .notification-beta & {
-        @include rem(margin-left, 40px);
-    }
-}
-
-.notification-alpha {
+.notification__alpha {
     @include rem(min-height, 42px);
     @include rem(padding, 30px);
 }
 
-.notification-beta {
+.notification__beta {
     @include rem(min-height, 22px);
     @include rem(padding, 20px);
 
@@ -90,7 +81,15 @@
     }
 }
 
-.notification-close {
+.notification--text {
+    @include rem(margin-left, 70px);
+
+    .notification__beta & {
+        @include rem(margin-left, 40px);
+    }
+}
+
+.notification--close {
     @extend %font-fontello;
 
     position: absolute;
@@ -127,7 +126,7 @@
     @include rem(padding, 20px 0);
     @include rem(margin-bottom, 40px);
 
-    .btn-container-center {
+    .btn-container__center {
         margin: 0;
     }
 

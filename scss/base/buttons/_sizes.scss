@@ -2,11 +2,11 @@
 =            Sized            =
 =============================*/
 
-.btn-small {
+.btn__small {
     @include rem(padding, 8px 30px);
 }
 
-.btn-medium {
+.btn__medium {
     @include rem(padding, 12px 35px);
 
     @include breakpoint(beta-and-up) {
@@ -15,7 +15,7 @@
     }
 }
 
-.btn-large {
+.btn__large {
     @include rem(padding, 15px 40px);
 
     @include breakpoint(beta-and-up) {

@@ -26,7 +26,7 @@ var settings = {
     /*==========  Modals  ==========*/
 
     modals: {
-        $trigger: $('.modal-trigger'),
+        $trigger: $('.modal--trigger'),
         $modal: $('.modal')
     },
 
@@ -45,8 +45,8 @@ var settings = {
 
     tooltips: {
         $el: $('.tooltip'),
-        tooltipActiveClass: 'tooltip-active',
-        tooltipContentClass: 'tooltip-content',
+        tooltipActiveClass: 'tooltip__active',
+        tooltipContentClass: 'tooltip--content',
         arrowWidth: 8
     },
 
@@ -54,7 +54,7 @@ var settings = {
     /*==========  Notifications  ==========*/
 
     notifications: {
-        $close: $('.notification-close')
+        $close: $('.notification--close')
     },
 
 
@@ -62,16 +62,16 @@ var settings = {
 
     accordion: {
         $el: $('.accordion'),
-        $group: $('.accordion-group'),
-        $trigger: $('.accordion-trigger'),
-        contentShowClass: 'accordion-show'
+        $group: $('.accordion--group'),
+        $trigger: $('.accordion--trigger'),
+        contentShowClass: 'accordion-content__show'
     },
 
 
     /*==========  Form validation  ==========*/
 
     formValidation: {
-        $el: $('.form-validate')
+        $el: $('.form[data-form-validate]')
     },
 
 
@@ -262,7 +262,7 @@ var modules = {
             var self = this;
 
             if (settings.modals.$trigger.length > 0 && settings.modals.$modal.length > 0) {
-                settings.$body.append('<div class="modal-overlay"></div>');
+                settings.$body.append('<div class="modal--overlay"></div>');
 
                 self.triggers();
             }
@@ -279,7 +279,7 @@ var modules = {
                 self.openModal($trigger, $trigger.data('modalId'));
             });
 
-            $('.modal-overlay').on('click', function (event) {
+            $('.modal--overlay').on('click', function (event) {
                 event.preventDefault();
                 self.closeModal();
             });
@@ -361,7 +361,7 @@ var modules = {
                 .append('<div class="' + settings.tooltips.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
                 .removeAttr('title');
 
-            self.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip-content'));
+            self.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip--content'));
         },
 
         triggers: function ($tooltipTrigger) {
@@ -419,7 +419,7 @@ var modules = {
                 var $close = $(this),
                     $notification = $close.parent();
 
-                $notification.addClass('close');
+                $notification.addClass('notification__close');
 
                 setTimeout(function () {
                     $notification.remove();
@@ -452,7 +452,7 @@ var modules = {
 
             settings.accordion.$group.each(function () {
                 var $group = $(this),
-                    $groupContent = $group.find('.accordion-content');
+                    $groupContent = $group.find('.accordion--content');
 
                 $groupContent.removeAttr('style');
 
@@ -476,7 +476,7 @@ var modules = {
                     $content = $trigger.next();
 
                 if (!$content.hasClass(settings.accordion.contentShowClass)) {
-                    self.hideGroup($trigger.closest('.accordion').find('.accordion-content'));
+                    self.hideGroup($trigger.closest('.accordion').find('.accordion--content'));
                     self.showGroup($trigger, $content);
                 } else {
                     self.hideGroup($content);
@@ -527,19 +527,21 @@ var modules = {
                         function(){
                             settings.formValidation.$el.parsley({
                                 trigger: 'change',
+                                successClass: 'form--input__success',
+                                errorClass: 'form--input__error',
                                 errors: {
                                     classHandler: function (element, isRadioOrCheckbox){
                                         var $element = $(element);
 
                                         if (isRadioOrCheckbox) {
-                                            return $element.closest('.form-input-list');
+                                            return $element.closest('.form--input-list');
                                         } else {
-                                            return $element.closest('.form-input');
+                                            return $element.closest('.form--input');
                                         }
                                     },
 
                                     container: function (element, isRadioOrCheckbox) {
-                                        var $container = element.closest('.form-input');
+                                        var $container = element.closest('.form--input');
 
                                         if ($container.length === 0) {
                                             $container = $("<ul class='parsley-container'></ul>").append($container);
@@ -573,13 +575,13 @@ var modules = {
 
                     event.preventDefault();
 
-                    settings.tabs.$tab.removeClass('active');
-                    $tab.addClass('active');
+                    settings.tabs.$tab.removeClass('tab__active');
+                    $tab.addClass('tab__active');
 
                     $($tab.attr('href'))
-                        .addClass('active')
+                        .addClass('tab-item__active')
                         .siblings()
-                        .removeClass('active');
+                        .removeClass('tab-item__active');
                 });
             }
         }
