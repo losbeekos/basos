@@ -1,5 +1,4 @@
-input[type=checkbox],
-input[type=radio] {
+%form-checkbox-radio {
     position: absolute;
     outline: none;
 
@@ -89,22 +88,6 @@ input[type=radio] {
     }
 }
 
-/*==========  Radios  ==========*/
-
-input[type=radio] {
-    + label {
-        &:before {
-            border-radius: 20px;
-        }
-
-        &:after {
-            background: $color-beta;
-            content: '';
-            top: 4px;
-            left: 5px;
-            width: 10px;
-            height: 10px;
-            border-radius: 10px;
-        }
-    }
+input[type=checkbox] {
+    @extend %form-checkbox-radio;
 }

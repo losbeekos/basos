@@ -1,0 +1,19 @@
+/*==========================================
+=            Notification sizes            =
+==========================================*/
+
+.notification__alpha {
+    @include rem(min-height, 42px);
+    @include rem(padding, 30px);
+}
+
+.notification__beta {
+    @include rem(min-height, 22px);
+    @include rem(padding, 20px);
+
+    &:before {
+        @include rem(top, 2px);
+        @include rem(left, 10px);
+        @include rem(font-size, 40px);
+    }
+}

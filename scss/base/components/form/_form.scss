@@ -7,7 +7,7 @@ form {
 
     @include rem(margin, 0 0 40px 0);
 
-    &.form-no-margin {
+    &.form__no-margin {
         margin: 0;
     }
 }

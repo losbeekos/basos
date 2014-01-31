@@ -1,0 +1,53 @@
+/*====================================
+=            Notification            =
+====================================*/
+
+@mixin notification($background, $border-color, $color, $before-content, $before-color) {
+    color: $color;
+    background: $background;
+    border-color: $border-color;
+
+    &:before {
+        content: $before-content;
+        color: $before-color;
+    }
+}
+
+.notification {
+    border-width: 1px;
+    border-style: solid;
+    border-radius: $base-border-radius;
+    position: relative;
+
+    @include notification(#f3f3e6, #d3d3cc, #262207, $icon-notification-info, #b2af69);
+    @include rem(margin-bottom, 30px);
+    @include single-transition(all, $base-transition-speed);
+    @include transform-style(preserve-3d);
+    @include backface-visibility(hidden);
+
+    @include breakpoint(beta-and-up) {
+        @include rem(padding, 20px);
+    }
+
+    &:before {
+        @extend %font-fontello;
+
+        position: absolute;
+        top: 0;
+
+        @include rem(left, 20px);
+        @include rem(font-size, 60px);
+    }
+
+    &.notification__close {
+        height: 0;
+        overflow: hidden;
+        padding: 0;
+        min-height: 0;
+        margin: 0;
+        border: 0;
+
+        @include scale3d(0.5);
+        @include opacity(0);
+    }
+}

@@ -1,0 +1,11 @@
+/*===========================================
+=            Notification styles            =
+===========================================*/
+
+.notification__error {
+    @include notification(#f3e6e6, #d3cccc, #260707, $icon-notification-error, #b26969);
+}
+
+.notification__success {
+    @include notification(#e6f3e6, #ccd3cd, #082607, $icon-notification-success, #6eb269);
+}

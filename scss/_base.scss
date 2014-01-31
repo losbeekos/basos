@@ -26,46 +26,55 @@
 @import "base/helpers/visually_hidden";
 
 
-/*==========  General  ==========*/
+/*==========  Components  ==========*/
 
-@import "base/general/grid";
-@import "base/general/fonts";
-@import "base/general/layout";
-@import "base/general/typography";
-@import "base/general/tables";
-@import "base/general/tabs";
-@import "base/general/notifications";
-@import "base/general/dropdowns";
-@import "base/general/tooltips";
-@import "base/general/accordion";
-@import "base/general/breadcrumbs";
-@import "base/general/media";
+@import "base/components/grid";
+@import "base/components/fonts";
+@import "base/components/layout";
+@import "base/components/typography";
+@import "base/components/tables";
+@import "base/components/tabs";
+@import "base/components/dropdowns";
+@import "base/components/tooltips";
+@import "base/components/accordion";
+@import "base/components/breadcrumbs";
+@import "base/components/media";
 
 
 /*==========  Buttons  ==========*/
 
-@import "base/buttons/container";
-@import "base/buttons/group";
-@import "base/buttons/sizes";
-@import "base/buttons/styles";
-@import "base/buttons/general";
+@import "base/components/buttons/container";
+@import "base/components/buttons/holder";
+@import "base/components/buttons/group";
+@import "base/components/buttons/sizes";
+@import "base/components/buttons/styles";
 
 
 /*==========  Forms  ==========*/
 
-@import "base/form/form";
-@import "base/form/checkbox_radio";
-@import "base/form/placeholder";
-@import "base/form/validation";
-@import "base/form/general";
+@import "base/components/form/form";
+@import "base/components/form/general";
+@import "base/components/form/placeholder";
+@import "base/components/form/checkbox";
+@import "base/components/form/radio";
+@import "base/components/form/validation";
+
+
+/*==========  Notifications  ==========*/
+
+@import "base/components/notifications/notification";
+@import "base/components/notifications/sizes";
+@import "base/components/notifications/styles";
+@import "base/components/notifications/identifiers";
+@import "base/components/notifications/cookie_notification";
 
 
 /*==========  Modals  ==========*/
 
-@import "base/modals/modals";
-@import "base/modals/effects/slip";
-@import "base/modals/effects/slide";
-@import "base/modals/effects/flip";
-@import "base/modals/effects/fadescale";
-@import "base/modals/effects/superscale";
+@import "base/components/modals/modals";
+@import "base/components/modals/effects/slip";
+@import "base/components/modals/effects/slide";
+@import "base/components/modals/effects/flip";
+@import "base/components/modals/effects/fadescale";
+@import "base/components/modals/effects/superscale";
 

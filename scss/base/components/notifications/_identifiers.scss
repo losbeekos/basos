@@ -1,0 +1,41 @@
+/*================================================
+=            Notification identifiers            =
+================================================*/
+
+.notification--text {
+    @include rem(margin-left, 70px);
+
+    .notification__beta & {
+        @include rem(margin-left, 40px);
+    }
+}
+
+.notification--close {
+    @extend %font-fontello;
+
+    position: absolute;
+    color: $black;
+    padding: 0;
+    background: none;
+    border: none;
+
+    @include rem(top, 20px);
+    @include rem(right, 20px);
+
+    &:before {
+        content: '';
+
+        @include opacity(0.2);
+        @include single-transition(opacity, $base-transition-speed);
+    }
+
+    &:hover {
+        &:before {
+            @include opacity(0.5);
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

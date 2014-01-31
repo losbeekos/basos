@@ -1,0 +1,97 @@
+/*==============================
+=            Styles            =
+==============================*/
+
+@mixin btn-style($bg-color) {
+    background-color: $bg-color;
+    border-color: darken($bg-color, 8%);
+
+    &:not(.btn__divider):hover   { background-color: darken($bg-color, 5%);  }
+    &:focus                      { box-shadow: 0 0 10px rgba($bg-color, 1);  }
+    &:disabled, &:disabled:hover { background-color: $bg-color;              }
+}
+
+.btn {
+    display: inline-block;
+    color: $color-text;
+    border-radius: $btn-border-radius;
+    border: 0;
+    outline: 0;
+    text-align: center;
+    border-width: 1px;
+    border-style: solid;
+
+    @include btn-style($btn-bg-color-alpha);
+    @include rem(line-height, 16px);
+    @include single-transition(all, $base-transition-speed);
+    @include appearance(none);
+    @include user-select(none);
+
+    @if $btn-gradient {
+        @include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));
+    }
+
+    &:not(.btn__divider):hover {
+        color: $color-text;
+    }
+
+    &:focus {
+        outline: none;
+
+        @include transition-duration(0.05s);
+    }
+
+    &:disabled,
+    &:disabled:hover {
+        cursor: not-allowed;
+        color: darken($white, 20%);
+
+        @include opacity(0.5);
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+}
+
+.btn__beta,
+.btn__gamma,
+.btn__delta,
+.btn__epsilon {
+    color: $white;
+    text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+
+    &:not(.btn__divider):hover,
+    &:hover {
+        color: $white;
+    }
+
+    &:disabled,
+    &:disabled:hover {
+        color: darken($white, 20%);
+    }
+}
+
+.btn__beta {
+    @include btn-style($btn-bg-color-beta);
+}
+
+.btn__gamma {
+    @include btn-style($btn-bg-color-gamma);
+}
+
+.btn__delta {
+    @include btn-style($btn-bg-color-delta);
+}
+
+.btn__epsilon {
+    @include btn-style($btn-bg-color-epsilon);
+}
+
+.btn__block {
+    display: block;
+}
+
+.btn__divider {
+    cursor: default;
+}

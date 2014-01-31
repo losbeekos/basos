@@ -1,0 +1,23 @@
+/*=====================================
+=            Radio buttons            =
+=====================================*/
+
+input[type=radio] {
+    @extend %form-checkbox-radio;
+
+    + label {
+        &:before {
+            border-radius: 20px;
+        }
+
+        &:after {
+            background: $color-beta;
+            content: '';
+            top: 4px;
+            left: 5px;
+            width: 10px;
+            height: 10px;
+            border-radius: 10px;
+        }
+    }
+}
