@@ -5,27 +5,27 @@
                 <section>
                     <h1>Grid</h1>
                     <div class="grid">
-                        <div class="column-12 column__omega" style="background: rgba(0,0,0,0.1)">column-12</div>
+                        <div class="column-12 column__omega" style="background: rgba(0,0,0,0.03)">column-12</div>
                     </div>
                     <div class="grid">
-                        <div class="column-6" style="background: rgba(0,0,0,0.1)">column-6</div>
-                        <div class="column-6 column__omega" style="background: rgba(0,0,0,0.1)">column-6</div>
+                        <div class="column-6" style="background: rgba(0,0,0,0.03)">column-6</div>
+                        <div class="column-6 column__omega" style="background: rgba(0,0,0,0.03)">column-6</div>
                     </div>
                     <div class="grid">
-                        <div class="column-4" style="background: rgba(0,0,0,0.1)">column-4</div>
-                        <div class="column-8 column__omega" style="background: rgba(0,0,0,0.1)">column-8</div>
+                        <div class="column-4" style="background: rgba(0,0,0,0.03)">column-4</div>
+                        <div class="column-8 column__omega" style="background: rgba(0,0,0,0.03)">column-8</div>
                     </div>
                     <div class="grid">
-                        <div class="column-2" style="background: rgba(0,0,0,0.1)">column-2</div>
-                        <div class="column-10 column__omega" style="background: rgba(0,0,0,0.1)">column-10</div>
+                        <div class="column-2" style="background: rgba(0,0,0,0.03)">column-2</div>
+                        <div class="column-10 column__omega" style="background: rgba(0,0,0,0.03)">column-10</div>
                     </div>
                     <div class="grid">
-                        <div class="column-7" style="background: rgba(0,0,0,0.1)">column-7</div>
-                        <div class="column-5 column__omega" style="background: rgba(0,0,0,0.1)">column-5</div>
+                        <div class="column-7" style="background: rgba(0,0,0,0.03)">column-7</div>
+                        <div class="column-5 column__omega" style="background: rgba(0,0,0,0.03)">column-5</div>
                     </div>
                     <div class="grid">
-                        <div class="column-9" style="background: rgba(0,0,0,0.1)">column-9</div>
-                        <div class="column-3 column__omega" style="background: rgba(0,0,0,0.1)">column-3</div>
+                        <div class="column-9" style="background: rgba(0,0,0,0.03)">column-9</div>
+                        <div class="column-3 column__omega" style="background: rgba(0,0,0,0.03)">column-3</div>
                     </div>
                 </section>
 
@@ -181,7 +181,7 @@
 
                 <section>
                     <h1>Form</h1>
-                    <form class="form" data-form-validate="true" novalidate="novalidate">
+                    <form class="form" parsley-validate novalidate="novalidate">
                         <fieldset>
                             <legend>Persoonlijke gegevens</legend>
                             <div class="form--row">
@@ -856,7 +856,7 @@
                     <h1>Media</h1>
                     <h2>Left</h2>
                     <div class="media media__left">
-                        <div class="media--alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
+                        <div class="media--alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
                         <div class="media--beta">
                             <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                             <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
@@ -864,7 +864,7 @@
                     </div>
                     <h2>Right</h2>
                     <div class="media media__right">
-                        <div class="media--alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
+                        <div class="media--alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
                         <div class="media--beta">
                             <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                             <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
@@ -872,19 +872,19 @@
                     </div>
                     <h3>Nested</h3>
                     <div class="media media__left">
-                        <div class="media--alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
+                        <div class="media--alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
                         <div class="media--beta">
                             <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                             <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                             <div class="media media__left">
-                                <div class="media--alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
+                                <div class="media--alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
                                 <div class="media--beta">
                                     <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                     <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                                 </div>
                             </div>
                             <div class="media media__left">
-                                <div class="media--alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
+                                <div class="media--alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
                                 <div class="media--beta">
                                     <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                     <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
@@ -895,14 +895,14 @@
                     <h2>List</h2>
                     <ul class="media-list">
                         <li class="media media__left">
-                            <div class="media--alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
+                            <div class="media--alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
                             <div class="media--beta">
                                 <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                 <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                             </div>
                         </li>
                         <li class="media media__left">
-                            <div class="media--alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
+                            <div class="media--alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
                             <div class="media--beta">
                                 <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                 <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
@@ -912,26 +912,26 @@
                     <h2>Bordered list</h2>
                     <ul class="media-list media-list__bordered">
                         <li class="media media__left">
-                            <div class="media--alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
+                            <div class="media--alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
                             <div class="media--beta">
                                 <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                 <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                             </div>
                         </li>
                         <li class="media media__left">
-                            <div class="media--alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
+                            <div class="media--alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
                             <div class="media--beta">
                                 <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                 <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                                 <div class="media media__left">
-                                    <div class="media--alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
+                                    <div class="media--alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
                                     <div class="media--beta">
                                         <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                         <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                                     </div>
                                 </div>
                                 <div class="media media__left">
-                                    <div class="media--alpha"><img src="http://placehold.it/400x300/e8e8e8/cfcfcf&text=basos" alt="" /></div>
+                                    <div class="media--alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
                                     <div class="media--beta">
                                         <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                                         <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>

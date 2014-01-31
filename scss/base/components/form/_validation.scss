@@ -19,11 +19,17 @@
         }
     }
 
+    &.form--input__select-validated {
+        &:after {
+            display: none;
+        }
+    }
+
     .form--select {
         border-color: $color-delta;
 
         &:after {
-            display: none;
+            color: $color-delta;
         }
     }
 
@@ -31,6 +37,7 @@
     input[type=radio] {
         + label {
             &:before {
+                background: lighten($color-delta, 45%);
                 border-color: $color-delta;
             }
 
@@ -62,11 +69,17 @@
         }
     }
 
+    &.form--input__select-validated {
+        &:after {
+            display: none;
+        }
+    }
+
     .form--select {
         border-color: $color-gamma;
 
         &:after {
-            display: none;
+            color: $color-gamma;
         }
     }
 }

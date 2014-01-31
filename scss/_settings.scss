@@ -72,7 +72,7 @@ $icon-form-select             : '';
 
 $table-margin-bottom  : $ten*3; // 30px
 $table-padding        : $base-padding;
-$table-border-color   : #dddddd;
+$table-border-color   : darken($btn-bg-color-alpha, 5%);
 $table-border-radius  : $base-border-radius;
 $table-zebra-bg-color : #f8f8f8;
 $table-hover-bg-color : #f6f6f6;

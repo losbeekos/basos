@@ -71,7 +71,7 @@ var settings = {
     /*==========  Form validation  ==========*/
 
     formValidation: {
-        $el: $('.form[data-form-validate]')
+        $el: $('[parsley-validate]')
     },
 
 
@@ -527,6 +527,10 @@ var modules = {
                                 errors: {
                                     classHandler: function (element, isRadioOrCheckbox){
                                         var $element = $(element);
+
+                                        if ($element[0].localName === 'select') {
+                                            $($element[0].offsetParent).closest('.form--input').addClass('form--input__select-validated');
+                                        }
 
                                         if (isRadioOrCheckbox) {
                                             return $element.closest('.form--input-list');

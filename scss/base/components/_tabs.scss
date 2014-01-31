@@ -18,7 +18,7 @@
     position: relative;
     display: inline-block;
     background: $btn-bg-color-alpha;
-    border: 1px solid darken($btn-bg-color-alpha, 10%);
+    border: 1px solid darken($btn-bg-color-alpha, 5%);
     bottom: -1px;
     color: lighten($color-text, 20%);
     border-top-left-radius: $base-border-radius;
@@ -41,7 +41,7 @@
 }
 
 .tab-content {
-    border-top: 1px solid darken($btn-bg-color-alpha, 10%);
+    border-top: 1px solid darken($btn-bg-color-alpha, 5%);
 
     @include rem(padding, 20px);
 }
