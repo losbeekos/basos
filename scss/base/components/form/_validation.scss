@@ -4,18 +4,23 @@
             @extend %font-fontello;
 
             content: $icon-form-validation-error;
-            color: #a60000;
+            color: $color-delta;
         }
     }
 
     #{$input-selectors} {
-        border-color: #a60000;
+        border-color: $color-delta;
+        box-shadow: none;
 
         @include rem(padding-right, 30px);
+
+        &:focus {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
     }
 
     .form--select {
-        border-color: #a60000;
+        border-color: $color-delta;
 
         &:after {
             display: none;
@@ -26,11 +31,11 @@
     input[type=radio] {
         + label {
             &:before {
-                border-color: #a60000;
+                border-color: $color-delta;
             }
 
             &:after {
-                color: #a60000;
+                color: $color-delta;
             }
         }
     }
@@ -42,18 +47,27 @@
             @extend %font-fontello;
 
             content: $icon-form-validation-success;
-            color: #6eb269;
+            color: $color-gamma;
         }
     }
 
     #{$input-selectors} {
-        border-color: #00a608;
+        border-color: $color-gamma;
+        box-shadow: none;
 
         @include rem(padding-right, 30px);
+
+        &:focus {
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        }
     }
 
     .form--select {
-        border-color: #00a608;
+        border-color: $color-gamma;
+
+        &:after {
+            display: none;
+        }
     }
 }
 

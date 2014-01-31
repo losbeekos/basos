@@ -3,9 +3,9 @@
 ===========================================*/
 
 .notification__error {
-    @include notification(#f3e6e6, #d3cccc, #260707, $icon-notification-error, #b26969);
+    @include notification(lighten($color-delta, 45%), lighten($color-delta, 38%), darken($color-delta, 40%), $icon-notification-error, $color-delta);
 }
 
 .notification__success {
-    @include notification(#e6f3e6, #ccd3cd, #082607, $icon-notification-success, #6eb269);
+    @include notification(lighten($color-gamma, 45%), lighten($color-gamma, 38%), darken($color-gamma, 40%), $icon-notification-success, $color-gamma);
 }

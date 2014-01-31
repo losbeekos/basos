@@ -19,7 +19,7 @@
     border-radius: $base-border-radius;
     position: relative;
 
-    @include notification(#f3f3e6, #d3d3cc, #262207, $icon-notification-info, #b2af69);
+    @include notification(lighten($color-zeta, 45%), lighten($color-zeta, 38%), darken($color-zeta, 40%), $icon-notification-info, $color-zeta);
     @include rem(margin-bottom, 30px);
     @include single-transition(all, $base-transition-speed);
     @include transform-style(preserve-3d);
