@@ -54,7 +54,7 @@ var settings = {
     /*==========  Notifications  ==========*/
 
     notifications: {
-        $close: $('.notification--close')
+        $close: $('[data-notification-close]')
     },
 
 
@@ -262,7 +262,7 @@ var modules = {
             var self = this;
 
             if (settings.modals.$trigger.length > 0 && settings.modals.$modal.length > 0) {
-                settings.$body.append('<div class="modal--overlay"></div>');
+                settings.$body.append('<div class="modal--overlay" data-modal-close></div>');
 
                 self.triggers();
             }
@@ -279,18 +279,13 @@ var modules = {
                 self.openModal($trigger, $trigger.data('modalId'));
             });
 
-            $('.modal--overlay').on('click', function (event) {
-                event.preventDefault();
-                self.closeModal();
-            });
-
             settings.$body.on('keydown', function(event){
                 if (event.keyCode === 27) {
                     self.closeModal();
                 }
             });
 
-            $('.modal-close').on('click', function(event) {
+            $('[data-modal-close]').on('click', function(event) {
                 event.preventDefault();
                 self.closeModal();
             });

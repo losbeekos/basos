@@ -2,8 +2,7 @@
 =            Project            =
 ===============================*/
 
-@import "project/header";
-@import "project/footer";
-@import "project/navigation";
-@import "project/teasers";
-@import "project/spotlight";
+@import "project/layout/header";
+@import "project/layout/footer";
+@import "project/components/navigation";
+@import "project/components/spotlight";

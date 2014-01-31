@@ -152,28 +152,28 @@
                     <h2>Alpha</h2>
                     <div class="notification notification__alpha notification__error">
                         <div class="notification--text">Deze account gegevens zijn niet bij ons bekend.</div>
-                        <button class="notification--close"></button>
+                        <button class="notification--close" data-notification-close></button>
                     </div>
                     <div class="notification notification__alpha notification__success">
                         <div class="notification--text">Je bent nu geregistreerd op onze website.</div>
-                        <button class="notification--close"></button>
+                        <button class="notification--close" data-notification-close></button>
                     </div>
                     <div class="notification notification__alpha">
                         <div class="notification--text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
-                        <button class="notification--close"></button>
+                        <button class="notification--close" data-notification-close></button>
                     </div>
                     <h2>Beta</h2>
                     <div class="notification notification__beta notification__error">
                         <div class="notification--text">Deze account gegevens zijn niet bij ons bekend.</div>
-                        <button class="notification--close"></button>
+                        <button class="notification--close" data-notification-close></button>
                     </div>
                     <div class="notification notification__beta notification__success">
                         <div class="notification--text">Je bent nu geregistreerd op onze website.</div>
-                        <button class="notification--close"></button>
+                        <button class="notification--close" data-notification-close></button>
                     </div>
                     <div class="notification notification__beta">
                         <div class="notification--text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
-                        <button class="notification--close"></button>
+                        <button class="notification--close" data-notification-close></button>
                     </div>
                 </section>
 
@@ -1087,70 +1087,70 @@
             <div class="modal--content">
                 <h2>Dit is een titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn btn__beta btn__medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn__beta btn__medium" data-modal-close>Akkoord</a>
             </div>
         </div>
         <div id="modal-2" class="modal" data-modal-effect="slip-bottom">
             <div class="modal--content">
                 <h2>Dit is een titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn btn__beta btn__medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn__beta btn__medium" data-modal-close>Akkoord</a>
             </div>
         </div>
         <div id="modal-3" class="modal" data-modal-effect="slide-top">
             <div class="modal--content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn btn__beta btn__medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn__beta btn__medium" data-modal-close>Akkoord</a>
             </div>
         </div>
         <div id="modal-4" class="modal" data-modal-effect="slide-right">
             <div class="modal--content">
                 <h2>Dit is een titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn btn__beta btn__medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn__beta btn__medium" data-modal-close>Akkoord</a>
             </div>
         </div>
         <div id="modal-5" class="modal" data-modal-effect="slide-bottom">
             <div class="modal--content">
                 <h2>Dit is een titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn btn__beta btn__medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn__beta btn__medium" data-modal-close>Akkoord</a>
             </div>
         </div>
         <div id="modal-6" class="modal" data-modal-effect="slide-left">
             <div class="modal--content">
                 <h2>Dit is een titel</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn btn__beta btn__medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn__beta btn__medium" data-modal-close>Akkoord</a>
             </div>
         </div>
         <div id="modal-7" class="modal" data-modal-effect="flip-horizontal">
             <div class="modal--content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn btn__beta btn__medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn__beta btn__medium" data-modal-close>Akkoord</a>
             </div>
         </div>
         <div id="modal-8" class="modal" data-modal-effect="flip-vertical">
             <div class="modal--content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn btn__beta btn__medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn__beta btn__medium" data-modal-close>Akkoord</a>
             </div>
         </div>
         <div id="modal-9" class="modal" data-modal-effect="fadescale">
             <div class="modal--content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn btn__beta btn__medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn__beta btn__medium" data-modal-close>Akkoord</a>
             </div>
         </div>
         <div id="modal-10" class="modal" data-modal-effect="superscale">
             <div class="modal--content">
                 <h2>Dit is een titel 2</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-                <a href="#" class="btn btn__beta btn__medium modal-close">Akkoord</a>
+                <a href="#" class="btn btn__beta btn__medium" data-modal-close>Akkoord</a>
             </div>
         </div>
 
