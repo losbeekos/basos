@@ -945,6 +945,89 @@
                 <br/><br/>
 
                 <section>
+                    <h1>Pricing tables</h1>
+                    <div class="grid">
+                        <div class="column-4">
+                            <ul class="pricing-table">
+                                <li class="pricing-table--header">
+                                    Basos package
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__alpha">
+                                    <div class="pricing-table--price">&euro; 500,-</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--description">Lorem ipsum dolor sit amet.</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--item">50 components</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--item">100 lorems</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--item">5 dolirs</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta price-table--content__action">
+                                    <a class="btn btn__beta btn__medium" href="">buy now</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column-4">
+                            <ul class="pricing-table">
+                                <li class="pricing-table--header">
+                                    Basos package
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__alpha">
+                                    <div class="pricing-table--price">&euro; 600,-</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--description">Lorem ipsum dolor sit amet.</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--item">50 components</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--item">100 lorems</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--item">5 dolirs</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta price-table--content__action">
+                                    <a class="btn btn__beta btn__medium" href="">buy now</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="column-4 column__omega">
+                            <ul class="pricing-table">
+                                <li class="pricing-table--header">
+                                    Basos package
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__alpha">
+                                    <div class="pricing-table--price">&euro; 700,-</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--description">Lorem ipsum dolor sit amet.</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--item">50 components</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--item">100 lorems</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta">
+                                    <div class="pricing-table--item">5 dolirs</div>
+                                </li>
+                                <li class="pricing-table--content pricing-table--content__beta price-table--content__action">
+                                    <a class="btn btn__beta btn__medium" href="">buy now</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+
+                <br/><br/>
+
+                <section>
                     <h1>Tooltips</h1>
                     <ul class="btn-group btn-group__inline">
                         <li><a class="btn btn__alpha btn__small tooltip" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a></li>

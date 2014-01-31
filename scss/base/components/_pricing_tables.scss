@@ -1,0 +1,45 @@
+/*======================================
+=            Pricing tables            =
+======================================*/
+
+.pricing-table {
+    @extend .list-unstyled;
+
+    border: 1px solid $pricing-table-border-color;
+    text-align: center;
+    border-radius: $base-border-radius;
+    overflow: hidden;
+}
+
+.pricing-table--header {
+    background: lighten($black, 20%);
+    color: $white;
+
+    @include rem(padding, 15px 20px);
+}
+
+.pricing-table--content {
+    @include rem(padding, 10px 20px);
+
+    + .pricing-table--content {
+        border-top: 1px solid $pricing-table-border-color;
+    }
+}
+
+.pricing-table--content__alpha {
+    background: $color-alpha;
+}
+
+.pricing-table--price {
+    @include rem(font-size, 30px);
+}
+
+.pricing-table--description {
+    color: #999999;
+    @include rem(font-size, 14px);
+}
+
+.price-table--content__action {
+    @include rem(padding-top, 20px);
+    @include rem(padding-bottom, 20px);
+}

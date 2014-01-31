@@ -16,7 +16,7 @@ $black                  : #000000;
 $color-text             : #222222;
 $color-placeholder      : #94adc4;
 $color-selection        : #d1e4fe;
-$color-alpha            : #e8e8e8;
+$color-alpha            : #f1f1f1;
 $color-beta             : #0659a4;
 $color-gamma            : #177f12;
 $color-delta            : #a40606;
@@ -102,7 +102,7 @@ $modal-content-border-radius : $base-border-radius;
 
 $accordion-transition-speed    : $base-transition-speed;
 $accordion-padding             : $base-padding;
-$accordion-border-color        : darken($btn-bg-color-alpha, 10%);
+$accordion-border-color        : darken($btn-bg-color-alpha, 5%);
 $accordion-gradient            : $gradient;
 $accordion-border-radius       : $base-border-radius;
 $accordion-group-margin-bottom : 0;
@@ -118,4 +118,8 @@ $breadcrumbs-margin        : $ten; // 10px
 $breadcrumbs-divider-color : #cccccc;
 $breadcrumbs-current-color : #aaaaaa;
 
+
+/*==========  Pricing tables  ==========*/
+
+$pricing-table-border-color : darken($btn-bg-color-alpha, 5%);
 

@@ -4,7 +4,7 @@
 
 @mixin btn-style($bg-color) {
     background-color: $bg-color;
-    border-color: darken($bg-color, 8%);
+    border-color: darken($bg-color, 5%);
 
     &:not(.btn__divider):hover   { background-color: darken($bg-color, 5%);  }
     &:focus                      { box-shadow: 0 0 10px rgba($bg-color, 1);  }

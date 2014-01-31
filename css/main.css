@@ -18,6 +18,7 @@
 /*==========  Modals  ==========*/
 /*==========  Accordion  ==========*/
 /*==========  Breadcrumbs  ==========*/
+/*==========  Pricing tables  ==========*/
 /*============================
 =            Base            =
 ============================*/
@@ -577,7 +578,7 @@ textarea {
 =============================*/
 /*==========  Unstyled list  ==========*/
 /* line 8, ../scss/base/helpers/_lists.scss */
-.list-unstyled, .list-inline, .tabs, .btn-group__inline, .dropdown ul, .media-list, .btn-group__block, .parsley-error-list {
+.list-unstyled, .list-inline, .tabs, .btn-group__inline, .dropdown ul, .media-list, .pricing-table, .btn-group__block, .parsley-error-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -1093,8 +1094,8 @@ h6, .h6 {
 .tab {
   position: relative;
   display: inline-block;
-  background: #e8e8e8;
-  border: 1px solid #cfcfcf;
+  background: #f1f1f1;
+  border: 1px solid #d7d7d7;
   bottom: -1px;
   color: #555555;
   border-top-left-radius: 2px;
@@ -1120,7 +1121,7 @@ h6, .h6 {
 
 /* line 43, ../scss/base/components/_tabs.scss */
 .tab-content {
-  border-top: 1px solid #cfcfcf;
+  border-top: 1px solid #d7d7d7;
   padding: 20px;
   padding: 1.25rem;
 }
@@ -1177,8 +1178,8 @@ h6, .h6 {
   left: 0;
   margin-top: -1px;
   visibility: hidden;
-  background-color: whitesmoke;
-  border: 1px solid #cfcfcf;
+  background-color: #fefefe;
+  border: 1px solid #d7d7d7;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: all 0.2s;
@@ -1190,13 +1191,13 @@ h6, .h6 {
 /* line 41, ../scss/base/components/_dropdowns.scss */
 .dropdown--content a {
   display: block;
-  border-top: 1px solid #e5e5e5;
+  border-top: 1px solid #eeeeee;
   padding: 10px 15px;
   padding: 0.625rem 0.9375rem;
 }
 /* line 47, ../scss/base/components/_dropdowns.scss */
 .dropdown--content a:hover {
-  background-color: #e5e5e5;
+  background-color: #eeeeee;
 }
 
 /*================================
@@ -1308,7 +1309,7 @@ h6, .h6 {
 =================================*/
 /* line 5, ../scss/base/components/_accordion.scss */
 .accordion {
-  border: 1px solid #cfcfcf;
+  border: 1px solid #e4e4e4;
   border-radius: 2px;
   overflow: hidden;
 }
@@ -1326,14 +1327,14 @@ h6, .h6 {
 /* line 22, ../scss/base/components/_accordion.scss */
 .accordion--trigger {
   display: block;
-  background-color: #e8e8e8;
+  background-color: #f1f1f1;
   color: #222222;
   padding: 10px;
-  border-top: 1px solid #cfcfcf;
+  border-top: 1px solid #e4e4e4;
 }
 /* line 33, ../scss/base/components/_accordion.scss */
 .accordion--trigger:hover {
-  background-color: #dbdbdb;
+  background-color: #e4e4e4;
   color: #151515;
 }
 
@@ -1341,7 +1342,7 @@ h6, .h6 {
 .accordion--content {
   overflow: hidden;
   padding: 0 10px;
-  border-top: 1px solid #e8e8e8;
+  border-top: 1px solid #f1f1f1;
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -1358,7 +1359,7 @@ h6, .h6 {
 
 /* line 55, ../scss/base/components/_accordion.scss */
 .accordion-content__show {
-  border-top: 1px solid #cfcfcf;
+  border-top: 1px solid #e4e4e4;
 }
 /* line 58, ../scss/base/components/_accordion.scss */
 .lt-ie9 .accordion-content__show {
@@ -1446,6 +1447,61 @@ h6, .h6 {
 /* line 55, ../scss/base/components/_media.scss */
 .media__right .media--beta {
   float: left;
+}
+
+/*======================================
+=            Pricing tables            =
+======================================*/
+/* line 5, ../scss/base/components/_pricing_tables.scss */
+.pricing-table {
+  border: 1px solid #e4e4e4;
+  text-align: center;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+/* line 14, ../scss/base/components/_pricing_tables.scss */
+.pricing-table--header {
+  background: #333333;
+  color: white;
+  padding: 15px 20px;
+  padding: 0.9375rem 1.25rem;
+}
+
+/* line 21, ../scss/base/components/_pricing_tables.scss */
+.pricing-table--content {
+  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
+}
+/* line 24, ../scss/base/components/_pricing_tables.scss */
+.pricing-table--content + .pricing-table--content {
+  border-top: 1px solid #e4e4e4;
+}
+
+/* line 29, ../scss/base/components/_pricing_tables.scss */
+.pricing-table--content__alpha {
+  background: #f1f1f1;
+}
+
+/* line 33, ../scss/base/components/_pricing_tables.scss */
+.pricing-table--price {
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+/* line 37, ../scss/base/components/_pricing_tables.scss */
+.pricing-table--description {
+  color: #999999;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+/* line 42, ../scss/base/components/_pricing_tables.scss */
+.price-table--content__action {
+  padding-top: 20px;
+  padding-top: 1.25rem;
+  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
 }
 
 /*==========  Buttons  ==========*/
@@ -1602,8 +1658,8 @@ h6, .h6 {
   text-align: center;
   border-width: 1px;
   border-style: solid;
-  background-color: #e8e8e8;
-  border-color: #d4d4d4;
+  background-color: #f1f1f1;
+  border-color: #e4e4e4;
   line-height: 16px;
   line-height: 1rem;
   -webkit-transition: all 0.2s;
@@ -1619,15 +1675,15 @@ h6, .h6 {
 }
 /* line 9, ../scss/base/components/buttons/_styles.scss */
 .btn:not(.btn__divider):hover {
-  background-color: #dbdbdb;
+  background-color: #e4e4e4;
 }
 /* line 10, ../scss/base/components/buttons/_styles.scss */
 .btn:focus {
-  box-shadow: 0 0 10px #e8e8e8;
+  box-shadow: 0 0 10px #f1f1f1;
 }
 /* line 11, ../scss/base/components/buttons/_styles.scss */
 .btn:disabled, .btn:disabled:hover {
-  background-color: #e8e8e8;
+  background-color: #f1f1f1;
 }
 /* line 34, ../scss/base/components/buttons/_styles.scss */
 .btn:not(.btn__divider):hover {
@@ -1685,7 +1741,7 @@ h6, .h6 {
 /* line 75, ../scss/base/components/buttons/_styles.scss */
 .btn__beta {
   background-color: #0659a4;
-  border-color: #05447d;
+  border-color: #054c8b;
 }
 /* line 9, ../scss/base/components/buttons/_styles.scss */
 .btn__beta:not(.btn__divider):hover {
@@ -1703,7 +1759,7 @@ h6, .h6 {
 /* line 79, ../scss/base/components/buttons/_styles.scss */
 .btn__gamma {
   background-color: #177f12;
-  border-color: #115b0d;
+  border-color: #13690f;
 }
 /* line 9, ../scss/base/components/buttons/_styles.scss */
 .btn__gamma:not(.btn__divider):hover {
@@ -1721,7 +1777,7 @@ h6, .h6 {
 /* line 83, ../scss/base/components/buttons/_styles.scss */
 .btn__delta {
   background-color: #a40606;
-  border-color: #7d0505;
+  border-color: #8b0505;
 }
 /* line 9, ../scss/base/components/buttons/_styles.scss */
 .btn__delta:not(.btn__divider):hover {
@@ -1739,7 +1795,7 @@ h6, .h6 {
 /* line 87, ../scss/base/components/buttons/_styles.scss */
 .btn__epsilon {
   background-color: #069ea4;
-  border-color: #05787d;
+  border-color: #05868b;
 }
 /* line 9, ../scss/base/components/buttons/_styles.scss */
 .btn__epsilon:not(.btn__divider):hover {
