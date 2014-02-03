@@ -57,7 +57,7 @@ yepnope([
     },
 
     {
-        load: basosJsPath +'plugins.js'
+        load: basosJsPath +'app.js'
     }
 ]);
 
