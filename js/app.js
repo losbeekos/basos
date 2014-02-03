@@ -16,6 +16,12 @@ var settings = {
     $main: $('#main'),
 
 
+    /*==========  Fitvids  ==========*/
+    fitVids: {
+        $el: $('.fitvids')
+    },
+
+
     /*==========  Primary nav  ==========*/
 
     navPrimary: {
@@ -241,7 +247,7 @@ var modules = {
             yepnope.injectJs(
                 basosJsPath + 'plugins/jquery.fitvids/jquery.fitvids.min.js' + settings.version,
                 function(){
-                    settings.$main.fitVids();
+                    settings.fitVids.$el.fitVids();
                 }
             );
         }
