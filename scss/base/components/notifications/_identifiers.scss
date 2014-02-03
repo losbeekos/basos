@@ -2,15 +2,15 @@
 =            Notification identifiers            =
 ================================================*/
 
-.notification--text {
+.notification__text {
     @include rem(margin-left, 70px);
 
-    .notification__beta & {
+    .notification--beta & {
         @include rem(margin-left, 40px);
     }
 }
 
-.notification--close {
+.notification__close {
     @extend %font-fontello;
 
     position: absolute;

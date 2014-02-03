@@ -16,7 +16,7 @@
 
     margin-bottom: $gutter-width;
 
-    &.column__omega {
+    &.column--omega {
         @include omega;
 
         .lt-ie9 & {

@@ -39,7 +39,7 @@
         @include rem(font-size, 60px);
     }
 
-    &.notification__close {
+    &.notification--close {
         height: 0;
         overflow: hidden;
         padding: 0;

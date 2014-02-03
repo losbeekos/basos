@@ -26,7 +26,7 @@
     }
 }
 
-.modal--content {
+.modal__content {
     background: $modal-content-bg-color;
     position: relative;
     margin: 0 auto;
@@ -34,7 +34,7 @@
     border-radius: $modal-content-border-radius;
 }
 
-.modal--overlay {
+.modal__overlay {
     background: $modal-overlay-bg-color;
     position: fixed;
     visibility: hidden;

@@ -11,35 +11,35 @@
     overflow: hidden;
 }
 
-.pricing-table--header {
+.pricing-table__header {
     background: lighten($black, 20%);
     color: $white;
 
     @include rem(padding, 15px 20px);
 }
 
-.pricing-table--content {
+.pricing-table__content {
     @include rem(padding, 10px 20px);
 
-    + .pricing-table--content {
+    + .pricing-table__content {
         border-top: 1px solid $pricing-table-border-color;
     }
 }
 
-.pricing-table--content__alpha {
+.pricing-table__content--alpha {
     background: $color-alpha;
 }
 
-.pricing-table--price {
+.pricing-table__price {
     @include rem(font-size, 30px);
 }
 
-.pricing-table--description {
+.pricing-table__description {
     color: #999999;
     @include rem(font-size, 14px);
 }
 
-.price-table--content__action {
+.price-table__content--action {
     @include rem(padding-top, 20px);
     @include rem(padding-bottom, 20px);
 }

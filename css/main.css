@@ -548,12 +548,12 @@ textarea {
 =            Clearfix            =
 ================================*/
 /* line 7, ../scss/base/helpers/_clearfix.scss */
-.clearfix:before, .grid:before, [class|="column"]:before, .media:before, .btn-container:before, .btn-group:before, form:before, .form--row:before, .clearfix:after, .grid:after, [class|="column"]:after, .media:after, .btn-container:after, .btn-group:after, form:after, .form--row:after {
+.clearfix:before, .grid:before, [class|="column"]:before, .media:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|="column"]:after, .media:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
   content: '';
   display: table;
 }
 /* line 12, ../scss/base/helpers/_clearfix.scss */
-.clearfix:after, .grid:after, [class|="column"]:after, .media:after, .btn-container:after, .btn-group:after, form:after, .form--row:after {
+.clearfix:after, .grid:after, [class|="column"]:after, .media:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
   clear: both;
 }
 
@@ -596,7 +596,7 @@ textarea {
 =============================*/
 /*==========  Unstyled list  ==========*/
 /* line 8, ../scss/base/helpers/_lists.scss */
-.list-unstyled, .list-inline, .tabs, .btn-group__inline, .dropdown ul, .media-list, .pricing-table, .btn-group__block, .parsley-error-list {
+.list-unstyled, .list-inline, .tabs, .btn-group--inline, .dropdown ul, .media-list, .pricing-table, .btn-group--block, .parsley-error-list {
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -604,7 +604,7 @@ textarea {
 
 /*==========  Inline list  ==========*/
 /* line 20, ../scss/base/helpers/_lists.scss */
-.list-inline li, .tabs li, .btn-group__inline li {
+.list-inline li, .tabs li, .btn-group--inline li {
   display: inline;
   margin-right: 10px;
   margin-right: 0.625rem;
@@ -652,14 +652,14 @@ textarea {
   margin-bottom: 1.25em;
 }
 /* line 19, ../scss/base/components/_grid.scss */
-[class|="column"].column__omega {
+[class|="column"].column--omega {
   float: right;
   margin-right: 0;
   *margin-left: -1.25em;
   display: inline;
 }
 /* line 22, ../scss/base/components/_grid.scss */
-.lt-ie9 [class|="column"].column__omega {
+.lt-ie9 [class|="column"].column--omega {
   float: left !important;
 }
 
@@ -699,7 +699,7 @@ textarea {
 }
 
 /* line 31, ../scss/base/components/_grid.scss */
-.column-3, .media--alpha {
+.column-3, .media__alpha {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
@@ -707,7 +707,7 @@ textarea {
 }
 @media (min-width: 650px) {
   /* line 31, ../scss/base/components/_grid.scss */
-  .column-3, .media--alpha {
+  .column-3, .media__alpha {
     width: 23.74917%;
     float: left;
     margin-right: 1.66778%;
@@ -801,7 +801,7 @@ textarea {
 }
 
 /* line 31, ../scss/base/components/_grid.scss */
-.column-9, .media--beta {
+.column-9, .media__beta {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
@@ -809,7 +809,7 @@ textarea {
 }
 @media (min-width: 650px) {
   /* line 31, ../scss/base/components/_grid.scss */
-  .column-9, .media--beta {
+  .column-9, .media__beta {
     width: 74.58306%;
     float: left;
     margin-right: 1.66778%;
@@ -878,7 +878,7 @@ textarea {
 }
 
 /* line 14, ../scss/base/components/_fonts.scss */
-.form--select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form--input__error.form--input:after, .form--input__success.form--input:after, .notification:before, .notification--close {
+.form__select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form__input--error.form__input:after, .form__input--success.form__input:after, .notification:before, .notification__close {
   font-family: "fontello-webfont", arial, verdana;
   font-weight: normal;
 }
@@ -1071,27 +1071,27 @@ h6, .h6 {
 }
 
 /* line 23, ../scss/base/components/_tables.scss */
-.table__hover tr:hover td {
+.table--hover tr:hover td {
   background: #f6f6f6;
 }
 
 /* line 30, ../scss/base/components/_tables.scss */
-.table__zebra tr:nth-child(odd) td {
+.table--zebra tr:nth-child(odd) td {
   background: #f8f8f8;
 }
 
 /* line 35, ../scss/base/components/_tables.scss */
-.table__bordered {
+.table--bordered {
   border: 1px solid #e4e4e4;
 }
 /* line 39, ../scss/base/components/_tables.scss */
-.table__bordered td,
-.table__bordered th {
+.table--bordered td,
+.table--bordered th {
   border-left: 1px solid #e4e4e4;
 }
 /* line 42, ../scss/base/components/_tables.scss */
-.table__bordered td:first-child,
-.table__bordered th:first-child {
+.table--bordered td:first-child,
+.table--bordered th:first-child {
   border-left: none;
 }
 
@@ -1131,7 +1131,7 @@ h6, .h6 {
   background: #e1e1e1;
 }
 /* line 36, ../scss/base/components/_tabs.scss */
-.tab.tab__active {
+.tab.tab--active {
   background: #ffffff;
   border-bottom-color: #ffffff;
   color: #222222;
@@ -1157,7 +1157,7 @@ h6, .h6 {
   transition: opacity 0.5s;
 }
 /* line 57, ../scss/base/components/_tabs.scss */
-.tab-item.tab-item__active {
+.tab-item.tab-item--active {
   height: auto;
   width: 100%;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
@@ -1172,7 +1172,7 @@ h6, .h6 {
   position: relative;
 }
 /* line 9, ../scss/base/components/_dropdowns.scss */
-.dropdown:hover .dropdown--content {
+.dropdown:hover .dropdown__content {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
@@ -1188,7 +1188,7 @@ h6, .h6 {
 }
 
 /* line 27, ../scss/base/components/_dropdowns.scss */
-.dropdown--content {
+.dropdown__content {
   overflow: hidden;
   position: absolute;
   width: 12.5em;
@@ -1207,14 +1207,14 @@ h6, .h6 {
   transition: all 0.2s 0.3s;
 }
 /* line 41, ../scss/base/components/_dropdowns.scss */
-.dropdown--content a {
+.dropdown__content a {
   display: block;
   border-top: 1px solid #eeeeee;
   padding: 10px 15px;
   padding: 0.625rem 0.9375rem;
 }
 /* line 47, ../scss/base/components/_dropdowns.scss */
-.dropdown--content a:hover {
+.dropdown__content a:hover {
   background-color: #eeeeee;
 }
 
@@ -1232,7 +1232,7 @@ h6, .h6 {
   cursor: pointer;
 }
 /* line 15, ../scss/base/components/_tooltips.scss */
-.tooltip .tooltip--content, .tooltip:after {
+.tooltip .tooltip__content, .tooltip:after {
   visibility: hidden;
   position: absolute;
   z-index: 100;
@@ -1244,7 +1244,7 @@ h6, .h6 {
   transition: all 0.2s;
 }
 /* line 26, ../scss/base/components/_tooltips.scss */
-.tooltip.tooltip__active .tooltip--content, .tooltip.tooltip__active:after {
+.tooltip.tooltip--active .tooltip__content, .tooltip.tooltip--active:after {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
@@ -1255,7 +1255,7 @@ h6, .h6 {
   border: 5px solid transparent;
 }
 /* line 38, ../scss/base/components/_tooltips.scss */
-.tooltip .tooltip--content {
+.tooltip .tooltip__content {
   text-align: center;
   background: #2690b0;
   color: white;
@@ -1272,8 +1272,8 @@ h6, .h6 {
   margin-left: -5px;
 }
 /* line 56, ../scss/base/components/_tooltips.scss */
-[data-tooltip-position=top] .tooltip--content,
-[data-tooltip-position=bottom] .tooltip--content {
+[data-tooltip-position=top] .tooltip__content,
+[data-tooltip-position=bottom] .tooltip__content {
   left: 50%;
   margin-left: -110px;
 }
@@ -1297,8 +1297,8 @@ h6, .h6 {
   margin-top: -5px;
 }
 /* line 83, ../scss/base/components/_tooltips.scss */
-[data-tooltip-position=left] .tooltip--content,
-[data-tooltip-position=right] .tooltip--content {
+[data-tooltip-position=left] .tooltip__content,
+[data-tooltip-position=right] .tooltip__content {
   top: 50%;
 }
 
@@ -1308,7 +1308,7 @@ h6, .h6 {
   border-right-color: #2690b0;
 }
 /* line 94, ../scss/base/components/_tooltips.scss */
-[data-tooltip-position=right] .tooltip--content {
+[data-tooltip-position=right] .tooltip__content {
   right: -230px;
 }
 
@@ -1318,7 +1318,7 @@ h6, .h6 {
   border-left-color: #2690b0;
 }
 /* line 105, ../scss/base/components/_tooltips.scss */
-[data-tooltip-position=left] .tooltip--content {
+[data-tooltip-position=left] .tooltip__content {
   left: -230px;
 }
 
@@ -1333,17 +1333,17 @@ h6, .h6 {
 }
 
 /* line 11, ../scss/base/components/_accordion.scss */
-.accordion--group {
+.accordion__group {
   overflow: hidden;
   margin-bottom: 0;
 }
 /* line 16, ../scss/base/components/_accordion.scss */
-.accordion--group:first-child .accordion--trigger {
+.accordion__group:first-child .accordion__trigger {
   border-top: 0;
 }
 
 /* line 22, ../scss/base/components/_accordion.scss */
-.accordion--trigger {
+.accordion__trigger {
   display: block;
   background-color: #f1f1f1;
   color: #222222;
@@ -1351,13 +1351,13 @@ h6, .h6 {
   border-top: 1px solid #e4e4e4;
 }
 /* line 33, ../scss/base/components/_accordion.scss */
-.accordion--trigger:hover {
+.accordion__trigger:hover {
   background-color: #e4e4e4;
   color: #151515;
 }
 
 /* line 39, ../scss/base/components/_accordion.scss */
-.accordion--content {
+.accordion__content {
   overflow: hidden;
   padding: 0 10px;
   border-top: 1px solid #f1f1f1;
@@ -1367,20 +1367,20 @@ h6, .h6 {
   transition: all 0.2s;
 }
 /* line 46, ../scss/base/components/_accordion.scss */
-.lt-ie9 .accordion--content {
+.lt-ie9 .accordion__content {
   height: 0;
 }
 /* line 50, ../scss/base/components/_accordion.scss */
-.accordion--content *:first-child {
+.accordion__content *:first-child {
   margin-top: 10px;
 }
 
 /* line 55, ../scss/base/components/_accordion.scss */
-.accordion-content__show {
+.accordion-content--show {
   border-top: 1px solid #e4e4e4;
 }
 /* line 58, ../scss/base/components/_accordion.scss */
-.lt-ie9 .accordion-content__show {
+.lt-ie9 .accordion-content--show {
   height: auto;
   max-height: 1000px !important;
 }
@@ -1418,14 +1418,14 @@ h6, .h6 {
 =            Media            =
 =============================*/
 /* line 10, ../scss/base/components/_media.scss */
-.media-list__bordered .media {
+.media-list--bordered .media {
   border-top: 1px solid #e4e4e4;
   margin-bottom: 0;
   padding: 20px 0;
   padding: 1.25rem 0;
 }
 /* line 16, ../scss/base/components/_media.scss */
-.media-list__bordered .media .media {
+.media-list--bordered .media .media {
   margin: 0;
 }
 
@@ -1441,29 +1441,29 @@ h6, .h6 {
 }
 
 /* line 32, ../scss/base/components/_media.scss */
-.media--alpha {
+.media__alpha {
   margin-bottom: 10px;
   margin-bottom: 0.625rem;
 }
 @media (min-width: 650px) {
   /* line 32, ../scss/base/components/_media.scss */
-  .media--alpha {
+  .media__alpha {
     margin-bottom: 0;
   }
 }
 /* line 41, ../scss/base/components/_media.scss */
-.media__right .media--alpha {
+.media--right .media__alpha {
   float: right;
   margin: 0;
 }
 
 /* line 50, ../scss/base/components/_media.scss */
-.media__left .media--beta {
+.media--left .media__beta {
   float: right;
   margin: 0;
 }
 /* line 55, ../scss/base/components/_media.scss */
-.media__right .media--beta {
+.media--right .media__beta {
   float: left;
 }
 
@@ -1479,7 +1479,7 @@ h6, .h6 {
 }
 
 /* line 14, ../scss/base/components/_pricing_tables.scss */
-.pricing-table--header {
+.pricing-table__header {
   background: #333333;
   color: white;
   padding: 15px 20px;
@@ -1487,35 +1487,35 @@ h6, .h6 {
 }
 
 /* line 21, ../scss/base/components/_pricing_tables.scss */
-.pricing-table--content {
+.pricing-table__content {
   padding: 10px 20px;
   padding: 0.625rem 1.25rem;
 }
 /* line 24, ../scss/base/components/_pricing_tables.scss */
-.pricing-table--content + .pricing-table--content {
+.pricing-table__content + .pricing-table__content {
   border-top: 1px solid #e4e4e4;
 }
 
 /* line 29, ../scss/base/components/_pricing_tables.scss */
-.pricing-table--content__alpha {
+.pricing-table__content--alpha {
   background: #f1f1f1;
 }
 
 /* line 33, ../scss/base/components/_pricing_tables.scss */
-.pricing-table--price {
+.pricing-table__price {
   font-size: 30px;
   font-size: 1.875rem;
 }
 
 /* line 37, ../scss/base/components/_pricing_tables.scss */
-.pricing-table--description {
+.pricing-table__description {
   color: #999999;
   font-size: 14px;
   font-size: 0.875rem;
 }
 
 /* line 42, ../scss/base/components/_pricing_tables.scss */
-.price-table--content__action {
+.price-table__content--action {
   padding-top: 20px;
   padding-top: 1.25rem;
   padding-bottom: 20px;
@@ -1536,20 +1536,20 @@ h6, .h6 {
 }
 
 /* line 15, ../scss/base/components/buttons/_container.scss */
-.btn-container__center {
+.btn-container--center {
   text-align: center;
 }
 /* line 18, ../scss/base/components/buttons/_container.scss */
-.btn-container__center ul {
+.btn-container--center ul {
   display: inline-block;
 }
 
 /* line 23, ../scss/base/components/buttons/_container.scss */
-.btn-container__right {
+.btn-container--right {
   text-align: right;
 }
 /* line 26, ../scss/base/components/buttons/_container.scss */
-.btn-container__right ul {
+.btn-container--right ul {
   float: right;
 }
 
@@ -1579,48 +1579,48 @@ h6, .h6 {
 
 /*==========  Inline  ==========*/
 /* line 24, ../scss/base/components/buttons/_group.scss */
-.btn-group__inline > li {
+.btn-group--inline > li {
   margin-right: 0;
   margin-left: -1px;
   float: left;
 }
 /* line 40, ../scss/base/components/buttons/_group.scss */
-.btn-group__inline > li:first-child {
+.btn-group--inline > li:first-child {
   margin: 0;
 }
 /* line 44, ../scss/base/components/buttons/_group.scss */
-.btn-group__inline > li:first-child a,
-.btn-group__inline > li:first-child span {
+.btn-group--inline > li:first-child a,
+.btn-group--inline > li:first-child span {
   border-radius: 2px 0 0 2px;
 }
 /* line 51, ../scss/base/components/buttons/_group.scss */
-.btn-group__inline > li:last-child a,
-.btn-group__inline > li:last-child span {
+.btn-group--inline > li:last-child a,
+.btn-group--inline > li:last-child span {
   border-radius: 0 2px 2px 0;
 }
 
 /*==========  Block  ==========*/
 /* line 63, ../scss/base/components/buttons/_group.scss */
-.btn-group__block > li {
+.btn-group--block > li {
   margin-top: -1px;
 }
 /* line 67, ../scss/base/components/buttons/_group.scss */
-.btn-group__block > li a,
-.btn-group__block > li span {
+.btn-group--block > li a,
+.btn-group--block > li span {
   display: block;
 }
 /* line 71, ../scss/base/components/buttons/_group.scss */
-.btn-group__block > li:first-child {
+.btn-group--block > li:first-child {
   margin: 0;
 }
 /* line 75, ../scss/base/components/buttons/_group.scss */
-.btn-group__block > li:first-child a,
-.btn-group__block > li:first-child span {
+.btn-group--block > li:first-child a,
+.btn-group--block > li:first-child span {
   border-radius: 2px 2px 0 0;
 }
 /* line 82, ../scss/base/components/buttons/_group.scss */
-.btn-group__block > li:last-child a,
-.btn-group__block > li:last-child span {
+.btn-group--block > li:last-child a,
+.btn-group--block > li:last-child span {
   border-radius: 0 0 2px 2px;
 }
 
@@ -1628,19 +1628,19 @@ h6, .h6 {
 =            Sized            =
 =============================*/
 /* line 5, ../scss/base/components/buttons/_sizes.scss */
-.btn__small {
+.btn--small {
   padding: 8px 30px;
   padding: 0.5rem 1.875rem;
 }
 
 /* line 9, ../scss/base/components/buttons/_sizes.scss */
-.btn__medium {
+.btn--medium {
   padding: 12px 35px;
   padding: 0.75rem 2.1875rem;
 }
 @media (min-width: 650px) {
   /* line 9, ../scss/base/components/buttons/_sizes.scss */
-  .btn__medium {
+  .btn--medium {
     padding: 14px 35px;
     padding: 0.875rem 2.1875rem;
     font-size: 17px;
@@ -1649,13 +1649,13 @@ h6, .h6 {
 }
 
 /* line 18, ../scss/base/components/buttons/_sizes.scss */
-.btn__large {
+.btn--large {
   padding: 15px 40px;
   padding: 0.9375rem 2.5rem;
 }
 @media (min-width: 650px) {
   /* line 18, ../scss/base/components/buttons/_sizes.scss */
-  .btn__large {
+  .btn--large {
     padding: 18px 50px;
     padding: 1.125rem 3.125rem;
     font-size: 18px;
@@ -1692,7 +1692,7 @@ h6, .h6 {
   user-select: none;
 }
 /* line 9, ../scss/base/components/buttons/_styles.scss */
-.btn:not(.btn__divider):hover {
+.btn:not(.btn--divider):hover {
   background-color: #e4e4e4;
 }
 /* line 10, ../scss/base/components/buttons/_styles.scss */
@@ -1704,7 +1704,7 @@ h6, .h6 {
   background-color: #f1f1f1;
 }
 /* line 34, ../scss/base/components/buttons/_styles.scss */
-.btn:not(.btn__divider):hover {
+.btn:not(.btn--divider):hover {
   color: #222222;
 }
 /* line 38, ../scss/base/components/buttons/_styles.scss */
@@ -1728,113 +1728,113 @@ h6, .h6 {
 }
 
 /* line 60, ../scss/base/components/buttons/_styles.scss */
-.btn__beta,
-.btn__gamma,
-.btn__delta,
-.btn__epsilon {
+.btn--beta,
+.btn--gamma,
+.btn--delta,
+.btn--epsilon {
   color: white;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
 }
 /* line 65, ../scss/base/components/buttons/_styles.scss */
-.btn__beta:not(.btn__divider):hover, .btn__beta:hover,
-.btn__gamma:not(.btn__divider):hover,
-.btn__gamma:hover,
-.btn__delta:not(.btn__divider):hover,
-.btn__delta:hover,
-.btn__epsilon:not(.btn__divider):hover,
-.btn__epsilon:hover {
+.btn--beta:not(.btn--divider):hover, .btn--beta:hover,
+.btn--gamma:not(.btn--divider):hover,
+.btn--gamma:hover,
+.btn--delta:not(.btn--divider):hover,
+.btn--delta:hover,
+.btn--epsilon:not(.btn--divider):hover,
+.btn--epsilon:hover {
   color: white;
 }
 /* line 70, ../scss/base/components/buttons/_styles.scss */
-.btn__beta:disabled, .btn__beta:disabled:hover,
-.btn__gamma:disabled,
-.btn__gamma:disabled:hover,
-.btn__delta:disabled,
-.btn__delta:disabled:hover,
-.btn__epsilon:disabled,
-.btn__epsilon:disabled:hover {
+.btn--beta:disabled, .btn--beta:disabled:hover,
+.btn--gamma:disabled,
+.btn--gamma:disabled:hover,
+.btn--delta:disabled,
+.btn--delta:disabled:hover,
+.btn--epsilon:disabled,
+.btn--epsilon:disabled:hover {
   color: #cccccc;
 }
 
 /* line 75, ../scss/base/components/buttons/_styles.scss */
-.btn__beta {
+.btn--beta {
   background-color: #2690b0;
   border-color: #217f9b;
 }
 /* line 9, ../scss/base/components/buttons/_styles.scss */
-.btn__beta:not(.btn__divider):hover {
+.btn--beta:not(.btn--divider):hover {
   background-color: #217f9b;
 }
 /* line 10, ../scss/base/components/buttons/_styles.scss */
-.btn__beta:focus {
+.btn--beta:focus {
   box-shadow: 0 0 10px #2690b0;
 }
 /* line 11, ../scss/base/components/buttons/_styles.scss */
-.btn__beta:disabled, .btn__beta:disabled:hover {
+.btn--beta:disabled, .btn--beta:disabled:hover {
   background-color: #2690b0;
 }
 
 /* line 79, ../scss/base/components/buttons/_styles.scss */
-.btn__gamma {
+.btn--gamma {
   background-color: #4eb455;
   border-color: #45a34c;
 }
 /* line 9, ../scss/base/components/buttons/_styles.scss */
-.btn__gamma:not(.btn__divider):hover {
+.btn--gamma:not(.btn--divider):hover {
   background-color: #45a34c;
 }
 /* line 10, ../scss/base/components/buttons/_styles.scss */
-.btn__gamma:focus {
+.btn--gamma:focus {
   box-shadow: 0 0 10px #4eb455;
 }
 /* line 11, ../scss/base/components/buttons/_styles.scss */
-.btn__gamma:disabled, .btn__gamma:disabled:hover {
+.btn--gamma:disabled, .btn--gamma:disabled:hover {
   background-color: #4eb455;
 }
 
 /* line 83, ../scss/base/components/buttons/_styles.scss */
-.btn__delta {
+.btn--delta {
   background-color: #b44e4e;
   border-color: #a34545;
 }
 /* line 9, ../scss/base/components/buttons/_styles.scss */
-.btn__delta:not(.btn__divider):hover {
+.btn--delta:not(.btn--divider):hover {
   background-color: #a34545;
 }
 /* line 10, ../scss/base/components/buttons/_styles.scss */
-.btn__delta:focus {
+.btn--delta:focus {
   box-shadow: 0 0 10px #b44e4e;
 }
 /* line 11, ../scss/base/components/buttons/_styles.scss */
-.btn__delta:disabled, .btn__delta:disabled:hover {
+.btn--delta:disabled, .btn--delta:disabled:hover {
   background-color: #b44e4e;
 }
 
 /* line 87, ../scss/base/components/buttons/_styles.scss */
-.btn__epsilon {
+.btn--epsilon {
   background-color: #444444;
   border-color: #373737;
 }
 /* line 9, ../scss/base/components/buttons/_styles.scss */
-.btn__epsilon:not(.btn__divider):hover {
+.btn--epsilon:not(.btn--divider):hover {
   background-color: #373737;
 }
 /* line 10, ../scss/base/components/buttons/_styles.scss */
-.btn__epsilon:focus {
+.btn--epsilon:focus {
   box-shadow: 0 0 10px #444444;
 }
 /* line 11, ../scss/base/components/buttons/_styles.scss */
-.btn__epsilon:disabled, .btn__epsilon:disabled:hover {
+.btn--epsilon:disabled, .btn--epsilon:disabled:hover {
   background-color: #444444;
 }
 
 /* line 91, ../scss/base/components/buttons/_styles.scss */
-.btn__block {
+.btn--block {
   display: block;
 }
 
 /* line 95, ../scss/base/components/buttons/_styles.scss */
-.btn__divider {
+.btn--divider {
   cursor: default;
 }
 
@@ -1999,38 +1999,38 @@ select::-ms-expand {
 }
 
 /* line 5, ../scss/base/components/form/_general.scss */
-.form--label {
+.form__label {
   margin-bottom: 0;
 }
 /* line 8, ../scss/base/components/form/_general.scss */
-.form--label label {
+.form__label label {
   line-height: 40px;
   line-height: 2.5rem;
 }
 @media (min-width: 650px) {
   /* line 5, ../scss/base/components/form/_general.scss */
-  .form--label {
+  .form__label {
     text-align: right;
   }
 }
 
 /* line 19, ../scss/base/components/form/_general.scss */
-.form--input,
-.form--select,
-.form--switch {
+.form__input,
+.form__select,
+.form__switch {
   position: relative;
   margin-bottom: 0;
 }
 
 /* line 25, ../scss/base/components/form/_general.scss */
-.form--input:after {
+.form__input:after {
   position: absolute;
   right: 10px;
   top: 9px;
 }
 
 /* line 32, ../scss/base/components/form/_general.scss */
-.form--select {
+.form__select {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
@@ -2045,11 +2045,11 @@ select::-ms-expand {
   transition: box-shadow 0.2s;
 }
 /* line 44, ../scss/base/components/form/_general.scss */
-.form--select:focus, .form--select:hover {
+.form__select:focus, .form__select:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 /* line 48, ../scss/base/components/form/_general.scss */
-.form--select:after {
+.form__select:after {
   content: "";
   position: absolute;
   top: 0;
@@ -2062,30 +2062,30 @@ select::-ms-expand {
   line-height: 2.5rem;
 }
 /* line 63, ../scss/base/components/form/_general.scss */
-.lt-ie10 .form--select:after, .parsley-error .form--select:after, .parsley-success .form--select:after {
+.lt-ie10 .form__select:after, .parsley-error .form__select:after, .parsley-success .form__select:after {
   display: none;
 }
 
 /* line 73, ../scss/base/components/form/_general.scss */
-.form--switch input[type=checkbox]:checked + label:before {
+.form__switch input[type=checkbox]:checked + label:before {
   background: #2690b0;
 }
 /* line 77, ../scss/base/components/form/_general.scss */
-.form--switch input[type=checkbox]:checked + label:after {
+.form__switch input[type=checkbox]:checked + label:after {
   left: 30px;
 }
 /* line 83, ../scss/base/components/form/_general.scss */
-.form--switch input[type=checkbox] + label {
+.form__switch input[type=checkbox] + label {
   padding: 0;
   color: rgba(0, 0, 0, 0);
 }
 /* line 87, ../scss/base/components/form/_general.scss */
-.form--switch input[type=checkbox] + label:before {
+.form__switch input[type=checkbox] + label:before {
   border-radius: 20px;
   width: 46px;
 }
 /* line 92, ../scss/base/components/form/_general.scss */
-.form--switch input[type=checkbox] + label:after {
+.form__switch input[type=checkbox] + label:after {
   background: white;
   content: '';
   top: -1px;
@@ -2101,37 +2101,37 @@ select::-ms-expand {
 
 @media (min-width: 650px) {
   /* line 109, ../scss/base/components/form/_general.scss */
-  .form--input-list {
+  .form__input-list {
     margin-top: 8px;
     margin-top: 0.5rem;
   }
 }
 /* line 115, ../scss/base/components/form/_general.scss */
-.form--input-list li + li {
+.form__input-list li + li {
   margin-top: 5px;
   margin-top: 0.3125rem;
 }
 
 /* line 121, ../scss/base/components/form/_general.scss */
-.form--data {
+.form__data {
   line-height: 40px;
   line-height: 2.5rem;
 }
 
 /* line 125, ../scss/base/components/form/_general.scss */
-.form--actions {
+.form__actions {
   margin-top: 20px;
   margin-top: 1.25rem;
 }
 @media (min-width: 650px) {
   /* line 125, ../scss/base/components/form/_general.scss */
-  .form--actions {
+  .form__actions {
     margin-left: 42.36157%;
   }
 }
 
 /* line 133, ../scss/base/components/form/_general.scss */
-.form--required-field {
+.form__required-field {
   font-size: 14px;
   font-size: 0.875rem;
 }
@@ -2273,123 +2273,123 @@ input[type=radio] + label:after {
 }
 
 /* line 3, ../scss/base/components/form/_validation.scss */
-.form--input__error.form--input:after {
+.form__input--error.form__input:after {
   content: "";
   color: #b44e4e;
 }
 /* line 11, ../scss/base/components/form/_validation.scss */
-.form--input__error input[type="text"],
-.form--input__error input[type="password"],
-.form--input__error input[type="date"],
-.form--input__error input[type="datetime"],
-.form--input__error input[type="datetime-local"],
-.form--input__error input[type="month"],
-.form--input__error input[type="week"],
-.form--input__error input[type="email"],
-.form--input__error input[type="number"],
-.form--input__error input[type="search"],
-.form--input__error input[type="tel"],
-.form--input__error input[type="time"],
-.form--input__error input[type="url"],
-.form--input__error textarea {
+.form__input--error input[type="text"],
+.form__input--error input[type="password"],
+.form__input--error input[type="date"],
+.form__input--error input[type="datetime"],
+.form__input--error input[type="datetime-local"],
+.form__input--error input[type="month"],
+.form__input--error input[type="week"],
+.form__input--error input[type="email"],
+.form__input--error input[type="number"],
+.form__input--error input[type="search"],
+.form__input--error input[type="tel"],
+.form__input--error input[type="time"],
+.form__input--error input[type="url"],
+.form__input--error textarea {
   border-color: #b44e4e;
   box-shadow: none;
   padding-right: 30px;
   padding-right: 1.875rem;
 }
 /* line 17, ../scss/base/components/form/_validation.scss */
-.form--input__error input[type="text"]:focus,
-.form--input__error input[type="password"]:focus,
-.form--input__error input[type="date"]:focus,
-.form--input__error input[type="datetime"]:focus,
-.form--input__error input[type="datetime-local"]:focus,
-.form--input__error input[type="month"]:focus,
-.form--input__error input[type="week"]:focus,
-.form--input__error input[type="email"]:focus,
-.form--input__error input[type="number"]:focus,
-.form--input__error input[type="search"]:focus,
-.form--input__error input[type="tel"]:focus,
-.form--input__error input[type="time"]:focus,
-.form--input__error input[type="url"]:focus,
-.form--input__error textarea:focus {
+.form__input--error input[type="text"]:focus,
+.form__input--error input[type="password"]:focus,
+.form__input--error input[type="date"]:focus,
+.form__input--error input[type="datetime"]:focus,
+.form__input--error input[type="datetime-local"]:focus,
+.form__input--error input[type="month"]:focus,
+.form__input--error input[type="week"]:focus,
+.form__input--error input[type="email"]:focus,
+.form__input--error input[type="number"]:focus,
+.form__input--error input[type="search"]:focus,
+.form__input--error input[type="tel"]:focus,
+.form__input--error input[type="time"]:focus,
+.form__input--error input[type="url"]:focus,
+.form__input--error textarea:focus {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 /* line 23, ../scss/base/components/form/_validation.scss */
-.form--input__error.form--input__select-validated:after {
+.form__input--error.form__input--select-validated:after {
   display: none;
 }
 /* line 28, ../scss/base/components/form/_validation.scss */
-.form--input__error .form--select {
+.form__input--error .form__select {
   border-color: #b44e4e;
 }
 /* line 31, ../scss/base/components/form/_validation.scss */
-.form--input__error .form--select:after {
+.form__input--error .form__select:after {
   color: #b44e4e;
 }
 /* line 39, ../scss/base/components/form/_validation.scss */
-.form--input__error input[type=checkbox] + label:before,
-.form--input__error input[type=radio] + label:before {
+.form__input--error input[type=checkbox] + label:before,
+.form__input--error input[type=radio] + label:before {
   background: #f8efef;
   border-color: #b44e4e;
 }
 /* line 44, ../scss/base/components/form/_validation.scss */
-.form--input__error input[type=checkbox] + label:after,
-.form--input__error input[type=radio] + label:after {
+.form__input--error input[type=checkbox] + label:after,
+.form__input--error input[type=radio] + label:after {
   color: #b44e4e;
 }
 
 /* line 53, ../scss/base/components/form/_validation.scss */
-.form--input__success.form--input:after {
+.form__input--success.form__input:after {
   content: "";
   color: #4eb455;
 }
 /* line 61, ../scss/base/components/form/_validation.scss */
-.form--input__success input[type="text"],
-.form--input__success input[type="password"],
-.form--input__success input[type="date"],
-.form--input__success input[type="datetime"],
-.form--input__success input[type="datetime-local"],
-.form--input__success input[type="month"],
-.form--input__success input[type="week"],
-.form--input__success input[type="email"],
-.form--input__success input[type="number"],
-.form--input__success input[type="search"],
-.form--input__success input[type="tel"],
-.form--input__success input[type="time"],
-.form--input__success input[type="url"],
-.form--input__success textarea {
+.form__input--success input[type="text"],
+.form__input--success input[type="password"],
+.form__input--success input[type="date"],
+.form__input--success input[type="datetime"],
+.form__input--success input[type="datetime-local"],
+.form__input--success input[type="month"],
+.form__input--success input[type="week"],
+.form__input--success input[type="email"],
+.form__input--success input[type="number"],
+.form__input--success input[type="search"],
+.form__input--success input[type="tel"],
+.form__input--success input[type="time"],
+.form__input--success input[type="url"],
+.form__input--success textarea {
   border-color: #4eb455;
   box-shadow: none;
   padding-right: 30px;
   padding-right: 1.875rem;
 }
 /* line 67, ../scss/base/components/form/_validation.scss */
-.form--input__success input[type="text"]:focus,
-.form--input__success input[type="password"]:focus,
-.form--input__success input[type="date"]:focus,
-.form--input__success input[type="datetime"]:focus,
-.form--input__success input[type="datetime-local"]:focus,
-.form--input__success input[type="month"]:focus,
-.form--input__success input[type="week"]:focus,
-.form--input__success input[type="email"]:focus,
-.form--input__success input[type="number"]:focus,
-.form--input__success input[type="search"]:focus,
-.form--input__success input[type="tel"]:focus,
-.form--input__success input[type="time"]:focus,
-.form--input__success input[type="url"]:focus,
-.form--input__success textarea:focus {
+.form__input--success input[type="text"]:focus,
+.form__input--success input[type="password"]:focus,
+.form__input--success input[type="date"]:focus,
+.form__input--success input[type="datetime"]:focus,
+.form__input--success input[type="datetime-local"]:focus,
+.form__input--success input[type="month"]:focus,
+.form__input--success input[type="week"]:focus,
+.form__input--success input[type="email"]:focus,
+.form__input--success input[type="number"]:focus,
+.form__input--success input[type="search"]:focus,
+.form__input--success input[type="tel"]:focus,
+.form__input--success input[type="time"]:focus,
+.form__input--success input[type="url"]:focus,
+.form__input--success textarea:focus {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 /* line 73, ../scss/base/components/form/_validation.scss */
-.form--input__success.form--input__select-validated:after {
+.form__input--success.form__input--select-validated:after {
   display: none;
 }
 /* line 78, ../scss/base/components/form/_validation.scss */
-.form--input__success .form--select {
+.form__input--success .form__select {
   border-color: #4eb455;
 }
 /* line 81, ../scss/base/components/form/_validation.scss */
-.form--input__success .form--select:after {
+.form__input--success .form__select:after {
   color: #4eb455;
 }
 
@@ -2476,7 +2476,7 @@ input[type=radio] + label:after {
   font-size: 3.75rem;
 }
 /* line 42, ../scss/base/components/notifications/_notification.scss */
-.notification.notification__close {
+.notification.notification--close {
   height: 0;
   overflow: hidden;
   padding: 0;
@@ -2496,7 +2496,7 @@ input[type=radio] + label:after {
 =            Notification sizes            =
 ==========================================*/
 /* line 5, ../scss/base/components/notifications/_sizes.scss */
-.notification__alpha {
+.notification--alpha {
   min-height: 42px;
   min-height: 2.625rem;
   padding: 30px;
@@ -2504,14 +2504,14 @@ input[type=radio] + label:after {
 }
 
 /* line 10, ../scss/base/components/notifications/_sizes.scss */
-.notification__beta {
+.notification--beta {
   min-height: 22px;
   min-height: 1.375rem;
   padding: 20px;
   padding: 1.25rem;
 }
 /* line 14, ../scss/base/components/notifications/_sizes.scss */
-.notification__beta:before {
+.notification--beta:before {
   top: 2px;
   top: 0.125rem;
   left: 10px;
@@ -2524,25 +2524,25 @@ input[type=radio] + label:after {
 =            Notification styles            =
 ===========================================*/
 /* line 5, ../scss/base/components/notifications/_styles.scss */
-.notification__error {
+.notification--error {
   color: #261010;
   background: #f8efef;
   border-color: #eed6d6;
 }
 /* line 10, ../scss/base/components/notifications/_notification.scss */
-.notification__error:before {
+.notification--error:before {
   content: "";
   color: #b44e4e;
 }
 
 /* line 9, ../scss/base/components/notifications/_styles.scss */
-.notification__success {
+.notification--success {
   color: #102612;
   background: #eff8f0;
   border-color: #d6eed8;
 }
 /* line 10, ../scss/base/components/notifications/_notification.scss */
-.notification__success:before {
+.notification--success:before {
   content: "";
   color: #4eb455;
 }
@@ -2551,18 +2551,18 @@ input[type=radio] + label:after {
 =            Notification identifiers            =
 ================================================*/
 /* line 5, ../scss/base/components/notifications/_identifiers.scss */
-.notification--text {
+.notification__text {
   margin-left: 70px;
   margin-left: 4.375rem;
 }
 /* line 8, ../scss/base/components/notifications/_identifiers.scss */
-.notification__beta .notification--text {
+.notification--beta .notification__text {
   margin-left: 40px;
   margin-left: 2.5rem;
 }
 
 /* line 13, ../scss/base/components/notifications/_identifiers.scss */
-.notification--close {
+.notification__close {
   position: absolute;
   color: black;
   padding: 0;
@@ -2574,7 +2574,7 @@ input[type=radio] + label:after {
   right: 1.25rem;
 }
 /* line 25, ../scss/base/components/notifications/_identifiers.scss */
-.notification--close:before {
+.notification__close:before {
   content: '';
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
   opacity: 0.2;
@@ -2584,12 +2584,12 @@ input[type=radio] + label:after {
   transition: opacity 0.2s;
 }
 /* line 33, ../scss/base/components/notifications/_identifiers.scss */
-.notification--close:hover:before {
+.notification__close:hover:before {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
 /* line 38, ../scss/base/components/notifications/_identifiers.scss */
-.notification--close:focus {
+.notification__close:focus {
   outline: none;
 }
 
@@ -2606,7 +2606,7 @@ input[type=radio] + label:after {
   margin-bottom: 2.5rem;
 }
 /* line 12, ../scss/base/components/notifications/_cookie_notification.scss */
-.cookie-notification .btn-container__center {
+.cookie-notification .btn-container--center {
   margin: 0;
 }
 /* line 16, ../scss/base/components/notifications/_cookie_notification.scss */
@@ -2652,7 +2652,7 @@ input[type=radio] + label:after {
 }
 
 /* line 29, ../scss/base/components/modals/_modals.scss */
-.modal--content {
+.modal__content {
   background: white;
   position: relative;
   margin: 0 auto;
@@ -2661,7 +2661,7 @@ input[type=radio] + label:after {
 }
 
 /* line 37, ../scss/base/components/modals/_modals.scss */
-.modal--overlay {
+.modal__overlay {
   background: black;
   position: fixed;
   visibility: hidden;
@@ -2686,7 +2686,7 @@ input[type=radio] + label:after {
   transition-duration: 0, 0.5s;
 }
 /* line 52, ../scss/base/components/modals/_modals.scss */
-.modal-show .modal--overlay {
+.modal-show .modal__overlay {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
   opacity: 0.6;
@@ -2766,7 +2766,7 @@ html[data-modal-effect|=slip],
 
 /* line 60, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect|=slip] .container,
-[data-modal-effect|=slip] .modal--overlay {
+[data-modal-effect|=slip] .modal__overlay {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
   -ms-transform-style: preserve-3d;
@@ -2776,7 +2776,7 @@ html[data-modal-effect|=slip],
 
 /* line 67, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect=slip-top] .container,
-[data-modal-effect=slip-top] .modal--overlay {
+[data-modal-effect=slip-top] .modal__overlay {
   -webkit-transform-origin: 50% 100%;
   -moz-transform-origin: 50% 100%;
   -ms-transform-origin: 50% 100%;
@@ -2789,7 +2789,7 @@ html[data-modal-effect|=slip],
 
 /* line 75, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect=slip-bottom] .container,
-[data-modal-effect=slip-bottom] .modal--overlay {
+[data-modal-effect=slip-bottom] .modal__overlay {
   -webkit-transform-origin: 50% 0;
   -moz-transform-origin: 50% 0;
   -ms-transform-origin: 50% 0;
@@ -2801,7 +2801,7 @@ html[data-modal-effect|=slip],
 }
 
 /* line 83, ../scss/base/components/modals/effects/_slip.scss */
-.modal[data-modal-effect|=slip] .modal--content {
+.modal[data-modal-effect|=slip] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: all 0.5s;
@@ -2811,12 +2811,12 @@ html[data-modal-effect|=slip],
   transition: all 0.5s 0.1s;
 }
 /* line 89, ../scss/base/components/modals/effects/_slip.scss */
-.modal[data-modal-effect|=slip].modal-show .modal--content {
+.modal[data-modal-effect|=slip].modal-show .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 /* line 96, ../scss/base/components/modals/effects/_slip.scss */
-.modal[data-modal-effect=slip-top] .modal--content {
+.modal[data-modal-effect=slip-top] .modal__content {
   -webkit-transform: translateY(-300%);
   -moz-transform: translateY(-300%);
   -ms-transform: translateY(-300%);
@@ -2824,7 +2824,7 @@ html[data-modal-effect|=slip],
   transform: translateY(-300%);
 }
 /* line 101, ../scss/base/components/modals/effects/_slip.scss */
-.modal[data-modal-effect=slip-top].modal-show .modal--content {
+.modal[data-modal-effect=slip-top].modal-show .modal__content {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -2832,7 +2832,7 @@ html[data-modal-effect|=slip],
   transform: translateY(0);
 }
 /* line 108, ../scss/base/components/modals/effects/_slip.scss */
-.modal[data-modal-effect=slip-bottom] .modal--content {
+.modal[data-modal-effect=slip-bottom] .modal__content {
   -webkit-transform: translateY(300%);
   -moz-transform: translateY(300%);
   -ms-transform: translateY(300%);
@@ -2840,7 +2840,7 @@ html[data-modal-effect|=slip],
   transform: translateY(300%);
 }
 /* line 113, ../scss/base/components/modals/effects/_slip.scss */
-.modal[data-modal-effect=slip-bottom].modal-show .modal--content {
+.modal[data-modal-effect=slip-bottom].modal-show .modal__content {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -2852,7 +2852,7 @@ html[data-modal-effect|=slip],
 =            Slide (top, right, bottom, left)            =
 ========================================================*/
 /* line 7, ../scss/base/components/modals/effects/_slide.scss */
-.modal[data-modal-effect|=slide] .modal--content {
+.modal[data-modal-effect|=slide] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transition: all 0.5s 0;
@@ -2861,7 +2861,7 @@ html[data-modal-effect|=slip],
   transition: all 0.5s 0;
 }
 /* line 13, ../scss/base/components/modals/effects/_slide.scss */
-.modal[data-modal-effect|=slide].modal-show .modal--content {
+.modal[data-modal-effect|=slide].modal-show .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   -webkit-transition: all 0.5s;
@@ -2871,7 +2871,7 @@ html[data-modal-effect|=slip],
   transition: all 0.5s 0.1s;
 }
 /* line 21, ../scss/base/components/modals/effects/_slide.scss */
-.modal[data-modal-effect=slide-top] .modal--content {
+.modal[data-modal-effect=slide-top] .modal__content {
   -webkit-transform: translateY(-300%);
   -moz-transform: translateY(-300%);
   -ms-transform: translateY(-300%);
@@ -2879,7 +2879,7 @@ html[data-modal-effect|=slip],
   transform: translateY(-300%);
 }
 /* line 26, ../scss/base/components/modals/effects/_slide.scss */
-.modal[data-modal-effect=slide-top].modal-show .modal--content {
+.modal[data-modal-effect=slide-top].modal-show .modal__content {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -2887,7 +2887,7 @@ html[data-modal-effect|=slip],
   transform: translateY(0);
 }
 /* line 33, ../scss/base/components/modals/effects/_slide.scss */
-.modal[data-modal-effect=slide-right] .modal--content {
+.modal[data-modal-effect=slide-right] .modal__content {
   -webkit-transform: translateX(300%);
   -moz-transform: translateX(300%);
   -ms-transform: translateX(300%);
@@ -2895,7 +2895,7 @@ html[data-modal-effect|=slip],
   transform: translateX(300%);
 }
 /* line 38, ../scss/base/components/modals/effects/_slide.scss */
-.modal[data-modal-effect=slide-right].modal-show .modal--content {
+.modal[data-modal-effect=slide-right].modal-show .modal__content {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -2903,7 +2903,7 @@ html[data-modal-effect|=slip],
   transform: translateX(0);
 }
 /* line 45, ../scss/base/components/modals/effects/_slide.scss */
-.modal[data-modal-effect=slide-bottom] .modal--content {
+.modal[data-modal-effect=slide-bottom] .modal__content {
   -webkit-transform: translateY(300%);
   -moz-transform: translateY(300%);
   -ms-transform: translateY(300%);
@@ -2911,7 +2911,7 @@ html[data-modal-effect|=slip],
   transform: translateY(300%);
 }
 /* line 50, ../scss/base/components/modals/effects/_slide.scss */
-.modal[data-modal-effect=slide-bottom].modal-show .modal--content {
+.modal[data-modal-effect=slide-bottom].modal-show .modal__content {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
@@ -2919,7 +2919,7 @@ html[data-modal-effect|=slip],
   transform: translateY(0);
 }
 /* line 57, ../scss/base/components/modals/effects/_slide.scss */
-.modal[data-modal-effect=slide-left] .modal--content {
+.modal[data-modal-effect=slide-left] .modal__content {
   -webkit-transform: translateX(-300%);
   -moz-transform: translateX(-300%);
   -ms-transform: translateX(-300%);
@@ -2927,7 +2927,7 @@ html[data-modal-effect|=slip],
   transform: translateX(-300%);
 }
 /* line 62, ../scss/base/components/modals/effects/_slide.scss */
-.modal[data-modal-effect=slide-left].modal-show .modal--content {
+.modal[data-modal-effect=slide-left].modal-show .modal__content {
   -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
@@ -2947,7 +2947,7 @@ html[data-modal-effect|=slip],
   perspective: 1300;
 }
 /* line 9, ../scss/base/components/modals/effects/_flip.scss */
-.modal[data-modal-effect|=flip] .modal--content {
+.modal[data-modal-effect|=flip] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transform-style: preserve-3d;
@@ -2961,12 +2961,12 @@ html[data-modal-effect|=slip],
   transition: all 0.3s;
 }
 /* line 16, ../scss/base/components/modals/effects/_flip.scss */
-.modal[data-modal-effect|=flip].modal-show .modal--content {
+.modal[data-modal-effect|=flip].modal-show .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
 /* line 23, ../scss/base/components/modals/effects/_flip.scss */
-.modal[data-modal-effect=flip-horizontal] .modal--content {
+.modal[data-modal-effect=flip-horizontal] .modal__content {
   -webkit-transform: rotateY(-70deg);
   -moz-transform: rotateY(-70deg);
   -ms-transform: rotateY(-70deg);
@@ -2974,7 +2974,7 @@ html[data-modal-effect|=slip],
   transform: rotateY(-70deg);
 }
 /* line 28, ../scss/base/components/modals/effects/_flip.scss */
-.modal[data-modal-effect=flip-horizontal].modal-show .modal--content {
+.modal[data-modal-effect=flip-horizontal].modal-show .modal__content {
   -webkit-transform: rotateY(0deg);
   -moz-transform: rotateY(0deg);
   -ms-transform: rotateY(0deg);
@@ -2982,7 +2982,7 @@ html[data-modal-effect|=slip],
   transform: rotateY(0deg);
 }
 /* line 35, ../scss/base/components/modals/effects/_flip.scss */
-.modal[data-modal-effect=flip-vertical] .modal--content {
+.modal[data-modal-effect=flip-vertical] .modal__content {
   -webkit-transform: rotateX(-70deg);
   -moz-transform: rotateX(-70deg);
   -ms-transform: rotateX(-70deg);
@@ -2990,7 +2990,7 @@ html[data-modal-effect|=slip],
   transform: rotateX(-70deg);
 }
 /* line 40, ../scss/base/components/modals/effects/_flip.scss */
-.modal[data-modal-effect=flip-vertical].modal-show .modal--content {
+.modal[data-modal-effect=flip-vertical].modal-show .modal__content {
   -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
   -ms-transform: rotateX(0deg);
@@ -3002,7 +3002,7 @@ html[data-modal-effect|=slip],
 =            Fade in & scale            =
 =======================================*/
 /* line 6, ../scss/base/components/modals/effects/_fadescale.scss */
-.modal[data-modal-effect=fadescale] .modal--content {
+.modal[data-modal-effect=fadescale] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transform: scale(0.7, 0.7);
@@ -3016,7 +3016,7 @@ html[data-modal-effect|=slip],
   transition: all 0.3s;
 }
 /* line 13, ../scss/base/components/modals/effects/_fadescale.scss */
-.modal[data-modal-effect=fadescale].modal-show .modal--content {
+.modal[data-modal-effect=fadescale].modal-show .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   -webkit-transform: scale(1, 1);
@@ -3030,7 +3030,7 @@ html[data-modal-effect|=slip],
 =             Super scale             =
 =====================================*/
 /* line 6, ../scss/base/components/modals/effects/_superscale.scss */
-.modal[data-modal-effect=superscale] .modal--content {
+.modal[data-modal-effect=superscale] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
   -webkit-transform: scale(2, 2);
@@ -3044,7 +3044,7 @@ html[data-modal-effect|=slip],
   transition: all 0.3s;
 }
 /* line 13, ../scss/base/components/modals/effects/_superscale.scss */
-.modal[data-modal-effect=superscale].modal-show .modal--content {
+.modal[data-modal-effect=superscale].modal-show .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
   -webkit-transform: scale(1, 1);

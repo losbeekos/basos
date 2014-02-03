@@ -6,7 +6,7 @@
     position: relative;
 
     &:hover {
-        .dropdown--content {
+        .dropdown__content {
             visibility: visible;
 
             @include opacity(1);
@@ -24,7 +24,7 @@
     }
 }
 
-.dropdown--content {
+.dropdown__content {
     overflow: hidden;
     position: absolute;
     width: $ten*20;

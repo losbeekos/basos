@@ -2,10 +2,10 @@
 =            Notification styles            =
 ===========================================*/
 
-.notification__error {
+.notification--error {
     @include notification(lighten($color-delta, 45%), lighten($color-delta, 38%), darken($color-delta, 40%), $icon-notification-error, $color-delta);
 }
 
-.notification__success {
+.notification--success {
     @include notification(lighten($color-gamma, 45%), lighten($color-gamma, 38%), darken($color-gamma, 40%), $icon-notification-success, $color-gamma);
 }

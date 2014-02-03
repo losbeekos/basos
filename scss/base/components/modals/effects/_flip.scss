@@ -6,38 +6,38 @@
     &[data-modal-effect|=flip] {
         @include perspective(1300);
 
-        .modal--content {
+        .modal__content {
             @include opacity(0);
             @include transform-style(preserve-3d);
             @include single-transition(all, 0.3s);
         }
 
         &.modal-show {
-            .modal--content {
+            .modal__content {
                 @include opacity(1);
             }
         }
     }
 
     &[data-modal-effect=flip-horizontal] {
-        .modal--content {
+        .modal__content {
             @include rotateY(-70deg);
         }
 
         &.modal-show {
-            .modal--content {
+            .modal__content {
                 @include rotateY(0deg);
             }
         }
     }
 
     &[data-modal-effect=flip-vertical] {
-        .modal--content {
+        .modal__content {
             @include rotateX(-70deg);
         }
 
         &.modal-show {
-            .modal--content {
+            .modal__content {
                 @include rotateX(0deg);
             }
         }

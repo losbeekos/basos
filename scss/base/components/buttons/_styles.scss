@@ -6,7 +6,7 @@
     background-color: $bg-color;
     border-color: darken($bg-color, 5%);
 
-    &:not(.btn__divider):hover   { background-color: darken($bg-color, 5%);  }
+    &:not(.btn--divider):hover   { background-color: darken($bg-color, 5%);  }
     &:focus                      { box-shadow: 0 0 10px rgba($bg-color, 1);  }
     &:disabled, &:disabled:hover { background-color: $bg-color;              }
 }
@@ -31,7 +31,7 @@
         @include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));
     }
 
-    &:not(.btn__divider):hover {
+    &:not(.btn--divider):hover {
         color: $color-text;
     }
 
@@ -54,14 +54,14 @@
     }
 }
 
-.btn__beta,
-.btn__gamma,
-.btn__delta,
-.btn__epsilon {
+.btn--beta,
+.btn--gamma,
+.btn--delta,
+.btn--epsilon {
     color: $white;
     text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
 
-    &:not(.btn__divider):hover,
+    &:not(.btn--divider):hover,
     &:hover {
         color: $white;
     }
@@ -72,26 +72,26 @@
     }
 }
 
-.btn__beta {
+.btn--beta {
     @include btn-style($btn-bg-color-beta);
 }
 
-.btn__gamma {
+.btn--gamma {
     @include btn-style($btn-bg-color-gamma);
 }
 
-.btn__delta {
+.btn--delta {
     @include btn-style($btn-bg-color-delta);
 }
 
-.btn__epsilon {
+.btn--epsilon {
     @include btn-style($btn-bg-color-epsilon);
 }
 
-.btn__block {
+.btn--block {
     display: block;
 }
 
-.btn__divider {
+.btn--divider {
     cursor: default;
 }

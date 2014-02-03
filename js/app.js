@@ -12,6 +12,7 @@ var settings = {
     $window: $(window),
     $html: $('html'),
     $body: $('body'),
+    $htmlAndBody: $('html, body'),
     $container: $('#container'),
     $main: $('#main'),
 
@@ -19,6 +20,14 @@ var settings = {
     /*==========  Fitvids  ==========*/
     fitVids: {
         $el: $('.fitvids')
+    },
+
+
+    /*==========  Jumpto  ==========*/
+
+    jump: {
+        $el: $('[data-jumpto]'),
+        speed: 300
     },
 
 
@@ -32,7 +41,7 @@ var settings = {
     /*==========  Modals  ==========*/
 
     modals: {
-        $trigger: $('.modal--trigger'),
+        $trigger: $('.modal__trigger'),
         $modal: $('.modal')
     },
 
@@ -51,8 +60,8 @@ var settings = {
 
     tooltips: {
         $el: $('.tooltip'),
-        tooltipActiveClass: 'tooltip__active',
-        tooltipContentClass: 'tooltip--content',
+        tooltipActiveClass: 'tooltip--active',
+        tooltipContentClass: 'tooltip__content',
         arrowWidth: 8
     },
 
@@ -68,9 +77,9 @@ var settings = {
 
     accordion: {
         $el: $('.accordion'),
-        $group: $('.accordion--group'),
-        $trigger: $('.accordion--trigger'),
-        contentShowClass: 'accordion-content__show'
+        $group: $('.accordion__group'),
+        $trigger: $('.accordion__trigger'),
+        contentShowClass: 'accordion-content--show'
     },
 
 
@@ -107,6 +116,7 @@ var modules = {
             modules.fastClick.init();
             modules.fitVids.init();
             modules.formValidation.init();
+            modules.jump.init();
             modules.modals.init();
             modules.tooltips.init();
             modules.accordion.init();
@@ -257,6 +267,32 @@ var modules = {
 
 
 
+    /*==============================
+    =            Jumpto            =
+    ==============================*/
+
+    jump: {
+        init: function () {
+            var self = this;
+
+            settings.jump.$el.on('click', function (event) {
+                event.preventDefault();
+
+                self.to($(this));
+            });
+        },
+
+        to: function (_link) {
+            var self = this;
+
+            settings.$htmlAndBody.animate({scrollTop: $(_link.attr('href')).offset().top}, settings.jump.speed);
+        }
+    },
+
+    /*-----  End of Jumpto  ------*/
+
+
+
     /*================================
     =             Modals             =
     ================================*/
@@ -268,7 +304,7 @@ var modules = {
             var self = this;
 
             if (settings.modals.$trigger.length > 0 && settings.modals.$modal.length > 0) {
-                settings.$body.append('<div class="modal--overlay" data-modal-close></div>');
+                settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
 
                 self.triggers();
             }
@@ -362,7 +398,7 @@ var modules = {
                 .append('<div class="' + settings.tooltips.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
                 .removeAttr('title');
 
-            self.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip--content'));
+            self.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip__content'));
         },
 
         triggers: function ($tooltipTrigger) {
@@ -420,7 +456,7 @@ var modules = {
                 var $close = $(this),
                     $notification = $close.parent();
 
-                $notification.addClass('notification__close');
+                $notification.addClass('notification--close');
 
                 setTimeout(function () {
                     $notification.remove();
@@ -453,7 +489,7 @@ var modules = {
 
             settings.accordion.$group.each(function () {
                 var $group = $(this),
-                    $groupContent = $group.find('.accordion--content');
+                    $groupContent = $group.find('.accordion__content');
 
                 $groupContent.removeAttr('style');
 
@@ -477,7 +513,7 @@ var modules = {
                     $content = $trigger.next();
 
                 if (!$content.hasClass(settings.accordion.contentShowClass)) {
-                    self.hideGroup($trigger.closest('.accordion').find('.accordion--content'));
+                    self.hideGroup($trigger.closest('.accordion').find('.accordion__content'));
                     self.showGroup($trigger, $content);
                 } else {
                     self.hideGroup($content);
@@ -528,25 +564,25 @@ var modules = {
                         function(){
                             settings.formValidation.$el.parsley({
                                 trigger: 'change',
-                                successClass: 'form--input__success',
-                                errorClass: 'form--input__error',
+                                successClass: 'form__input--success',
+                                errorClass: 'form__input--error',
                                 errors: {
                                     classHandler: function (element, isRadioOrCheckbox){
                                         var $element = $(element);
 
                                         if ($element[0].localName === 'select') {
-                                            $($element[0].offsetParent).closest('.form--input').addClass('form--input__select-validated');
+                                            $($element[0].offsetParent).closest('.form__input').addClass('form__input--select-validated');
                                         }
 
                                         if (isRadioOrCheckbox) {
-                                            return $element.closest('.form--input-list');
+                                            return $element.closest('.form__input-list');
                                         } else {
-                                            return $element.closest('.form--input');
+                                            return $element.closest('.form__input');
                                         }
                                     },
 
                                     container: function (element, isRadioOrCheckbox) {
-                                        var $container = element.closest('.form--input');
+                                        var $container = element.closest('.form__input');
 
                                         if ($container.length === 0) {
                                             $container = $("<ul class='parsley-container'></ul>").append($container);
@@ -580,13 +616,13 @@ var modules = {
 
                     event.preventDefault();
 
-                    settings.tabs.$tab.removeClass('tab__active');
-                    $tab.addClass('tab__active');
+                    settings.tabs.$tab.removeClass('tab--active');
+                    $tab.addClass('tab--active');
 
                     $($tab.attr('href'))
-                        .addClass('tab-item__active')
+                        .addClass('tab-item--active')
                         .siblings()
-                        .removeClass('tab-item__active');
+                        .removeClass('tab-item--active');
                 });
             }
         }

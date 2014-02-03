@@ -1,5 +1,5 @@
-.form--input__error {
-    &.form--input {
+.form__input--error {
+    &.form__input {
         &:after {
             @extend %font-fontello;
 
@@ -19,13 +19,13 @@
         }
     }
 
-    &.form--input__select-validated {
+    &.form__input--select-validated {
         &:after {
             display: none;
         }
     }
 
-    .form--select {
+    .form__select {
         border-color: $color-delta;
 
         &:after {
@@ -48,8 +48,8 @@
     }
 }
 
-.form--input__success {
-    &.form--input {
+.form__input--success {
+    &.form__input {
         &:after {
             @extend %font-fontello;
 
@@ -69,13 +69,13 @@
         }
     }
 
-    &.form--input__select-validated {
+    &.form__input--select-validated {
         &:after {
             display: none;
         }
     }
 
-    .form--select {
+    .form__select {
         border-color: $color-gamma;
 
         &:after {

@@ -1,8 +1,8 @@
-.form--row {
+.form__row {
     @extend .clearfix;
 }
 
-.form--label {
+.form__label {
     margin-bottom: 0;
 
     label {
@@ -14,14 +14,14 @@
     }
 }
 
-.form--input,
-.form--select,
-.form--switch {
+.form__input,
+.form__select,
+.form__switch {
     position: relative;
     margin-bottom: 0;
 }
 
-.form--input {
+.form__input {
     &:after {
         position: absolute;
         right: 10px;
@@ -29,7 +29,7 @@
     }
 }
 
-.form--select {
+.form__select {
     @include user-select(none);
 
     background: $white;
@@ -66,7 +66,7 @@
     }
 }
 
-.form--switch {
+.form__switch {
     input[type=checkbox] {
         &:checked {
             + label {
@@ -106,7 +106,7 @@
     }
 }
 
-.form--input-list {
+.form__input-list {
     @include breakpoint(beta-and-up) {
         @include rem(margin-top, 8px);
     }
@@ -118,11 +118,11 @@
     }
 }
 
-.form--data {
+.form__data {
     @include rem(line-height, 40px);
 }
 
-.form--actions {
+.form__actions {
     @include rem(margin-top, 20px);
 
     @include breakpoint(beta-and-up) {
@@ -130,6 +130,6 @@
     }
 }
 
-.form--required-field {
+.form__required-field {
     @include rem(font-size, 14px);
 }

@@ -2,12 +2,12 @@
 =            Notification sizes            =
 ==========================================*/
 
-.notification__alpha {
+.notification--alpha {
     @include rem(min-height, 42px);
     @include rem(padding, 30px);
 }
 
-.notification__beta {
+.notification--beta {
     @include rem(min-height, 22px);
     @include rem(padding, 20px);
 

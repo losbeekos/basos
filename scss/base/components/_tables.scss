@@ -18,7 +18,7 @@
     }
 }
 
-.table__hover {
+.table--hover {
     tr:hover {
         td {
             background: $table-hover-bg-color;
@@ -26,13 +26,13 @@
     }
 }
 
-.table__zebra {
+.table--zebra {
     tr:nth-child(odd) td {
         background: $table-zebra-bg-color;
     }
 }
 
-.table__bordered {
+.table--bordered {
     border: 1px solid $table-border-color;
 
     td,
