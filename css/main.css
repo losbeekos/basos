@@ -548,12 +548,12 @@ textarea {
 =            Clearfix            =
 ================================*/
 /* line 7, ../scss/base/helpers/_clearfix.scss */
-.clearfix:before, .grid:before, [class|="column"]:before, .media:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|="column"]:after, .media:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
+.clearfix:before, .grid:before, [class|=column]:before, .media:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|=column]:after, .media:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
   content: '';
   display: table;
 }
 /* line 12, ../scss/base/helpers/_clearfix.scss */
-.clearfix:after, .grid:after, [class|="column"]:after, .media:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
+.clearfix:after, .grid:after, [class|=column]:after, .media:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
   clear: both;
 }
 
@@ -648,32 +648,242 @@ textarea {
 }
 
 /* line 14, ../scss/base/components/_grid.scss */
-[class|="column"] {
-  margin-bottom: 1.25em;
+[class|=column] {
+  margin-bottom: 4.80954%;
 }
-/* line 19, ../scss/base/components/_grid.scss */
-[class|="column"].column--omega {
-  float: right;
-  margin-right: 0;
-  *margin-left: -1.25em;
-  display: inline;
+
+/* line 20, ../scss/base/components/_grid.scss */
+.column--omega {
+  float: right !important;
+  margin-right: 0 !important;
+  display: inline !important;
 }
-/* line 22, ../scss/base/components/_grid.scss */
-.lt-ie9 [class|="column"].column--omega {
+/* line 25, ../scss/base/components/_grid.scss */
+.lt-ie9 .column--omega {
   float: left !important;
 }
 
 /*==========  Columns  ==========*/
-/* line 31, ../scss/base/components/_grid.scss */
+/* line 46, ../scss/base/components/_grid.scss */
 .column-1 {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-1 {
+    width: 3.92459%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/* line 46, ../scss/base/components/_grid.scss */
+.column-2 {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-2 {
+    width: 12.65871%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/* line 46, ../scss/base/components/_grid.scss */
+.column-3, .media__alpha {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-3, .media__alpha {
+    width: 21.39284%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/* line 46, ../scss/base/components/_grid.scss */
+.column-4 {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-4 {
+    width: 30.12697%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/* line 46, ../scss/base/components/_grid.scss */
+.column-5 {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-5 {
+    width: 38.8611%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/* line 46, ../scss/base/components/_grid.scss */
+.column-6 {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-6 {
+    width: 47.59523%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/* line 46, ../scss/base/components/_grid.scss */
+.column-7 {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-7 {
+    width: 56.32936%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/* line 46, ../scss/base/components/_grid.scss */
+.column-8 {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-8 {
+    width: 65.06349%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/* line 46, ../scss/base/components/_grid.scss */
+.column-9, .media__beta {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-9, .media__beta {
+    width: 73.79761%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/* line 46, ../scss/base/components/_grid.scss */
+.column-10 {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-10 {
+    width: 82.53174%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/* line 46, ../scss/base/components/_grid.scss */
+.column-11 {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-11 {
+    width: 91.26587%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/* line 46, ../scss/base/components/_grid.scss */
+.column-12 {
+  width: 100%;
+  float: left;
+  margin-right: 4.80954%;
+  display: inline;
+}
+@media (min-width: 650px) {
+  /* line 46, ../scss/base/components/_grid.scss */
+  .column-12 {
+    width: 100%;
+    float: left;
+    margin-right: 4.80954%;
+    display: inline;
+  }
+}
+
+/*==========  Form grid  ==========*/
+/* line 55, ../scss/base/components/_grid.scss */
+.form__row > [class|=column] {
+  margin-bottom: 1.66778%;
+}
+
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-1 {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-1 {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-1 {
     width: 6.80454%;
     float: left;
     margin-right: 1.66778%;
@@ -681,16 +891,16 @@ textarea {
   }
 }
 
-/* line 31, ../scss/base/components/_grid.scss */
-.column-2 {
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-2 {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-2 {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-2 {
     width: 15.27685%;
     float: left;
     margin-right: 1.66778%;
@@ -698,16 +908,16 @@ textarea {
   }
 }
 
-/* line 31, ../scss/base/components/_grid.scss */
-.column-3, .media__alpha {
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-3, .form .media__alpha {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-3, .media__alpha {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-3, .form .media__alpha {
     width: 23.74917%;
     float: left;
     margin-right: 1.66778%;
@@ -715,16 +925,16 @@ textarea {
   }
 }
 
-/* line 31, ../scss/base/components/_grid.scss */
-.column-4 {
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-4 {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-4 {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-4 {
     width: 32.22148%;
     float: left;
     margin-right: 1.66778%;
@@ -732,16 +942,16 @@ textarea {
   }
 }
 
-/* line 31, ../scss/base/components/_grid.scss */
-.column-5 {
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-5 {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-5 {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-5 {
     width: 40.6938%;
     float: left;
     margin-right: 1.66778%;
@@ -749,16 +959,16 @@ textarea {
   }
 }
 
-/* line 31, ../scss/base/components/_grid.scss */
-.column-6 {
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-6 {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-6 {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-6 {
     width: 49.16611%;
     float: left;
     margin-right: 1.66778%;
@@ -766,16 +976,16 @@ textarea {
   }
 }
 
-/* line 31, ../scss/base/components/_grid.scss */
-.column-7 {
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-7 {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-7 {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-7 {
     width: 57.63843%;
     float: left;
     margin-right: 1.66778%;
@@ -783,16 +993,16 @@ textarea {
   }
 }
 
-/* line 31, ../scss/base/components/_grid.scss */
-.column-8 {
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-8 {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-8 {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-8 {
     width: 66.11074%;
     float: left;
     margin-right: 1.66778%;
@@ -800,16 +1010,16 @@ textarea {
   }
 }
 
-/* line 31, ../scss/base/components/_grid.scss */
-.column-9, .media__beta {
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-9, .form .media__beta {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-9, .media__beta {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-9, .form .media__beta {
     width: 74.58306%;
     float: left;
     margin-right: 1.66778%;
@@ -817,16 +1027,16 @@ textarea {
   }
 }
 
-/* line 31, ../scss/base/components/_grid.scss */
-.column-10 {
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-10 {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-10 {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-10 {
     width: 83.05537%;
     float: left;
     margin-right: 1.66778%;
@@ -834,16 +1044,16 @@ textarea {
   }
 }
 
-/* line 31, ../scss/base/components/_grid.scss */
-.column-11 {
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-11 {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-11 {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-11 {
     width: 91.52769%;
     float: left;
     margin-right: 1.66778%;
@@ -851,16 +1061,16 @@ textarea {
   }
 }
 
-/* line 31, ../scss/base/components/_grid.scss */
-.column-12 {
+/* line 60, ../scss/base/components/_grid.scss */
+.form .column-12 {
   width: 100%;
   float: left;
   margin-right: 1.66778%;
   display: inline;
 }
 @media (min-width: 650px) {
-  /* line 31, ../scss/base/components/_grid.scss */
-  .column-12 {
+  /* line 60, ../scss/base/components/_grid.scss */
+  .form .column-12 {
     width: 100%;
     float: left;
     margin-right: 1.66778%;
@@ -993,6 +1203,8 @@ h1, .h1 {
   h1, .h1 {
     font-size: 35px;
     font-size: 2.1875rem;
+    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
   }
 }
 @media (min-width: 900px) {
@@ -1000,10 +1212,12 @@ h1, .h1 {
   h1, .h1 {
     font-size: 40px;
     font-size: 2.5rem;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
   }
 }
 
-/* line 33, ../scss/base/components/_typography.scss */
+/* line 35, ../scss/base/components/_typography.scss */
 h2, .h2 {
   font-size: 22px;
   font-size: 1.375rem;
@@ -1011,14 +1225,14 @@ h2, .h2 {
   margin-bottom: 0.625rem;
 }
 @media (min-width: 900px) {
-  /* line 33, ../scss/base/components/_typography.scss */
+  /* line 35, ../scss/base/components/_typography.scss */
   h2, .h2 {
     font-size: 26px;
     font-size: 1.625rem;
   }
 }
 
-/* line 42, ../scss/base/components/_typography.scss */
+/* line 44, ../scss/base/components/_typography.scss */
 h3, .h3 {
   font-size: 22px;
   font-size: 1.375rem;
@@ -1026,7 +1240,7 @@ h3, .h3 {
   margin-bottom: 0.625rem;
 }
 
-/* line 47, ../scss/base/components/_typography.scss */
+/* line 49, ../scss/base/components/_typography.scss */
 h4, .h4 {
   font-size: 18px;
   font-size: 1.125rem;
@@ -1034,7 +1248,7 @@ h4, .h4 {
   margin-bottom: 0.5rem;
 }
 
-/* line 52, ../scss/base/components/_typography.scss */
+/* line 54, ../scss/base/components/_typography.scss */
 h5, .h5 {
   font-size: 16px;
   font-size: 1rem;
@@ -1042,7 +1256,7 @@ h5, .h5 {
   margin-bottom: 0.5rem;
 }
 
-/* line 57, ../scss/base/components/_typography.scss */
+/* line 59, ../scss/base/components/_typography.scss */
 h6, .h6 {
   font-size: 14px;
   font-size: 0.875rem;
@@ -2126,7 +2340,7 @@ select::-ms-expand {
 @media (min-width: 650px) {
   /* line 125, ../scss/base/components/form/_general.scss */
   .form__actions {
-    margin-left: 42.36157%;
+    margin-left: 43.67064%;
   }
 }
 

@@ -235,12 +235,14 @@ var modules = {
 
     fastClick: {
         init: function(){
-            yepnope.injectJs(
-                basosJsPath + 'plugins/fastclick/fastclick.min.js' + settings.version,
-                function(){
-                    new FastClick(document.body);
-                }
-            );
+            if (settings.$html.hasClass('touch')) {
+                yepnope.injectJs(
+                    basosJsPath + 'plugins/fastclick/fastclick.min.js' + settings.version,
+                    function(){
+                        new FastClick(document.body);
+                    }
+                );
+            }
         }
     },
 
@@ -254,12 +256,14 @@ var modules = {
 
     fitVids: {
         init: function(){
-            yepnope.injectJs(
-                basosJsPath + 'plugins/jquery.fitvids/jquery.fitvids.min.js' + settings.version,
-                function(){
-                    settings.fitVids.$el.fitVids();
-                }
-            );
+            if (settings.fitVids.$el.length > 0) {
+                yepnope.injectJs(
+                    basosJsPath + 'plugins/jquery.fitvids/jquery.fitvids.min.js' + settings.version,
+                    function(){
+                        settings.fitVids.$el.fitVids();
+                    }
+                );
+            }
         }
     },
 

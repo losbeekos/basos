@@ -11,32 +11,54 @@
     position: relative;
 }
 
-[class|="column"] {
+[class|=column] {
     @extend .clearfix;
 
-    margin-bottom: $gutter-width;
+    margin-bottom: gutter($total-columns);
+}
 
-    &.column--omega {
-        @include omega;
+.column--omega {
+    float: right !important;
+    margin-right: 0 !important;
+    display: inline !important;
 
-        .lt-ie9 & {
-            float: left !important;
-        }
+    .lt-ie9 & {
+        float: left !important;
     }
 }
+
 
 /*==========  Columns  ==========*/
 
-@for $i from 1 through $total-columns {
-    .column-#{$i} {
-        @include span-columns($total-columns, $total-columns);
+@mixin column($i) {
+    @include span-columns($total-columns, $total-columns);
 
-        @include breakpoint(beta-and-up){
-            @include span-columns($i, $total-columns);
-        }
+    @include breakpoint(beta-and-up){
+        @include span-columns($i, $total-columns);
+    }
 
-        @include breakpoint(gamma-and-up){
-            // Nothing to see here..
-        }
+    @include breakpoint(gamma-and-up){
+        // Nothing to see here..
     }
 }
+
+@for $i from 1 through $total-columns {
+    .column-#{$i} {
+        @include column($i)
+    }
+}
+
+
+/*==========  Form grid  ==========*/
+
+@include with-grid-settings($total-columns, $column-width, $gutter-width-form) {
+    .form__row > [class|=column] {
+        margin-bottom: gutter($total-columns);
+    }
+
+    @for $i from 1 through $total-columns {
+        .form .column-#{$i} {
+            @include column($i)
+        }
+    }
+};

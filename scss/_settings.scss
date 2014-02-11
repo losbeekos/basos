@@ -36,10 +36,11 @@ $container-gamma-padding : $ten*4;
 
 /*==========  Susy grid  ==========*/
 
-$total-columns : 12;
-$column-width  : 5.1em;   // 12 * 5.1 = 1200px
-$gutter-width  : $ten*2;
-$grid-padding  : 0;
+$total-columns     : 12;
+$column-width      : 5.1em;   // 12 * 5.1 = 1200px
+$gutter-width      : $ten*10;
+$gutter-width-form : $ten*2;
+$grid-padding      : 0;
 
 
 /*==========  Buttons  ==========*/
