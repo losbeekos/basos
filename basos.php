@@ -1198,6 +1198,24 @@
 
                 <br /><br />
 
+                <section id="jumpto">
+                    <h1>Spinners</h1>
+                    <p>Note: You can download different icons on <a href="http://www.fontello.com">fontello.com</a>, <a href="http://icomoon.io/app/#/select">icomoon.io</a> or somewhere else.</p>
+                    <ul class="btn-group btn-group--block">
+                        <li>
+                            <div class="spinner spinner--alpha"></div>
+                        </li>
+                        <li>
+                            <div class="spinner spinner--beta"></div>
+                        </li>
+                        <li>
+                            <div class="spinner spinner--gamma"></div>
+                        </li>
+                    </ul>
+                </section>
+
+                <br /><br />
+
             </main>
 
             <footer class="footer">

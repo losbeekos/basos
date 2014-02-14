@@ -20,6 +20,7 @@
 /*==========  Breadcrumbs  ==========*/
 /*==========  Pricing tables  ==========*/
 /*==========  Progress bar  ==========*/
+/*==========  Spinners  ==========*/
 /*============================
 =            Base            =
 ============================*/
@@ -1089,7 +1090,7 @@ textarea {
 }
 
 /* line 14, ../scss/base/components/_fonts.scss */
-.form__select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form__input--error.form__input:after, .form__input--success.form__input:after, .notification:before, .notification__close {
+.spinner:after, .form__select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form__input--error.form__input:after, .form__input--success.form__input:after, .notification:before, .notification__close {
   font-family: "fontello-webfont", arial, verdana;
   font-weight: normal;
 }
@@ -1764,91 +1765,91 @@ progress[value]::-webkit-progress-bar {
 }
 
 /*==========  Value  ==========*/
-@-webkit-keyframes animate-stripes {
-  /* line 29, ../scss/base/components/_progress.scss */
-  100% {
-    background-position: 100px 0;
-  }
-}
-
-@-moz-keyframes animate-stripes {
+@-webkit-keyframes progress-bar {
   /* line 30, ../scss/base/components/_progress.scss */
   100% {
     background-position: 100px 0;
   }
 }
 
-@-o-keyframes animate-stripes {
-  /* line 31, ../scss/base/components/_progress.scss */
+@-moz-keyframes progress-bar {
+  /* line 30, ../scss/base/components/_progress.scss */
   100% {
     background-position: 100px 0;
   }
 }
 
-@keyframes animate-stripes {
-  /* line 32, ../scss/base/components/_progress.scss */
+@-o-keyframes progress-bar {
+  /* line 30, ../scss/base/components/_progress.scss */
   100% {
     background-position: 100px 0;
   }
 }
 
-/* line 58, ../scss/base/components/_progress.scss */
+@keyframes progress-bar {
+  /* line 30, ../scss/base/components/_progress.scss */
+  100% {
+    background-position: 100px 0;
+  }
+}
+
+/* line 55, ../scss/base/components/_progress.scss */
 progress[value]::-webkit-progress-value {
   background-size: 25px 20px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  -webkit-animation: animate-stripes 1s linear infinite;
-  -moz-animation: animate-stripes 1s linear infinite;
-  -o-animation: animate-stripes 1s linear infinite;
-  animation: animate-stripes 1s linear infinite;
   height: 20px;
   height: 1.25rem;
   -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   transition: width 0.2s;
+  -webkit-animation: progress-bar 1s linear infinite;
+  -moz-animation: progress-bar 1s linear infinite;
+  -o-animation: progress-bar 1s linear infinite;
+  animation: progress-bar 1s linear infinite;
   background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-color: #2690b0;
 }
-/* line 59, ../scss/base/components/_progress.scss */
+/* line 56, ../scss/base/components/_progress.scss */
 progress[value]::-moz-progress-bar {
   background-size: 25px 20px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  -webkit-animation: animate-stripes 1s linear infinite;
-  -moz-animation: animate-stripes 1s linear infinite;
-  -o-animation: animate-stripes 1s linear infinite;
-  animation: animate-stripes 1s linear infinite;
   height: 20px;
   height: 1.25rem;
   -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   transition: width 0.2s;
+  -webkit-animation: progress-bar 1s linear infinite;
+  -moz-animation: progress-bar 1s linear infinite;
+  -o-animation: progress-bar 1s linear infinite;
+  animation: progress-bar 1s linear infinite;
   background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-color: #2690b0;
 }
-/* line 60, ../scss/base/components/_progress.scss */
+/* line 57, ../scss/base/components/_progress.scss */
 progress[value]::-ms-fill {
   background-size: 25px 20px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  -webkit-animation: animate-stripes 1s linear infinite;
-  -moz-animation: animate-stripes 1s linear infinite;
-  -o-animation: animate-stripes 1s linear infinite;
-  animation: animate-stripes 1s linear infinite;
   height: 20px;
   height: 1.25rem;
   -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   transition: width 0.2s;
+  -webkit-animation: progress-bar 1s linear infinite;
+  -moz-animation: progress-bar 1s linear infinite;
+  -o-animation: progress-bar 1s linear infinite;
+  animation: progress-bar 1s linear infinite;
   background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
@@ -1856,21 +1857,21 @@ progress[value]::-ms-fill {
   background-color: #2690b0;
 }
 
-/* line 63, ../scss/base/components/_progress.scss */
+/* line 60, ../scss/base/components/_progress.scss */
 .progress-bar__value {
   background-size: 25px 20px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  -webkit-animation: animate-stripes 1s linear infinite;
-  -moz-animation: animate-stripes 1s linear infinite;
-  -o-animation: animate-stripes 1s linear infinite;
-  animation: animate-stripes 1s linear infinite;
   height: 20px;
   height: 1.25rem;
   -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   transition: width 0.2s;
+  -webkit-animation: progress-bar 1s linear infinite;
+  -moz-animation: progress-bar 1s linear infinite;
+  -o-animation: progress-bar 1s linear infinite;
+  animation: progress-bar 1s linear infinite;
   background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
@@ -1879,83 +1880,83 @@ progress[value]::-ms-fill {
 }
 
 /*==========  Inderterminate progress  ==========*/
-/* line 72, ../scss/base/components/_progress.scss */
+/* line 69, ../scss/base/components/_progress.scss */
 progress:not([value]) {
   background-size: 25px 20px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  -webkit-animation: animate-stripes 1s linear infinite;
-  -moz-animation: animate-stripes 1s linear infinite;
-  -o-animation: animate-stripes 1s linear infinite;
-  animation: animate-stripes 1s linear infinite;
   height: 20px;
   height: 1.25rem;
   -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   transition: width 0.2s;
+  -webkit-animation: progress-bar 1s linear infinite;
+  -moz-animation: progress-bar 1s linear infinite;
+  -o-animation: progress-bar 1s linear infinite;
+  animation: progress-bar 1s linear infinite;
   background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 }
-/* line 75, ../scss/base/components/_progress.scss */
+/* line 72, ../scss/base/components/_progress.scss */
 progress:not([value])::-webkit-progress-bar {
   background-size: 25px 20px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  -webkit-animation: animate-stripes 1s linear infinite;
-  -moz-animation: animate-stripes 1s linear infinite;
-  -o-animation: animate-stripes 1s linear infinite;
-  animation: animate-stripes 1s linear infinite;
   height: 20px;
   height: 1.25rem;
   -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   transition: width 0.2s;
+  -webkit-animation: progress-bar 1s linear infinite;
+  -moz-animation: progress-bar 1s linear infinite;
+  -o-animation: progress-bar 1s linear infinite;
+  animation: progress-bar 1s linear infinite;
   background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-color: #f1f1f1;
 }
-/* line 76, ../scss/base/components/_progress.scss */
+/* line 73, ../scss/base/components/_progress.scss */
 progress:not([value])::-moz-progress-bar {
   background-size: 25px 20px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  -webkit-animation: animate-stripes 1s linear infinite;
-  -moz-animation: animate-stripes 1s linear infinite;
-  -o-animation: animate-stripes 1s linear infinite;
-  animation: animate-stripes 1s linear infinite;
   height: 20px;
   height: 1.25rem;
   -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   transition: width 0.2s;
+  -webkit-animation: progress-bar 1s linear infinite;
+  -moz-animation: progress-bar 1s linear infinite;
+  -o-animation: progress-bar 1s linear infinite;
+  animation: progress-bar 1s linear infinite;
   background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-color: #f1f1f1;
 }
-/* line 77, ../scss/base/components/_progress.scss */
+/* line 74, ../scss/base/components/_progress.scss */
 progress:not([value])::-ms-fill {
   background-size: 25px 20px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  -webkit-animation: animate-stripes 1s linear infinite;
-  -moz-animation: animate-stripes 1s linear infinite;
-  -o-animation: animate-stripes 1s linear infinite;
-  animation: animate-stripes 1s linear infinite;
   height: 20px;
   height: 1.25rem;
   -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   transition: width 0.2s;
+  -webkit-animation: progress-bar 1s linear infinite;
+  -moz-animation: progress-bar 1s linear infinite;
+  -o-animation: progress-bar 1s linear infinite;
+  animation: progress-bar 1s linear infinite;
   background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
@@ -1964,9 +1965,86 @@ progress:not([value])::-ms-fill {
   animation-name: none;
 }
 
-/* line 80, ../scss/base/components/_progress.scss */
+/* line 77, ../scss/base/components/_progress.scss */
 .progress-bar__value:not([style]) {
   background-color: #f1f1f1;
+}
+
+/*================================
+=            Spinners            =
+================================*/
+@-webkit-keyframes spinner {
+  /* line 6, ../scss/base/components/_spinners.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-moz-keyframes spinner {
+  /* line 6, ../scss/base/components/_spinners.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@-o-keyframes spinner {
+  /* line 6, ../scss/base/components/_spinners.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinner {
+  /* line 6, ../scss/base/components/_spinners.scss */
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+
+/* line 11, ../scss/base/components/_spinners.scss */
+.spinner {
+  display: inline-block;
+  -webkit-animation: spinner 1s infinite linear;
+  -moz-animation: spinner 1s infinite linear;
+  -o-animation: spinner 1s infinite linear;
+  animation: spinner 1s infinite linear;
+}
+/* line 16, ../scss/base/components/_spinners.scss */
+.spinner:after {
+  content: "";
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+
+/* line 25, ../scss/base/components/_spinners.scss */
+.spinner--alpha:after {
+  content: "";
+}
+
+/* line 26, ../scss/base/components/_spinners.scss */
+.spinner--beta:after {
+  content: "";
+}
+
+/* line 27, ../scss/base/components/_spinners.scss */
+.spinner--gamma:after {
+  content: "";
 }
 
 /*==========  Buttons  ==========*/
@@ -3147,55 +3225,127 @@ input[type=radio] + label:after {
 /*==========================================
 =            Slip (top, bottom)            =
 ==========================================*/
-@-webkit-keyframes slipTop {
+@-webkit-keyframes slip-top {
   /* line 6, ../scss/base/components/modals/effects/_slip.scss */
   50% {
     -webkit-transform: rotateX(10deg);
+    -moz-transform: rotateX(10deg);
+    -ms-transform: rotateX(10deg);
+    -o-transform: rotateX(10deg);
+    transform: rotateX(10deg);
     -webkit-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 }
 
-@-moz-keyframes slipTop {
+@-moz-keyframes slip-top {
+  /* line 6, ../scss/base/components/modals/effects/_slip.scss */
+  50% {
+    -webkit-transform: rotateX(10deg);
+    -moz-transform: rotateX(10deg);
+    -ms-transform: rotateX(10deg);
+    -o-transform: rotateX(10deg);
+    transform: rotateX(10deg);
+    -webkit-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@-o-keyframes slip-top {
+  /* line 6, ../scss/base/components/modals/effects/_slip.scss */
+  50% {
+    -webkit-transform: rotateX(10deg);
+    -moz-transform: rotateX(10deg);
+    -ms-transform: rotateX(10deg);
+    -o-transform: rotateX(10deg);
+    transform: rotateX(10deg);
+    -webkit-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes slip-top {
+  /* line 6, ../scss/base/components/modals/effects/_slip.scss */
+  50% {
+    -webkit-transform: rotateX(10deg);
+    -moz-transform: rotateX(10deg);
+    -ms-transform: rotateX(10deg);
+    -o-transform: rotateX(10deg);
+    transform: rotateX(10deg);
+    -webkit-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@-webkit-keyframes slip-bottom {
   /* line 13, ../scss/base/components/modals/effects/_slip.scss */
   50% {
-    -moz-transform: rotateX(10deg);
+    -webkit-transform: rotateX(-10deg);
+    -moz-transform: rotateX(-10deg);
+    -ms-transform: rotateX(-10deg);
+    -o-transform: rotateX(-10deg);
+    transform: rotateX(-10deg);
+    -webkit-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
     -moz-animation-timing-function: ease-out;
-  }
-}
-
-@keyframes slipTop {
-  /* line 20, ../scss/base/components/modals/effects/_slip.scss */
-  50% {
-    transform: rotateX(10deg);
     animation-timing-function: ease-out;
   }
 }
 
-@-webkit-keyframes slipBottom {
-  /* line 27, ../scss/base/components/modals/effects/_slip.scss */
+@-moz-keyframes slip-bottom {
+  /* line 13, ../scss/base/components/modals/effects/_slip.scss */
   50% {
     -webkit-transform: rotateX(-10deg);
-    -webkit-animation-timing-function: ease-out;
-  }
-}
-
-@-moz-keyframes slipBottom {
-  /* line 34, ../scss/base/components/modals/effects/_slip.scss */
-  50% {
     -moz-transform: rotateX(-10deg);
-    -moz-animation-timing-function: ease-out;
-  }
-}
-
-@keyframes slipBottom {
-  /* line 41, ../scss/base/components/modals/effects/_slip.scss */
-  50% {
+    -ms-transform: rotateX(-10deg);
+    -o-transform: rotateX(-10deg);
     transform: rotateX(-10deg);
+    -webkit-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
 
-/* line 49, ../scss/base/components/modals/effects/_slip.scss */
+@-o-keyframes slip-bottom {
+  /* line 13, ../scss/base/components/modals/effects/_slip.scss */
+  50% {
+    -webkit-transform: rotateX(-10deg);
+    -moz-transform: rotateX(-10deg);
+    -ms-transform: rotateX(-10deg);
+    -o-transform: rotateX(-10deg);
+    transform: rotateX(-10deg);
+    -webkit-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+@keyframes slip-bottom {
+  /* line 13, ../scss/base/components/modals/effects/_slip.scss */
+  50% {
+    -webkit-transform: rotateX(-10deg);
+    -moz-transform: rotateX(-10deg);
+    -ms-transform: rotateX(-10deg);
+    -o-transform: rotateX(-10deg);
+    transform: rotateX(-10deg);
+    -webkit-animation-timing-function: ease-out;
+    -o-animation-timing-function: ease-out;
+    -moz-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
+  }
+}
+
+/* line 21, ../scss/base/components/modals/effects/_slip.scss */
 html[data-modal-effect|=slip],
 [data-modal-effect|=slip] body,
 [data-modal-effect|=slip] .container {
@@ -3203,7 +3353,7 @@ html[data-modal-effect|=slip],
   overflow: hidden;
 }
 
-/* line 54, ../scss/base/components/modals/effects/_slip.scss */
+/* line 26, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect|=slip] body {
   -webkit-perspective: 600;
   -moz-perspective: 600;
@@ -3212,7 +3362,7 @@ html[data-modal-effect|=slip],
   perspective: 600;
 }
 
-/* line 60, ../scss/base/components/modals/effects/_slip.scss */
+/* line 32, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect|=slip] .container,
 [data-modal-effect|=slip] .modal__overlay {
   -webkit-transform-style: preserve-3d;
@@ -3222,7 +3372,7 @@ html[data-modal-effect|=slip],
   transform-style: preserve-3d;
 }
 
-/* line 67, ../scss/base/components/modals/effects/_slip.scss */
+/* line 39, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect=slip-top] .container,
 [data-modal-effect=slip-top] .modal__overlay {
   -webkit-transform-origin: 50% 100%;
@@ -3230,12 +3380,13 @@ html[data-modal-effect|=slip],
   -ms-transform-origin: 50% 100%;
   -o-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
-  -webkit-animation: slipTop 0.5s forwards ease-in;
-  -moz-animation: slipTop 0.5s forwards ease-in;
-  animation: slipTop 0.5s forwards ease-in;
+  -webkit-animation: slip-top 0.5s forwards ease-in;
+  -moz-animation: slip-top 0.5s forwards ease-in;
+  -o-animation: slip-top 0.5s forwards ease-in;
+  animation: slip-top 0.5s forwards ease-in;
 }
 
-/* line 75, ../scss/base/components/modals/effects/_slip.scss */
+/* line 47, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect=slip-bottom] .container,
 [data-modal-effect=slip-bottom] .modal__overlay {
   -webkit-transform-origin: 50% 0;
@@ -3243,12 +3394,13 @@ html[data-modal-effect|=slip],
   -ms-transform-origin: 50% 0;
   -o-transform-origin: 50% 0;
   transform-origin: 50% 0;
-  -webkit-animation: slipBottom 0.5s forwards ease-in;
-  -moz-animation: slipBottom 0.5s forwards ease-in;
-  animation: slipBottom 0.5s forwards ease-in;
+  -webkit-animation: slip-bottom 0.5s forwards ease-in;
+  -moz-animation: slip-bottom 0.5s forwards ease-in;
+  -o-animation: slip-bottom 0.5s forwards ease-in;
+  animation: slip-bottom 0.5s forwards ease-in;
 }
 
-/* line 83, ../scss/base/components/modals/effects/_slip.scss */
+/* line 55, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect|=slip] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -3258,12 +3410,12 @@ html[data-modal-effect|=slip],
   -o-transition: all 0.5s 0.1s;
   transition: all 0.5s 0.1s;
 }
-/* line 89, ../scss/base/components/modals/effects/_slip.scss */
+/* line 61, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect|=slip].modal-show .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
   opacity: 1;
 }
-/* line 96, ../scss/base/components/modals/effects/_slip.scss */
+/* line 68, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-top] .modal__content {
   -webkit-transform: translateY(-300%);
   -moz-transform: translateY(-300%);
@@ -3271,7 +3423,7 @@ html[data-modal-effect|=slip],
   -o-transform: translateY(-300%);
   transform: translateY(-300%);
 }
-/* line 101, ../scss/base/components/modals/effects/_slip.scss */
+/* line 73, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-top].modal-show .modal__content {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
@@ -3279,7 +3431,7 @@ html[data-modal-effect|=slip],
   -o-transform: translateY(0);
   transform: translateY(0);
 }
-/* line 108, ../scss/base/components/modals/effects/_slip.scss */
+/* line 80, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-bottom] .modal__content {
   -webkit-transform: translateY(300%);
   -moz-transform: translateY(300%);
@@ -3287,7 +3439,7 @@ html[data-modal-effect|=slip],
   -o-transform: translateY(300%);
   transform: translateY(300%);
 }
-/* line 113, ../scss/base/components/modals/effects/_slip.scss */
+/* line 85, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-bottom].modal-show .modal__content {
   -webkit-transform: translateY(0);
   -moz-transform: translateY(0);

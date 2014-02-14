@@ -2,45 +2,17 @@
 =            Slip (top, bottom)            =
 ==========================================*/
 
-@-webkit-keyframes slipTop {
+@include keyframes(slip-top) {
     50% {
-        -webkit-transform: rotateX(10deg);
-        -webkit-animation-timing-function: ease-out;
+        @include transform(rotateX(10deg));
+        @include animation-timing-function(ease-out);
     }
 }
 
-@-moz-keyframes slipTop {
+@include keyframes(slip-bottom) {
     50% {
-        -moz-transform: rotateX(10deg);
-        -moz-animation-timing-function: ease-out;
-    }
-}
-
-@keyframes slipTop {
-    50% {
-        transform: rotateX(10deg);
-        animation-timing-function: ease-out;
-    }
-}
-
-@-webkit-keyframes slipBottom {
-    50% {
-        -webkit-transform: rotateX(-10deg);
-        -webkit-animation-timing-function: ease-out;
-    }
-}
-
-@-moz-keyframes slipBottom {
-    50% {
-        -moz-transform: rotateX(-10deg);
-        -moz-animation-timing-function: ease-out;
-    }
-}
-
-@keyframes slipBottom {
-    50% {
-        transform: rotateX(-10deg);
-        animation-timing-function: ease-out;
+        @include transform(rotateX(-10deg));
+        @include animation-timing-function(ease-out);
     }
 }
 
@@ -66,7 +38,7 @@ html[data-modal-effect|=slip],
     .container,
     .modal__overlay {
         @include transform-origin(50%, 100%);
-        @include animation(slipTop, 0.5s, forwards, ease-in);
+        @include animation(slip-top, 0.5s, forwards, ease-in);
     }
 }
 
@@ -74,7 +46,7 @@ html[data-modal-effect|=slip],
     .container,
     .modal__overlay {
         @include transform-origin(50%, 0);
-        @include animation(slipBottom, 0.5s, forwards, ease-in);
+        @include animation(slip-bottom, 0.5s, forwards, ease-in);
     }
 }
 

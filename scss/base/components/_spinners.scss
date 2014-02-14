@@ -1,0 +1,27 @@
+/*================================
+=            Spinners            =
+================================*/
+
+@include keyframes(spinner) {
+    100% {
+        @include transform(rotate(360deg));
+    }
+}
+
+.spinner {
+    display: inline-block;
+
+    @include animation(spinner, $spinner-animation-speed, infinite, linear);
+
+    &:after {
+        @extend %font-fontello;
+
+        content: $icon-spinner-alpha;
+
+        @include rem(font-size, $spinner-font-size);
+    }
+}
+
+.spinner--alpha:after { content: $icon-spinner-alpha; }
+.spinner--beta:after  { content: $icon-spinner-beta; }
+.spinner--gamma:after { content: $icon-spinner-gamma; }

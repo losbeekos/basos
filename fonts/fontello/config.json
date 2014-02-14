@@ -7,6 +7,18 @@
   "ascent": 850,
   "glyphs": [
     {
+      "uid": "f0c301ac841dafc38d8eb1b933fc73e5",
+      "css": "spin2",
+      "code": 59401,
+      "src": "fontelico"
+    },
+    {
+      "uid": "5d2d07f112b8de19f2c0dbfec3e42c05",
+      "css": "spin5",
+      "code": 59402,
+      "src": "fontelico"
+    },
+    {
       "uid": "12f4ece88e46abd864e40b35e05b11cd",
       "css": "ok",
       "code": 59395,
@@ -59,6 +71,12 @@
       "css": "up-open",
       "code": 59396,
       "src": "fontawesome"
+    },
+    {
+      "uid": "fccd3ea0efb711b849045bee686b1ceb",
+      "css": "spinner1",
+      "code": 59403,
+      "src": "mfglabs"
     }
   ]
 }

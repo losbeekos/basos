@@ -44,7 +44,7 @@
 
 @for $i from 1 through $total-columns {
     .column-#{$i} {
-        @include column($i)
+        @include column($i);
     }
 }
 
@@ -58,7 +58,7 @@
 
     @for $i from 1 through $total-columns {
         .form .column-#{$i} {
-            @include column($i)
+            @include column($i);
         }
     }
 };

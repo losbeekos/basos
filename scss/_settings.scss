@@ -67,6 +67,9 @@ $icon-form-validation-success : $icon-notification-success;
 $icon-form-validation-error   : $icon-notification-error;
 $icon-form-checkbox           : '';
 $icon-form-select             : '';
+$icon-spinner-alpha           : '';
+$icon-spinner-beta            : '';
+$icon-spinner-gamma           : '';
 
 
 /*==========  Tables  ==========*/
@@ -130,3 +133,10 @@ $pricing-table-border-color : darken($btn-bg-color-alpha, 5%);
 
 $progress-bar-bg-color       : $color-alpha;
 $progress-bar-value-bg-color : $color-beta;
+
+
+/*==========  Spinners  ==========*/
+$spinner-animation-speed : 1s;
+$spinner-font-size       : 30px;
+
+
