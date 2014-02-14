@@ -54,9 +54,10 @@
         right: 12px;
         z-index: 1;
         color: #bbbbbb;
+        line-height: 40px; // IE10 REM bug
 
         @include rem(font-size, 14px);
-        @include rem(line-height, 40px);
+        @include rem(height, 40px);
 
         .lt-ie10 &,
         .parsley-error &,

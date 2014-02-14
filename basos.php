@@ -256,7 +256,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="form__row error">
+                            <div class="form__row">
                                 <div class="column-5 form__label">
                                     <label>Telefoonnummer</label>
                                 </div>
@@ -1170,6 +1170,30 @@
                     <a class="btn btn--alpha btn--small" href="#dropdowns" data-jumpto>dropdowns</a>
                     <a class="btn btn--alpha btn--small" href="#modals" data-jumpto>modals</a>
                     <a class="btn btn--alpha btn--small" href="#accordion" data-jumpto>accordion</a> -->
+                </section>
+
+                <br/><br/>
+
+                <section id="jumpto">
+                    <h1>Progress</h1>
+                    <h2>Indeterminate</h2>
+                    <progress>
+                        <div class="progress-bar">
+                            <div class="progress-bar__value"></div>
+                        </div>
+                    </progress>
+                    <div class="progress-bar">
+                        <div class="progress-bar__value"></div>
+                    </div>
+                    <h2>Determinate</h2>
+                    <progress max="100" value="80">
+                        <div class="progress-bar">
+                            <div class="progress-bar__value" style="width: 80%;"></div>
+                        </div>
+                    </progress>
+                    <div class="progress-bar">
+                        <div class="progress-bar__value" style="width: 80%;"></div>
+                    </div>
                 </section>
 
                 <br /><br />

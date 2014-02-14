@@ -38,7 +38,7 @@ $container-gamma-padding : $ten*4;
 
 $total-columns     : 12;
 $column-width      : 5.1em;   // 12 * 5.1 = 1200px
-$gutter-width      : $ten*10;
+$gutter-width      : $ten*4;
 $gutter-width-form : $ten*2;
 $grid-padding      : 0;
 
@@ -125,3 +125,8 @@ $breadcrumbs-current-color : #aaaaaa;
 
 $pricing-table-border-color : darken($btn-bg-color-alpha, 5%);
 
+
+/*==========  Progress bar  ==========*/
+
+$progress-bar-bg-color       : $color-alpha;
+$progress-bar-value-bg-color : $color-beta;

@@ -19,6 +19,7 @@
 /*==========  Accordion  ==========*/
 /*==========  Breadcrumbs  ==========*/
 /*==========  Pricing tables  ==========*/
+/*==========  Progress bar  ==========*/
 /*============================
 =            Base            =
 ============================*/
@@ -649,7 +650,7 @@ textarea {
 
 /* line 14, ../scss/base/components/_grid.scss */
 [class|=column] {
-  margin-bottom: 4.80954%;
+  margin-bottom: 2.81849%;
 }
 
 /* line 20, ../scss/base/components/_grid.scss */
@@ -668,15 +669,15 @@ textarea {
 .column-1 {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
   /* line 46, ../scss/base/components/_grid.scss */
   .column-1 {
-    width: 3.92459%;
+    width: 5.74972%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -685,15 +686,15 @@ textarea {
 .column-2 {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
   /* line 46, ../scss/base/components/_grid.scss */
   .column-2 {
-    width: 12.65871%;
+    width: 14.31793%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -702,15 +703,15 @@ textarea {
 .column-3, .media__alpha {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
   /* line 46, ../scss/base/components/_grid.scss */
   .column-3, .media__alpha {
-    width: 21.39284%;
+    width: 22.88613%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -719,15 +720,15 @@ textarea {
 .column-4 {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
   /* line 46, ../scss/base/components/_grid.scss */
   .column-4 {
-    width: 30.12697%;
+    width: 31.45434%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -736,15 +737,15 @@ textarea {
 .column-5 {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
   /* line 46, ../scss/base/components/_grid.scss */
   .column-5 {
-    width: 38.8611%;
+    width: 40.02255%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -753,15 +754,15 @@ textarea {
 .column-6 {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
   /* line 46, ../scss/base/components/_grid.scss */
   .column-6 {
-    width: 47.59523%;
+    width: 48.59076%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -770,15 +771,15 @@ textarea {
 .column-7 {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
   /* line 46, ../scss/base/components/_grid.scss */
   .column-7 {
-    width: 56.32936%;
+    width: 57.15896%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -787,15 +788,15 @@ textarea {
 .column-8 {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
   /* line 46, ../scss/base/components/_grid.scss */
   .column-8 {
-    width: 65.06349%;
+    width: 65.72717%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -804,15 +805,15 @@ textarea {
 .column-9, .media__beta {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
   /* line 46, ../scss/base/components/_grid.scss */
   .column-9, .media__beta {
-    width: 73.79761%;
+    width: 74.29538%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -821,15 +822,15 @@ textarea {
 .column-10 {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
   /* line 46, ../scss/base/components/_grid.scss */
   .column-10 {
-    width: 82.53174%;
+    width: 82.86359%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -838,15 +839,15 @@ textarea {
 .column-11 {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
   /* line 46, ../scss/base/components/_grid.scss */
   .column-11 {
-    width: 91.26587%;
+    width: 91.43179%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -855,7 +856,7 @@ textarea {
 .column-12 {
   width: 100%;
   float: left;
-  margin-right: 4.80954%;
+  margin-right: 2.81849%;
   display: inline;
 }
 @media (min-width: 650px) {
@@ -863,7 +864,7 @@ textarea {
   .column-12 {
     width: 100%;
     float: left;
-    margin-right: 4.80954%;
+    margin-right: 2.81849%;
     display: inline;
   }
 }
@@ -1736,6 +1737,238 @@ h6, .h6 {
   padding-bottom: 1.25rem;
 }
 
+/*================================
+=            Progress            =
+================================*/
+/*==========  Bar  ==========*/
+/* line 9, ../scss/base/components/_progress.scss */
+progress,
+.progress-bar {
+  background-color: #f1f1f1;
+  position: relative;
+  border: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #2690b0;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 20px;
+  height: 1.25rem;
+}
+
+/* line 22, ../scss/base/components/_progress.scss */
+progress[value]::-webkit-progress-bar {
+  background-color: #f1f1f1;
+}
+
+/*==========  Value  ==========*/
+@-webkit-keyframes animate-stripes {
+  /* line 29, ../scss/base/components/_progress.scss */
+  100% {
+    background-position: 100px 0;
+  }
+}
+
+@-moz-keyframes animate-stripes {
+  /* line 30, ../scss/base/components/_progress.scss */
+  100% {
+    background-position: 100px 0;
+  }
+}
+
+@-o-keyframes animate-stripes {
+  /* line 31, ../scss/base/components/_progress.scss */
+  100% {
+    background-position: 100px 0;
+  }
+}
+
+@keyframes animate-stripes {
+  /* line 32, ../scss/base/components/_progress.scss */
+  100% {
+    background-position: 100px 0;
+  }
+}
+
+/* line 58, ../scss/base/components/_progress.scss */
+progress[value]::-webkit-progress-value {
+  background-size: 25px 20px, 100% 100%, 100% 100%;
+  border-radius: 2px;
+  border: 0;
+  -webkit-animation: animate-stripes 1s linear infinite;
+  -moz-animation: animate-stripes 1s linear infinite;
+  -o-animation: animate-stripes 1s linear infinite;
+  animation: animate-stripes 1s linear infinite;
+  height: 20px;
+  height: 1.25rem;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-color: #2690b0;
+}
+/* line 59, ../scss/base/components/_progress.scss */
+progress[value]::-moz-progress-bar {
+  background-size: 25px 20px, 100% 100%, 100% 100%;
+  border-radius: 2px;
+  border: 0;
+  -webkit-animation: animate-stripes 1s linear infinite;
+  -moz-animation: animate-stripes 1s linear infinite;
+  -o-animation: animate-stripes 1s linear infinite;
+  animation: animate-stripes 1s linear infinite;
+  height: 20px;
+  height: 1.25rem;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-color: #2690b0;
+}
+/* line 60, ../scss/base/components/_progress.scss */
+progress[value]::-ms-fill {
+  background-size: 25px 20px, 100% 100%, 100% 100%;
+  border-radius: 2px;
+  border: 0;
+  -webkit-animation: animate-stripes 1s linear infinite;
+  -moz-animation: animate-stripes 1s linear infinite;
+  -o-animation: animate-stripes 1s linear infinite;
+  animation: animate-stripes 1s linear infinite;
+  height: 20px;
+  height: 1.25rem;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-color: #2690b0;
+}
+
+/* line 63, ../scss/base/components/_progress.scss */
+.progress-bar__value {
+  background-size: 25px 20px, 100% 100%, 100% 100%;
+  border-radius: 2px;
+  border: 0;
+  -webkit-animation: animate-stripes 1s linear infinite;
+  -moz-animation: animate-stripes 1s linear infinite;
+  -o-animation: animate-stripes 1s linear infinite;
+  animation: animate-stripes 1s linear infinite;
+  height: 20px;
+  height: 1.25rem;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-color: #2690b0;
+}
+
+/*==========  Inderterminate progress  ==========*/
+/* line 72, ../scss/base/components/_progress.scss */
+progress:not([value]) {
+  background-size: 25px 20px, 100% 100%, 100% 100%;
+  border-radius: 2px;
+  border: 0;
+  -webkit-animation: animate-stripes 1s linear infinite;
+  -moz-animation: animate-stripes 1s linear infinite;
+  -o-animation: animate-stripes 1s linear infinite;
+  animation: animate-stripes 1s linear infinite;
+  height: 20px;
+  height: 1.25rem;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+}
+/* line 75, ../scss/base/components/_progress.scss */
+progress:not([value])::-webkit-progress-bar {
+  background-size: 25px 20px, 100% 100%, 100% 100%;
+  border-radius: 2px;
+  border: 0;
+  -webkit-animation: animate-stripes 1s linear infinite;
+  -moz-animation: animate-stripes 1s linear infinite;
+  -o-animation: animate-stripes 1s linear infinite;
+  animation: animate-stripes 1s linear infinite;
+  height: 20px;
+  height: 1.25rem;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-color: #f1f1f1;
+}
+/* line 76, ../scss/base/components/_progress.scss */
+progress:not([value])::-moz-progress-bar {
+  background-size: 25px 20px, 100% 100%, 100% 100%;
+  border-radius: 2px;
+  border: 0;
+  -webkit-animation: animate-stripes 1s linear infinite;
+  -moz-animation: animate-stripes 1s linear infinite;
+  -o-animation: animate-stripes 1s linear infinite;
+  animation: animate-stripes 1s linear infinite;
+  height: 20px;
+  height: 1.25rem;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-color: #f1f1f1;
+}
+/* line 77, ../scss/base/components/_progress.scss */
+progress:not([value])::-ms-fill {
+  background-size: 25px 20px, 100% 100%, 100% 100%;
+  border-radius: 2px;
+  border: 0;
+  -webkit-animation: animate-stripes 1s linear infinite;
+  -moz-animation: animate-stripes 1s linear infinite;
+  -o-animation: animate-stripes 1s linear infinite;
+  animation: animate-stripes 1s linear infinite;
+  height: 20px;
+  height: 1.25rem;
+  -webkit-transition: width 0.2s;
+  -moz-transition: width 0.2s;
+  -o-transition: width 0.2s;
+  transition: width 0.2s;
+  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-color: #f1f1f1;
+  animation-name: none;
+}
+
+/* line 80, ../scss/base/components/_progress.scss */
+.progress-bar__value:not([style]) {
+  background-color: #f1f1f1;
+}
+
 /*==========  Buttons  ==========*/
 /*=================================
 =            Container            =
@@ -2270,35 +2503,36 @@ select::-ms-expand {
   right: 12px;
   z-index: 1;
   color: #bbbbbb;
+  line-height: 40px;
   font-size: 14px;
   font-size: 0.875rem;
-  line-height: 40px;
-  line-height: 2.5rem;
+  height: 40px;
+  height: 2.5rem;
 }
-/* line 63, ../scss/base/components/form/_general.scss */
+/* line 64, ../scss/base/components/form/_general.scss */
 .lt-ie10 .form__select:after, .parsley-error .form__select:after, .parsley-success .form__select:after {
   display: none;
 }
 
-/* line 73, ../scss/base/components/form/_general.scss */
+/* line 74, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox]:checked + label:before {
   background: #2690b0;
 }
-/* line 77, ../scss/base/components/form/_general.scss */
+/* line 78, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox]:checked + label:after {
   left: 30px;
 }
-/* line 83, ../scss/base/components/form/_general.scss */
+/* line 84, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox] + label {
   padding: 0;
   color: rgba(0, 0, 0, 0);
 }
-/* line 87, ../scss/base/components/form/_general.scss */
+/* line 88, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox] + label:before {
   border-radius: 20px;
   width: 46px;
 }
-/* line 92, ../scss/base/components/form/_general.scss */
+/* line 93, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox] + label:after {
   background: white;
   content: '';
@@ -2314,37 +2548,37 @@ select::-ms-expand {
 }
 
 @media (min-width: 650px) {
-  /* line 109, ../scss/base/components/form/_general.scss */
+  /* line 110, ../scss/base/components/form/_general.scss */
   .form__input-list {
     margin-top: 8px;
     margin-top: 0.5rem;
   }
 }
-/* line 115, ../scss/base/components/form/_general.scss */
+/* line 116, ../scss/base/components/form/_general.scss */
 .form__input-list li + li {
   margin-top: 5px;
   margin-top: 0.3125rem;
 }
 
-/* line 121, ../scss/base/components/form/_general.scss */
+/* line 122, ../scss/base/components/form/_general.scss */
 .form__data {
   line-height: 40px;
   line-height: 2.5rem;
 }
 
-/* line 125, ../scss/base/components/form/_general.scss */
+/* line 126, ../scss/base/components/form/_general.scss */
 .form__actions {
   margin-top: 20px;
   margin-top: 1.25rem;
 }
 @media (min-width: 650px) {
-  /* line 125, ../scss/base/components/form/_general.scss */
+  /* line 126, ../scss/base/components/form/_general.scss */
   .form__actions {
-    margin-left: 43.67064%;
+    margin-left: 42.84104%;
   }
 }
 
-/* line 133, ../scss/base/components/form/_general.scss */
+/* line 134, ../scss/base/components/form/_general.scss */
 .form__required-field {
   font-size: 14px;
   font-size: 0.875rem;
