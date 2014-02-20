@@ -21,29 +21,12 @@
     margin-bottom: 0;
 }
 
-.form__input {
-    &:after {
-        position: absolute;
-        right: 10px;
-        top: 9px;
-    }
-}
-
 .form__select {
     @include user-select(none);
 
     background: $white;
-    overflow: hidden;
     border: 1px solid #cbcbcb;
     border-radius: $base-border-radius;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
-
-    @include single-transition(box-shadow, $base-transition-speed);
-
-    &:focus,
-    &:hover {
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
 
     &:after {
         @extend %font-fontello;

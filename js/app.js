@@ -13,7 +13,7 @@ var settings = {
     $html: $('html'),
     $body: $('body'),
     $htmlAndBody: $('html, body'),
-    $container: $('#container'),
+    $background: $('#background'),
     $main: $('#main'),
 
 
@@ -350,7 +350,7 @@ var modules = {
 
             $targetModal.addClass('modal-show');
 
-            settings.$container.scrollTop(scrollTopPosition);
+            settings.$background.scrollTop(scrollTopPosition);
         },
 
         closeModal: function () {

@@ -1107,13 +1107,23 @@ textarea {
   box-sizing: border-box;
 }
 
-/* line 12, ../scss/base/components/_layout.scss */
+/* line 11, ../scss/base/components/_layout.scss */
+html {
+  background-color: black;
+}
+
+/* line 15, ../scss/base/components/_layout.scss */
+.background {
+  background: white;
+}
+
+/* line 19, ../scss/base/components/_layout.scss */
 body {
   font-family: arial, verdana, sans-serif;
   color: #222222;
 }
 
-/* line 17, ../scss/base/components/_layout.scss */
+/* line 24, ../scss/base/components/_layout.scss */
 a {
   color: #2690b0;
   text-decoration: none;
@@ -1124,11 +1134,11 @@ a {
   -o-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 25, ../scss/base/components/_layout.scss */
+/* line 32, ../scss/base/components/_layout.scss */
 a:hover {
   color: #222222;
 }
-/* line 30, ../scss/base/components/_layout.scss */
+/* line 37, ../scss/base/components/_layout.scss */
 a:after, a:before {
   -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
@@ -1136,22 +1146,22 @@ a:after, a:before {
   transition: all 0.2s;
 }
 
-/* line 35, ../scss/base/components/_layout.scss */
+/* line 42, ../scss/base/components/_layout.scss */
 img {
   max-width: 100%;
 }
 
-/* line 39, ../scss/base/components/_layout.scss */
+/* line 46, ../scss/base/components/_layout.scss */
 address {
   font-style: normal;
 }
 
-/* line 43, ../scss/base/components/_layout.scss */
+/* line 50, ../scss/base/components/_layout.scss */
 p {
   margin-top: 0;
 }
 
-/* line 47, ../scss/base/components/_layout.scss */
+/* line 54, ../scss/base/components/_layout.scss */
 .container {
   max-width: 80em;
   min-width: 20em;
@@ -1159,13 +1169,13 @@ p {
   margin: 0 auto;
 }
 @media (min-width: 650px) and (max-width: 900px) {
-  /* line 47, ../scss/base/components/_layout.scss */
+  /* line 54, ../scss/base/components/_layout.scss */
   .container {
     padding: 0 1.25em;
   }
 }
 @media (min-width: 900px) {
-  /* line 47, ../scss/base/components/_layout.scss */
+  /* line 54, ../scss/base/components/_layout.scss */
   .container {
     padding: 0 2.5em;
   }
@@ -1730,7 +1740,7 @@ h6, .h6 {
   font-size: 0.875rem;
 }
 
-/* line 42, ../scss/base/components/_pricing_tables.scss */
+/* line 43, ../scss/base/components/_pricing_tables.scss */
 .price-table__content--action {
   padding-top: 20px;
   padding-top: 1.25rem;
@@ -2488,37 +2498,41 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-}
-/* line 92, ../scss/base/components/form/_form.scss */
-select[multiple=multiple] {
-  height: auto;
-  border: 1px solid #cbcbcb;
-  border-radius: 2px;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
   -webkit-transition: box-shadow 0.2s;
   -moz-transition: box-shadow 0.2s;
   -o-transition: box-shadow 0.2s;
   transition: box-shadow 0.2s;
 }
-/* line 100, ../scss/base/components/form/_form.scss */
-select[multiple=multiple]:hover {
+/* line 94, ../scss/base/components/form/_form.scss */
+select:focus, select:hover {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+/* line 98, ../scss/base/components/form/_form.scss */
+select[multiple=multiple] {
+  height: auto;
+  border: 1px solid #cbcbcb;
+  border-radius: 2px;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
+}
+/* line 105, ../scss/base/components/form/_form.scss */
+select[multiple=multiple]:focus, select[multiple=multiple]:hover {
   border-color: #cccccc;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 106, ../scss/base/components/form/_form.scss */
+/* line 111, ../scss/base/components/form/_form.scss */
 select option[disabled] {
   color: #94adc4;
   text-shadow: none;
   border: none;
 }
 
-/* line 113, ../scss/base/components/form/_form.scss */
+/* line 118, ../scss/base/components/form/_form.scss */
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #888888;
 }
 
-/* line 118, ../scss/base/components/form/_form.scss */
+/* line 123, ../scss/base/components/form/_form.scss */
 select::-ms-expand {
   display: none;
 }
@@ -2547,33 +2561,16 @@ select::-ms-expand {
   margin-bottom: 0;
 }
 
-/* line 25, ../scss/base/components/form/_general.scss */
-.form__input:after {
-  position: absolute;
-  right: 10px;
-  top: 9px;
-}
-
-/* line 32, ../scss/base/components/form/_general.scss */
+/* line 24, ../scss/base/components/form/_general.scss */
 .form__select {
   -webkit-user-select: none;
   -moz-user-select: none;
   user-select: none;
   background: white;
-  overflow: hidden;
   border: 1px solid #cbcbcb;
   border-radius: 2px;
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
-  -webkit-transition: box-shadow 0.2s;
-  -moz-transition: box-shadow 0.2s;
-  -o-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
 }
-/* line 44, ../scss/base/components/form/_general.scss */
-.form__select:focus, .form__select:hover {
-  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-}
-/* line 48, ../scss/base/components/form/_general.scss */
+/* line 31, ../scss/base/components/form/_general.scss */
 .form__select:after {
   content: "";
   position: absolute;
@@ -2587,30 +2584,30 @@ select::-ms-expand {
   height: 40px;
   height: 2.5rem;
 }
-/* line 64, ../scss/base/components/form/_general.scss */
+/* line 47, ../scss/base/components/form/_general.scss */
 .lt-ie10 .form__select:after, .parsley-error .form__select:after, .parsley-success .form__select:after {
   display: none;
 }
 
-/* line 74, ../scss/base/components/form/_general.scss */
+/* line 57, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox]:checked + label:before {
   background: #2690b0;
 }
-/* line 78, ../scss/base/components/form/_general.scss */
+/* line 61, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox]:checked + label:after {
   left: 30px;
 }
-/* line 84, ../scss/base/components/form/_general.scss */
+/* line 67, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox] + label {
   padding: 0;
   color: rgba(0, 0, 0, 0);
 }
-/* line 88, ../scss/base/components/form/_general.scss */
+/* line 71, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox] + label:before {
   border-radius: 20px;
   width: 46px;
 }
-/* line 93, ../scss/base/components/form/_general.scss */
+/* line 76, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox] + label:after {
   background: white;
   content: '';
@@ -2626,37 +2623,37 @@ select::-ms-expand {
 }
 
 @media (min-width: 650px) {
-  /* line 110, ../scss/base/components/form/_general.scss */
+  /* line 93, ../scss/base/components/form/_general.scss */
   .form__input-list {
     margin-top: 8px;
     margin-top: 0.5rem;
   }
 }
-/* line 116, ../scss/base/components/form/_general.scss */
+/* line 99, ../scss/base/components/form/_general.scss */
 .form__input-list li + li {
   margin-top: 5px;
   margin-top: 0.3125rem;
 }
 
-/* line 122, ../scss/base/components/form/_general.scss */
+/* line 105, ../scss/base/components/form/_general.scss */
 .form__data {
   line-height: 40px;
   line-height: 2.5rem;
 }
 
-/* line 126, ../scss/base/components/form/_general.scss */
+/* line 109, ../scss/base/components/form/_general.scss */
 .form__actions {
   margin-top: 20px;
   margin-top: 1.25rem;
 }
 @media (min-width: 650px) {
-  /* line 126, ../scss/base/components/form/_general.scss */
+  /* line 109, ../scss/base/components/form/_general.scss */
   .form__actions {
     margin-left: 42.84104%;
   }
 }
 
-/* line 134, ../scss/base/components/form/_general.scss */
+/* line 117, ../scss/base/components/form/_general.scss */
 .form__required-field {
   font-size: 14px;
   font-size: 0.875rem;
@@ -2799,11 +2796,19 @@ input[type=radio] + label:after {
 }
 
 /* line 3, ../scss/base/components/form/_validation.scss */
+.form__input--error:after,
+.form__input--success:after {
+  position: absolute;
+  right: 10px;
+  top: 9px;
+}
+
+/* line 12, ../scss/base/components/form/_validation.scss */
 .form__input--error.form__input:after {
   content: "";
   color: #b44e4e;
 }
-/* line 11, ../scss/base/components/form/_validation.scss */
+/* line 20, ../scss/base/components/form/_validation.scss */
 .form__input--error input[type="text"],
 .form__input--error input[type="password"],
 .form__input--error input[type="date"],
@@ -2823,7 +2828,7 @@ input[type=radio] + label:after {
   padding-right: 30px;
   padding-right: 1.875rem;
 }
-/* line 17, ../scss/base/components/form/_validation.scss */
+/* line 26, ../scss/base/components/form/_validation.scss */
 .form__input--error input[type="text"]:focus,
 .form__input--error input[type="password"]:focus,
 .form__input--error input[type="date"]:focus,
@@ -2840,36 +2845,36 @@ input[type=radio] + label:after {
 .form__input--error textarea:focus {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 23, ../scss/base/components/form/_validation.scss */
+/* line 32, ../scss/base/components/form/_validation.scss */
 .form__input--error.form__input--select-validated:after {
   display: none;
 }
-/* line 28, ../scss/base/components/form/_validation.scss */
+/* line 37, ../scss/base/components/form/_validation.scss */
 .form__input--error .form__select {
   border-color: #b44e4e;
 }
-/* line 31, ../scss/base/components/form/_validation.scss */
+/* line 40, ../scss/base/components/form/_validation.scss */
 .form__input--error .form__select:after {
   color: #b44e4e;
 }
-/* line 39, ../scss/base/components/form/_validation.scss */
+/* line 48, ../scss/base/components/form/_validation.scss */
 .form__input--error input[type=checkbox] + label:before,
 .form__input--error input[type=radio] + label:before {
   background: #f8efef;
   border-color: #b44e4e;
 }
-/* line 44, ../scss/base/components/form/_validation.scss */
+/* line 53, ../scss/base/components/form/_validation.scss */
 .form__input--error input[type=checkbox] + label:after,
 .form__input--error input[type=radio] + label:after {
   color: #b44e4e;
 }
 
-/* line 53, ../scss/base/components/form/_validation.scss */
+/* line 62, ../scss/base/components/form/_validation.scss */
 .form__input--success.form__input:after {
   content: "";
   color: #4eb455;
 }
-/* line 61, ../scss/base/components/form/_validation.scss */
+/* line 70, ../scss/base/components/form/_validation.scss */
 .form__input--success input[type="text"],
 .form__input--success input[type="password"],
 .form__input--success input[type="date"],
@@ -2889,7 +2894,7 @@ input[type=radio] + label:after {
   padding-right: 30px;
   padding-right: 1.875rem;
 }
-/* line 67, ../scss/base/components/form/_validation.scss */
+/* line 76, ../scss/base/components/form/_validation.scss */
 .form__input--success input[type="text"]:focus,
 .form__input--success input[type="password"]:focus,
 .form__input--success input[type="date"]:focus,
@@ -2906,20 +2911,20 @@ input[type=radio] + label:after {
 .form__input--success textarea:focus {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 73, ../scss/base/components/form/_validation.scss */
+/* line 82, ../scss/base/components/form/_validation.scss */
 .form__input--success.form__input--select-validated:after {
   display: none;
 }
-/* line 78, ../scss/base/components/form/_validation.scss */
+/* line 87, ../scss/base/components/form/_validation.scss */
 .form__input--success .form__select {
   border-color: #4eb455;
 }
-/* line 81, ../scss/base/components/form/_validation.scss */
+/* line 90, ../scss/base/components/form/_validation.scss */
 .form__input--success .form__select:after {
   color: #4eb455;
 }
 
-/* line 87, ../scss/base/components/form/_validation.scss */
+/* line 96, ../scss/base/components/form/_validation.scss */
 .parsley-error-list {
   clear: both;
   max-width: 100%;
@@ -2938,7 +2943,7 @@ input[type=radio] + label:after {
   font-size: 14px;
   font-size: 0.875rem;
 }
-/* line 103, ../scss/base/components/form/_validation.scss */
+/* line 112, ../scss/base/components/form/_validation.scss */
 .parsley-error-list:after {
   content: '';
   width: 0;
@@ -3214,8 +3219,8 @@ input[type=radio] + label:after {
 /* line 52, ../scss/base/components/modals/_modals.scss */
 .modal-show .modal__overlay {
   visibility: visible;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=60);
-  opacity: 0.6;
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
   -webkit-transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
@@ -3348,22 +3353,22 @@ input[type=radio] + label:after {
 /* line 21, ../scss/base/components/modals/effects/_slip.scss */
 html[data-modal-effect|=slip],
 [data-modal-effect|=slip] body,
-[data-modal-effect|=slip] .container {
+[data-modal-effect|=slip] .background {
   height: 100%;
   overflow: hidden;
 }
 
 /* line 26, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect|=slip] body {
-  -webkit-perspective: 600;
-  -moz-perspective: 600;
-  -ms-perspective: 600;
-  -o-perspective: 600;
-  perspective: 600;
+  -webkit-perspective: 1200;
+  -moz-perspective: 1200;
+  -ms-perspective: 1200;
+  -o-perspective: 1200;
+  perspective: 1200;
 }
 
 /* line 32, ../scss/base/components/modals/effects/_slip.scss */
-[data-modal-effect|=slip] .container,
+[data-modal-effect|=slip] .background,
 [data-modal-effect|=slip] .modal__overlay {
   -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
@@ -3373,7 +3378,7 @@ html[data-modal-effect|=slip],
 }
 
 /* line 39, ../scss/base/components/modals/effects/_slip.scss */
-[data-modal-effect=slip-top] .container,
+[data-modal-effect=slip-top] .background,
 [data-modal-effect=slip-top] .modal__overlay {
   -webkit-transform-origin: 50% 100%;
   -moz-transform-origin: 50% 100%;
@@ -3387,7 +3392,7 @@ html[data-modal-effect|=slip],
 }
 
 /* line 47, ../scss/base/components/modals/effects/_slip.scss */
-[data-modal-effect=slip-bottom] .container,
+[data-modal-effect=slip-bottom] .background,
 [data-modal-effect=slip-bottom] .modal__overlay {
   -webkit-transform-origin: 50% 0;
   -moz-transform-origin: 50% 0;

@@ -18,24 +18,24 @@
 
 html[data-modal-effect|=slip],
 [data-modal-effect|=slip] body,
-[data-modal-effect|=slip] .container {
+[data-modal-effect|=slip] .background {
     height: 100%;
     overflow: hidden;
 }
 
 [data-modal-effect|=slip] body {
-    @include perspective(600);
+    @include perspective(1200);
 }
 
 [data-modal-effect|=slip] {
-    .container,
+    .background,
     .modal__overlay {
         @include transform-style(preserve-3d);
     }
 }
 
 [data-modal-effect=slip-top] {
-    .container,
+    .background,
     .modal__overlay {
         @include transform-origin(50%, 100%);
         @include animation(slip-top, 0.5s, forwards, ease-in);
@@ -43,7 +43,7 @@ html[data-modal-effect|=slip],
 }
 
 [data-modal-effect=slip-bottom] {
-    .container,
+    .background,
     .modal__overlay {
         @include transform-origin(50%, 0);
         @include animation(slip-bottom, 0.5s, forwards, ease-in);

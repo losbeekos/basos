@@ -12,7 +12,7 @@
 }
 
 .pricing-table__header {
-    background: lighten($black, 20%);
+    background: $pricing-table-header-bg-color;
     color: $white;
 
     @include rem(padding, 15px 20px);
@@ -36,6 +36,7 @@
 
 .pricing-table__description {
     color: #999999;
+
     @include rem(font-size, 14px);
 }
 

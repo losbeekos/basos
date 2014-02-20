@@ -13,6 +13,8 @@ $base-border-radius     : 2px;
 $base-transition-speed  : 0.2s;
 $white                  : #ffffff;
 $black                  : #000000;
+$color-body             : $black;
+$color-background       : $white;
 $color-text             : #222222;
 $color-placeholder      : #94adc4;
 $color-selection        : #d1e4fe;
@@ -57,8 +59,6 @@ $btn-bg-color-epsilon        : $color-epsilon;
 
 
 /*==========  Icons  ==========*/
-// Use Fontello font icons.
-// fontello.com
 
 $icon-notification-info       : '';
 $icon-notification-success    : '';
@@ -74,7 +74,7 @@ $icon-spinner-gamma           : '';
 
 /*==========  Tables  ==========*/
 
-$table-margin-bottom  : $ten*3; // 30px
+$table-margin-bottom  : $ten*3;
 $table-padding        : $base-padding;
 $table-border-color   : darken($btn-bg-color-alpha, 5%);
 $table-border-radius  : $base-border-radius;
@@ -84,22 +84,22 @@ $table-hover-bg-color : #f6f6f6;
 
 /*==========  Tooltips  ==========*/
 
-$tooltip-width                  : 220px; // 220px
-$tooltip-arrow-width            : 5px; // 5px
+$tooltip-width                  : 220px;
+$tooltip-arrow-width            : 5px;
 $tooltip-transition-speed       : $base-transition-speed;
 $tooltip-bg-color               : $color-beta;
 $tooltip-padding                : $base-padding;
 $tooltip-border-radius          : $base-border-radius;
-$tooltip-font-size              : $ten*1.2; // 12px
+$tooltip-font-size              : $ten*1.2;
 $tooltip-font-color             : $white;
 
 
 /*==========  Modals  ==========*/
 
 $modal-overlay-bg-color      : $black;
-$modal-overlay-opacity       : 0.6;
+$modal-overlay-opacity       : 0.4;
 $modal-content-bg-color      : $white;
-$modal-content-padding       : $ten*4; // 40px
+$modal-content-padding       : $ten*4;
 $modal-content-border-radius : $base-border-radius;
 
 
@@ -118,15 +118,16 @@ $accordion-trigger-font-color  : $color-text;
 /*==========  Breadcrumbs  ==========*/
 
 $breadcrumbs-bg-color      : #f5f5f5;
-$breadcrumbs-padding       : $ten*1.5 $ten*2; // 15px 20px
-$breadcrumbs-margin        : $ten; // 10px
+$breadcrumbs-padding       : $ten*1.5 $ten*2;
+$breadcrumbs-margin        : $ten;
 $breadcrumbs-divider-color : #cccccc;
 $breadcrumbs-current-color : #aaaaaa;
 
 
 /*==========  Pricing tables  ==========*/
 
-$pricing-table-border-color : darken($btn-bg-color-alpha, 5%);
+$pricing-table-border-color    : darken($btn-bg-color-alpha, 5%);
+$pricing-table-header-bg-color : lighten($black, 20%);
 
 
 /*==========  Progress bar  ==========*/

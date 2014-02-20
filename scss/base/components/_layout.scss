@@ -8,6 +8,13 @@
     @include box-sizing(border-box);
 }
 
+html {
+    background-color: $color-body;
+}
+
+.background {
+    background: $color-background;
+}
 
 body {
     font-family: arial, verdana, sans-serif;
