@@ -32,6 +32,8 @@
 .media__alpha {
     @extend .column-3;
 
+    float: left;
+
     @include rem(margin-bottom, 10px);
 
     @include breakpoint(beta-and-up) {

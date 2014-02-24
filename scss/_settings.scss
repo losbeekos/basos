@@ -38,11 +38,18 @@ $container-gamma-padding : $ten*4;
 
 /*==========  Susy grid  ==========*/
 
-$total-columns     : 12;
-$column-width      : 5.1em;   // 12 * 5.1 = 1200px
-$gutter-width      : $ten*4;
-$gutter-width-form : $ten*2;
-$grid-padding      : 0;
+$susy-total-columns: 12;
+$susy-column-width: 4em;
+$susy-gutters: 1/2;
+
+$susy: (
+    // More settings:
+    // http://susydocs.oddbird.net/en/latest/
+    columns: $susy-total-columns,
+    gutters: $susy-gutters,
+    column-width: $susy-column-width,
+    global-box-sizing: border-box
+);
 
 
 /*==========  Buttons  ==========*/

@@ -83,7 +83,7 @@ select {
     // This is so hacky.. (for Firefox)
     // Removes the default select arrow.
     text-overflow: '';
-    text-indent: 5px;
+    text-indent: 1px;
     // End of brutal hack
 
     @include rem(padding, 10px 10px 10px 5px);

@@ -54,7 +54,7 @@ body {
 /**
  * Correct `block` display not defined in IE 8/9.
  */
-/* line 41, ../scss/base/vendor/_normalize.scss */
+/* line 30, ../scss/base/vendor/_normalize.scss */
 article,
 aside,
 details,
@@ -74,7 +74,7 @@ summary {
  * 1. Correct `inline-block` display not defined in IE 8/9.
  * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
  */
-/* line 53, ../scss/base/vendor/_normalize.scss */
+/* line 50, ../scss/base/vendor/_normalize.scss */
 audio,
 canvas,
 progress,
@@ -99,7 +99,7 @@ audio:not([controls]) {
  * Address `[hidden]` styling not present in IE 8/9.
  * Hide the `template` element in IE, Safari, and Firefox < 22.
  */
-/* line 74, ../scss/base/vendor/_normalize.scss */
+/* line 73, ../scss/base/vendor/_normalize.scss */
 [hidden],
 template {
   display: none;
@@ -118,7 +118,7 @@ a {
 /**
  * Improve readability when focused and also mouse hovered in all browsers.
  */
-/* line 94, ../scss/base/vendor/_normalize.scss */
+/* line 93, ../scss/base/vendor/_normalize.scss */
 a:active,
 a:hover {
   outline: 0;
@@ -137,7 +137,7 @@ abbr[title] {
 /**
  * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 114, ../scss/base/vendor/_normalize.scss */
+/* line 113, ../scss/base/vendor/_normalize.scss */
 b,
 strong {
   font-weight: bold;
@@ -181,7 +181,7 @@ small {
 /**
  * Prevent `sub` and `sup` affecting `line-height` in all browsers.
  */
-/* line 158, ../scss/base/vendor/_normalize.scss */
+/* line 157, ../scss/base/vendor/_normalize.scss */
 sub,
 sup {
   font-size: 75%;
@@ -249,7 +249,7 @@ pre {
 /**
  * Address odd `em`-unit font size rendering in all browsers.
  */
-/* line 228, ../scss/base/vendor/_normalize.scss */
+/* line 225, ../scss/base/vendor/_normalize.scss */
 code,
 kbd,
 pre,
@@ -270,7 +270,7 @@ samp {
  * 2. Correct font properties not being inherited.
  * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
  */
-/* line 252, ../scss/base/vendor/_normalize.scss */
+/* line 248, ../scss/base/vendor/_normalize.scss */
 button,
 input,
 optgroup,
@@ -298,7 +298,7 @@ button {
  * Correct `button` style inheritance in Firefox, IE 8+, and Opera
  * Correct `select` style inheritance in Firefox.
  */
-/* line 274, ../scss/base/vendor/_normalize.scss */
+/* line 273, ../scss/base/vendor/_normalize.scss */
 button,
 select {
   text-transform: none;
@@ -311,7 +311,7 @@ select {
  * 3. Improve usability and consistency of cursor style between image-type
  *    `input` and others.
  */
-/* line 289, ../scss/base/vendor/_normalize.scss */
+/* line 286, ../scss/base/vendor/_normalize.scss */
 button,
 html input[type="button"],
 input[type="reset"],
@@ -325,7 +325,7 @@ input[type="submit"] {
 /**
  * Re-set default cursor for disabled elements.
  */
-/* line 299, ../scss/base/vendor/_normalize.scss */
+/* line 298, ../scss/base/vendor/_normalize.scss */
 button[disabled],
 html input[disabled] {
   cursor: default;
@@ -334,7 +334,7 @@ html input[disabled] {
 /**
  * Remove inner padding and border in Firefox 4+.
  */
-/* line 308, ../scss/base/vendor/_normalize.scss */
+/* line 307, ../scss/base/vendor/_normalize.scss */
 button::-moz-focus-inner,
 input::-moz-focus-inner {
   border: 0;
@@ -357,7 +357,7 @@ input {
  * 1. Address box sizing set to `content-box` in IE 8/9/10.
  * 2. Remove excess padding in IE 8/9/10.
  */
-/* line 331, ../scss/base/vendor/_normalize.scss */
+/* line 330, ../scss/base/vendor/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
@@ -371,7 +371,7 @@ input[type="radio"] {
  * `font-size` values of the `input`, it causes the cursor style of the
  * decrement button to change from `default` to `text`.
  */
-/* line 343, ../scss/base/vendor/_normalize.scss */
+/* line 342, ../scss/base/vendor/_normalize.scss */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
   height: auto;
@@ -397,7 +397,7 @@ input[type="search"] {
  * Safari (but not Chrome) clips the cancel button when the search input has
  * padding (and `textfield` appearance).
  */
-/* line 367, ../scss/base/vendor/_normalize.scss */
+/* line 366, ../scss/base/vendor/_normalize.scss */
 input[type="search"]::-webkit-search-cancel-button,
 input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
@@ -453,7 +453,7 @@ table {
   border-spacing: 0;
 }
 
-/* line 421, ../scss/base/vendor/_normalize.scss */
+/* line 420, ../scss/base/vendor/_normalize.scss */
 td,
 th {
   padding: 0;
@@ -462,7 +462,7 @@ th {
 /*==========================================================================================
 =            HTML5 Boilerplate styles - h5bp.com (generated via initializr.com)            =
 ==========================================================================================*/
-/* line 9, ../scss/base/vendor/_h5bp.scss */
+/* line 5, ../scss/base/vendor/_h5bp.scss */
 html,
 button,
 input,
@@ -539,9 +539,6 @@ textarea {
 /*===================================
 =            Breakpoints            =
 ===================================*/
-/*===========================
-=            REM            =
-===========================*/
 /*================================
 =            Triangle            =
 ================================*/
@@ -549,7 +546,7 @@ textarea {
 /*================================
 =            Clearfix            =
 ================================*/
-/* line 7, ../scss/base/helpers/_clearfix.scss */
+/* line 6, ../scss/base/helpers/_clearfix.scss */
 .clearfix:before, .grid:before, [class|=column]:before, .media:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|=column]:after, .media:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
   content: '';
   display: table;
@@ -563,7 +560,7 @@ textarea {
 =            Hide classes            =
 ====================================*/
 @media (max-width: 650px) {
-  /* line 7, ../scss/base/helpers/_hide.scss */
+  /* line 6, ../scss/base/helpers/_hide.scss */
   .hide-alpha,
   .hide-alpha-and-beta {
     border: 0;
@@ -577,7 +574,7 @@ textarea {
   }
 }
 @media (min-width: 650px) and (max-width: 900px) {
-  /* line 21, ../scss/base/helpers/_hide.scss */
+  /* line 20, ../scss/base/helpers/_hide.scss */
   .hide-beta,
   .hide-alpha-and-beta {
     border: 0;
@@ -627,7 +624,7 @@ textarea {
   width: 1px;
 }
 
-/* line 18, ../scss/base/helpers/_visually_hidden.scss */
+/* line 17, ../scss/base/helpers/_visually_hidden.scss */
 .visuallyhidden.focusable:active, .focusable.show-screenreaders:active,
 .visuallyhidden.focusable:focus,
 .focusable.show-screenreaders:focus {
@@ -651,444 +648,99 @@ textarea {
 
 /* line 14, ../scss/base/components/_grid.scss */
 [class|=column] {
-  margin-bottom: 2.81849%;
+  width: 100%;
+  margin-right: 2.85714%;
+  margin-bottom: 2.85714%;
+}
+@media (min-width: 650px) {
+  /* line 14, ../scss/base/components/_grid.scss */
+  [class|=column] {
+    float: left;
+    display: inline;
+  }
 }
 
-/* line 20, ../scss/base/components/_grid.scss */
+/* line 27, ../scss/base/components/_grid.scss */
 .column--omega {
   float: right !important;
   margin-right: 0 !important;
   display: inline !important;
 }
-/* line 25, ../scss/base/components/_grid.scss */
+/* line 32, ../scss/base/components/_grid.scss */
 .lt-ie9 .column--omega {
   float: left !important;
 }
 
 /*==========  Columns  ==========*/
-/* line 46, ../scss/base/components/_grid.scss */
-.column-1 {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
 @media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-1 {
-    width: 5.74972%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
+    width: 5.71429%;
   }
-}
 
-/* line 46, ../scss/base/components/_grid.scss */
-.column-2 {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-2 {
-    width: 14.31793%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
+    width: 14.28571%;
   }
-}
 
-/* line 46, ../scss/base/components/_grid.scss */
-.column-3, .media__alpha {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-3, .media__alpha {
-    width: 22.88613%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
+    width: 22.85714%;
   }
-}
 
-/* line 46, ../scss/base/components/_grid.scss */
-.column-4 {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-4 {
-    width: 31.45434%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
+    width: 31.42857%;
   }
-}
 
-/* line 46, ../scss/base/components/_grid.scss */
-.column-5 {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-5 {
-    width: 40.02255%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
+    width: 40%;
   }
-}
 
-/* line 46, ../scss/base/components/_grid.scss */
-.column-6 {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-6 {
-    width: 48.59076%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
+    width: 48.57143%;
   }
-}
 
-/* line 46, ../scss/base/components/_grid.scss */
-.column-7 {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-7 {
-    width: 57.15896%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
+    width: 57.14286%;
   }
-}
 
-/* line 46, ../scss/base/components/_grid.scss */
-.column-8 {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-8 {
-    width: 65.72717%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
+    width: 65.71429%;
   }
-}
 
-/* line 46, ../scss/base/components/_grid.scss */
-.column-9, .media__beta {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-9, .media__beta {
-    width: 74.29538%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
+    width: 74.28571%;
   }
-}
 
-/* line 46, ../scss/base/components/_grid.scss */
-.column-10 {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-10 {
-    width: 82.86359%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
+    width: 82.85714%;
   }
-}
 
-/* line 46, ../scss/base/components/_grid.scss */
-.column-11 {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-11 {
-    width: 91.43179%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
+    width: 91.42857%;
   }
-}
 
-/* line 46, ../scss/base/components/_grid.scss */
-.column-12 {
-  width: 100%;
-  float: left;
-  margin-right: 2.81849%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 46, ../scss/base/components/_grid.scss */
+  /* line 42, ../scss/base/components/_grid.scss */
   .column-12 {
     width: 100%;
-    float: left;
-    margin-right: 2.81849%;
-    display: inline;
   }
 }
-
-/*==========  Form grid  ==========*/
-/* line 55, ../scss/base/components/_grid.scss */
-.form__row > [class|=column] {
-  margin-bottom: 1.66778%;
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-1 {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-1 {
-    width: 6.80454%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-2 {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-2 {
-    width: 15.27685%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-3, .form .media__alpha {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-3, .form .media__alpha {
-    width: 23.74917%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-4 {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-4 {
-    width: 32.22148%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-5 {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-5 {
-    width: 40.6938%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-6 {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-6 {
-    width: 49.16611%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-7 {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-7 {
-    width: 57.63843%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-8 {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-8 {
-    width: 66.11074%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-9, .form .media__beta {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-9, .form .media__beta {
-    width: 74.58306%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-10 {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-10 {
-    width: 83.05537%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-11 {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-11 {
-    width: 91.52769%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
-/* line 60, ../scss/base/components/_grid.scss */
-.form .column-12 {
-  width: 100%;
-  float: left;
-  margin-right: 1.66778%;
-  display: inline;
-}
-@media (min-width: 650px) {
-  /* line 60, ../scss/base/components/_grid.scss */
-  .form .column-12 {
-    width: 100%;
-    float: left;
-    margin-right: 1.66778%;
-    display: inline;
-  }
-}
-
 /*====================================
 =            Custom fonts            =
 ====================================*/
 @font-face {
   font-family: "fontello-webfont";
-  src: url('/basos/fonts/fontello.eot');
-  src: url('/basos/fonts/fontello.eot?#iefix') format('eot'), url('/basos/fonts/fontello.woff') format('woff'), url('/basos/fonts/fontello.ttf') format('truetype'), url('/basos/fonts/fontello.otf') format('opentype');
+  src: url('/basos/fonts/fontello.eot?1392385608');
+  src: url('/basos/fonts/fontello.eot?&1392385608#iefix') format('embedded-opentype'), url('/basos/fonts/fontello.woff?1392385608') format('woff'), url('/basos/fonts/fontello.ttf?1392385608') format('truetype'), url('/basos/fonts/fontello.svg?1392385608') format('svg');
 }
-
 /* line 14, ../scss/base/components/_fonts.scss */
 .spinner:after, .form__select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form__input--error.form__input:after, .form__input--success.form__input:after, .notification:before, .notification__close {
   font-family: "fontello-webfont", arial, verdana;
@@ -1098,12 +750,12 @@ textarea {
 /*==============================
 =            Layout            =
 ==============================*/
-/* line 7, ../scss/base/components/_layout.scss */
+/* line 5, ../scss/base/components/_layout.scss */
 *,
 :before,
 :after {
-  -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -1129,20 +781,20 @@ a {
   text-decoration: none;
   display: inline;
   cursor: pointer;
-  -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 /* line 32, ../scss/base/components/_layout.scss */
 a:hover {
   color: #222222;
 }
-/* line 37, ../scss/base/components/_layout.scss */
+/* line 36, ../scss/base/components/_layout.scss */
 a:after, a:before {
-  -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 
@@ -1184,7 +836,7 @@ p {
 /*==================================
 =            Typography            =
 ==================================*/
-/* line 11, ../scss/base/components/_typography.scss */
+/* line 6, ../scss/base/components/_typography.scss */
 h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -1284,7 +936,7 @@ h6, .h6 {
   width: 100%;
   margin-bottom: 1.875em;
 }
-/* line 10, ../scss/base/components/_tables.scss */
+/* line 9, ../scss/base/components/_tables.scss */
 .table td,
 .table th {
   padding: 10px;
@@ -1310,7 +962,7 @@ h6, .h6 {
 .table--bordered {
   border: 1px solid #e4e4e4;
 }
-/* line 39, ../scss/base/components/_tables.scss */
+/* line 38, ../scss/base/components/_tables.scss */
 .table--bordered td,
 .table--bordered th {
   border-left: 1px solid #e4e4e4;
@@ -1346,8 +998,9 @@ h6, .h6 {
   border-top-right-radius: 2px;
   padding: 10px 15px;
   padding: 0.625rem 0.9375rem;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
 }
 /* line 30, ../scss/base/components/_tabs.scss */
@@ -1377,16 +1030,16 @@ h6, .h6 {
   width: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 /* line 57, ../scss/base/components/_tabs.scss */
 .tab-item.tab-item--active {
   height: auto;
   width: 100%;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 
@@ -1400,11 +1053,11 @@ h6, .h6 {
 /* line 9, ../scss/base/components/_dropdowns.scss */
 .dropdown:hover .dropdown__content {
   visibility: visible;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
-  -webkit-transition: all 0.2s 0;
   -moz-transition: all 0.2s 0;
   -o-transition: all 0.2s 0;
+  -webkit-transition: all 0.2s 0;
   transition: all 0.2s 0;
 }
 /* line 21, ../scss/base/components/_dropdowns.scss */
@@ -1426,10 +1079,10 @@ h6, .h6 {
   border: 1px solid #d7d7d7;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transition: all 0.2s;
-  -webkit-transition-delay: 0.3s;
   -moz-transition: all 0.2s 0.3s;
   -o-transition: all 0.2s 0.3s;
+  -webkit-transition: all 0.2s;
+  -webkit-transition-delay: 0.3s;
   transition: all 0.2s 0.3s;
 }
 /* line 41, ../scss/base/components/_dropdowns.scss */
@@ -1457,22 +1110,22 @@ h6, .h6 {
 .tooltip[data-tooltip-trigger=click] {
   cursor: pointer;
 }
-/* line 15, ../scss/base/components/_tooltips.scss */
+/* line 14, ../scss/base/components/_tooltips.scss */
 .tooltip .tooltip__content, .tooltip:after {
   visibility: hidden;
   position: absolute;
   z-index: 100;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 26, ../scss/base/components/_tooltips.scss */
+/* line 25, ../scss/base/components/_tooltips.scss */
 .tooltip.tooltip--active .tooltip__content, .tooltip.tooltip--active:after {
   visibility: visible;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 /* line 33, ../scss/base/components/_tooltips.scss */
@@ -1587,9 +1240,9 @@ h6, .h6 {
   overflow: hidden;
   padding: 0 10px;
   border-top: 1px solid #f1f1f1;
-  -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 /* line 46, ../scss/base/components/_accordion.scss */
@@ -1620,7 +1273,7 @@ h6, .h6 {
   padding: 0.9375em 1.25em;
   border-radius: 2px;
 }
-/* line 11, ../scss/base/components/_breadcrumbs.scss */
+/* line 10, ../scss/base/components/_breadcrumbs.scss */
 .breadcrumbs a,
 .breadcrumbs span {
   display: inline-block;
@@ -1668,6 +1321,7 @@ h6, .h6 {
 
 /* line 32, ../scss/base/components/_media.scss */
 .media__alpha {
+  float: left;
   margin-bottom: 10px;
   margin-bottom: 0.625rem;
 }
@@ -1677,18 +1331,18 @@ h6, .h6 {
     margin-bottom: 0;
   }
 }
-/* line 41, ../scss/base/components/_media.scss */
+/* line 43, ../scss/base/components/_media.scss */
 .media--right .media__alpha {
   float: right;
   margin: 0;
 }
 
-/* line 50, ../scss/base/components/_media.scss */
+/* line 52, ../scss/base/components/_media.scss */
 .media--left .media__beta {
   float: right;
   margin: 0;
 }
-/* line 55, ../scss/base/components/_media.scss */
+/* line 57, ../scss/base/components/_media.scss */
 .media--right .media__beta {
   float: left;
 }
@@ -1752,7 +1406,7 @@ h6, .h6 {
 =            Progress            =
 ================================*/
 /*==========  Bar  ==========*/
-/* line 9, ../scss/base/components/_progress.scss */
+/* line 8, ../scss/base/components/_progress.scss */
 progress,
 .progress-bar {
   background-color: #f1f1f1;
@@ -1762,9 +1416,8 @@ progress,
   overflow: hidden;
   color: #2690b0;
   border-radius: 2px;
-  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  -webkit-appearance: none;
   height: 20px;
   height: 1.25rem;
 }
@@ -1781,28 +1434,12 @@ progress[value]::-webkit-progress-bar {
     background-position: 100px 0;
   }
 }
-
-@-moz-keyframes progress-bar {
-  /* line 30, ../scss/base/components/_progress.scss */
-  100% {
-    background-position: 100px 0;
-  }
-}
-
-@-o-keyframes progress-bar {
-  /* line 30, ../scss/base/components/_progress.scss */
-  100% {
-    background-position: 100px 0;
-  }
-}
-
 @keyframes progress-bar {
   /* line 30, ../scss/base/components/_progress.scss */
   100% {
     background-position: 100px 0;
   }
 }
-
 /* line 55, ../scss/base/components/_progress.scss */
 progress[value]::-webkit-progress-value {
   background-size: 25px 20px, 100% 100%, 100% 100%;
@@ -1810,18 +1447,16 @@ progress[value]::-webkit-progress-value {
   border: 0;
   height: 20px;
   height: 1.25rem;
-  -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
+  -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  -moz-animation: progress-bar 1s linear infinite;
-  -o-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
 }
 /* line 56, ../scss/base/components/_progress.scss */
@@ -1831,18 +1466,16 @@ progress[value]::-moz-progress-bar {
   border: 0;
   height: 20px;
   height: 1.25rem;
-  -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
+  -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  -moz-animation: progress-bar 1s linear infinite;
-  -o-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
 }
 /* line 57, ../scss/base/components/_progress.scss */
@@ -1852,18 +1485,16 @@ progress[value]::-ms-fill {
   border: 0;
   height: 20px;
   height: 1.25rem;
-  -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
+  -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  -moz-animation: progress-bar 1s linear infinite;
-  -o-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
 }
 
@@ -1874,18 +1505,16 @@ progress[value]::-ms-fill {
   border: 0;
   height: 20px;
   height: 1.25rem;
-  -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
+  -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  -moz-animation: progress-bar 1s linear infinite;
-  -o-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
 }
 
@@ -1897,18 +1526,16 @@ progress:not([value]) {
   border: 0;
   height: 20px;
   height: 1.25rem;
-  -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
+  -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  -moz-animation: progress-bar 1s linear infinite;
-  -o-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
 }
 /* line 72, ../scss/base/components/_progress.scss */
 progress:not([value])::-webkit-progress-bar {
@@ -1917,18 +1544,16 @@ progress:not([value])::-webkit-progress-bar {
   border: 0;
   height: 20px;
   height: 1.25rem;
-  -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
+  -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  -moz-animation: progress-bar 1s linear infinite;
-  -o-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #f1f1f1;
 }
 /* line 73, ../scss/base/components/_progress.scss */
@@ -1938,18 +1563,16 @@ progress:not([value])::-moz-progress-bar {
   border: 0;
   height: 20px;
   height: 1.25rem;
-  -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
+  -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  -moz-animation: progress-bar 1s linear infinite;
-  -o-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #f1f1f1;
 }
 /* line 74, ../scss/base/components/_progress.scss */
@@ -1959,18 +1582,16 @@ progress:not([value])::-ms-fill {
   border: 0;
   height: 20px;
   height: 1.25rem;
-  -webkit-transition: width 0.2s;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
+  -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  -moz-animation: progress-bar 1s linear infinite;
-  -o-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -webkit-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -moz-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: -o-linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
+  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
+  background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #f1f1f1;
   animation-name: none;
 }
@@ -1986,53 +1607,27 @@ progress:not([value])::-ms-fill {
 @-webkit-keyframes spinner {
   /* line 6, ../scss/base/components/_spinners.scss */
   100% {
-    -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
-@-moz-keyframes spinner {
-  /* line 6, ../scss/base/components/_spinners.scss */
-  100% {
     -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
-
-@-o-keyframes spinner {
-  /* line 6, ../scss/base/components/_spinners.scss */
-  100% {
-    -webkit-transform: rotate(360deg);
-    -moz-transform: rotate(360deg);
-    -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
-    transform: rotate(360deg);
-  }
-}
-
 @keyframes spinner {
   /* line 6, ../scss/base/components/_spinners.scss */
   100% {
-    -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -o-transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
 }
-
 /* line 11, ../scss/base/components/_spinners.scss */
 .spinner {
   display: inline-block;
   -webkit-animation: spinner 1s infinite linear;
-  -moz-animation: spinner 1s infinite linear;
-  -o-animation: spinner 1s infinite linear;
   animation: spinner 1s infinite linear;
 }
 /* line 16, ../scss/base/components/_spinners.scss */
@@ -2106,7 +1701,7 @@ progress:not([value])::-ms-fill {
   margin: 0 0 30px 0;
   margin: 0 0 1.875rem 0;
 }
-/* line 12, ../scss/base/components/buttons/_group.scss */
+/* line 11, ../scss/base/components/buttons/_group.scss */
 .btn-group > li a,
 .btn-group > li span {
   border-radius: 0;
@@ -2123,12 +1718,12 @@ progress:not([value])::-ms-fill {
 .btn-group--inline > li:first-child {
   margin: 0;
 }
-/* line 44, ../scss/base/components/buttons/_group.scss */
+/* line 43, ../scss/base/components/buttons/_group.scss */
 .btn-group--inline > li:first-child a,
 .btn-group--inline > li:first-child span {
   border-radius: 2px 0 0 2px;
 }
-/* line 51, ../scss/base/components/buttons/_group.scss */
+/* line 50, ../scss/base/components/buttons/_group.scss */
 .btn-group--inline > li:last-child a,
 .btn-group--inline > li:last-child span {
   border-radius: 0 2px 2px 0;
@@ -2139,7 +1734,7 @@ progress:not([value])::-ms-fill {
 .btn-group--block > li {
   margin-top: -1px;
 }
-/* line 67, ../scss/base/components/buttons/_group.scss */
+/* line 66, ../scss/base/components/buttons/_group.scss */
 .btn-group--block > li a,
 .btn-group--block > li span {
   display: block;
@@ -2148,12 +1743,12 @@ progress:not([value])::-ms-fill {
 .btn-group--block > li:first-child {
   margin: 0;
 }
-/* line 75, ../scss/base/components/buttons/_group.scss */
+/* line 74, ../scss/base/components/buttons/_group.scss */
 .btn-group--block > li:first-child a,
 .btn-group--block > li:first-child span {
   border-radius: 2px 2px 0 0;
 }
-/* line 82, ../scss/base/components/buttons/_group.scss */
+/* line 81, ../scss/base/components/buttons/_group.scss */
 .btn-group--block > li:last-child a,
 .btn-group--block > li:last-child span {
   border-radius: 0 0 2px 2px;
@@ -2215,15 +1810,15 @@ progress:not([value])::-ms-fill {
   border-color: #e4e4e4;
   line-height: 16px;
   line-height: 1rem;
-  -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  -webkit-appearance: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
 }
 /* line 9, ../scss/base/components/buttons/_styles.scss */
@@ -2245,12 +1840,12 @@ progress:not([value])::-ms-fill {
 /* line 38, ../scss/base/components/buttons/_styles.scss */
 .btn:focus {
   outline: none;
-  -webkit-transition-duration: 0.05s;
   -moz-transition-duration: 0.05s;
   -o-transition-duration: 0.05s;
+  -webkit-transition-duration: 0.05s;
   transition-duration: 0.05s;
 }
-/* line 45, ../scss/base/components/buttons/_styles.scss */
+/* line 44, ../scss/base/components/buttons/_styles.scss */
 .btn:disabled, .btn:disabled:hover {
   cursor: not-allowed;
   color: #cccccc;
@@ -2262,7 +1857,7 @@ progress:not([value])::-ms-fill {
   box-shadow: none;
 }
 
-/* line 60, ../scss/base/components/buttons/_styles.scss */
+/* line 57, ../scss/base/components/buttons/_styles.scss */
 .btn--beta,
 .btn--gamma,
 .btn--delta,
@@ -2270,7 +1865,7 @@ progress:not([value])::-ms-fill {
   color: white;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
 }
-/* line 65, ../scss/base/components/buttons/_styles.scss */
+/* line 64, ../scss/base/components/buttons/_styles.scss */
 .btn--beta:not(.btn--divider):hover, .btn--beta:hover,
 .btn--gamma:not(.btn--divider):hover,
 .btn--gamma:hover,
@@ -2280,7 +1875,7 @@ progress:not([value])::-ms-fill {
 .btn--epsilon:hover {
   color: white;
 }
-/* line 70, ../scss/base/components/buttons/_styles.scss */
+/* line 69, ../scss/base/components/buttons/_styles.scss */
 .btn--beta:disabled, .btn--beta:disabled:hover,
 .btn--gamma:disabled,
 .btn--gamma:disabled:hover,
@@ -2425,15 +2020,15 @@ textarea {
   box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
   padding: 0.625rem;
-  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
+  -webkit-appearance: none;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
-  -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 /* line 57, ../scss/base/components/form/_form.scss */
@@ -2492,18 +2087,17 @@ select {
   z-index: 2;
   border: none;
   text-overflow: '';
-  text-indent: 5px;
+  text-indent: 1px;
   padding: 10px 10px 10px 5px;
   padding: 0.625rem 0.625rem 0.625rem 0.3125rem;
-  -webkit-appearance: none;
   -moz-appearance: none;
-  appearance: none;
-  -webkit-transition: box-shadow 0.2s;
+  -webkit-appearance: none;
   -moz-transition: box-shadow 0.2s;
   -o-transition: box-shadow 0.2s;
+  -webkit-transition: box-shadow 0.2s;
   transition: box-shadow 0.2s;
 }
-/* line 94, ../scss/base/components/form/_form.scss */
+/* line 93, ../scss/base/components/form/_form.scss */
 select:focus, select:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
@@ -2514,7 +2108,7 @@ select[multiple=multiple] {
   border-radius: 2px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
 }
-/* line 105, ../scss/base/components/form/_form.scss */
+/* line 104, ../scss/base/components/form/_form.scss */
 select[multiple=multiple]:focus, select[multiple=multiple]:hover {
   border-color: #cccccc;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
@@ -2553,7 +2147,7 @@ select::-ms-expand {
   }
 }
 
-/* line 19, ../scss/base/components/form/_general.scss */
+/* line 17, ../scss/base/components/form/_general.scss */
 .form__input,
 .form__select,
 .form__switch {
@@ -2563,8 +2157,9 @@ select::-ms-expand {
 
 /* line 24, ../scss/base/components/form/_general.scss */
 .form__select {
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
   background: white;
   border: 1px solid #cbcbcb;
@@ -2584,7 +2179,7 @@ select::-ms-expand {
   height: 40px;
   height: 2.5rem;
 }
-/* line 47, ../scss/base/components/form/_general.scss */
+/* line 45, ../scss/base/components/form/_general.scss */
 .lt-ie10 .form__select:after, .parsley-error .form__select:after, .parsley-success .form__select:after {
   display: none;
 }
@@ -2600,7 +2195,7 @@ select::-ms-expand {
 /* line 67, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox] + label {
   padding: 0;
-  color: rgba(0, 0, 0, 0);
+  color: transparent;
 }
 /* line 71, ../scss/base/components/form/_general.scss */
 .form__switch input[type=checkbox] + label:before {
@@ -2618,7 +2213,7 @@ select::-ms-expand {
   border-radius: 10px;
   border: 1px solid #cbcbcb;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 
@@ -2649,7 +2244,7 @@ select::-ms-expand {
 @media (min-width: 650px) {
   /* line 109, ../scss/base/components/form/_general.scss */
   .form__actions {
-    margin-left: 42.84104%;
+    margin-left: 42.85714%;
   }
 }
 
@@ -2710,14 +2305,14 @@ input[type=checkbox]:focus + label:before, input[type=radio]:focus + label:befor
 }
 /* line 26, ../scss/base/components/form/_checkbox.scss */
 input[type=checkbox]:checked + label:after, input[type=radio]:checked + label:after {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 /* line 31, ../scss/base/components/form/_checkbox.scss */
 .no-borderradius input[type=checkbox], .no-borderradius input[type=radio] {
   background: transparent;
   position: relative;
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 /* line 38, ../scss/base/components/form/_checkbox.scss */
@@ -2725,8 +2320,9 @@ input[type=checkbox] + label, input[type=radio] + label {
   position: relative;
   cursor: pointer;
   padding-left: 28px;
+  -moz-user-select: -moz-none;
+  -ms-user-select: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
   user-select: none;
 }
 /* line 45, ../scss/base/components/form/_checkbox.scss */
@@ -2745,9 +2341,9 @@ input[type=checkbox] + label:before, input[type=radio] + label:before {
   display: block;
   border-radius: 2px;
   border: 1px solid #cbcbcb;
-  -webkit-transition: all 0.4s;
   -moz-transition: all 0.4s;
   -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 /* line 63, ../scss/base/components/form/_checkbox.scss */
@@ -2767,9 +2363,9 @@ input[type=checkbox] + label:after, input[type=radio] + label:after {
   color: #2690b0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
 /* line 84, ../scss/base/components/form/_checkbox.scss */
@@ -2970,19 +2566,15 @@ input[type=radio] + label:after {
   border-color: #e9e7ca;
   margin-bottom: 30px;
   margin-bottom: 1.875rem;
-  -webkit-transition: all 0.2s;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
+  -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
 }
 /* line 10, ../scss/base/components/notifications/_notification.scss */
@@ -3014,10 +2606,8 @@ input[type=radio] + label:after {
   min-height: 0;
   margin: 0;
   border: 0;
-  -webkit-transform: scale3d(0.5, 1.25, 1.25);
   -moz-transform: scale3d(0.5, 1.25, 1.25);
-  -ms-transform: scale3d(0.5, 1.25, 1.25);
-  -o-transform: scale3d(0.5, 1.25, 1.25);
+  -webkit-transform: scale3d(0.5, 1.25, 1.25);
   transform: scale3d(0.5, 1.25, 1.25);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
@@ -3109,9 +2699,9 @@ input[type=radio] + label:after {
   content: '';
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
   opacity: 0.2;
-  -webkit-transition: opacity 0.2s;
   -moz-transition: opacity 0.2s;
   -o-transition: opacity 0.2s;
+  -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
 /* line 33, ../scss/base/components/notifications/_identifiers.scss */
@@ -3161,15 +2751,13 @@ input[type=radio] + label:after {
   height: auto;
   z-index: 2000;
   visibility: hidden;
-  -webkit-backface-visibility: hidden;
   -moz-backface-visibility: hidden;
-  -ms-backface-visibility: hidden;
-  -o-backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -o-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 /* line 19, ../scss/base/components/modals/_modals.scss */
@@ -3203,17 +2791,17 @@ input[type=radio] + label:after {
   z-index: 1000;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transition-property: visibility, opacity;
   -moz-transition-property: visibility, opacity;
   -o-transition-property: visibility, opacity;
+  -webkit-transition-property: visibility, opacity;
   transition-property: visibility, opacity;
-  -webkit-transition-delay: 0.5s, 0.1s;
   -moz-transition-delay: 0.5s, 0.1s;
   -o-transition-delay: 0.5s, 0.1s;
+  -webkit-transition-delay: 0.5s, 0.1s;
   transition-delay: 0.5s, 0.1s;
-  -webkit-transition-duration: 0, 0.5s;
   -moz-transition-duration: 0, 0.5s;
   -o-transition-duration: 0, 0.5s;
+  -webkit-transition-duration: 0, 0.5s;
   transition-duration: 0, 0.5s;
 }
 /* line 52, ../scss/base/components/modals/_modals.scss */
@@ -3221,9 +2809,9 @@ input[type=radio] + label:after {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
   opacity: 0.4;
-  -webkit-transition: opacity 0.5s;
   -moz-transition: opacity 0.5s;
   -o-transition: opacity 0.5s;
+  -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
 
@@ -3233,124 +2821,52 @@ input[type=radio] + label:after {
 @-webkit-keyframes slip-top {
   /* line 6, ../scss/base/components/modals/effects/_slip.scss */
   50% {
-    -webkit-transform: rotateX(10deg);
     -moz-transform: rotateX(10deg);
     -ms-transform: rotateX(10deg);
     -o-transform: rotateX(10deg);
-    transform: rotateX(10deg);
-    -webkit-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-}
-
-@-moz-keyframes slip-top {
-  /* line 6, ../scss/base/components/modals/effects/_slip.scss */
-  50% {
     -webkit-transform: rotateX(10deg);
-    -moz-transform: rotateX(10deg);
-    -ms-transform: rotateX(10deg);
-    -o-transform: rotateX(10deg);
     transform: rotateX(10deg);
     -webkit-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
-
-@-o-keyframes slip-top {
-  /* line 6, ../scss/base/components/modals/effects/_slip.scss */
-  50% {
-    -webkit-transform: rotateX(10deg);
-    -moz-transform: rotateX(10deg);
-    -ms-transform: rotateX(10deg);
-    -o-transform: rotateX(10deg);
-    transform: rotateX(10deg);
-    -webkit-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-}
-
 @keyframes slip-top {
   /* line 6, ../scss/base/components/modals/effects/_slip.scss */
   50% {
-    -webkit-transform: rotateX(10deg);
     -moz-transform: rotateX(10deg);
     -ms-transform: rotateX(10deg);
     -o-transform: rotateX(10deg);
+    -webkit-transform: rotateX(10deg);
     transform: rotateX(10deg);
     -webkit-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
-
 @-webkit-keyframes slip-bottom {
   /* line 13, ../scss/base/components/modals/effects/_slip.scss */
   50% {
-    -webkit-transform: rotateX(-10deg);
     -moz-transform: rotateX(-10deg);
     -ms-transform: rotateX(-10deg);
     -o-transform: rotateX(-10deg);
-    transform: rotateX(-10deg);
-    -webkit-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-}
-
-@-moz-keyframes slip-bottom {
-  /* line 13, ../scss/base/components/modals/effects/_slip.scss */
-  50% {
     -webkit-transform: rotateX(-10deg);
-    -moz-transform: rotateX(-10deg);
-    -ms-transform: rotateX(-10deg);
-    -o-transform: rotateX(-10deg);
     transform: rotateX(-10deg);
     -webkit-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
-
-@-o-keyframes slip-bottom {
-  /* line 13, ../scss/base/components/modals/effects/_slip.scss */
-  50% {
-    -webkit-transform: rotateX(-10deg);
-    -moz-transform: rotateX(-10deg);
-    -ms-transform: rotateX(-10deg);
-    -o-transform: rotateX(-10deg);
-    transform: rotateX(-10deg);
-    -webkit-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
-    animation-timing-function: ease-out;
-  }
-}
-
 @keyframes slip-bottom {
   /* line 13, ../scss/base/components/modals/effects/_slip.scss */
   50% {
-    -webkit-transform: rotateX(-10deg);
     -moz-transform: rotateX(-10deg);
     -ms-transform: rotateX(-10deg);
     -o-transform: rotateX(-10deg);
+    -webkit-transform: rotateX(-10deg);
     transform: rotateX(-10deg);
     -webkit-animation-timing-function: ease-out;
-    -o-animation-timing-function: ease-out;
-    -moz-animation-timing-function: ease-out;
     animation-timing-function: ease-out;
   }
 }
-
-/* line 21, ../scss/base/components/modals/effects/_slip.scss */
+/* line 19, ../scss/base/components/modals/effects/_slip.scss */
 html[data-modal-effect|=slip],
 [data-modal-effect|=slip] body,
 [data-modal-effect|=slip] .background {
@@ -3360,48 +2876,40 @@ html[data-modal-effect|=slip],
 
 /* line 26, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect|=slip] body {
-  -webkit-perspective: 1200;
   -moz-perspective: 1200;
-  -ms-perspective: 1200;
-  -o-perspective: 1200;
+  -webkit-perspective: 1200;
   perspective: 1200;
 }
 
-/* line 32, ../scss/base/components/modals/effects/_slip.scss */
+/* line 31, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect|=slip] .background,
 [data-modal-effect|=slip] .modal__overlay {
-  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
 
-/* line 39, ../scss/base/components/modals/effects/_slip.scss */
+/* line 38, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect=slip-top] .background,
 [data-modal-effect=slip-top] .modal__overlay {
-  -webkit-transform-origin: 50% 100%;
   -moz-transform-origin: 50% 100%;
   -ms-transform-origin: 50% 100%;
   -o-transform-origin: 50% 100%;
+  -webkit-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
   -webkit-animation: slip-top 0.5s forwards ease-in;
-  -moz-animation: slip-top 0.5s forwards ease-in;
-  -o-animation: slip-top 0.5s forwards ease-in;
   animation: slip-top 0.5s forwards ease-in;
 }
 
-/* line 47, ../scss/base/components/modals/effects/_slip.scss */
+/* line 46, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect=slip-bottom] .background,
 [data-modal-effect=slip-bottom] .modal__overlay {
-  -webkit-transform-origin: 50% 0;
   -moz-transform-origin: 50% 0;
   -ms-transform-origin: 50% 0;
   -o-transform-origin: 50% 0;
+  -webkit-transform-origin: 50% 0;
   transform-origin: 50% 0;
   -webkit-animation: slip-bottom 0.5s forwards ease-in;
-  -moz-animation: slip-bottom 0.5s forwards ease-in;
-  -o-animation: slip-bottom 0.5s forwards ease-in;
   animation: slip-bottom 0.5s forwards ease-in;
 }
 
@@ -3409,47 +2917,47 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect|=slip] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transition: all 0.5s;
-  -webkit-transition-delay: 0.1s;
   -moz-transition: all 0.5s 0.1s;
   -o-transition: all 0.5s 0.1s;
+  -webkit-transition: all 0.5s;
+  -webkit-transition-delay: 0.1s;
   transition: all 0.5s 0.1s;
 }
 /* line 61, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect|=slip].modal-show .modal__content {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 /* line 68, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-top] .modal__content {
-  -webkit-transform: translateY(-300%);
   -moz-transform: translateY(-300%);
   -ms-transform: translateY(-300%);
   -o-transform: translateY(-300%);
+  -webkit-transform: translateY(-300%);
   transform: translateY(-300%);
 }
 /* line 73, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-top].modal-show .modal__content {
-  -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
+  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 /* line 80, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-bottom] .modal__content {
-  -webkit-transform: translateY(300%);
   -moz-transform: translateY(300%);
   -ms-transform: translateY(300%);
   -o-transform: translateY(300%);
+  -webkit-transform: translateY(300%);
   transform: translateY(300%);
 }
 /* line 85, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-bottom].modal-show .modal__content {
-  -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
+  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 
@@ -3460,83 +2968,83 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect|=slide] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transition: all 0.5s 0;
   -moz-transition: all 0.5s 0;
   -o-transition: all 0.5s 0;
+  -webkit-transition: all 0.5s 0;
   transition: all 0.5s 0;
 }
 /* line 13, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect|=slide].modal-show .modal__content {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
-  -webkit-transition: all 0.5s;
-  -webkit-transition-delay: 0.1s;
   -moz-transition: all 0.5s 0.1s;
   -o-transition: all 0.5s 0.1s;
+  -webkit-transition: all 0.5s;
+  -webkit-transition-delay: 0.1s;
   transition: all 0.5s 0.1s;
 }
 /* line 21, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-top] .modal__content {
-  -webkit-transform: translateY(-300%);
   -moz-transform: translateY(-300%);
   -ms-transform: translateY(-300%);
   -o-transform: translateY(-300%);
+  -webkit-transform: translateY(-300%);
   transform: translateY(-300%);
 }
 /* line 26, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-top].modal-show .modal__content {
-  -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
+  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 /* line 33, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-right] .modal__content {
-  -webkit-transform: translateX(300%);
   -moz-transform: translateX(300%);
   -ms-transform: translateX(300%);
   -o-transform: translateX(300%);
+  -webkit-transform: translateX(300%);
   transform: translateX(300%);
 }
 /* line 38, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-right].modal-show .modal__content {
-  -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 /* line 45, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-bottom] .modal__content {
-  -webkit-transform: translateY(300%);
   -moz-transform: translateY(300%);
   -ms-transform: translateY(300%);
   -o-transform: translateY(300%);
+  -webkit-transform: translateY(300%);
   transform: translateY(300%);
 }
 /* line 50, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-bottom].modal-show .modal__content {
-  -webkit-transform: translateY(0);
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -o-transform: translateY(0);
+  -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 /* line 57, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-left] .modal__content {
-  -webkit-transform: translateX(-300%);
   -moz-transform: translateX(-300%);
   -ms-transform: translateX(-300%);
   -o-transform: translateX(-300%);
+  -webkit-transform: translateX(-300%);
   transform: translateX(-300%);
 }
 /* line 62, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-left].modal-show .modal__content {
-  -webkit-transform: translateX(0);
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -o-transform: translateX(0);
+  -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 
@@ -3545,61 +3053,49 @@ html[data-modal-effect|=slip],
 ===================================================*/
 /* line 6, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect|=flip] {
-  -webkit-perspective: 1300;
   -moz-perspective: 1300;
-  -ms-perspective: 1300;
-  -o-perspective: 1300;
+  -webkit-perspective: 1300;
   perspective: 1300;
 }
 /* line 9, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect|=flip] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transform-style: preserve-3d;
   -moz-transform-style: preserve-3d;
-  -ms-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 /* line 16, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect|=flip].modal-show .modal__content {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
 }
 /* line 23, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect=flip-horizontal] .modal__content {
-  -webkit-transform: rotateY(-70deg);
   -moz-transform: rotateY(-70deg);
-  -ms-transform: rotateY(-70deg);
-  -o-transform: rotateY(-70deg);
+  -webkit-transform: rotateY(-70deg);
   transform: rotateY(-70deg);
 }
 /* line 28, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect=flip-horizontal].modal-show .modal__content {
-  -webkit-transform: rotateY(0deg);
   -moz-transform: rotateY(0deg);
-  -ms-transform: rotateY(0deg);
-  -o-transform: rotateY(0deg);
+  -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }
 /* line 35, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect=flip-vertical] .modal__content {
-  -webkit-transform: rotateX(-70deg);
   -moz-transform: rotateX(-70deg);
-  -ms-transform: rotateX(-70deg);
-  -o-transform: rotateX(-70deg);
+  -webkit-transform: rotateX(-70deg);
   transform: rotateX(-70deg);
 }
 /* line 40, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect=flip-vertical].modal-show .modal__content {
-  -webkit-transform: rotateX(0deg);
   -moz-transform: rotateX(0deg);
-  -ms-transform: rotateX(0deg);
-  -o-transform: rotateX(0deg);
+  -webkit-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
 
@@ -3610,24 +3106,24 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=fadescale] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transform: scale(0.7, 0.7);
   -moz-transform: scale(0.7, 0.7);
   -ms-transform: scale(0.7, 0.7);
   -o-transform: scale(0.7, 0.7);
+  -webkit-transform: scale(0.7, 0.7);
   transform: scale(0.7, 0.7);
-  -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 /* line 13, ../scss/base/components/modals/effects/_fadescale.scss */
 .modal[data-modal-effect=fadescale].modal-show .modal__content {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
-  -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -o-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
 }
 
@@ -3638,24 +3134,24 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=superscale] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -webkit-transform: scale(2, 2);
   -moz-transform: scale(2, 2);
   -ms-transform: scale(2, 2);
   -o-transform: scale(2, 2);
+  -webkit-transform: scale(2, 2);
   transform: scale(2, 2);
-  -webkit-transition: all 0.3s;
   -moz-transition: all 0.3s;
   -o-transition: all 0.3s;
+  -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
 /* line 13, ../scss/base/components/modals/effects/_superscale.scss */
 .modal[data-modal-effect=superscale].modal-show .modal__content {
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+  filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
-  -webkit-transform: scale(1, 1);
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -o-transform: scale(1, 1);
+  -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
 }
 
@@ -3687,7 +3183,7 @@ html[data-modal-effect|=slip],
     text-shadow: none !important;
   }
 
-  /* line 14, ../scss/_print.scss */
+  /* line 13, ../scss/_print.scss */
   a,
   a:visited {
     text-decoration: underline;
@@ -3706,14 +3202,14 @@ html[data-modal-effect|=slip],
   /*
    * Don't show links for images, or javascript/internal links
    */
-  /* line 32, ../scss/_print.scss */
+  /* line 30, ../scss/_print.scss */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
     content: "";
   }
 
-  /* line 37, ../scss/_print.scss */
+  /* line 36, ../scss/_print.scss */
   pre,
   blockquote {
     border: 1px solid #999;
@@ -3726,7 +3222,7 @@ html[data-modal-effect|=slip],
     /* h5bp.com/t */
   }
 
-  /* line 47, ../scss/_print.scss */
+  /* line 46, ../scss/_print.scss */
   tr,
   img {
     page-break-inside: avoid;
@@ -3739,9 +3235,8 @@ html[data-modal-effect|=slip],
 
   @page {
     margin: 0.5cm;
-}
-
-  /* line 61, ../scss/_print.scss */
+  }
+  /* line 59, ../scss/_print.scss */
   p,
   h2,
   h3 {
@@ -3749,7 +3244,7 @@ html[data-modal-effect|=slip],
     widows: 3;
   }
 
-  /* line 67, ../scss/_print.scss */
+  /* line 66, ../scss/_print.scss */
   h2,
   h3 {
     page-break-after: avoid;

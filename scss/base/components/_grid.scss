@@ -14,7 +14,14 @@
 [class|=column] {
     @extend .clearfix;
 
-    margin-bottom: gutter($total-columns);
+    width: 100%;
+    margin-right: gutter($susy-total-columns);
+    margin-bottom: gutter($susy-total-columns);
+
+    @include breakpoint(beta-and-up){
+        float: left;
+        display: inline;
+    }
 }
 
 .column--omega {
@@ -30,35 +37,10 @@
 
 /*==========  Columns  ==========*/
 
-@mixin column($i) {
-    @include span-columns($total-columns, $total-columns);
-
-    @include breakpoint(beta-and-up){
-        @include span-columns($i, $total-columns);
-    }
-
-    @include breakpoint(gamma-and-up){
-        // Nothing to see here..
-    }
-}
-
-@for $i from 1 through $total-columns {
-    .column-#{$i} {
-        @include column($i);
-    }
-}
-
-
-/*==========  Form grid  ==========*/
-
-@include with-grid-settings($total-columns, $column-width, $gutter-width-form) {
-    .form__row > [class|=column] {
-        margin-bottom: gutter($total-columns);
-    }
-
-    @for $i from 1 through $total-columns {
-        .form .column-#{$i} {
-            @include column($i);
+@include breakpoint(beta-and-up) {
+    @for $i from 1 through $susy-total-columns {
+        .column-#{$i} {
+            width: span($i of $susy-total-columns);
         }
     }
-};
+}
