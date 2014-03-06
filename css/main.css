@@ -760,22 +760,29 @@ textarea {
 }
 
 /* line 11, ../scss/base/components/_layout.scss */
+html,
+body {
+  height: 100%;
+}
+
+/* line 16, ../scss/base/components/_layout.scss */
 html {
   background-color: black;
 }
 
-/* line 15, ../scss/base/components/_layout.scss */
-.background {
-  background: white;
-}
-
-/* line 19, ../scss/base/components/_layout.scss */
+/* line 20, ../scss/base/components/_layout.scss */
 body {
   font-family: arial, verdana, sans-serif;
   color: #222222;
 }
 
-/* line 24, ../scss/base/components/_layout.scss */
+/* line 25, ../scss/base/components/_layout.scss */
+.background {
+  background: white;
+  min-height: 100%;
+}
+
+/* line 30, ../scss/base/components/_layout.scss */
 a {
   color: #2690b0;
   text-decoration: none;
@@ -786,11 +793,11 @@ a {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 32, ../scss/base/components/_layout.scss */
+/* line 38, ../scss/base/components/_layout.scss */
 a:hover {
   color: #222222;
 }
-/* line 36, ../scss/base/components/_layout.scss */
+/* line 42, ../scss/base/components/_layout.scss */
 a:after, a:before {
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
@@ -798,22 +805,22 @@ a:after, a:before {
   transition: all 0.2s;
 }
 
-/* line 42, ../scss/base/components/_layout.scss */
+/* line 48, ../scss/base/components/_layout.scss */
 img {
   max-width: 100%;
 }
 
-/* line 46, ../scss/base/components/_layout.scss */
+/* line 52, ../scss/base/components/_layout.scss */
 address {
   font-style: normal;
 }
 
-/* line 50, ../scss/base/components/_layout.scss */
+/* line 56, ../scss/base/components/_layout.scss */
 p {
   margin-top: 0;
 }
 
-/* line 54, ../scss/base/components/_layout.scss */
+/* line 60, ../scss/base/components/_layout.scss */
 .container {
   max-width: 80em;
   min-width: 20em;
@@ -821,13 +828,13 @@ p {
   margin: 0 auto;
 }
 @media (min-width: 650px) and (max-width: 900px) {
-  /* line 54, ../scss/base/components/_layout.scss */
+  /* line 60, ../scss/base/components/_layout.scss */
   .container {
     padding: 0 1.25em;
   }
 }
 @media (min-width: 900px) {
-  /* line 54, ../scss/base/components/_layout.scss */
+  /* line 60, ../scss/base/components/_layout.scss */
   .container {
     padding: 0 2.5em;
   }

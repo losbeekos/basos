@@ -8,17 +8,23 @@
     @include box-sizing(border-box);
 }
 
-html {
-    background-color: $color-body;
+html,
+body {
+    height: 100%;
 }
 
-.background {
-    background: $color-background;
+html {
+    background-color: $color-body;
 }
 
 body {
     font-family: arial, verdana, sans-serif;
     color: $color-text;
+}
+
+.background {
+    background: $color-background;
+    min-height: 100%;
 }
 
 a {
