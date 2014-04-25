@@ -1461,7 +1461,6 @@ progress[value]::-webkit-progress-value {
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
   background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
-  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
@@ -1480,7 +1479,6 @@ progress[value]::-moz-progress-bar {
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
   background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
-  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
@@ -1499,7 +1497,6 @@ progress[value]::-ms-fill {
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
   background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
-  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
@@ -1519,7 +1516,6 @@ progress[value]::-ms-fill {
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
   background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
-  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
@@ -1540,7 +1536,6 @@ progress:not([value]) {
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
   background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
-  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
 }
@@ -1558,7 +1553,6 @@ progress:not([value])::-webkit-progress-bar {
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
   background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
-  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #f1f1f1;
@@ -1577,7 +1571,6 @@ progress:not([value])::-moz-progress-bar {
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
   background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
-  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #f1f1f1;
@@ -1596,7 +1589,6 @@ progress:not([value])::-ms-fill {
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
   background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
-  background-image: -o-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #f1f1f1;
@@ -1616,7 +1608,6 @@ progress:not([value])::-ms-fill {
   100% {
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1626,7 +1617,6 @@ progress:not([value])::-ms-fill {
   100% {
     -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
-    -o-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
   }
@@ -1803,7 +1793,7 @@ progress:not([value])::-ms-fill {
 /*==============================
 =            Styles            =
 ==============================*/
-/* line 14, ../scss/base/components/buttons/_styles.scss */
+/* line 15, ../scss/base/components/buttons/_styles.scss */
 .btn {
   display: inline-block;
   color: #222222;
@@ -1833,18 +1823,22 @@ progress:not([value])::-ms-fill {
   background-color: #e4e4e4;
 }
 /* line 10, ../scss/base/components/buttons/_styles.scss */
+.btn:not(.btn--divider):active {
+  background-color: #f1f1f1;
+}
+/* line 11, ../scss/base/components/buttons/_styles.scss */
 .btn:focus {
   box-shadow: 0 0 10px #f1f1f1;
 }
-/* line 11, ../scss/base/components/buttons/_styles.scss */
+/* line 12, ../scss/base/components/buttons/_styles.scss */
 .btn:disabled, .btn:disabled:hover {
   background-color: #f1f1f1;
 }
-/* line 34, ../scss/base/components/buttons/_styles.scss */
+/* line 35, ../scss/base/components/buttons/_styles.scss */
 .btn:not(.btn--divider):hover {
   color: #222222;
 }
-/* line 38, ../scss/base/components/buttons/_styles.scss */
+/* line 39, ../scss/base/components/buttons/_styles.scss */
 .btn:focus {
   outline: none;
   -moz-transition-duration: 0.05s;
@@ -1852,19 +1846,19 @@ progress:not([value])::-ms-fill {
   -webkit-transition-duration: 0.05s;
   transition-duration: 0.05s;
 }
-/* line 44, ../scss/base/components/buttons/_styles.scss */
+/* line 45, ../scss/base/components/buttons/_styles.scss */
 .btn:disabled, .btn:disabled:hover {
   cursor: not-allowed;
   color: #cccccc;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=50);
   opacity: 0.5;
 }
-/* line 51, ../scss/base/components/buttons/_styles.scss */
+/* line 52, ../scss/base/components/buttons/_styles.scss */
 .btn:disabled:focus, .btn:disabled:hover:focus {
   box-shadow: none;
 }
 
-/* line 57, ../scss/base/components/buttons/_styles.scss */
+/* line 58, ../scss/base/components/buttons/_styles.scss */
 .btn--beta,
 .btn--gamma,
 .btn--delta,
@@ -1872,7 +1866,7 @@ progress:not([value])::-ms-fill {
   color: white;
   text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
 }
-/* line 64, ../scss/base/components/buttons/_styles.scss */
+/* line 65, ../scss/base/components/buttons/_styles.scss */
 .btn--beta:not(.btn--divider):hover, .btn--beta:hover,
 .btn--gamma:not(.btn--divider):hover,
 .btn--gamma:hover,
@@ -1882,7 +1876,7 @@ progress:not([value])::-ms-fill {
 .btn--epsilon:hover {
   color: white;
 }
-/* line 69, ../scss/base/components/buttons/_styles.scss */
+/* line 70, ../scss/base/components/buttons/_styles.scss */
 .btn--beta:disabled, .btn--beta:disabled:hover,
 .btn--gamma:disabled,
 .btn--gamma:disabled:hover,
@@ -1893,7 +1887,7 @@ progress:not([value])::-ms-fill {
   color: #cccccc;
 }
 
-/* line 75, ../scss/base/components/buttons/_styles.scss */
+/* line 76, ../scss/base/components/buttons/_styles.scss */
 .btn--beta {
   background-color: #2690b0;
   border-color: #217f9b;
@@ -1903,15 +1897,19 @@ progress:not([value])::-ms-fill {
   background-color: #217f9b;
 }
 /* line 10, ../scss/base/components/buttons/_styles.scss */
+.btn--beta:not(.btn--divider):active {
+  background-color: #2690b0;
+}
+/* line 11, ../scss/base/components/buttons/_styles.scss */
 .btn--beta:focus {
   box-shadow: 0 0 10px #2690b0;
 }
-/* line 11, ../scss/base/components/buttons/_styles.scss */
+/* line 12, ../scss/base/components/buttons/_styles.scss */
 .btn--beta:disabled, .btn--beta:disabled:hover {
   background-color: #2690b0;
 }
 
-/* line 79, ../scss/base/components/buttons/_styles.scss */
+/* line 80, ../scss/base/components/buttons/_styles.scss */
 .btn--gamma {
   background-color: #4eb455;
   border-color: #45a34c;
@@ -1921,15 +1919,19 @@ progress:not([value])::-ms-fill {
   background-color: #45a34c;
 }
 /* line 10, ../scss/base/components/buttons/_styles.scss */
+.btn--gamma:not(.btn--divider):active {
+  background-color: #4eb455;
+}
+/* line 11, ../scss/base/components/buttons/_styles.scss */
 .btn--gamma:focus {
   box-shadow: 0 0 10px #4eb455;
 }
-/* line 11, ../scss/base/components/buttons/_styles.scss */
+/* line 12, ../scss/base/components/buttons/_styles.scss */
 .btn--gamma:disabled, .btn--gamma:disabled:hover {
   background-color: #4eb455;
 }
 
-/* line 83, ../scss/base/components/buttons/_styles.scss */
+/* line 84, ../scss/base/components/buttons/_styles.scss */
 .btn--delta {
   background-color: #b44e4e;
   border-color: #a34545;
@@ -1939,15 +1941,19 @@ progress:not([value])::-ms-fill {
   background-color: #a34545;
 }
 /* line 10, ../scss/base/components/buttons/_styles.scss */
+.btn--delta:not(.btn--divider):active {
+  background-color: #b44e4e;
+}
+/* line 11, ../scss/base/components/buttons/_styles.scss */
 .btn--delta:focus {
   box-shadow: 0 0 10px #b44e4e;
 }
-/* line 11, ../scss/base/components/buttons/_styles.scss */
+/* line 12, ../scss/base/components/buttons/_styles.scss */
 .btn--delta:disabled, .btn--delta:disabled:hover {
   background-color: #b44e4e;
 }
 
-/* line 87, ../scss/base/components/buttons/_styles.scss */
+/* line 88, ../scss/base/components/buttons/_styles.scss */
 .btn--epsilon {
   background-color: #444444;
   border-color: #373737;
@@ -1957,20 +1963,24 @@ progress:not([value])::-ms-fill {
   background-color: #373737;
 }
 /* line 10, ../scss/base/components/buttons/_styles.scss */
+.btn--epsilon:not(.btn--divider):active {
+  background-color: #444444;
+}
+/* line 11, ../scss/base/components/buttons/_styles.scss */
 .btn--epsilon:focus {
   box-shadow: 0 0 10px #444444;
 }
-/* line 11, ../scss/base/components/buttons/_styles.scss */
+/* line 12, ../scss/base/components/buttons/_styles.scss */
 .btn--epsilon:disabled, .btn--epsilon:disabled:hover {
   background-color: #444444;
 }
 
-/* line 91, ../scss/base/components/buttons/_styles.scss */
+/* line 92, ../scss/base/components/buttons/_styles.scss */
 .btn--block {
   display: block;
 }
 
-/* line 95, ../scss/base/components/buttons/_styles.scss */
+/* line 96, ../scss/base/components/buttons/_styles.scss */
 .btn--divider {
   cursor: default;
 }
@@ -2029,16 +2039,12 @@ textarea {
   padding: 0.625rem;
   -moz-appearance: none;
   -webkit-appearance: none;
-  -moz-user-select: -moz-none;
-  -ms-user-select: none;
-  -webkit-user-select: none;
-  user-select: none;
   -moz-transition: all 0.2s;
   -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-/* line 57, ../scss/base/components/form/_form.scss */
+/* line 56, ../scss/base/components/form/_form.scss */
 input[type="text"]:focus,
 input[type="password"]:focus,
 input[type="date"]:focus,
@@ -2056,7 +2062,7 @@ textarea:focus {
   border: 1px solid #cccccc;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 62, ../scss/base/components/form/_form.scss */
+/* line 61, ../scss/base/components/form/_form.scss */
 input[type="text"]:disabled,
 input[type="password"]:disabled,
 input[type="date"]:disabled,
@@ -2075,13 +2081,13 @@ textarea:disabled {
   cursor: not-allowed;
 }
 
-/* line 68, ../scss/base/components/form/_form.scss */
+/* line 67, ../scss/base/components/form/_form.scss */
 textarea {
   height: 160px;
   height: 10rem;
 }
 
-/* line 72, ../scss/base/components/form/_form.scss */
+/* line 71, ../scss/base/components/form/_form.scss */
 select {
   position: relative;
   background: transparent;
@@ -2104,36 +2110,36 @@ select {
   -webkit-transition: box-shadow 0.2s;
   transition: box-shadow 0.2s;
 }
-/* line 93, ../scss/base/components/form/_form.scss */
+/* line 92, ../scss/base/components/form/_form.scss */
 select:focus, select:hover {
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 98, ../scss/base/components/form/_form.scss */
+/* line 97, ../scss/base/components/form/_form.scss */
 select[multiple=multiple] {
   height: auto;
   border: 1px solid #cbcbcb;
   border-radius: 2px;
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
 }
-/* line 104, ../scss/base/components/form/_form.scss */
+/* line 103, ../scss/base/components/form/_form.scss */
 select[multiple=multiple]:focus, select[multiple=multiple]:hover {
   border-color: #cccccc;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
-/* line 111, ../scss/base/components/form/_form.scss */
+/* line 110, ../scss/base/components/form/_form.scss */
 select option[disabled] {
   color: #94adc4;
   text-shadow: none;
   border: none;
 }
 
-/* line 118, ../scss/base/components/form/_form.scss */
+/* line 117, ../scss/base/components/form/_form.scss */
 select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #888888;
 }
 
-/* line 123, ../scss/base/components/form/_form.scss */
+/* line 122, ../scss/base/components/form/_form.scss */
 select::-ms-expand {
   display: none;
 }
@@ -2763,7 +2769,6 @@ input[type=radio] + label:after {
   backface-visibility: hidden;
   -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
@@ -2830,7 +2835,6 @@ input[type=radio] + label:after {
   50% {
     -moz-transform: rotateX(10deg);
     -ms-transform: rotateX(10deg);
-    -o-transform: rotateX(10deg);
     -webkit-transform: rotateX(10deg);
     transform: rotateX(10deg);
     -webkit-animation-timing-function: ease-out;
@@ -2842,7 +2846,6 @@ input[type=radio] + label:after {
   50% {
     -moz-transform: rotateX(10deg);
     -ms-transform: rotateX(10deg);
-    -o-transform: rotateX(10deg);
     -webkit-transform: rotateX(10deg);
     transform: rotateX(10deg);
     -webkit-animation-timing-function: ease-out;
@@ -2854,7 +2857,6 @@ input[type=radio] + label:after {
   50% {
     -moz-transform: rotateX(-10deg);
     -ms-transform: rotateX(-10deg);
-    -o-transform: rotateX(-10deg);
     -webkit-transform: rotateX(-10deg);
     transform: rotateX(-10deg);
     -webkit-animation-timing-function: ease-out;
@@ -2866,7 +2868,6 @@ input[type=radio] + label:after {
   50% {
     -moz-transform: rotateX(-10deg);
     -ms-transform: rotateX(-10deg);
-    -o-transform: rotateX(-10deg);
     -webkit-transform: rotateX(-10deg);
     transform: rotateX(-10deg);
     -webkit-animation-timing-function: ease-out;
@@ -2901,7 +2902,6 @@ html[data-modal-effect|=slip],
 [data-modal-effect=slip-top] .modal__overlay {
   -moz-transform-origin: 50% 100%;
   -ms-transform-origin: 50% 100%;
-  -o-transform-origin: 50% 100%;
   -webkit-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
   -webkit-animation: slip-top 0.5s forwards ease-in;
@@ -2913,7 +2913,6 @@ html[data-modal-effect|=slip],
 [data-modal-effect=slip-bottom] .modal__overlay {
   -moz-transform-origin: 50% 0;
   -ms-transform-origin: 50% 0;
-  -o-transform-origin: 50% 0;
   -webkit-transform-origin: 50% 0;
   transform-origin: 50% 0;
   -webkit-animation: slip-bottom 0.5s forwards ease-in;
@@ -2939,7 +2938,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slip-top] .modal__content {
   -moz-transform: translateY(-300%);
   -ms-transform: translateY(-300%);
-  -o-transform: translateY(-300%);
   -webkit-transform: translateY(-300%);
   transform: translateY(-300%);
 }
@@ -2947,7 +2945,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slip-top].modal-show .modal__content {
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
-  -o-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
@@ -2955,7 +2952,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slip-bottom] .modal__content {
   -moz-transform: translateY(300%);
   -ms-transform: translateY(300%);
-  -o-transform: translateY(300%);
   -webkit-transform: translateY(300%);
   transform: translateY(300%);
 }
@@ -2963,7 +2959,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slip-bottom].modal-show .modal__content {
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
-  -o-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
@@ -2994,7 +2989,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slide-top] .modal__content {
   -moz-transform: translateY(-300%);
   -ms-transform: translateY(-300%);
-  -o-transform: translateY(-300%);
   -webkit-transform: translateY(-300%);
   transform: translateY(-300%);
 }
@@ -3002,7 +2996,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slide-top].modal-show .modal__content {
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
-  -o-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
@@ -3010,7 +3003,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slide-right] .modal__content {
   -moz-transform: translateX(300%);
   -ms-transform: translateX(300%);
-  -o-transform: translateX(300%);
   -webkit-transform: translateX(300%);
   transform: translateX(300%);
 }
@@ -3018,7 +3010,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slide-right].modal-show .modal__content {
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
-  -o-transform: translateX(0);
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
@@ -3026,7 +3017,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slide-bottom] .modal__content {
   -moz-transform: translateY(300%);
   -ms-transform: translateY(300%);
-  -o-transform: translateY(300%);
   -webkit-transform: translateY(300%);
   transform: translateY(300%);
 }
@@ -3034,7 +3024,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slide-bottom].modal-show .modal__content {
   -moz-transform: translateY(0);
   -ms-transform: translateY(0);
-  -o-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
@@ -3042,7 +3031,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slide-left] .modal__content {
   -moz-transform: translateX(-300%);
   -ms-transform: translateX(-300%);
-  -o-transform: translateX(-300%);
   -webkit-transform: translateX(-300%);
   transform: translateX(-300%);
 }
@@ -3050,7 +3038,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=slide-left].modal-show .modal__content {
   -moz-transform: translateX(0);
   -ms-transform: translateX(0);
-  -o-transform: translateX(0);
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
@@ -3115,7 +3102,6 @@ html[data-modal-effect|=slip],
   opacity: 0;
   -moz-transform: scale(0.7, 0.7);
   -ms-transform: scale(0.7, 0.7);
-  -o-transform: scale(0.7, 0.7);
   -webkit-transform: scale(0.7, 0.7);
   transform: scale(0.7, 0.7);
   -moz-transition: all 0.3s;
@@ -3129,7 +3115,6 @@ html[data-modal-effect|=slip],
   opacity: 1;
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
-  -o-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
 }
@@ -3143,7 +3128,6 @@ html[data-modal-effect|=slip],
   opacity: 0;
   -moz-transform: scale(2, 2);
   -ms-transform: scale(2, 2);
-  -o-transform: scale(2, 2);
   -webkit-transform: scale(2, 2);
   transform: scale(2, 2);
   -moz-transition: all 0.3s;
@@ -3157,7 +3141,6 @@ html[data-modal-effect|=slip],
   opacity: 1;
   -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
-  -o-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
 }
