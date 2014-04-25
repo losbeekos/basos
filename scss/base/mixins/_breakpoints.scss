@@ -4,6 +4,16 @@
 
 
 @mixin breakpoint($point) {
+    /**
+    *
+    * Usage:
+    * @include breakpoint('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    }
+    *
+    **/
+
     @if $point == gamma-and-up {
         @media (min-width: 900px) { @content; }
     }
@@ -20,3 +30,36 @@
        @media (max-width: 650px)  { @content; }
     }
 }
+
+@mixin breakpoint-img-retina($width, $orientation) {
+    @media print,
+           (min-width: $width) and (orientation: $orientation) and (-o-min-device-pixel-ratio: 5/4),
+           (min-width: $width) and (orientation: $orientation) and (-webkit-min-device-pixel-ratio: 1.25),
+           (min-width: $width) and (orientation: $orientation) and (min-resolution: 144dppx) { @content }
+}
+
+@mixin breakpoint-img($path) {
+    /**
+    *
+    * Usage:
+    * @include breakpoint-img('directory');
+    *
+    **/
+
+    // Crappy displays
+    @media (min-width: 0)     and (orientation: landscape) { background-image: url(../img/#{$path}/480x320.jpg);   }
+    @media (min-width: 0)     and (orientation: portrait)  { background-image: url(../img/#{$path}/320x480.jpg);   }
+    @media (min-width: 480px) and (orientation: landscape) { background-image: url(../img/#{$path}/800x600.jpg);   }
+    @media (min-width: 480px) and (orientation: portrait)  { background-image: url(../img/#{$path}/600x800.jpg);   }
+    @media (min-width: 800px) and (orientation: landscape) { background-image: url(../img/#{$path}/1280x1024.jpg); }
+    @media (min-width: 800px) and (orientation: portrait)  { background-image: url(../img/#{$path}/1024x1280.jpg); }
+
+    // Retina displays
+    @include breakpoint-img-retina(0, landscape)     { background-image: url(../img/#{$path}/480x320@2x.jpg);   }
+    @include breakpoint-img-retina(0, portrait)      { background-image: url(../img/#{$path}/320x480@2x.jpg);   }
+    @include breakpoint-img-retina(480px, landscape) { background-image: url(../img/#{$path}/800x600@2x.jpg);   }
+    @include breakpoint-img-retina(480px, portrait)  { background-image: url(../img/#{$path}/600x800@2x.jpg);   }
+    @include breakpoint-img-retina(800px, landscape) { background-image: url(../img/#{$path}/1280x1024@2x.jpg); }
+    @include breakpoint-img-retina(800px, portrait)  { background-image: url(../img/#{$path}/1024x1280@2x.jpg); }
+}
+
