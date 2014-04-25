@@ -1985,6 +1985,15 @@ progress:not([value])::-ms-fill {
   cursor: default;
 }
 
+/* line 100, ../scss/base/components/buttons/_styles.scss */
+.no-button-style {
+  background: none;
+  box-shadow: none;
+  border: 0;
+  padding: 0;
+  text-shadow: none;
+}
+
 /*==========  Forms  ==========*/
 /*============================
 =            Form            =

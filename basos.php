@@ -142,6 +142,10 @@
                                 </ul>
                             </div>
                         </div>
+
+                        <h2>Button element style reset</h2>
+                        <p>Commonly used for triggers. For example a navigation trigger.</p>
+                        <button class="no-button-style">Button</button>
                     </section>
 
                     <br/><br/>
