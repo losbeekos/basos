@@ -17,33 +17,33 @@
 .tab {
     position: relative;
     display: inline-block;
-    background: $btn-bg-color-alpha;
-    border: 1px solid darken($btn-bg-color-alpha, 5%);
+    background: $tab-bg-color;
+    border: 1px solid $tab-border-color;
     bottom: -1px;
-    color: lighten($color-text, 20%);
+    color: $tab-color;
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
 
-    @include rem(padding, 10px 15px);
+    @include rem(padding, $tab-padding);
     @include user-select(none);
 
     &:focus {
         outline: none;
-        color: #000000;
-        background: darken(#eeeeee, 5%);
+        color: $color-text;
+        background: darken($tab-bg-color, 5%);
     }
 
     &.tab--active {
-        background: #ffffff;
-        border-bottom-color: #ffffff;
+        background: $tab-active-bg-color;
+        border-bottom-color: $tab-active-bg-color;
         color: $color-text;
     }
 }
 
 .tab-content {
-    border-top: 1px solid darken($btn-bg-color-alpha, 5%);
+    border-top: 1px solid $tab-content-border-top-color;
 
-    @include rem(padding, 20px);
+    @include rem(padding, $tab-content-padding);
 }
 
 .tab-item {

@@ -79,6 +79,17 @@ $icon-spinner-beta            : '';
 $icon-spinner-gamma           : '';
 
 
+/*==========  Tabs  ==========*/
+
+$tab-bg-color                 : $btn-bg-color-alpha;
+$tab-border-color             : darken($btn-bg-color-alpha, 5%);
+$tab-color                    : lighten($color-text, 20%);
+$tab-padding                  : 10px 15px;
+$tab-active-bg-color          : $white;
+$tab-content-border-top-color : darken($btn-bg-color-alpha, 5%);
+$tab-content-padding          : 20px;
+
+
 /*==========  Tables  ==========*/
 
 $table-margin-bottom  : $ten*3;

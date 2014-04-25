@@ -13,6 +13,7 @@
 /*==========  Susy grid  ==========*/
 /*==========  Buttons  ==========*/
 /*==========  Icons  ==========*/
+/*==========  Tabs  ==========*/
 /*==========  Tables  ==========*/
 /*==========  Tooltips  ==========*/
 /*==========  Modals  ==========*/
@@ -1013,13 +1014,13 @@ h6, .h6 {
 /* line 30, ../scss/base/components/_tabs.scss */
 .tab:focus {
   outline: none;
-  color: #000000;
-  background: #e1e1e1;
+  color: #222222;
+  background: #e4e4e4;
 }
 /* line 36, ../scss/base/components/_tabs.scss */
 .tab.tab--active {
-  background: #ffffff;
-  border-bottom-color: #ffffff;
+  background: white;
+  border-bottom-color: white;
   color: #222222;
 }
 
