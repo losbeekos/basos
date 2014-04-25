@@ -51,7 +51,6 @@ $input-selectors: '
 
     @include rem(padding, 10px);
     @include appearance(none);
-    @include user-select(none);
     @include single-transition(all, $base-transition-speed);
 
     &:focus {
