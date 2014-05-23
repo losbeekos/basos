@@ -16,7 +16,7 @@ progress,
     border-radius: $base-border-radius;
 
     @include appearance(none);
-    @include rem(height, 20px);
+    @include rem(height, 15px);
 }
 
 progress[value]::-webkit-progress-bar {
@@ -33,10 +33,10 @@ progress[value]::-webkit-progress-bar {
 }
 
 @mixin progress-style() {
-    background-size: 25px 20px, 100% 100%, 100% 100%;
+    background-size: 25px 15px, 100% 100%, 100% 100%;
     border-radius: $base-border-radius;
     border: 0;
-    @include rem(height, 20px);
+    @include rem(height, 15px);
     @include single-transition(width, $base-transition-speed);
     @include animation(progress-bar, 1s, linear, infinite);
 
@@ -57,7 +57,7 @@ progress[value] {
     &::-ms-fill               { @include progress-style(); background-color: $progress-bar-value-bg-color; }
 }
 
-.progress-bar__value                    { @include progress-style(); background-color: $progress-bar-value-bg-color; }
+.progress-bar__value { @include progress-style(); background-color: $progress-bar-value-bg-color; }
 
 
 /*==========  Inderterminate progress  ==========*/

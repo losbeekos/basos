@@ -1516,8 +1516,8 @@ progress,
   border-radius: 2px;
   -moz-appearance: none;
   -webkit-appearance: none;
-  height: 20px;
-  height: 1.25rem;
+  height: 15px;
+  height: 0.9375rem;
 }
 
 /* line 22, ../scss/base/components/_progress.scss */
@@ -1540,11 +1540,11 @@ progress[value]::-webkit-progress-bar {
 }
 /* line 55, ../scss/base/components/_progress.scss */
 progress[value]::-webkit-progress-value {
-  background-size: 25px 20px, 100% 100%, 100% 100%;
+  background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  height: 20px;
-  height: 1.25rem;
+  height: 15px;
+  height: 0.9375rem;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
@@ -1558,11 +1558,11 @@ progress[value]::-webkit-progress-value {
 }
 /* line 56, ../scss/base/components/_progress.scss */
 progress[value]::-moz-progress-bar {
-  background-size: 25px 20px, 100% 100%, 100% 100%;
+  background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  height: 20px;
-  height: 1.25rem;
+  height: 15px;
+  height: 0.9375rem;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
@@ -1576,11 +1576,11 @@ progress[value]::-moz-progress-bar {
 }
 /* line 57, ../scss/base/components/_progress.scss */
 progress[value]::-ms-fill {
-  background-size: 25px 20px, 100% 100%, 100% 100%;
+  background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  height: 20px;
-  height: 1.25rem;
+  height: 15px;
+  height: 0.9375rem;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
@@ -1595,11 +1595,11 @@ progress[value]::-ms-fill {
 
 /* line 60, ../scss/base/components/_progress.scss */
 .progress-bar__value {
-  background-size: 25px 20px, 100% 100%, 100% 100%;
+  background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  height: 20px;
-  height: 1.25rem;
+  height: 15px;
+  height: 0.9375rem;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
@@ -1615,11 +1615,11 @@ progress[value]::-ms-fill {
 /*==========  Inderterminate progress  ==========*/
 /* line 69, ../scss/base/components/_progress.scss */
 progress:not([value]) {
-  background-size: 25px 20px, 100% 100%, 100% 100%;
+  background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  height: 20px;
-  height: 1.25rem;
+  height: 15px;
+  height: 0.9375rem;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
@@ -1632,11 +1632,11 @@ progress:not([value]) {
 }
 /* line 72, ../scss/base/components/_progress.scss */
 progress:not([value])::-webkit-progress-bar {
-  background-size: 25px 20px, 100% 100%, 100% 100%;
+  background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  height: 20px;
-  height: 1.25rem;
+  height: 15px;
+  height: 0.9375rem;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
@@ -1650,11 +1650,11 @@ progress:not([value])::-webkit-progress-bar {
 }
 /* line 73, ../scss/base/components/_progress.scss */
 progress:not([value])::-moz-progress-bar {
-  background-size: 25px 20px, 100% 100%, 100% 100%;
+  background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  height: 20px;
-  height: 1.25rem;
+  height: 15px;
+  height: 0.9375rem;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
@@ -1668,11 +1668,11 @@ progress:not([value])::-moz-progress-bar {
 }
 /* line 74, ../scss/base/components/_progress.scss */
 progress:not([value])::-ms-fill {
-  background-size: 25px 20px, 100% 100%, 100% 100%;
+  background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
-  height: 20px;
-  height: 1.25rem;
+  height: 15px;
+  height: 0.9375rem;
   -moz-transition: width 0.2s;
   -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
