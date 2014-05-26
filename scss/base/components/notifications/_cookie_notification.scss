@@ -2,18 +2,60 @@
 =            Cookie law notification            =
 ===============================================*/
 
-.cookie-notification {
-    background: #eeeeee;
+.notification--cookie {
+    position: fixed;
+    left: 0;
+    width: 100%;
+    min-width: $container-min-width;
+    background: rgba(0, 0, 0, 0.85);
     text-align: center;
+    z-index: 999;
+    margin-bottom: 0;
+    border: none;
+    color: $white;
 
     @include rem(padding, 20px 0);
-    @include rem(margin-bottom, 40px);
+    @include single-transition(all, $base-transition-speed*2);
 
-    .btn-container--center {
-        margin: 0;
+
+    &.notification--close {
+        .notification-cookie-show[notification-cookie-position] & {
+            @include translate3d(0, 100%, 0);
+        }
     }
 
-    .btn-group {
-        @include rem(margin, 10px 0 0 0);
+    &:before {
+        display: none;
+    }
+
+    .notification-cookie-show[notification-cookie-position] & {
+        @include translate3d(0, 0, 0);
+    }
+
+    [notification-cookie-position=top] & {
+        top: 0;
+
+        @include translate3d(0, -100%, 0);
+    }
+
+    [notification-cookie-position=bottom] & {
+        bottom: 0;
+
+        @include translate3d(0, 100%, 0);
+    }
+
+    .notification__more-info {
+        color: $white;
+        text-decoration: underline;
+    }
+
+    .notification__text {
+        margin-left: 0;
+
+        @include rem(margin-bottom, 10px);
+    }
+
+    .notification__close {
+        color: $white;
     }
 }

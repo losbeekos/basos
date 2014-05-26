@@ -17,6 +17,19 @@ var settings = {
     $main: $('#main'),
 
 
+    /*==========  Notification  ==========*/
+    notifications: {
+        cookieLaw: {
+            position: 'bottom',
+            approveBtnText: 'ok, ik snap het',
+            infoBtnShow: true,
+            infoBtnLink: '/cookiewet',
+            infoBtnText: 'meer informatie',
+            notificationText: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren en statistieken bij te houden.'
+        }
+    },
+
+
     /*==========  Fitvids  ==========*/
     fitVids: {
         $el: $('.fitvids')
@@ -63,13 +76,6 @@ var settings = {
         tooltipActiveClass: 'tooltip--active',
         tooltipContentClass: 'tooltip__content',
         arrowWidth: 8
-    },
-
-
-    /*==========  Notifications  ==========*/
-
-    notifications: {
-        $close: $('[data-notification-close]')
     },
 
 
@@ -454,18 +460,62 @@ var modules = {
 
     notifications: {
         init: function () {
-            settings.notifications.$close.on('click', function (event) {
+            var self = this;
+
+            self.close();
+            self.cookieLaw.init();
+        },
+
+        close: function () {
+            var self = this;
+
+            settings.$body.on('click', '[data-notification-close]', function (event) {
                 event.preventDefault();
 
                 var $close = $(this),
-                    $notification = $close.parent();
+                    $notification = $close.parent(),
+                    notificationId = $notification.attr('id');
 
                 $notification.addClass('notification--close');
+
+                if (notificationId === 'notification-cookie') {
+                    helpers.createCookie('basosCookieNotification', 'approved', 365);
+                }
 
                 setTimeout(function () {
                     $notification.remove();
                 }, 500);
             });
+        },
+
+
+        /*==========  Cookie law  ==========*/
+
+        cookieLaw: {
+            init: function () {
+                var self = this,
+                    cookieValue = helpers.readCookie('basosCookieNotification'),
+                    info = '';
+
+                if (cookieValue !== 'approved') {
+                    settings.$html.attr('notification-cookie-position', settings.notifications.cookieLaw.position);
+
+                    if (settings.notifications.cookieLaw.infoBtnShow) {
+                        info = '<a class="btn btn--alpha btn--small" href="' + settings.notifications.cookieLaw.infoBtnLink + '">' + settings.notifications.cookieLaw.infoBtnText + '</a>';
+                    }
+
+                    var html = '<div id="notification-cookie" class="notification notification--alpha notification--cookie">'+
+                               '<div class="notification__text">' + settings.notifications.cookieLaw.notificationText + '</div>'+
+                               '<a class="btn btn--beta btn--small" data-notification-close>' + settings.notifications.cookieLaw.approveBtnText + '</a> '+ info +
+                               '</div>';
+
+                    settings.$background.prepend(html);
+
+                    setTimeout(function () {
+                        settings.$html.addClass('notification-cookie-show');
+                    }, 0);
+                }
+            }
         }
     },
 

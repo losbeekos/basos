@@ -2768,19 +2768,19 @@ input[type=radio] + label:after {
   font-size: 60px;
   font-size: 3.75rem;
 }
-/* line 42, ../scss/base/components/notifications/_notification.scss */
+/* line 43, ../scss/base/components/notifications/_notification.scss */
 .notification.notification--close {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+  opacity: 0;
+}
+/* line 46, ../scss/base/components/notifications/_notification.scss */
+.notification.notification--close:not(.notification--cookie) {
   height: 0;
   overflow: hidden;
   padding: 0;
   min-height: 0;
   margin: 0;
   border: 0;
-  -moz-transform: scale3d(0.5, 1.25, 1.25);
-  -webkit-transform: scale3d(0.5, 1.25, 1.25);
-  transform: scale3d(0.5, 1.25, 1.25);
-  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
-  opacity: 0;
 }
 
 /*==========================================
@@ -2888,22 +2888,68 @@ input[type=radio] + label:after {
 =            Cookie law notification            =
 ===============================================*/
 /* line 5, ../scss/base/components/notifications/_cookie_notification.scss */
-.cookie-notification {
-  background: #eeeeee;
+.notification--cookie {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  min-width: 20em;
+  background: rgba(0, 0, 0, 0.85);
   text-align: center;
+  z-index: 999;
+  margin-bottom: 0;
+  border: none;
+  color: white;
   padding: 20px 0;
   padding: 1.25rem 0;
-  margin-bottom: 40px;
-  margin-bottom: 2.5rem;
+  -moz-transition: all 0.4s;
+  -o-transition: all 0.4s;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
 }
-/* line 12, ../scss/base/components/notifications/_cookie_notification.scss */
-.cookie-notification .btn-container--center {
-  margin: 0;
+/* line 22, ../scss/base/components/notifications/_cookie_notification.scss */
+.notification-cookie-show[notification-cookie-position] .notification--cookie.notification--close {
+  -moz-transform: translate3d(0, 100%, 0);
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
 }
-/* line 16, ../scss/base/components/notifications/_cookie_notification.scss */
-.cookie-notification .btn-group {
-  margin: 10px 0 0 0;
-  margin: 0.625rem 0 0 0;
+/* line 27, ../scss/base/components/notifications/_cookie_notification.scss */
+.notification--cookie:before {
+  display: none;
+}
+/* line 31, ../scss/base/components/notifications/_cookie_notification.scss */
+.notification-cookie-show[notification-cookie-position] .notification--cookie {
+  -moz-transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+/* line 35, ../scss/base/components/notifications/_cookie_notification.scss */
+[notification-cookie-position=top] .notification--cookie {
+  top: 0;
+  -moz-transform: translate3d(0, -100%, 0);
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+/* line 41, ../scss/base/components/notifications/_cookie_notification.scss */
+[notification-cookie-position=bottom] .notification--cookie {
+  bottom: 0;
+  -moz-transform: translate3d(0, 100%, 0);
+  -webkit-transform: translate3d(0, 100%, 0);
+  transform: translate3d(0, 100%, 0);
+}
+/* line 47, ../scss/base/components/notifications/_cookie_notification.scss */
+.notification--cookie .notification__more-info {
+  color: white;
+  text-decoration: underline;
+}
+/* line 52, ../scss/base/components/notifications/_cookie_notification.scss */
+.notification--cookie .notification__text {
+  margin-left: 0;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+}
+/* line 58, ../scss/base/components/notifications/_cookie_notification.scss */
+.notification--cookie .notification__close {
+  color: white;
 }
 
 /*==========  Modals  ==========*/
