@@ -1,0 +1,27 @@
+{
+  "name": "basos",
+  "version": "0.0.1",
+  "description": "Basos frontend framework.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/losbeekos/basos.git"
+  },
+  "author": "Jeroen van Beek",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/losbeekos/basos/issues"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-uglify": "~0.4.0",
+    "grunt-contrib-concat": "~0.4.0",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-compass": "~0.8.0",
+    "grunt-contrib-jshint": "~0.10.0",
+    "grunt-autoprefixer": "~0.7.3"
+  }
+}
