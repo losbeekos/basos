@@ -235,6 +235,7 @@ figure {
 /* line 207, ../scss/base/vendor/_normalize.scss */
 hr {
   -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -361,6 +362,8 @@ input {
 /* line 330, ../scss/base/vendor/_normalize.scss */
 input[type="checkbox"],
 input[type="radio"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -485,6 +488,10 @@ body {
 }
 
 /* line 23, ../scss/base/vendor/_h5bp.scss */
+::-moz-selection {
+  background: #d1e4fe;
+  text-shadow: none;
+}
 ::selection {
   background: #d1e4fe;
   text-shadow: none;
@@ -825,8 +832,6 @@ a {
   text-decoration: none;
   display: inline;
   cursor: pointer;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -836,8 +841,6 @@ a:hover {
 }
 /* line 42, ../scss/base/components/_layout.scss */
 a:after, a:before {
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -1119,8 +1122,6 @@ h6, .h6 {
   width: 0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
@@ -1144,8 +1145,6 @@ h6, .h6 {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
-  -moz-transition: all 0.2s 0;
-  -o-transition: all 0.2s 0;
   -webkit-transition: all 0.2s 0;
   transition: all 0.2s 0;
 }
@@ -1172,6 +1171,7 @@ h6, .h6 {
   -o-transition: all 0.2s 0.3s;
   -webkit-transition: all 0.2s;
   -webkit-transition-delay: 0.3s;
+  -webkit-transition: all 0.2s 0.3s;
   transition: all 0.2s 0.3s;
 }
 /* line 41, ../scss/base/components/_dropdowns.scss */
@@ -1206,8 +1206,6 @@ h6, .h6 {
   z-index: 100;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -1329,8 +1327,6 @@ h6, .h6 {
   overflow: hidden;
   padding: 0 10px;
   border-top: 1px solid #f1f1f1;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -1540,18 +1536,16 @@ progress[value]::-webkit-progress-bar {
 }
 /* line 55, ../scss/base/components/_progress.scss */
 progress[value]::-webkit-progress-value {
+  -webkit-background-size: 25px 15px, 100% 100%, 100% 100%;
   background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
   height: 15px;
   height: 0.9375rem;
-  -moz-transition: width 0.2s;
-  -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
@@ -1563,13 +1557,10 @@ progress[value]::-moz-progress-bar {
   border: 0;
   height: 15px;
   height: 0.9375rem;
-  -moz-transition: width 0.2s;
-  -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
@@ -1581,13 +1572,10 @@ progress[value]::-ms-fill {
   border: 0;
   height: 15px;
   height: 0.9375rem;
-  -moz-transition: width 0.2s;
-  -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
@@ -1595,18 +1583,16 @@ progress[value]::-ms-fill {
 
 /* line 60, ../scss/base/components/_progress.scss */
 .progress-bar__value {
+  -webkit-background-size: 25px 15px, 100% 100%, 100% 100%;
   background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
   height: 15px;
   height: 0.9375rem;
-  -moz-transition: width 0.2s;
-  -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #2690b0;
@@ -1615,35 +1601,31 @@ progress[value]::-ms-fill {
 /*==========  Inderterminate progress  ==========*/
 /* line 69, ../scss/base/components/_progress.scss */
 progress:not([value]) {
+  -webkit-background-size: 25px 15px, 100% 100%, 100% 100%;
   background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
   height: 15px;
   height: 0.9375rem;
-  -moz-transition: width 0.2s;
-  -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
 }
 /* line 72, ../scss/base/components/_progress.scss */
 progress:not([value])::-webkit-progress-bar {
+  -webkit-background-size: 25px 15px, 100% 100%, 100% 100%;
   background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 2px;
   border: 0;
   height: 15px;
   height: 0.9375rem;
-  -moz-transition: width 0.2s;
-  -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #f1f1f1;
@@ -1655,13 +1637,10 @@ progress:not([value])::-moz-progress-bar {
   border: 0;
   height: 15px;
   height: 0.9375rem;
-  -moz-transition: width 0.2s;
-  -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #f1f1f1;
@@ -1673,13 +1652,10 @@ progress:not([value])::-ms-fill {
   border: 0;
   height: 15px;
   height: 0.9375rem;
-  -moz-transition: width 0.2s;
-  -o-transition: width 0.2s;
   -webkit-transition: width 0.2s;
   transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
   animation: progress-bar 1s linear infinite;
-  background-image: -moz-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: -webkit-linear-gradient(135deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-image: linear-gradient(-45deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, rgba(0, 0, 0, 0) 66%);
   background-color: #f1f1f1;
@@ -1697,7 +1673,6 @@ progress:not([value])::-ms-fill {
 @-webkit-keyframes spinner {
   /* line 6, ../scss/base/components/_spinners.scss */
   100% {
-    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -1706,7 +1681,6 @@ progress:not([value])::-ms-fill {
 @keyframes spinner {
   /* line 6, ../scss/base/components/_spinners.scss */
   100% {
-    -moz-transform: rotate(360deg);
     -ms-transform: rotate(360deg);
     -webkit-transform: rotate(360deg);
     transform: rotate(360deg);
@@ -1916,8 +1890,6 @@ progress:not([value])::-ms-fill {
   border-color: #e4e4e4;
   line-height: 16px;
   line-height: 1rem;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   -moz-appearance: none;
@@ -1937,6 +1909,7 @@ progress:not([value])::-ms-fill {
 }
 /* line 11, ../scss/base/components/buttons/_styles.scss */
 .btn:focus {
+  -webkit-box-shadow: 0 0 10px #f1f1f1;
   box-shadow: 0 0 10px #f1f1f1;
 }
 /* line 12, ../scss/base/components/buttons/_styles.scss */
@@ -1950,8 +1923,6 @@ progress:not([value])::-ms-fill {
 /* line 39, ../scss/base/components/buttons/_styles.scss */
 .btn:focus {
   outline: none;
-  -moz-transition-duration: 0.05s;
-  -o-transition-duration: 0.05s;
   -webkit-transition-duration: 0.05s;
   transition-duration: 0.05s;
 }
@@ -1964,6 +1935,7 @@ progress:not([value])::-ms-fill {
 }
 /* line 52, ../scss/base/components/buttons/_styles.scss */
 .btn:disabled:focus, .btn:disabled:hover:focus {
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 
@@ -2011,6 +1983,7 @@ progress:not([value])::-ms-fill {
 }
 /* line 11, ../scss/base/components/buttons/_styles.scss */
 .btn--beta:focus {
+  -webkit-box-shadow: 0 0 10px #2690b0;
   box-shadow: 0 0 10px #2690b0;
 }
 /* line 12, ../scss/base/components/buttons/_styles.scss */
@@ -2033,6 +2006,7 @@ progress:not([value])::-ms-fill {
 }
 /* line 11, ../scss/base/components/buttons/_styles.scss */
 .btn--gamma:focus {
+  -webkit-box-shadow: 0 0 10px #4eb455;
   box-shadow: 0 0 10px #4eb455;
 }
 /* line 12, ../scss/base/components/buttons/_styles.scss */
@@ -2055,6 +2029,7 @@ progress:not([value])::-ms-fill {
 }
 /* line 11, ../scss/base/components/buttons/_styles.scss */
 .btn--delta:focus {
+  -webkit-box-shadow: 0 0 10px #b44e4e;
   box-shadow: 0 0 10px #b44e4e;
 }
 /* line 12, ../scss/base/components/buttons/_styles.scss */
@@ -2077,6 +2052,7 @@ progress:not([value])::-ms-fill {
 }
 /* line 11, ../scss/base/components/buttons/_styles.scss */
 .btn--epsilon:focus {
+  -webkit-box-shadow: 0 0 10px #444444;
   box-shadow: 0 0 10px #444444;
 }
 /* line 12, ../scss/base/components/buttons/_styles.scss */
@@ -2097,6 +2073,7 @@ progress:not([value])::-ms-fill {
 /* line 100, ../scss/base/components/buttons/_styles.scss */
 .no-button-style {
   background: none;
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: 0;
   padding: 0;
@@ -2152,13 +2129,12 @@ textarea {
   border: 1px solid #f3f3f3;
   outline: 0;
   width: 100%;
+  -webkit-box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
   box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
   padding: 10px;
   padding: 0.625rem;
   -moz-appearance: none;
   -webkit-appearance: none;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -2178,6 +2154,7 @@ input[type="time"]:focus,
 input[type="url"]:focus,
 textarea:focus {
   border: 1px solid #cccccc;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 /* line 61, ../scss/base/components/form/_form.scss */
@@ -2223,13 +2200,12 @@ select {
   padding: 0.625rem 0.625rem 0.625rem 0.3125rem;
   -moz-appearance: none;
   -webkit-appearance: none;
-  -moz-transition: box-shadow 0.2s;
-  -o-transition: box-shadow 0.2s;
-  -webkit-transition: box-shadow 0.2s;
+  -webkit-transition: -webkit-box-shadow 0.2s;
   transition: box-shadow 0.2s;
 }
 /* line 92, ../scss/base/components/form/_form.scss */
 select:focus, select:hover {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 /* line 97, ../scss/base/components/form/_form.scss */
@@ -2237,11 +2213,13 @@ select[multiple=multiple] {
   height: auto;
   border: 1px solid #cbcbcb;
   border-radius: 2px;
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
   box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
 }
 /* line 103, ../scss/base/components/form/_form.scss */
 select[multiple=multiple]:focus, select[multiple=multiple]:hover {
   border-color: #cccccc;
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 /* line 110, ../scss/base/components/form/_form.scss */
@@ -2352,6 +2330,7 @@ select::-ms-expand {
   height: 20px;
   border-radius: 10px;
   border: 1px solid #cbcbcb;
+  -webkit-box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
@@ -2462,6 +2441,7 @@ input[disabled][type=checkbox] + label:before, input[disabled][type=radio] + lab
 }
 /* line 20, ../scss/base/components/form/_checkbox.scss */
 input[type=checkbox]:focus + label:before, input[type=radio]:focus + label:before {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 /* line 26, ../scss/base/components/form/_checkbox.scss */
@@ -2502,8 +2482,6 @@ input[type=checkbox] + label:before, input[type=radio] + label:before {
   display: block;
   border-radius: 2px;
   border: 1px solid #cbcbcb;
-  -moz-transition: all 0.4s;
-  -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
@@ -2524,8 +2502,6 @@ input[type=checkbox] + label:after, input[type=radio] + label:after {
   color: #2690b0;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
@@ -2581,6 +2557,7 @@ input[type=radio] + label:after {
 .form__input--error input[type="url"],
 .form__input--error textarea {
   border-color: #b44e4e;
+  -webkit-box-shadow: none;
   box-shadow: none;
   padding-right: 30px;
   padding-right: 1.875rem;
@@ -2600,6 +2577,7 @@ input[type=radio] + label:after {
 .form__input--error input[type="time"]:focus,
 .form__input--error input[type="url"]:focus,
 .form__input--error textarea:focus {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 /* line 32, ../scss/base/components/form/_validation.scss */
@@ -2647,6 +2625,7 @@ input[type=radio] + label:after {
 .form__input--success input[type="url"],
 .form__input--success textarea {
   border-color: #4eb455;
+  -webkit-box-shadow: none;
   box-shadow: none;
   padding-right: 30px;
   padding-right: 1.875rem;
@@ -2666,6 +2645,7 @@ input[type=radio] + label:after {
 .form__input--success input[type="time"]:focus,
 .form__input--success input[type="url"]:focus,
 .form__input--success textarea:focus {
+  -webkit-box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
 }
 /* line 82, ../scss/base/components/form/_validation.scss */
@@ -2688,6 +2668,7 @@ input[type=radio] + label:after {
   display: inline-block;
   position: relative;
   background: #eeeeee;
+  -webkit-box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
   box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 0 3px 3px 3px;
   border-radius: 0 0.1875rem 0.1875rem 0.1875rem;
@@ -2727,14 +2708,10 @@ input[type=radio] + label:after {
   border-color: #e9e7ca;
   margin-bottom: 30px;
   margin-bottom: 1.875rem;
-  -moz-transition: all 0.2s;
-  -o-transition: all 0.2s;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  -moz-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
   /**
@@ -2781,6 +2758,8 @@ input[type=radio] + label:after {
   min-height: 0;
   margin: 0;
   border: 0;
+  -webkit-transform: scale3d(0.5, 1.25, 1.25);
+  transform: scale3d(0.5, 1.25, 1.25);
 }
 
 /*==========================================
@@ -2869,8 +2848,6 @@ input[type=radio] + label:after {
   content: '';
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=20);
   opacity: 0.2;
-  -moz-transition: opacity 0.2s;
-  -o-transition: opacity 0.2s;
   -webkit-transition: opacity 0.2s;
   transition: opacity 0.2s;
 }
@@ -2901,14 +2878,11 @@ input[type=radio] + label:after {
   color: white;
   padding: 20px 0;
   padding: 1.25rem 0;
-  -moz-transition: all 0.4s;
-  -o-transition: all 0.4s;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }
 /* line 22, ../scss/base/components/notifications/_cookie_notification.scss */
 .notification-cookie-show[notification-cookie-position] .notification--cookie.notification--close {
-  -moz-transform: translate3d(0, 100%, 0);
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
 }
@@ -2918,21 +2892,18 @@ input[type=radio] + label:after {
 }
 /* line 31, ../scss/base/components/notifications/_cookie_notification.scss */
 .notification-cookie-show[notification-cookie-position] .notification--cookie {
-  -moz-transform: translate3d(0, 0, 0);
   -webkit-transform: translate3d(0, 0, 0);
   transform: translate3d(0, 0, 0);
 }
 /* line 35, ../scss/base/components/notifications/_cookie_notification.scss */
 [notification-cookie-position=top] .notification--cookie {
   top: 0;
-  -moz-transform: translate3d(0, -100%, 0);
   -webkit-transform: translate3d(0, -100%, 0);
   transform: translate3d(0, -100%, 0);
 }
 /* line 41, ../scss/base/components/notifications/_cookie_notification.scss */
 [notification-cookie-position=bottom] .notification--cookie {
   bottom: 0;
-  -moz-transform: translate3d(0, 100%, 0);
   -webkit-transform: translate3d(0, 100%, 0);
   transform: translate3d(0, 100%, 0);
 }
@@ -2967,10 +2938,8 @@ input[type=radio] + label:after {
   height: auto;
   z-index: 2000;
   visibility: hidden;
-  -moz-backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  -moz-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
@@ -3006,16 +2975,10 @@ input[type=radio] + label:after {
   z-index: 1000;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -moz-transition-property: visibility, opacity;
-  -o-transition-property: visibility, opacity;
   -webkit-transition-property: visibility, opacity;
   transition-property: visibility, opacity;
-  -moz-transition-delay: 0.5s, 0.1s;
-  -o-transition-delay: 0.5s, 0.1s;
   -webkit-transition-delay: 0.5s, 0.1s;
   transition-delay: 0.5s, 0.1s;
-  -moz-transition-duration: 0, 0.5s;
-  -o-transition-duration: 0, 0.5s;
   -webkit-transition-duration: 0, 0.5s;
   transition-duration: 0, 0.5s;
 }
@@ -3024,8 +2987,6 @@ input[type=radio] + label:after {
   visibility: visible;
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
   opacity: 0.4;
-  -moz-transition: opacity 0.5s;
-  -o-transition: opacity 0.5s;
   -webkit-transition: opacity 0.5s;
   transition: opacity 0.5s;
 }
@@ -3036,7 +2997,6 @@ input[type=radio] + label:after {
 @-webkit-keyframes slip-top {
   /* line 6, ../scss/base/components/modals/effects/_slip.scss */
   50% {
-    -moz-transform: rotateX(10deg);
     -ms-transform: rotateX(10deg);
     -webkit-transform: rotateX(10deg);
     transform: rotateX(10deg);
@@ -3047,7 +3007,6 @@ input[type=radio] + label:after {
 @keyframes slip-top {
   /* line 6, ../scss/base/components/modals/effects/_slip.scss */
   50% {
-    -moz-transform: rotateX(10deg);
     -ms-transform: rotateX(10deg);
     -webkit-transform: rotateX(10deg);
     transform: rotateX(10deg);
@@ -3058,7 +3017,6 @@ input[type=radio] + label:after {
 @-webkit-keyframes slip-bottom {
   /* line 13, ../scss/base/components/modals/effects/_slip.scss */
   50% {
-    -moz-transform: rotateX(-10deg);
     -ms-transform: rotateX(-10deg);
     -webkit-transform: rotateX(-10deg);
     transform: rotateX(-10deg);
@@ -3069,7 +3027,6 @@ input[type=radio] + label:after {
 @keyframes slip-bottom {
   /* line 13, ../scss/base/components/modals/effects/_slip.scss */
   50% {
-    -moz-transform: rotateX(-10deg);
     -ms-transform: rotateX(-10deg);
     -webkit-transform: rotateX(-10deg);
     transform: rotateX(-10deg);
@@ -3087,7 +3044,6 @@ html[data-modal-effect|=slip],
 
 /* line 26, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect|=slip] body {
-  -moz-perspective: 1200;
   -webkit-perspective: 1200;
   perspective: 1200;
 }
@@ -3095,7 +3051,6 @@ html[data-modal-effect|=slip],
 /* line 31, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect|=slip] .background,
 [data-modal-effect|=slip] .modal__overlay {
-  -moz-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
 }
@@ -3103,7 +3058,6 @@ html[data-modal-effect|=slip],
 /* line 38, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect=slip-top] .background,
 [data-modal-effect=slip-top] .modal__overlay {
-  -moz-transform-origin: 50% 100%;
   -ms-transform-origin: 50% 100%;
   -webkit-transform-origin: 50% 100%;
   transform-origin: 50% 100%;
@@ -3114,7 +3068,6 @@ html[data-modal-effect|=slip],
 /* line 46, ../scss/base/components/modals/effects/_slip.scss */
 [data-modal-effect=slip-bottom] .background,
 [data-modal-effect=slip-bottom] .modal__overlay {
-  -moz-transform-origin: 50% 0;
   -ms-transform-origin: 50% 0;
   -webkit-transform-origin: 50% 0;
   transform-origin: 50% 0;
@@ -3130,6 +3083,7 @@ html[data-modal-effect|=slip],
   -o-transition: all 0.5s 0.1s;
   -webkit-transition: all 0.5s;
   -webkit-transition-delay: 0.1s;
+  -webkit-transition: all 0.5s 0.1s;
   transition: all 0.5s 0.1s;
 }
 /* line 61, ../scss/base/components/modals/effects/_slip.scss */
@@ -3139,28 +3093,24 @@ html[data-modal-effect|=slip],
 }
 /* line 68, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-top] .modal__content {
-  -moz-transform: translateY(-300%);
   -ms-transform: translateY(-300%);
   -webkit-transform: translateY(-300%);
   transform: translateY(-300%);
 }
 /* line 73, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-top].modal-show .modal__content {
-  -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 /* line 80, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-bottom] .modal__content {
-  -moz-transform: translateY(300%);
   -ms-transform: translateY(300%);
   -webkit-transform: translateY(300%);
   transform: translateY(300%);
 }
 /* line 85, ../scss/base/components/modals/effects/_slip.scss */
 .modal[data-modal-effect=slip-bottom].modal-show .modal__content {
-  -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0);
@@ -3173,8 +3123,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect|=slide] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -moz-transition: all 0.5s 0;
-  -o-transition: all 0.5s 0;
   -webkit-transition: all 0.5s 0;
   transition: all 0.5s 0;
 }
@@ -3186,60 +3134,53 @@ html[data-modal-effect|=slip],
   -o-transition: all 0.5s 0.1s;
   -webkit-transition: all 0.5s;
   -webkit-transition-delay: 0.1s;
+  -webkit-transition: all 0.5s 0.1s;
   transition: all 0.5s 0.1s;
 }
 /* line 21, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-top] .modal__content {
-  -moz-transform: translateY(-300%);
   -ms-transform: translateY(-300%);
   -webkit-transform: translateY(-300%);
   transform: translateY(-300%);
 }
 /* line 26, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-top].modal-show .modal__content {
-  -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 /* line 33, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-right] .modal__content {
-  -moz-transform: translateX(300%);
   -ms-transform: translateX(300%);
   -webkit-transform: translateX(300%);
   transform: translateX(300%);
 }
 /* line 38, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-right].modal-show .modal__content {
-  -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -webkit-transform: translateX(0);
   transform: translateX(0);
 }
 /* line 45, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-bottom] .modal__content {
-  -moz-transform: translateY(300%);
   -ms-transform: translateY(300%);
   -webkit-transform: translateY(300%);
   transform: translateY(300%);
 }
 /* line 50, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-bottom].modal-show .modal__content {
-  -moz-transform: translateY(0);
   -ms-transform: translateY(0);
   -webkit-transform: translateY(0);
   transform: translateY(0);
 }
 /* line 57, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-left] .modal__content {
-  -moz-transform: translateX(-300%);
   -ms-transform: translateX(-300%);
   -webkit-transform: translateX(-300%);
   transform: translateX(-300%);
 }
 /* line 62, ../scss/base/components/modals/effects/_slide.scss */
 .modal[data-modal-effect=slide-left].modal-show .modal__content {
-  -moz-transform: translateX(0);
   -ms-transform: translateX(0);
   -webkit-transform: translateX(0);
   transform: translateX(0);
@@ -3250,7 +3191,6 @@ html[data-modal-effect|=slip],
 ===================================================*/
 /* line 6, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect|=flip] {
-  -moz-perspective: 1300;
   -webkit-perspective: 1300;
   perspective: 1300;
 }
@@ -3258,11 +3198,8 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect|=flip] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -moz-transform-style: preserve-3d;
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -3273,25 +3210,21 @@ html[data-modal-effect|=slip],
 }
 /* line 23, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect=flip-horizontal] .modal__content {
-  -moz-transform: rotateY(-70deg);
   -webkit-transform: rotateY(-70deg);
   transform: rotateY(-70deg);
 }
 /* line 28, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect=flip-horizontal].modal-show .modal__content {
-  -moz-transform: rotateY(0deg);
   -webkit-transform: rotateY(0deg);
   transform: rotateY(0deg);
 }
 /* line 35, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect=flip-vertical] .modal__content {
-  -moz-transform: rotateX(-70deg);
   -webkit-transform: rotateX(-70deg);
   transform: rotateX(-70deg);
 }
 /* line 40, ../scss/base/components/modals/effects/_flip.scss */
 .modal[data-modal-effect=flip-vertical].modal-show .modal__content {
-  -moz-transform: rotateX(0deg);
   -webkit-transform: rotateX(0deg);
   transform: rotateX(0deg);
 }
@@ -3303,12 +3236,9 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=fadescale] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -moz-transform: scale(0.7, 0.7);
   -ms-transform: scale(0.7, 0.7);
   -webkit-transform: scale(0.7, 0.7);
   transform: scale(0.7, 0.7);
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -3316,7 +3246,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=fadescale].modal-show .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
-  -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
@@ -3329,12 +3258,9 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=superscale] .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
   opacity: 0;
-  -moz-transform: scale(2, 2);
   -ms-transform: scale(2, 2);
   -webkit-transform: scale(2, 2);
   transform: scale(2, 2);
-  -moz-transition: all 0.3s;
-  -o-transition: all 0.3s;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }
@@ -3342,7 +3268,6 @@ html[data-modal-effect|=slip],
 .modal[data-modal-effect=superscale].modal-show .modal__content {
   filter: progid:DXImageTransform.Microsoft.Alpha(enabled=false);
   opacity: 1;
-  -moz-transform: scale(1, 1);
   -ms-transform: scale(1, 1);
   -webkit-transform: scale(1, 1);
   transform: scale(1, 1);
@@ -3372,6 +3297,7 @@ html[data-modal-effect|=slip],
     background: transparent !important;
     color: #000 !important;
     /* Black prints faster: h5bp.com/s */
+    -webkit-box-shadow: none !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
