@@ -1,7 +1,3 @@
-# Todo
-
-* -
-
 # Installation
 Make sure you have Git, GruntJS and Bower.
 
@@ -10,8 +6,10 @@ Make sure you have Git, GruntJS and Bower.
 
 #### Bower dependencies
 Install the Bower dependencies, see bower.json which dependencies.
+
     $ bower install
 
 #### Grunt dependencies
 Install the Grunt dependencies, see Gruntfile.js which dependencies.
+
     $ npm install
