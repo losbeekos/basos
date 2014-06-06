@@ -10,6 +10,5 @@
     "fitvids": "latest",
     "parsleyjs": "latest",
     "jquery-placeholder": "latest"
-  },
-  "private": true
+  }
 }
