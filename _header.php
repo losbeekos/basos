@@ -45,21 +45,6 @@
         <a href="#main" class="show-screenreaders">Skip to main content</a>
 
         <div id="background" class="background">
-            <!-- <div class="notification notification--alpha notification--cookie">
-                <div class="notification__text">Wij gebruiken cookies om uw gebruikerservaring te verbeteren en statistieken bij te houden. <a class="notification__more-info" href="">Meer informatie</a></div>
-                <a id="cookie-notification-accept" class="btn btn--beta btn--small" data-notification-close>ok, ik snap het</a>
-                <button class="notification__close" data-notification-close></button>
-            </div> -->
-
-            <!-- <div class="notification notification--alpha notification--cookie">
-                <div class="notification__text">Wij gebruiken cookies om uw gebruikerservaring te verbeteren en statistieken bij te houden.</div>
-                <div class="btn-container-center">
-                    <a id="cookie-notification-accept" class="btn btn--beta btn--small">akkoord</a>
-                    <a id="cookie-notification-decline" class="btn btn--alpha btn--small">niet akkoord</a>
-                </div>
-                <button class="notification__close" data-notification-close></button>
-            </div> -->
-
             <div id="container" class="container">
                 <!--[if lt IE 9]>
                     <div class="notification error">
