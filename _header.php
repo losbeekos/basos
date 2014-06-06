@@ -13,9 +13,9 @@
         <link rel="stylesheet" href="css/main.css" />
         <link rel="shortcut icon" href="favicon.ico" />
 
-        <meta name="apple-mobile-web-app-capable" content="yes">
-        <meta name="apple-mobile-web-app-status-bar-style" content="black">
-        <meta name="apple-mobile-web-app-title" content="">
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+        <meta name="apple-mobile-web-app-title" content="" />
 
         <meta name="msapplication-TileColor" content="#ffffff" />
         <meta name="msapplication-TileImage" content="image-144x144px.png" />
@@ -26,19 +26,19 @@
         <meta property="og:site_name" content="Site name" />
         <meta property="og:type" content="website" />
 
-        <meta name="twitter:card" content="app">
-        <meta name="twitter:site" content="@site_account">
-        <meta name="twitter:creator" content="@losbeekos">
-        <meta name="twitter:url" content="Current URL">
-        <meta name="twitter:title" content="">
-        <meta name="twitter:description" content="">
-        <meta name="twitter:image" content="image-114x114px.png">
+        <meta name="twitter:card" content="app" />
+        <meta name="twitter:site" content="@site_account" />
+        <meta name="twitter:creator" content="@losbeekos" />
+        <meta name="twitter:url" content="Current URL" />
+        <meta name="twitter:title" content="" />
+        <meta name="twitter:description" content="" />
+        <meta name="twitter:image" content="image-114x114px.png" />
 
-        <script src="js/vendor/modernizr.min.js"></script>
+        <script src="js/bower_components/modernizr/modernizr.min.js"></script>
 
         <!--[if lt IE 9]>
-            <script src="js/vendor/respond.min.js"></script>
-            <script src="js/plugins/selectivizr/selectivizr.min.js"></script>
+            <script src="js/bower_components/respond/respond.min.js"></script>
+            <script src="js/bower_components/selectivizr/selectivizr.js"></script>
         <![endif]-->
     </head>
     <body>
