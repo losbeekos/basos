@@ -2,43 +2,42 @@ app.formValidation = {
     init: function(){
         var self = this,
             parsleyOptions = {
-                trigger: 'change',
-                successClass: 'form__input--success',
                 errorClass: 'form__input--error',
-                errors: {
-                    classHandler: function (element, isRadioOrCheckbox){
-                        var $element = $(element);
+                successClass: 'form__input--success',
+                errorsWrapper: '<div class="parsley-container"></div>',
+                errorTemplate: '<div></div>',
+                trigger: 'change',
 
-                        if ($element[0].localName === 'select') {
-                            $($element[0].offsetParent).closest('.form__input').addClass('form__input--select-validated');
-                        }
+                classHandler: function (element){
+                    var $element = element.$element[0];
 
-                        if (isRadioOrCheckbox) {
-                            return $element.closest('.form__input-list');
-                        } else {
-                            return $element.closest('.form__input');
-                        }
-                    },
-
-                    container: function (element, isRadioOrCheckbox) {
-                        var $container = element.closest('.form__input');
-
-                        if ($container.length === 0) {
-                            $container = $("<ul class='parsley-container'></ul>").append($container);
-                        }
-
-                        return $container;
+                    if ($element.localName === 'select') {
+                        element.$element.closest('.form__input').addClass('form__input--select-validated');
                     }
+
+                    if ($element.localName === 'input' && $element.type === 'checkbox' || $element.localName === 'input' && $element.type === 'radio') {
+                        return element.$element.closest('.form__input-list');
+                    } else {
+                        return element.$element.closest('.form__input');
+                    }
+                },
+
+                errorsContainer: function (element) {
+                    var $container = element.$element.closest('.form__input');
+
+                    return $container;
                 }
             };
 
         if(app.settings.formValidation.$el.length > 0){
-            yepnope.injectJs(app.path + 'plugins/jquery.parsley/i18n/messages.nl.js' + app.settings.version, function () {
-                yepnope.injectJs(app.path + 'plugins/jquery.parsley/parsley.js' + app.settings.version,
+            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.settings.formValidation.language + '.js' + app.settings.version, function () {
+                yepnope.injectJs(app.pathBower + 'parsleyjs/dist/parsley.js' + app.settings.version,
                     function(){
                         app.settings.formValidation.$el.each(function () {
                             $(this).parsley(parsleyOptions);
                         });
+
+                        window.ParsleyValidator.setLocale(app.settings.formValidation.language);
                     });
             });
         }

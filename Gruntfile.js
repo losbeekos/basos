@@ -1,5 +1,7 @@
 module.exports = function(grunt) {
 
+    var todayTimestamp = '<%= grunt.template.today("ddmmyyyyhhMMss") %>';
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -14,30 +16,10 @@ module.exports = function(grunt) {
             }
         },
 
-        uglify: {
-            options: {
-                compress: {
-                    drop_console: true
-                }
-            },
-
-            dynamic_mappings: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: 'js/',
-                        src: ['main.js', 'app.js'],
-                        dest: 'js/',
-                        ext: '.<%= grunt.template.today("ddmmyyyyhhMMss") %>.js',
-                        extDot: 'first'
-                    },
-                ]
-            },
-        },
-
         jshint: {
-            files: ['Gruntfile.js', 'js/*.js', 'js/helpers/*.js', 'js/modules/*.js'],
+            files: ['Gruntfile.js', 'js/*.js', 'js/helpers/*.js', 'js/modules/*.js', '!js/*.*.min.js'],
             options: {
+                expr: true,
                 node: true,
                 browser: true,
                 esnext: true,
@@ -72,39 +54,125 @@ module.exports = function(grunt) {
             }
         },
 
+        uglify: {
+            options: {
+                compress: {
+                    drop_console: true
+                }
+            },
+
+            js: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'js/',
+                        src: ['main.js', 'app.js'],
+                        dest: 'js/',
+                        ext: '.'+todayTimestamp+'.min.js',
+                        extDot: 'first'
+                    },
+                ]
+            },
+
+            bower: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'js/bower_components/',
+                        src: ['**/*.js', '!jquery/src/*.js', '!parsleyjs/src/wrap/*.js'],
+                        dest: 'js/components/',
+                        ext: '.js',
+                        extDot: 'last'
+                    },
+                ]
+            },
+        },
+
         autoprefixer: {
-            dist: {
+            files: {
+                'css/main.css': 'css/main.css'
+            }
+        },
+
+        sass: {
+            dev: {
+                options: {
+                    style: 'expanded',
+                    require: 'susy'
+                },
+
                 files: {
-                    'css/main.css': 'css/main.css'
+                    'css/main.css': 'scss/main.scss'
                 }
             }
         },
 
-        compass: {
+        cmq: {
+            options: {
+                log: true
+            },
+
             dist: {
-                options: {
-                    sassDir: 'scss',
-                    cssDir: 'css',
-                    environment: 'development',
-                    outputStyle: 'expanded'
+                files: {
+                    'css': ['css/main.css']
                 }
             }
+        },
+
+        cssmin: {
+            minify: {
+                expand: true,
+                cwd: 'css/',
+                src: ['main.css', '!*.min.css'],
+                dest: 'css/',
+                ext: '.'+todayTimestamp+'.min.css'
+            }
+        },
+
+        imagemin: {
+            default: {
+                options: {
+                    optimizationLevel: 3
+                },
+
+                files: [{
+                    expand: true,
+                    cwd: 'img/',
+                    src: ['**/*.{png,jpg,gif}'],
+                    dest: 'img/'
+                }]
+            }
+        },
+
+        imageoptim: {
+            options: {
+                jpegMini: false,
+                imageAlpha: true,
+            },
+
+            src: ['img', 'img']
         },
 
         watch: {
             files: ['<%= jshint.files %>', 'scss/**/*.scss'],
-            tasks: ['concat', 'jshint', 'compass', 'autoprefixer']
+            tasks: ['concat', 'jshint', 'sass', 'cmq', 'autoprefixer']
         }
 
     });
 
-    grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-concat');
     grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-compass');
     grunt.loadNpmTasks('grunt-contrib-jshint');
+    grunt.loadNpmTasks('grunt-contrib-uglify');
+    grunt.loadNpmTasks('grunt-contrib-sass');
+    grunt.loadNpmTasks('grunt-contrib-cssmin');
+    grunt.loadNpmTasks('grunt-contrib-imagemin');
+    grunt.loadNpmTasks('grunt-combine-media-queries');
+    grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-autoprefixer');
 
-    grunt.registerTask('default', ['concat', 'jshint', 'compass', 'autoprefixer', 'watch']);
+    grunt.registerTask('default', ['concat', 'jshint', 'sass', 'cmq', 'autoprefixer', 'watch']);
+    grunt.registerTask('dev', ['concat', 'jshint', 'sass', 'cmq', 'autoprefixer', 'watch']);
+    grunt.registerTask('dist', ['concat', 'jshint', 'uglify', 'sass', 'cmq', 'autoprefixer', 'cssmin', 'imagemin', 'imageoptim']);
 
 };

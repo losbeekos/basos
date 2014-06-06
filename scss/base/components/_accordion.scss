@@ -27,7 +27,7 @@
     border-top: 1px solid $accordion-border-color;
 
     @if $accordion-gradient {
-        @include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     }
 
     &:hover {
@@ -40,8 +40,7 @@
     overflow: hidden;
     padding: 0 $accordion-padding;
     border-top: 1px solid $accordion-trigger-bg-color;
-
-    @include single-transition(all, $accordion-transition-speed);
+    transition: all, $accordion-transition-speed;
 
     .lt-ie9 & {
         height: 0;

@@ -1,0 +1,15 @@
+{
+  "name": "basos",
+  "version": "0.0.1",
+  "dependencies": {
+    "modernizr": "latest",
+    "respond": "latest",
+    "selectivizr": "latest",
+    "jquery": "~1.x",
+    "fastclick": "latest",
+    "fitvids": "latest",
+    "parsleyjs": "latest",
+    "jquery-placeholder": "latest"
+  },
+  "private": true
+}

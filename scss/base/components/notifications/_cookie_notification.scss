@@ -13,14 +13,14 @@
     margin-bottom: 0;
     border: none;
     color: $white;
+    transition: all $base-transition-speed*2;
 
     @include rem(padding, 20px 0);
-    @include single-transition(all, $base-transition-speed*2);
 
 
     &.notification--close {
         .notification-cookie-show[notification-cookie-position] & {
-            @include translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
         }
     }
 
@@ -29,19 +29,17 @@
     }
 
     .notification-cookie-show[notification-cookie-position] & {
-        @include translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
     }
 
     [notification-cookie-position=top] & {
         top: 0;
-
-        @include translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
     }
 
     [notification-cookie-position=bottom] & {
         bottom: 0;
-
-        @include translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
     }
 
     .notification__more-info {

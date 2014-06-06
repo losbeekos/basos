@@ -16,17 +16,15 @@
         visibility: hidden;
         position: absolute;
         z-index: 100;
-
-        @include opacity(0);
-        @include single-transition(all, $tooltip-transition-speed);
+        opacity: 0;
+        transition: all $tooltip-transition-speed;
     }
 
     &.tooltip--active {
         .tooltip__content,
         &:after {
             visibility: visible;
-
-            @include opacity(1);
+            opacity: 1;
         }
     }
 

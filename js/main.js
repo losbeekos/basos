@@ -1,22 +1,18 @@
 'use strict';
 
 var app = app || {},
-    helper = helper || {};
+    helper = helper || {},
+    dist = false;
 
 app.path = 'js/';
+dist ? app.pathBower = app.path+'components/' : app.pathBower = app.path+'bower_components/';
 
 yepnope.errorTimeout = 2000;
 
 yepnope([
     {
-        load: 'https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js',
-        callback: function () {
-            if (!window.jQuery) {
-                yepnope(app.path + 'vendor/jquery-1.11.0.min.js');
-            }
-        }
+        load: app.pathBower + 'jquery/dist/jquery.min.js',
     },
-
     {
         load: app.path +'app.js'
     }

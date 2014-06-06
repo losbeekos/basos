@@ -18,12 +18,12 @@
     border-style: solid;
     border-radius: $base-border-radius;
     position: relative;
+    transition: all $base-transition-speed;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
 
     @include notification(lighten($color-zeta, 45%), lighten($color-zeta, 38%), darken($color-zeta, 40%), $icon-notification-info, $color-zeta);
     @include rem(margin-bottom, 30px);
-    @include single-transition(all, $base-transition-speed);
-    @include transform-style(preserve-3d);
-    @include backface-visibility(hidden);
 
     @include breakpoint(beta-and-up) {
         @include rem(padding, 20px);
@@ -41,7 +41,7 @@
 
 
     &.notification--close {
-        @include opacity(0);
+        opacity: 0;
 
         &:not(.notification--cookie) {
             height: 0;
@@ -50,8 +50,7 @@
             min-height: 0;
             margin: 0;
             border: 0;
-
-            @include scale3d(0.5);
+            transform: scale3d(0.5);
         }
     }
 }

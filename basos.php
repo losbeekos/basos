@@ -185,7 +185,7 @@
 
                     <section id="form">
                         <h1>Form</h1>
-                        <form class="form" parsley-validate novalidate="novalidate">
+                        <form class="form" data-form-validate novalidate="novalidate">
                             <fieldset>
                                 <legend>Persoonlijke gegevens</legend>
                                 <div class="form__row">
@@ -359,8 +359,8 @@
                                     <div class="column-7 column--omega">
                                         <div class="column-6 form__input">
                                             <ul class="form__input-list list-inline">
-                                                <li><input name="radio1" type="radio" name="radio2" id="radio8" /><label for="radio8">Yes</label></li>
-                                                <li><input name="radio2" type="radio" name="radio2" id="radio9" /><label for="radio9">No</label></li>
+                                                <li><input name="radio1" type="radio" name="radio1" id="radio8" /><label for="radio8">Yes</label></li>
+                                                <li><input name="radio1" type="radio" name="radio1" id="radio9" /><label for="radio9">No</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -407,7 +407,7 @@
 
 
                             <fieldset>
-                                <legend>Live validation (<a href="http://parsleyjs.org/">http://parsleyjs.org</a>)</legend>
+                                <legend>Live validation (<a href="http://parsleyjs.org/">http://data-parsleyjs.org</a>)</legend>
                                 <div class="form__row">
                                     <div class="column-5 form__label">
                                         <label>Aanhef</label>
@@ -430,7 +430,7 @@
                                     </div>
                                     <div class="column-7 column--omega">
                                         <div class="column-3 form__input">
-                                            <input type="text" placeholder="0123AB" parsley-regexp="^\d{4}[a-zA-Z]{2}$" parsley-error-message="Dit is geen geldige postcode." parsley-maxlength="6" maxlength="6" />
+                                            <input type="text" placeholder="0123AB" data-parsley-pattern="^\d{4}[a-zA-Z]{2}$" data-parsley-error-message="Dit is geen geldige postcode." data-parsley-maxlength="6" maxlength="6" />
                                         </div>
                                     </div>
                                 </div>
@@ -440,7 +440,7 @@
                                     </div>
                                     <div class="column-7 column--omega">
                                         <div class="column-4 form__input">
-                                            <input type="tel" placeholder="0123456789" parsley-type="digits" parsley-minlength="10" parsley-error-message="Dit is geen geldig telefoonnummer." />
+                                            <input type="tel" placeholder="0123456789" data-parsley-type="digits" data-parsley-minlength="10" data-parsley-error-message="Dit is geen geldig telefoonnummer." />
                                         </div>
                                     </div>
                                 </div>
@@ -450,7 +450,7 @@
                                     </div>
                                     <div class="column-7 column--omega">
                                         <div class="column-4 form__input">
-                                            <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" parsley-error-message="Dit is geen gelding IBAN nummer." />
+                                            <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-parsley-error-message="Dit is geen gelding IBAN nummer." />
                                         </div>
                                     </div>
                                 </div>
@@ -480,7 +480,7 @@
                                     </div>
                                     <div class="column-7 column--omega">
                                         <div class="column-6 form__input">
-                                            <input type="password" parsley-equalto="#password" parsley-error-message="Wachtwoorden zijn niet identiek." />
+                                            <input type="password" data-parsley-equalto="#password" data-parsley-error-message="Wachtwoorden zijn niet identiek." />
                                         </div>
                                     </div>
                                 </div>
@@ -501,7 +501,7 @@
                                     <div class="column-7 column--omega">
                                         <div class="column-6 form__input">
                                             <ul class="form__input-list list-unstyled">
-                                                <li><input name="checkbox2" type="checkbox" checked="checked" id="checkbox10" parsley-mincheck="2" /><label for="checkbox10">Checkbox</label></li>
+                                                <li><input name="checkbox2" type="checkbox" checked="checked" id="checkbox10" data-parsley-mincheck="2" /><label for="checkbox10">Checkbox</label></li>
                                                 <li><input name="checkbox2" type="checkbox" id="checkbox11" /><label for="checkbox11">Checkbox</label></li>
                                                 <li><input name="checkbox2" type="checkbox" id="checkbox12" /><label for="checkbox12">Checkbox</label></li>
                                                 <li><input name="checkbox2" type="checkbox" id="checkbox13" /><label for="checkbox13">Checkbox</label></li>
@@ -517,11 +517,11 @@
                                     <div class="column-7 column--omega">
                                         <div class="column-6 form__input">
                                             <ul class="form__input-list list-unstyled">
-                                                <li><input required="required" name="radio" type="radio" name="radio" id="radio13" /><label for="radio13">Radio</label></li>
-                                                <li><input name="radio" type="radio" name="radio" id="radio14" /><label for="radio14">Radio</label></li>
-                                                <li><input name="radio" type="radio" name="radio" id="radio10" /><label for="radio10">Radio</label></li>
-                                                <li><input name="radio" type="radio" name="radio" id="radio11" /><label for="radio11">Radio</label></li>
-                                                <li><input name="radio" type="radio" name="radio" id="radio12" /><label for="radio12">Radio</label></li>
+                                                <li><input required="required" name="radio2" type="radio" id="radio13" /><label for="radio13">Radio</label></li>
+                                                <li><input name="radio2" type="radio" id="radio14" /><label for="radio14">Radio</label></li>
+                                                <li><input name="radio2" type="radio" id="radio10" /><label for="radio10">Radio</label></li>
+                                                <li><input name="radio2" type="radio" id="radio11" /><label for="radio11">Radio</label></li>
+                                                <li><input name="radio2" type="radio" id="radio12" /><label for="radio12">Radio</label></li>
                                             </ul>
                                         </div>
                                     </div>

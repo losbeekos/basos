@@ -48,10 +48,11 @@ $input-selectors: '
     outline: 0;
     width: 100%;
     box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
+    transition: all $base-transition-speed;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
     @include rem(padding, 10px);
-    @include appearance(none);
-    @include single-transition(all, $base-transition-speed);
 
     &:focus {
         border: 1px solid #cccccc;
@@ -84,10 +85,11 @@ select {
     text-overflow: '';
     text-indent: 1px;
     // End of brutal hack
+    transition: box-shadow $base-transition-speed;
+    -webkit-appearance: none;
+    -moz-appearance: none;
 
     @include rem(padding, 10px 10px 10px 5px);
-    @include appearance(none);
-    @include single-transition(box-shadow, $base-transition-speed);
 
     &:focus,
     &:hover {

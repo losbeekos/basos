@@ -24,14 +24,13 @@
 
     &:before {
         content: '';
-
-        @include opacity(0.2);
-        @include single-transition(opacity, $base-transition-speed);
+        opacity: 0.2;
+        transition: opacity $base-transition-speed;
     }
 
     &:hover {
         &:before {
-            @include opacity(0.5);
+            opacity: 0.5;
         }
     }
 

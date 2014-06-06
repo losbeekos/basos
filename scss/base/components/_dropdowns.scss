@@ -8,9 +8,8 @@
     &:hover {
         .dropdown__content {
             visibility: visible;
-
-            @include opacity(1);
-            @include single-transition(all, 0.2s, 0);
+            opacity: 1;
+            transition: all 0.2s 0;
         }
     }
 
@@ -34,9 +33,8 @@
     visibility: hidden;
     background-color: lighten($btn-bg-color-alpha, 5%);
     border: 1px solid darken($btn-bg-color-alpha, 10%);
-
-    @include opacity(0);
-    @include single-transition(all, 0.2s, 0.3s);
+    opacity: 0;
+    transition: all 0.2s 0 0.3s;
 
     a {
         display: block;

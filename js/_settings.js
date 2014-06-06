@@ -55,10 +55,10 @@ app.settings = {
     /*==========  Cycle  ==========*/
 
     cycle: {
-        $el: $('.spotlight-wrap', '#spotlight'),
-        slides: '> .spotlight-item',
-        pager : '> .spotlight-pager',
-        pagerActiveClass: 'spotlight-pager-active'
+        $el: $('.cycle-wrap', '.cycle'),
+        slides: '> .cycle-item',
+        pager : '> .cycle-pager',
+        pagerActiveClass: 'cycle-pager-active'
     },
 
 
@@ -85,7 +85,8 @@ app.settings = {
     /*==========  Form validation  ==========*/
 
     formValidation: {
-        $el: $('[parsley-validate]')
+        $el: $('[data-form-validate]'),
+        language: 'nl'
     },
 
 

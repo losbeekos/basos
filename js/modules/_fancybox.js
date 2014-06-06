@@ -3,8 +3,8 @@ app.fancybox = {
 
     init: function(){
         var self = this,
-            urlFancybox = app.path + 'plugins/jquery.fancybox/jquery.fancybox.pack.js',
-            urlFancyboxMediaHelper = app.path + 'plugins/jquery.fancybox/helpers/jquery.fancybox-media.min.js';
+            urlFancybox = app.pathBower + 'fancybox/jquery.fancybox.pack.js',
+            urlFancyboxMediaHelper = app.pathBower + 'fancybox/helpers/jquery.fancybox-media.js';
 
         yepnope({
             test : self.el,

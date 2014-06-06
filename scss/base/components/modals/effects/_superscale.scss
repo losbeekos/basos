@@ -4,15 +4,15 @@
 
 .modal[data-modal-effect=superscale] {
     .modal__content {
-        @include opacity(0);
-        @include scale(2);
-        @include single-transition(all, 0.3s);
+        opacity: 0;
+        transform: scale(2);
+        transition: all 0.3s;
     }
 
     &.modal-show {
         .modal__content {
-            @include opacity(1);
-            @include scale(1);
+            opacity: 1;
+            transform: scale(1);
         }
     }
 }

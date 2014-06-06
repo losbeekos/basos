@@ -2,16 +2,15 @@
 =            Custom fonts            =
 ====================================*/
 
-@include font-face(
-    "fontello-webfont",
-    font-files("fontello.woff",
-               "fontello.ttf",
-               "fontello.svg"
-    ),
-    "fontello.eot"
-);
+@include font-face('fontello', 'fonts');
 
 %font-fontello {
-    font-family: "fontello-webfont", arial, verdana;
+    font-family: "fontello", arial, verdana;
     font-weight: normal;
 }
+
+//@include font-face('somefont', 'fonts/somefont');
+// %font-somefont {
+//     font-family: "somefont", arial, verdana;
+//     font-weight: normal;
+// }

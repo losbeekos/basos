@@ -1,0 +1,11 @@
+@mixin font-face($name, $directory) {
+    @font-face{
+        font-family: quote($name);
+        src: url('../#{$directory}/#{$name}.eot');
+        src: url('../#{$directory}/#{$name}.eot#iefix') format('embedded-opentype'),
+             url('../#{$directory}/#{$name}.svg') format('svg')
+             url('../#{$directory}/#{$name}.woff') format('woff'),
+             url('../#{$directory}/#{$name}.ttf') format('truetype')
+    }
+}
+

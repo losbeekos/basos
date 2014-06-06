@@ -23,9 +23,9 @@
     color: $tab-color;
     border-top-left-radius: $base-border-radius;
     border-top-right-radius: $base-border-radius;
+    user-select: none;
 
     @include rem(padding, $tab-padding);
-    @include user-select(none);
 
     &:focus {
         outline: none;
@@ -50,14 +50,12 @@
     overflow: hidden;
     height: 0;
     width: 0;
-
-    @include opacity(0);
-    @include single-transition(opacity, 0.5s);
+    opacity: 0;
+    transition: opacity 0.5s;
 
     &.tab-item--active {
         height: auto;
         width: 100%;
-
-        @include opacity(1);
+        opacity: 1;
     }
 }

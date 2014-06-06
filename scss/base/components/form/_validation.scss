@@ -20,6 +20,8 @@
     #{$input-selectors} {
         border-color: $color-delta;
         box-shadow: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
 
         @include rem(padding-right, 30px);
 
@@ -93,30 +95,41 @@
     }
 }
 
-.parsley-error-list {
+.parsley-container {
     @extend .list-unstyled;
 
+    display: none;
     clear: both;
     max-width: 100%;
-    display: inline-block;
     position: relative;
-    background: #eeeeee;
-    box-shadow: 2px 3px 0 rgba(0, 0, 0, 0.2);
+    background: $color-delta;
+    color: $white;
 
-    @include rem(border-radius, 0 3px 3px 3px);
-    @include rem(margin-top, 20px);
-    @include rem(margin-bottom, 10px);
+    @include rem(border-radius, 0 0 3px 3px);
     @include rem(padding, 10px);
     @include rem(font-size, 14px);
 
-    &:after {
-        content: '';
-        width: 0;
-        height: 0;
-        position: absolute;
-        top: -20px;
-        left: 0;
-        border: 10px solid transparent;
-        border-bottom-color: #eeeeee;
+    .form__input--error & {
+        display: block;
+    }
+}
+
+.form__input--error {
+    + .parsley-container {
+        display: inline-block;
+
+        @include rem(border-radius, 0 3px 3px 3px);
+        @include rem(margin-top, 16px);
+
+        &:after {
+            content: '';
+            width: 0;
+            height: 0;
+            position: absolute;
+            top: -16px;
+            left: 0;
+            border: 8px solid transparent;
+            border-bottom-color: $color-delta;
+        }
     }
 }

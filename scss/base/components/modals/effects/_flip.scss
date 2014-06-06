@@ -4,41 +4,41 @@
 
 .modal {
     &[data-modal-effect|=flip] {
-        @include perspective(1300);
+        perspective: 1300;
 
         .modal__content {
-            @include opacity(0);
-            @include transform-style(preserve-3d);
-            @include single-transition(all, 0.3s);
+            opacity: 0;
+            transform-style: preserve-3d;
+            transition: all 0.3s;
         }
 
         &.modal-show {
             .modal__content {
-                @include opacity(1);
+                opacity: 1;
             }
         }
     }
 
     &[data-modal-effect=flip-horizontal] {
         .modal__content {
-            @include rotateY(-70deg);
+            transform: rotateY(-70deg);
         }
 
         &.modal-show {
             .modal__content {
-                @include rotateY(0deg);
+                transform: rotateY(0);
             }
         }
     }
 
     &[data-modal-effect=flip-vertical] {
         .modal__content {
-            @include rotateX(-70deg);
+            transform: rotateX(-70deg);
         }
 
         &.modal-show {
             .modal__content {
-                @include rotateX(0deg);
+                transform: rotateX(0);
             }
         }
     }

@@ -21,15 +21,16 @@
     text-align: center;
     border-width: 1px;
     border-style: solid;
+    transition: all $base-transition-speed;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    user-select: none;
 
     @include btn-style($btn-bg-color-alpha);
     @include rem(line-height, 16px);
-    @include single-transition(all, $base-transition-speed);
-    @include appearance(none);
-    @include user-select(none);
 
     @if $btn-gradient {
-        @include background-image(linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)));
+        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     }
 
     &:not(.btn--divider):hover {
@@ -38,16 +39,14 @@
 
     &:focus {
         outline: none;
-
-        @include transition-duration(0.05s);
+        transition-duration: 0.05s;
     }
 
     &:disabled,
     &:disabled:hover {
         cursor: not-allowed;
         color: darken($white, 20%);
-
-        @include opacity(0.5);
+        opacity: 0.5;
 
         &:focus {
             box-shadow: none;

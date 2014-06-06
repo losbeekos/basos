@@ -5,62 +5,62 @@
 .modal {
     &[data-modal-effect|=slide] {
         .modal__content {
-            @include opacity(0);
-            @include single-transition(all, 0.5s, 0);
+            opacity: 0;
+            transition: all 0.5s 0;
         }
 
         &.modal-show {
             .modal__content {
-                @include opacity(1);
-                @include single-transition(all, 0.5s, 0.1s)
+                opacity: 1;
+                transition: all 0.5s 0.1s;
             }
         }
     }
 
     &[data-modal-effect=slide-top] {
         .modal__content {
-            @include translateY(-300%);
+            transform: translateY(-300%);
         }
 
         &.modal-show {
             .modal__content {
-                @include translateY(0);
+                transform: translateY(0);
             }
         }
     }
 
     &[data-modal-effect=slide-right] {
         .modal__content {
-            @include translateX(300%);
+            transform: translateX(300%);
         }
 
         &.modal-show {
             .modal__content {
-                @include translateX(0);
+                transform: translateX(0);
             }
         }
     }
 
     &[data-modal-effect=slide-bottom] {
         .modal__content {
-            @include translateY(300%);
+            transform: translateY(300%);
         }
 
         &.modal-show {
             .modal__content {
-                @include translateY(0);
+                transform: translateY(0);
             }
         }
     }
 
     &[data-modal-effect=slide-left] {
         .modal__content {
-            @include translateX(-300%);
+            transform: translateX(-300%);
         }
 
         &.modal-show {
             .modal__content {
-                @include translateX(0);
+                transform: translateX(0);
             }
         }
     }

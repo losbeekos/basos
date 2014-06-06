@@ -5,7 +5,7 @@
 *,
 :before,
 :after {
-    @include box-sizing(border-box);
+    box-sizing: border-box;
 }
 
 html,
@@ -32,16 +32,10 @@ a {
     text-decoration: none;
     display: inline;
     cursor: pointer;
-
-    @include single-transition(all, $base-transition-speed);
+    transition: all $base-transition-speed;
 
     &:hover {
         color: $color-text;
-    }
-
-    &:after,
-    &:before {
-        @include single-transition(all, $base-transition-speed);
     }
 }
 
