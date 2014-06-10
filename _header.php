@@ -10,35 +10,45 @@
         <meta name="description" content="" />
         <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1" />
 
-        <link rel="stylesheet" href="css/main.css" />
-        <link rel="shortcut icon" href="favicon.ico" />
+        <link rel="stylesheet" href="src/css/main.css" />
 
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
         <meta name="apple-mobile-web-app-title" content="" />
 
-        <meta name="msapplication-TileColor" content="#ffffff" />
-        <meta name="msapplication-TileImage" content="image-144x144px.png" />
+        <link rel="shortcut icon" href="src/img/icons/favicon.png" />
 
-        <meta property="og:image" content="image-114x114px.png" />
-        <meta property="og:title" content="Page title" />
+        <link rel="apple-touch-icon" sizes="57x57" href="src/img/icons/touch-icon-57.png">
+        <link rel="apple-touch-icon" sizes="114x114" href="src/img/icons/touch-icon-57x2.png">
+        <link rel="apple-touch-icon" sizes="60x60" href="src/img/icons/touch-icon-60.png">
+        <link rel="apple-touch-icon" sizes="120x120" href="src/img/icons/touch-icon-60x2.png">
+        <link rel="apple-touch-icon" sizes="72x72" href="src/img/icons/touch-icon-72.png">
+        <link rel="apple-touch-icon" sizes="144x144" href="src/img/icons/touch-icon-72x2.png">
+        <link rel="apple-touch-icon" sizes="76x76" href="src/img/icons/touch-icon-76.png">
+        <link rel="apple-touch-icon" sizes="152x152" href="src/img/icons/touch-icon-76x2.png">
+
+        <meta name="msapplication-TileColor" content="#ffffff" />
+        <meta name="msapplication-TileImage" content="src/img/icons/ms-tile.png" />
+
+        <meta property="og:image" content="touch-icon-76x2.png" />
+        <meta property="og:title" content="Basos by @losbeekos" />
         <meta property="og:url" content="Current URL" />
         <meta property="og:site_name" content="Site name" />
         <meta property="og:type" content="website" />
 
         <meta name="twitter:card" content="app" />
         <meta name="twitter:site" content="@site_account" />
-        <meta name="twitter:creator" content="@losbeekos" />
+        <meta name="twitter:creator" content="@article_author" />
         <meta name="twitter:url" content="Current URL" />
-        <meta name="twitter:title" content="" />
+        <meta name="twitter:title" content="Basos by @losbeekos" />
         <meta name="twitter:description" content="" />
-        <meta name="twitter:image" content="image-114x114px.png" />
+        <meta name="twitter:image" content="touch-icon-76x2.png" />
 
-        <script src="js/bower_components/modernizr/modernizr.min.js"></script>
+        <script src="src/js/vendor/modernizr/modernizr.js"></script>
 
         <!--[if lt IE 9]>
-            <script src="js/bower_components/respond/respond.min.js"></script>
-            <script src="js/bower_components/selectivizr/selectivizr.js"></script>
+            <script src="src/bower_components/respond/respond.min.js"></script>
+            <script src="src/bower_components/selectivizr/selectivizr.js"></script>
         <![endif]-->
     </head>
     <body>

@@ -2,14 +2,14 @@
 =            Slip (top, bottom)            =
 ==========================================*/
 
-@include keyframes(slip-top) {
+@keyframes slip-top {
     50% {
         transform: rotateX(10deg);
         animation-timing-function: ease-out;
     }
 }
 
-@include keyframes(slip-bottom) {
+@keyframes slip-bottom {
     50% {
         transform: rotateX(-10deg);
         animation-timing-function: ease-out;
@@ -38,8 +38,7 @@ html[data-modal-effect|=slip],
     .background,
     .modal__overlay {
         transform-origin: 50% 100%;
-
-        @include animation(slip-top, 0.5s, forwards, ease-in);
+        animation: slip-top 0.5s forwards ease-in;
     }
 }
 
@@ -47,8 +46,7 @@ html[data-modal-effect|=slip],
     .background,
     .modal__overlay {
         transform-origin: 50% 0;
-
-        @include animation(slip-bottom, 0.5s, forwards, ease-in);
+        animation: slip-bottom 0.5s forwards ease-in;
     }
 }
 

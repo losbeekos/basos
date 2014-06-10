@@ -2,7 +2,7 @@
 =            Spinners            =
 ================================*/
 
-@include keyframes(spinner) {
+@keyframes spinner {
     100% {
         transform: rotate(360deg);
     }
@@ -10,8 +10,7 @@
 
 .spinner {
     display: inline-block;
-
-    @include animation(spinner, $spinner-animation-speed, infinite, linear);
+    animation: spinner $spinner-animation-speed infinite linear;
 
     &:after {
         @extend %font-fontello;

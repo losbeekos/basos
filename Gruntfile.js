@@ -11,13 +11,13 @@ module.exports = function(grunt) {
             },
 
             app: {
-                src: ['js/_settings.js', 'js/helpers/*.js', 'js/modules/*.js', 'js/_init.js'],
-                dest: 'js/app.js',
+                src: ['src/js/_settings.js', 'src/js/helpers/*.js', 'src/js/modules/*.js', 'src/js/_init.js'],
+                dest: 'src/js/app.js',
             }
         },
 
         jshint: {
-            files: ['Gruntfile.js', 'js/*.js', 'js/helpers/*.js', 'js/modules/*.js', '!js/*.*.min.js'],
+            files: ['Gruntfile.js', 'src/js/*.js', 'src/js/helpers/*.js', 'src/js/modules/*.js', '!src/js/*.*.min.js'],
             options: {
                 expr: true,
                 node: true,
@@ -65,9 +65,9 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'js/',
+                        cwd: 'dist/js/',
                         src: ['main.js', 'app.js'],
-                        dest: 'js/',
+                        dest: 'dist/js/',
                         ext: '.'+todayTimestamp+'.min.js',
                         extDot: 'first'
                     },
@@ -78,19 +78,40 @@ module.exports = function(grunt) {
                 files: [
                     {
                         expand: true,
-                        cwd: 'js/bower_components/',
+                        cwd: 'src/bower_components/',
                         src: ['**/*.js', '!jquery/src/*.js', '!parsleyjs/src/wrap/*.js'],
-                        dest: 'js/components/',
+                        dest: 'dist/bower_components/',
                         ext: '.js',
                         extDot: 'last'
+                    },
+                ]
+            },
+
+            vendor: {
+                files: [
+                    {
+                        expand: true,
+                        cwd: 'src/js/vendor/',
+                        src: ['modernizr/modernizr.js',],
+                        dest: 'dist/js/vendor',
+                        ext: '.'+todayTimestamp+'.min.js',
+                        extDot: 'first'
                     },
                 ]
             },
         },
 
         autoprefixer: {
-            files: {
-                'css/main.css': 'css/main.css'
+            dev: {
+                files: {
+                    'src/css/main.css': 'src/css/main.css'
+                }
+            },
+
+            dist: {
+                files: {
+                    'dist/css/main.css': 'dist/css/main.css'
+                }
             }
         },
 
@@ -102,19 +123,18 @@ module.exports = function(grunt) {
                 },
 
                 files: {
-                    'css/main.css': 'scss/main.scss'
+                    'src/css/main.css': 'src/scss/main.scss'
                 }
-            }
-        },
-
-        cmq: {
-            options: {
-                log: true
             },
 
             dist: {
+                options: {
+                    style: 'expanded',
+                    require: 'susy'
+                },
+
                 files: {
-                    'css': ['css/main.css']
+                    'dist/css/main.css': 'src/scss/main.scss'
                 }
             }
         },
@@ -122,9 +142,9 @@ module.exports = function(grunt) {
         cssmin: {
             minify: {
                 expand: true,
-                cwd: 'css/',
+                cwd: 'dist/css/',
                 src: ['main.css', '!*.min.css'],
-                dest: 'css/',
+                dest: 'dist/css/',
                 ext: '.'+todayTimestamp+'.min.css'
             }
         },
@@ -132,14 +152,15 @@ module.exports = function(grunt) {
         imagemin: {
             default: {
                 options: {
-                    optimizationLevel: 3
+                    optimizationLevel: 3,
+                    progressive: true //jpg only
                 },
 
                 files: [{
                     expand: true,
-                    cwd: 'img/',
+                    cwd: 'dist/img/',
                     src: ['**/*.{png,jpg,gif}'],
-                    dest: 'img/'
+                    dest: 'dist/img/'
                 }]
             }
         },
@@ -150,12 +171,33 @@ module.exports = function(grunt) {
                 imageAlpha: true,
             },
 
-            src: ['img', 'img']
+            src: ['dist/img', 'dist/img']
         },
 
         watch: {
-            files: ['<%= jshint.files %>', 'scss/**/*.scss'],
-            tasks: ['concat', 'jshint', 'sass', 'cmq', 'autoprefixer']
+            options: {
+                livereload: true,
+            },
+
+            files: ['<%= jshint.files %>', 'src/scss/**/*.scss', '**/*.tpl', '**/*.php', '**/*.html'],
+
+            tasks: [
+                'concat',
+                'jshint',
+                'sass:dev',
+                'autoprefixer:dev'
+            ]
+        },
+
+        copy: {
+            dist: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/',
+                    src: ['js/main.js', 'fonts/**', 'img/**'],
+                    dest: 'dist/'
+                }]
+            }
         }
 
     });
@@ -167,12 +209,38 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-sass');
     grunt.loadNpmTasks('grunt-contrib-cssmin');
     grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-combine-media-queries');
     grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-contrib-copy');
 
-    grunt.registerTask('default', ['concat', 'jshint', 'sass', 'cmq', 'autoprefixer', 'watch']);
-    grunt.registerTask('dev', ['concat', 'jshint', 'sass', 'cmq', 'autoprefixer', 'watch']);
-    grunt.registerTask('dist', ['concat', 'jshint', 'uglify', 'sass', 'cmq', 'autoprefixer', 'cssmin', 'imagemin', 'imageoptim']);
+    // To buggy:
+    //grunt.loadNpmTasks('grunt-combine-media-queries');
+
+
+    grunt.registerTask('default', [
+        'concat',
+        'jshint',
+        'sass:dev',
+        'autoprefixer:dev'
+    ]);
+
+    grunt.registerTask('dev', [
+        'concat',
+        'jshint',
+        'sass:dev',
+        'autoprefixer:dev'
+    ]);
+
+    grunt.registerTask('dist', [
+        'concat',
+        'jshint',
+        'copy:dist',
+        'sass:dist',
+        'autoprefixer:dist',
+        'cssmin',
+        'uglify',
+        'imagemin',
+        'imageoptim'
+    ]);
 
 };

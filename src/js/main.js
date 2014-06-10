@@ -4,8 +4,8 @@ var app = app || {},
     helper = helper || {},
     dist = false;
 
-app.path = 'js/';
-dist ? app.pathBower = app.path+'components/' : app.pathBower = app.path+'bower_components/';
+dist ? app.path = 'dist/js/' : app.path = 'src/js/';
+dist ? app.pathBower = 'dist/bower_components/' : app.pathBower = 'src/bower_components/';
 
 yepnope.errorTimeout = 2000;
 
