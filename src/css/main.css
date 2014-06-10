@@ -701,7 +701,7 @@ textarea {
 @font-face {
   font-family: "fontello";
   src: url("../fonts/fontello.eot");
-  src: url("../fonts/fontello.eot#iefix") format("embedded-opentype"), url("../fonts/fontello.svg") format("svg") url("../fonts/fontello.woff") format("woff"), url("../fonts/fontello.ttf") format("truetype");
+  src: url("../fonts/fontello.eot#iefix") format("embedded-opentype"), url("../fonts/fontello.svg") format("svg"), url("../fonts/fontello.woff") format("woff"), url("../fonts/fontello.ttf") format("truetype");
 }
 .spinner:after, .form__select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form__input--error.form__input:after, .form__input--success.form__input:after, .notification:before, .notification__close {
   font-family: "fontello", arial, verdana;
@@ -1901,12 +1901,12 @@ select {
   cursor: pointer;
   z-index: 2;
   border: none;
-  text-overflow: '';
-  text-indent: 1px;
   -webkit-transition: -webkit-box-shadow 0.2s;
   transition: box-shadow 0.2s;
   -webkit-appearance: none;
-  -moz-appearance: none;
+  -moz-appearance: window;
+  text-overflow: '';
+  text-indent: 1px;
   padding: 10px 10px 10px 5px;
   padding: 0.625rem 0.625rem 0.625rem 0.3125rem;
 }

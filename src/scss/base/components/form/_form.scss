@@ -80,14 +80,14 @@ select {
     cursor: pointer;
     z-index: 2;
     border: none;
+    transition: box-shadow $base-transition-speed;
+    -webkit-appearance: none;
+    -moz-appearance: window;
     // This is so hacky.. (for Firefox)
     // Removes the default select arrow.
     text-overflow: '';
     text-indent: 1px;
     // End of brutal hack
-    transition: box-shadow $base-transition-speed;
-    -webkit-appearance: none;
-    -moz-appearance: none;
 
     @include rem(padding, 10px 10px 10px 5px);
 
