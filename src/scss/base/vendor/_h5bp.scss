@@ -45,19 +45,18 @@ fieldset {
     padding: 0;
 }
 
+audio,
+canvas,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
 textarea {
     resize: vertical;
 }
 
 .no-resize {
     resize: none;
-}
-
-.chromeframe {
-    background: #ccc;
-    color: #000;
-    padding: 1em;
-    margin: 0;
-    position: relative;
-    z-index: 999;
 }

@@ -6,10 +6,12 @@ app.settings = {
     $body: $('body'),
     $htmlAndBody: $('html, body'),
     $background: $('#background'),
+    $container: $('#container'),
     $main: $('#main'),
 
 
     /*==========  Notification  ==========*/
+
     notifications: {
         cookieLaw: {
             position: 'bottom',
@@ -19,6 +21,17 @@ app.settings = {
             infoBtnText: 'meer informatie',
             notificationText: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren en statistieken bij te houden.'
         }
+    },
+
+
+    /*==========  Off anvas  ==========*/
+    
+    offCanvas: {
+        toggleLeft: '#off-canvas-toggle-left',
+        toggleRight: '#off-canvas-toggle-right',
+        width: $('.off-canvas').outerWidth(),
+        $el: $('.off-canvas'),
+        $link: $('.off-canvas-nav__link')
     },
 
 

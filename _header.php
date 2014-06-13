@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--[if IE 7]>         <html class="no-js lt-ie10 lt-ie9 lt-ie8" lang="nl"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9" lang="nl"> <![endif]-->
 <!--[if IE 9]>         <html class="no-js lt-ie10" lang="nl"> <![endif]-->
 <!--[if gt IE 9]><!--> <html class="no-js" lang="nl"> <!--<![endif]-->
@@ -55,7 +54,30 @@
         <a href="#main" class="show-screenreaders">Skip to main content</a>
 
         <div id="background" class="background">
-            <div id="container" class="container">
+
+            <div id="off-canvas-left" class="off-canvas off-canvas--left">
+                <button id="off-canvas-toggle-left" class="off-canvas-toggle-left"></button>
+                <nav class="off-canvas-nav">
+                    <ul class="list-unstyled">
+                        <li class="off-canvas-nav__item"><a class="off-canvas-nav__link off-canvas-nav__link--active" href="#">Lorem ipsum</a></li>
+                        <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
+                        <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <!-- <div id="off-canvas-right" class="off-canvas off-canvas--right">
+                <button id="off-canvas-toggle-right" class="off-canvas-toggle-right"></button>
+                <nav class="off-canvas-nav">
+                    <ul class="list-unstyled">
+                        <li class="off-canvas-nav__item"><a class="off-canvas-nav__link off-canvas-nav__link--active" href="#">Lorem ipsum</a></li>
+                        <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
+                        <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
+                    </ul>
+                </nav>
+            </div> -->
+
+            <div id="container" class="container off-canvas-push">
                 <!--[if lt IE 9]>
                     <div class="notification error">
                         <ul>

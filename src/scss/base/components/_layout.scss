@@ -39,6 +39,10 @@ a {
     }
 }
 
+button {
+    transition: all $base-transition-speed;
+}
+
 img {
     max-width: 100%;
 }

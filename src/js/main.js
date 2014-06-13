@@ -2,18 +2,25 @@
 
 var app = app || {},
     helper = helper || {},
-    dist = false;
+    dist = false,
+    cwd = null;
 
-dist ? app.path = 'dist/js/' : app.path = 'src/js/';
-dist ? app.pathBower = 'dist/bower_components/' : app.pathBower = 'src/bower_components/';
+dist ? cwd = 'dist/' : cwd = 'src/';
+dist ? app.path = cwd + 'js/' : app.path = cwd + 'js/';
+dist ? app.pathBower = cwd + 'bower_components/' : app.pathBower = cwd + 'bower_components/';
 
 yepnope.errorTimeout = 2000;
 
 yepnope([
     {
-        load: app.pathBower + 'jquery/dist/jquery.min.js',
+        load: '//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js',
+        callback: function () {
+            if (!window.jQuery) {
+                yepnope.injectJs(app.pathBower + 'jquery/dist/jquery.min.js');
+            }
+        }
     },
     {
-        load: app.path +'app.js'
+        load: app.path + 'app.js'
     }
 ]);

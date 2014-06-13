@@ -9,6 +9,7 @@ $(document).ready(function () {
     app.accordion.init();
     app.tabs.init();
     app.notifications.init();
+    app.offCanvas.init();
 
     //app.cycle.init();
     //app.fancybox.init();
