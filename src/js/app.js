@@ -340,14 +340,14 @@ app.jump = {
         app.settings.jump.$el.on('click', function (event) {
             event.preventDefault();
 
-            self.to($(this));
+            self.to($(this).attr('href'));
         });
     },
 
-    to: function (_link) {
+    to: function (_target) {
         var self = this;
 
-        app.settings.$htmlAndBody.animate({scrollTop: $(_link.attr('href')).offset().top}, app.settings.jump.speed);
+        app.settings.$htmlAndBody.animate({scrollTop: $(_target).offset().top}, app.settings.jump.speed);
     }
 };
 app.modals = {
