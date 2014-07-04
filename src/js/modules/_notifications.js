@@ -1,4 +1,15 @@
 app.notifications = {
+    settings: {
+        cookieLaw: {
+            position: 'bottom',
+            approveBtnText: 'ok, ik snap het',
+            infoBtnShow: true,
+            infoBtnLink: '/cookiewet',
+            infoBtnText: 'meer informatie',
+            notificationText: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren en statistieken bij te houden.'
+        }
+    },
+
     init: function () {
         var self = this;
 
@@ -38,15 +49,15 @@ app.notifications = {
                 info = '';
 
             if (cookieValue !== 'approved') {
-                app.settings.$html.attr('notification-cookie-position', app.settings.notifications.cookieLaw.position);
+                app.settings.$html.attr('notification-cookie-position', app.notifications.settings.cookieLaw.position);
 
-                if (app.settings.notifications.cookieLaw.infoBtnShow) {
-                    info = '<a class="btn btn--alpha btn--small" href="' + app.settings.notifications.cookieLaw.infoBtnLink + '">' + app.settings.notifications.cookieLaw.infoBtnText + '</a>';
+                if (app.notifications.settings.cookieLaw.infoBtnShow) {
+                    info = '<a class="btn btn--alpha btn--small" href="' + app.notifications.settings.cookieLaw.infoBtnLink + '">' + app.notifications.settings.cookieLaw.infoBtnText + '</a>';
                 }
 
                 var html = '<div id="notification-cookie" class="notification notification--alpha notification--cookie">'+
-                           '<div class="notification__text">' + app.settings.notifications.cookieLaw.notificationText + '</div>'+
-                           '<a class="btn btn--beta btn--small" data-notification-close>' + app.settings.notifications.cookieLaw.approveBtnText + '</a> '+ info +
+                           '<div class="notification__text">' + app.notifications.settings.cookieLaw.notificationText + '</div>'+
+                           '<a class="btn btn--beta btn--small" data-notification-close>' + app.notifications.settings.cookieLaw.approveBtnText + '</a> '+ info +
                            '</div>';
 
                 app.settings.$background.prepend(html);

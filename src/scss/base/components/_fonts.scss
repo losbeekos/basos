@@ -2,10 +2,10 @@
 =            Custom fonts            =
 ====================================*/
 
-@include font-face('fontello', 'fonts');
+@include font-face('icons', 'fonts/icons');
 
-%font-fontello {
-    font-family: "fontello", arial, verdana;
+%font-icons {
+    font-family: "icons", arial, verdana;
     font-weight: normal;
 }
 

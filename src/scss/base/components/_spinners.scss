@@ -13,7 +13,7 @@
     animation: spinner $spinner-animation-speed infinite linear;
 
     &:after {
-        @extend %font-fontello;
+        @extend %font-icons;
 
         content: $icon-spinner-alpha;
 

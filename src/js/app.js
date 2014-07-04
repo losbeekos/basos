@@ -8,110 +8,7 @@ app.settings = {
     $htmlAndBody: $('html, body'),
     $background: $('#background'),
     $container: $('#container'),
-    $main: $('#main'),
-
-
-    /*==========  Notification  ==========*/
-
-    notifications: {
-        cookieLaw: {
-            position: 'bottom',
-            approveBtnText: 'ok, ik snap het',
-            infoBtnShow: true,
-            infoBtnLink: '/cookiewet',
-            infoBtnText: 'meer informatie',
-            notificationText: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren en statistieken bij te houden.'
-        }
-    },
-
-
-    /*==========  Off anvas  ==========*/
-    
-    offCanvas: {
-        toggleLeft: '#off-canvas-toggle-left',
-        toggleRight: '#off-canvas-toggle-right',
-        width: $('.off-canvas').outerWidth(),
-        $el: $('.off-canvas'),
-        $link: $('.off-canvas-nav__link')
-    },
-
-
-    /*==========  Fitvids  ==========*/
-
-    fitVids: {
-        $el: $('.fitvids')
-    },
-
-
-    /*==========  Jumpto  ==========*/
-
-    jump: {
-        $el: $('[data-jumpto]'),
-        speed: 300
-    },
-
-
-    /*==========  Primary nav  ==========*/
-
-    navPrimary: {
-        $el: $('.nav-primary')
-    },
-
-
-    /*==========  Modals  ==========*/
-
-    modals: {
-        $trigger: $('.modal__trigger'),
-        $modal: $('.modal')
-    },
-
-
-    /*==========  Cycle  ==========*/
-
-    cycle: {
-        $el: $('.cycle-wrap', '.cycle'),
-        slides: '> .cycle-item',
-        pager : '> .cycle-pager',
-        pagerActiveClass: 'cycle-pager-active'
-    },
-
-
-    /*==========  Tooltips  ==========*/
-
-    tooltips: {
-        $el: $('.tooltip'),
-        tooltipActiveClass: 'tooltip--active',
-        tooltipContentClass: 'tooltip__content',
-        arrowWidth: 8
-    },
-
-
-    /*==========  Accordion  ==========*/
-
-    accordion: {
-        $el: $('.accordion'),
-        $group: $('.accordion__group'),
-        $trigger: $('.accordion__trigger'),
-        contentShowClass: 'accordion-content--show'
-    },
-
-
-    /*==========  Form validation  ==========*/
-
-    formValidation: {
-        $el: $('[data-form-validate]'),
-        language: 'nl'
-    },
-
-
-    /*==========  Tabs  ==========*/
-
-    tabs: {
-        $nav: $('.tabs'),
-        $tab: $('.tab'),
-        $content: $('.tab-content')
-    }
-
+    $main: $('#main')
 };
 helper.cookies = {
     create: function(name,value,days) {
@@ -151,10 +48,17 @@ helper.cookies = {
     }
 };
 app.accordion = {
+    settings: {
+        $el: $('.accordion'),
+        $group: $('.accordion__group'),
+        $trigger: $('.accordion__trigger'),
+        contentShowClass: 'accordion-content--show'
+    },
+
     init: function () {
         var self = this;
 
-        if (app.settings.accordion.$el.length > 0) {
+        if (app.accordion.settings.$el.length > 0) {
             self.setGroupHeight();
             self.toggler();
             self.forceMaxheight();
@@ -164,7 +68,7 @@ app.accordion = {
     setGroupHeight: function () {
         var self = this;
 
-        app.settings.accordion.$group.each(function () {
+        app.accordion.settings.$group.each(function () {
             var $group = $(this),
                 $groupContent = $group.find('.accordion__content');
 
@@ -174,7 +78,7 @@ app.accordion = {
 
             $groupContent.attr('data-accordion-content-height', contentHeight);
 
-            if ($groupContent.hasClass(app.settings.accordion.contentShowClass)) {
+            if ($groupContent.hasClass(app.accordion.settings.contentShowClass)) {
                 $groupContent.css({'max-height': contentHeight});
             } else {
                 $groupContent.css({'max-height': 0});
@@ -185,11 +89,11 @@ app.accordion = {
     toggler: function () {
         var self = this;
 
-        app.settings.accordion.$trigger.on('click', function () {
+        app.accordion.settings.$trigger.on('click', function () {
             var $trigger = $(this),
                 $content = $trigger.next();
 
-            if (!$content.hasClass(app.settings.accordion.contentShowClass)) {
+            if (!$content.hasClass(app.accordion.settings.contentShowClass)) {
                 self.hideGroup($trigger.closest('.accordion').find('.accordion__content'));
                 self.showGroup($trigger, $content);
             } else {
@@ -203,7 +107,7 @@ app.accordion = {
 
         $content
             .css({'max-height': $trigger.next().data('accordionContentHeight')})
-            .addClass(app.settings.accordion.contentShowClass);
+            .addClass(app.accordion.settings.contentShowClass);
     },
 
     hideGroup: function ($content) {
@@ -211,7 +115,7 @@ app.accordion = {
 
         $content
             .css({'max-height': 0})
-            .removeClass(app.settings.accordion.contentShowClass);
+            .removeClass(app.accordion.settings.contentShowClass);
     },
 
     forceMaxheight: function () {
@@ -223,16 +127,23 @@ app.accordion = {
     }
 };
 app.cycle = {
+    settings: {
+        $el: $('.cycle-wrap', '.cycle'),
+        slides: '> .cycle-item',
+        pager : '> .cycle-pager',
+        pagerActiveClass: 'cycle-pager-active'
+    },
+
     init: function(){
         var self = this;
 
-        if(app.settings.cycle.$el.el.length > 0){
+        if(app.cycle.settings.$el.el.length > 0){
             yepnope.injectJs(app.pathBower + 'cycle2/build/jquery.cycle2.min.js',
                 function(){
                     self.el.cycle({
-                        slides           : app.settings.cycle.slides,
-                        pager            : app.settings.cycle.pager,
-                        pagerActiveClass : app.settings.cycle.pagerActiveClass,
+                        slides           : app.cycle.settings.slides,
+                        pager            : app.cycle.settings.pager,
+                        pagerActiveClass : app.cycle.settings.pagerActiveClass,
                         pauseOnHover     : true,
                         swipe            : true,
                         log              : false
@@ -277,18 +188,27 @@ app.fastClick = {
     }
 };
 app.fitVids = {
+    settings: {
+        $el: $('.fitvids')
+    },
+
     init: function(){
-        if (app.settings.fitVids.$el.length > 0) {
+        if (app.fitVids.settings.$el.length > 0) {
             yepnope.injectJs(
                 app.pathBower + 'fitvids/jquery.fitvids.js' + app.settings.version,
                 function(){
-                    app.settings.fitVids.$el.fitVids();
+                    app.fitVids.settings.$el.fitVids();
                 }
             );
         }
     }
 };
 app.formValidation = {
+    settings: {
+        $el: $('[data-form-validate]'),
+        language: 'nl'
+    },
+
     init: function(){
         var self = this,
             parsleyOptions = {
@@ -319,25 +239,30 @@ app.formValidation = {
                 }
             };
 
-        if(app.settings.formValidation.$el.length > 0){
-            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.settings.formValidation.language + '.js' + app.settings.version, function () {
+        if(app.formValidation.settings.$el.length > 0){
+            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.formValidation.settings.language + '.js' + app.settings.version, function () {
                 yepnope.injectJs(app.pathBower + 'parsleyjs/dist/parsley.js' + app.settings.version,
                     function(){
-                        app.settings.formValidation.$el.each(function () {
+                        app.formValidation.settings.$el.each(function () {
                             $(this).parsley(parsleyOptions);
                         });
 
-                        window.ParsleyValidator.setLocale(app.settings.formValidation.language);
+                        window.ParsleyValidator.setLocale(app.formValidation.settings.language);
                     });
             });
         }
     }
 };
 app.jump = {
+    settings: {
+        $el: $('[data-jumpto]'),
+        speed: 300
+    },
+
     init: function () {
         var self = this;
 
-        app.settings.jump.$el.on('click', function (event) {
+        app.jump.settings.$el.on('click', function (event) {
             event.preventDefault();
 
             self.to($(this).attr('href'));
@@ -347,16 +272,20 @@ app.jump = {
     to: function (_target) {
         var self = this;
 
-        app.settings.$htmlAndBody.animate({scrollTop: $(_target).offset().top}, app.settings.jump.speed);
+        app.settings.$htmlAndBody.animate({scrollTop: $(_target).offset().top}, app.jump.settings.speed);
     }
 };
 app.modals = {
-    scrollTopPosition: null,
+    settings: {
+        scrollTopPosition: null,
+        $trigger: $('.modal__trigger'),
+        $modal: $('.modal')
+    },
 
     init: function () {
         var self = this;
 
-        if (app.settings.modals.$trigger.length > 0 && app.settings.modals.$modal.length > 0) {
+        if (app.modals.settings.$trigger.length > 0 && app.modals.settings.$modal.length > 0) {
             app.settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
 
             self.triggers();
@@ -366,7 +295,7 @@ app.modals = {
     triggers: function () {
         var self = this;
 
-        app.settings.modals.$trigger.on('click', function (event) {
+        app.modals.settings.$trigger.on('click', function (event) {
             event.preventDefault();
 
             var $trigger = $(this);
@@ -391,7 +320,7 @@ app.modals = {
             scrollTopPosition = app.settings.$window.scrollTop(),
             $targetModal = $('#' + _modalId);
 
-        self.scrollTopPosition = scrollTopPosition;
+        app.modals.settings.scrollTopPosition = scrollTopPosition;
 
         app.settings.$html
             .addClass('modal-show')
@@ -410,16 +339,31 @@ app.modals = {
             .removeClass('modal-show')
             .removeAttr('data-modal-effect');
 
-        app.settings.$window.scrollTop(self.scrollTopPosition);
+        app.settings.$window.scrollTop(app.modals.settings.scrollTopPosition);
     }
 };
 app.navPrimary = {
+    settings: {
+        $el: $('.nav-primary')
+    },
+
     init: function(){
-        if(app.settings.primaryNav.$el.length > 0){
+        if(app.primaryNav.settings.$el.length > 0){
         }
     }
 };
 app.notifications = {
+    settings: {
+        cookieLaw: {
+            position: 'bottom',
+            approveBtnText: 'ok, ik snap het',
+            infoBtnShow: true,
+            infoBtnLink: '/cookiewet',
+            infoBtnText: 'meer informatie',
+            notificationText: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren en statistieken bij te houden.'
+        }
+    },
+
     init: function () {
         var self = this;
 
@@ -459,15 +403,15 @@ app.notifications = {
                 info = '';
 
             if (cookieValue !== 'approved') {
-                app.settings.$html.attr('notification-cookie-position', app.settings.notifications.cookieLaw.position);
+                app.settings.$html.attr('notification-cookie-position', app.notifications.settings.cookieLaw.position);
 
-                if (app.settings.notifications.cookieLaw.infoBtnShow) {
-                    info = '<a class="btn btn--alpha btn--small" href="' + app.settings.notifications.cookieLaw.infoBtnLink + '">' + app.settings.notifications.cookieLaw.infoBtnText + '</a>';
+                if (app.notifications.settings.cookieLaw.infoBtnShow) {
+                    info = '<a class="btn btn--alpha btn--small" href="' + app.notifications.settings.cookieLaw.infoBtnLink + '">' + app.notifications.settings.cookieLaw.infoBtnText + '</a>';
                 }
 
                 var html = '<div id="notification-cookie" class="notification notification--alpha notification--cookie">'+
-                           '<div class="notification__text">' + app.settings.notifications.cookieLaw.notificationText + '</div>'+
-                           '<a class="btn btn--beta btn--small" data-notification-close>' + app.settings.notifications.cookieLaw.approveBtnText + '</a> '+ info +
+                           '<div class="notification__text">' + app.notifications.settings.cookieLaw.notificationText + '</div>'+
+                           '<a class="btn btn--beta btn--small" data-notification-close>' + app.notifications.settings.cookieLaw.approveBtnText + '</a> '+ info +
                            '</div>';
 
                 app.settings.$background.prepend(html);
@@ -480,9 +424,17 @@ app.notifications = {
     }
 };
 app.offCanvas = {
+    settings: {
+        toggleLeft: '#off-canvas-toggle-left',
+        toggleRight: '#off-canvas-toggle-right',
+        width: $('.off-canvas').outerWidth(),
+        $el: $('.off-canvas'),
+        $link: $('.off-canvas-nav__link')
+    },
+
     init: function () {
 
-        app.settings.offCanvas.$link.on('click', function(event) {
+        app.offCanvas.settings.$link.on('click', function(event) {
             event.preventDefault();
 
             var href = window.location,
@@ -497,11 +449,11 @@ app.offCanvas = {
             }, 400);
         });
 
-        app.settings.$html.delegate(app.settings.offCanvas.toggleLeft, 'click', function(event) {
+        app.settings.$html.delegate(app.offCanvas.settings.toggleLeft, 'click', function(event) {
             app.offCanvas.toggleLeft();
         });
 
-        app.settings.$html.delegate(app.settings.offCanvas.toggleRight, 'click', function(event) {
+        app.settings.$html.delegate(app.offCanvas.settings.toggleRight, 'click', function(event) {
             app.offCanvas.toggleRight();
         });
 
@@ -543,16 +495,22 @@ app.offCanvas = {
     }
 };
 app.tabs = {
+    settings: {
+        $nav: $('.tabs'),
+        $tab: $('.tab'),
+        $content: $('.tab-content')
+    },
+
     init: function(){
         var self = this;
 
-        if (app.settings.tabs.$tab.length > 0) {
-            app.settings.tabs.$tab.on('click', function (event) {
+        if (app.tabs.settings.$tab.length > 0) {
+            app.tabs.settings.$tab.on('click', function (event) {
                 var $tab = $(this);
 
                 event.preventDefault();
 
-                app.settings.tabs.$tab.removeClass('tab--active');
+                app.tabs.settings.$tab.removeClass('tab--active');
                 $tab.addClass('tab--active');
 
                 $($tab.attr('href'))
@@ -564,19 +522,25 @@ app.tabs = {
     }
 };
 app.tooltips = {
-    tooltipTrigger: null,
+    settings: {
+        $el: $('.tooltip'),
+        tooltipActiveClass: 'tooltip--active',
+        tooltipContentClass: 'tooltip__content',
+        arrowWidth: 8,
+        tooltipTrigger: null
+    },
 
     init: function () {
         var self = this;
 
-        if (app.settings.tooltips.$el.length > 0) {
-            app.settings.tooltips.$el.each(function () {
+        if (app.tooltips.settings.$el.length > 0) {
+            app.tooltips.settings.$el.each(function () {
                 var $tooltipTrigger = $(this);
 
                 if ($tooltipTrigger.data('tooltipTrigger') === 'click') {
-                    self.tooltipTrigger = 'click';
+                    app.tooltips.settings.tooltipTrigger = 'click';
                 } else {
-                    self.tooltipTrigger = 'hover';
+                    app.tooltips.settings.tooltipTrigger = 'hover';
                 }
 
                 self.triggers($tooltipTrigger);
@@ -589,7 +553,7 @@ app.tooltips = {
         var self = this;
 
         $tooltipTrigger
-            .append('<div class="' + app.settings.tooltips.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
+            .append('<div class="' + app.tooltips.settings.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
             .removeAttr('title');
 
         self.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip__content'));
@@ -598,18 +562,18 @@ app.tooltips = {
     triggers: function ($tooltipTrigger) {
         var self = this;
 
-        if (self.tooltipTrigger === 'hover') {
+        if (app.tooltips.settings.tooltipTrigger === 'hover') {
             $tooltipTrigger.on({
                 mouseenter: function () {
-                    $(this).addClass(app.settings.tooltips.tooltipActiveClass);
+                    $(this).addClass(app.tooltips.settings.tooltipActiveClass);
                 },
                 mouseleave: function () {
-                    $(this).removeClass(app.settings.tooltips.tooltipActiveClass);
+                    $(this).removeClass(app.tooltips.settings.tooltipActiveClass);
                 }
             });
         } else {
             $tooltipTrigger.on('click', function () {
-                $(this).toggleClass(app.settings.tooltips.tooltipActiveClass);
+                $(this).toggleClass(app.tooltips.settings.tooltipActiveClass);
             });
         }
     },
@@ -621,14 +585,14 @@ app.tooltips = {
 
         switch ($tooltipTrigger.data('tooltipPosition')) {
             case 'top':
-                $tooltipContent.css({ bottom: tooltipTriggerHeight + app.settings.tooltips.arrowWidth });
+                $tooltipContent.css({ bottom: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
                 break;
             case 'right':
             case 'left':
                 $tooltipContent.css({ 'margin-top': -(tooltipContentHeight/2) });
                 break;
             case 'bottom':
-                $tooltipContent.css({ top: tooltipTriggerHeight + app.settings.tooltips.arrowWidth });
+                $tooltipContent.css({ top: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
                 break;
         }
     }

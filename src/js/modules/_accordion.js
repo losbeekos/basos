@@ -1,8 +1,15 @@
 app.accordion = {
+    settings: {
+        $el: $('.accordion'),
+        $group: $('.accordion__group'),
+        $trigger: $('.accordion__trigger'),
+        contentShowClass: 'accordion-content--show'
+    },
+
     init: function () {
         var self = this;
 
-        if (app.settings.accordion.$el.length > 0) {
+        if (app.accordion.settings.$el.length > 0) {
             self.setGroupHeight();
             self.toggler();
             self.forceMaxheight();
@@ -12,7 +19,7 @@ app.accordion = {
     setGroupHeight: function () {
         var self = this;
 
-        app.settings.accordion.$group.each(function () {
+        app.accordion.settings.$group.each(function () {
             var $group = $(this),
                 $groupContent = $group.find('.accordion__content');
 
@@ -22,7 +29,7 @@ app.accordion = {
 
             $groupContent.attr('data-accordion-content-height', contentHeight);
 
-            if ($groupContent.hasClass(app.settings.accordion.contentShowClass)) {
+            if ($groupContent.hasClass(app.accordion.settings.contentShowClass)) {
                 $groupContent.css({'max-height': contentHeight});
             } else {
                 $groupContent.css({'max-height': 0});
@@ -33,11 +40,11 @@ app.accordion = {
     toggler: function () {
         var self = this;
 
-        app.settings.accordion.$trigger.on('click', function () {
+        app.accordion.settings.$trigger.on('click', function () {
             var $trigger = $(this),
                 $content = $trigger.next();
 
-            if (!$content.hasClass(app.settings.accordion.contentShowClass)) {
+            if (!$content.hasClass(app.accordion.settings.contentShowClass)) {
                 self.hideGroup($trigger.closest('.accordion').find('.accordion__content'));
                 self.showGroup($trigger, $content);
             } else {
@@ -51,7 +58,7 @@ app.accordion = {
 
         $content
             .css({'max-height': $trigger.next().data('accordionContentHeight')})
-            .addClass(app.settings.accordion.contentShowClass);
+            .addClass(app.accordion.settings.contentShowClass);
     },
 
     hideGroup: function ($content) {
@@ -59,7 +66,7 @@ app.accordion = {
 
         $content
             .css({'max-height': 0})
-            .removeClass(app.settings.accordion.contentShowClass);
+            .removeClass(app.accordion.settings.contentShowClass);
     },
 
     forceMaxheight: function () {

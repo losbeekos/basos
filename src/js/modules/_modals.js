@@ -1,10 +1,14 @@
 app.modals = {
-    scrollTopPosition: null,
+    settings: {
+        scrollTopPosition: null,
+        $trigger: $('.modal__trigger'),
+        $modal: $('.modal')
+    },
 
     init: function () {
         var self = this;
 
-        if (app.settings.modals.$trigger.length > 0 && app.settings.modals.$modal.length > 0) {
+        if (app.modals.settings.$trigger.length > 0 && app.modals.settings.$modal.length > 0) {
             app.settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
 
             self.triggers();
@@ -14,7 +18,7 @@ app.modals = {
     triggers: function () {
         var self = this;
 
-        app.settings.modals.$trigger.on('click', function (event) {
+        app.modals.settings.$trigger.on('click', function (event) {
             event.preventDefault();
 
             var $trigger = $(this);
@@ -39,7 +43,7 @@ app.modals = {
             scrollTopPosition = app.settings.$window.scrollTop(),
             $targetModal = $('#' + _modalId);
 
-        self.scrollTopPosition = scrollTopPosition;
+        app.modals.settings.scrollTopPosition = scrollTopPosition;
 
         app.settings.$html
             .addClass('modal-show')
@@ -58,6 +62,6 @@ app.modals = {
             .removeClass('modal-show')
             .removeAttr('data-modal-effect');
 
-        app.settings.$window.scrollTop(self.scrollTopPosition);
+        app.settings.$window.scrollTop(app.modals.settings.scrollTopPosition);
     }
 };

@@ -4,7 +4,7 @@
 
 .off-canvas-toggle-left,
 .off-canvas-toggle-right {
-    @extend %font-fontello;
+    @extend %font-icons;
 
     background: $off-canvas-toggle-bg-color;
     position: absolute;
@@ -17,7 +17,6 @@
     @include rem(font-size, 30px);
     @include rem(width, 50px);
     @include rem(height, 50px);
-    @include rem(line-height, 50px);
 
     &:hover {
         background: lighten($off-canvas-toggle-bg-color, 5%);

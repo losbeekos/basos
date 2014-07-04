@@ -1,13 +1,10 @@
 'use strict';
 
 var app = app || {},
-    helper = helper || {},
-    dist = false,
-    cwd = null;
+    helper = helper || {};
 
-dist ? cwd = 'dist/' : cwd = 'src/';
-dist ? app.path = cwd + 'js/' : app.path = cwd + 'js/';
-dist ? app.pathBower = cwd + 'bower_components/' : app.pathBower = cwd + 'bower_components/';
+app.path = 'dist/js/';
+app.pathBower = 'bower_components/';
 
 yepnope.errorTimeout = 2000;
 

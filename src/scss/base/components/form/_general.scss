@@ -28,7 +28,7 @@
     border-radius: $base-border-radius;
 
     &:after {
-        @extend %font-fontello;
+        @extend %font-icons;
 
         content: $icon-form-select;
         position: absolute;

@@ -1,7 +1,15 @@
 app.offCanvas = {
+    settings: {
+        toggleLeft: '#off-canvas-toggle-left',
+        toggleRight: '#off-canvas-toggle-right',
+        width: $('.off-canvas').outerWidth(),
+        $el: $('.off-canvas'),
+        $link: $('.off-canvas-nav__link')
+    },
+
     init: function () {
 
-        app.settings.offCanvas.$link.on('click', function(event) {
+        app.offCanvas.settings.$link.on('click', function(event) {
             event.preventDefault();
 
             var href = window.location,
@@ -16,11 +24,11 @@ app.offCanvas = {
             }, 400);
         });
 
-        app.settings.$html.delegate(app.settings.offCanvas.toggleLeft, 'click', function(event) {
+        app.settings.$html.delegate(app.offCanvas.settings.toggleLeft, 'click', function(event) {
             app.offCanvas.toggleLeft();
         });
 
-        app.settings.$html.delegate(app.settings.offCanvas.toggleRight, 'click', function(event) {
+        app.settings.$html.delegate(app.offCanvas.settings.toggleRight, 'click', function(event) {
             app.offCanvas.toggleRight();
         });
 

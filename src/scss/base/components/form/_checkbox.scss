@@ -62,7 +62,7 @@
         }
 
         &:after {
-            @extend %font-fontello;
+            @extend %font-icons;
 
             content: $icon-form-checkbox;
             position: absolute;

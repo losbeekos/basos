@@ -10,7 +10,7 @@
 .form__input--error {
     &.form__input {
         &:after {
-            @extend %font-fontello;
+            @extend %font-icons;
 
             content: $icon-form-validation-error;
             color: $color-delta;
@@ -62,7 +62,7 @@
 .form__input--success {
     &.form__input {
         &:after {
-            @extend %font-fontello;
+            @extend %font-icons;
 
             content: $icon-form-validation-success;
             color: $color-gamma;

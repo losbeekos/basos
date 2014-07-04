@@ -1,6 +1,10 @@
 app.navPrimary = {
+    settings: {
+        $el: $('.nav-primary')
+    },
+
     init: function(){
-        if(app.settings.primaryNav.$el.length > 0){
+        if(app.primaryNav.settings.$el.length > 0){
         }
     }
 };

@@ -11,7 +11,7 @@
 }
 
 .notification__close {
-    @extend %font-fontello;
+    @extend %font-icons;
 
     position: absolute;
     color: $black;

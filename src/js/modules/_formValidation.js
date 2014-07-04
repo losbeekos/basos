@@ -1,4 +1,9 @@
 app.formValidation = {
+    settings: {
+        $el: $('[data-form-validate]'),
+        language: 'nl'
+    },
+
     init: function(){
         var self = this,
             parsleyOptions = {
@@ -29,15 +34,15 @@ app.formValidation = {
                 }
             };
 
-        if(app.settings.formValidation.$el.length > 0){
-            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.settings.formValidation.language + '.js' + app.settings.version, function () {
+        if(app.formValidation.settings.$el.length > 0){
+            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.formValidation.settings.language + '.js' + app.settings.version, function () {
                 yepnope.injectJs(app.pathBower + 'parsleyjs/dist/parsley.js' + app.settings.version,
                     function(){
-                        app.settings.formValidation.$el.each(function () {
+                        app.formValidation.settings.$el.each(function () {
                             $(this).parsley(parsleyOptions);
                         });
 
-                        window.ParsleyValidator.setLocale(app.settings.formValidation.language);
+                        window.ParsleyValidator.setLocale(app.formValidation.settings.language);
                     });
             });
         }

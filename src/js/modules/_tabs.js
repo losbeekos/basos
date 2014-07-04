@@ -1,14 +1,20 @@
 app.tabs = {
+    settings: {
+        $nav: $('.tabs'),
+        $tab: $('.tab'),
+        $content: $('.tab-content')
+    },
+
     init: function(){
         var self = this;
 
-        if (app.settings.tabs.$tab.length > 0) {
-            app.settings.tabs.$tab.on('click', function (event) {
+        if (app.tabs.settings.$tab.length > 0) {
+            app.tabs.settings.$tab.on('click', function (event) {
                 var $tab = $(this);
 
                 event.preventDefault();
 
-                app.settings.tabs.$tab.removeClass('tab--active');
+                app.tabs.settings.$tab.removeClass('tab--active');
                 $tab.addClass('tab--active');
 
                 $($tab.attr('href'))

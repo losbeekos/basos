@@ -1,17 +1,23 @@
 app.tooltips = {
-    tooltipTrigger: null,
+    settings: {
+        $el: $('.tooltip'),
+        tooltipActiveClass: 'tooltip--active',
+        tooltipContentClass: 'tooltip__content',
+        arrowWidth: 8,
+        tooltipTrigger: null
+    },
 
     init: function () {
         var self = this;
 
-        if (app.settings.tooltips.$el.length > 0) {
-            app.settings.tooltips.$el.each(function () {
+        if (app.tooltips.settings.$el.length > 0) {
+            app.tooltips.settings.$el.each(function () {
                 var $tooltipTrigger = $(this);
 
                 if ($tooltipTrigger.data('tooltipTrigger') === 'click') {
-                    self.tooltipTrigger = 'click';
+                    app.tooltips.settings.tooltipTrigger = 'click';
                 } else {
-                    self.tooltipTrigger = 'hover';
+                    app.tooltips.settings.tooltipTrigger = 'hover';
                 }
 
                 self.triggers($tooltipTrigger);
@@ -24,7 +30,7 @@ app.tooltips = {
         var self = this;
 
         $tooltipTrigger
-            .append('<div class="' + app.settings.tooltips.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
+            .append('<div class="' + app.tooltips.settings.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
             .removeAttr('title');
 
         self.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip__content'));
@@ -33,18 +39,18 @@ app.tooltips = {
     triggers: function ($tooltipTrigger) {
         var self = this;
 
-        if (self.tooltipTrigger === 'hover') {
+        if (app.tooltips.settings.tooltipTrigger === 'hover') {
             $tooltipTrigger.on({
                 mouseenter: function () {
-                    $(this).addClass(app.settings.tooltips.tooltipActiveClass);
+                    $(this).addClass(app.tooltips.settings.tooltipActiveClass);
                 },
                 mouseleave: function () {
-                    $(this).removeClass(app.settings.tooltips.tooltipActiveClass);
+                    $(this).removeClass(app.tooltips.settings.tooltipActiveClass);
                 }
             });
         } else {
             $tooltipTrigger.on('click', function () {
-                $(this).toggleClass(app.settings.tooltips.tooltipActiveClass);
+                $(this).toggleClass(app.tooltips.settings.tooltipActiveClass);
             });
         }
     },
@@ -56,14 +62,14 @@ app.tooltips = {
 
         switch ($tooltipTrigger.data('tooltipPosition')) {
             case 'top':
-                $tooltipContent.css({ bottom: tooltipTriggerHeight + app.settings.tooltips.arrowWidth });
+                $tooltipContent.css({ bottom: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
                 break;
             case 'right':
             case 'left':
                 $tooltipContent.css({ 'margin-top': -(tooltipContentHeight/2) });
                 break;
             case 'bottom':
-                $tooltipContent.css({ top: tooltipTriggerHeight + app.settings.tooltips.arrowWidth });
+                $tooltipContent.css({ top: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
                 break;
         }
     }

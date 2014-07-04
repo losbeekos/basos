@@ -1,10 +1,14 @@
 app.fitVids = {
+    settings: {
+        $el: $('.fitvids')
+    },
+
     init: function(){
-        if (app.settings.fitVids.$el.length > 0) {
+        if (app.fitVids.settings.$el.length > 0) {
             yepnope.injectJs(
                 app.pathBower + 'fitvids/jquery.fitvids.js' + app.settings.version,
                 function(){
-                    app.settings.fitVids.$el.fitVids();
+                    app.fitVids.settings.$el.fitVids();
                 }
             );
         }
