@@ -52,9 +52,9 @@
             width: 20px;
             height: 20px;
             display: block;
-            border-radius: $base-border-radius;
+            border-radius: map-get($base, border-radius);
             border: 1px solid #cbcbcb;
-            transition: all $base-transition-speed*2;
+            transition: all map-get($base, transition-speed)*2;
 
             .no-borderradius & {
                 display: none;
@@ -64,7 +64,7 @@
         &:after {
             @extend %font-icons;
 
-            content: $icon-form-checkbox;
+            content: map-get($icon, form-checkbox);
             position: absolute;
             top: -1px;
             left: 0;
@@ -72,9 +72,9 @@
             height: 20px;
             line-height: 20px;
             text-align: center;
-            color: $color-beta;
+            color: map-get($color, beta);
             opacity: 0;
-            transition: all $base-transition-speed;
+            transition: all map-get($base, transition-speed);
 
             .no-borderradius & {
                 display: none;

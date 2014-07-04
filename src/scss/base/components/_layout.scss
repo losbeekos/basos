@@ -14,33 +14,33 @@ body {
 }
 
 html {
-    background-color: $color-body;
+    background-color: map-get($color, body);
 }
 
 body {
     font-family: arial, verdana, sans-serif;
-    color: $color-text;
+    color: map-get($color, text);
 }
 
 .background {
-    background: $color-background;
+    background: map-get($color, background);
     min-height: 100%;
 }
 
 a {
-    color: $color-beta;
+    color: map-get($color, beta);
     text-decoration: none;
     display: inline;
     cursor: pointer;
-    transition: all $base-transition-speed;
+    transition: all map-get($base, transition-speed);
 
     &:hover {
-        color: $color-text;
+        color: map-get($color, text);
     }
 }
 
 button {
-    transition: all $base-transition-speed;
+    transition: all map-get($base, transition-speed);
 }
 
 img {
@@ -56,16 +56,16 @@ p {
 }
 
 .container {
-    max-width: $container-max-width;
-    min-width: $container-min-width;
-    padding: 0 $container-padding;
-    margin: $container-margin;
+    max-width: map-get($container, max-width);
+    min-width: map-get($container, min-width);
+    padding: 0 map-get($container, padding);
+    margin: map-get($container, margin);
 
     @include breakpoint(beta) {
-        padding: 0 $container-beta-padding;
+        padding: 0 map-get($container, padding)*2;
     }
 
     @include breakpoint(gamma-and-up) {
-        padding: 0 $container-gamma-padding;
+        padding: 0 map-get($container, padding)*4;
     }
 }

@@ -43,12 +43,12 @@ $input-selectors: '
 
 #{$input-selectors} {
     color: #333333;
-    border-radius: $base-border-radius;
+    border-radius: map-get($base, border-radius);
     border: 1px solid #f3f3f3;
     outline: 0;
     width: 100%;
     box-shadow: -1px -1px 0 rgba(0, 0, 0, 0.2);
-    transition: all $base-transition-speed;
+    transition: all map-get($base, transition-speed);
     -webkit-appearance: none;
     -moz-appearance: none;
 
@@ -80,7 +80,7 @@ select {
     cursor: pointer;
     z-index: 2;
     border: none;
-    transition: box-shadow $base-transition-speed;
+    transition: box-shadow map-get($base, transition-speed);
     -webkit-appearance: none;
     -moz-appearance: window;
     // This is so hacky.. (for Firefox)
@@ -99,7 +99,7 @@ select {
     &[multiple=multiple] {
         height: auto;
         border: 1px solid #cbcbcb;
-        border-radius: $base-border-radius;
+        border-radius: map-get($base, border-radiues);
         box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
 
         &:focus,
@@ -110,7 +110,7 @@ select {
     }
 
     option[disabled] {
-        color: $color-placeholder;
+        color: map-get($color, placeholder);
         text-shadow: none;
         border: none;
     }

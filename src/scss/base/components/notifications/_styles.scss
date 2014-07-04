@@ -3,9 +3,9 @@
 ===========================================*/
 
 .notification--error {
-    @include notification(lighten($color-delta, 45%), lighten($color-delta, 38%), darken($color-delta, 40%), $icon-notification-error, $color-delta);
+    @include notification(lighten(map-get($color, delta), 45%), lighten(map-get($color, delta), 38%), darken(map-get($color, delta), 40%), map-get($icon, notification-error), map-get($color, delta));
 }
 
 .notification--success {
-    @include notification(lighten($color-gamma, 45%), lighten($color-gamma, 38%), darken($color-gamma, 40%), $icon-notification-success, $color-gamma);
+    @include notification(lighten(map-get($color, gamma), 45%), lighten(map-get($color, gamma), 38%), darken(map-get($color, gamma), 40%), map-get($icon, notification-success), map-get($color, gamma));
 }

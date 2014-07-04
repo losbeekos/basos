@@ -26,24 +26,24 @@
 .dropdown__content {
     overflow: hidden;
     position: absolute;
-    width: $ten*20;
+    width: map-get($base, ten)*20;
     top: 34px;
     left: 0;
     margin-top: -1px;
     visibility: hidden;
-    background-color: lighten($btn-bg-color-alpha, 5%);
-    border: 1px solid darken($btn-bg-color-alpha, 10%);
+    background-color: lighten(map-get($btn, bg-color-alpha), 5%);
+    border: 1px solid darken(map-get($btn, bg-color-alpha), 10%);
     opacity: 0;
     transition: all 0.2s 0 0.3s;
 
     a {
         display: block;
-        border-top: 1px solid darken($btn-bg-color-alpha, 1%);
+        border-top: 1px solid darken(map-get($btn, bg-color-alpha), 1%);
 
         @include rem(padding, 10px 15px);
 
         &:hover {
-            background-color: darken($accordion-trigger-bg-color, 1%);
+            background-color: darken(map-get($accordion, trigger-bg-color), 1%);
         }
     }
 }

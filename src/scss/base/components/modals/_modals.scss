@@ -26,15 +26,15 @@
 }
 
 .modal__content {
-    background: $modal-content-bg-color;
+    background: map-get($modal, content-bg-color);
     position: relative;
     margin: 0 auto;
-    padding: $modal-content-padding;
-    border-radius: $modal-content-border-radius;
+    padding: map-get($modal, content-padding);
+    border-radius: map-get($modal, content-border-radius);
 }
 
 .modal__overlay {
-    background: $modal-overlay-bg-color;
+    background: map-get($modal, overlay-bg-color);
     position: fixed;
     visibility: hidden;
     top: 0;
@@ -49,7 +49,7 @@
 
     .modal-show & {
         visibility: visible;
-        opacity: $modal-overlay-opacity;
+        opacity: map-get($modal, overlay-opacity);
         transition: opacity 0.5s;
     }
 }

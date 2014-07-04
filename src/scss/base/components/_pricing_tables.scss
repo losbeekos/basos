@@ -5,15 +5,15 @@
 .pricing-table {
     @extend .list-unstyled;
 
-    border: 1px solid $pricing-table-border-color;
+    border: 1px solid map-get($pricing-table, border-color);
     text-align: center;
-    border-radius: $base-border-radius;
+    border-radius:map-get($base, border-radius);
     overflow: hidden;
 }
 
 .pricing-table__header {
-    background: $pricing-table-header-bg-color;
-    color: $white;
+    background: map-get($pricing-table, header-bg-color);
+    color: map-get($color, white);
 
     @include rem(padding, 15px 20px);
 }
@@ -22,12 +22,12 @@
     @include rem(padding, 10px 20px);
 
     + .pricing-table__content {
-        border-top: 1px solid $pricing-table-border-color;
+        border-top: 1px solid map-get($pricing-table, border-color);
     }
 }
 
 .pricing-table__content--alpha {
-    background: $color-alpha;
+    background: map-get($color, alpha);
 }
 
 .pricing-table__price {

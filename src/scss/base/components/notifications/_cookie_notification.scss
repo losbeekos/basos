@@ -6,14 +6,14 @@
     position: fixed;
     left: 0;
     width: 100%;
-    min-width: $container-min-width;
+    min-width: map-get($container, min-width);
     background: rgba(0, 0, 0, 0.85);
     text-align: center;
     z-index: 999;
     margin-bottom: 0;
     border: none;
-    color: $white;
-    transition: all $base-transition-speed*2;
+    color: map-get($color, white);
+    transition: all map-get($base, transition-speed)*2;
 
     @include rem(padding, 20px 0);
 
@@ -43,7 +43,7 @@
     }
 
     .notification__more-info {
-        color: $white;
+        color: map-get($color, white);
         text-decoration: underline;
     }
 
@@ -54,6 +54,6 @@
     }
 
     .notification__close {
-        color: $white;
+        color: map-get($color, white);
     }
 }

@@ -15,8 +15,8 @@
     @extend .clearfix;
 
     width: 100%;
-    margin-right: gutter($susy-total-columns);
-    margin-bottom: gutter($susy-total-columns);
+    margin-right: gutter(map-get($susy, columns));
+    margin-bottom: gutter(map-get($susy, columns));
 
     @include breakpoint(beta-and-up){
         float: left;
@@ -38,9 +38,9 @@
 /*==========  Columns  ==========*/
 
 @include breakpoint(beta-and-up) {
-    @for $i from 1 through $susy-total-columns {
+    @for $i from 1 through map-get($susy, columns) {
         .column-#{$i} {
-            width: span($i of $susy-total-columns);
+            width: span($i of map-get($susy, columns));
         }
     }
 }

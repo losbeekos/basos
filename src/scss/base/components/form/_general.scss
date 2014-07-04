@@ -23,14 +23,14 @@
 
 .form__select {
     user-select: none;
-    background: $white;
+    background: map-get($color, white);
     border: 1px solid #cbcbcb;
-    border-radius: $base-border-radius;
+    border-radius: map-get($base, border-radius);
 
     &:after {
         @extend %font-icons;
 
-        content: $icon-form-select;
+        content: map-get($icon, form-select);
         position: absolute;
         top: 0;
         right: 12px;
@@ -54,7 +54,7 @@
         &:checked {
             + label {
                 &:before {
-                    background: $color-beta;
+                    background: map-get($color, beta);
                 }
 
                 &:after {
@@ -73,7 +73,7 @@
             }
 
             &:after {
-                background: $white;
+                background: map-get($color, white);
                 content: '';
                 top: -1px;
                 left: -1px;

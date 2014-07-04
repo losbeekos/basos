@@ -3,14 +3,14 @@
 =================================*/
 
 .accordion {
-    border: 1px solid $accordion-border-color;
-    border-radius: $accordion-border-radius;
+    border: 1px solid map-get($accordion, border-color);
+    border-radius: map-get($accordion, border-radius);
     overflow: hidden;
 }
 
 .accordion__group {
     overflow: hidden;
-    margin-bottom: $accordion-group-margin-bottom;
+    margin-bottom: map-get($accordion, group-margin-bottom);
 
     &:first-child {
         .accordion__trigger {
@@ -21,38 +21,38 @@
 
 .accordion__trigger {
     display: block;
-    background-color: $accordion-trigger-bg-color;
-    color: $accordion-trigger-font-color;
-    padding: $accordion-padding;
-    border-top: 1px solid $accordion-border-color;
+    background-color: map-get($accordion, trigger-bg-color);
+    color: map-get($accordion, trigger-color);
+    padding: map-get($accordion, padding);
+    border-top: 1px solid map-get($accordion, border-color);
 
-    @if $accordion-gradient {
+    @if map-get($accordion, gradient) {
         background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     }
 
     &:hover {
-        background-color: darken($accordion-trigger-bg-color, 5%);
-        color: darken($accordion-trigger-font-color, 5%);
+        background-color: darken(map-get($accordion, trigger-bg-color), 5%);
+        color: darken(map-get($accordion, trigger-color), 5%);
     }
 }
 
 .accordion__content {
     overflow: hidden;
-    padding: 0 $accordion-padding;
-    border-top: 1px solid $accordion-trigger-bg-color;
-    transition: all, $accordion-transition-speed;
+    padding: 0 map-get($accordion, padding);
+    border-top: 1px solid map-get($accordion, trigger-bg-color);
+    transition: all, map-get($accordion, transition-speed);
 
     .lt-ie9 & {
         height: 0;
     }
 
     *:first-child {
-        margin-top: $accordion-padding;
+        margin-top: map-get($accordion, padding);
     }
 }
 
 .accordion-content--show {
-    border-top: 1px solid $accordion-border-color;
+    border-top: 1px solid map-get($accordion, border-color);
 
     .lt-ie9 & {
         height: auto;

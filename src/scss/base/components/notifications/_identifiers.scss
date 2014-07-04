@@ -14,7 +14,7 @@
     @extend %font-icons;
 
     position: absolute;
-    color: $black;
+    color: map-get($color, black);
     padding: 0;
     background: none;
     border: none;
@@ -25,7 +25,7 @@
     &:before {
         content: '';
         opacity: 0.2;
-        transition: opacity $base-transition-speed;
+        transition: opacity map-get($base, transition-speed);
     }
 
     &:hover {

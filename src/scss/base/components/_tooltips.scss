@@ -17,7 +17,7 @@
         position: absolute;
         z-index: 100;
         opacity: 0;
-        transition: all $tooltip-transition-speed;
+        transition: all map-get($tooltip, transition-speed);
     }
 
     &.tooltip--active {
@@ -30,17 +30,17 @@
 
     &:after {
         content: '';
-        border: $tooltip-arrow-width solid transparent;
+        border: map-get($tooltip, arrow-width) solid transparent;
     }
 
     .tooltip__content {
         text-align: center;
-        background: $tooltip-bg-color;
-        color: $tooltip-font-color;
-        width: $tooltip-width;
-        padding: $tooltip-padding;
-        border-radius: $tooltip-border-radius;
-        font-size: $tooltip-font-size;
+        background: map-get($tooltip, bg-color);
+        color: map-get($tooltip, color);
+        width: map-get($tooltip, width);
+        padding: map-get($tooltip, padding);
+        border-radius: map-get($tooltip, border-radius);
+        font-size: map-get($tooltip, font-size);
     }
 }
 
@@ -48,26 +48,26 @@
 [data-tooltip-position=bottom] {
     &:after {
         left: 50%;
-        margin-left: -$tooltip-arrow-width;
+        margin-left: -#{map-get($tooltip, arrow-width)};
     }
 
     .tooltip__content {
         left: 50%;
-        margin-left: -$tooltip-width/2;
+        margin-left: -#{map-get($tooltip, width)/2};
     }
 }
 
 [data-tooltip-position=top] {
     &:after {
-        top: -($tooltip-arrow-width*2);
-        border-top-color: $tooltip-bg-color;
+        top: -(map-get($tooltip, arrow-width)*2);
+        border-top-color: map-get($tooltip, bg-color);
     }
 }
 
 [data-tooltip-position=bottom] {
     &:after {
-        bottom: -($tooltip-arrow-width*2);
-        border-bottom-color: $tooltip-bg-color;
+        bottom: -(map-get($tooltip, arrow-width)*2);
+        border-bottom-color: map-get($tooltip, bg-color);
     }
 }
 
@@ -75,7 +75,7 @@
 [data-tooltip-position=right] {
     &:after {
         top: 50%;
-        margin-top: -$tooltip-arrow-width;
+        margin-top: -#{map-get($tooltip, arrow-width)};
     }
 
     .tooltip__content {
@@ -85,23 +85,23 @@
 
 [data-tooltip-position=right] {
     &:after {
-        right: -($tooltip-arrow-width*2);
-        border-right-color: $tooltip-bg-color;
+        right: -(map-get($tooltip, arrow-width)*2);
+        border-right-color: map-get($tooltip, bg-color);
     }
 
     .tooltip__content {
-        right: -($tooltip-width+$tooltip-arrow-width*2);
+        right: -(map-get($tooltip, width)+map-get($tooltip, arrow-width)*2);
     }
 }
 
 [data-tooltip-position=left] {
     &:after {
-        left: -($tooltip-arrow-width*2);
-        border-left-color: $tooltip-bg-color;
+        left: -(map-get($tooltip, arrow-width)*2);
+        border-left-color: map-get($tooltip, bg-color);
     }
 
     .tooltip__content {
-        left: -($tooltip-width+$tooltip-arrow-width*2);
+        left: -(map-get($tooltip, width)+map-get($tooltip, arrow-width)*2);
     }
 }
 

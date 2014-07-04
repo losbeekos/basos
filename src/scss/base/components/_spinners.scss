@@ -10,17 +10,17 @@
 
 .spinner {
     display: inline-block;
-    animation: spinner $spinner-animation-speed infinite linear;
+    animation: spinner map-get($spinner, animation-speed) infinite linear;
 
     &:after {
         @extend %font-icons;
 
-        content: $icon-spinner-alpha;
+        content: map-get($icon, spinner-alpha);
 
-        @include rem(font-size, $spinner-font-size);
+        @include rem(font-size, map-get($spinner, font-size));
     }
 }
 
-.spinner--alpha:after { content: $icon-spinner-alpha; }
-.spinner--beta:after  { content: $icon-spinner-beta; }
-.spinner--gamma:after { content: $icon-spinner-gamma; }
+.spinner--alpha:after { content: map-get($icon, spinner-alpha); }
+.spinner--beta:after  { content: map-get($icon, spinner-beta); }
+.spinner--gamma:after { content: map-get($icon, spinner-gamma); }

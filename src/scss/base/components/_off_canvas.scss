@@ -6,11 +6,11 @@
 .off-canvas-toggle-right {
     @extend %font-icons;
 
-    background: $off-canvas-toggle-bg-color;
+    background: map-get($off-canvas, toggle-bg-color);
     position: absolute;
     top: 0;
     z-index: 10000;
-    color: $white;
+    color: map-get($color, white);
     text-align: center;
     border: none;
 
@@ -19,8 +19,8 @@
     @include rem(height, 50px);
 
     &:hover {
-        background: lighten($off-canvas-toggle-bg-color, 5%);
-        color: $white;
+        background: lighten(map-get($off-canvas, toggle-bg-color), 5%);
+        color: map-get($color, white);
         text-decoration: none;
     }
 
@@ -55,26 +55,26 @@
 }
 
 .off-canvas {
-    background: $off-canvas-bg-color;
+    background: map-get($off-canvas, bg-color);
     position: fixed;
     z-index: 9999;
     top: 0;
     height: 100%;
 
-    @include rem(width, $off-canvas-width);
+    @include rem(width, map-get($off-canvas, width));
 }
 
 .off-canvas--left {
     left: 0;
-    transform: translate3d(-$off-canvas-width, 0, 0);
-    transition: transform $base-transition-speed;
+    transform: translate3d(-#{map-get($off-canvas, width)}, 0, 0);
+    transition: transform map-get($base, transition-speed);
 
     .off-canvas-show-left & {
         transform: translate3d(0, 0, 0);
     }
 
     .no-csstransforms3d & {
-        left: -$off-canvas-width;
+        left: -#{map-get($off-canvas, width)};
     }
 
     .no-csstransforms3d.off-canvas-show-left & {
@@ -84,15 +84,15 @@
 
 .off-canvas--right {
     right: 0;
-    transform: translate3d($off-canvas-width, 0, 0);
-    transition: transform $base-transition-speed;
+    transform: translate3d(map-get($off-canvas, width), 0, 0);
+    transition: transform map-get($base, transition-speed);
 
     .off-canvas-show-right & {
         transform: translate3d(0, 0, 0);
     }
 
     .no-csstransforms3d & {
-        right: -$off-canvas-width;
+        right: -#{map-get($off-canvas, width)};
     }
 
     .no-csstransforms3d.off-canvas-show-left & {
@@ -103,7 +103,7 @@
 .off-canvas-push {
     &:after {
         content: '';
-        background: $black;
+        background: map-get($color, black);
         width: 100%;
         height: 100%;
         position: fixed;
@@ -112,7 +112,7 @@
         z-index: 999;
         visibility: hidden;
         opacity: 0;
-        transition: all $base-transition-speed;
+        transition: all map-get($base, transition-speed);
 
         .off-canvas-show-left &,
         .off-canvas-show-right & {
@@ -127,8 +127,8 @@
 }
 
 .off-canvas-nav__item {
-    border-top: 1px solid $white;
-    border-bottom: 1px solid darken($off-canvas-bg-color, 5%);
+    border-top: 1px solid map-get($color, white);
+    border-bottom: 1px solid darken(map-get($off-canvas, bg-color), 5%);
 
     &:first-child {
         border-top: 0;
@@ -141,11 +141,11 @@
 
 .off-canvas-nav__link {
     display: block;
-    color: $black;
+    color: map-get($color, black);
 
     @include rem(padding, 20px);
 
     &.active {
-        background: lighten($off-canvas-bg-color, 3%);
+        background: lighten(map-get($off-canvas, bg-color), 3%);
     }
 }

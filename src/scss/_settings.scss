@@ -3,165 +3,193 @@
 ================================================*/
 
 
-/*==========  Project  ==========*/
+/*==========  Base  ==========*/
 
-$gradient               : false;
-$ten                    : 0.625em;
-$base-font-size         : 16px;
-$base-padding           : 10px;
-$base-border-radius     : 2px;
-$base-transition-speed  : 0.2s;
-$white                  : #ffffff;
-$black                  : #000000;
-$color-body             : $black;
-$color-background       : $white;
-$color-text             : #222222;
-$color-placeholder      : #94adc4;
-$color-selection        : #d1e4fe;
-$color-alpha            : #f1f1f1;
-$color-beta             : #2690b0;
-$color-gamma            : #4eb455;
-$color-delta            : #b44e4e;
-$color-epsilon          : #444444;
-$color-zeta             : #aba346;
+$base: (
+    gradient         : false,
+    ten              : 0.625em,
+    font-size        : 16px,
+    padding          : 10px,
+    border-radius    : 2px,
+    transition-speed : 0.2s
+);
+
+
+/*==========  Colors  ==========*/
+
+$color: (
+    white       : #ffffff,
+    black       : #000000,
+    text        : #222222,
+    placeholder : #94adc4,
+    selection   : #d1e4fe,
+    alpha       : #f1f1f1,
+    beta        : #2690b0,
+    gamma       : #4eb455,
+    delta       : #b44e4e,
+    epsilon     : #444444,
+    zeta        : #aba346
+);
 
 
 /*==========  Container  ==========*/
 
-$container-min-width     : $ten*32;
-$container-max-width     : $ten*128;
-$container-margin        : 0 auto;
-$container-padding       : $ten;
-$container-beta-padding  : $ten*2;
-$container-gamma-padding : $ten*4;
+$container: (
+    margin    : 0 auto,
+    min-width : map-get($base, ten)*32,
+    max-width : map-get($base, ten)*128,
+    padding   : map-get($base, ten)
+);
 
 
 /*==========  Susy grid  ==========*/
-
-$susy-total-columns: 12;
-$susy-column-width: 4em;
-$susy-gutters: 1/2;
+// More settings:
+// http://susydocs.oddbird.net/en/latest
 
 $susy: (
-    // More settings:
-    // http://susydocs.oddbird.net/en/latest/
-    columns: $susy-total-columns,
-    gutters: $susy-gutters,
-    column-width: $susy-column-width,
-    global-box-sizing: border-box
+    columns           : 12,
+    gutters           : 1/2,
+    column-width      : 4em,
+    global-box-sizing : border-box
 );
 
 
 /*==========  Buttons  ==========*/
 
-$btn-container-padding       : $base-padding $base-padding*1.8;
-$btn-container-margin-bottom : $ten*3;
-$btn-gradient                : $gradient;
-$btn-border-radius           : $base-border-radius;
-$btn-bg-color-alpha          : $color-alpha;
-$btn-bg-color-beta           : $color-beta;
-$btn-bg-color-gamma          : $color-gamma;
-$btn-bg-color-delta          : $color-delta;
-$btn-bg-color-epsilon        : $color-epsilon;
+$btn: (
+    container-padding       : map-get($base, padding) map-get($base, padding)*1.8,
+    container-margin-bottom : map-get($base, ten)*3,
+    gradient                : map-get($base, gradient),
+    border-radius           : map-get($base, border-radius),
+    bg-color-alpha          : map-get($color, alpha),
+    bg-color-beta           : map-get($color, beta),
+    bg-color-gamma          : map-get($color, gamma),
+    bg-color-delta          : map-get($color, delta),
+    bg-color-epsilon        : map-get($color, epsilon)
+);
+
 
 
 /*==========  Icons  ==========*/
 
-$icon-notification-info       : '';
-$icon-notification-success    : '';
-$icon-notification-error      : '';
-$icon-form-validation-success : $icon-notification-success;
-$icon-form-validation-error   : $icon-notification-error;
-$icon-form-checkbox           : '';
-$icon-form-select             : '';
-$icon-spinner-alpha           : '';
-$icon-spinner-beta            : '';
-$icon-spinner-gamma           : '';
+$icon: (
+    notification-info       : '',
+    notification-success    : '',
+    notification-error      : '',
+    form-validation-success : '',
+    form-validation-error   : '',
+    form-checkbox           : '',
+    form-select             : '',
+    spinner-alpha           : '',
+    spinner-beta            : '',
+    spinner-gamma           : ''
+);
 
 
 /*==========  Off canvas  ==========*/
-$off-canvas-bg-color        : #f5f5f5;
-$off-canvas-width           : 260px;
-$off-canvas-toggle-bg-color : $color-beta;
+
+$off-canvas: (
+    bg-color        : #f5f5f5,
+    width           : 260px,
+    toggle-bg-color : map-get($color, beta)
+);
 
 
 /*==========  Tabs  ==========*/
 
-$tab-bg-color                 : $btn-bg-color-alpha;
-$tab-border-color             : darken($btn-bg-color-alpha, 5%);
-$tab-color                    : lighten($color-text, 20%);
-$tab-padding                  : 10px 15px;
-$tab-active-bg-color          : $white;
-$tab-content-border-top-color : darken($btn-bg-color-alpha, 5%);
-$tab-content-padding          : 20px;
+$tab: (
+    bg-color                 : map-get($btn, bg-color-alpha),
+    border-color             : darken(map-get($btn, bg-color-alpha), 5%),
+    color                    : lighten(map-get($color, text), 20%),
+    padding                  : 10px 15px,
+    bg-color-active          : map-get($color, white),
+    content-border-top-color : darken(map-get($btn, bg-color-alpha), 5%),
+    content-padding          : 20px
+);
 
 
 /*==========  Tables  ==========*/
 
-$table-margin-bottom  : $ten*3;
-$table-padding        : $base-padding;
-$table-border-color   : darken($btn-bg-color-alpha, 5%);
-$table-border-radius  : $base-border-radius;
-$table-zebra-bg-color : #f8f8f8;
-$table-hover-bg-color : #f6f6f6;
+$table: (
+    margin-bottom  : map-get($base, ten)*3,
+    padding        : map-get($base, padding),
+    border-color   : darken(map-get($btn, bg-color-alpha), 5%),
+    border-radius  : map-get($base, border-radius),
+    bg-color-zebra : #f8f8f8,
+    bg-color-hover : #f6f6f6
+);
 
 
 /*==========  Tooltips  ==========*/
 
-$tooltip-width                  : 220px;
-$tooltip-arrow-width            : 5px;
-$tooltip-transition-speed       : $base-transition-speed;
-$tooltip-bg-color               : $color-beta;
-$tooltip-padding                : $base-padding;
-$tooltip-border-radius          : $base-border-radius;
-$tooltip-font-size              : $ten*1.2;
-$tooltip-font-color             : $white;
+$tooltip: (
+    width            : 220px,
+    arrow-width      : 5px,
+    transition-speed : map-get($base, transition-speed),
+    bg-color         : map-get($color, beta),
+    padding          : map-get($base, padding),
+    border-radius    : map-get($base, border-radius),
+    font-size        : map-get($base, ten)*1.2,
+    color            : map-get($color, white)
+);
 
 
 /*==========  Modals  ==========*/
 
-$modal-overlay-bg-color      : $black;
-$modal-overlay-opacity       : 0.4;
-$modal-content-bg-color      : $white;
-$modal-content-padding       : $ten*4;
-$modal-content-border-radius : $base-border-radius;
+$modal: (
+    overlay-bg-color      : map-get($color, black),
+    overlay-opacity       : 0.4,
+    content-bg-color      : map-get($color, white),
+    content-padding       : map-get($base, ten)*4,
+    content-border-radius : map-get($base, border-radius)
+);
 
 
 /*==========  Accordion  ==========*/
 
-$accordion-transition-speed    : $base-transition-speed;
-$accordion-padding             : $base-padding;
-$accordion-border-color        : darken($btn-bg-color-alpha, 5%);
-$accordion-gradient            : $gradient;
-$accordion-border-radius       : $base-border-radius;
-$accordion-group-margin-bottom : 0;
-$accordion-trigger-bg-color    : $btn-bg-color-alpha;
-$accordion-trigger-font-color  : $color-text;
+$accordion: (
+    transition-speed    : map-get($base, transition-speed),
+    padding             : map-get($base, padding),
+    border-color        : darken(map-get($btn, bg-color-alpha), 5%),
+    gradient            : map-get($base, gradient),
+    border-radius       : map-get($base, border-radius),
+    group-margin-bottom : 0,
+    trigger-bg-color    : map-get($btn, bg-color-alpha),
+    trigger-color       : map-get($color, text)
+);
 
 
 /*==========  Breadcrumbs  ==========*/
 
-$breadcrumbs-bg-color      : #f5f5f5;
-$breadcrumbs-padding       : $ten*1.5 $ten*2;
-$breadcrumbs-margin        : $ten;
-$breadcrumbs-divider-color : #cccccc;
-$breadcrumbs-current-color : #aaaaaa;
+$breadcrumbs: (
+    bg-color      : #f5f5f5,
+    padding       : map-get($base, ten)*1.5 map-get($base, ten)*2,
+    margin        : map-get($base, ten),
+    divider-color : #cccccc,
+    current-color : #aaaaaa
+);
 
 
 /*==========  Pricing tables  ==========*/
 
-$pricing-table-border-color    : darken($btn-bg-color-alpha, 5%);
-$pricing-table-header-bg-color : lighten($black, 20%);
+$pricing-table: (
+    border-color    : darken(map-get($btn, bg-color-alpha), 5%),
+    header-bg-color : lighten(map-get($color, black), 20%)
+);
 
 
 /*==========  Progress bar  ==========*/
 
-$progress-bar-bg-color       : $color-alpha;
-$progress-bar-value-bg-color : $color-beta;
+$progress-bar: (
+    bg-color       : map-get($color, alpha),
+    value-bg-color : map-get($color, beta)
+);
 
 
 /*==========  Spinners  ==========*/
-$spinner-animation-speed : 1s;
-$spinner-font-size       : 30px;
+$spinner: (
+    animation-speed : 1s,
+    font-size       : 30px
+);
 
 

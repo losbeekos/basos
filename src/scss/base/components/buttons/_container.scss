@@ -5,10 +5,10 @@
 .btn-container {
     @extend .clearfix;
 
-    margin-bottom: $btn-container-margin-bottom;
+    margin-bottom: map-get($btn, container-margin-bottom);
 
     a {
-        padding: $btn-container-padding;
+        padding: map-get($btn, container-padding);
     }
 }
 

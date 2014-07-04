@@ -3,9 +3,9 @@
 ===================================*/
 
 .breadcrumbs {
-    background: $breadcrumbs-bg-color;
-    padding: $breadcrumbs-padding;
-    border-radius: $base-border-radius;
+    background: map-get($breadcrumbs, bg-color);
+    padding: map-get($breadcrumbs, padding);
+    border-radius: map-get($base, border-radius);
 
     a,
     span {
@@ -13,17 +13,17 @@
     }
 
     a {
-        margin-right: $breadcrumbs-margin;
+        margin-right: map-get($breadcrumbs, margin);
 
         &:after {
-            margin-left: $breadcrumbs-margin;
+            margin-left: map-get($breadcrumbs, margin);
             content: '/';
-            color: $breadcrumbs-divider-color;
+            color: map-get($breadcrumbs, divider-color);
         }
     }
 
     span {
-        color: $breadcrumbs-current-color;
+        color: map-get($breadcrumbs, current-color);
     }
 }
 

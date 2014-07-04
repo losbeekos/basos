@@ -14,27 +14,27 @@
 
 .btn {
     display: inline-block;
-    color: $color-text;
-    border-radius: $btn-border-radius;
+    color: map-get($color, text);
+    border-radius: map-get($btn, border-radius);
     border: 0;
     outline: 0;
     text-align: center;
     border-width: 1px;
     border-style: solid;
-    transition: all $base-transition-speed;
+    transition: all map-get($base, transition-speed);
     -webkit-appearance: none;
     -moz-appearance: none;
     user-select: none;
 
-    @include btn-style($btn-bg-color-alpha);
+    @include btn-style(map-get($btn, bg-color-alpha));
     @include rem(line-height, 16px);
 
-    @if $btn-gradient {
+    @if map-get($btn, gradient) {
         background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
     }
 
     &:not(.btn--divider):hover {
-        color: $color-text;
+        color: map-get($color, text);
     }
 
     &:focus {
@@ -45,7 +45,7 @@
     &:disabled,
     &:disabled:hover {
         cursor: not-allowed;
-        color: darken($white, 20%);
+        color: darken(map-get($color, white), 20%);
         opacity: 0.5;
 
         &:focus {
@@ -58,34 +58,34 @@
 .btn--gamma,
 .btn--delta,
 .btn--epsilon {
-    color: $white;
+    color: map-get($color, white);
     text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
 
     &:not(.btn--divider):hover,
     &:hover {
-        color: $white;
+        color: map-get($color, white);
     }
 
     &:disabled,
     &:disabled:hover {
-        color: darken($white, 20%);
+        color: darken(map-get($color, white), 20%);
     }
 }
 
 .btn--beta {
-    @include btn-style($btn-bg-color-beta);
+    @include btn-style(map-get($btn, bg-color-beta));
 }
 
 .btn--gamma {
-    @include btn-style($btn-bg-color-gamma);
+    @include btn-style(map-get($btn, bg-color-gamma));
 }
 
 .btn--delta {
-    @include btn-style($btn-bg-color-delta);
+    @include btn-style(map-get($btn, bg-color-delta));
 }
 
 .btn--epsilon {
-    @include btn-style($btn-bg-color-epsilon);
+    @include btn-style(map-get($btn, bg-color-epsilon));
 }
 
 .btn--block {

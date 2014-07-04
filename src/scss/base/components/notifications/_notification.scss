@@ -16,13 +16,13 @@
 .notification {
     border-width: 1px;
     border-style: solid;
-    border-radius: $base-border-radius;
+    border-radius: map-get($base, border-radius);
     position: relative;
-    transition: all $base-transition-speed;
+    transition: all map-get($base, transition-speed);
     transform-style: preserve-3d;
     backface-visibility: hidden;
 
-    @include notification(lighten($color-zeta, 45%), lighten($color-zeta, 38%), darken($color-zeta, 40%), $icon-notification-info, $color-zeta);
+    @include notification(lighten(map-get($color, zeta), 45%), lighten(map-get($color, zeta), 38%), darken(map-get($color, zeta), 40%), map-get($icon, notification-info), map-get($color, zeta));
     @include rem(margin-bottom, 30px);
 
     @include breakpoint(beta-and-up) {

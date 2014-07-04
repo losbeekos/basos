@@ -11,7 +11,7 @@ input[type=radio] {
         }
 
         &:after {
-            background: $color-beta;
+            background: map-get($color, beta);
             content: '';
             top: 4px;
             left: 5px;

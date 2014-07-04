@@ -12,13 +12,13 @@
         &:after {
             @extend %font-icons;
 
-            content: $icon-form-validation-error;
-            color: $color-delta;
+            content: map-get($icon, form-validation-error);
+            color: map-get($color, delta);
         }
     }
 
     #{$input-selectors} {
-        border-color: $color-delta;
+        border-color: map-get($color, delta);
         box-shadow: none;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -37,10 +37,10 @@
     }
 
     .form__select {
-        border-color: $color-delta;
+        border-color: map-get($color, delta);
 
         &:after {
-            color: $color-delta;
+            color: map-get($color, delta);
         }
     }
 
@@ -48,12 +48,12 @@
     input[type=radio] {
         + label {
             &:before {
-                background: lighten($color-delta, 45%);
-                border-color: $color-delta;
+                background: lighten(map-get($color, delta), 45%);
+                border-color: map-get($color, delta);
             }
 
             &:after {
-                color: $color-delta;
+                color: map-get($color, delta);
             }
         }
     }
@@ -64,13 +64,13 @@
         &:after {
             @extend %font-icons;
 
-            content: $icon-form-validation-success;
-            color: $color-gamma;
+            content: map-get($icon, form-validation-success);
+            color: map-get($color, gamma);
         }
     }
 
     #{$input-selectors} {
-        border-color: $color-gamma;
+        border-color: map-get($color, gamma);
         box-shadow: none;
 
         @include rem(padding-right, 30px);
@@ -87,10 +87,10 @@
     }
 
     .form__select {
-        border-color: $color-gamma;
+        border-color: map-get($color, gamma);
 
         &:after {
-            color: $color-gamma;
+            color: map-get($color, gamma);
         }
     }
 }
@@ -102,8 +102,8 @@
     clear: both;
     max-width: 100%;
     position: relative;
-    background: $color-delta;
-    color: $white;
+    background: map-get($color, delta);
+    color: map-get($color, white);
 
     @include rem(border-radius, 0 0 3px 3px);
     @include rem(padding, 10px);
@@ -129,7 +129,7 @@
             top: -16px;
             left: 0;
             border: 8px solid transparent;
-            border-bottom-color: $color-delta;
+            border-bottom-color: map-get($color, delta);
         }
     }
 }
