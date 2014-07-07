@@ -10,16 +10,16 @@
     position: absolute;
     top: 0;
     z-index: 10000;
-    color: map-get($color, white);
+    color: map-get($off-canvas, toggle-color);
     text-align: center;
     border: none;
 
-    @include rem(font-size, 30px);
-    @include rem(width, 50px);
-    @include rem(height, 50px);
+    @include rem(font-size, map-get($off-canvas, toggle-font-size));
+    @include rem(width, map-get($off-canvas, toggle-width));
+    @include rem(height, map-get($off-canvas, toggle-height));
 
     &:hover {
-        background: lighten(map-get($off-canvas, toggle-bg-color), 5%);
+        background: lighten(map-get($off-canvas, toggle-bg-color), map-get($off-canvas, toggle-hover-darken));
         color: map-get($color, white);
         text-decoration: none;
     }
@@ -31,7 +31,7 @@
 }
 
 .off-canvas-toggle-left {
-    @include rem(right, -50px);
+    @include rem(right, -(map-get($off-canvas, toggle-width)));
 
     &:before {
         content: map-get($icon, off-canvas-toggle-left);
@@ -43,7 +43,7 @@
 }
 
 .off-canvas-toggle-right {
-    @include rem(left, -50px);
+    @include rem(left, -(map-get($off-canvas, toggle-width)));
 
     &:before {
         content: map-get($icon, off-canvas-toggle-right);
@@ -117,7 +117,7 @@
         .off-canvas-show-left &,
         .off-canvas-show-right & {
             visibility: visible;
-            opacity: 0.3;
+            opacity: map-get($off-canvas, overlay-opacity);
         }
 
         .lt-ie10 & {
@@ -127,8 +127,8 @@
 }
 
 .off-canvas-nav__item {
-    border-top: 1px solid map-get($color, white);
-    border-bottom: 1px solid darken(map-get($off-canvas, bg-color), 5%);
+    border-top: 1px solid map-get($off-canvas, item-border-top);
+    border-bottom: 1px solid map-get($off-canvas, item-border-bottom);
 
     &:first-child {
         border-top: 0;
@@ -141,11 +141,12 @@
 
 .off-canvas-nav__link {
     display: block;
-    color: map-get($color, black);
+    color: map-get($off-canvas, link-color);
 
-    @include rem(padding, 20px);
+    @include rem(padding, map-get($off-canvas, link-padding));
 
-    &.active {
+    &.active,
+    &:hover {
         background: lighten(map-get($off-canvas, bg-color), 3%);
     }
 }

@@ -5,7 +5,6 @@
 
 $base: (
     gradient         : false,
-    ten              : 0.625em,
     font-size        : 16px,
     padding          : 10px,
     border-radius    : 2px,
@@ -33,10 +32,13 @@ $color: (
 /*==========  Container  ==========*/
 
 $container: (
-    margin    : 0 auto,
-    min-width : map-get($base, ten)*32,
-    max-width : map-get($base, ten)*128,
-    padding   : map-get($base, ten)
+    min-width     : 320px,
+    max-width     : 1280px,
+    margin-top    : 0,
+    margin-bottom : 0,
+    margin-left   : auto,
+    margin-right  : auto,
+    padding       : 10px
 );
 
 
@@ -116,29 +118,41 @@ $icon: (
 /*==========  Off canvas  ==========*/
 
 $off-canvas: (
-    bg-color        : #f5f5f5,
-    width           : 260px,
-    toggle-bg-color : map-get($color, beta)
+    width                    : 260px,
+    bg-color                 : darken(white, 5%),
+    item-border-top-color    : map-get($color, white),
+    item-border-bottom-color : darken(white, 10%),
+    link-padding             : 20px,
+    link-color               : map-get($color, black),
+    toggle-bg-color          : map-get($color, beta),
+    toggle-color             : map-get($color, white),
+    toggle-font-size         : 30px,
+    toggle-width             : 50px,
+    toggle-height            : 50px,
+    toggle-hover-darken      : 5%,
+    overlay-opacity          : 0.3
 );
 
 
 /*==========  Tabs  ==========*/
 
-$tab: (
+$tabs: (
     bg-color                 : map-get($btn-bg, alpha),
     border-color             : darken(map-get($btn-bg, alpha), 5%),
     color                    : lighten(map-get($color, text), 20%),
     padding                  : 10px 15px,
+    margin-left              : 5px,
     bg-color-active          : map-get($color, white),
     content-border-top-color : darken(map-get($btn-bg, alpha), 5%),
-    content-padding          : 20px
+    content-padding          : 20px,
+    item-transition-speed    : 0.5s
 );
 
 
 /*==========  Table  ==========*/
 
 $table: (
-    margin-bottom  : map-get($base, ten)*3,
+    margin-bottom  : 30px,
     padding        : map-get($base, padding),
     border-color   : darken(map-get($btn-bg, alpha), 5%),
     border-radius  : map-get($base, border-radius),
@@ -156,7 +170,7 @@ $tooltip: (
     bg-color         : map-get($color, beta),
     padding          : map-get($base, padding),
     border-radius    : map-get($base, border-radius),
-    font-size        : map-get($base, ten)*1.2,
+    font-size        : 12px,
     color            : map-get($color, white)
 );
 
@@ -164,25 +178,30 @@ $tooltip: (
 /*==========  Modal  ==========*/
 
 $modal: (
-    overlay-bg-color      : map-get($color, black),
-    overlay-opacity       : 0.4,
-    content-bg-color      : map-get($color, white),
-    content-padding       : map-get($base, ten)*4,
-    content-border-radius : map-get($base, border-radius)
+    min-width                   : 320px,
+    max-width                   : 630px,
+    transition-duration         : 0.5s,
+    content-bg-color            : map-get($color, white),
+    content-padding             : 40px,
+    content-border-radius       : map-get($base, border-radius),
+    overlay-bg-color            : map-get($color, black),
+    overlay-opacity             : 0.4,
 );
 
 
 /*==========  Accordion  ==========*/
 
 $accordion: (
-    transition-speed    : map-get($base, transition-speed),
-    padding             : map-get($base, padding),
-    border-color        : darken(map-get($btn-bg, alpha), 5%),
-    gradient            : map-get($base, gradient),
-    border-radius       : map-get($base, border-radius),
-    group-margin-bottom : 0,
-    trigger-bg-color    : map-get($btn-bg, alpha),
-    trigger-color       : map-get($color, text)
+    transition-speed     : map-get($base, transition-speed),
+    padding              : map-get($base, padding),
+    border-color         : darken(map-get($btn-bg, alpha), 5%),
+    gradient             : map-get($base, gradient),
+    border-radius        : map-get($base, border-radius),
+    group-margin-bottom  : 0,
+    trigger-bg-color     : map-get($btn-bg, alpha),
+    trigger-hover-darken : 5%,
+    trigger-color        : map-get($color, text),
+    trigger-gradient-bg  : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))
 );
 
 
@@ -190,8 +209,9 @@ $accordion: (
 
 $breadcrumbs: (
     bg-color      : #f5f5f5,
-    padding       : map-get($base, ten)*1.5 map-get($base, ten)*2,
-    margin        : map-get($base, ten),
+    padding       : 15px 20px,
+    margin        : 10px,
+    divider       : '/',
     divider-color : #cccccc,
     current-color : #aaaaaa
 );
@@ -200,8 +220,14 @@ $breadcrumbs: (
 /*==========  Pricing table  ==========*/
 
 $pricing-table: (
-    border-color    : darken(map-get($btn-bg, alpha), 5%),
-    header-bg-color : lighten(map-get($color, black), 20%)
+    border-color          : darken(map-get($btn-bg, alpha), 5%),
+    header-bg-color       : lighten(map-get($color, black), 20%),
+    header-padding        : 15px 20px,
+    content-padding       : 10px 20px,
+    price-font-size       : 30px,
+    description-font-size : 20px,
+    action-padding-top    : 20px,
+    action-padding-bottom : 20px
 );
 
 

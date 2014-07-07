@@ -6,13 +6,13 @@
     &[data-modal-effect|=slide] {
         .modal__content {
             opacity: 0;
-            transition: all 0.5s 0;
+            transition: all map-get($modal, transition-duration) 0;
         }
 
         &.modal-show {
             .modal__content {
                 opacity: 1;
-                transition: all 0.5s 0.1s;
+                transition: all map-get($modal, transition-duration) 0.1s;
             }
         }
     }

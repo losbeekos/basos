@@ -56,16 +56,23 @@ p {
 }
 
 .container {
-    max-width: map-get($container, max-width);
-    min-width: map-get($container, min-width);
-    padding: 0 map-get($container, padding);
-    margin: map-get($container, margin);
+    margin-left: map-get($container, margin-left);
+    margin-right: map-get($container, margin-right);
+
+    @include rem(max-width, map-get($container, max-width));
+    @include rem(min-width, map-get($container, min-width));
+    @include rem(padding-left, map-get($container, padding));
+    @include rem(padding-right, map-get($container, padding));
+    @include rem(margin-top, map-get($container, margin-top));
+    @include rem(margin-bottom, map-get($container, margin-bottom));
 
     @include breakpoint(beta) {
-        padding: 0 map-get($container, padding)*2;
+        @include rem(padding-left, map-get($container, padding)*2);
+        @include rem(padding-right, map-get($container, padding)*2);
     }
 
     @include breakpoint(gamma-and-up) {
-        padding: 0 map-get($container, padding)*4;
+        @include rem(padding-left, map-get($container, padding)*4);
+        @include rem(padding-right, map-get($container, padding)*4);
     }
 }

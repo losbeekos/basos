@@ -15,11 +15,11 @@
     background: map-get($pricing-table, header-bg-color);
     color: map-get($color, white);
 
-    @include rem(padding, 15px 20px);
+    @include rem(padding, map-get($pricing-table, header-padding));
 }
 
 .pricing-table__content {
-    @include rem(padding, 10px 20px);
+    @include rem(padding, map-get($pricing-table, header-padding));
 
     + .pricing-table__content {
         border-top: 1px solid map-get($pricing-table, border-color);
@@ -31,16 +31,16 @@
 }
 
 .pricing-table__price {
-    @include rem(font-size, 30px);
+    @include rem(font-size, map-get($pricing-table, price-font-size));
 }
 
 .pricing-table__description {
     color: #999999;
 
-    @include rem(font-size, 14px);
+    @include rem(font-size, map-get($pricing-table, description-font-size));
 }
 
 .price-table__content--action {
-    @include rem(padding-top, 20px);
-    @include rem(padding-bottom, 20px);
+    @include rem(padding-top, map-get($pricing-table, action-padding-top));
+    @include rem(padding-bottom, map-get($pricing-table, action-padding-bottom));
 }

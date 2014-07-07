@@ -27,12 +27,12 @@
     border-top: 1px solid map-get($accordion, border-color);
 
     @if map-get($accordion, gradient) {
-        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        background-image: map-get($accordion, trigger-gradient-bg);
     }
 
     &:hover {
-        background-color: darken(map-get($accordion, trigger-bg-color), 5%);
-        color: darken(map-get($accordion, trigger-color), 5%);
+        background-color: darken(map-get($accordion, trigger-bg-color), map-get($accordion, trigger-hover-darken));
+        color: darken(map-get($accordion, trigger-color), map-get($accordion, trigger-hover-darken));
     }
 }
 

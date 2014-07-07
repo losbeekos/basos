@@ -4,7 +4,8 @@
 
 .table {
     width: 100%;
-    margin-bottom: map-get($table, margin-bottom);
+
+    @include rem(margin-bottom, map-get($table, margin-bottom));
 
     td,
     th {

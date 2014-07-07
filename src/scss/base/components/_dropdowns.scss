@@ -26,7 +26,6 @@
 .dropdown__content {
     overflow: hidden;
     position: absolute;
-    width: map-get($base, ten)*20;
     top: 34px;
     left: 0;
     margin-top: -1px;
@@ -35,6 +34,8 @@
     border: 1px solid darken(map-get($btn-bg, alpha), 10%);
     opacity: 0;
     transition: all 0.2s 0 0.3s;
+
+    @include rem(width, 200px);
 
     a {
         display: block;

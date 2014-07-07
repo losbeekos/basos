@@ -7,8 +7,8 @@
     top: 50%;
     left: 50%;
     width: 50%;
-    max-width: 630px;
-    min-width: 320px;
+    min-width: map-get($modal, min-width);
+    max-width: map-get($modal, max-width);
     height: auto;
     z-index: 2000;
     visibility: hidden;
@@ -21,7 +21,7 @@
 
     .lt-ie9 & {
         top: 0;
-        margin-left: -315px;
+        margin-left: -(map-get($modal, max-width)/2);
     }
 }
 
@@ -29,8 +29,9 @@
     background: map-get($modal, content-bg-color);
     position: relative;
     margin: 0 auto;
-    padding: map-get($modal, content-padding);
     border-radius: map-get($modal, content-border-radius);
+
+    @include rem(padding, map-get($modal, content-padding));
 }
 
 .modal__overlay {
@@ -44,12 +45,12 @@
     z-index: 1000;
     opacity: 0;
     transition-property: visibility opacity;
-    transition-delay: 0.5s 0.1s;
-    transition-duration: 0 0.5s;
+    transition-delay: map-get($modal, transition-duration) 0.1s;
+    transition-duration: 0 map-get($modal, transition-duration);
 
     .modal-show & {
         visibility: visible;
         opacity: map-get($modal, overlay-opacity);
-        transition: opacity 0.5s;
+        transition: opacity map-get($modal, transition-duration);
     }
 }

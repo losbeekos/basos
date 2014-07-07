@@ -4,8 +4,9 @@
 
 .breadcrumbs {
     background: map-get($breadcrumbs, bg-color);
-    padding: map-get($breadcrumbs, padding);
     border-radius: map-get($base, border-radius);
+
+    @include rem(padding, map-get($breadcrumbs, padding));
 
     a,
     span {
@@ -13,12 +14,13 @@
     }
 
     a {
-        margin-right: map-get($breadcrumbs, margin);
+        @include rem(margin-right, map-get($breadcrumbs, margin));
 
         &:after {
-            margin-left: map-get($breadcrumbs, margin);
-            content: '/';
+            content: map-get($breadcrumbs, divider);
             color: map-get($breadcrumbs, divider-color);
+
+            @include rem(margin-left, map-get($breadcrumbs, margin));
         }
     }
 

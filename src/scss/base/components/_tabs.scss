@@ -9,7 +9,7 @@
         margin: 0;
 
         + li {
-            @include rem(margin-left, 5px);
+            @include rem(margin-left, map-get($tabs, margin-left));
         }
     }
 }
@@ -17,33 +17,33 @@
 .tab {
     position: relative;
     display: inline-block;
-    background: map-get($tab, bg-color);
-    border: 1px solid map-get($tab, border-color);
+    background: map-get($tabs, bg-color);
+    border: 1px solid map-get($tabs, border-color);
     bottom: -1px;
-    color: map-get($tab, color);
+    color: map-get($tabs, color);
     border-top-left-radius: map-get($base, border-radius);
     border-top-right-radius: map-get($base, border-radius);
     user-select: none;
 
-    @include rem(padding, map-get($tab, padding));
+    @include rem(padding, map-get($tabs, padding));
 
     &:focus {
         outline: none;
         color: map-get($color, text);
-        background: darken(map-get($tab, bg-color), 5%);
+        background: darken(map-get($tabs, bg-color), 5%);
     }
 
     &.tab--active {
-        background: map-get($tab, bg-color-active);
-        border-bottom-color: map-get($tab, bg-color-active);
+        background: map-get($tabs, bg-color-active);
+        border-bottom-color: map-get($tabs, bg-color-active);
         color: map-get($color, text);
     }
 }
 
 .tab-content {
-    border-top: 1px solid map-get($tab, content-border-top-color);
+    border-top: 1px solid map-get($tabs, content-border-top-color);
 
-    @include rem(padding, map-get($tab, content-padding));
+    @include rem(padding, map-get($tabs, content-padding));
 }
 
 .tab-item {
@@ -51,7 +51,7 @@
     height: 0;
     width: 0;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity map-get($tabs, item-transition-speed);
 
     &.tab-item--active {
         height: auto;
