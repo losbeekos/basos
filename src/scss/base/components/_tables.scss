@@ -8,7 +8,7 @@
 
     td,
     th {
-        padding: map-get($table, table-padding);
+        padding: map-get($table, padding);
         text-align: left;
         vertical-align: top;
     }

@@ -3,8 +3,6 @@
 ===================================================================*/
 
 
-/*==========  Grid class  ==========*/
-
 .grid {
     @extend .clearfix;
 
@@ -15,27 +13,17 @@
     @extend .clearfix;
 
     width: 100%;
-    margin-right: gutter(map-get($susy, columns));
     margin-bottom: gutter(map-get($susy, columns));
 
     @include breakpoint(beta-and-up){
         float: left;
-        display: inline;
+        margin-left: gutter(map-get($susy, columns));
+    }
+
+    &:first-child {
+        margin-left: 0;
     }
 }
-
-.column--omega {
-    float: right !important;
-    margin-right: 0 !important;
-    display: inline !important;
-
-    .lt-ie9 & {
-        float: left !important;
-    }
-}
-
-
-/*==========  Columns  ==========*/
 
 @include breakpoint(beta-and-up) {
     @for $i from 1 through map-get($susy, columns) {

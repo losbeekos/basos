@@ -31,14 +31,14 @@
     left: 0;
     margin-top: -1px;
     visibility: hidden;
-    background-color: lighten(map-get($btn, bg-color-alpha), 5%);
-    border: 1px solid darken(map-get($btn, bg-color-alpha), 10%);
+    background-color: lighten(map-get($btn-bg, alpha), 5%);
+    border: 1px solid darken(map-get($btn-bg, alpha), 10%);
     opacity: 0;
     transition: all 0.2s 0 0.3s;
 
     a {
         display: block;
-        border-top: 1px solid darken(map-get($btn, bg-color-alpha), 1%);
+        border-top: 1px solid darken(map-get($btn-bg, alpha), 1%);
 
         @include rem(padding, 10px 15px);
 

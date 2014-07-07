@@ -3,8 +3,6 @@
 ================================================*/
 
 
-/*==========  Base  ==========*/
-
 $base: (
     gradient         : false,
     ten              : 0.625em,
@@ -15,7 +13,7 @@ $base: (
 );
 
 
-/*==========  Colors  ==========*/
+/*==========  Colours  ==========*/
 
 $color: (
     white       : #ffffff,
@@ -42,15 +40,17 @@ $container: (
 );
 
 
-/*==========  Susy grid  ==========*/
-// More settings:
-// http://susydocs.oddbird.net/en/latest
+/*==========  Susy  ==========*/
 
 $susy: (
     columns           : 12,
     gutters           : 1/2,
     column-width      : 4em,
-    global-box-sizing : border-box
+    global-box-sizing : border-box,
+    gutter-position   : before
+
+    // More settings:
+    // http://susydocs.oddbird.net/en/latest
 );
 
 
@@ -61,28 +61,34 @@ $btn: (
     container-margin-bottom : map-get($base, ten)*3,
     gradient                : map-get($base, gradient),
     border-radius           : map-get($base, border-radius),
-    bg-color-alpha          : map-get($color, alpha),
-    bg-color-beta           : map-get($color, beta),
-    bg-color-gamma          : map-get($color, gamma),
-    bg-color-delta          : map-get($color, delta),
-    bg-color-epsilon        : map-get($color, epsilon)
 );
 
+$btn-bg: (
+    alpha   : map-get($color, alpha),
+    beta    : map-get($color, beta),
+    gamma   : map-get($color, gamma),
+    delta   : map-get($color, delta),
+    epsilon : map-get($color, epsilon)
+);
 
 
 /*==========  Icons  ==========*/
 
 $icon: (
-    notification-info       : '',
-    notification-success    : '',
-    notification-error      : '',
-    form-validation-success : '',
-    form-validation-error   : '',
-    form-checkbox           : '',
-    form-select             : '',
-    spinner-alpha           : '',
-    spinner-beta            : '',
-    spinner-gamma           : ''
+    notification-info       : '\e802',
+    notification-success    : '\e800',
+    notification-error      : '\e801',
+    notification-close      : '\e808',
+    form-validation-success : '\e800',
+    form-validation-error   : '\e801',
+    form-checkbox           : '\e803',
+    form-select             : '\e807',
+    off-canvas-toggle-left  : '\e80d',
+    off-canvas-toggle-right : '\e80d',
+    off-canvas-toggle-close : '\e808',
+    spinner-alpha           : '\e809',
+    spinner-beta            : '\e80a',
+    spinner-gamma           : '\e80b'
 );
 
 
@@ -98,29 +104,29 @@ $off-canvas: (
 /*==========  Tabs  ==========*/
 
 $tab: (
-    bg-color                 : map-get($btn, bg-color-alpha),
-    border-color             : darken(map-get($btn, bg-color-alpha), 5%),
+    bg-color                 : map-get($btn-bg, alpha),
+    border-color             : darken(map-get($btn-bg, alpha), 5%),
     color                    : lighten(map-get($color, text), 20%),
     padding                  : 10px 15px,
     bg-color-active          : map-get($color, white),
-    content-border-top-color : darken(map-get($btn, bg-color-alpha), 5%),
+    content-border-top-color : darken(map-get($btn-bg, alpha), 5%),
     content-padding          : 20px
 );
 
 
-/*==========  Tables  ==========*/
+/*==========  Table  ==========*/
 
 $table: (
     margin-bottom  : map-get($base, ten)*3,
     padding        : map-get($base, padding),
-    border-color   : darken(map-get($btn, bg-color-alpha), 5%),
+    border-color   : darken(map-get($btn-bg, alpha), 5%),
     border-radius  : map-get($base, border-radius),
     bg-color-zebra : #f8f8f8,
     bg-color-hover : #f6f6f6
 );
 
 
-/*==========  Tooltips  ==========*/
+/*==========  Tooltip  ==========*/
 
 $tooltip: (
     width            : 220px,
@@ -134,7 +140,7 @@ $tooltip: (
 );
 
 
-/*==========  Modals  ==========*/
+/*==========  Modal  ==========*/
 
 $modal: (
     overlay-bg-color      : map-get($color, black),
@@ -150,16 +156,16 @@ $modal: (
 $accordion: (
     transition-speed    : map-get($base, transition-speed),
     padding             : map-get($base, padding),
-    border-color        : darken(map-get($btn, bg-color-alpha), 5%),
+    border-color        : darken(map-get($btn-bg, alpha), 5%),
     gradient            : map-get($base, gradient),
     border-radius       : map-get($base, border-radius),
     group-margin-bottom : 0,
-    trigger-bg-color    : map-get($btn, bg-color-alpha),
+    trigger-bg-color    : map-get($btn-bg, alpha),
     trigger-color       : map-get($color, text)
 );
 
 
-/*==========  Breadcrumbs  ==========*/
+/*==========  Breadcrumb  ==========*/
 
 $breadcrumbs: (
     bg-color      : #f5f5f5,
@@ -170,10 +176,10 @@ $breadcrumbs: (
 );
 
 
-/*==========  Pricing tables  ==========*/
+/*==========  Pricing table  ==========*/
 
 $pricing-table: (
-    border-color    : darken(map-get($btn, bg-color-alpha), 5%),
+    border-color    : darken(map-get($btn-bg, alpha), 5%),
     header-bg-color : lighten(map-get($color, black), 20%)
 );
 
@@ -186,7 +192,8 @@ $progress-bar: (
 );
 
 
-/*==========  Spinners  ==========*/
+/*==========  Spinner  ==========*/
+
 $spinner: (
     animation-speed : 1s,
     font-size       : 30px

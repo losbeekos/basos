@@ -26,7 +26,7 @@
     -moz-appearance: none;
     user-select: none;
 
-    @include btn-style(map-get($btn, bg-color-alpha));
+    @include btn-style(map-get($btn-bg, alpha));
     @include rem(line-height, 16px);
 
     @if map-get($btn, gradient) {
@@ -52,51 +52,45 @@
             box-shadow: none;
         }
     }
-}
 
-.btn--beta,
-.btn--gamma,
-.btn--delta,
-.btn--epsilon {
-    color: map-get($color, white);
-    text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
-
-    &:not(.btn--divider):hover,
-    &:hover {
+    &--beta,
+    &--gamma,
+    &--delta,
+    &--epsilon {
         color: map-get($color, white);
+        text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+
+        &:not(.btn--divider):hover,
+        &:hover {
+            color: map-get($color, white);
+        }
+
+        &:disabled,
+        &:disabled:hover {
+            color: darken(map-get($color, white), 20%);
+        }
     }
 
-    &:disabled,
-    &:disabled:hover {
-        color: darken(map-get($color, white), 20%);
+    &--mask {
+        @include btn-style(transparent);
+    }
+
+    &--block {
+        display: block;
+    }
+
+    &--divider {
+        cursor: default;
+    }
+
+    @each $key, $value in $btn-bg {
+        &--#{$key} {
+            @include btn-style(map-get($btn-bg, $key));
+        }
     }
 }
 
-.btn--beta {
-    @include btn-style(map-get($btn, bg-color-beta));
-}
-
-.btn--gamma {
-    @include btn-style(map-get($btn, bg-color-gamma));
-}
-
-.btn--delta {
-    @include btn-style(map-get($btn, bg-color-delta));
-}
-
-.btn--epsilon {
-    @include btn-style(map-get($btn, bg-color-epsilon));
-}
-
-.btn--block {
-    display: block;
-}
-
-.btn--divider {
-    cursor: default;
-}
-
-.no-button-style {
+.no-btn-style {
     background: none;
     box-shadow: none;
     border: 0;

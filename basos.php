@@ -5,27 +5,27 @@
                     <section id="grid">
                         <h1>Grid</h1>
                         <div class="grid">
-                            <div class="column-12 column--omega" style="background: rgba(0,0,0,0.03)">column-12</div>
+                            <div class="column-12" style="background: rgba(0,0,0,0.03)">column-12</div>
                         </div>
                         <div class="grid">
                             <div class="column-6" style="background: rgba(0,0,0,0.03)">column-6</div>
-                            <div class="column-6 column--omega" style="background: rgba(0,0,0,0.03)">column-6</div>
+                            <div class="column-6" style="background: rgba(0,0,0,0.03)">column-6</div>
                         </div>
                         <div class="grid">
                             <div class="column-4" style="background: rgba(0,0,0,0.03)">column-4</div>
-                            <div class="column-8 column--omega" style="background: rgba(0,0,0,0.03)">column-8</div>
+                            <div class="column-8" style="background: rgba(0,0,0,0.03)">column-8</div>
                         </div>
                         <div class="grid">
                             <div class="column-2" style="background: rgba(0,0,0,0.03)">column-2</div>
-                            <div class="column-10 column--omega" style="background: rgba(0,0,0,0.03)">column-10</div>
+                            <div class="column-10" style="background: rgba(0,0,0,0.03)">column-10</div>
                         </div>
                         <div class="grid">
                             <div class="column-7" style="background: rgba(0,0,0,0.03)">column-7</div>
-                            <div class="column-5 column--omega" style="background: rgba(0,0,0,0.03)">column-5</div>
+                            <div class="column-5" style="background: rgba(0,0,0,0.03)">column-5</div>
                         </div>
                         <div class="grid">
                             <div class="column-9" style="background: rgba(0,0,0,0.03)">column-9</div>
-                            <div class="column-3 column--omega" style="background: rgba(0,0,0,0.03)">column-3</div>
+                            <div class="column-3" style="background: rgba(0,0,0,0.03)">column-3</div>
                         </div>
                     </section>
 
@@ -63,12 +63,18 @@
                         <a class="btn btn--epsilon btn--large" href="#">button large</a>
                         <input class="btn btn--epsilon btn--large" value="button disabled" type="submit" disabled="disabled" />
 
+                        <h2>Mask</h2>
+                        <a class="btn btn--mask btn--small" href="#">button small</a>
+                        <a class="btn btn--mask btn--medium" href="#">button medium</a>
+                        <a class="btn btn--mask btn--large" href="#">button large</a>
+                        <input class="btn btn--mask btn--large" value="button disabled" type="submit" disabled="disabled" />
+
                         <h2>Block button</h2>
                         <div class="grid">
                             <div class="column-6">
                                 <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
                             </div>
-                            <div class="column-6 column--omega">
+                            <div class="column-6">
                                 <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
                             </div>
                         </div>
@@ -145,7 +151,7 @@
 
                         <h2>Button element style reset</h2>
                         <p>Commonly used for triggers. For example a navigation trigger.</p>
-                        <button class="no-button-style">Button</button>
+                        <button class="no-btn-style">Button</button>
                     </section>
 
                     <br/><br/>
@@ -192,7 +198,7 @@
                                     <div class="column-5 form__label">
                                         <label>Aanhef</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <div class="form__select">
                                                 <select name="" id="">
@@ -208,7 +214,7 @@
                                     <div class="column-5 form__label">
                                         <label>Aanhef</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <select name="" id="" multiple="multiple">
                                                 <option value="">HTML</option>
@@ -224,7 +230,7 @@
                                     <div class="column-5 form__label">
                                         <label>Naam *</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <input type="text" placeholder="" />
                                         </div>
@@ -234,7 +240,7 @@
                                     <div class="column-5 form__label">
                                         <label>Adres</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <input type="text" placeholder="" />
                                         </div>
@@ -244,7 +250,7 @@
                                     <div class="column-5 form__label">
                                         <label>Postcode</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-3 form__input">
                                             <input type="text" placeholder="" />
                                         </div>
@@ -254,7 +260,7 @@
                                     <div class="column-5 form__label">
                                         <label>Woonplaats</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <input type="text" placeholder="" />
                                         </div>
@@ -264,7 +270,7 @@
                                     <div class="column-5 form__label">
                                         <label>Telefoonnummer</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <input type="tel" placeholder="0123456789" />
                                         </div>
@@ -274,7 +280,7 @@
                                     <div class="column-5 form__label">
                                         <label>E-mailadres *</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <input type="email" placeholder="jouwnaam@adres.nl" />
                                         </div>
@@ -284,7 +290,7 @@
                                     <div class="column-5 form__label">
                                         <label>Some checkboxes</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <ul class="form__input-list list-unstyled">
                                                 <li><input name="checkbox" type="checkbox" checked="checked" id="checkbox1" /><label for="checkbox1">Checkbox</label></li>
@@ -302,7 +308,7 @@
                                     <div class="column-5 form__label">
                                         <label>Some radio buttons</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <ul class="form__input-list list-unstyled">
                                                 <li><input name="radio" type="radio" name="radio" id="radio1" /><label for="radio1">Radio</label></li>
@@ -320,7 +326,7 @@
                                     <div class="column-5 form__label">
                                         <label>Switch</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__switch">
                                             <ul class="form__input-list list-unstyled">
                                                 <li><input name="switch1" type="checkbox" id="switch1" /><label for="switch1">Switch</label></li>
@@ -332,7 +338,7 @@
                                     <div class="column-5 form__label">
                                         <label>Switch</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__switch">
                                             <ul class="form__input-list list-unstyled">
                                                 <li><input name="switch2" type="checkbox" id="switch2" /><label for="switch2">Switch</label></li>
@@ -344,7 +350,7 @@
                                     <div class="column-5 form__label">
                                         <label>Switch</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__switch">
                                             <ul class="form__input-list list-unstyled">
                                                 <li><input name="switch3" type="checkbox" id="switch3" /><label for="switch3">Switch</label></li>
@@ -356,7 +362,7 @@
                                     <div class="column-5 form__label">
                                         <label>Inline radio buttons *</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <ul class="form__input-list list-inline">
                                                 <li><input name="radio1" type="radio" name="radio1" id="radio8" /><label for="radio8">Yes</label></li>
@@ -369,7 +375,7 @@
                                     <div class="column-5 form__label">
                                         <label>Disabled *</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <input type="email" placeholder="disabled.." disabled="disabled" />
                                         </div>
@@ -379,7 +385,7 @@
                                     <div class="column-5 form__label">
                                         <label>Vraag / opmerking</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-10 form__input">
                                             <textarea cols="30" rows="10"></textarea>
                                         </div>
@@ -389,19 +395,19 @@
                                     <div class="column-5 form__label">
                                         <label>Form data</label>
                                     </div>
-                                    <div class="column-7 column--omega form__data">Some data</div>
+                                    <div class="column-7 form__data">Some data</div>
                                 </div>
                                 <div class="form__row">
                                     <div class="column-5 form__label">
                                         <label>Form data</label>
                                     </div>
-                                    <div class="column-7 column--omega form__data">Some data</div>
+                                    <div class="column-7 form__data">Some data</div>
                                 </div>
                                 <div class="form__row">
                                     <div class="column-5 form__label">
                                         <label>Form data</label>
                                     </div>
-                                    <div class="column-7 column--omega form__data">Some data</div>
+                                    <div class="column-7 form__data">Some data</div>
                                 </div>
                             </fieldset>
 
@@ -412,7 +418,7 @@
                                     <div class="column-5 form__label">
                                         <label>Aanhef</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <div class="form__select">
                                                 <select name="aanhef" id="" required="required">
@@ -428,7 +434,7 @@
                                     <div class="column-5 form__label">
                                         <label>Postcode</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-3 form__input">
                                             <input type="text" placeholder="0123AB" data-parsley-pattern="^\d{4}[a-zA-Z]{2}$" data-parsley-error-message="Dit is geen geldige postcode." data-parsley-maxlength="6" maxlength="6" />
                                         </div>
@@ -438,7 +444,7 @@
                                     <div class="column-5 form__label">
                                         <label>Telefoonnummer</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-4 form__input">
                                             <input type="tel" placeholder="0123456789" data-parsley-type="digits" data-parsley-minlength="10" data-parsley-error-message="Dit is geen geldig telefoonnummer." />
                                         </div>
@@ -448,7 +454,7 @@
                                     <div class="column-5 form__label">
                                         <label>IBAN-nummer (NL)</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-4 form__input">
                                             <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-parsley-error-message="Dit is geen gelding IBAN nummer." />
                                         </div>
@@ -458,7 +464,7 @@
                                     <div class="column-5 form__label">
                                         <label>E-mailadres *</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <input type="email" placeholder="jouwnaam@adres.nl" />
                                         </div>
@@ -468,7 +474,7 @@
                                     <div class="column-5 form__label">
                                         <label>Wachtwoord *</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <input id="password" type="password" />
                                         </div>
@@ -478,7 +484,7 @@
                                     <div class="column-5 form__label">
                                         <label>Herhaal wachtwoord *</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <input type="password" data-parsley-equalto="#password" data-parsley-error-message="Wachtwoorden zijn niet identiek." />
                                         </div>
@@ -488,7 +494,7 @@
                                     <div class="column-5 form__label">
                                         <label>Website *</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <input type="url" />
                                         </div>
@@ -498,7 +504,7 @@
                                     <div class="column-5 form__label">
                                         <label>Some checkboxes</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <ul class="form__input-list list-unstyled">
                                                 <li><input name="checkbox2" type="checkbox" checked="checked" id="checkbox10" data-parsley-mincheck="2" /><label for="checkbox10">Checkbox</label></li>
@@ -514,7 +520,7 @@
                                     <div class="column-5 form__label">
                                         <label>Some radio buttons</label>
                                     </div>
-                                    <div class="column-7 column--omega">
+                                    <div class="column-7">
                                         <div class="column-6 form__input">
                                             <ul class="form__input-list list-unstyled">
                                                 <li><input required="required" name="radio2" type="radio" id="radio13" /><label for="radio13">Radio</label></li>
@@ -835,7 +841,7 @@
                             <div class="tab-item tab-item--active" id="tab-home">
                                 <div class="grid">
                                     <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                    <div class="column-6 column--omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                    <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                                 </div>
                             </div>
                             <div class="tab-item" id="tab-lorem">
@@ -844,11 +850,11 @@
                             <div class="tab-item" id="tab-ipsum">
                                 <div class="grid">
                                     <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                    <div class="column-6 column--omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                    <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                                 </div>
                                 <div class="grid">
                                     <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                    <div class="column-6 column--omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                    <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                                 </div>
                             </div>
                         </div>
@@ -1001,7 +1007,7 @@
                                     </li>
                                 </ul>
                             </div>
-                            <div class="column-4 column--omega">
+                            <div class="column-4">
                                 <ul class="pricing-table">
                                     <li class="pricing-table__header">
                                         Basos package
@@ -1145,11 +1151,11 @@
                                     <h2>With a grid inside</h2>
                                     <div class="grid">
                                         <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                        <div class="column-6 column--omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                        <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                                     </div>
                                     <div class="grid">
                                         <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                        <div class="column-6 column--omega">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                        <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                                     </div>
                                 </div>
                             </div>

@@ -23,7 +23,7 @@
     @include rem(right, 20px);
 
     &:before {
-        content: '';
+        content: map-get($icon, notification-close);
         opacity: 0.2;
         transition: opacity map-get($base, transition-speed);
     }
