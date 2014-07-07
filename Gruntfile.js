@@ -111,6 +111,7 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     style: 'expanded',
+                    sourcemap: true,
                     require: 'susy'
                 },
 
