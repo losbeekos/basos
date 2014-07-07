@@ -2,24 +2,27 @@
 =            Sized            =
 =============================*/
 
-.btn--small {
-    @include rem(padding, 8px 30px);
-}
-
-.btn--medium {
-    @include rem(padding, 12px 35px);
-
-    @include breakpoint(beta-and-up) {
-        @include rem(padding, 14px 35px);
-        @include rem(font-size, 17px);
+.btn {
+    &--small {
+        @include rem(padding, map-get($btn, padding-small));
+        @include rem(font-size, map-get($btn, font-size-small));
     }
-}
 
-.btn--large {
-    @include rem(padding, 15px 40px);
+    &--medium {
+        @include rem(padding, map-get($btn, padding-medium));
 
-    @include breakpoint(beta-and-up) {
-        @include rem(padding, 18px 50px);
-        @include rem(font-size, 18px);
+        @include breakpoint(beta-and-up) {
+            @include rem(padding, map-get($btn, padding-medium-beta));
+            @include rem(font-size, map-get($btn, font-size-medium));
+        }
+    }
+
+    &--large {
+        @include rem(padding, map-get($btn, padding-large));
+
+        @include breakpoint(beta-and-up) {
+            @include rem(padding, map-get($btn, padding-large-beta));
+            @include rem(font-size, map-get($btn, font-size-large));
+        }
     }
 }

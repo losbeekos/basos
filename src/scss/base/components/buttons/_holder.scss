@@ -5,5 +5,5 @@
 .btn-holder {
     text-align: center;
 
-    @include rem(margin-top, 40px);
+    @include rem(margin, map-get($btn, holder-margin));
 }

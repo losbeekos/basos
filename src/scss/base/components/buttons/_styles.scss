@@ -4,12 +4,14 @@
 
 @mixin btn-style($bg-color) {
     background-color: $bg-color;
-    border-color: darken($bg-color, 5%);
+    border-color: darken($bg-color, map-get($btn, border-color-darken));
 
-    &:not(.btn--divider):hover   { background-color: darken($bg-color, 5%);  }
-    &:not(.btn--divider):active  { background-color: $bg-color;              }
-    &:focus                      { box-shadow: 0 0 10px rgba($bg-color, 1);  }
-    &:disabled, &:disabled:hover { background-color: $bg-color;              }
+    &:hover                      { background-color: darken($bg-color, 5%); }
+    &:active                     { background-color: $bg-color; }
+    &:focus                      { box-shadow: map-get($btn, box-shadow-focus) rgba($bg-color, 1); }
+    &--divider:hover,
+    &:disabled,
+    &:disabled:hover             { background-color: $bg-color; }
 }
 
 .btn {
@@ -19,7 +21,7 @@
     border: 0;
     outline: 0;
     text-align: center;
-    border-width: 1px;
+    border-width: map-get($btn, border-width);
     border-style: solid;
     transition: all map-get($base, transition-speed);
     -webkit-appearance: none;
@@ -27,13 +29,13 @@
     user-select: none;
 
     @include btn-style(map-get($btn-bg, alpha));
-    @include rem(line-height, 16px);
+    @include rem(line-height, map-get($btn, line-height));
 
     @if map-get($btn, gradient) {
-        background-image: linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        background-image: map-get($btn, gradient-bg);
     }
 
-    &:not(.btn--divider):hover {
+    &:hover {
         color: map-get($color, text);
     }
 
@@ -58,9 +60,9 @@
     &--delta,
     &--epsilon {
         color: map-get($color, white);
-        text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2);
+        text-shadow: map-get($btn, text-shadow);
 
-        &:not(.btn--divider):hover,
+        &:hover,
         &:hover {
             color: map-get($color, white);
         }

@@ -57,10 +57,27 @@ $susy: (
 /*==========  Buttons  ==========*/
 
 $btn: (
-    container-padding       : map-get($base, padding) map-get($base, padding)*1.8,
-    container-margin-bottom : map-get($base, ten)*3,
     gradient                : map-get($base, gradient),
+    gradient-bg             : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+    border-width            : 1px,
     border-radius           : map-get($base, border-radius),
+    padding-small           : 8px 30px,
+    padding-medium          : 12px 35px,
+    padding-medium-beta     : 14px 35px,
+    padding-large           : 15px 40px,
+    padding-large-beta      : 18px 50px,
+    font-size-small         : 16px,
+    font-size-medium        : 17px,
+    font-size-large         : 18px,
+    line-height             : 16px,
+    text-shadow             : 1px 0 1px rgba(0, 0, 0, 0.2),
+    box-shadow-focus        : 0 0 10px,
+    border-color-darken     : 5%,
+    container-margin        : 0 0 30px 0,
+    container-btn-padding   : 10px 18px,
+    group-margin            : 0 0 30px 0,
+    group-border-radius     : map-get($base, border-radius),
+    holder-margin           : 40px 0 0 0
 );
 
 $btn-bg: (
@@ -69,6 +86,10 @@ $btn-bg: (
     gamma   : map-get($color, gamma),
     delta   : map-get($color, delta),
     epsilon : map-get($color, epsilon)
+
+    // Just add a color to make another button
+    // Ex. zeta: map-get($color, zeta)
+    // Ex. zeta: #123456
 );
 
 
