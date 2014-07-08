@@ -1121,9 +1121,9 @@
                     <section id="accordion">
                         <h1>Accordion</h1>
                         <div class="accordion">
-                            <div class="accordion__group">
+                            <div class="accordion__group accordion-content-show">
                                 <a class="accordion__trigger">Accordion item #1</a>
-                                <div class="accordion__content accordion-content--show">
+                                <div class="accordion__content">
                                     <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                                     <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
                                 </div>

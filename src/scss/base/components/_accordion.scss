@@ -21,6 +21,7 @@
 
 .accordion__trigger {
     display: block;
+    position: relative;
     background-color: map-get($accordion, trigger-bg-color);
     color: map-get($accordion, trigger-color);
     padding: map-get($accordion, padding);
@@ -33,6 +34,26 @@
     &:hover {
         background-color: darken(map-get($accordion, trigger-bg-color), map-get($accordion, trigger-hover-darken));
         color: darken(map-get($accordion, trigger-color), map-get($accordion, trigger-hover-darken));
+    }
+
+    &:after {
+        @extend %font-icons;
+
+        content: map-get($accordion, trigger-icon-content);
+        position: absolute;
+        top: 50%;
+        color: map-get($accordion, trigger-icon-color);
+        transform: translate(0, -50%);
+
+        @include rem(right, map-get($accordion, padding));
+
+        .no-csstransforms & {
+            margin-top: -10px;
+        }
+
+        .accordion-content-show & {
+            content: map-get($accordion, trigger-icon-content-after);
+        }
     }
 }
 
@@ -49,12 +70,12 @@
     *:first-child {
         margin-top: map-get($accordion, padding);
     }
-}
 
-.accordion-content--show {
-    border-top: 1px solid map-get($accordion, border-color);
+    .accordion-content-show & {
+        border-top: 1px solid map-get($accordion, border-color);
+    }
 
-    .lt-ie9 & {
+    .accordion-content-show.lt-ie9 & {
         height: auto;
         max-height: 1000px !important;
     }

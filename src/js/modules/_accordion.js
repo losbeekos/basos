@@ -3,7 +3,7 @@ app.accordion = {
         $el: $('.accordion'),
         $group: $('.accordion__group'),
         $trigger: $('.accordion__trigger'),
-        contentShowClass: 'accordion-content--show'
+        contentShowClass: 'accordion-content-show'
     },
 
     init: function () {
@@ -29,7 +29,7 @@ app.accordion = {
 
             $groupContent.attr('data-accordion-content-height', contentHeight);
 
-            if ($groupContent.hasClass(app.accordion.settings.contentShowClass)) {
+            if ($group.hasClass(app.accordion.settings.contentShowClass)) {
                 $groupContent.css({'max-height': contentHeight});
             } else {
                 $groupContent.css({'max-height': 0});
@@ -42,9 +42,10 @@ app.accordion = {
 
         app.accordion.settings.$trigger.on('click', function () {
             var $trigger = $(this),
+                $group = $trigger.parent(),
                 $content = $trigger.next();
 
-            if (!$content.hasClass(app.accordion.settings.contentShowClass)) {
+            if (!$group.hasClass(app.accordion.settings.contentShowClass)) {
                 self.hideGroup($trigger.closest('.accordion').find('.accordion__content'));
                 self.showGroup($trigger, $content);
             } else {
@@ -58,6 +59,7 @@ app.accordion = {
 
         $content
             .css({'max-height': $trigger.next().data('accordionContentHeight')})
+            .parent()
             .addClass(app.accordion.settings.contentShowClass);
     },
 
@@ -66,6 +68,7 @@ app.accordion = {
 
         $content
             .css({'max-height': 0})
+            .parent()
             .removeClass(app.accordion.settings.contentShowClass);
     },
 

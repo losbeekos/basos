@@ -192,16 +192,19 @@ $modal: (
 /*==========  Accordion  ==========*/
 
 $accordion: (
-    transition-speed     : map-get($base, transition-speed),
-    padding              : map-get($base, padding),
-    border-color         : darken(map-get($btn-bg, alpha), 5%),
-    gradient             : map-get($base, gradient),
-    border-radius        : map-get($base, border-radius),
-    group-margin-bottom  : 0,
-    trigger-bg-color     : map-get($btn-bg, alpha),
-    trigger-hover-darken : 5%,
-    trigger-color        : map-get($color, text),
-    trigger-gradient-bg  : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0))
+    transition-speed           : map-get($base, transition-speed),
+    padding                    : map-get($base, padding),
+    border-color               : darken(map-get($btn-bg, alpha), 5%),
+    gradient                   : map-get($base, gradient),
+    border-radius              : map-get($base, border-radius),
+    group-margin-bottom        : 0,
+    trigger-bg-color           : map-get($btn-bg, alpha),
+    trigger-hover-darken       : 5%,
+    trigger-color              : map-get($color, text),
+    trigger-gradient-bg        : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+    trigger-icon-content       : '\e807',
+    trigger-icon-content-after : '\e804',
+    trigger-icon-color         : map-get($color, text)
 );
 
 

@@ -127,8 +127,8 @@
 }
 
 .off-canvas-nav__item {
-    border-top: 1px solid map-get($off-canvas, item-border-top);
-    border-bottom: 1px solid map-get($off-canvas, item-border-bottom);
+    border-top: 1px solid map-get($off-canvas, item-border-top-color);
+    border-bottom: 1px solid map-get($off-canvas, item-border-bottom-color);
 
     &:first-child {
         border-top: 0;

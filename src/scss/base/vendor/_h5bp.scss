@@ -15,11 +15,6 @@ body {
     line-height: 1.4;
 }
 
-::-moz-selection {
-    background: map-get($color, selection);
-    text-shadow: none;
-}
-
 ::selection {
     background: map-get($color, selection);
     text-shadow: none;
