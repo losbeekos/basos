@@ -160,6 +160,10 @@
                         <h1>Notifications</h1>
                         <p>Note: You can download different icons on <a href="http://www.fontello.com">fontello.com</a> and change them in settings.</p>
                         <h2>Alpha</h2>
+                        <div class="notification notification--alpha">
+                            <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+                            <button class="notification__close" data-notification-close></button>
+                        </div>
                         <div class="notification notification--alpha notification--error">
                             <div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
                             <button class="notification__close" data-notification-close></button>
@@ -168,21 +172,17 @@
                             <div class="notification__text">Je bent nu geregistreerd op onze website.</div>
                             <button class="notification__close" data-notification-close></button>
                         </div>
-                        <div class="notification notification--alpha">
+                        <h2>Beta</h2>
+                        <div class="notification notification--beta">
                             <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
                             <button class="notification__close" data-notification-close></button>
                         </div>
-                        <h2>Beta</h2>
                         <div class="notification notification--beta notification--error">
                             <div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
                             <button class="notification__close" data-notification-close></button>
                         </div>
                         <div class="notification notification--beta notification--success">
                             <div class="notification__text">Je bent nu geregistreerd op onze website.</div>
-                            <button class="notification__close" data-notification-close></button>
-                        </div>
-                        <div class="notification notification--beta">
-                            <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
                             <button class="notification__close" data-notification-close></button>
                         </div>
                     </section>

@@ -36,6 +36,11 @@
         color: darken(map-get($accordion, trigger-color), map-get($accordion, trigger-hover-darken));
     }
 
+    .accordion-content-show & {
+        background-color: map-get($accordion, trigger-bg-color-show);
+        color: map-get($accordion, trigger-color-show);
+    }
+
     &:after {
         @extend %font-icons;
 
@@ -53,6 +58,7 @@
 
         .accordion-content-show & {
             content: map-get($accordion, trigger-icon-content-after);
+            color: map-get($accordion, trigger-icon-color-show);
         }
     }
 }

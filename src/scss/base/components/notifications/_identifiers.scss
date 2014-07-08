@@ -3,10 +3,12 @@
 ================================================*/
 
 .notification__text {
-    @include rem(margin-left, 70px);
+    @include rem(margin-left, 40px);
 
     .notification--beta & {
-        @include rem(margin-left, 40px);
+        @include breakpoint(beta-and-up) {
+            @include rem(margin-left, 70px);
+        }
     }
 }
 
@@ -14,23 +16,23 @@
     @extend %font-icons;
 
     position: absolute;
-    color: map-get($color, black);
+    color: map-get($notifications, close-color);
     padding: 0;
     background: none;
     border: none;
 
-    @include rem(top, 20px);
-    @include rem(right, 20px);
+    @include rem(top, map-get($notifications, close-top));
+    @include rem(right, map-get($notifications, close-right));
 
     &:before {
         content: map-get($icon, notification-close);
-        opacity: 0.2;
+        opacity: map-get($notifications, close-opacity);
         transition: opacity map-get($base, transition-speed);
     }
 
     &:hover {
         &:before {
-            opacity: 0.5;
+            opacity: map-get($notifications, close-opacity-hover);
         }
     }
 

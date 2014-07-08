@@ -22,12 +22,8 @@
     transform-style: preserve-3d;
     backface-visibility: hidden;
 
-    @include notification(lighten(map-get($color, zeta), 45%), lighten(map-get($color, zeta), 38%), darken(map-get($color, zeta), 40%), map-get($icon, notification-info), map-get($color, zeta));
-    @include rem(margin-bottom, 30px);
-
-    @include breakpoint(beta-and-up) {
-        @include rem(padding, 20px);
-    }
+    @include notification(lighten(map-get($notifications, bg-color-info), 53%), lighten(map-get($notifications, bg-color-info), 48%), darken(map-get($notifications, bg-color-info), 32%), map-get($icon, notification-info), map-get($notifications, bg-color-info));
+    @include rem(margin-bottom, map-get($notifications, margin-bottom));
 
     &:before {
         @extend %font-icons;
@@ -35,8 +31,8 @@
         position: absolute;
         top: 0;
 
-        @include rem(left, 20px);
-        @include rem(font-size, 60px);
+        @include rem(left, 10px);
+        @include rem(font-size, 40px);
     }
 
 

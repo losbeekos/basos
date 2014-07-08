@@ -22,10 +22,9 @@ $color: (
     selection   : #d1e4fe,
     alpha       : #f1f1f1,
     beta        : #2690b0,
-    gamma       : #4eb455,
-    delta       : #b44e4e,
-    epsilon     : #444444,
-    zeta        : #aba346
+    gamma       : #26a8b0,
+    delta       : #26b0a1,
+    epsilon     : #333333
 );
 
 
@@ -115,6 +114,25 @@ $icon: (
 );
 
 
+/*==========  Notifications  ==========*/
+
+$notifications: (
+    bg-color-info       : #2690b0,
+    bg-color-success    : #26b036,
+    bg-color-error      : #b02626,
+    padding-alpha       : 20px 60px 20px 20px,
+    padding-beta        : 30px 60px 30px 30px,
+    margin-bottom       : 30px,
+    close-color         : map-get($color, black),
+    close-opacity       : 0.2,
+    close-opacity-hover : 0.5,
+    close-top           : 20px,
+    close-right         : 20px,
+    cookie-bg           : rgba(0, 0, 0, 0.85),
+    cookie-padding      : 20px 0
+);
+
+
 /*==========  Off canvas  ==========*/
 
 $off-canvas: (
@@ -199,12 +217,15 @@ $accordion: (
     border-radius              : map-get($base, border-radius),
     group-margin-bottom        : 0,
     trigger-bg-color           : map-get($btn-bg, alpha),
+    trigger-bg-color-show      : map-get($color, beta),
     trigger-hover-darken       : 5%,
     trigger-color              : map-get($color, text),
+    trigger-color-show         : map-get($color, white),
     trigger-gradient-bg        : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
     trigger-icon-content       : '\e807',
     trigger-icon-content-after : '\e804',
-    trigger-icon-color         : map-get($color, text)
+    trigger-icon-color         : map-get($color, text),
+    trigger-icon-color-show    : map-get($color, white)
 );
 
 
@@ -250,3 +271,27 @@ $spinner: (
 );
 
 
+/*==========  Dropdown  ==========*/
+
+$dropdown: (
+    min-width           : 200px,
+    max-width           : 300px,
+    bg-color            : lighten(map-get($btn-bg, alpha), 5%),
+    border              : 1px solid darken(map-get($btn-bg, alpha), 10%),
+    transition-duration : 0.2s,
+    transition-delay    : 0.5s,
+    transform           : translate3d(0, 10%, 0),
+    transform-hover     : translate3d(0, 0, 0),
+    link-padding        : 10px 15px,
+    link-bg-color       : transparent,
+    link-bg-color-hover : darken(map-get($accordion, trigger-bg-color), 1%),
+    link-border-top     : 1px solid darken(map-get($btn-bg, alpha), 1%)
+);
+
+/*==========  Media  ==========*/
+
+$media: (
+    margin-bottom       : 40px,
+    bordered-padding    : 20px 0,
+    bordered-border-top : 1px solid map-get($table, border-color),
+);

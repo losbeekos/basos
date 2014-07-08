@@ -9,7 +9,8 @@
         .dropdown__content {
             visibility: visible;
             opacity: 1;
-            transition: all 0.2s 0;
+            transition: all map-get($dropdown, transition-duration) 0;
+            transform: map-get($dropdown, transform-hover);
         }
     }
 
@@ -26,25 +27,27 @@
 .dropdown__content {
     overflow: hidden;
     position: absolute;
-    top: 34px;
     left: 0;
     margin-top: -1px;
     visibility: hidden;
     background-color: lighten(map-get($btn-bg, alpha), 5%);
     border: 1px solid darken(map-get($btn-bg, alpha), 10%);
     opacity: 0;
-    transition: all 0.2s 0 0.3s;
+    transition: all map-get($dropdown, transition-duration) map-get($dropdown, transition-delay);
+    transform: map-get($dropdown, transform);
 
-    @include rem(width, 200px);
+    @include rem(min-width, map-get($dropdown, min-width));
+    @include rem(max-width, map-get($dropdown, max-width));
 
     a {
+        background-color: map-get($dropdown, link-bg-color);
         display: block;
-        border-top: 1px solid darken(map-get($btn-bg, alpha), 1%);
+        border-top: map-get($dropdown, link-border-top);
 
-        @include rem(padding, 10px 15px);
+        @include rem(padding, map-get($dropdown, link-padding));
 
         &:hover {
-            background-color: darken(map-get($accordion, trigger-bg-color), 1%);
+            background-color: map-get($dropdown, link-bg-color-hover);
         }
     }
 }

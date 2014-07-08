@@ -62,7 +62,6 @@
         color: map-get($color, white);
         text-shadow: map-get($btn, text-shadow);
 
-        &:hover,
         &:hover {
             color: map-get($color, white);
         }
@@ -75,6 +74,10 @@
 
     &--mask {
         @include btn-style(transparent);
+
+        &:hover {
+            background-color: darken(map-get($color, white), 5%);
+        }
     }
 
     &--block {

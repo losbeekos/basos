@@ -8,10 +8,10 @@
 
 .media-list--bordered {
     .media {
-        border-top: 1px solid map-get($table, border-color);
+        border-top: map-get($media, bordered-border-top);
         margin-bottom: 0;
 
-        @include rem(padding, 20px 0);
+        @include rem(padding, map-get($media, bordered-padding));
 
         .media {
             margin: 0;
@@ -22,10 +22,10 @@
 .media {
     @extend .clearfix;
 
-    @include rem(margin-bottom, 40px);
+    @include rem(margin-bottom, map-get($media, margin-bottom));
 
     .media {
-        @include rem(margin-bottom, 20px);
+        @include rem(margin-bottom, map-get($media, margin-bottom)/2);
     }
 }
 
@@ -34,7 +34,7 @@
 
     float: left;
 
-    @include rem(margin-bottom, 10px);
+    @include rem(margin-bottom, map-get($media, margin-bottom)/2);
 
     @include breakpoint(beta-and-up) {
         margin-bottom: 0;
@@ -42,7 +42,6 @@
 
     .media--right & {
         float: right;
-        margin: 0;
     }
 }
 

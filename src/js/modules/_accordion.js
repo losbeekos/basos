@@ -61,6 +61,10 @@ app.accordion = {
             .css({'max-height': $trigger.next().data('accordionContentHeight')})
             .parent()
             .addClass(app.accordion.settings.contentShowClass);
+
+        setTimeout(function () {
+            app.settings.$htmlAndBody.animate({scrollTop: $trigger.position().top}, 300);
+        }, 300);
     },
 
     hideGroup: function ($content) {

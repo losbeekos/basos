@@ -3,17 +3,23 @@
 ==========================================*/
 
 .notification--alpha {
-    @include rem(min-height, 42px);
-    @include rem(padding, 30px);
-}
-
-.notification--beta {
-    @include rem(min-height, 22px);
-    @include rem(padding, 20px);
+    @include rem(padding, map-get($notifications, padding-alpha));
 
     &:before {
         @include rem(top, 2px);
-        @include rem(left, 10px);
-        @include rem(font-size, 40px);
+    }
+}
+
+.notification--beta {
+    @include rem(padding, map-get($notifications, padding-alpha));
+
+    @include breakpoint(beta-and-up) {
+        @include rem(padding, map-get($notifications, padding-beta));
+        @include rem(min-height, 85px);
+
+        &:before {
+            @include rem(font-size, 60px);
+            @include rem(left, 20px);
+        }
     }
 }

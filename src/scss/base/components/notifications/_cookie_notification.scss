@@ -7,7 +7,7 @@
     left: 0;
     width: 100%;
     min-width: map-get($container, min-width);
-    background: rgba(0, 0, 0, 0.85);
+    background: map-get($notifications, cookie-bg);
     text-align: center;
     z-index: 999;
     margin-bottom: 0;
@@ -15,8 +15,7 @@
     color: map-get($color, white);
     transition: all map-get($base, transition-speed)*2;
 
-    @include rem(padding, 20px 0);
-
+    @include rem(padding, map-get($notifications, cookie-padding));
 
     &.notification--close {
         .notification-cookie-show[notification-cookie-position] & {
