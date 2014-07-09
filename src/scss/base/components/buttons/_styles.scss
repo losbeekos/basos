@@ -7,7 +7,7 @@
     border-color: darken($bg-color, map-get($btn, border-color-darken));
 
     &:hover                      { background-color: darken($bg-color, 5%); }
-    &:active                     { background-color: $bg-color; }
+    &:active                     { background-color: darken($bg-color, 10%); }
     &:focus                      { box-shadow: map-get($btn, box-shadow-focus) rgba($bg-color, 1); }
     &--divider:hover,
     &:disabled,
@@ -15,6 +15,7 @@
 }
 
 .btn {
+    position: relative;
     display: inline-block;
     color: map-get($color, text);
     border-radius: map-get($btn, border-radius);
@@ -77,6 +78,10 @@
 
         &:hover {
             background-color: darken(map-get($color, white), 5%);
+        }
+
+        &:active {
+            background-color: darken(map-get($color, white), 10%);
         }
     }
 
