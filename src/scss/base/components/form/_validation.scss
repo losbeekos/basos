@@ -8,6 +8,9 @@
 }
 
 .form__input--error {
+    animation-duration: 1s;
+    animation-name: shake;
+
     &.form__input {
         &:after {
             @extend %font-icons;
