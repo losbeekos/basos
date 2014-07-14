@@ -29,7 +29,7 @@
         @include rem(padding-right, 30px);
 
         &:focus {
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: map-get($form, input-focus-box-shadow);
         }
     }
 
@@ -79,7 +79,7 @@
         @include rem(padding-right, 30px);
 
         &:focus {
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: map-get($form, input-focus-box-shadow);
         }
     }
 
@@ -108,9 +108,9 @@
     background: map-get($notifications, bg-color-error);
     color: map-get($color, white);
 
-    @include rem(border-radius, 0 0 3px 3px);
-    @include rem(padding, 10px);
-    @include rem(font-size, 14px);
+    @include rem(border-radius, 0 0 map-get($base, border-radius) map-get($base, border-radius));
+    @include rem(padding, map-get($form, input-padding));
+    @include rem(font-size, map-get($form, validation-font-size));
 
     .form__input--error & {
         display: block;
@@ -121,17 +121,17 @@
     + .parsley-container {
         display: inline-block;
 
-        @include rem(border-radius, 0 3px 3px 3px);
-        @include rem(margin-top, 16px);
+        @include rem(border-radius, 0 map-get($base, border-radius) map-get($base, border-radius) map-get($base, border-radius));
+        @include rem(margin-top, map-get($form, validation-arrow-size)*2);
 
         &:after {
             content: '';
             width: 0;
             height: 0;
             position: absolute;
-            top: -16px;
+            top: -#{map-get($form, validation-arrow-size)*2};
             left: 0;
-            border: 8px solid transparent;
+            border: map-get($form, validation-arrow-size) solid transparent;
             border-bottom-color: map-get($notifications, bg-color-error);
         }
     }

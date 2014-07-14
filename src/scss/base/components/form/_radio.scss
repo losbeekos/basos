@@ -7,17 +7,17 @@ input[type=radio] {
 
     + label {
         &:before {
-            border-radius: 20px;
+            border-radius: map-get($form, checkbox-radio-size);
         }
 
         &:after {
             background: map-get($color, beta);
             content: '';
-            top: 4px;
-            left: 5px;
-            width: 10px;
-            height: 10px;
-            border-radius: 10px;
+            top: (map-get($form, checkbox-radio-size)/4)-1;
+            left: map-get($form, checkbox-radio-size)/4;
+            width: map-get($form, checkbox-radio-size)/2;
+            height: map-get($form, checkbox-radio-size)/2;
+            border-radius: map-get($form, checkbox-radio-size)/2;
         }
     }
 }

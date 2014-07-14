@@ -10,6 +10,7 @@
     width: 100%;
     z-index: 999;
     transition: all map-get($base, transition-speed);
+    text-align: center;
 
     @include breakpoint(beta-and-up) {
         max-height: inherit;
@@ -17,9 +18,17 @@
 
     .logo {
         display: inline-block;
-        float: left;
+        margin-bottom: -6px;
 
-        @include rem(margin-top, 18px);
+        @include rem(padding-top, 12px);
+        @include rem(min-height, map-get($navBar, trigger-height));
+
+        @include breakpoint(beta-and-up) {
+            float: left;
+            padding-top: 0;
+
+            @include rem(margin-top, 18px);
+        }
     }
 }
 
@@ -67,7 +76,13 @@
     @extend .clearfix;
 
     @include breakpoint(beta-and-up) {
-        float: right
+        @if map-get($navBar, nav-position) == left {
+            float: left;
+        } @else {
+            float: right;
+        }
+
+        @include rem(margin-left, map-get($navBar, nav-margin-left));
     }
 }
 
@@ -79,9 +94,16 @@
     float: right;
     text-align: center;
     line-height: map-get($navBar, trigger-height);
+    position: absolute;
+    top: 0;
+    right: 0;
 
     @include rem(height, map-get($navBar, trigger-height));
     @include rem(width, map-get($navBar, trigger-height));
+
+    @include breakpoint(beta-and-up) {
+        display: none;
+    }
 
     &:active,
     &:hover {
@@ -93,6 +115,10 @@
         color: map-get($color, white);
 
         @include rem(font-size, map-get($navBar, trigger-font-size));
+
+        .nav-bar--mobile-show & {
+            content: map-get($icon, nav-bar-trigger-close);
+        }
     }
 }
 
@@ -119,7 +145,6 @@
     li {
         display: block;
         margin: 0;
-        margin-right: -4px;
 
         @include breakpoint(beta-and-up) {
             display: inline-block;

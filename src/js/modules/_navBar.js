@@ -5,7 +5,7 @@ app.navBar = {
         navBarOffsetTop: null,
         navBarHeight: null,
         lastWindowScrollTop: 0,
-        hideOnScroll: true,
+        hideOnScroll: false,
         fixedClass: 'nav-bar--fixed',
         showClass: 'nav-bar--show',
         mobileShowClass: 'nav-bar--mobile-show',

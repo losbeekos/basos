@@ -4,9 +4,9 @@
 
 form {
     @extend .clearfix;
-    @include rem(margin, 0 0 40px 0);
+    @include rem(margin, map-get($form, margin));
 
-    &.form__no-margin {
+    &.form--no-margin {
         margin: 0;
     }
 }
@@ -16,11 +16,11 @@ legend {
     width: 100%;
     padding: 0;
     border: 0;
-    border-bottom: 1px solid #e5e5e5;
+    border-bottom: map-get($form, legend-border-bottom);
 
-    @include rem(margin-bottom, 20px);
-    @include rem(font-size, 20px);
-    @include rem(line-height, 32px);
+    @include rem(margin-bottom, map-get($form, legend-margin-bottom));
+    @include rem(font-size, map-get($form, legend-font-size));
+    @include rem(line-height, map-get($form, legend-line-height));
 }
 
 $input-selectors: '
@@ -43,29 +43,29 @@ $input-selectors: '
 #{$input-selectors} {
     color: #333333;
     border-radius: map-get($base, border-radius);
-    border: 1px solid #e0e0e0;
+    border: map-get($form, input-border);
     outline: 0;
     width: 100%;
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
+    box-shadow: map-get($form, input-box-shadow);
     transition: all map-get($base, transition-speed);
     -webkit-appearance: none;
     -moz-appearance: none;
 
-    @include rem(padding, 10px);
+    @include rem(padding, map-get($form, input-padding));
 
     &:focus {
-        border: 1px solid #cccccc;
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        border: map-get($form, input-border);
+        box-shadow: map-get($form, input-focus-box-shadow);
     }
 
     &:disabled {
-        background-color: #f1f1f1;
+        background-color: map-get($form, input-disabled-bg-color);
         cursor: not-allowed;
     }
 }
 
 textarea {
-    @include rem(height, 160px);
+    @include rem(height, map-get($form, textarea-height));
 }
 
 select {
@@ -75,7 +75,7 @@ select {
     display: block;
     width: 100%;
     outline: none;
-    color: #888888;
+    color: map-get($form, select-color);
     cursor: pointer;
     z-index: 2;
     border: none;
@@ -88,23 +88,22 @@ select {
     text-indent: 1px;
     // End of brutal hack
 
-    @include rem(padding, 10px 10px 10px 5px);
+    @include rem(padding, map-get($form, select-padding));
 
     &:focus,
     &:hover {
-        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+        box-shadow: map-get($form, select-hover-box-shadow);
     }
 
     &[multiple=multiple] {
         height: auto;
-        border: 1px solid #cbcbcb;
-        border-radius: map-get($base, border-radiues);
-        box-shadow: 0 0 1px rgba(0, 0, 0, 0.1), inset 0 0 10px rgba(0, 0, 0, 0.07);
+        border: map-get($form, input-border);
+        border-radius: map-get($base, border-radius);
+        box-shadow: map-get($form, select-multiple-box-shadow);
 
         &:focus,
         &:hover {
-            border-color: #cccccc;
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            box-shadow: map-get($form, select-hover-box-shadow);
         }
     }
 

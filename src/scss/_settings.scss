@@ -101,17 +101,82 @@ $icon: (
     notification-success    : '\e800',
     notification-error      : '\e801',
     notification-close      : '\e808',
+
     form-validation-success : '\e800',
     form-validation-error   : '\e801',
     form-checkbox           : '\e803',
     form-select             : '\e807',
+
     nav-bar-trigger         : '\e80d',
+    nav-bar-trigger-close   : '\e808',
+
     off-canvas-toggle-left  : '\e80d',
     off-canvas-toggle-right : '\e80d',
     off-canvas-toggle-close : '\e808',
+
     spinner-alpha           : '\e809',
     spinner-beta            : '\e80a',
     spinner-gamma           : '\e80b'
+);
+
+
+/*==========  Form  ==========*/
+
+$form: (
+    margin                            : 0 0 40px 0,
+
+    legend-border-bottom              : 1px solid #e5e5e5,
+    legend-margin-bottom              : 20px,
+    legend-font-size                  : 20px,
+    legend-line-height                : 32px,
+    label-line-height                 : 40px,
+    label-text-align                  : right,
+
+    input-color                       : #333333,
+    input-border                      : 1px solid #e0e0e0,
+    input-box-shadow                  : 0 -1px 0 rgba(0, 0, 0, 0.1),
+    input-padding                     : 10px,
+    input-focus-border                : 1px solid #cccccc,
+    input-focus-box-shadow            : 0 0 10px rgba(0, 0, 0, 0.2),
+    input-disabled-bg-color           : #f1f1f1,
+
+    textarea-height                   : 160px,
+
+    select-color                      : #888888,
+    select-padding                    : 10px 10px 10px 5px,
+    select-hover-box-shadow           : 0 0 15px rgba(0, 0, 0, 0.2),
+    select-multiple-box-shadow        : 0 0 1px rgba(0, 0, 0, 0.1),
+    select-icon-color                 : #bbbbbb,
+    select-icon-height                : 42px,
+    select-icon-font-size             : 14px,
+    select-icon-top                   : 0,
+    select-icon-right                 : 10px,
+
+    switch-size                       : 20px,
+    switch-label-after-left           : 30px,
+    switch-label-box-shadow           : 1px 1px 2px rgba(0, 0, 0, 0.1),
+
+    input-list-margin-top             : 8px,
+    input-list-item-margin-top        : 5px,
+
+    checkbox-radio-size               : 20px,
+    checkbox-radio-bg-color           : #f1f1f1,
+    checkbox-radio-border-color       : #cbcbcb,
+    checkbox-radio-box-shadow         : 0 0 10px rgba(0, 0, 0, 0.2),
+    checkbox-radio-focus-bg-color     : #f1f1f1,
+    checkbox-radio-focus-border-color : #cbcbcb,
+    checkbox-radio-focus-box-shadow   : 0 0 10px rgba(0, 0, 0, 0.2),
+
+    actions-margin-top                : 20px,
+    actions-pre                       : 5,
+
+    required-field-font-size          : 14px,
+
+    validation-icon-right             : 10px,
+    validation-icon-top               : 9px,
+    validation-font-size              : 14px,
+    validation-arrow-size             : 8px
+
 );
 
 
@@ -135,9 +200,7 @@ $notifications: (
 );
 
 
-$form: (
-);
-
+/*==========  Navigation bar  ==========*/
 
 $navBar: (
     bg-color: #222222,
@@ -145,6 +208,8 @@ $navBar: (
     trigger-float: right,
     trigger-height: 50px,
     trigger-font-size: 30px,
+    nav-position: right,
+    nav-margin-left: 0,
     link-text-align: center,
     link-padding: 20px 30px,
     link-color: map-get($color, white)

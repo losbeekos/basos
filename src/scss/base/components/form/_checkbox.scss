@@ -17,9 +17,9 @@
 
     &:focus {
         + label:before {
-            background: #f1f1f1;
-            border-color: #cbcbcb;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            background: map-get($form, checkbox-radio-focus-bg-color);
+            border-color: map-get($form, checkbox-radio-focus-border-color);
+            box-shadow: map-get($form, checkbox-radio-focus-box-shadow);
         }
     }
 
@@ -38,7 +38,7 @@
     + label {
         position: relative;
         cursor: pointer;
-        padding-left: 28px;
+        padding-left: map-get($form, checkbox-radio-size)+10;
         user-select: none;
 
         .no-borderradius & {
@@ -50,12 +50,12 @@
             left: 0;
             top: -1px;
             content: '';
-            background: #f9f9f9;
-            width: 20px;
-            height: 20px;
+            background: map-get($form, checkbox-radio-bg-color);
+            width: map-get($form, checkbox-radio-size);
+            height: map-get($form, checkbox-radio-size);
             display: block;
             border-radius: map-get($base, border-radius);
-            border: 1px solid #e0e0e0;
+            border: map-get($form, input-border);
             transition: all map-get($base, transition-speed)*2;
 
             .no-borderradius & {
@@ -70,9 +70,9 @@
             position: absolute;
             top: -1px;
             left: 0;
-            width: 20px;
-            height: 20px;
-            line-height: 20px;
+            width: map-get($form, checkbox-radio-size);
+            height: map-get($form, checkbox-radio-size);
+            line-height: map-get($form, checkbox-radio-size);
             text-align: center;
             color: map-get($color, beta);
             opacity: 0;
