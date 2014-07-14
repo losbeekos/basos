@@ -2,6 +2,7 @@ $(document).ready(function () {
 
     app.fastClick.init();
     app.fitVids.init();
+    app.navBar.init();
     app.formValidation.init();
     app.jump.init();
     app.modals.init();

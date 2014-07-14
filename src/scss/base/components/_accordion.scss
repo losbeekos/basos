@@ -3,7 +3,6 @@
 =================================*/
 
 .accordion {
-    border: 1px solid map-get($accordion, border-color);
     border-radius: map-get($accordion, border-radius);
     overflow: hidden;
 }
@@ -11,12 +10,6 @@
 .accordion__group {
     overflow: hidden;
     margin-bottom: map-get($accordion, group-margin-bottom);
-
-    &:first-child {
-        .accordion__trigger {
-            border-top: 0;
-        }
-    }
 }
 
 .accordion__trigger {
@@ -25,7 +18,7 @@
     background-color: map-get($accordion, trigger-bg-color);
     color: map-get($accordion, trigger-color);
     padding: map-get($accordion, padding);
-    border-top: 1px solid map-get($accordion, border-color);
+    border-bottom: 1px solid lighten(map-get($accordion, trigger-bg-color), 3%);
 
     @if map-get($accordion, gradient) {
         background-image: map-get($accordion, trigger-gradient-bg);
@@ -50,7 +43,7 @@
         color: map-get($accordion, trigger-icon-color);
         transform: translate(0, -50%);
 
-        @include rem(right, map-get($accordion, padding));
+        @include rem(right, map-get($accordion, trigger-icon-right));
 
         .no-csstransforms & {
             margin-top: -10px;
@@ -65,20 +58,18 @@
 
 .accordion__content {
     overflow: hidden;
-    padding: 0 map-get($accordion, padding);
-    border-top: 1px solid map-get($accordion, trigger-bg-color);
+    padding: map-get($accordion, content-padding);
     transition: all, map-get($accordion, transition-speed);
 
     .lt-ie9 & {
         height: 0;
     }
 
-    *:first-child {
-        margin-top: map-get($accordion, padding);
+    > *:first-child {
+        margin-top: map-get($accordion, content-margin-top-first);
     }
 
     .accordion-content-show & {
-        border-top: 1px solid map-get($accordion, border-color);
     }
 
     .accordion-content-show.lt-ie9 & {

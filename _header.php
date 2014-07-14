@@ -55,7 +55,7 @@
 
         <div id="background" class="background">
 
-            <div id="off-canvas-left" class="off-canvas off-canvas--left">
+            <!-- <div id="off-canvas-left" class="off-canvas off-canvas--left">
                 <button id="off-canvas-toggle-left" class="off-canvas-toggle-left"></button>
                 <nav class="off-canvas-nav">
                     <ul class="list-unstyled">
@@ -64,7 +64,7 @@
                         <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
                     </ul>
                 </nav>
-            </div>
+            </div> -->
 
             <!-- <div id="off-canvas-right" class="off-canvas off-canvas--right">
                 <button id="off-canvas-toggle-right" class="off-canvas-toggle-right"></button>
@@ -77,6 +77,21 @@
                 </nav>
             </div> -->
 
+            <header id="nav-bar" class="nav-bar off-canvas-push">
+                <div class="nav-bar__container">
+                    <a class="logo" href="/"><img src="dist/img/logo.png" alt="" /></a>
+                    <nav class="nav-bar__nav">
+                        <a id="nav-bar-trigger" class="nav-bar__trigger hide-beta-and-up"></a>
+                        <ul class="nav-bar__list">
+                            <li class="nav-bar__item"><a class="nav-bar__link nav-bar__link--active" href="#">home</a></li>
+                            <li class="nav-bar__item"><a class="nav-bar__link" href="#">nieuws</a></li>
+                            <li class="nav-bar__item"><a class="nav-bar__link" href="#">over ons</a></li>
+                            <li class="nav-bar__item"><a class="nav-bar__link" href="#">contact</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </header>
+
             <div id="container" class="container off-canvas-push">
                 <!--[if lt IE 9]>
                     <div class="notification error">
@@ -86,7 +101,7 @@
                     </div>
                 <![endif]-->
 
-                <header class="header">
+                <!-- <header class="header">
                     <a class="logo" href="/"><img src="img/logo.png" alt="" /></a>
                     <nav class="nav-primary">
                         <ul class="list-inline">
@@ -95,6 +110,6 @@
                             <li><a class="nav-primary__link" href="#">link</a></li>
                         </ul>
                     </nav>
-                </header>
+                </header> -->
 
                 <main id="main" role="main">

@@ -4,9 +4,11 @@
 
 .tabs {
     @extend .list-inline;
+    @extend .clearfix;
 
     li {
         margin: 0;
+        float: left;
 
         + li {
             @include rem(margin-left, map-get($tabs, margin-left));
@@ -18,8 +20,6 @@
     position: relative;
     display: inline-block;
     background: map-get($tabs, bg-color);
-    border: 1px solid map-get($tabs, border-color);
-    bottom: -1px;
     color: map-get($tabs, color);
     border-top-left-radius: map-get($base, border-radius);
     border-top-right-radius: map-get($base, border-radius);
@@ -27,10 +27,14 @@
 
     @include rem(padding, map-get($tabs, padding));
 
+    &:hover {
+        background: darken(map-get($tabs, bg-color), 5%);
+    }
+
     &:focus {
         outline: none;
         color: map-get($color, text);
-        background: darken(map-get($tabs, bg-color), 5%);
+        background: darken(map-get($tabs, bg-color), 10%);
     }
 
     &.tab--active {
@@ -41,8 +45,6 @@
 }
 
 .tab-content {
-    border-top: 1px solid map-get($tabs, content-border-top-color);
-
     @include rem(padding, map-get($tabs, content-padding));
 }
 

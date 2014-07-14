@@ -14,7 +14,7 @@
 }
 
 .notification {
-    border-width: 1px;
+    border-width: map-get($notifications, border-width);
     border-style: solid;
     border-radius: map-get($base, border-radius);
     position: relative;

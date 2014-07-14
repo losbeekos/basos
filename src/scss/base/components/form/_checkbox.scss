@@ -10,14 +10,16 @@
             cursor: not-allowed;
 
             &:before {
-                opacity: 0.5;
+                opacity: 0.4;
             }
         }
     }
 
     &:focus {
         + label:before {
-            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            background: #f1f1f1;
+            border-color: #cbcbcb;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
         }
     }
 
@@ -48,12 +50,12 @@
             left: 0;
             top: -1px;
             content: '';
-            background: #f1f1f1;
+            background: #f9f9f9;
             width: 20px;
             height: 20px;
             display: block;
             border-radius: map-get($base, border-radius);
-            border: 1px solid #cbcbcb;
+            border: 1px solid #e0e0e0;
             transition: all map-get($base, transition-speed)*2;
 
             .no-borderradius & {

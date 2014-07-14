@@ -7,7 +7,7 @@ $base: (
     gradient         : false,
     font-size        : 16px,
     padding          : 10px,
-    border-radius    : 2px,
+    border-radius    : 0,
     transition-speed : 0.2s
 );
 
@@ -20,7 +20,7 @@ $color: (
     text        : #222222,
     placeholder : #94adc4,
     selection   : #d1e4fe,
-    alpha       : #f1f1f1,
+    alpha       : #f0f0f0,
     beta        : #2690b0,
     gamma       : #26a8b0,
     delta       : #26b0a1,
@@ -60,7 +60,7 @@ $susy: (
 $btn: (
     gradient                : map-get($base, gradient),
     gradient-bg             : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
-    border-width            : 1px,
+    border-width            : 0,
     border-radius           : map-get($base, border-radius),
     padding-small           : 8px 30px,
     padding-medium          : 12px 35px,
@@ -105,6 +105,7 @@ $icon: (
     form-validation-error   : '\e801',
     form-checkbox           : '\e803',
     form-select             : '\e807',
+    nav-bar-trigger         : '\e80d',
     off-canvas-toggle-left  : '\e80d',
     off-canvas-toggle-right : '\e80d',
     off-canvas-toggle-close : '\e808',
@@ -123,6 +124,7 @@ $notifications: (
     padding-alpha       : 20px 60px 20px 20px,
     padding-beta        : 30px 60px 30px 30px,
     margin-bottom       : 30px,
+    border-width        : 0,
     close-color         : map-get($color, black),
     close-opacity       : 0.2,
     close-opacity-hover : 0.5,
@@ -130,6 +132,22 @@ $notifications: (
     close-right         : 20px,
     cookie-bg           : rgba(0, 0, 0, 0.85),
     cookie-padding      : 20px 0
+);
+
+
+$form: (
+);
+
+
+$navBar: (
+    bg-color: #222222,
+    trigger-bg-color: #222222,
+    trigger-float: right,
+    trigger-height: 50px,
+    trigger-font-size: 30px,
+    link-text-align: center,
+    link-padding: 20px 30px,
+    link-color: map-get($color, white)
 );
 
 
@@ -158,11 +176,11 @@ $tabs: (
     bg-color                 : map-get($btn-bg, alpha),
     border-color             : darken(map-get($btn-bg, alpha), 5%),
     color                    : lighten(map-get($color, text), 20%),
-    padding                  : 10px 15px,
-    margin-left              : 5px,
+    padding                  : 15px 20px,
+    margin-left              : 0,
     bg-color-active          : map-get($color, white),
     content-border-top-color : darken(map-get($btn-bg, alpha), 5%),
-    content-padding          : 20px,
+    content-padding          : 20px 0,
     item-transition-speed    : 0.5s
 );
 
@@ -211,11 +229,12 @@ $modal: (
 
 $accordion: (
     transition-speed           : map-get($base, transition-speed),
-    padding                    : map-get($base, padding),
+    padding                    : 15px 20px,
     border-color               : darken(map-get($btn-bg, alpha), 5%),
     gradient                   : map-get($base, gradient),
     border-radius              : map-get($base, border-radius),
     group-margin-bottom        : 0,
+    trigger-icon-right         : 20px,
     trigger-bg-color           : map-get($btn-bg, alpha),
     trigger-bg-color-show      : map-get($color, beta),
     trigger-hover-darken       : 5%,
@@ -225,7 +244,9 @@ $accordion: (
     trigger-icon-content       : '\e807',
     trigger-icon-content-after : '\e804',
     trigger-icon-color         : map-get($color, text),
-    trigger-icon-color-show    : map-get($color, white)
+    trigger-icon-color-show    : map-get($color, white),
+    content-padding            : 0 20px,
+    content-margin-top-first   : 20px
 );
 
 
@@ -277,15 +298,15 @@ $dropdown: (
     min-width           : 200px,
     max-width           : 300px,
     bg-color            : lighten(map-get($btn-bg, alpha), 5%),
-    border              : 1px solid darken(map-get($btn-bg, alpha), 10%),
+    border              : 0 solid darken(map-get($btn-bg, alpha), 10%),
     transition-duration : 0.2s,
     transition-delay    : 0.5s,
     transform           : translate3d(0, 10%, 0),
     transform-hover     : translate3d(0, 0, 0),
     link-padding        : 10px 15px,
     link-bg-color       : transparent,
-    link-bg-color-hover : darken(map-get($accordion, trigger-bg-color), 1%),
-    link-border-top     : 1px solid darken(map-get($btn-bg, alpha), 1%)
+    link-bg-color-hover : lighten(map-get($accordion, trigger-bg-color), 3%),
+    link-border-top     : 0 solid darken(map-get($btn-bg, alpha), 1%)
 );
 
 /*==========  Media  ==========*/

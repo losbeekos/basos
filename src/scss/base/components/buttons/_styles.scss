@@ -6,12 +6,31 @@
     background-color: $bg-color;
     border-color: darken($bg-color, map-get($btn, border-color-darken));
 
-    &:hover                      { background-color: darken($bg-color, 5%); }
-    &:active                     { background-color: darken($bg-color, 10%); }
-    &:focus                      { box-shadow: map-get($btn, box-shadow-focus) rgba($bg-color, 1); }
+    &:hover { 
+        background-color: darken($bg-color, 5%);
+    }
+
+    &:active {
+        background-color: darken($bg-color, 10%);
+    }
+
+    &:focus {
+        box-shadow: map-get($btn, box-shadow-focus) rgba($bg-color, 1);
+    }
+
     &--divider:hover,
     &:disabled,
-    &:disabled:hover             { background-color: $bg-color; }
+    &:disabled:hover {
+        background-color: $bg-color;
+    }
+
+    .btn-group--inline & {
+        border-left: 1px solid lighten($bg-color, 3%);
+    }
+
+    .btn-group--block & {
+        border-top: 1px solid lighten($bg-color, 3%);
+    }
 }
 
 .btn {

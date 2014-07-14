@@ -5,27 +5,27 @@
                     <section id="grid">
                         <h1>Grid</h1>
                         <div class="grid">
-                            <div class="column-12" style="background: rgba(0,0,0,0.03)">column-12</div>
+                            <div class="column-12" style="background: rgba(0,0,0,0.03); padding: 10px;">column-12</div>
                         </div>
                         <div class="grid">
-                            <div class="column-6" style="background: rgba(0,0,0,0.03)">column-6</div>
-                            <div class="column-6" style="background: rgba(0,0,0,0.03)">column-6</div>
+                            <div class="column-6" style="background: rgba(0,0,0,0.03); padding: 10px;">column-6</div>
+                            <div class="column-6" style="background: rgba(0,0,0,0.03); padding: 10px;">column-6</div>
                         </div>
                         <div class="grid">
-                            <div class="column-4" style="background: rgba(0,0,0,0.03)">column-4</div>
-                            <div class="column-8" style="background: rgba(0,0,0,0.03)">column-8</div>
+                            <div class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">column-4</div>
+                            <div class="column-8" style="background: rgba(0,0,0,0.03); padding: 10px;">column-8</div>
                         </div>
                         <div class="grid">
-                            <div class="column-2" style="background: rgba(0,0,0,0.03)">column-2</div>
-                            <div class="column-10" style="background: rgba(0,0,0,0.03)">column-10</div>
+                            <div class="column-2" style="background: rgba(0,0,0,0.03); padding: 10px;">column-2</div>
+                            <div class="column-10" style="background: rgba(0,0,0,0.03); padding: 10px;">column-10</div>
                         </div>
                         <div class="grid">
-                            <div class="column-7" style="background: rgba(0,0,0,0.03)">column-7</div>
-                            <div class="column-5" style="background: rgba(0,0,0,0.03)">column-5</div>
+                            <div class="column-7" style="background: rgba(0,0,0,0.03); padding: 10px;">column-7</div>
+                            <div class="column-5" style="background: rgba(0,0,0,0.03); padding: 10px;">column-5</div>
                         </div>
                         <div class="grid">
-                            <div class="column-9" style="background: rgba(0,0,0,0.03)">column-9</div>
-                            <div class="column-3" style="background: rgba(0,0,0,0.03)">column-3</div>
+                            <div class="column-9" style="background: rgba(0,0,0,0.03); padding: 10px;">column-9</div>
+                            <div class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">column-3</div>
                         </div>
                     </section>
 
@@ -212,22 +212,6 @@
                                 </div>
                                 <div class="form__row">
                                     <div class="column-5 form__label">
-                                        <label>Aanhef</label>
-                                    </div>
-                                    <div class="column-7">
-                                        <div class="column-6 form__input">
-                                            <select name="" id="" multiple="multiple">
-                                                <option value="">HTML</option>
-                                                <option value="">CSS</option>
-                                                <option value="">Javascript</option>
-                                                <option value="">PHP</option>
-                                                <option value="">Json</option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form__row">
-                                    <div class="column-5 form__label">
                                         <label>Naam *</label>
                                     </div>
                                     <div class="column-7">
@@ -299,7 +283,6 @@
                                                 <li><input name="checkbox" type="checkbox" id="checkbox4" /><label for="checkbox4">Checkbox</label></li>
                                                 <li><input name="checkbox" type="checkbox" id="checkbox5" /><label for="checkbox5">Checkbox</label></li>
                                                 <li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox6" /><label for="checkbox6">Checkbox disabled</label></li>
-                                                <li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox7" /><label for="checkbox7">Checkbox disabled</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -317,7 +300,6 @@
                                                 <li><input name="radio" type="radio" name="radio" id="radio4" /><label for="radio4">Radio</label></li>
                                                 <li><input name="radio" type="radio" name="radio" id="radio5" /><label for="radio5">Radio</label></li>
                                                 <li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio6" /><label for="radio6">Radio disabled</label></li>
-                                                <li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio7" /><label for="radio7">Radio disabled</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -330,30 +312,6 @@
                                         <div class="column-6 form__switch">
                                             <ul class="form__input-list list-unstyled">
                                                 <li><input name="switch1" type="checkbox" id="switch1" /><label for="switch1">Switch</label></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form__row">
-                                    <div class="column-5 form__label">
-                                        <label>Switch</label>
-                                    </div>
-                                    <div class="column-7">
-                                        <div class="column-6 form__switch">
-                                            <ul class="form__input-list list-unstyled">
-                                                <li><input name="switch2" type="checkbox" id="switch2" /><label for="switch2">Switch</label></li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form__row">
-                                    <div class="column-5 form__label">
-                                        <label>Switch</label>
-                                    </div>
-                                    <div class="column-7">
-                                        <div class="column-6 form__switch">
-                                            <ul class="form__input-list list-unstyled">
-                                                <li><input name="switch3" type="checkbox" id="switch3" /><label for="switch3">Switch</label></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -1124,25 +1082,34 @@
                             <div class="accordion__group accordion-content-show">
                                 <a class="accordion__trigger">Accordion item #1</a>
                                 <div class="accordion__content">
-                                    <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-                                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+                                    <div class="grid">
+                                        <div class="column-12">
+                                            <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                                            <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accordion__group">
                                 <a class="accordion__trigger">Accordion item #2</a>
                                 <div class="accordion__content">
-                                    <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-                                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
-                                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+                                    <div class="grid">
+                                        <div class="column-12">
+                                            <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                                            <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accordion__group">
                                 <a class="accordion__trigger">Accordion item #3</a>
                                 <div class="accordion__content">
-                                    <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-                                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
-                                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
-                                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+                                    <div class="grid">
+                                        <div class="column-12">
+                                            <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                                            <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                             <div class="accordion__group">

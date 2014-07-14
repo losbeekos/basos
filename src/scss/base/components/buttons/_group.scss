@@ -23,7 +23,7 @@
 
     > li {
         margin-right: 0;
-        margin-left: -1px;
+        margin-left: 0;
         float: left;
 
         // @include breakpoint(alpha) {
@@ -42,6 +42,7 @@
 
             a,
             span {
+                border-left: 0;
                 border-radius: map-get($btn, group-border-radius) 0 0 map-get($btn, group-border-radius);
             }
         }
@@ -73,6 +74,7 @@
 
             a,
             span {
+                border-top: 0;
                 border-radius: map-get($btn, group-border-radius) map-get($btn, group-border-radius) 0 0;
             }
         }

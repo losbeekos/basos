@@ -63,7 +63,7 @@ app.accordion = {
             .addClass(app.accordion.settings.contentShowClass);
 
         setTimeout(function () {
-            app.settings.$htmlAndBody.animate({scrollTop: $trigger.position().top}, 300);
+            app.settings.$htmlAndBody.animate({scrollTop: $trigger.offset().top}, 300);
         }, 300);
     },
 

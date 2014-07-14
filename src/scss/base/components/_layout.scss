@@ -56,6 +56,8 @@ p {
 }
 
 .container {
+    @extend .clearfix;
+
     margin-left: map-get($container, margin-left);
     margin-right: map-get($container, margin-right);
 

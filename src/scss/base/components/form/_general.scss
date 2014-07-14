@@ -24,7 +24,7 @@
 .form__select {
     user-select: none;
     background: map-get($color, white);
-    border: 1px solid #cbcbcb;
+    border: 1px solid #e0e0e0;
     border-radius: map-get($base, border-radius);
 
     &:after {
@@ -80,7 +80,7 @@
                 width: 20px;
                 height: 20px;
                 border-radius: 10px;
-                border: 1px solid #cbcbcb;
+                border: 1px solid #e0e0e0;
                 box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
                 opacity: 1;
             }
