@@ -85,14 +85,27 @@
                         <ul class="nav-bar__list">
                             <li class="nav-bar__item"><a class="nav-bar__link nav-bar__link--active" href="#">home</a></li>
                             <li class="nav-bar__item"><a class="nav-bar__link" href="#">nieuws</a></li>
-                            <li class="nav-bar__item"><a class="nav-bar__link" href="#">over ons</a></li>
+                            <li class="nav-bar__item">
+                                <div class="dropdown">
+                                    <a class="nav-bar__link">dropdown</a>
+                                    <div class="dropdown__content">
+                                        <ul>
+                                            <li><a href="#">Why not indeed</a></li>
+                                            <li><a href="#">link</a></li>
+                                            <li><a href="#">link</a></li>
+                                            <li><a href="#">link</a></li>
+                                            <li><a href="#">link</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </li>
                             <li class="nav-bar__item"><a class="nav-bar__link" href="#">contact</a></li>
                         </ul>
                     </nav>
                 </div>
             </header>
 
-            <div id="container" class="container off-canvas-push">
+            <div id="container" class="off-canvas-push">
                 <!--[if lt IE 9]>
                     <div class="notification error">
                         <ul>

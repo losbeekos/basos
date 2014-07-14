@@ -28,6 +28,27 @@ $color: (
 );
 
 
+/*==========  Sections  ==========*/
+
+$section: (
+    padding-vertical        : 60px,
+    paragraph-margin-bottom : 30px,
+    list-margin-bottom      : 30px
+);
+
+$section-bg: (
+    alpha   : map-get($color, alpha),
+    beta    : map-get($color, beta),
+    gamma   : map-get($color, gamma),
+    delta   : map-get($color, delta),
+    epsilon : map-get($color, epsilon)
+
+    // Just add a color to make another button
+    // Ex. zeta: map-get($color, zeta)
+    // Ex. zeta: #123456
+);
+
+
 /*==========  Container  ==========*/
 
 $container: (
@@ -203,16 +224,16 @@ $notifications: (
 /*==========  Navigation bar  ==========*/
 
 $navBar: (
-    bg-color: #222222,
-    trigger-bg-color: #222222,
-    trigger-float: right,
-    trigger-height: 50px,
-    trigger-font-size: 30px,
-    nav-position: right,
-    nav-margin-left: 0,
-    link-text-align: center,
-    link-padding: 20px 30px,
-    link-color: map-get($color, white)
+    bg-color          : #222222,
+    trigger-bg-color  : #222222,
+    trigger-float     : right,
+    trigger-height    : 50px,
+    trigger-font-size : 30px,
+    nav-position      : right,
+    nav-margin-left   : 0,
+    link-text-align   : center,
+    link-padding      : 20px 30px,
+    link-color        : map-get($color, white)
 );
 
 

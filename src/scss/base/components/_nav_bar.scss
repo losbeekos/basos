@@ -14,6 +14,7 @@
 
     @include breakpoint(beta-and-up) {
         max-height: inherit;
+        text-align: left;
     }
 
     .logo {
@@ -28,6 +29,19 @@
             padding-top: 0;
 
             @include rem(margin-top, 18px);
+        }
+    }
+
+    .dropdown__content {
+        background: map-get($navBar, bg-color);
+
+        a {
+            color: map-get($color, white);
+
+            &:hover {
+                background: lighten(map-get($navBar, bg-color), 10%);
+                color: map-get($navBar, link-color);
+            }
         }
     }
 }
@@ -132,6 +146,7 @@
     transition: all map-get($base, transition-speed);
 
     @include breakpoint(beta-and-up) {
+        overflow: inherit;
         max-height: inherit;
         float: right;
         border-top: 0;

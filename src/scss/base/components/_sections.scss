@@ -1,0 +1,58 @@
+/*================================
+=            Sections            =
+================================*/
+
+.section {
+    color: map-get($color, white);
+
+    @include rem(padding-top, map-get($section, padding-vertical));
+    @include rem(padding-bottom, map-get($section, padding-vertical));
+
+    @include breakpoint(beta) {
+        @include rem(padding-top, map-get($section, padding-vertical)*1.5);
+        @include rem(padding-bottom, map-get($section, padding-vertical)*1.5);
+    }
+
+    @include breakpoint(gamma-and-up) {
+        @include rem(padding-top, map-get($section, padding-vertical)*2);
+        @include rem(padding-bottom, map-get($section, padding-vertical)*2);
+    }
+
+    @each $key, $value in $section-bg {
+        &--#{$key} {
+            background: map-get($section-bg, $key);
+        }
+    }
+
+    p {
+        @include rem(margin-bottom, map-get($section, paragraph-margin-bottom));
+    }
+
+    ul,
+    ol {
+        @include rem(margin-bottom, map-get($section, list-margin-bottom));
+    }
+
+    *:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.section--alpha {
+    color: map-get($color, text);
+}
+
+.section-img {
+    background: url(../dist/img/someimage.jpg) center center fixed;
+    background-size: cover;
+
+    @include rem(height, 300px);
+
+    @include breakpoint(beta) {
+        @include rem(height, 400px);
+    }
+
+    @include breakpoint(gamma-and-up) {
+        @include rem(height, 500px);
+    }
+}
