@@ -331,10 +331,8 @@
                                             <label>Switch</label>
                                         </div>
                                         <div class="column-7">
-                                            <div class="column-6 form__switch">
-                                                <ul class="form__input-list list-unstyled">
-                                                    <li><input name="switch1" type="checkbox" id="switch1" /><label for="switch1">Switch</label></li>
-                                                </ul>
+                                            <div class="form__switch">
+                                                <input name="switch1" type="checkbox" id="switch1" /><label for="switch1">Switch</label>
                                             </div>
                                         </div>
                                     </div>
