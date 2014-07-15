@@ -33,13 +33,18 @@
         @include rem(margin-bottom, map-get($section, list-margin-bottom));
     }
 
-    *:last-child {
+    > .container > *:last-child {
         margin-bottom: 0;
     }
 }
 
-.section--alpha {
+.section--alpha,
+.section--white {
     color: map-get($color, text);
+}
+
+.section--white {
+    background: map-get($color, white);
 }
 
 .section-img {

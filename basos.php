@@ -177,7 +177,7 @@
                         </div>
                     </section>
 
-                    <section id="notification" class="section section--alpha">
+                    <section id="notification" class="section section--white">
                         <div class="container">
                             <h1>Notifications</h1>
                             <p>Note: You can download different icons on <a href="http://www.fontello.com">fontello.com</a> and change them in settings.</p>
