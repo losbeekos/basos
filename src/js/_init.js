@@ -1,5 +1,6 @@
 $(document).ready(function () {
 
+    app.equalize.init();
     app.fastClick.init();
     app.fitVids.init();
     app.navBar.init();

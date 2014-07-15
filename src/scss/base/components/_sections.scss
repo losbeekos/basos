@@ -38,13 +38,8 @@
     }
 }
 
-.section--alpha,
-.section--white {
+.section--alpha {
     color: map-get($color, text);
-}
-
-.section--white {
-    background: map-get($color, white);
 }
 
 .section-img {

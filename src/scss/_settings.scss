@@ -37,7 +37,7 @@ $section: (
 );
 
 $section-bg: (
-    alpha   : map-get($color, alpha),
+    alpha   : map-get($color, white),
     beta    : map-get($color, beta),
     gamma   : map-get($color, gamma),
     delta   : map-get($color, delta),

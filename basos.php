@@ -52,6 +52,17 @@
                         </div>
                     </section>
 
+                    <section id="equalize" class="section section--alpha">
+                        <div class="container">
+                            <h1>Equalize</h1>
+                            <div class="grid" data-equalize>
+                                <div data-equalize-target class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
+                                <div data-equalize-target class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">column-4</div>
+                                <div data-equalize-target class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">column-4</div>
+                            </div>
+                        </div>
+                    </section>
+
                     <section id="buttons" class="section section--alpha">
                         <div class="container">
                             <h1>Buttons</h1>
