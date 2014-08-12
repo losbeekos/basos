@@ -31,19 +31,6 @@
             @include rem(margin-top, 18px);
         }
     }
-
-    .dropdown__content {
-        background: map-get($navBar, bg-color);
-
-        a {
-            color: map-get($color, white);
-
-            &:hover {
-                background: lighten(map-get($navBar, bg-color), 10%);
-                color: map-get($navBar, link-color);
-            }
-        }
-    }
 }
 
 .nav-bar--transform {

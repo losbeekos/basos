@@ -188,7 +188,7 @@
                         </div>
                     </section>
 
-                    <section id="notification" class="section section--white">
+                    <section id="notification" class="section section--alpha">
                         <div class="container">
                             <h1>Notifications</h1>
                             <p>Note: You can download different icons on <a href="http://www.fontello.com">fontello.com</a> and change them in settings.</p>
@@ -719,6 +719,55 @@
                                     </tr>
                                 </tbody>
                             </table>
+                            <h2>Responsive table</h2>
+                            <div class="table-responsive">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>First Name</th>
+                                        <th>Last Name</th>
+                                        <th>Show</th>
+                                        <th>Yada</th>
+                                        <th>Yada</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Bender</td>
+                                        <td>Rodrigues</td>
+                                        <td>Futurama</td>
+                                        <td>Yada</td>
+                                        <td>Yada</td>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Philip</td>
+                                        <td>Fry</td>
+                                        <td>Futurama</td>
+                                        <td>Yada</td>
+                                        <td>Yada</td>
+                                    </tr>
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Jerry</td>
+                                        <td>Seinfeld</td>
+                                        <td>Seinfeld</td>
+                                        <td>Yada</td>
+                                        <td>Yada</td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Larry</td>
+                                        <td>David</td>
+                                        <td>Seinfeld</td>
+                                        <td>Yada</td>
+                                        <td>Yada</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            </div>
                         </div>
                     </section>
 
@@ -1025,7 +1074,7 @@
                         </div>
                     </section>
 
-                    <section id="tooltips" class="section section--alpha">
+                    <!-- <section id="tooltips" class="section section--alpha">
                         <div class="container">
                             <h1>Tooltips</h1>
                             <ul class="btn-group btn-group--inline">
@@ -1036,7 +1085,7 @@
                                 <li><a class="btn btn--alpha btn--small tooltip" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness." data-tooltip-trigger="click">click trigger</a></li>
                             </ul>
                         </div>
-                    </section>
+                    </section> -->
 
                     <section id="dropdowns" class="section section--alpha">
                         <div class="container">
