@@ -28,7 +28,29 @@
 
 /*==========  Animations  ==========*/
 
+@import "base/animations/animated";
 @import "base/animations/shake";
+@import "base/animations/bounceIn";
+@import "base/animations/bounceInDown";
+@import "base/animations/bounceInLeft";
+@import "base/animations/bounceInRight";
+@import "base/animations/bounceInUp";
+@import "base/animations/fadeIn";
+@import "base/animations/fadeInDown";
+@import "base/animations/fadeInDownBig";
+@import "base/animations/fadeInLeft";
+@import "base/animations/fadeInLeftBig";
+@import "base/animations/fadeInRight";
+@import "base/animations/fadeInRightBig";
+@import "base/animations/fadeInUp";
+@import "base/animations/fadeInUpBig";
+@import "base/animations/zoomIn";
+@import "base/animations/zoomInDown";
+@import "base/animations/zoomInLeft";
+@import "base/animations/zoomInRight";
+@import "base/animations/zoomInUp";
+@import "base/animations/flipInX";
+@import "base/animations/flipInY";
 
 
 /*==========  Components  ==========*/
@@ -50,6 +72,7 @@
 @import "base/components/pricing_tables";
 @import "base/components/progress";
 @import "base/components/spinners";
+@import "base/components/scrollspy";
 
 
 /*==========  Buttons  ==========*/

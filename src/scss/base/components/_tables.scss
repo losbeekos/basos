@@ -2,6 +2,11 @@
 =            Tables            =
 ==============================*/
 
+.table-responsive {
+    width: 100%;
+    overflow: auto;
+}
+
 .table {
     width: 100%;
 
@@ -44,9 +49,4 @@
             border-left: none;
         }
     }
-}
-
-.table-responsive {
-    width: 100%;
-    overflow: auto;
 }

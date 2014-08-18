@@ -49,6 +49,12 @@
                                 <div class="column-9" style="background: rgba(0,0,0,0.03); padding: 10px;">column-9</div>
                                 <div class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">column-3</div>
                             </div>
+                            <div class="grid">
+                                <div class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">column-3</div>
+                                <div class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">column-3</div>
+                                <div class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">column-3</div>
+                                <div class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">column-3</div>
+                            </div>
                         </div>
                     </section>
 
@@ -1074,7 +1080,7 @@
                         </div>
                     </section>
 
-                    <!-- <section id="tooltips" class="section section--alpha">
+                    <section id="tooltips" class="section section--alpha">
                         <div class="container">
                             <h1>Tooltips</h1>
                             <ul class="btn-group btn-group--inline">
@@ -1085,7 +1091,7 @@
                                 <li><a class="btn btn--alpha btn--small tooltip" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness." data-tooltip-trigger="click">click trigger</a></li>
                             </ul>
                         </div>
-                    </section> -->
+                    </section>
 
                     <section id="dropdowns" class="section section--alpha">
                         <div class="container">
@@ -1230,7 +1236,7 @@
                         </div>
                     </section>
 
-                    <section id="jumpto" class="section section--alpha">
+                    <section id="progress" class="section section--alpha">
                         <div class="container">
                             <h1>Progress</h1>
                             <h2>Indeterminate</h2>
@@ -1254,7 +1260,7 @@
                         </div>
                     </section>
 
-                    <section id="jumpto" class="section section--alpha">
+                    <section id="spinners" class="section section--alpha">
                         <div class="container">
                             <h1>Spinners</h1>
                             <p>Note: You can download different icons on <a href="http://www.fontello.com">fontello.com</a>, <a href="http://icomoon.io/app/#/select">icomoon.io</a> or somewhere else.</p>
@@ -1272,6 +1278,42 @@
                         </div>
                     </section>
 
+                    <section id="scrollspy" class="section section--alpha">
+                        <div class="container">
+                            <h1>Scrollspy</h1>
+                            <div class="grid">
+                                <div data-scrollspy data-scrollspy-repeat data-scrollspy-class="animation-bounceIn" class="column-12" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                            </div>
+                            <div class="grid" data-equalize>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-6" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-6" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                            </div>
+                            <div class="grid" data-equalize>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="200" class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="400" class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                            </div>
+                            <div class="grid" data-equalize>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-2" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-10" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                            </div>
+                            <div class="grid" data-equalize>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" class="column-7" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" data-scrollspy-delay="200" class="column-5" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                            </div>
+                            <div class="grid" data-equalize>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-9" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" data-scrollspy-delay="200" class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                            </div>
+                            <div class="grid" data-equalize>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="100" class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="300" class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                            </div>
+                        </div>
+                    </section>
+
                 </main>
 
                 <footer class="footer">
@@ -1280,7 +1322,7 @@
                         <li><a class="nav-footer__link" href="#">link</a></li>
                         <li><a class="nav-footer__link" href="#">link</a></li>
                     </ul>
-                    <div class="copyright">&copy; copyright 2013</div>
+                    <div class="copyright">&copy; copyright 2014</div>
                 </footer>
             </div>
         </div>
