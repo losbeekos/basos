@@ -1308,6 +1308,26 @@
                         </div>
                     </section>
 
+                    <section id="spinners" class="section section--alpha">
+                        <div class="container">
+                            <h1>Parallax</h1>
+                            <div class="grid">
+                                <div class="column-12">
+                                    <div class="parallax">
+                                        <img src="http://www.lorempixel.com/1280/800/business/1" class="parallax__img">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="grid">
+                                <div class="column-12">
+                                    <div class="parallax">
+                                        <img src="http://www.lorempixel.com/1280/800/business/2" class="parallax__img">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                 </main>
 
                 <footer class="footer">

@@ -1,4 +1,5 @@
 app.settings.$document.ready(function () {
+    var scrollTop = $(this).scrollTop();
 
     app.equalize.init();
     app.fastClick.init();
@@ -13,6 +14,7 @@ app.settings.$document.ready(function () {
     app.notifications.init();
     app.offCanvas.init();
     app.scrollSpy.init();
+    app.parallax.init(scrollTop);
 
     //app.cycle.init();
     //app.fancybox.init();
@@ -21,7 +23,10 @@ app.settings.$document.ready(function () {
 });
 
 app.settings.$window.on('resize scroll', function () {
+    var scrollTop = $(this).scrollTop();
+
     app.scrollSpy.init();
+    app.parallax.init(scrollTop);
 });
 
 app.settings.$window.on('resize', function () {

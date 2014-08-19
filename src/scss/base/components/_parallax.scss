@@ -1,0 +1,33 @@
+/*================================
+=            Parallax            =
+================================*/
+
+.parallax {
+    position: relative;
+    overflow: hidden;
+
+    @include breakpoint(beta) {
+        @include rem(height, 350px);
+    }
+
+    @include breakpoint(gamma-and-up) {
+        @include rem(height, 450px);
+    }
+}
+
+.parallax__img {
+    @include breakpoint(beta) {
+        left: -20%;
+    }
+
+    @include breakpoint(beta-and-up) {
+        position: absolute;
+        top: -50%;
+
+        @include rem(max-width, 1280px);
+    }
+
+    @include breakpoint(gamma-and-up) {
+        left: 0;
+    }
+}

@@ -1,15 +1,21 @@
 @keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 100%, 0);
-  }
+    0% {
+        transform: translate3d(0, 100%, 0);
 
-  100% {
-    opacity: 1;
-    transform: none;
-  }
+        @include breakpoint(beta-and-up) {
+                opacity: 0;
+        }
+    }
+
+    100% {
+        transform: none;
+
+        @include breakpoint(beta-and-up) {
+                opacity: 1;
+        }
+    }
 }
 
 .animation-fadeInUp {
-  animation-name: fadeInUp;
+    animation-name: fadeInUp;
 }

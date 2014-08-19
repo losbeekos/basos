@@ -28,7 +28,7 @@
         @include rem(margin-bottom, map-get($section, paragraph-margin-bottom));
     }
 
-    ul,
+    ul:not(.form__input-list),
     ol {
         @include rem(margin-bottom, map-get($section, list-margin-bottom));
     }
