@@ -19,8 +19,8 @@
 
         @include rem(font-size, map-get($spinner, font-size));
     }
-}
 
-.spinner--alpha:after { content: map-get($icon, spinner-alpha); }
-.spinner--beta:after  { content: map-get($icon, spinner-beta); }
-.spinner--gamma:after { content: map-get($icon, spinner-gamma); }
+    &--alpha:after { content: map-get($icon, spinner-alpha); }
+    &--beta:after  { content: map-get($icon, spinner-beta); }
+    &--gamma:after { content: map-get($icon, spinner-gamma); }
+}

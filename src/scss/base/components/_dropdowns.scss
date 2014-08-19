@@ -22,33 +22,33 @@
         display: block;
         margin: 0;
     }
-}
 
-.dropdown__content {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    visibility: hidden;
-    background-color: map-get($btn-bg, alpha);
-    border: map-get($dropdown, border);
-    opacity: 0;
-    z-index: 999;
-    transition: all map-get($dropdown, transition-duration) map-get($dropdown, transition-delay);
-    transform: map-get($dropdown, transform);
+    &__content {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        visibility: hidden;
+        background-color: map-get($btn-bg, alpha);
+        border: map-get($dropdown, border);
+        opacity: 0;
+        z-index: 999;
+        transition: all map-get($dropdown, transition-duration) map-get($dropdown, transition-delay);
+        transform: map-get($dropdown, transform);
 
-    @include rem(min-width, map-get($dropdown, min-width));
-    @include rem(max-width, map-get($dropdown, max-width));
+        @include rem(min-width, map-get($dropdown, min-width));
+        @include rem(max-width, map-get($dropdown, max-width));
 
-    a {
-        background-color: map-get($dropdown, link-bg-color);
-        display: block;
-        border-top: map-get($dropdown, link-border-top);
-        color: map-get($color, text);
+        a {
+            background-color: map-get($dropdown, link-bg-color);
+            display: block;
+            border-top: map-get($dropdown, link-border-top);
+            color: map-get($color, text);
 
-        @include rem(padding, map-get($dropdown, link-padding));
+            @include rem(padding, map-get($dropdown, link-padding));
 
-        &:hover {
-            background-color: map-get($dropdown, link-bg-color-hover);
+            &:hover {
+                background-color: map-get($dropdown, link-bg-color-hover);
+            }
         }
     }
 }

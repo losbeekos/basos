@@ -13,76 +13,71 @@
             border-radius: 0;
         }
     }
-}
 
+    &--inline {
+        @extend .list-inline;
 
-/*==========  Inline  ==========*/
+        > li {
+            margin-right: 0;
+            margin-left: 0;
+            float: left;
 
-.btn-group--inline {
-    @extend .list-inline;
+            // @include breakpoint(alpha) {
+            //     float: none;
+            //     margin-left: 0;
 
-    > li {
-        margin-right: 0;
-        margin-left: 0;
-        float: left;
+            //     a,
+            //     span {
+            //         margin: -1px 0 0 0;
+            //         display: block;
+            //     }
+            // }
 
-        // @include breakpoint(alpha) {
-        //     float: none;
-        //     margin-left: 0;
+            &:first-child {
+                margin: 0;
 
-        //     a,
-        //     span {
-        //         margin: -1px 0 0 0;
-        //         display: block;
-        //     }
-        // }
-
-        &:first-child {
-            margin: 0;
-
-            a,
-            span {
-                border-left: 0;
-                border-radius: map-get($btn, group-border-radius) 0 0 map-get($btn, group-border-radius);
+                a,
+                span {
+                    border-left: 0;
+                    border-radius: map-get($btn, group-border-radius) 0 0 map-get($btn, group-border-radius);
+                }
             }
-        }
 
-        &:last-child {
-            a,
-            span {
-                border-radius: 0 map-get($btn, group-border-radius) map-get($btn, group-border-radius) 0;
+            &:last-child {
+                a,
+                span {
+                    border-radius: 0 map-get($btn, group-border-radius) map-get($btn, group-border-radius) 0;
+                }
             }
         }
     }
-}
 
-/*==========  Block  ==========*/
+    &--block {
+        @extend .list-unstyled;
 
-.btn-group--block {
-    @extend .list-unstyled;
-
-    > li {
-        margin-top: -1px;
-
-        a,
-        span {
-            display: block;
-        }
-
-        &:first-child {
-            margin: 0;
+        > li {
+            margin-top: -1px;
 
             a,
             span {
-                border-top: 0;
-                border-radius: map-get($btn, group-border-radius) map-get($btn, group-border-radius) 0 0;
+                display: block;
             }
-        }
 
-        &:last-child {
-            a,
-            span {
-                border-radius: 0 0 map-get($btn, group-border-radius) map-get($btn, group-border-radius);
+            &:first-child {
+                margin: 0;
+
+                a,
+                span {
+                    border-top: 0;
+                    border-radius: map-get($btn, group-border-radius) map-get($btn, group-border-radius) 0 0;
+                }
+            }
+
+            &:last-child {
+                a,
+                span {
+                    border-radius: 0 0 map-get($btn, group-border-radius) map-get($btn, group-border-radius);
+                }
             }
         }
     }

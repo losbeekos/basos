@@ -36,10 +36,10 @@
     > .container > *:last-child {
         margin-bottom: 0;
     }
-}
 
-.section--alpha {
-    color: map-get($color, text);
+    &--alpha {
+        color: map-get($color, text);
+    }
 }
 
 .section-img {

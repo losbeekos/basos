@@ -13,21 +13,21 @@
     @include breakpoint(gamma-and-up) {
         @include rem(height, 450px);
     }
-}
 
-.parallax__img {
-    @include breakpoint(beta) {
-        left: -20%;
-    }
+    &__img {
+        @include breakpoint(beta) {
+            left: -20%;
+        }
 
-    @include breakpoint(beta-and-up) {
-        position: absolute;
-        top: -50%;
+        @include breakpoint(beta-and-up) {
+            position: absolute;
+            top: -50%;
 
-        @include rem(max-width, 1280px);
-    }
+            @include rem(max-width, 1280px);
+        }
 
-    @include breakpoint(gamma-and-up) {
-        left: 0;
+        @include breakpoint(gamma-and-up) {
+            left: 0;
+        }
     }
 }

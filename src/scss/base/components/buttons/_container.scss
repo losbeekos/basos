@@ -10,20 +10,20 @@
     a {
         @include rem(padding, map-get($btn, container-btn-padding));
     }
-}
 
-.btn-container--center {
-    text-align: center;
+    &--center {
+        text-align: center;
 
-    ul {
-        display: inline-block;
+        ul {
+            display: inline-block;
+        }
     }
-}
 
-.btn-container--right {
-    text-align: right;
+    &--right {
+        text-align: right;
 
-    ul {
-        float: right;
+        ul {
+            float: right;
+        }
     }
 }

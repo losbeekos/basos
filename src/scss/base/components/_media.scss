@@ -4,17 +4,17 @@
 
 .media-list {
     @extend .list-unstyled;
-}
 
-.media-list--bordered {
-    .media {
-        border-top: map-get($media, bordered-border-top);
-        margin-bottom: 0;
-
-        @include rem(padding, map-get($media, bordered-padding));
-
+    &--bordered {
         .media {
-            margin: 0;
+            border-top: map-get($media, bordered-border-top);
+            margin-bottom: 0;
+
+            @include rem(padding, map-get($media, bordered-padding));
+
+            .media {
+                margin: 0;
+            }
         }
     }
 }
@@ -27,33 +27,33 @@
     .media {
         @include rem(margin-bottom, map-get($media, margin-bottom)/2);
     }
-}
 
-.media__alpha {
-    @extend .column-3;
+    &__alpha {
+        @extend .column-3;
 
-    float: left;
-
-    @include rem(margin-bottom, map-get($media, margin-bottom)/2);
-
-    @include breakpoint(beta-and-up) {
-        margin-bottom: 0;
-    }
-
-    .media--right & {
-        float: right;
-    }
-}
-
-.media__beta {
-    @extend .column-9;
-
-    .media--left & {
-        float: right;
-        margin: 0;
-    }
-
-    .media--right & {
         float: left;
+
+        @include rem(margin-bottom, map-get($media, margin-bottom)/2);
+
+        @include breakpoint(beta-and-up) {
+            margin-bottom: 0;
+        }
+
+        .media--right & {
+            float: right;
+        }
+    }
+
+    &__beta {
+        @extend .column-9;
+
+        .media--left & {
+            float: right;
+            margin: 0;
+        }
+
+        .media--right & {
+            float: left;
+        }
     }
 }

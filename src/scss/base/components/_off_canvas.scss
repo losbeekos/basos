@@ -62,41 +62,41 @@
     height: 100%;
 
     @include rem(width, map-get($off-canvas, width));
-}
 
-.off-canvas--left {
-    left: 0;
-    transform: translate3d(-#{map-get($off-canvas, width)}, 0, 0);
-    transition: transform map-get($base, transition-speed);
-
-    .off-canvas-show-left & {
-        transform: translate3d(0, 0, 0);
-    }
-
-    .no-csstransforms3d & {
-        left: -#{map-get($off-canvas, width)};
-    }
-
-    .no-csstransforms3d.off-canvas-show-left & {
+    &--left {
         left: 0;
+        transform: translate3d(-#{map-get($off-canvas, width)}, 0, 0);
+        transition: transform map-get($base, transition-speed);
+
+        .off-canvas-show-left & {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .no-csstransforms3d & {
+            left: -#{map-get($off-canvas, width)};
+        }
+
+        .no-csstransforms3d.off-canvas-show-left & {
+            left: 0;
+        }
     }
-}
 
-.off-canvas--right {
-    right: 0;
-    transform: translate3d(map-get($off-canvas, width), 0, 0);
-    transition: transform map-get($base, transition-speed);
-
-    .off-canvas-show-right & {
-        transform: translate3d(0, 0, 0);
-    }
-
-    .no-csstransforms3d & {
-        right: -#{map-get($off-canvas, width)};
-    }
-
-    .no-csstransforms3d.off-canvas-show-left & {
+    &--right {
         right: 0;
+        transform: translate3d(map-get($off-canvas, width), 0, 0);
+        transition: transform map-get($base, transition-speed);
+
+        .off-canvas-show-right & {
+            transform: translate3d(0, 0, 0);
+        }
+
+        .no-csstransforms3d & {
+            right: -#{map-get($off-canvas, width)};
+        }
+
+        .no-csstransforms3d.off-canvas-show-left & {
+            right: 0;
+        }
     }
 }
 

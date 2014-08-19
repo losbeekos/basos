@@ -22,31 +22,31 @@
     td {
         border-top: 1px solid map-get($table, border-color);
     }
-}
 
-.table--hover {
-    tr:hover {
-        td {
-            background: map-get($table, bg-color-hover);
+    &--hover {
+        tr:hover {
+            td {
+                background: map-get($table, bg-color-hover);
+            }
         }
     }
-}
 
-.table--zebra {
-    tr:nth-child(odd) td {
-        background: map-get($table, bg-color-zebra);
+    &--zebra {
+        tr:nth-child(odd) td {
+            background: map-get($table, bg-color-zebra);
+        }
     }
-}
 
-.table--bordered {
-    border: 1px solid map-get($table, border-color);
+    &--bordered {
+        border: 1px solid map-get($table, border-color);
 
-    td,
-    th {
-        border-left: 1px solid map-get($table, border-color);
+        td,
+        th {
+            border-left: 1px solid map-get($table, border-color);
 
-        &:first-child {
-            border-left: none;
+            &:first-child {
+                border-left: none;
+            }
         }
     }
 }

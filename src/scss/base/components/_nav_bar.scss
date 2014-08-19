@@ -31,152 +31,152 @@
             @include rem(margin-top, 18px);
         }
     }
-}
 
-.nav-bar--transform {
-    transform: translate3d(0, -100%, 0);
+    &--transform {
+        transform: translate3d(0, -100%, 0);
 
-    &.nav-bar--show {
-        transform: translate3d(0, 0, 0);
-    }
-
-    &.nav-bar--always-show-on-mobile {
-        @include breakpoint(alpha) {
+        &.nav-bar--show {
             transform: translate3d(0, 0, 0);
         }
-    }
-}
 
-.nav-bar--fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-}
-
-.nav-bar__container {
-    @extend .clearfix;
-
-    margin-left: map-get($container, margin-left);
-    margin-right: map-get($container, margin-right);
-
-    @include rem(max-width, map-get($container, max-width));
-    @include rem(min-width, map-get($container, min-width));
-
-    @include breakpoint(beta) {
-        @include rem(padding-left, map-get($container, padding)*2);
-        @include rem(padding-right, map-get($container, padding)*2);
+        &.nav-bar--always-show-on-mobile {
+            @include breakpoint(alpha) {
+                transform: translate3d(0, 0, 0);
+            }
+        }
     }
 
-    @include breakpoint(gamma-and-up) {
-        @include rem(padding-left, map-get($container, padding)*4);
-        @include rem(padding-right, map-get($container, padding)*4);
+    &--fixed {
+        position: fixed;
+        top: 0;
+        left: 0;
     }
-}
 
-.nav-bar__nav {
-    @extend .clearfix;
+    &__container {
+        @extend .clearfix;
 
-    @include breakpoint(beta-and-up) {
-        @if map-get($navBar, nav-position) == left {
-            float: left;
-        } @else {
-            float: right;
+        margin-left: map-get($container, margin-left);
+        margin-right: map-get($container, margin-right);
+
+        @include rem(max-width, map-get($container, max-width));
+        @include rem(min-width, map-get($container, min-width));
+
+        @include breakpoint(beta) {
+            @include rem(padding-left, map-get($container, padding)*2);
+            @include rem(padding-right, map-get($container, padding)*2);
         }
 
-        @include rem(margin-left, map-get($navBar, nav-margin-left));
-    }
-}
-
-.nav-bar__trigger {
-    @extend %font-icons;
-
-    display: inline-block;
-    background: map-get($navBar, bg-color);
-    float: right;
-    text-align: center;
-    line-height: map-get($navBar, trigger-height);
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    @include rem(height, map-get($navBar, trigger-height));
-    @include rem(width, map-get($navBar, trigger-height));
-
-    @include breakpoint(beta-and-up) {
-        display: none;
+        @include breakpoint(gamma-and-up) {
+            @include rem(padding-left, map-get($container, padding)*4);
+            @include rem(padding-right, map-get($container, padding)*4);
+        }
     }
 
-    &:active,
-    &:hover {
-        background: lighten(map-get($navBar, trigger-bg-color), 10%);
+    &__nav {
+        @extend .clearfix;
+
+        @include breakpoint(beta-and-up) {
+            @if map-get($navBar, nav-position) == left {
+                float: left;
+            } @else {
+                float: right;
+            }
+
+            @include rem(margin-left, map-get($navBar, nav-margin-left));
+        }
     }
 
-    &:before {
-        content: map-get($icon, nav-bar-trigger);
-        color: map-get($color, white);
+    &__trigger {
+        @extend %font-icons;
 
-        @include rem(font-size, map-get($navBar, trigger-font-size));
+        display: inline-block;
+        background: map-get($navBar, bg-color);
+        float: right;
+        text-align: center;
+        line-height: map-get($navBar, trigger-height);
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        @include rem(height, map-get($navBar, trigger-height));
+        @include rem(width, map-get($navBar, trigger-height));
+
+        @include breakpoint(beta-and-up) {
+            display: none;
+        }
+
+        &:active,
+        &:hover {
+            background: lighten(map-get($navBar, trigger-bg-color), 10%);
+        }
+
+        &:before {
+            content: map-get($icon, nav-bar-trigger);
+            color: map-get($color, white);
+
+            @include rem(font-size, map-get($navBar, trigger-font-size));
+
+            .nav-bar--mobile-show & {
+                content: map-get($icon, nav-bar-trigger-close);
+            }
+        }
+    }
+
+    &__list {
+        @extend .list-inline;
+
+        clear: both;
+        border-top: 1px solid lighten(map-get($navBar, bg-color), 10%);
+        max-height: 0;
+        overflow: hidden;
+        transition: all map-get($base, transition-speed);
+
+        @include breakpoint(beta-and-up) {
+            overflow: inherit;
+            max-height: inherit;
+            float: right;
+            border-top: 0;
+            border-left: 1px solid lighten(map-get($navBar, bg-color), 10%);
+        }
 
         .nav-bar--mobile-show & {
-            content: map-get($icon, nav-bar-trigger-close);
+            @include rem(max-height, 800px);
+        }
+
+        li {
+            display: block;
+            margin: 0;
+
+            @include breakpoint(beta-and-up) {
+                display: inline-block;
+                margin-right: -4px;
+            }
         }
     }
-}
 
-.nav-bar__list {
-    @extend .list-inline;
-
-    clear: both;
-    border-top: 1px solid lighten(map-get($navBar, bg-color), 10%);
-    max-height: 0;
-    overflow: hidden;
-    transition: all map-get($base, transition-speed);
-
-    @include breakpoint(beta-and-up) {
-        overflow: inherit;
-        max-height: inherit;
-        float: right;
-        border-top: 0;
-        border-left: 1px solid lighten(map-get($navBar, bg-color), 10%);
+    &__item {
+        border-right: 1px solid lighten(map-get($navBar, bg-color), 10%);
     }
 
-    .nav-bar--mobile-show & {
-        @include rem(max-height, 800px);
-    }
-
-    li {
+    &__link {
         display: block;
-        margin: 0;
+        color: map-get($navBar, link-color);
+        text-align: map-get($navBar, link-text-align);
+
+        @include rem(padding, map-get($navBar, link-padding));
 
         @include breakpoint(beta-and-up) {
             display: inline-block;
-            margin-right: -4px;
         }
-    }
-}
 
-.nav-bar__item {
-    border-right: 1px solid lighten(map-get($navBar, bg-color), 10%);
-}
+        &:hover {
+            background: lighten(map-get($navBar, bg-color), 10%);
+            color: map-get($navBar, link-color);
+        }
 
-.nav-bar__link {
-    display: block;
-    color: map-get($navBar, link-color);
-    text-align: map-get($navBar, link-text-align);
-
-    @include rem(padding, map-get($navBar, link-padding));
-
-    @include breakpoint(beta-and-up) {
-        display: inline-block;
-    }
-
-    &:hover {
-        background: lighten(map-get($navBar, bg-color), 10%);
-        color: map-get($navBar, link-color);
-    }
-
-    &.nav-bar__link--active {
-        background: map-get($color, beta);
-        color: map-get($navBar, link-color);
+        &.nav-bar__link--active {
+            background: map-get($color, beta);
+            color: map-get($navBar, link-color);
+        }
     }
 }

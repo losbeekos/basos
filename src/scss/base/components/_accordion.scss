@@ -5,75 +5,75 @@
 .accordion {
     border-radius: map-get($accordion, border-radius);
     overflow: hidden;
-}
 
-.accordion__group {
-    overflow: hidden;
-    margin-bottom: map-get($accordion, group-margin-bottom);
-}
-
-.accordion__trigger {
-    display: block;
-    position: relative;
-    background-color: map-get($accordion, trigger-bg-color);
-    color: map-get($accordion, trigger-color);
-    padding: map-get($accordion, padding);
-    border-bottom: 1px solid lighten(map-get($accordion, trigger-bg-color), 3%);
-
-    @if map-get($accordion, gradient) {
-        background-image: map-get($accordion, trigger-gradient-bg);
+    &__group {
+        overflow: hidden;
+        margin-bottom: map-get($accordion, group-margin-bottom);
     }
 
-    &:hover {
-        background-color: darken(map-get($accordion, trigger-bg-color), map-get($accordion, trigger-hover-darken));
-        color: darken(map-get($accordion, trigger-color), map-get($accordion, trigger-hover-darken));
-    }
+    &__trigger {
+        display: block;
+        position: relative;
+        background-color: map-get($accordion, trigger-bg-color);
+        color: map-get($accordion, trigger-color);
+        padding: map-get($accordion, padding);
+        border-bottom: 1px solid lighten(map-get($accordion, trigger-bg-color), 3%);
 
-    .accordion-content-show & {
-        background-color: map-get($accordion, trigger-bg-color-show);
-        color: map-get($accordion, trigger-color-show);
-    }
+        @if map-get($accordion, gradient) {
+            background-image: map-get($accordion, trigger-gradient-bg);
+        }
 
-    &:after {
-        @extend %font-icons;
-
-        content: map-get($accordion, trigger-icon-content);
-        position: absolute;
-        top: 50%;
-        color: map-get($accordion, trigger-icon-color);
-        transform: translate(0, -50%);
-
-        @include rem(right, map-get($accordion, trigger-icon-right));
-
-        .no-csstransforms & {
-            margin-top: -10px;
+        &:hover {
+            background-color: darken(map-get($accordion, trigger-bg-color), map-get($accordion, trigger-hover-darken));
+            color: darken(map-get($accordion, trigger-color), map-get($accordion, trigger-hover-darken));
         }
 
         .accordion-content-show & {
-            content: map-get($accordion, trigger-icon-content-after);
-            color: map-get($accordion, trigger-icon-color-show);
+            background-color: map-get($accordion, trigger-bg-color-show);
+            color: map-get($accordion, trigger-color-show);
+        }
+
+        &:after {
+            @extend %font-icons;
+
+            content: map-get($accordion, trigger-icon-content);
+            position: absolute;
+            top: 50%;
+            color: map-get($accordion, trigger-icon-color);
+            transform: translate(0, -50%);
+
+            @include rem(right, map-get($accordion, trigger-icon-right));
+
+            .no-csstransforms & {
+                margin-top: -10px;
+            }
+
+            .accordion-content-show & {
+                content: map-get($accordion, trigger-icon-content-after);
+                color: map-get($accordion, trigger-icon-color-show);
+            }
         }
     }
-}
 
-.accordion__content {
-    overflow: hidden;
-    padding: map-get($accordion, content-padding);
-    transition: all, map-get($accordion, transition-speed);
+    &__content {
+        overflow: hidden;
+        padding: map-get($accordion, content-padding);
+        transition: all, map-get($accordion, transition-speed);
 
-    .lt-ie9 & {
-        height: 0;
-    }
+        .lt-ie9 & {
+            height: 0;
+        }
 
-    > *:first-child {
-        margin-top: map-get($accordion, content-margin-top-first);
-    }
+        > *:first-child {
+            margin-top: map-get($accordion, content-margin-top-first);
+        }
 
-    .accordion-content-show & {
-    }
+        .accordion-content-show & {
+        }
 
-    .accordion-content-show.lt-ie9 & {
-        height: auto;
-        max-height: 1000px !important;
+        .accordion-content-show.lt-ie9 & {
+            height: auto;
+            max-height: 1000px !important;
+        }
     }
 }

@@ -9,38 +9,38 @@
     text-align: center;
     border-radius:map-get($base, border-radius);
     overflow: hidden;
-}
 
-.pricing-table__header {
-    background: map-get($pricing-table, header-bg-color);
-    color: map-get($color, white);
+    &__header {
+        background: map-get($pricing-table, header-bg-color);
+        color: map-get($color, white);
 
-    @include rem(padding, map-get($pricing-table, header-padding));
-}
-
-.pricing-table__content {
-    @include rem(padding, map-get($pricing-table, header-padding));
-
-    + .pricing-table__content {
-        border-top: 1px solid map-get($pricing-table, border-color);
+        @include rem(padding, map-get($pricing-table, header-padding));
     }
-}
 
-.pricing-table__content--alpha {
-    background: map-get($color, alpha);
-}
+    &__content {
+        @include rem(padding, map-get($pricing-table, header-padding));
 
-.pricing-table__price {
-    @include rem(font-size, map-get($pricing-table, price-font-size));
-}
+        &--alpha {
+            background: map-get($color, alpha);
+        }
 
-.pricing-table__description {
-    color: #999999;
+        + .pricing-table__content {
+            border-top: 1px solid map-get($pricing-table, border-color);
+        }
+    }
 
-    @include rem(font-size, map-get($pricing-table, description-font-size));
-}
+    &__price {
+        @include rem(font-size, map-get($pricing-table, price-font-size));
+    }
 
-.price-table__content--action {
-    @include rem(padding-top, map-get($pricing-table, action-padding-top));
-    @include rem(padding-bottom, map-get($pricing-table, action-padding-bottom));
+    &__description {
+        color: #999999;
+
+        @include rem(font-size, map-get($pricing-table, description-font-size));
+    }
+
+    &__content--action {
+        @include rem(padding-top, map-get($pricing-table, action-padding-top));
+        @include rem(padding-bottom, map-get($pricing-table, action-padding-bottom));
+    }
 }
