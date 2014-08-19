@@ -5,12 +5,21 @@
 .nav-bar {
     @extend .clearfix;
 
-    position: relative;
     background: map-get($navBar, bg-color);
     width: 100%;
     z-index: 999;
     transition: all map-get($base, transition-speed);
     text-align: center;
+
+    .csssticky & {
+        position: sticky;
+        top: 0;
+        left: 0;
+    }
+
+    .no-csssticky & {
+        position: relative;
+    }
 
     @include breakpoint(beta-and-up) {
         max-height: inherit;
@@ -47,9 +56,11 @@
     }
 
     &--fixed {
-        position: fixed;
-        top: 0;
-        left: 0;
+        .no-csssticky & {
+            position: fixed;
+            top: 0;
+            left: 0;
+        }
     }
 
     &__container {

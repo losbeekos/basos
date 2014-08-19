@@ -25,12 +25,14 @@ app.navBar = {
     },
 
     addClasses: function () {
-        if (app.navBar.settings.$el.hasClass(app.navBar.settings.fixedClass)) {
-            app.settings.$container.css({'margin-top': app.navBar.settings.navBarHeight});
-        }
+        if (app.settings.$html.hasClass('no-csssticky')) {
+            if (app.navBar.settings.$el.hasClass(app.navBar.settings.fixedClass)) {
+                app.settings.$container.css({'margin-top': app.navBar.settings.navBarHeight});
+            }
 
-        if (app.settings.$window.scrollTop() >= (app.navBar.settings.navBarOffsetTop+1)) {
-            app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
+            if (app.settings.$window.scrollTop() >= (app.navBar.settings.navBarOffsetTop+1)) {
+                app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
+            }
         }
 
         if (app.navBar.settings.allwaysShowOnMobile) {
@@ -38,31 +40,33 @@ app.navBar = {
         }
     },
 
-    scroller: function () {
-        app.settings.$window.on('scroll', function () {
-            var $window = $(this),
-                scrollTop = $window.scrollTop();
+    scroller: function (_scrollTop) {
+        if (_scrollTop >= app.navBar.settings.navBarOffsetTop) {
+            app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
 
-            if (scrollTop >= app.navBar.settings.navBarOffsetTop) {
-                app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
+            if (app.settings.$html.hasClass('no-csssticky')) {
                 app.settings.$container.css({'margin-top': app.navBar.settings.navBarHeight});
-
-                if (app.navBar.settings.hideOnScroll && scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
-                    app.navBar.settings.$el.addClass('nav-bar--transform');
-                }
-            } else {
-                app.navBar.settings.$el.removeClass(app.navBar.settings.fixedClass);
-                app.settings.$container.css({'margin-top': 0});
-
-                if (app.navBar.settings.hideOnScroll) {
-                    app.navBar.settings.$el.removeClass('nav-bar--transform');
-                }
             }
 
-            scrollTop > app.navBar.settings.lastWindowScrollTop ? app.navBar.settings.$el.removeClass(app.navBar.settings.showClass) : app.navBar.settings.$el.addClass(app.navBar.settings.showClass);
+            if (app.navBar.settings.hideOnScroll && _scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
+                app.navBar.settings.$el.addClass('nav-bar--transform');
+            }
+        } else {
+            app.navBar.settings.$el.removeClass(app.navBar.settings.fixedClass);
 
-            app.navBar.settings.lastWindowScrollTop = scrollTop;
-        });
+            if (app.settings.$html.hasClass('no-csssticky')) {
+                app.settings.$container.css({'margin-top': 0});
+            }
+
+            if (app.navBar.settings.hideOnScroll) {
+                app.navBar.settings.$el.removeClass('nav-bar--transform');
+            }
+        }
+
+        _scrollTop > app.navBar.settings.lastWindowScrollTop ? app.navBar.settings.$el.removeClass(app.navBar.settings.showClass) : app.navBar.settings.$el.addClass(app.navBar.settings.showClass);
+
+        app.navBar.settings.lastWindowScrollTop = _scrollTop;
+
     },
 
     trigger: function () {

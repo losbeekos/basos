@@ -27,6 +27,7 @@ app.settings.$window.on('resize scroll', function () {
 
     app.scrollSpy.init();
     app.parallax.init(scrollTop);
+    app.navBar.scroller(scrollTop);
 });
 
 app.settings.$window.on('resize', function () {

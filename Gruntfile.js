@@ -53,6 +53,7 @@ module.exports = function(grunt) {
 
             app: {
                 src: [
+                    '<%= basos.src %>/js/tests/*.js',
                     '<%= basos.src %>/js/_settings.js',
                     '<%= basos.src %>/js/helpers/*.js',
                     '<%= basos.src %>/js/modules/*.js',
@@ -68,6 +69,7 @@ module.exports = function(grunt) {
                 '<%= basos.src %>/js/*.js',
                 '<%= basos.src %>/js/helpers/*.js',
                 '<%= basos.src %>/js/modules/*.js',
+                '<%= basos.src %>/js/tests/*.js',
                 '!<%= basos.src %>/js/app.js'
             ],
 
