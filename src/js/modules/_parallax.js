@@ -6,7 +6,7 @@ app.parallax = {
     init: function (_scrollTop) {
         var self = this;
 
-        if (app.parallax.settings.$el.length > 0) {
+        if (app.parallax.settings.$el.length > 0 && app.settings.$html.hasClass('no-touch')) {
             app.parallax.settings.$el.each(function () {
                 var $parallax = $(this),
                     parallaxOffset = $parallax.offset(),
