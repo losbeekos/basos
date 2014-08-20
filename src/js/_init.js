@@ -4,8 +4,8 @@ app.settings.$document.ready(function () {
     app.equalize.init();
     app.fastClick.init();
     app.fitVids.init();
-    app.navBar.init();
-    app.formValidation.init();
+    app.navBar.init(scrollTop);
+    app.formModules.init();
     app.jump.init();
     app.modals.init();
     app.tooltips.init();

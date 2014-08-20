@@ -13,13 +13,13 @@ app.navBar = {
         allwaysShowOnMobileClass: 'nav-bar--always-show-on-mobile'
     },
 
-    init: function(){
+    init: function(_scrollTop){
         if (app.navBar.settings.$el.length > 0) {
             app.navBar.settings.navBarOffsetTop = app.navBar.settings.$el.offset().top,
             app.navBar.settings.navBarHeight = app.navBar.settings.$el.height();
 
             app.navBar.addClasses();
-            app.navBar.scroller();
+            app.navBar.scroller(_scrollTop);
             app.navBar.trigger();
         }
     },

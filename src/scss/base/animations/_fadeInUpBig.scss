@@ -1,18 +1,12 @@
 @keyframes fadeInUpBig {
     0% {
+        opacity: 0;
         transform: translate3d(0, 2000px, 0);
-
-        @include breakpoint(beta-and-up) {
-                opacity: 0;
-        }
     }
 
     100% {
+        opacity: 1;
         transform: none;
-
-        @include breakpoint(beta-and-up) {
-                opacity: 1;
-        }
     }
 }
 

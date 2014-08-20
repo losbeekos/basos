@@ -1,12 +1,30 @@
-app.formValidation = {
+app.formModules = {
     settings: {
-        $el: $('[data-form-validate]'),
-        language: 'nl'
+        $passwordToggle: $('.form__password-toggle'),
+        passwordShowClass: 'form__input--show-password',
+        $validation: $('[data-form-validate]'),
+        validationLanguage: 'nl'
     },
 
-    init: function(){
-        var self = this,
-            parsleyOptions = {
+    init: function () {
+        app.formModules.validation();
+        app.formModules.password();
+    },
+
+    password: function () {
+        app.formModules.settings.$passwordToggle.on('click', function () {
+            var $this = $(this),
+                $formPassword = $this.closest('.form__input'),
+                $formInput = $formPassword.find('input'),
+                formType = $formInput.attr('type');
+
+            $formInput.attr('type', formType === 'text' ? 'password': 'text');
+            $formPassword.toggleClass(app.formModules.settings.passwordShowClass);
+        });
+    },
+
+    validation: function(){
+        var parsleyOptions = {
                 errorClass: 'form__input--error',
                 successClass: 'form__input--success',
                 errorsWrapper: '<div class="parsley-container"></div>',
@@ -34,15 +52,15 @@ app.formValidation = {
                 }
             };
 
-        if(app.formValidation.settings.$el.length > 0){
-            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.formValidation.settings.language + '.js' + app.settings.version, function () {
+        if(app.formModules.settings.$validation.length > 0){
+            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.formModules.settings.validationLanguage + '.js' + app.settings.version, function () {
                 yepnope.injectJs(app.pathBower + 'parsleyjs/dist/parsley.js' + app.settings.version,
                     function(){
-                        app.formValidation.settings.$el.each(function () {
+                        app.formModules.settings.$validation.each(function () {
                             $(this).parsley(parsleyOptions);
                         });
 
-                        window.ParsleyValidator.setLocale(app.formValidation.settings.language);
+                        window.ParsleyValidator.setLocale(app.formModules.settings.validationLanguage);
                     });
             });
         }

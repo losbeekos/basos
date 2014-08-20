@@ -311,6 +311,27 @@
                                     </div>
                                     <div class="form__row">
                                         <div class="column-5 form__label">
+                                            <label>Password *</label>
+                                        </div>
+                                        <div class="column-7">
+                                            <div class="column-6 form__input">
+                                                <input type="password" placeholder="password" />
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="column-5 form__label">
+                                            <label>Password toggle *</label>
+                                        </div>
+                                        <div class="column-7">
+                                            <div class="column-6 form__input">
+                                                <input type="password" placeholder="password" />
+                                                <a class="form__password-toggle"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form__row">
+                                        <div class="column-5 form__label">
                                             <label>Some checkboxes</label>
                                         </div>
                                         <div class="column-7">
