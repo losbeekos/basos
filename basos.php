@@ -27,33 +27,33 @@
                         <div class="container">
                             <h1>Grid</h1>
                             <div class="grid">
-                                <div class="column-12" style="background: rgba(0,0,0,0.03); padding: 10px;">column-12</div>
+                                <div class="column-12 block">column-12</div>
                             </div>
                             <div class="grid">
-                                <div class="column-6" style="background: rgba(0,0,0,0.03); padding: 10px;">column-6</div>
-                                <div class="column-6" style="background: rgba(0,0,0,0.03); padding: 10px;">column-6</div>
+                                <div class="column-6 block">column-6</div>
+                                <div class="column-6 block">column-6</div>
                             </div>
                             <div class="grid">
-                                <div class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">column-4</div>
-                                <div class="column-8" style="background: rgba(0,0,0,0.03); padding: 10px;">column-8</div>
+                                <div class="column-4 block">column-4</div>
+                                <div class="column-8 block">column-8</div>
                             </div>
                             <div class="grid">
-                                <div class="column-2" style="background: rgba(0,0,0,0.03); padding: 10px;">column-2</div>
-                                <div class="column-10" style="background: rgba(0,0,0,0.03); padding: 10px;">column-10</div>
+                                <div class="column-2 block">column-2</div>
+                                <div class="column-10 block">column-10</div>
                             </div>
                             <div class="grid">
-                                <div class="column-7" style="background: rgba(0,0,0,0.03); padding: 10px;">column-7</div>
-                                <div class="column-5" style="background: rgba(0,0,0,0.03); padding: 10px;">column-5</div>
+                                <div class="column-7 block">column-7</div>
+                                <div class="column-5 block">column-5</div>
                             </div>
                             <div class="grid">
-                                <div class="column-9" style="background: rgba(0,0,0,0.03); padding: 10px;">column-9</div>
-                                <div class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">column-3</div>
+                                <div class="column-9 block">column-9</div>
+                                <div class="column-3 block">column-3</div>
                             </div>
                             <div class="grid">
-                                <div class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">column-3</div>
-                                <div class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">column-3</div>
-                                <div class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">column-3</div>
-                                <div class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">column-3</div>
+                                <div class="column-3 block">column-3</div>
+                                <div class="column-3 block">column-3</div>
+                                <div class="column-3 block">column-3</div>
+                                <div class="column-3 block">column-3</div>
                             </div>
                         </div>
                     </section>
@@ -62,9 +62,9 @@
                         <div class="container">
                             <h1>Equalize</h1>
                             <div class="grid" data-equalize>
-                                <div data-equalize-target class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
-                                <div data-equalize-target class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">column-4</div>
-                                <div data-equalize-target class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">column-4</div>
+                                <div data-equalize-target class="column-4 block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
+                                <div data-equalize-target class="column-4 block">column-4</div>
+                                <div data-equalize-target class="column-4 block">column-4</div>
                             </div>
                         </div>
                     </section>
@@ -1397,34 +1397,34 @@
                         <div class="container">
                             <h1>Scrollspy</h1>
                             <div class="grid">
-                                <div data-scrollspy data-scrollspy-repeat data-scrollspy-class="animation-bounceIn" class="column-12" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-scrollspy data-scrollspy-repeat data-scrollspy-class="animation-bounceIn" class="column-12 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                             </div>
                             <div class="grid" data-equalize>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-6" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-6" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                             </div>
                             <div class="grid" data-equalize>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="200" class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="400" class="column-4" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                             </div>
                             <div class="grid" data-equalize>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-2" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there.</div>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-10" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-2 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-10 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                             </div>
                             <div class="grid" data-equalize>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" class="column-7" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" data-scrollspy-delay="200" class="column-5" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" class="column-7 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" data-scrollspy-delay="200" class="column-5 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                             </div>
                             <div class="grid" data-equalize>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-9" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" data-scrollspy-delay="200" class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-9 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" data-scrollspy-delay="200" class="column-3 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                             </div>
                             <div class="grid" data-equalize>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="100" class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="300" class="column-3" style="background: rgba(0,0,0,0.03); padding: 10px;">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" class="column-3 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="100" class="column-3 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-3 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                                <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="300" class="column-3 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
                             </div>
                         </div>
                     </section>

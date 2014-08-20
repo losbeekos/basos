@@ -1,0 +1,17 @@
+/*=============================
+=            Block            =
+=============================*/
+
+.block {
+    background: lighten(map-get($color, alpha), 2%);
+
+    @include rem(padding, 10px);
+
+    @include breakpoint(beta) {
+        @include rem(padding, 20px);
+    }
+
+    @include breakpoint(gamma-and-up) {
+        @include rem(padding, 30px);
+    }
+}
