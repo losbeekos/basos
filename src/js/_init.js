@@ -14,6 +14,7 @@ app.settings.$document.ready(function () {
     app.notifications.init();
     app.offCanvas.init();
     app.scrollSpy.init();
+    app.toggle.init();
     app.parallax.init(scrollTop);
 
     //app.cycle.init();

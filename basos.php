@@ -1323,6 +1323,34 @@
                         </div>
                     </section>
 
+                    <section id="jumpto" class="section section--alpha">
+                        <div class="container">
+                            <h1>Toggle</h1>
+                            <h2>With animation</h2>
+                            <div class="grid">
+                                <div class="column-12">
+                                    <button class="btn btn--alpha btn--small" data-toggle="#toggle-target">toggle</button>
+                                </div>
+                            </div>
+                            <div id="toggle-target" class="toggle toggle--hide">
+                                <div class="notification notification--beta notification--error">
+                                    <div class="notification__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nemo nisi, pariatur doloremque itaque exercitationem odio libero odit dolores voluptate voluptas nulla voluptates nam nobis illo veritatis aperiam cupiditate dolor.</div>
+                                </div>
+                            </div>
+                            <h2>Without animation</h2>
+                            <div class="grid">
+                                <div class="column-12">
+                                    <button class="btn btn--alpha btn--small" data-toggle="#toggle-target-2">toggle</button>
+                                </div>
+                            </div>
+                            <div id="toggle-target-2" class="toggle toggle--no-animation toggle--hide">
+                                <div class="notification notification--beta notification--error">
+                                    <div class="notification__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nemo nisi, pariatur doloremque itaque exercitationem odio libero odit dolores voluptate voluptas nulla voluptates nam nobis illo veritatis aperiam cupiditate dolor.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
                     <section id="progress" class="section section--alpha">
                         <div class="container">
                             <h1>Progress</h1>

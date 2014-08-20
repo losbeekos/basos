@@ -1,0 +1,19 @@
+/*==============================
+=            Toggle            =
+==============================*/
+
+.toggle {
+    overflow: hidden;
+    transition: all map-get($base, transition-speed);
+
+    @include rem(max-height, 500px);
+
+    &--no-animation {
+        transition: none;
+    }
+
+    &--hide {
+        max-height: 0;
+    }
+}
+
