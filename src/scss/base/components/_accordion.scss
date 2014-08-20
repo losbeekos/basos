@@ -71,9 +71,11 @@
         .accordion-content-show & {
         }
 
-        .accordion-content-show.lt-ie9 & {
-            height: auto;
-            max-height: 1000px !important;
+        .accordion-content-show & {
+                .lt-ie9 & {
+                height: auto;
+                max-height: 1000px !important;
+            }
         }
     }
 }

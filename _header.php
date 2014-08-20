@@ -46,7 +46,7 @@
         <script src="dist/js/vendor/modernizr/modernizr.js"></script>
 
         <!--[if lt IE 9]>
-            <script src="bower_components/respond/respond.min.js"></script>
+            <script src="bower_components/respond/dest/respond.min.js"></script>
             <script src="bower_components/selectivizr/selectivizr.js"></script>
         <![endif]-->
     </head>

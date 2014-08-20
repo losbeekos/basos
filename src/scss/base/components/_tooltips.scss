@@ -20,8 +20,23 @@
     }
 
     &.tooltip--active {
-        .tooltip__content{
-            transform: translate(0, 0);
+        &[data-tooltip-position=top],
+        &[data-tooltip-position=bottom] {
+            .tooltip__content{
+                transform: translate(-50%, 0);
+            }
+        }
+
+        &[data-tooltip-position=right] {
+            .tooltip__content{
+                transform: translate(100%, 0);
+            }
+        }
+
+        &[data-tooltip-position=left] {
+            .tooltip__content{
+                transform: translate(-100%, 0);
+            }
         }
 
         .tooltip__content {
@@ -34,7 +49,8 @@
         text-align: center;
         background: map-get($tooltip, bg-color);
         color: map-get($tooltip, color);
-        width: map-get($tooltip, width);
+        min-width: map-get($tooltip, min-width);
+        max-width: map-get($tooltip, width);
         padding: map-get($tooltip, padding);
         border-radius: map-get($tooltip, border-radius);
 
@@ -45,6 +61,10 @@
             content: '';
             border: map-get($tooltip, arrow-width) solid transparent;
         }
+
+        .no-csstransforms & {
+            width: map-get($tooltip, max-width);
+        }
     }
 }
 
@@ -52,18 +72,22 @@
 [data-tooltip-position=bottom] {
     .tooltip__content {
         left: 50%;
-        margin-left: -#{map-get($tooltip, width)/2};
+        transform: translate(-50%, 0);
 
         &:after {
             left: 50%;
             margin-left: -#{map-get($tooltip, arrow-width)};
+        }
+
+        .no-csstransforms & {
+            margin-left: -#{map-get($tooltip, max-width)/2};
         }
     }
 }
 
 [data-tooltip-position=top] {
     .tooltip__content {
-        transform: translate(0, 10%);
+        transform: translate(-50%, 10%);
 
         &:after {
             border-top-color: map-get($tooltip, bg-color);
@@ -74,7 +98,7 @@
 
 [data-tooltip-position=bottom] {
     .tooltip__content {
-        transform: translate(0, -10%);
+        transform: translate(-50%, -10%);
 
         &:after {
             border-bottom-color: map-get($tooltip, bg-color);
@@ -97,24 +121,32 @@
 
 [data-tooltip-position=right] {
     .tooltip__content {
-        right: -(map-get($tooltip, width)+map-get($tooltip, arrow-width)*2);
-        transform: translate(-10%, 0);
+        right: -(map-get($tooltip, arrow-width)*2);
+        transform: translate(90%, 0);
 
         &:after {
             border-right-color: map-get($tooltip, bg-color);
             left: -#{map-get($tooltip, arrow-width)*2};
+        }
+
+        .no-csstransforms & {
+            right: -(map-get($tooltip, max-width)+map-get($tooltip, arrow-width)*2);
         }
     }
 }
 
 [data-tooltip-position=left] {
     .tooltip__content {
-        left: -(map-get($tooltip, width)+map-get($tooltip, arrow-width)*2);
-        transform: translate(10%, 0);
+        left: -(map-get($tooltip, arrow-width)*2);
+        transform: translate(-90%, 0);
 
         &:after {
             border-left-color: map-get($tooltip, bg-color);
             right: -#{map-get($tooltip, arrow-width)*2};
+        }
+
+        .no-csstransforms & {
+            left: -(map-get($tooltip, max-width)+map-get($tooltip, arrow-width)*2);
         }
     }
 }

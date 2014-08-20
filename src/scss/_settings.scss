@@ -118,26 +118,28 @@ $btn-bg: (
 /*==========  Icons  ==========*/
 
 $icon: (
-    notification-info       : '\e802',
-    notification-success    : '\e800',
-    notification-error      : '\e801',
-    notification-close      : '\e808',
+    notification-info         : '\e802',
+    notification-success      : '\e800',
+    notification-error        : '\e801',
+    notification-close        : '\e808',
 
-    form-validation-success : '\e800',
-    form-validation-error   : '\e801',
-    form-checkbox           : '\e803',
-    form-select             : '\e807',
+    form-validation-success   : '\e800',
+    form-validation-error     : '\e801',
+    form-checkbox             : '\e803',
+    form-select               : '\e807',
+    form-password-toggle      : '\e80e',
+    form-password-toggle-show : '\e80f',
 
-    nav-bar-trigger         : '\e80d',
-    nav-bar-trigger-close   : '\e808',
+    nav-bar-trigger           : '\e80d',
+    nav-bar-trigger-close     : '\e808',
 
-    off-canvas-toggle-left  : '\e80d',
-    off-canvas-toggle-right : '\e80d',
-    off-canvas-toggle-close : '\e808',
+    off-canvas-toggle-left    : '\e80d',
+    off-canvas-toggle-right   : '\e80d',
+    off-canvas-toggle-close   : '\e808',
 
-    spinner-alpha           : '\e809',
-    spinner-beta            : '\e80a',
-    spinner-gamma           : '\e80b'
+    spinner-alpha             : '\e809',
+    spinner-beta              : '\e80a',
+    spinner-gamma             : '\e80b'
 );
 
 
@@ -286,7 +288,8 @@ $table: (
 /*==========  Tooltip  ==========*/
 
 $tooltip: (
-    width            : 220px,
+    min-width        : 150px,
+    max-width        : 220px,
     arrow-width      : 5px,
     transition-speed : map-get($base, transition-speed),
     bg-color         : map-get($color, beta),

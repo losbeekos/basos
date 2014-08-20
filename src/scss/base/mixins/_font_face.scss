@@ -3,9 +3,8 @@
         font-family: quote($name);
         src: url('../#{$directory}/#{$name}.eot');
         src: url('../#{$directory}/#{$name}.eot#iefix') format('embedded-opentype'),
-             url('../#{$directory}/#{$name}.svg') format('svg'),
+             url('../#{$directory}/#{$name}.svg#icons') format('svg'),
              url('../#{$directory}/#{$name}.woff') format('woff'),
-             url('../#{$directory}/#{$name}.ttf') format('truetype')
+             url('../#{$directory}/#{$name}.ttf') format('truetype');
     }
 }
-

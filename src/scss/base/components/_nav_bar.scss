@@ -147,7 +147,7 @@
             max-height: inherit;
             float: right;
             border-top: 0;
-            border-left: 1px solid lighten(map-get($navBar, bg-color), 10%);
+            //border-left: 1px solid lighten(map-get($navBar, bg-color), 10%);
         }
 
         .nav-bar--mobile-show & {
@@ -166,7 +166,7 @@
     }
 
     &__item {
-        border-right: 1px solid lighten(map-get($navBar, bg-color), 10%);
+        //border-right: 1px solid lighten(map-get($navBar, bg-color), 10%);
     }
 
     &__link {

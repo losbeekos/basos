@@ -24,15 +24,6 @@
         }
     }
 
-    p {
-        @include rem(margin-bottom, map-get($section, paragraph-margin-bottom));
-    }
-
-    ul:not(.form__input-list),
-    ol {
-        @include rem(margin-bottom, map-get($section, list-margin-bottom));
-    }
-
     > .container > *:last-child {
         margin-bottom: 0;
     }
@@ -55,4 +46,12 @@
     @include breakpoint(gamma-and-up) {
         @include rem(height, 500px);
     }
+}
+
+.section__list {
+    @include rem(margin-bottom, map-get($section, list-margin-bottom));
+}
+
+.section__paragraph {
+    @include rem(margin-bottom, map-get($section, paragraph-margin-bottom));
 }

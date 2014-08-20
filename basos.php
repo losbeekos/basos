@@ -3,18 +3,18 @@
                     <div class="section section--alpha">
                         <div class="container">
                             <h1>Section alpha</h1>
-                            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto architecto alias aperiam sapiente quisquam, voluptas dolores at ratione a labore eligendi nisi autem distinctio delectus fuga id odit, aspernatur tempore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto architecto alias aperiam sapiente quisquam, voluptas dolores at ratione a labore eligendi nisi autem distinctio delectus fuga id odit, aspernatur tempore.</p>
+                            <p class="section__paragraph">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                            <p class="section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto architecto alias aperiam sapiente quisquam, voluptas dolores at ratione a labore eligendi nisi autem distinctio delectus fuga id odit, aspernatur tempore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto architecto alias aperiam sapiente quisquam, voluptas dolores at ratione a labore eligendi nisi autem distinctio delectus fuga id odit, aspernatur tempore.</p>
                         </div>
                     </div>
 
                     <div class="section section--beta">
                         <div class="container">
                             <h1>Section beta</h1>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto architecto alias aperiam sapiente quisquam, voluptas dolores at ratione a labore eligendi nisi autem distinctio delectus fuga id odit, aspernatur tempore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto architecto alias aperiam sapiente quisquam, voluptas dolores at ratione a labore eligendi nisi autem distinctio delectus fuga id odit, aspernatur tempore.</p>
-                            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                            <p class="section__paragraph">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto architecto alias aperiam sapiente quisquam, voluptas dolores at ratione a labore eligendi nisi autem distinctio delectus fuga id odit, aspernatur tempore? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iusto architecto alias aperiam sapiente quisquam, voluptas dolores at ratione a labore eligendi nisi autem distinctio delectus fuga id odit, aspernatur tempore.</p>
+                            <p class="section__paragraph">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                             <h2 class="h3">More section flavours</h2>
-                            <ul>
+                            <ul class="section__list">
                                 <li>Gamma</li>
                                 <li>Delta</li>
                                 <li>Epsilon</li>
@@ -326,7 +326,7 @@
                                         <div class="column-7">
                                             <div class="column-6 form__input">
                                                 <input type="password" placeholder="password" />
-                                                <a class="form__password-toggle"></a>
+                                                <a class="form__password-toggle tooltip" data-tooltip-position="top" title="Show/hide password"></a>
                                             </div>
                                         </div>
                                     </div>
