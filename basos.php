@@ -1430,6 +1430,9 @@
                     </section>
 
                     <section id="spinners" class="section section--alpha">
+                        <div class="parallax">
+                            <img src="http://www.lorempixel.com/1280/800/business/2" class="parallax__img">
+                        </div>
                         <div class="container">
                             <h1>Parallax</h1>
                             <div class="grid">
