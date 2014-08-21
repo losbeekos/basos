@@ -3,15 +3,15 @@
 =============================*/
 
 .block {
-    background: lighten(map-get($color, alpha), 2%);
+    background: map-get($block, bg);
 
-    @include rem(padding, 10px);
+    @include rem(padding, map-get($block, padding-alpha));
 
     @include breakpoint(beta) {
-        @include rem(padding, 20px);
+        @include rem(padding, map-get($block, padding-beta));
     }
 
     @include breakpoint(gamma-and-up) {
-        @include rem(padding, 30px);
+        @include rem(padding, map-get($block, padding-gamma));
     }
 }

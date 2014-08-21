@@ -2,13 +2,13 @@
   "name": "basos",
   "version": "1.0.2",
   "dependencies": {
-    "respond": "latest",
-    "selectivizr": "latest",
+    "respond": "~1.4.2",
+    "selectivizr": "~1.0.2",
     "jquery": "~1.x",
-    "fastclick": "latest",
-    "fitvids": "latest",
-    "parsleyjs": "latest",
-    "jquery-placeholder": "latest"
+    "fastclick": "~1.0.3",
+    "fitvids": "~1.1",
+    "parsleyjs": "~2.0.3",
+    "jquery-placeholder": "~2.0.8"
   },
   "private": true
 }

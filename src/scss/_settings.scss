@@ -76,6 +76,16 @@ $susy: (
 );
 
 
+/*==========  Block  ==========*/
+
+$block: (
+    bg            : lighten(map-get($color, alpha), 2%),
+    padding-alpha : 10px,
+    padding-beta  : 20px,
+    padding-gamma : 30px
+);
+
+
 /*==========  Buttons  ==========*/
 
 $btn: (
