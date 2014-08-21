@@ -5,6 +5,7 @@ app.settings.$document.ready(function () {
     app.fastClick.init();
     app.fitVids.init();
     app.navBar.init(scrollTop);
+    app.dropdowns.init();
     app.formModules.init();
     app.jump.init();
     app.modals.init();

@@ -14,7 +14,7 @@ app.tooltips = {
             app.tooltips.settings.$el.each(function () {
                 var $tooltipTrigger = $(this);
 
-                if ($tooltipTrigger.data('tooltipTrigger') === 'click') {
+                if ($tooltipTrigger.data('tooltipTrigger') === 'click' || app.settings.$html.hasClass('touch')) {
                     app.tooltips.settings.tooltipTrigger = 'click';
                 } else {
                     app.tooltips.settings.tooltipTrigger = 'hover';

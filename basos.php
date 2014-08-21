@@ -1133,8 +1133,8 @@
                                     </div>
                                 </li>
                                 <li>
-                                    <div class="dropdown">
-                                        <a class="btn btn--alpha btn--small">dropdown</a>
+                                    <div class="dropdown" data-dropdown-trigger="click">
+                                        <a class="btn btn--alpha btn--small">click trigger</a>
                                         <div class="dropdown__content">
                                             <ul>
                                                 <li><a href="#">Why not indeed</a></li>

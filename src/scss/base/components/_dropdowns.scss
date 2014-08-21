@@ -5,7 +5,8 @@
 .dropdown {
     position: relative;
 
-    &:hover {
+    &:not([data-dropdown-trigger=click]):hover,
+    &.dropdown--show {
         .dropdown__content {
             visibility: visible;
             opacity: 1;
