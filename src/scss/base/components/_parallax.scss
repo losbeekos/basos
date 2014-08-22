@@ -5,6 +5,7 @@
 .parallax {
     position: relative;
     overflow: hidden;
+    display: none;
 
     @include breakpoint(beta) {
         @include rem(height, 350px);
@@ -23,9 +24,7 @@
 
         @include breakpoint(beta-and-up) {
             position: absolute;
-            top: -50%;
-
-            @include rem(max-width, 1280px);
+            top: 0;
         }
 
         @include breakpoint(gamma-and-up) {
