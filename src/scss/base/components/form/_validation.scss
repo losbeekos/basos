@@ -11,15 +11,6 @@
     animation-duration: 0.5s;
     animation-name: shake;
 
-    &.form__input {
-        &:after {
-            @extend %font-icons;
-
-            content: map-get($icon, form-validation-error);
-            color: map-get($notifications, bg-color-error);
-        }
-    }
-
     #{$input-selectors} {
         border-color: map-get($notifications, bg-color-error);
         box-shadow: none;
@@ -30,12 +21,6 @@
 
         &:focus {
             box-shadow: map-get($form, input-focus-box-shadow);
-        }
-    }
-
-    &.form__input--select-validated {
-        &:after {
-            display: none;
         }
     }
 
@@ -63,15 +48,6 @@
 }
 
 .form__input--success {
-    &.form__input {
-        &:after {
-            @extend %font-icons;
-
-            content: map-get($icon, form-validation-success);
-            color: map-get($notifications, bg-color-success);
-        }
-    }
-
     #{$input-selectors} {
         border-color: map-get($notifications, bg-color-success);
         box-shadow: none;
@@ -80,12 +56,6 @@
 
         &:focus {
             box-shadow: map-get($form, input-focus-box-shadow);
-        }
-    }
-
-    &.form__input--select-validated {
-        &:after {
-            display: none;
         }
     }
 
