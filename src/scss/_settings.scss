@@ -362,8 +362,9 @@ $accordion: (
 
 $breadcrumbs: (
     bg-color      : #f5f5f5,
+    margin        : 0 0 40px 0,
     padding       : 15px 20px,
-    margin        : 10px,
+    link-margin   : 10px,
     divider       : '/',
     divider-color : #cccccc,
     current-color : #aaaaaa

@@ -7,6 +7,7 @@
     border-radius: map-get($base, border-radius);
 
     @include rem(padding, map-get($breadcrumbs, padding));
+    @include rem(margin, map-get($breadcrumbs, margin));
 
     a,
     span {
@@ -14,13 +15,13 @@
     }
 
     a {
-        @include rem(margin-right, map-get($breadcrumbs, margin));
+        @include rem(margin-right, map-get($breadcrumbs, link-margin));
 
         &:after {
             content: map-get($breadcrumbs, divider);
             color: map-get($breadcrumbs, divider-color);
 
-            @include rem(margin-left, map-get($breadcrumbs, margin));
+            @include rem(margin-left, map-get($breadcrumbs, link-margin));
         }
     }
 

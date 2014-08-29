@@ -74,11 +74,6 @@
         @include rem(max-width, map-get($container, max-width));
         @include rem(min-width, map-get($container, min-width));
 
-        @include breakpoint(beta) {
-            @include rem(padding-left, map-get($container, padding)*2);
-            @include rem(padding-right, map-get($container, padding)*2);
-        }
-
         @include breakpoint(gamma-and-up) {
             @include rem(padding-left, map-get($container, padding)*4);
             @include rem(padding-right, map-get($container, padding)*4);

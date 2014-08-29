@@ -81,7 +81,7 @@
                 <div class="nav-bar__container">
                     <a class="logo" href="/"><img src="dist/img/logo.png" alt="" /></a>
                     <nav class="nav-bar__nav">
-                        <a id="nav-bar-trigger" class="nav-bar__trigger hide-beta-and-up"></a>
+                        <a id="nav-bar-trigger" class="nav-bar__trigger hide-gamma-and-up"></a>
                         <ul class="nav-bar__list">
                             <li class="nav-bar__item"><a class="nav-bar__link nav-bar__link--active" href="#">home</a></li>
                             <li class="nav-bar__item"><a class="nav-bar__link" href="#">nieuws</a></li>
