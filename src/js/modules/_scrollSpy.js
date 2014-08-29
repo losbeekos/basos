@@ -22,7 +22,7 @@ app.scrollSpy = {
                 var hasCombinedClasses = $this.hasClass(combinedClasses),
                     delay = (data.scrollspyDelay > 0) ? data.scrollspyDelay : 0;
 
-                inView && !hasCombinedClasses ? setTimeout(function () { $this.addClass(combinedClasses); }, delay) : '';
+                inView && !hasCombinedClasses || data.scrollspyKickoff !== undefined ? setTimeout(function () { $this.addClass(combinedClasses); }, delay) : '';
 
                 if (data.scrollspyRepeat !== undefined || app.scrollSpy.settings.repeat) {
                     outView && hasCombinedClasses ?  $this.removeClass(combinedClasses) : '';
