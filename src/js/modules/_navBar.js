@@ -5,7 +5,7 @@ app.navBar = {
         navBarOffsetTop: null,
         navBarHeight: null,
         lastWindowScrollTop: 0,
-        hideOnScroll: false,
+        hideOnScroll: true,
         fixedClass: 'nav-bar--fixed',
         showClass: 'nav-bar--show',
         mobileShowClass: 'nav-bar--mobile-show',
@@ -50,6 +50,7 @@ app.navBar = {
 
             if (app.navBar.settings.hideOnScroll && _scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
                 app.navBar.settings.$el.addClass('nav-bar--transform');
+                app.navBar.settings.$el.addClass(app.navBar.settings.showClass);
             }
         } else {
             app.navBar.settings.$el.removeClass(app.navBar.settings.fixedClass);
@@ -63,7 +64,21 @@ app.navBar = {
             }
         }
 
-        _scrollTop > app.navBar.settings.lastWindowScrollTop ? app.navBar.settings.$el.removeClass(app.navBar.settings.showClass) : app.navBar.settings.$el.addClass(app.navBar.settings.showClass);
+        if (_scrollTop > app.navBar.settings.lastWindowScrollTop) {
+            if (app.navBar.settings.hideOnScroll && _scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
+                app.navBar.settings.$el.removeClass(app.navBar.settings.showClass);
+            }
+            if (!app.navBar.settings.hideOnScroll){
+                app.navBar.settings.$el.removeClass(app.navBar.settings.showClass);
+            }
+        } else {
+            if (app.navBar.settings.hideOnScroll && _scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
+                app.navBar.settings.$el.addClass(app.navBar.settings.showClass);
+            }
+            if (!app.navBar.settings.hideOnScroll){
+                app.navBar.settings.$el.addClass(app.navBar.settings.showClass);
+            }
+        }
 
         app.navBar.settings.lastWindowScrollTop = _scrollTop;
 
