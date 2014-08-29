@@ -14,7 +14,6 @@ app.settings.$document.ready(function () {
     app.tabs.init();
     app.notifications.init();
     app.offCanvas.init();
-    app.scrollSpy.init();
     app.toggle.init();
     app.parallax.init(scrollTop);
 
@@ -22,6 +21,10 @@ app.settings.$document.ready(function () {
     //app.fancybox.init();
     //app.navPrimary.init();
 
+});
+
+app.settings.$window.ready(function () {
+    app.scrollSpy.init();
 });
 
 app.settings.$window.on('resize scroll', function () {
