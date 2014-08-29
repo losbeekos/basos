@@ -94,10 +94,10 @@
 
             <div id="container" class="off-canvas-push">
                 <!--[if lt IE 9]>
-                    <div class="notification error">
-                        <ul>
-                            <li>You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</li>
-                        </ul>
+                    <div class="container">
+                        <div class="notification notification--beta notification--error">
+                            <div class="notification__text">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</div>
+                        </div>
                     </div>
                 <![endif]-->
 
