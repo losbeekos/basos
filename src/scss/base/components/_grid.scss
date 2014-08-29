@@ -20,9 +20,12 @@
         margin-left: gutter(map-get($susy, columns));
     }
 
-    &:first-child,
-    .grid--no-gutters & {
+    &:first-child{
         margin-left: 0;
+    }
+
+    .grid--no-gutters & {
+        margin: 0;
     }
 }
 

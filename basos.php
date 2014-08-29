@@ -561,6 +561,14 @@
                                     <p class="form__required-field"><i>* = Verplicht veld</i></p>
                                     <input class="btn btn--beta btn--medium" type="submit" value="verzenden" />
                                 </div>
+
+                                <h2>Inline elements</h2>
+                                <p>Use the grid Luke, use the grid.</p>
+                                <div class="grid grid--no-gutters">
+                                    <div class="column-3"><input type="text" placeholder="E-mailadres" /></div>
+                                    <input class="btn btn--beta btn--medium" type="submit" value="verzenden" />
+                                </div>
+
                             </form>
                         </div>
                     </section>
