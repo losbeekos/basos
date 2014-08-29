@@ -55,6 +55,13 @@
                                 <div class="column-3 block">column-3</div>
                                 <div class="column-3 block">column-3</div>
                             </div>
+                            <h2>No gutters</h2>
+                            <div class="grid grid--no-gutters">
+                                <div class="column-3 block">column-3</div>
+                                <div class="column-3 block">column-3</div>
+                                <div class="column-3 block">column-3</div>
+                                <div class="column-3 block">column-3</div>
+                            </div>
                         </div>
                     </section>
 

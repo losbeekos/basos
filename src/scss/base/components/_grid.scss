@@ -20,7 +20,8 @@
         margin-left: gutter(map-get($susy, columns));
     }
 
-    &:first-child {
+    &:first-child,
+    .grid--no-gutters & {
         margin-left: 0;
     }
 }
@@ -29,6 +30,10 @@
     @for $i from 1 through map-get($susy, columns) {
         .column-#{$i} {
             width: span($i of map-get($susy, columns));
+
+            .grid--no-gutters & {
+                width: 100%/map-get($susy, columns)*$i;
+            }
         }
     }
 }
