@@ -7,6 +7,8 @@
 
     background: map-get($navBar, bg-color);
     width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
     z-index: 999;
     transition: all map-get($base, transition-speed);
     text-align: center;
@@ -21,7 +23,7 @@
         position: relative;
     }
 
-    @include breakpoint(beta-and-up) {
+    @include breakpoint(gamma-and-up) {
         max-height: inherit;
         text-align: left;
     }
@@ -33,7 +35,7 @@
         @include rem(padding-top, 12px);
         @include rem(min-height, map-get($navBar, trigger-height));
 
-        @include breakpoint(beta-and-up) {
+        @include breakpoint(gamma-and-up) {
             float: left;
             padding-top: 0;
 
@@ -86,7 +88,7 @@
     &__nav {
         @extend .clearfix;
 
-        @include breakpoint(beta-and-up) {
+        @include breakpoint(gamma-and-up) {
             @if map-get($navBar, nav-position) == left {
                 float: left;
             } @else {
@@ -112,7 +114,7 @@
         @include rem(height, map-get($navBar, trigger-height));
         @include rem(width, map-get($navBar, trigger-height));
 
-        @include breakpoint(beta-and-up) {
+        @include breakpoint(gamma-and-up) {
             display: none;
         }
 
@@ -142,7 +144,7 @@
         overflow: hidden;
         transition: all map-get($base, transition-speed);
 
-        @include breakpoint(beta-and-up) {
+        @include breakpoint(gamma-and-up) {
             overflow: inherit;
             max-height: inherit;
             float: right;
@@ -158,7 +160,7 @@
             display: block;
             margin: 0;
 
-            @include breakpoint(beta-and-up) {
+            @include breakpoint(gamma-and-up) {
                 display: inline-block;
                 margin-right: -4px;
             }
@@ -176,7 +178,7 @@
 
         @include rem(padding, map-get($navBar, link-padding));
 
-        @include breakpoint(beta-and-up) {
+        @include breakpoint(gamma-and-up) {
             display: inline-block;
         }
 
