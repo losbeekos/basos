@@ -1,0 +1,26 @@
+/*==============================
+=            Margin            =
+==============================*/
+
+.margin {
+    @each $key, $value in $margin {
+        &-#{$key} {
+            @include rem(margin, map-get($margin, $key));
+
+            &-vertical {
+                @include rem(margin-top, map-get($margin, $key));
+                @include rem(margin-bottom, map-get($margin, $key));
+            }
+
+            &-horizontal {
+                @include rem(margin-left, map-get($margin, $key));
+                @include rem(margin-right, map-get($margin, $key));
+            }
+
+            &-right   { @include rem(margin-right, map-get($margin, $key)); }
+            &-left    { @include rem(margin-left, map-get($margin, $key)); }
+            &-top     { @include rem(margin-top, map-get($margin, $key)); }
+            &-bottom  { @include rem(margin-bottom, map-get($margin, $key)); }
+        }
+    }
+}
