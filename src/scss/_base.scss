@@ -1,15 +1,14 @@
-/*============================
-=            Base            =
-============================*/
-
-
-/*==========  Vendor  ==========*/
+/* Vendor
+==========
+*/
 
 @import "base/vendor/normalize";
 @import "base/vendor/h5bp";
 
 
-/*==========  Mixins  ==========*/
+/* Mixins
+==========
+*/
 
 @import "base/mixins/breakpoints";
 @import "base/mixins/arrow";
@@ -17,16 +16,22 @@
 @import "base/mixins/font_face";
 
 
-/*==========  Helpers  ==========*/
+/* Helpers
+==========
+*/
 
 @import "base/helpers/clearfix";
 @import "base/helpers/hide";
 @import "base/helpers/image_replacement";
 @import "base/helpers/lists";
 @import "base/helpers/visually_hidden";
+@import "base/helpers/text_align";
+@import "base/helpers/margin";
 
 
-/*==========  Animations  ==========*/
+/* Animations
+==========
+*/
 
 @import "base/animations/animated";
 @import "base/animations/shake";
@@ -53,7 +58,9 @@
 @import "base/animations/flipInY";
 
 
-/*==========  Components  ==========*/
+/* Components
+==========
+*/
 
 @import "base/components/grid";
 @import "base/components/fonts";
@@ -78,7 +85,9 @@
 @import "base/components/block";
 
 
-/*==========  Buttons  ==========*/
+/* Buttons
+==========
+*/
 
 @import "base/components/buttons/container";
 @import "base/components/buttons/holder";
@@ -87,7 +96,9 @@
 @import "base/components/buttons/styles";
 
 
-/*==========  Forms  ==========*/
+/* Forms
+==========
+*/
 
 @import "base/components/form/form";
 @import "base/components/form/general";
@@ -98,7 +109,9 @@
 @import "base/components/form/password";
 
 
-/*==========  Notifications  ==========*/
+/* Notifications
+==========
+*/
 
 @import "base/components/notifications/notification";
 @import "base/components/notifications/sizes";
@@ -107,11 +120,13 @@
 @import "base/components/notifications/cookie_notification";
 
 
-/*==========  Modals  ==========*/
+/* Modals
+==========
+*/
 
 @import "base/components/modals/modals";
-@import "base/components/modals/effects/slide";
-@import "base/components/modals/effects/flip";
-@import "base/components/modals/effects/fadescale";
-@import "base/components/modals/effects/superscale";
+@import "base/components/modals/slide";
+@import "base/components/modals/flip";
+@import "base/components/modals/fadescale";
+@import "base/components/modals/superscale";
 

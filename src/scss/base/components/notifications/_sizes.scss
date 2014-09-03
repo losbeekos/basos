@@ -1,6 +1,6 @@
-/*==========================================
-=            Notification sizes            =
-==========================================*/
+/* Notification sizes
+==========
+*/
 
 .notification--alpha {
     @include rem(padding, map-get($notifications, padding-alpha));

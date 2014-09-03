@@ -1,6 +1,6 @@
-/*===========================================
-=            Notification styles            =
-===========================================*/
+/* Notification styles
+==========
+*/
 
 .notification--error {
     @include notification(lighten(map-get($notifications, bg-color-error), 53%), lighten(map-get($notifications, bg-color-error), 48%), darken(map-get($notifications, bg-color-error), 32%), map-get($icon, notification-error), map-get($notifications, bg-color-error));

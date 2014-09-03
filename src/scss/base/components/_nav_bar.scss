@@ -1,6 +1,6 @@
-/*======================================
-=            Navigation bar            =
-======================================*/
+/* Navigation bar
+==========
+*/
 
 .nav-bar {
     @extend .clearfix;
@@ -12,6 +12,8 @@
     z-index: 999;
     transition: all map-get($base, transition-speed);
     text-align: center;
+
+    @include rem(min-width, map-get($container, min-width));
 
     .csssticky & {
         position: sticky;

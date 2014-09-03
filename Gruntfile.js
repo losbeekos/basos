@@ -11,6 +11,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-autoprefixer');
+    grunt.loadNpmTasks('grunt-styleguide');
 
     var todayTimestamp = '<%= grunt.template.today("ddmmyyyyhhMMss") %>';
 
@@ -113,7 +114,6 @@ module.exports = function(grunt) {
             dev: {
                 options: {
                     style: 'expanded',
-                    sourcemap: true,
                     require: 'susy'
                 },
 
@@ -210,7 +210,8 @@ module.exports = function(grunt) {
                 '<%= basos.src %>/scss/**/*.scss',
                 '**/*.tpl',
                 '**/*.php',
-                '**/*.html'
+                '**/*.html',
+                '!docs/**/*.html'
             ],
 
             tasks: [
@@ -219,8 +220,17 @@ module.exports = function(grunt) {
                 'concat',
                 'copy',
                 'sass:dev',
-                'autoprefixer:dev'
+                'autoprefixer:dev',
+                'styleguide:dev'
             ]
+        },
+
+        styleguide: {
+            dev: {
+                files: {
+                    'docs/scss': '<%= basos.src %>/scss/**/*.scss'
+                }
+            }
         }
 
     });
@@ -231,7 +241,8 @@ module.exports = function(grunt) {
         'concat',
         'copy',
         'sass:dev',
-        'autoprefixer:dev'
+        'autoprefixer:dev',
+        'styleguide:dev'
     ]);
 
     grunt.registerTask('dist', [
@@ -244,7 +255,8 @@ module.exports = function(grunt) {
         'cssmin',
         'uglify',
         'imagemin',
-        'imageoptim'
+        'imageoptim',
+        'styleguide:dev'
     ]);
 
     grunt.registerTask('default', ['dev', 'watch']);

@@ -1,6 +1,6 @@
-/*====================================
-=            Notification            =
-====================================*/
+/* Notification
+==========
+*/
 
 @mixin notification($background, $border-color, $color, $before-content, $before-color) {
     color: $color;

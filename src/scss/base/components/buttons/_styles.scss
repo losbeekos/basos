@@ -1,12 +1,12 @@
-/*==============================
-=            Styles            =
-==============================*/
+/* Button styles
+==========
+*/
 
 @mixin btn-style($bg-color) {
     background-color: $bg-color;
     border-color: darken($bg-color, map-get($btn, border-color-darken));
 
-    &:hover { 
+    &:hover {
         background-color: darken($bg-color, 5%);
     }
 

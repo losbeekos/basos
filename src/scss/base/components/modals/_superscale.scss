@@ -1,11 +1,11 @@
-/*=======================================
-=            Fade in & scale            =
-=======================================*/
+/* Modal Superscale
+==========
+*/
 
-.modal[data-modal-effect=fadescale] {
+.modal[data-modal-effect=superscale] {
     .modal__content {
         opacity: 0;
-        transform: scale(0.7);
+        transform: scale(2);
         transition: all 0.3s;
     }
 

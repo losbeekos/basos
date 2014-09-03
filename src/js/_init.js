@@ -27,14 +27,20 @@ app.settings.$window.ready(function () {
     app.scrollSpy.init();
 });
 
-app.settings.$window.on('resize scroll', function () {
+app.settings.$window.on('scroll', function () {
     var scrollTop = $(this).scrollTop();
 
     app.scrollSpy.init();
     app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
+    app.disableHover.init();
 });
 
 app.settings.$window.on('resize', function () {
+    var scrollTop = $(this).scrollTop();
+
     app.equalize.init();
+    app.scrollSpy.init();
+    app.parallax.init(scrollTop);
+    app.navBar.scroller(scrollTop);
 });

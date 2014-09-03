@@ -1,7 +1,6 @@
-/*================================================
-=            Default project settings            =
-================================================*/
-
+/* Base
+==========
+*/
 
 $base: (
     gradient         : false,
@@ -12,7 +11,9 @@ $base: (
 );
 
 
-/*==========  Colours  ==========*/
+/* Colors
+==========
+*/
 
 $color: (
     white       : #ffffff,
@@ -28,7 +29,9 @@ $color: (
 );
 
 
-/*==========  Sections  ==========*/
+/* Sections
+==========
+*/
 
 $section: (
     padding-vertical        : 60px,
@@ -49,7 +52,9 @@ $section-bg: (
 );
 
 
-/*==========  Container  ==========*/
+/* Container
+==========
+*/
 
 $container: (
     min-width     : 320px,
@@ -62,7 +67,9 @@ $container: (
 );
 
 
-/*==========  Susy  ==========*/
+/* Susy grid
+==========
+*/
 
 $susy: (
     columns           : 12,
@@ -76,7 +83,9 @@ $susy: (
 );
 
 
-/*==========  Block  ==========*/
+/* Block
+==========
+*/
 
 $block: (
     bg            : lighten(map-get($color, alpha), 2%),
@@ -86,7 +95,9 @@ $block: (
 );
 
 
-/*==========  Buttons  ==========*/
+/* Buttons
+==========
+*/
 
 $btn: (
     gradient                : map-get($base, gradient),
@@ -125,7 +136,9 @@ $btn-bg: (
 );
 
 
-/*==========  Margin  ==========*/
+/* Margin
+==========
+*/
 
 $margin: (
     alpha: 10px,
@@ -136,7 +149,9 @@ $margin: (
 );
 
 
-/*==========  Icons  ==========*/
+/* Icons
+==========
+*/
 
 $icon: (
     notification-info         : '\e802',
@@ -162,7 +177,9 @@ $icon: (
 );
 
 
-/*==========  Form  ==========*/
+/* Form
+==========
+*/
 
 $form: (
     margin                            : 0 0 40px 0,
@@ -222,7 +239,9 @@ $form: (
 );
 
 
-/*==========  Notifications  ==========*/
+/* Notifications
+==========
+*/
 
 $notifications: (
     bg-color-info       : #2690b0,
@@ -242,7 +261,9 @@ $notifications: (
 );
 
 
-/*==========  Navigation bar  ==========*/
+/* Navigation bar
+==========
+*/
 
 $navBar: (
     bg-color          : #222222,
@@ -258,7 +279,9 @@ $navBar: (
 );
 
 
-/*==========  Off canvas  ==========*/
+/* Off canvas
+==========
+*/
 
 $off-canvas: (
     width                    : 260px,
@@ -277,7 +300,9 @@ $off-canvas: (
 );
 
 
-/*==========  Tabs  ==========*/
+/* Tabs
+==========
+*/
 
 $tabs: (
     bg-color                 : map-get($btn-bg, alpha),
@@ -292,7 +317,9 @@ $tabs: (
 );
 
 
-/*==========  Table  ==========*/
+/* Table
+==========
+*/
 
 $table: (
     margin-bottom  : 30px,
@@ -304,7 +331,9 @@ $table: (
 );
 
 
-/*==========  Tooltip  ==========*/
+/* Tooltip
+==========
+*/
 
 $tooltip: (
     min-width        : 150px,
@@ -319,7 +348,9 @@ $tooltip: (
 );
 
 
-/*==========  Modal  ==========*/
+/* Modal window
+==========
+*/
 
 $modal: (
     min-width                   : 320px,
@@ -333,7 +364,9 @@ $modal: (
 );
 
 
-/*==========  Accordion  ==========*/
+/* Accordion
+==========
+*/
 
 $accordion: (
     transition-speed           : map-get($base, transition-speed),
@@ -358,7 +391,9 @@ $accordion: (
 );
 
 
-/*==========  Breadcrumb  ==========*/
+/* Breadcrumb
+==========
+*/
 
 $breadcrumbs: (
     bg-color      : #f5f5f5,
@@ -371,7 +406,9 @@ $breadcrumbs: (
 );
 
 
-/*==========  Pricing table  ==========*/
+/* Pricing tables
+==========
+*/
 
 $pricing-table: (
     border-color          : darken(map-get($btn-bg, alpha), 5%),
@@ -385,7 +422,9 @@ $pricing-table: (
 );
 
 
-/*==========  Progress bar  ==========*/
+/* Progress bar
+==========
+*/
 
 $progress-bar: (
     bg-color       : map-get($color, alpha),
@@ -393,7 +432,9 @@ $progress-bar: (
 );
 
 
-/*==========  Spinner  ==========*/
+/* Spinners
+==========
+*/
 
 $spinner: (
     animation-speed : 1s,
@@ -401,7 +442,9 @@ $spinner: (
 );
 
 
-/*==========  Dropdown  ==========*/
+/* Dropdown
+==========
+*/
 
 $dropdown: (
     min-width           : 200px,
@@ -418,7 +461,9 @@ $dropdown: (
     link-border-top     : 0 solid darken(map-get($btn-bg, alpha), 1%)
 );
 
-/*==========  Media  ==========*/
+/* Media
+==========
+*/
 
 $media: (
     margin-bottom       : 40px,

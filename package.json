@@ -25,6 +25,7 @@
     "grunt-contrib-copy": "~0.5.0",
     "grunt-autoprefixer": "~0.7.4",
     "grunt-imageoptim": "~1.4.1",
-    "css-parse": "~1.7.0"
+    "css-parse": "~1.7.0",
+    "grunt-styleguide": "~0.2.15"
   }
 }

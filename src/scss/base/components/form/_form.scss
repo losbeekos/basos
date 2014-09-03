@@ -1,6 +1,6 @@
-/*============================
-=            Form            =
-============================*/
+/* Form
+==========
+*/
 
 form {
     @extend .clearfix;
@@ -23,24 +23,20 @@ legend {
     @include rem(line-height, map-get($form, legend-line-height));
 }
 
-$input-selectors: '
-    input[type="text"],
-    input[type="password"],
-    input[type="date"],
-    input[type="datetime"],
-    input[type="datetime-local"],
-    input[type="month"],
-    input[type="week"],
-    input[type="email"],
-    input[type="number"],
-    input[type="search"],
-    input[type="tel"],
-    input[type="time"],
-    input[type="url"],
-    textarea
-';
-
-#{$input-selectors} {
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="month"],
+input[type="week"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea {
     color: #333333;
     border-radius: map-get($base, border-radius);
     border: map-get($form, input-border);

@@ -1,3 +1,7 @@
+/* Font-face
+==========
+*/
+
 @mixin font-face($name, $directory) {
     @font-face{
         font-family: quote($name);
