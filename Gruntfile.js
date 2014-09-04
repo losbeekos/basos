@@ -227,7 +227,7 @@ module.exports = function(grunt) {
                 '**/*.php',
                 '**/*.html',
                 'src/**/*',
-                '!docs/**/*.html'
+                '!docs/*.html'
             ],
 
             tasks: [
@@ -243,7 +243,7 @@ module.exports = function(grunt) {
         styleguide: {
             dev: {
                 files: {
-                    'docs/scss': '<%= basos.src %>/scss/**/*.scss'
+                    'docs': '<%= basos.src %>/scss/**/*.scss'
                 }
             }
         },
