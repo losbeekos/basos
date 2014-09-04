@@ -12,6 +12,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.loadNpmTasks('grunt-styleguide');
+    grunt.loadNpmTasks('grunt-contrib-connect');
+    grunt.loadNpmTasks('grunt-browser-sync');
 
     var todayTimestamp = '<%= grunt.template.today("ddmmyyyyhhMMss") %>';
 
@@ -19,6 +21,20 @@ module.exports = function(grunt) {
       src: 'src',
       dist: 'dist'
     };
+
+    var http = require('http');
+    var gateway = require('gateway');
+
+    var app = http.createServer(gateway(__dirname, {
+      '.php': 'php-cgi'
+    }));
+
+    var LIVERELOAD_PORT = 35729;
+    var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
+    var mountFolder = function (connect, dir) {
+      return connect.static(require('path').resolve(dir));
+    };
+    var phpMiddleware = require('connect-php');
 
     try {
         basosConfig.app = require('./bower.json').appPath || basosConfig.app;
@@ -207,10 +223,10 @@ module.exports = function(grunt) {
 
             files: [
                 '<%= jshint.files %>',
-                '<%= basos.src %>/scss/**/*.scss',
                 '**/*.tpl',
                 '**/*.php',
                 '**/*.html',
+                'src/**/*',
                 '!docs/**/*.html'
             ],
 
@@ -220,8 +236,7 @@ module.exports = function(grunt) {
                 'concat',
                 'copy',
                 'sass:dev',
-                'autoprefixer:dev',
-                'styleguide:dev'
+                'autoprefixer:dev'
             ]
         },
 
@@ -229,6 +244,57 @@ module.exports = function(grunt) {
             dev: {
                 files: {
                     'docs/scss': '<%= basos.src %>/scss/**/*.scss'
+                }
+            }
+        },
+
+        connect: {
+            server: {
+                options: {
+                    hostname: '0.0.0.0',
+                    port: 9000,
+                    keepalive: true,
+                    middleware: function(connect, options) {
+                        var middlewares = [];
+                        var directory = options.directory ||
+                        options.base[options.base.length - 1];
+
+                        if (!Array.isArray(options.base)) {
+                            options.base = [options.base];
+                        }
+
+                        middlewares.push(phpMiddleware(directory));
+
+                        options.base.forEach(function(base) {
+                            middlewares.push(connect.static(base));
+                        });
+
+                        middlewares.push(connect.directory(directory));
+                        return middlewares;
+                    }
+                }
+            }
+        },
+
+        browserSync: {
+            dev: {
+                bsFiles: {
+                    src : [
+                        'dist/js/app.js',
+                        'dist/css/main.css'
+                    ]
+                },
+
+                options: {
+                    proxy: '0.0.0.0:9000',
+                    ghostMode: {
+                        clicks: true,
+                        location: true,
+                        forms: true,
+                        scroll: true
+                    },
+                    scrollProportionally: true,
+                    startPath: '/index.php'
                 }
             }
         }
@@ -241,8 +307,7 @@ module.exports = function(grunt) {
         'concat',
         'copy',
         'sass:dev',
-        'autoprefixer:dev',
-        'styleguide:dev'
+        'autoprefixer:dev'
     ]);
 
     grunt.registerTask('dist', [
@@ -255,8 +320,7 @@ module.exports = function(grunt) {
         'cssmin',
         'uglify',
         'imagemin',
-        'imageoptim',
-        'styleguide:dev'
+        'imageoptim'
     ]);
 
     grunt.registerTask('default', ['dev', 'watch']);

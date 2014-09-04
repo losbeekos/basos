@@ -40,6 +40,8 @@
         @include breakpoint(gamma-and-up) {
             float: left;
             padding-top: 0;
+            min-height: inherit;
+            margin-bottom: 0;
 
             @include rem(margin-top, 18px);
         }
