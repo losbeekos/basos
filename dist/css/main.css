@@ -77,6 +77,9 @@
 /* Media
 ==========
 */
+/* Thumbnail grid
+==========
+*/
 /* Vendor
 ==========
 */
@@ -562,11 +565,11 @@ textarea {
 /* Clearfix
 ==========
 */
-.clearfix:before, .grid:before, [class|=column]:before, .container:before, .nav-bar:before, .nav-bar__container:before, .nav-bar__nav:before, .tabs:before, .media:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|=column]:after, .container:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .tabs:after, .media:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
+.clearfix:before, .grid:before, [class|=column]:before, .container:before, .nav-bar:before, .nav-bar__container:before, .nav-bar__nav:before, .tabs:before, .media:before, .thumbnail-grid:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|=column]:after, .container:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .tabs:after, .media:after, .thumbnail-grid:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
   content: '';
   display: table;
 }
-.clearfix:after, .grid:after, [class|=column]:after, .container:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .tabs:after, .media:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
+.clearfix:after, .grid:after, [class|=column]:after, .container:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .tabs:after, .media:after, .thumbnail-grid:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
   clear: both;
 }
 
@@ -2095,6 +2098,71 @@ p {
   }
 }
 
+/*==============================
+=            Colors            =
+==============================*/
+.color-white {
+  color: #ffffff;
+}
+.color-black {
+  color: #000000;
+}
+.color-text {
+  color: #222222;
+}
+.color-placeholder {
+  color: #94adc4;
+}
+.color-selection {
+  color: #d1e4fe;
+}
+.color-alpha {
+  color: #f0f0f0;
+}
+.color-beta {
+  color: #2690b0;
+}
+.color-gamma {
+  color: #26a8b0;
+}
+.color-delta {
+  color: #26b0a1;
+}
+.color-epsilon {
+  color: #333333;
+}
+
+.bg-color-white {
+  background: #ffffff;
+}
+.bg-color-black {
+  background: #000000;
+}
+.bg-color-text {
+  background: #222222;
+}
+.bg-color-placeholder {
+  background: #94adc4;
+}
+.bg-color-selection {
+  background: #d1e4fe;
+}
+.bg-color-alpha {
+  background: #f0f0f0;
+}
+.bg-color-beta {
+  background: #2690b0;
+}
+.bg-color-gamma {
+  background: #26a8b0;
+}
+.bg-color-delta {
+  background: #26b0a1;
+}
+.bg-color-epsilon {
+  background: #333333;
+}
+
 /* Sections
 ==========
 */
@@ -2297,6 +2365,32 @@ p {
   .nav-bar--transform.nav-bar--always-show-on-mobile {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
+  }
+}
+.nav-bar--transparent:not(.nav-bar--fixed) {
+  /**
+  *
+  * Usage:
+  * @include breakpoint('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  }
+  *
+  **/
+}
+@media (min-width: 900px) {
+  .nav-bar--transparent:not(.nav-bar--fixed) {
+    background: transparent;
+  }
+  .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
+    color: #000000;
+  }
+  .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
+    background: transparent;
+    color: #2690b0;
+  }
+  .nav-bar--transparent .nav-bar--transparent:not(.nav-bar--fixed) {
+    color: #ffffff;
   }
 }
 .no-csssticky .nav-bar--fixed {
@@ -3506,6 +3600,58 @@ progress:not([value])::-ms-fill {
     padding: 30px;
     padding: 1.875rem;
   }
+}
+
+/* Thumbnail grid
+==========
+*/
+.thumbnail-grid {
+  margin-left: -1%;
+  margin-right: -1%;
+}
+.thumbnail-grid__item {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  float: left;
+  width: 48%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
+  /**
+  *
+  * Usage:
+  * @include breakpoint('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  }
+  *
+  **/
+}
+@media (min-width: 650px) {
+  .thumbnail-grid__item {
+    width: 23%;
+  }
+}
+.thumbnail-grid__item:before {
+  content: '';
+  background: all;
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+}
+.thumbnail-grid__item:hover:before {
+  opacity: 1;
+}
+.thumbnail-grid__img {
+  width: 100%;
 }
 
 /* Buttons

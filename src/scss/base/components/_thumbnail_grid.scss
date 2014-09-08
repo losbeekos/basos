@@ -1,0 +1,49 @@
+/* Thumbnail grid
+==========
+*/
+
+.thumbnail-grid {
+    @extend .clearfix;
+
+    margin-left: -(map-get($thumbnailGrid, margin) / 2);
+    margin-right: -(map-get($thumbnailGrid, margin) / 2);
+
+    &__item {
+        position: relative;
+        overflow: hidden;
+        display: block;
+        float: left;
+        width: 50-(map-get($thumbnailGrid, margin));
+        margin-bottom: map-get($thumbnailGrid, margin);
+        margin-left: map-get($thumbnailGrid, margin) / 2;
+        margin-right: map-get($thumbnailGrid, margin) / 2;
+
+        @include breakpoint(beta-and-up) {
+            width: (100 / map-get($thumbnailGrid, row-count))-(map-get($thumbnailGrid, margin));
+        }
+
+        &:before {
+            content: '';
+            background: all map-get($base, overlay-bg);
+            width: 100%;
+            height: 100%;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            z-index: 1;
+            transition: all map-get($base, transition-speed);
+        }
+
+        &:hover {
+            &:before {
+                opacity: 1;
+            }
+        }
+    }
+
+    &__img {
+        width: 100%;
+    }
+}

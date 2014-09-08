@@ -1,0 +1,20 @@
+/*==============================
+=            Colors            =
+==============================*/
+
+.color {
+    @each $key, $value in $color {
+        &-#{$key} {
+            color: map-get($color, $key);
+        }
+    }
+}
+
+.bg-color {
+    @each $key, $value in $color {
+        &-#{$key} {
+            background: map-get($color, $key);
+        }
+    }
+}
+

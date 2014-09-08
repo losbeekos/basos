@@ -9,6 +9,6 @@ app.disableHover = {
 
         app.disableHover.timer = setTimeout(function(){
             app.settings.$body.removeClass('disable-hover');
-        }, 500);
+        }, 100);
     }
 };

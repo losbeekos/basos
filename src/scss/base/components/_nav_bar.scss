@@ -61,6 +61,28 @@
         }
     }
 
+    &--transparent {
+        &:not(.nav-bar--fixed) {
+            @include breakpoint(gamma-and-up) {
+                background: transparent;
+
+                .nav-bar__link {
+                    color: map-get($color, black);
+
+                    &.nav-bar__link--active,
+                    &:hover {
+                        background: transparent;
+                        color: map-get($color, beta);
+                    }
+                }
+
+                .nav-bar--transparent & {
+                    color: map-get($navBar, link-color);
+                }
+            }
+        }
+    }
+
     &--fixed {
         .no-csssticky & {
             position: fixed;
@@ -148,7 +170,6 @@
             max-height: inherit;
             float: right;
             border-top: 0;
-            //border-left: 1px solid lighten(map-get($navBar, bg-color), 10%);
         }
 
         .nav-bar--mobile-show & {
@@ -164,10 +185,6 @@
                 margin-right: -4px;
             }
         }
-    }
-
-    &__item {
-        //border-right: 1px solid lighten(map-get($navBar, bg-color), 10%);
     }
 
     &__link {
@@ -190,5 +207,6 @@
             background: map-get($color, beta);
             color: map-get($navBar, link-color);
         }
+
     }
 }

@@ -11,7 +11,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-imagemin');
     grunt.loadNpmTasks('grunt-imageoptim');
     grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-styleguide');
     grunt.loadNpmTasks('grunt-contrib-connect');
     grunt.loadNpmTasks('grunt-browser-sync');
 
@@ -238,14 +237,6 @@ module.exports = function(grunt) {
                 'sass:dev',
                 'autoprefixer:dev'
             ]
-        },
-
-        styleguide: {
-            dev: {
-                files: {
-                    'docs': '<%= basos.src %>/scss/**/*.scss'
-                }
-            }
         },
 
         connect: {

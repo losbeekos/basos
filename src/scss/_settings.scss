@@ -470,3 +470,13 @@ $media: (
     bordered-padding    : 20px 0,
     bordered-border-top : 1px solid map-get($table, border-color),
 );
+
+/* Thumbnail grid
+==========
+*/
+
+$thumbnailGrid: (
+    row-count: 4,
+    margin: 2%,
+    overlay-bg: rgba(0, 0, 0, 0.4)
+);
