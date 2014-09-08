@@ -5,26 +5,26 @@
 .thumbnail-grid {
     @extend .clearfix;
 
-    margin-left: -(map-get($thumbnailGrid, margin) / 2);
-    margin-right: -(map-get($thumbnailGrid, margin) / 2);
+    margin-left: -(map-get($thumbnail-grid, margin) / 2);
+    margin-right: -(map-get($thumbnail-grid, margin) / 2);
 
     &__item {
         position: relative;
         overflow: hidden;
         display: block;
         float: left;
-        width: 50-(map-get($thumbnailGrid, margin));
-        margin-bottom: map-get($thumbnailGrid, margin);
-        margin-left: map-get($thumbnailGrid, margin) / 2;
-        margin-right: map-get($thumbnailGrid, margin) / 2;
+        width: 50-(map-get($thumbnail-grid, margin));
+        margin-bottom: map-get($thumbnail-grid, margin);
+        margin-left: map-get($thumbnail-grid, margin) / 2;
+        margin-right: map-get($thumbnail-grid, margin) / 2;
 
         @include breakpoint(beta-and-up) {
-            width: (100 / map-get($thumbnailGrid, row-count))-(map-get($thumbnailGrid, margin));
+            width: (100 / map-get($thumbnail-grid, row-count))-(map-get($thumbnail-grid, margin));
         }
 
         &:before {
             content: '';
-            background: all map-get($base, overlay-bg);
+            background: map-get($thumbnail-grid, overlay-bg);
             width: 100%;
             height: 100%;
             display: block;
