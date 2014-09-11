@@ -19,7 +19,7 @@ app.parallax = {
                 }
 
                 if (!helper.outView($parallax) && app.settings.$window.width() > 700) {
-                    var yPos = -(_scrollTop / parallaxSpeed);
+                    var yPos = (_scrollTop / parallaxSpeed);
 
                     if (parallaxOffsetTop > app.settings.windowHeight) {
                         yPos = (_scrollTop - Math.round(parallaxOffsetTop - app.settings.windowHeight)) / parallaxSpeed;

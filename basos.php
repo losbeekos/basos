@@ -1444,7 +1444,7 @@
                         </div>
                     </section>
 
-                    <section id="spinners" class="section section--alpha">
+                    <section id="parallax" class="section section--alpha">
                         <div class="container">
                             <h1>Parallax</h1>
                             <div class="grid">
@@ -1468,28 +1468,28 @@
                         <div class="container">
                             <h1>Thumbnail grid</h1>
                             <div class="thumbnail-grid">
-                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn" data-scrollspy-kickoff data-playable-uri="video/1.mp4">
+                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn">
                                     <img class="thumbnail-grid__img" src="http://www.lorempixel.com/300/300/business/1" />
                                 </a>
-                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn" data-scrollspy-delay="100" data-scrollspy-kickoff data-playable-uri="video/2.mp4">
+                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn">
                                     <img class="thumbnail-grid__img" src="http://www.lorempixel.com/300/300/business/2" />
                                 </a>
-                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn" data-scrollspy-delay="200" data-scrollspy-kickoff data-playable-uri="video/3.mp4">
+                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn">
                                     <img class="thumbnail-grid__img" src="http://www.lorempixel.com/300/300/business/3" />
                                 </a>
-                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn" data-scrollspy-delay="300" data-scrollspy-kickoff data-playable-uri="video/4.mp4">
+                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn">
                                     <img class="thumbnail-grid__img" src="http://www.lorempixel.com/300/300/business/4" />
                                 </a>
-                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn" data-scrollspy-delay="400" data-scrollspy-kickoff data-playable-uri="video/5.mp4">
+                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn">
                                     <img class="thumbnail-grid__img" src="http://www.lorempixel.com/300/300/business/5" />
                                 </a>
-                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn" data-scrollspy-delay="500" data-scrollspy-kickoff data-playable-uri="video/6.mp4">
+                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn">
                                     <img class="thumbnail-grid__img" src="http://www.lorempixel.com/300/300/business/6" />
                                 </a>
-                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn" data-scrollspy-delay="600" data-scrollspy-kickoff data-playable-uri="video/7.mp4">
+                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn">
                                     <img class="thumbnail-grid__img" src="http://www.lorempixel.com/300/300/business/7" />
                                 </a>
-                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn" data-scrollspy-delay="700" data-scrollspy-kickoff data-playable-uri="video/8.mp4">
+                                <a class="thumbnail-grid__item" href="#" data-scrollspy data-scrollspy-class="animation-fadeIn">
                                     <img class="thumbnail-grid__img" src="http://www.lorempixel.com/300/300/business/8" />
                                 </a>
                             </div>
@@ -1498,14 +1498,6 @@
 
                 </main>
 
-                <footer class="footer">
-                    <ul class="nav-footer list-inline">
-                        <li><a class="nav-footer__link nav-footer__link--active" href="#">link</a></li>
-                        <li><a class="nav-footer__link" href="#">link</a></li>
-                        <li><a class="nav-footer__link" href="#">link</a></li>
-                    </ul>
-                    <div class="copyright">&copy; copyright 2014</div>
-                </footer>
             </div>
         </div>
 
