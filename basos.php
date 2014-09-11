@@ -124,6 +124,13 @@
                             <div class="column-3 block">column-3</div>
                             <div class="column-3 block">column-3</div>
                         </div>
+                        <h2 class="margin-beta-top">Breakpoint specific</h2>
+                        <div class="grid">
+                            <div class="column-alpha-6 column-beta-12 column-gamma-and-up-3 block">column-3</div>
+                            <div class="column-alpha-6 column-beta-4 column-beta--first column-gamma-and-up-3 block">column-3</div>
+                            <div class="column-alpha-6 column-alpha--first column-beta-4 column-gamma-and-up-3 block">column-3</div>
+                            <div class="column-alpha-6 column-beta-4 column-gamma-and-up-3 block">column-3</div>
+                        </div>
                     </div>
                 </section>
 

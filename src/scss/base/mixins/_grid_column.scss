@@ -1,0 +1,42 @@
+/* Grid breakpoint
+==========
+*/
+
+
+@mixin defaultGridColumn($key) {
+    @include breakpoint(#{$key}) {
+        .column-#{$key}--first {
+            margin-left: 0;
+        }
+
+        @for $i from 1 through map-get($susy, columns) {
+            .column-#{$i},
+            .column-#{$key}-#{$i} {
+                width: span($i of map-get($susy, columns));
+
+                .grid--no-gutters & {
+                    width: 100%/map-get($susy, columns)*$i;
+                }
+            }
+        }
+    }
+}
+
+
+@mixin gridColumn($key) {
+    @include breakpoint(#{$key}) {
+        .column-#{$key}--first {
+            margin-left: 0;
+        }
+
+        @for $i from 1 through map-get($susy, columns) {
+            .column-#{$key}-#{$i} {
+                width: span($i of map-get($susy, columns));
+
+                .grid--no-gutters & {
+                    width: 100%/map-get($susy, columns)*$i;
+                }
+            }
+        }
+    }
+}

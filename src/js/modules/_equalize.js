@@ -12,7 +12,11 @@ app.equalize = {
                 $this.find('[data-equalize-target]')
                     .each(function () {
                         var $this = $(this),
-                            height = $(this).height();
+                            height = null;
+
+                        $this.css({height: 'auto'});
+
+                        height = $(this).height();
 
                         if (height > currentHeight) {
                             currentHeight = height;

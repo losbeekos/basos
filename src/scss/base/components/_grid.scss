@@ -20,23 +20,25 @@
         margin-left: gutter(map-get($susy, columns));
     }
 
-    &:first-child{
-        margin-left: 0;
-    }
+    &:first-child                  { margin-left: 0;   }
 
-    .grid--no-gutters & {
-        margin: 0;
-    }
+    .grid--no-gutters &            { margin: 0;        }
+    .grid--no-horizontal-gutters & { margin-left: 0;   }
+    .grid--no-vertical-gutters &   { margin-bottom: 0; }
 }
 
-@include breakpoint(beta-and-up) {
-    @for $i from 1 through map-get($susy, columns) {
-        .column-#{$i} {
-            width: span($i of map-get($susy, columns));
-
-            .grid--no-gutters & {
-                width: 100%/map-get($susy, columns)*$i;
-            }
-        }
-    }
+[class|=column-alpha],
+[class|=column-alpha-and-up],
+[class|=column-beta],
+[class|=column-beta-and-up],
+[class|=column-gamma-and-up] {
+    float: left;
+    margin-left: gutter(map-get($susy, columns));
 }
+
+@include defaultGridColumn(beta-and-up);
+
+@include gridColumn(alpha);
+@include gridColumn(alpha-and-up);
+@include gridColumn(beta);
+@include gridColumn(gamma-and-up);

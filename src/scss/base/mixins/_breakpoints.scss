@@ -29,6 +29,10 @@
     @else if $point == alpha {
        @media (max-width: 650px)  { @content; }
     }
+
+    @else if $point == alpha-and-up {
+       @media (min-width: 0)  { @content; }
+    }
 }
 
 @mixin breakpoint-img-retina($width, $orientation) {
