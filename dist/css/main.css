@@ -2385,7 +2385,7 @@ p {
   .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
     color: #000000;
   }
-  .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
+  .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
     background: transparent;
     color: #2690b0;
   }
@@ -2554,7 +2554,7 @@ p {
   background: #3c3c3c;
   color: #ffffff;
 }
-.nav-bar__link.nav-bar__link--active {
+.nav-bar__link.nav-bar__link--active, .nav-bar__link.scrollspy-nav--active {
   background: #2690b0;
   color: #ffffff;
 }

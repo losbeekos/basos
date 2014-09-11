@@ -70,6 +70,7 @@
                     color: map-get($color, black);
 
                     &.nav-bar__link--active,
+                    &.scrollspy-nav--active,
                     &:hover {
                         background: transparent;
                         color: map-get($color, beta);
@@ -203,7 +204,8 @@
             color: map-get($navBar, link-color);
         }
 
-        &.nav-bar__link--active {
+        &.nav-bar__link--active,
+        &.scrollspy-nav--active {
             background: map-get($color, beta);
             color: map-get($navBar, link-color);
         }

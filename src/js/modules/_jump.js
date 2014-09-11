@@ -1,8 +1,7 @@
 app.jump = {
     settings: {
         speed: 300,
-        $el: $('[data-jumpto]'),
-        $navBar: $('#nav-bar'),
+        $el: $('[data-jumpto]')
     },
 
     init: function () {
@@ -17,10 +16,10 @@ app.jump = {
 
     to: function (_target) {
         var self = this,
-            offsetTop = $(_target).offset().top;
+            offsetTop = Math.round($(_target).offset().top);
 
-        if (app.jump.settings.$navBar.length > 0) {
-            offsetTop = offsetTop - app.jump.settings.$navBar.height();
+        if (app.navBar.settings.$el.length > 0) {
+            offsetTop = offsetTop - app.navBar.settings.$el.height();
         }
 
         app.settings.$htmlAndBody.animate({scrollTop: offsetTop}, app.jump.settings.speed);

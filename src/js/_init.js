@@ -2,6 +2,7 @@ app.settings.$document.ready(function () {
     var scrollTop = $(this).scrollTop();
 
     app.equalize.init();
+    app.scrollSpyNav.init(scrollTop);
     app.fastClick.init();
     app.fitVids.init();
     app.navBar.init(scrollTop);
@@ -31,6 +32,7 @@ app.settings.$window.on('scroll', function () {
     var scrollTop = $(this).scrollTop();
 
     app.scrollSpy.init();
+    app.scrollSpyNav.init(scrollTop);
     app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
     app.disableHover.init();
@@ -41,6 +43,7 @@ app.settings.$window.on('resize', function () {
 
     app.equalize.init();
     app.scrollSpy.init();
+    app.scrollSpyNav.init(scrollTop);
     app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
 });

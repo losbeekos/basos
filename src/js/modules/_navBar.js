@@ -9,6 +9,7 @@ app.navBar = {
         fixedClass: 'nav-bar--fixed',
         showClass: 'nav-bar--show',
         mobileShowClass: 'nav-bar--mobile-show',
+        transformClass: 'nav-bar--transform',
         allwaysShowOnMobile: true,
         allwaysShowOnMobileClass: 'nav-bar--always-show-on-mobile'
     },
@@ -49,7 +50,7 @@ app.navBar = {
             }
 
             if (app.navBar.settings.hideOnScroll && _scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
-                app.navBar.settings.$el.addClass('nav-bar--transform');
+                app.navBar.settings.$el.addClass(app.navBar.settings.transformClass);
                 app.navBar.settings.$el.addClass(app.navBar.settings.showClass);
             }
         } else {
@@ -60,7 +61,7 @@ app.navBar = {
             }
 
             if (app.navBar.settings.hideOnScroll) {
-                app.navBar.settings.$el.removeClass('nav-bar--transform');
+                app.navBar.settings.$el.removeClass(app.navBar.settings.transformClass);
             }
         }
 

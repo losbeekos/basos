@@ -371,8 +371,7 @@ app.formModules = {
 app.jump = {
     settings: {
         speed: 300,
-        $el: $('[data-jumpto]'),
-        $navBar: $('#nav-bar'),
+        $el: $('[data-jumpto]')
     },
 
     init: function () {
@@ -387,10 +386,10 @@ app.jump = {
 
     to: function (_target) {
         var self = this,
-            offsetTop = $(_target).offset().top;
+            offsetTop = Math.round($(_target).offset().top);
 
-        if (app.jump.settings.$navBar.length > 0) {
-            offsetTop = offsetTop - app.jump.settings.$navBar.height();
+        if (app.navBar.settings.$el.length > 0) {
+            offsetTop = offsetTop - app.navBar.settings.$el.height();
         }
 
         app.settings.$htmlAndBody.animate({scrollTop: offsetTop}, app.jump.settings.speed);
@@ -474,6 +473,7 @@ app.navBar = {
         fixedClass: 'nav-bar--fixed',
         showClass: 'nav-bar--show',
         mobileShowClass: 'nav-bar--mobile-show',
+        transformClass: 'nav-bar--transform',
         allwaysShowOnMobile: true,
         allwaysShowOnMobileClass: 'nav-bar--always-show-on-mobile'
     },
@@ -514,7 +514,7 @@ app.navBar = {
             }
 
             if (app.navBar.settings.hideOnScroll && _scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
-                app.navBar.settings.$el.addClass('nav-bar--transform');
+                app.navBar.settings.$el.addClass(app.navBar.settings.transformClass);
                 app.navBar.settings.$el.addClass(app.navBar.settings.showClass);
             }
         } else {
@@ -525,7 +525,7 @@ app.navBar = {
             }
 
             if (app.navBar.settings.hideOnScroll) {
-                app.navBar.settings.$el.removeClass('nav-bar--transform');
+                app.navBar.settings.$el.removeClass(app.navBar.settings.transformClass);
             }
         }
 
@@ -782,6 +782,34 @@ app.scrollSpy = {
         }
     }
 };
+app.scrollSpyNav = {
+    settings: {
+        $el: $('[data-scrollspy-nav]')
+    },
+
+    init: function (_scrollTop) {
+        var self = this,
+            windowHeight = app.settings.$window.height();
+
+        if (app.scrollSpyNav.settings.$el.length > 0) {
+            app.scrollSpyNav.settings.$el.each(function () {
+                var $this = $(this),
+                    $target = $('#' + $this.data('scrollspyNav')),
+                    targetTop = Math.round($target.position().top);
+
+                if (app.navBar.settings.$el.length > 0) {
+                    targetTop = targetTop - app.navBar.settings.$el.height();
+                }
+
+                if (_scrollTop >= targetTop) {
+                    _scrollTop >= (targetTop + $target.outerHeight()) ? $this.removeClass('scrollspy-nav--active') : $this.addClass('scrollspy-nav--active');
+                } else {
+                    $this.removeClass('scrollspy-nav--active');
+                }
+            });
+        }
+    }
+};
 app.tabs = {
     settings: {
         $nav: $('.tabs'),
@@ -906,6 +934,7 @@ app.settings.$document.ready(function () {
     var scrollTop = $(this).scrollTop();
 
     app.equalize.init();
+    app.scrollSpyNav.init(scrollTop);
     app.fastClick.init();
     app.fitVids.init();
     app.navBar.init(scrollTop);
@@ -935,6 +964,7 @@ app.settings.$window.on('scroll', function () {
     var scrollTop = $(this).scrollTop();
 
     app.scrollSpy.init();
+    app.scrollSpyNav.init(scrollTop);
     app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
     app.disableHover.init();
@@ -945,6 +975,7 @@ app.settings.$window.on('resize', function () {
 
     app.equalize.init();
     app.scrollSpy.init();
+    app.scrollSpyNav.init(scrollTop);
     app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
 });
