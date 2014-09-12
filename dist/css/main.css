@@ -1886,6 +1886,13 @@ Add this class to an element to fire an animation.
   margin-bottom: 0;
 }
 
+.column-centered,
+.column-centered:first-child {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 [class|=column-alpha],
 [class|=column-alpha-and-up],
 [class|=column-beta],
@@ -1918,6 +1925,16 @@ Add this class to an element to fire an animation.
     width: 8.33333%;
   }
 
+  .pre-1,
+  .pre-1:first-child {
+    margin-left: 8.57143%;
+  }
+
+  .post-1,
+  .post-1:first-child {
+    margin-right: 8.57143%;
+  }
+
   .column-2,
   .column-beta-and-up-2 {
     width: 14.28571%;
@@ -1925,6 +1942,16 @@ Add this class to an element to fire an animation.
   .grid--no-gutters .column-2, .grid--no-gutters
   .column-beta-and-up-2 {
     width: 16.66667%;
+  }
+
+  .pre-2,
+  .pre-2:first-child {
+    margin-left: 17.14286%;
+  }
+
+  .post-2,
+  .post-2:first-child {
+    margin-right: 17.14286%;
   }
 
   .column-3, .media__alpha,
@@ -1936,6 +1963,16 @@ Add this class to an element to fire an animation.
     width: 25%;
   }
 
+  .pre-3,
+  .pre-3:first-child {
+    margin-left: 25.71429%;
+  }
+
+  .post-3,
+  .post-3:first-child {
+    margin-right: 25.71429%;
+  }
+
   .column-4,
   .column-beta-and-up-4 {
     width: 31.42857%;
@@ -1943,6 +1980,16 @@ Add this class to an element to fire an animation.
   .grid--no-gutters .column-4, .grid--no-gutters
   .column-beta-and-up-4 {
     width: 33.33333%;
+  }
+
+  .pre-4,
+  .pre-4:first-child {
+    margin-left: 34.28571%;
+  }
+
+  .post-4,
+  .post-4:first-child {
+    margin-right: 34.28571%;
   }
 
   .column-5,
@@ -1954,6 +2001,16 @@ Add this class to an element to fire an animation.
     width: 41.66667%;
   }
 
+  .pre-5,
+  .pre-5:first-child {
+    margin-left: 42.85714%;
+  }
+
+  .post-5,
+  .post-5:first-child {
+    margin-right: 42.85714%;
+  }
+
   .column-6,
   .column-beta-and-up-6 {
     width: 48.57143%;
@@ -1961,6 +2018,16 @@ Add this class to an element to fire an animation.
   .grid--no-gutters .column-6, .grid--no-gutters
   .column-beta-and-up-6 {
     width: 50%;
+  }
+
+  .pre-6,
+  .pre-6:first-child {
+    margin-left: 51.42857%;
+  }
+
+  .post-6,
+  .post-6:first-child {
+    margin-right: 51.42857%;
   }
 
   .column-7,
@@ -1972,6 +2039,16 @@ Add this class to an element to fire an animation.
     width: 58.33333%;
   }
 
+  .pre-7,
+  .pre-7:first-child {
+    margin-left: 60%;
+  }
+
+  .post-7,
+  .post-7:first-child {
+    margin-right: 60%;
+  }
+
   .column-8,
   .column-beta-and-up-8 {
     width: 65.71429%;
@@ -1979,6 +2056,16 @@ Add this class to an element to fire an animation.
   .grid--no-gutters .column-8, .grid--no-gutters
   .column-beta-and-up-8 {
     width: 66.66667%;
+  }
+
+  .pre-8,
+  .pre-8:first-child {
+    margin-left: 68.57143%;
+  }
+
+  .post-8,
+  .post-8:first-child {
+    margin-right: 68.57143%;
   }
 
   .column-9, .media__beta,
@@ -1990,6 +2077,16 @@ Add this class to an element to fire an animation.
     width: 75%;
   }
 
+  .pre-9,
+  .pre-9:first-child {
+    margin-left: 77.14286%;
+  }
+
+  .post-9,
+  .post-9:first-child {
+    margin-right: 77.14286%;
+  }
+
   .column-10,
   .column-beta-and-up-10 {
     width: 82.85714%;
@@ -1997,6 +2094,16 @@ Add this class to an element to fire an animation.
   .grid--no-gutters .column-10, .grid--no-gutters
   .column-beta-and-up-10 {
     width: 83.33333%;
+  }
+
+  .pre-10,
+  .pre-10:first-child {
+    margin-left: 85.71429%;
+  }
+
+  .post-10,
+  .post-10:first-child {
+    margin-right: 85.71429%;
   }
 
   .column-11,
@@ -2008,6 +2115,16 @@ Add this class to an element to fire an animation.
     width: 91.66667%;
   }
 
+  .pre-11,
+  .pre-11:first-child {
+    margin-left: 94.28571%;
+  }
+
+  .post-11,
+  .post-11:first-child {
+    margin-right: 94.28571%;
+  }
+
   .column-12,
   .column-beta-and-up-12 {
     width: 100%;
@@ -2015,6 +2132,16 @@ Add this class to an element to fire an animation.
   .grid--no-gutters .column-12, .grid--no-gutters
   .column-beta-and-up-12 {
     width: 100%;
+  }
+
+  .pre-12,
+  .pre-12:first-child {
+    margin-left: 102.85714%;
+  }
+
+  .post-12,
+  .post-12:first-child {
+    margin-right: 102.85714%;
   }
 }
 /**

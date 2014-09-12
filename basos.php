@@ -89,47 +89,114 @@
                     <div class="container">
                         <h1>Grid</h1>
                         <div class="grid">
-                            <div class="column-12 block">column-12</div>
+                            <div class="column-12">
+                                <div class="block">column-12</div>
+                            </div>
                         </div>
                         <div class="grid">
-                            <div class="column-6 block">column-6</div>
-                            <div class="column-6 block">column-6</div>
+                            <div class="column-6">
+                                <div class="block">column-6</div>
+                            </div>
+                            <div class="column-6">
+                                <div class="block">column-6</div>
+                            </div>
                         </div>
                         <div class="grid">
-                            <div class="column-4 block">column-4</div>
-                            <div class="column-8 block">column-8</div>
+                            <div class="column-4">
+                                <div class="block">column-4</div>
+                            </div>
+                            <div class="column-8">
+                                <div class="block">column-8</div>
+                            </div>
                         </div>
                         <div class="grid">
-                            <div class="column-2 block">column-2</div>
-                            <div class="column-10 block">column-10</div>
+                            <div class="column-2">
+                                <div class="block">column-2</div>
+                            </div>
+                            <div class="column-10">
+                                <div class="block">column-10</div>
+                            </div>
                         </div>
                         <div class="grid">
-                            <div class="column-7 block">column-7</div>
-                            <div class="column-5 block">column-5</div>
+                            <div class="column-7">
+                                <div class="block">column-7</div>
+                            </div>
+                            <div class="column-5">
+                                <div class="block">column-5</div>
+                            </div>
                         </div>
                         <div class="grid">
-                            <div class="column-9 block">column-9</div>
-                            <div class="column-3 block">column-3</div>
+                            <div class="column-9">
+                                <div class="block">column-9</div>
+                            </div>
+                            <div class="column-3">
+                                <div class="block">column-3</div>
+                            </div>
                         </div>
                         <div class="grid">
-                            <div class="column-3 block">column-3</div>
-                            <div class="column-3 block">column-3</div>
-                            <div class="column-3 block">column-3</div>
-                            <div class="column-3 block">column-3</div>
+                            <div class="column-3">
+                                <div class="block">column-3</div>
+                            </div>
+                            <div class="column-3">
+                                <div class="block">column-3</div>
+                            </div>
+                            <div class="column-3">
+                                <div class="block">column-3</div>
+                            </div>
+                            <div class="column-3">
+                                <div class="block">column-3</div>
+                            </div>
                         </div>
                         <h2>No gutters</h2>
                         <div class="grid grid--no-gutters">
-                            <div class="column-3 block">column-3</div>
-                            <div class="column-3 block">column-3</div>
-                            <div class="column-3 block">column-3</div>
-                            <div class="column-3 block">column-3</div>
+                            <div class="column-3">
+                                <div class="block">column-3</div>
+                            </div>
+                            <div class="column-3">
+                                <div class="block">column-3</div>
+                            </div>
+                            <div class="column-3">
+                                <div class="block">column-3</div>
+                            </div>
+                            <div class="column-3">
+                                <div class="block">column-3</div>
+                            </div>
                         </div>
                         <h2 class="margin-beta-top">Breakpoint specific</h2>
                         <div class="grid">
-                            <div class="column-alpha-6 column-beta-12 column-gamma-and-up-3 block">column-3</div>
-                            <div class="column-alpha-6 column-beta-4 column-beta--first column-gamma-and-up-3 block">column-3</div>
-                            <div class="column-alpha-6 column-alpha--first column-beta-4 column-gamma-and-up-3 block">column-3</div>
-                            <div class="column-alpha-6 column-beta-4 column-gamma-and-up-3 block">column-3</div>
+                            <div class="column-alpha-6 column-beta-12 column-gamma-and-up-3">
+                                <div class="block">Lorem ipsum dolor sit amet</div>
+                            </div>
+                            <div class="column-alpha-6 column-beta-4 column-beta--first column-gamma-and-up-3">
+                                <div class="block">Lorem ipsum dolor sit amet</div>
+                            </div>
+                            <div class="column-alpha-6 column-alpha--first column-beta-4 column-gamma-and-up-3">
+                                <div class="block">Lorem ipsum dolor sit amet</div>
+                            </div>
+                            <div class="column-alpha-6 column-beta-4 column-gamma-and-up-3">
+                                <div class="block">Lorem ipsum dolor sit amet</div>
+                            </div>
+                        </div>
+                        <h2>Centered</h2>
+                        <div class="grid">
+                            <div class="column-6 column-centered">
+                                <div class="block">column-6</div>
+                            </div>
+                        </div>
+                        <h2>Pre</h2>
+                        <div class="grid">
+                            <div class="column-6 pre-2">
+                                <div class="block">column-6 pre-2</div>
+                            </div>
+                        </div>
+                        <h2>Post</h2>
+                        <div class="grid">
+                            <div class="column-6 post-2">
+                                <div class="block">column-7 post-1</div>
+                            </div>
+                            <div class="column-4">
+                                <div class="block">column-4</div>
+                            </div>
                         </div>
                     </div>
                 </section>

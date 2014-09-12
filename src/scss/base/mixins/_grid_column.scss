@@ -18,6 +18,16 @@
                     width: 100%/map-get($susy, columns)*$i;
                 }
             }
+
+            .pre-#{$i},
+            .pre-#{$i}:first-child {
+                @include push($i of map-get($susy, columns));
+            }
+
+            .post-#{$i},
+            .post-#{$i}:first-child {
+                @include post($i of map-get($susy, columns));
+            }
         }
     }
 }
