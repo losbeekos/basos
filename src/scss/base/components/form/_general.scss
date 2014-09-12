@@ -4,6 +4,10 @@
 
 .form__row {
     @extend .clearfix;
+
+    .form--vertical & {
+        margin-bottom: gutter(map-get($susy, columns));
+    }
 }
 
 .form__label {
@@ -15,6 +19,10 @@
 
     @include breakpoint(beta-and-up) {
         text-align: map-get($form, label-text-align);
+    }
+
+    .form--vertical & {
+        text-align: left;
     }
 }
 

@@ -570,7 +570,6 @@
                                 </div>
                             </fieldset>
 
-
                             <fieldset>
                                 <legend>Live validation (<a href="http://parsleyjs.org/">http://data-parsleyjs.org</a>)</legend>
                                 <div class="form__row">
@@ -698,13 +697,47 @@
                                 <input class="btn btn--beta btn--medium" type="submit" value="verzenden" />
                             </div>
 
-                            <h2>Inline elements</h2>
-                            <p>Use the grid Luke, use the grid.</p>
-                            <div class="grid grid--no-gutters">
-                                <div class="column-3"><input type="text" placeholder="E-mailadres" /></div>
-                                <input class="btn btn--beta btn--medium" type="submit" value="verzenden" />
+                        </form>
+
+                        <form class="form form--vertical" data-form-validate novalidate="novalidate">
+                            <h2>Vertical form</h2>
+                            <div class="grid column-4 column-centered">
+                                <div class="form__row">
+                                    <div class="form__label">
+                                        <label>Aanhef</label>
+                                    </div>
+                                    <div class="form__input">
+                                        <div class="form__select">
+                                            <select name="aanhef" id="" required="required">
+                                                <option value="" disabled="disabled" selected="selected">Kies een optie</option>
+                                                <option value="Dhr.">Dhr.</option>
+                                                <option value="Mevr.">Mevr.</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form__row">
+                                    <div class="form__label">
+                                        <label>Website *</label>
+                                    </div>
+                                    <div class="form__input">
+                                        <input type="url" />
+                                    </div>
+                                </div>
+
+
                             </div>
 
+                        </form>
+
+                        <form class="form form--horizontal" data-form-validate novalidate="novalidate">
+                            <h2>Inline elements</h2>
+                            <p>Use the grid Luke, use the grid.</p>
+                            <div class="grid grid--no-gutters column-beta-8 column-gamma-and-up-5 column-centered">
+                                <div class="column-8"><input type="text" placeholder="E-mailadres" /></div>
+                                <div class="column-4"><input class="btn btn--beta btn--block btn--medium" type="submit" value="verzenden" /></div>
+                            </div>
                         </form>
                     </div>
                 </section>

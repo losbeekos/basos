@@ -1886,13 +1886,6 @@ Add this class to an element to fire an animation.
   margin-bottom: 0;
 }
 
-.column-centered,
-.column-centered:first-child {
-  float: none;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 [class|=column-alpha],
 [class|=column-alpha-and-up],
 [class|=column-beta],
@@ -2536,6 +2529,13 @@ Add this class to an element to fire an animation.
     width: 100%;
   }
 }
+.column-centered,
+.column-centered:first-child {
+  float: none;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* Fonts
 ==========
 */
@@ -4454,6 +4454,7 @@ progress:not([value])::-ms-fill {
   background-color: #e6e6e6;
 }
 .btn--block {
+  min-width: 100%;
   display: block;
 }
 .btn--divider {
@@ -4723,6 +4724,10 @@ select::-ms-expand {
 /* Form general classes
 ==========
 */
+.form--vertical .form__row {
+  margin-bottom: 2.85714%;
+}
+
 .form__label {
   margin-bottom: 0;
   /**
@@ -4743,6 +4748,9 @@ select::-ms-expand {
   .form__label {
     text-align: right;
   }
+}
+.form--vertical .form__label {
+  text-align: left;
 }
 
 .form__input,
