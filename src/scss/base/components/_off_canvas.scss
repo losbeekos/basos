@@ -146,6 +146,7 @@
     @include rem(padding, map-get($off-canvas, link-padding));
 
     &.active,
+    &.scrollspy-nav--active
     &:hover {
         background: lighten(map-get($off-canvas, bg-color), 3%);
     }

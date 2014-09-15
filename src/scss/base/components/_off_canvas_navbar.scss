@@ -1,0 +1,260 @@
+/* Off canvas
+==========
+*/
+
+.off-canvas-nav-bar {
+    @include breakpoint(alpha-and-beta) {
+        background: map-get($off-canvas, bg-color);
+        position: fixed;
+        z-index: 9999;
+        top: 0;
+        height: 100%;
+
+        @include rem(width, map-get($off-canvas, width));
+
+        &--left {
+            left: 0;
+            transform: translate3d(-#{map-get($off-canvas, width)}, 0, 0);
+            transition: transform map-get($base, transition-speed);
+
+            .off-canvas-show-left & {
+                transform: translate3d(0, 0, 0);
+            }
+
+            .no-csstransforms3d & {
+                left: -#{map-get($off-canvas, width)};
+            }
+
+            .no-csstransforms3d.off-canvas-show-left & {
+                left: 0;
+            }
+        }
+
+        &--right {
+            right: 0;
+            transform: translate3d(map-get($off-canvas, width), 0, 0);
+            transition: transform map-get($base, transition-speed);
+
+            .off-canvas-show-right & {
+                transform: translate3d(0, 0, 0);
+            }
+
+            .no-csstransforms3d & {
+                right: -#{map-get($off-canvas, width)};
+            }
+
+            .no-csstransforms3d.off-canvas-show-left & {
+                right: 0;
+            }
+        }
+    }
+
+    @include breakpoint(gamma-and-up) {
+        background: map-get($navBar, bg-color);
+        width: 100%;
+        max-height: 100%;
+        overflow-y: auto;
+        z-index: 999;
+        transition: all map-get($base, transition-speed);
+        text-align: center;
+
+        @include rem(min-width, map-get($container, min-width));
+
+        .csssticky & {
+            position: sticky;
+            top: 0;
+            left: 0;
+        }
+
+        .no-csssticky & {
+            position: relative;
+        }
+
+        @include breakpoint(gamma-and-up) {
+            max-height: inherit;
+            text-align: left;
+        }
+
+        .logo {
+            display: inline-block;
+            margin-bottom: -6px;
+
+            @include rem(padding-top, 12px);
+            @include rem(min-height, map-get($navBar, trigger-height));
+
+            @include breakpoint(gamma-and-up) {
+                float: left;
+                padding-top: 0;
+                min-height: inherit;
+                margin-bottom: 0;
+
+                @include rem(margin-top, 18px);
+            }
+        }
+
+        &--transform {
+            transform: translate3d(0, -100%, 0);
+
+            &.nav-bar--show {
+                transform: translate3d(0, 0, 0);
+            }
+
+            &.nav-bar--always-show-on-mobile {
+                @include breakpoint(alpha) {
+                    transform: translate3d(0, 0, 0);
+                }
+            }
+        }
+
+        &--transparent {
+            &:not(.nav-bar--fixed) {
+                @include breakpoint(gamma-and-up) {
+                    background: transparent;
+
+                    .nav-bar__link {
+                        color: map-get($color, black);
+
+                        &.nav-bar__link--active,
+                        &.scrollspy-nav--active,
+                        &:hover {
+                            background: transparent;
+                            color: map-get($color, beta);
+                        }
+                    }
+
+                    .nav-bar--transparent & {
+                        color: map-get($navBar, link-color);
+                    }
+                }
+            }
+        }
+
+        &--fixed {
+            .no-csssticky & {
+                position: fixed;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &__container {
+            margin-left: map-get($container, margin-left);
+            margin-right: map-get($container, margin-right);
+
+            @include rem(max-width, map-get($container, max-width));
+            @include rem(min-width, map-get($container, min-width));
+
+            @include breakpoint(gamma-and-up) {
+                @include rem(padding-left, map-get($container, padding)*4);
+                @include rem(padding-right, map-get($container, padding)*4);
+            }
+        }
+
+        &__nav {
+            @include breakpoint(gamma-and-up) {
+                @if map-get($navBar, nav-position) == left {
+                    float: left;
+                } @else {
+                    float: right;
+                }
+
+                @include rem(margin-left, map-get($navBar, nav-margin-left));
+            }
+        }
+
+        &__list {
+            clear: both;
+            border-top: 1px solid lighten(map-get($navBar, bg-color), 10%);
+            max-height: 0;
+            overflow: hidden;
+            transition: all map-get($base, transition-speed);
+
+            @include breakpoint(gamma-and-up) {
+                overflow: inherit;
+                max-height: inherit;
+                float: right;
+                border-top: 0;
+            }
+
+            .nav-bar--mobile-show & {
+                @include rem(max-height, 800px);
+            }
+
+            li {
+                display: block;
+                margin: 0;
+
+                @include breakpoint(gamma-and-up) {
+                    display: inline-block;
+                    margin-right: -4px;
+                }
+            }
+        }
+
+        &__link {
+            display: block;
+            color: map-get($navBar, link-color);
+            text-align: map-get($navBar, link-text-align);
+
+            @include rem(padding, map-get($navBar, link-padding));
+
+            @include breakpoint(gamma-and-up) {
+                display: inline-block;
+            }
+
+            &:hover {
+                background: lighten(map-get($navBar, bg-color), 10%);
+                color: map-get($navBar, link-color);
+            }
+
+            &.nav-bar__link--active,
+            &.scrollspy-nav--active {
+                background: map-get($color, beta);
+                color: map-get($navBar, link-color);
+            }
+
+        }
+    }
+}
+
+.off-canvas-nar-bar,
+.off-canvas-nar-bar__container,
+.off-canvas-nar-bar__nav,
+.off-canvas-nar-bar__list,
+.off-canvas-nar-bar__link {
+    @extend .clearfix;
+}
+
+.off-canvas-nar-bar__list {
+    @extend .list-inline;
+}
+
+.off-canvas-nav-bar__item {
+    @include breakpoint(alpha-and-beta) {
+        border-top: 1px solid map-get($off-canvas, item-border-top-color);
+        border-bottom: 1px solid map-get($off-canvas, item-border-bottom-color);
+
+        &:first-child {
+            border-top: 0;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+}
+
+.off-canvas-nav-bar__link {
+    @include breakpoint(alpha-and-beta) {
+        display: block;
+        color: map-get($off-canvas, link-color);
+
+        @include rem(padding, map-get($off-canvas, link-padding));
+
+        &.active,
+        &:hover,
+        &.scrollspy-nav--active {
+            background: lighten(map-get($off-canvas, bg-color), 3%);
+        }
+    }
+}

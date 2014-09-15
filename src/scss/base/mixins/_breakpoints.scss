@@ -18,6 +18,10 @@
         @media (min-width: 900px) { @content; }
     }
 
+    @else if $point == alpha-and-beta {
+       @media (max-width: 900px)  { @content; }
+    }
+
     @else if $point == beta {
         @media (min-width: 650px) and (max-width: 900px) { @content; }
     }

@@ -2,7 +2,11 @@
 
     <div id="background" class="background">
 
-        <!-- <div id="off-canvas-left" class="off-canvas off-canvas--left">
+        <!--
+
+        Off canvas left:
+
+        <div id="off-canvas-left" class="off-canvas off-canvas--left">
             <button id="off-canvas-toggle-left" class="off-canvas-toggle-left"></button>
             <nav class="off-canvas-nav">
                 <ul class="list-unstyled">
@@ -11,9 +15,12 @@
                     <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
                 </ul>
             </nav>
-        </div> -->
+        </div>
 
-        <!-- <div id="off-canvas-right" class="off-canvas off-canvas--right">
+
+        Off canvas right:
+
+        <div id="off-canvas-right" class="off-canvas off-canvas--right">
             <button id="off-canvas-toggle-right" class="off-canvas-toggle-right"></button>
             <nav class="off-canvas-nav">
                 <ul class="list-unstyled">
@@ -22,9 +29,29 @@
                     <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
                 </ul>
             </nav>
-        </div> -->
+        </div>
 
-        <header id="nav-bar" class="nav-bar off-canvas-push">
+
+        Off canvas navigation bar:
+
+        <header id="off-canvas-nav-bar" class="off-canvas-nav-bar off-canvas-nav-bar--right">
+            <button id="off-canvas-toggle-right" class="off-canvas-toggle-right hide-gamma-and-up hide-screenreaders"></button>
+            <div class="off-canvas-nav-bar__container">
+                <a class="logo hide-alpha-and-beta" href="/"><img src="dist/img/logo.png" alt="" /></a>
+                <nav class="off-canvas-nav-bar__nav">
+                    <ul class="off-canvas-nav-bar__list list-unstyled">
+                        <li class="off-canvas-nav-bar__item"><a data-scrollspy-nav="grid" class="off-canvas-nav-bar__link" href="#grid" data-jumpto>grid</a></li>
+                        <li class="off-canvas-nav-bar__item"><a data-scrollspy-nav="equalize" class="off-canvas-nav-bar__link" href="#equalize" data-jumpto>equalize</a></li>
+                        <li class="off-canvas-nav-bar__item"><a data-scrollspy-nav="buttons" class="off-canvas-nav-bar__link" href="#buttons" data-jumpto>buttons</a></li>
+                        <li class="off-canvas-nav-bar__item"><a data-scrollspy-nav="notifications" class="off-canvas-nav-bar__link" href="#notifications" data-jumpto>notifications</a></li>
+                        <li class="off-canvas-nav-bar__item"><a data-scrollspy-nav="form" class="off-canvas-nav-bar__link" href="#form" data-jumpto>form</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+         -->
+         <header id="nav-bar" class="nav-bar off-canvas-push">
             <div class="nav-bar__container">
                 <a class="logo" href="/"><img src="dist/img/logo.png" alt="" /></a>
                 <nav class="nav-bar__nav">
@@ -39,6 +66,10 @@
                 </nav>
             </div>
         </header>
+
+
+
+
 
         <div id="container" class="off-canvas-push">
             <!--[if lt IE 9]>
@@ -726,6 +757,11 @@
                                     </div>
                                 </div>
 
+                                <div class="form__actions">
+                                    <p class="form__required-field"><i>* = Verplicht veld</i></p>
+                                    <input class="btn btn--beta btn--medium" type="submit" value="verzenden" />
+                                </div>
+
 
                             </div>
 
@@ -734,7 +770,7 @@
                         <form class="form form--horizontal" data-form-validate novalidate="novalidate">
                             <h2>Inline elements</h2>
                             <p>Use the grid Luke, use the grid.</p>
-                            <div class="grid grid--no-gutters column-beta-8 column-gamma-and-up-5 column-centered">
+                            <div class="grid grid--no-gutters column-beta-6 column-gamma-and-up-5 column-centered">
                                 <div class="column-8"><input type="text" placeholder="E-mailadres" /></div>
                                 <div class="column-4"><input class="btn btn--beta btn--block btn--medium" type="submit" value="verzenden" /></div>
                             </div>

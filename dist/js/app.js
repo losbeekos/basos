@@ -468,7 +468,7 @@ app.modals = {
 };
 app.navBar = {
     settings: {
-        $el: $('#nav-bar'),
+        $el: $('#nav-bar, #off-canvas-nav-bar'),
         $trigger: $('#nav-bar-trigger'),
         navBarOffsetTop: null,
         navBarHeight: null,
@@ -484,6 +484,14 @@ app.navBar = {
 
     init: function(_scrollTop){
         if (app.navBar.settings.$el.length > 0) {
+            console.log(app.navBar.settings.$el.attr('id'));
+            if (app.navBar.settings.$el.attr('id') === 'off-canvas-nav-bar') {
+                app.navBar.settings.fixedClass =  'off-canvas-' + app.navBar.settings.fixedClass;
+                app.navBar.settings.showClass = 'off-canvas-' + app.navBar.settings.showClass;
+                app.navBar.settings.mobileShowClass = 'off-canvas-' + app.navBar.settings.mobileShowClass;
+                app.navBar.settings.transformClass = 'off-canvas-' + app.navBar.settings.transformClass;
+            }
+
             app.navBar.settings.navBarOffsetTop = app.navBar.settings.$el.offset().top,
             app.navBar.settings.navBarHeight = app.navBar.settings.$el.height();
 
@@ -646,9 +654,9 @@ app.offCanvas = {
     settings: {
         toggleLeft: '#off-canvas-toggle-left',
         toggleRight: '#off-canvas-toggle-right',
-        width: $('.off-canvas').outerWidth(),
-        $el: $('.off-canvas'),
-        $link: $('.off-canvas-nav__link')
+        width: $('.off-canvas, .off-canvas-nav-bar').outerWidth(),
+        $el: $('.off-canvas, .off-canvas-nav-bar'),
+        $link: $('.off-canvas-nav__link, .off-canvas-nav-bar__link')
     },
 
     init: function () {
@@ -684,33 +692,35 @@ app.offCanvas = {
     hideLeftAndRight: function () {
         app.settings.$html
             .removeClass('off-canvas-show-left')
-            .removeClass('off-canvas-show-right');
+            .removeClass('off-canvas-show-right')
+            .removeClass('off-canvas-nav-bar-show-left')
+            .removeClass('off-canvas-nav-bar-show-right');
     },
 
     showLeft: function () {
-        app.settings.$html.addClass('off-canvas-show-left');
+        app.settings.$html.addClass('off-canvas-show-left').addClass('off-canvas-nav-bar-show-left');
     },
 
     hideLeft: function () {
-        app.settings.$html.removeClass('off-canvas-show-left');
+        app.settings.$html.removeClass('off-canvas-show-left').removeClass('off-canvas-nav-bar-show-left');
     },
 
     toggleLeft: function () {
         app.offCanvas.hideRight();
-        app.settings.$html.toggleClass('off-canvas-show-left');
+        app.settings.$html.toggleClass('off-canvas-show-left').toggleClass('off-canvas-nav-bar-show-left');
     },
 
     showRight: function () {
-        app.settings.$html.addClass('off-canvas-show-right');
+        app.settings.$html.addClass('off-canvas-show-right').addClass('off-canvas-nav-bar-show-right');
     },
 
     hideRight: function () {
-        app.settings.$html.removeClass('off-canvas-show-right');
+        app.settings.$html.removeClass('off-canvas-show-right').removeClass('off-canvas-nav-bar-show-right');
     },
 
     toggleRight: function () {
         app.offCanvas.hideLeft();
-        app.settings.$html.toggleClass('off-canvas-show-right');
+        app.settings.$html.toggleClass('off-canvas-show-right').toggleClass('off-canvas-nav-bar-show-right');
     }
 };
 app.parallax = {
@@ -977,6 +987,7 @@ app.settings.$window.on('scroll', function () {
 app.settings.$window.on('resize', function () {
     var scrollTop = $(this).scrollTop();
 
+    app.navBar.init(scrollTop);
     app.equalize.init();
     app.scrollSpy.init();
     app.scrollSpyNav.init(scrollTop);

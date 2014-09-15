@@ -125,6 +125,10 @@
     @include breakpoint(beta-and-up) {
         @include pre(map-get($form, actions-pre));
     }
+
+    .form--vertical & {
+        margin-left: 0;
+    }
 }
 
 .form__required-field {

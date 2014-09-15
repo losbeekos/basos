@@ -61,6 +61,12 @@ p {
     pointer-events: none !important;
 }
 
+#container {
+    @include breakpoint(alpha-and-beta) {
+        padding-top: 0 !important;
+    }
+}
+
 .container {
     @extend .clearfix;
 

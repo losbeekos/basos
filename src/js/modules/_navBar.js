@@ -1,6 +1,6 @@
 app.navBar = {
     settings: {
-        $el: $('#nav-bar'),
+        $el: $('#nav-bar, #off-canvas-nav-bar'),
         $trigger: $('#nav-bar-trigger'),
         navBarOffsetTop: null,
         navBarHeight: null,
@@ -16,6 +16,14 @@ app.navBar = {
 
     init: function(_scrollTop){
         if (app.navBar.settings.$el.length > 0) {
+            console.log(app.navBar.settings.$el.attr('id'));
+            if (app.navBar.settings.$el.attr('id') === 'off-canvas-nav-bar') {
+                app.navBar.settings.fixedClass =  'off-canvas-' + app.navBar.settings.fixedClass;
+                app.navBar.settings.showClass = 'off-canvas-' + app.navBar.settings.showClass;
+                app.navBar.settings.mobileShowClass = 'off-canvas-' + app.navBar.settings.mobileShowClass;
+                app.navBar.settings.transformClass = 'off-canvas-' + app.navBar.settings.transformClass;
+            }
+
             app.navBar.settings.navBarOffsetTop = app.navBar.settings.$el.offset().top,
             app.navBar.settings.navBarHeight = app.navBar.settings.$el.height();
 

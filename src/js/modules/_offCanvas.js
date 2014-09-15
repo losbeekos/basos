@@ -2,9 +2,9 @@ app.offCanvas = {
     settings: {
         toggleLeft: '#off-canvas-toggle-left',
         toggleRight: '#off-canvas-toggle-right',
-        width: $('.off-canvas').outerWidth(),
-        $el: $('.off-canvas'),
-        $link: $('.off-canvas-nav__link')
+        width: $('.off-canvas, .off-canvas-nav-bar').outerWidth(),
+        $el: $('.off-canvas, .off-canvas-nav-bar'),
+        $link: $('.off-canvas-nav__link, .off-canvas-nav-bar__link')
     },
 
     init: function () {
@@ -40,32 +40,34 @@ app.offCanvas = {
     hideLeftAndRight: function () {
         app.settings.$html
             .removeClass('off-canvas-show-left')
-            .removeClass('off-canvas-show-right');
+            .removeClass('off-canvas-show-right')
+            .removeClass('off-canvas-nav-bar-show-left')
+            .removeClass('off-canvas-nav-bar-show-right');
     },
 
     showLeft: function () {
-        app.settings.$html.addClass('off-canvas-show-left');
+        app.settings.$html.addClass('off-canvas-show-left').addClass('off-canvas-nav-bar-show-left');
     },
 
     hideLeft: function () {
-        app.settings.$html.removeClass('off-canvas-show-left');
+        app.settings.$html.removeClass('off-canvas-show-left').removeClass('off-canvas-nav-bar-show-left');
     },
 
     toggleLeft: function () {
         app.offCanvas.hideRight();
-        app.settings.$html.toggleClass('off-canvas-show-left');
+        app.settings.$html.toggleClass('off-canvas-show-left').toggleClass('off-canvas-nav-bar-show-left');
     },
 
     showRight: function () {
-        app.settings.$html.addClass('off-canvas-show-right');
+        app.settings.$html.addClass('off-canvas-show-right').addClass('off-canvas-nav-bar-show-right');
     },
 
     hideRight: function () {
-        app.settings.$html.removeClass('off-canvas-show-right');
+        app.settings.$html.removeClass('off-canvas-show-right').removeClass('off-canvas-nav-bar-show-right');
     },
 
     toggleRight: function () {
         app.offCanvas.hideLeft();
-        app.settings.$html.toggleClass('off-canvas-show-right');
+        app.settings.$html.toggleClass('off-canvas-show-right').toggleClass('off-canvas-nav-bar-show-right');
     }
 };

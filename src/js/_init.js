@@ -41,6 +41,7 @@ app.settings.$window.on('scroll', function () {
 app.settings.$window.on('resize', function () {
     var scrollTop = $(this).scrollTop();
 
+    app.navBar.init(scrollTop);
     app.equalize.init();
     app.scrollSpy.init();
     app.scrollSpyNav.init(scrollTop);
