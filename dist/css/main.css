@@ -1557,6 +1557,157 @@ Add this class to an element to fire an animation.
   animation-name: fadeInUpBig;
 }
 
+/* FadeIn animation
+==========
+*/
+@-webkit-keyframes fadeInRotateAlpha {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+}
+@keyframes fadeInRotateAlpha {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(-2deg);
+    transform: rotate(-2deg);
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(5deg);
+    transform: rotate(5deg);
+  }
+}
+@-webkit-keyframes fadeInRotateBeta {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(2.5deg);
+    transform: rotate(2.5deg);
+  }
+}
+@keyframes fadeInRotateBeta {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(8deg);
+    transform: rotate(8deg);
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(2.5deg);
+    transform: rotate(2.5deg);
+  }
+}
+@-webkit-keyframes fadeInRotateGamma {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+}
+@keyframes fadeInRotateGamma {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(3deg);
+    transform: rotate(3deg);
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(-4deg);
+    transform: rotate(-4deg);
+  }
+}
+@-webkit-keyframes fadeInRotateEpsilon {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+  }
+}
+@keyframes fadeInRotateEpsilon {
+  0% {
+    opacity: 0;
+    -webkit-transform: rotate(-12deg);
+    transform: rotate(-12deg);
+  }
+  25% {
+    opacity: 0.8;
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: rotate(-6deg);
+    transform: rotate(-6deg);
+  }
+}
+.animation-fadeInRotateAlpha {
+  -webkit-animation-name: fadeInRotateAlpha;
+  animation-name: fadeInRotateAlpha;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.animation-fadeInRotateBeta {
+  -webkit-animation-name: fadeInRotateBeta;
+  animation-name: fadeInRotateBeta;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.animation-fadeInRotateGamma {
+  -webkit-animation-name: fadeInRotateGamma;
+  animation-name: fadeInRotateGamma;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
+.animation-fadeInRotateEpsilon {
+  -webkit-animation-name: fadeInRotateEpsilon;
+  animation-name: fadeInRotateEpsilon;
+  -webkit-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+}
+
 /* ZoomIn animation
 ==========
 */
