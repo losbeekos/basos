@@ -2730,7 +2730,7 @@ Add this class to an element to fire an animation.
 }
 .nav-bar__trigger, .off-canvas-toggle-left,
 .off-canvas-toggle-right, .accordion__trigger:after, .spinner:after, .form__select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form__password-toggle:after, .notification:before, .notification__close {
-  font-family: "icons", arial, verdana;
+  font-family: 'icons', arial, verdana;
   font-weight: normal;
 }
 
@@ -5901,6 +5901,7 @@ input[type=radio] + label:after {
   left: 0;
   width: 100%;
   min-width: 320px;
+  background: #000000;
   background: rgba(0, 0, 0, 0.85);
   text-align: center;
   z-index: 999;

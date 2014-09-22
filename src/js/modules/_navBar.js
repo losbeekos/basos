@@ -16,7 +16,7 @@ app.navBar = {
 
     init: function(_scrollTop){
         if (app.navBar.settings.$el.length > 0) {
-            console.log(app.navBar.settings.$el.attr('id'));
+
             if (app.navBar.settings.$el.attr('id') === 'off-canvas-nav-bar') {
                 app.navBar.settings.fixedClass =  'off-canvas-' + app.navBar.settings.fixedClass;
                 app.navBar.settings.showClass = 'off-canvas-' + app.navBar.settings.showClass;

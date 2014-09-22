@@ -7,6 +7,7 @@
     left: 0;
     width: 100%;
     min-width: map-get($container, min-width);
+    background: map-get($color, black);
     background: map-get($notifications, cookie-bg);
     text-align: center;
     z-index: 999;
