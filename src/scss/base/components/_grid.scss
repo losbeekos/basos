@@ -15,7 +15,7 @@
     width: 100%;
     margin-bottom: gutter(map-get($susy, columns));
 
-    @include breakpoint(beta-and-up){
+    @include mq(beta-and-up){
         float: left;
         margin-left: gutter(map-get($susy, columns));
     }

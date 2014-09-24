@@ -1,10 +1,10 @@
-/* Grid breakpoint
+/* Grid mq
 ==========
 */
 
 
 @mixin defaultGridColumn($key) {
-    @include breakpoint(#{$key}) {
+    @include mq(#{$key}) {
         .column-#{$key}--first {
             margin-left: 0;
         }
@@ -34,7 +34,7 @@
 
 
 @mixin gridColumn($key) {
-    @include breakpoint(#{$key}) {
+    @include mq(#{$key}) {
         .column-#{$key}--first {
             margin-left: 0;
         }

@@ -6,7 +6,7 @@
     @include rem(margin-left, 40px);
 
     .notification--beta & {
-        @include breakpoint(beta-and-up) {
+        @include mq(beta-and-up) {
             @include rem(margin-left, 70px);
         }
     }

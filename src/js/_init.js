@@ -38,6 +38,13 @@ app.settings.$window.on('scroll', function () {
     app.disableHover.init();
 });
 
+app.settings.$window.on('touchmove', function(){
+    var scrollTop = $(this).scrollTop();
+
+    app.scrollSpy.init();
+    app.scrollSpyNav.init(scrollTop);
+});
+
 app.settings.$window.on('resize', function () {
     var scrollTop = $(this).scrollTop();
 

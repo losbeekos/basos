@@ -8,12 +8,12 @@
     @include rem(padding-top, map-get($section, padding-vertical));
     @include rem(padding-bottom, map-get($section, padding-vertical));
 
-    @include breakpoint(beta) {
+    @include mq(beta) {
         @include rem(padding-top, map-get($section, padding-vertical)*1.5);
         @include rem(padding-bottom, map-get($section, padding-vertical)*1.5);
     }
 
-    @include breakpoint(gamma-and-up) {
+    @include mq(gamma-and-up) {
         @include rem(padding-top, map-get($section, padding-vertical)*2);
         @include rem(padding-bottom, map-get($section, padding-vertical)*2);
     }
@@ -39,11 +39,11 @@
 
     @include rem(height, 300px);
 
-    @include breakpoint(beta) {
+    @include mq(beta) {
         @include rem(height, 400px);
     }
 
-    @include breakpoint(gamma-and-up) {
+    @include mq(gamma-and-up) {
         @include rem(height, 500px);
     }
 }

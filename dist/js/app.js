@@ -1,16 +1,12 @@
 'use strict';
-/*================================================
-=            Test for position sticky            =
-=       http://caniuse.com/#feat=css-sticky      =
-================================================*/
-
-Modernizr.addTest('csssticky', function(){
-    var bool;
-    Modernizr.testStyles("#modernizr { position: -webkit-sticky;position: -moz-sticky;position: -o-sticky; position: -ms-sticky; position: sticky;}", function(elem, rule) {
-       bool = ((window.getComputedStyle ? getComputedStyle(elem, null) : elem.currentStyle).position).indexOf("sticky") !== -1;
-    });
-    return bool;
-});
+app.mediaQueries = {
+    alphaAndUp:   '(min-width: 0px)',
+    alpha:        '(max-width: 650px)',
+    betaAndUp:    '(min-width: 650px)',
+    beta:         '(min-width: 650px) and (max-width: 900px)',
+    alphaAndBeta: '(max-width: 900px)',
+    gammaAndUp:   '(min-width: 900px)'
+};
 app.settings = {
     version: '?v=1.0', // If the file changes, update this number
     $document: $(document),
@@ -502,7 +498,7 @@ app.navBar = {
     },
 
     addClasses: function () {
-        if (app.settings.$html.hasClass('no-csssticky')) {
+        if (app.settings.$html.hasClass('no-csspositionsticky')) {
             if (app.navBar.settings.$el.hasClass(app.navBar.settings.fixedClass)) {
                 app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
             }
@@ -521,7 +517,7 @@ app.navBar = {
         if (_scrollTop >= app.navBar.settings.navBarOffsetTop) {
             app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
 
-            if (app.settings.$html.hasClass('no-csssticky')) {
+            if (app.settings.$html.hasClass('no-csspositionsticky')) {
                 app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
             }
 
@@ -532,7 +528,7 @@ app.navBar = {
         } else {
             app.navBar.settings.$el.removeClass(app.navBar.settings.fixedClass);
 
-            if (app.settings.$html.hasClass('no-csssticky')) {
+            if (app.settings.$html.hasClass('no-csspositionsticky')) {
                 app.settings.$container.css({'padding-top': 0});
             }
 
@@ -737,20 +733,25 @@ app.parallax = {
                     parallaxData = $parallax.data(),
                     parallaxSpeed = parallaxData.parallaxSpeed,
                     parallaxOffset = $parallax.offset(),
-                    parallaxOffsetTop = parallaxOffset.top;
+                    parallaxOffsetTop = parallaxOffset.top,
+                    $img = $parallax.find('.parallax__img');
 
                 if (parallaxSpeed === undefined) {
                     parallaxSpeed = -4;
                 }
 
-                if (!helper.outView($parallax) && app.settings.$window.width() > 700) {
+                if (Modernizr.mq(app.mediaQueries.alpha)) {
+                    $img.removeAttr('style');
+                }
+
+                if (!helper.outView($parallax) && Modernizr.mq(app.mediaQueries.betaAndUp)) {
                     var yPos = (_scrollTop / parallaxSpeed);
 
                     if (parallaxOffsetTop > app.settings.windowHeight) {
                         yPos = (_scrollTop - Math.round(parallaxOffsetTop - app.settings.windowHeight)) / parallaxSpeed;
                     }
 
-                    $parallax.find('.parallax__img').css({
+                    $img.css({
                         'transform': 'translate3d(0, ' + yPos +  'px, 0)',
                         'transition': 'none'
                     });
@@ -982,6 +983,13 @@ app.settings.$window.on('scroll', function () {
     app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
     app.disableHover.init();
+});
+
+app.settings.$window.on('touchmove', function(){
+    var scrollTop = $(this).scrollTop();
+
+    app.scrollSpy.init();
+    app.scrollSpyNav.init(scrollTop);
 });
 
 app.settings.$window.on('resize', function () {

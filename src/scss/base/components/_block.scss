@@ -7,11 +7,11 @@
 
     @include rem(padding, map-get($block, padding-alpha));
 
-    @include breakpoint(beta) {
+    @include mq(beta) {
         @include rem(padding, map-get($block, padding-beta));
     }
 
-    @include breakpoint(gamma-and-up) {
+    @include mq(gamma-and-up) {
         @include rem(padding, map-get($block, padding-gamma));
     }
 }

@@ -17,7 +17,7 @@
         @include rem(line-height, map-get($form, label-line-height));
     }
 
-    @include breakpoint(beta-and-up) {
+    @include mq(beta-and-up) {
         text-align: map-get($form, label-text-align);
     }
 
@@ -104,7 +104,7 @@
 }
 
 .form__input-list {
-    @include breakpoint(beta-and-up) {
+    @include mq(beta-and-up) {
         @include rem(margin-top, map-get($form, input-list-margin-top));
     }
 
@@ -122,7 +122,7 @@
 .form__actions {
     @include rem(margin-top, map-get($form, actions-margin-top));
 
-    @include breakpoint(beta-and-up) {
+    @include mq(beta-and-up) {
         @include pre(map-get($form, actions-pre));
     }
 

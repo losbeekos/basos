@@ -2,7 +2,7 @@
 ==========
 */
 
-@include breakpoint(alpha) {
+@include mq(alpha) {
     .hide-alpha,
     .hide-alpha-and-beta {
         border: 0;
@@ -16,7 +16,7 @@
     }
 }
 
-@include breakpoint(beta) {
+@include mq(beta) {
     .hide-beta,
     .hide-alpha-and-beta {
         border: 0;
@@ -30,7 +30,7 @@
     }
 }
 
-@include breakpoint(beta-and-up) {
+@include mq(beta-and-up) {
     .hide-beta-and-up {
         border: 0;
         clip: rect(0 0 0 0);
@@ -43,7 +43,7 @@
     }
 }
 
-@include breakpoint(gamma-and-up) {
+@include mq(gamma-and-up) {
     .hide-gamma-and-up {
         border: 0;
         clip: rect(0 0 0 0);

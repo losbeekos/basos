@@ -7,27 +7,28 @@
     overflow: hidden;
     display: none;
 
-    @include breakpoint(beta) {
+    @include mq(beta) {
         @include rem(height, 350px);
     }
 
-    @include breakpoint(gamma-and-up) {
+    @include mq(gamma-and-up) {
         @include rem(height, 450px);
     }
 
     &__img {
         min-width: 100%;
 
-        @include breakpoint(beta) {
-            left: -20%;
+        @include mq(beta) {
+            left: -25%;
+            min-width: 150%;
         }
 
-        @include breakpoint(beta-and-up) {
+        @include mq(beta-and-up) {
             position: absolute;
             top: 0;
         }
 
-        @include breakpoint(gamma-and-up) {
+        @include mq(gamma-and-up) {
             left: 0;
         }
     }

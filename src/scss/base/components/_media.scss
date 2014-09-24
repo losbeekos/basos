@@ -35,7 +35,7 @@
 
         @include rem(margin-bottom, map-get($media, margin-bottom)/2);
 
-        @include breakpoint(beta-and-up) {
+        @include mq(beta-and-up) {
             margin-bottom: 0;
         }
 

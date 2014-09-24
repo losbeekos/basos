@@ -13,7 +13,7 @@
 .notification--beta {
     @include rem(padding, map-get($notifications, padding-alpha));
 
-    @include breakpoint(beta-and-up) {
+    @include mq(beta-and-up) {
         @include rem(padding, map-get($notifications, padding-beta));
         @include rem(min-height, 85px);
 

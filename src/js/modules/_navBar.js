@@ -34,7 +34,7 @@ app.navBar = {
     },
 
     addClasses: function () {
-        if (app.settings.$html.hasClass('no-csssticky')) {
+        if (app.settings.$html.hasClass('no-csspositionsticky')) {
             if (app.navBar.settings.$el.hasClass(app.navBar.settings.fixedClass)) {
                 app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
             }
@@ -53,7 +53,7 @@ app.navBar = {
         if (_scrollTop >= app.navBar.settings.navBarOffsetTop) {
             app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
 
-            if (app.settings.$html.hasClass('no-csssticky')) {
+            if (app.settings.$html.hasClass('no-csspositionsticky')) {
                 app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
             }
 
@@ -64,7 +64,7 @@ app.navBar = {
         } else {
             app.navBar.settings.$el.removeClass(app.navBar.settings.fixedClass);
 
-            if (app.settings.$html.hasClass('no-csssticky')) {
+            if (app.settings.$html.hasClass('no-csspositionsticky')) {
                 app.settings.$container.css({'padding-top': 0});
             }
 

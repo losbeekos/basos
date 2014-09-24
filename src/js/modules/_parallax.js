@@ -12,20 +12,25 @@ app.parallax = {
                     parallaxData = $parallax.data(),
                     parallaxSpeed = parallaxData.parallaxSpeed,
                     parallaxOffset = $parallax.offset(),
-                    parallaxOffsetTop = parallaxOffset.top;
+                    parallaxOffsetTop = parallaxOffset.top,
+                    $img = $parallax.find('.parallax__img');
 
                 if (parallaxSpeed === undefined) {
                     parallaxSpeed = -4;
                 }
 
-                if (!helper.outView($parallax) && app.settings.$window.width() > 700) {
+                if (Modernizr.mq(app.mediaQueries.alpha)) {
+                    $img.removeAttr('style');
+                }
+
+                if (!helper.outView($parallax) && Modernizr.mq(app.mediaQueries.betaAndUp)) {
                     var yPos = (_scrollTop / parallaxSpeed);
 
                     if (parallaxOffsetTop > app.settings.windowHeight) {
                         yPos = (_scrollTop - Math.round(parallaxOffsetTop - app.settings.windowHeight)) / parallaxSpeed;
                     }
 
-                    $parallax.find('.parallax__img').css({
+                    $img.css({
                         'transform': 'translate3d(0, ' + yPos +  'px, 0)',
                         'transition': 'none'
                     });

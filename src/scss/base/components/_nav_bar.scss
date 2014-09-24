@@ -15,17 +15,17 @@
 
     @include rem(min-width, map-get($container, min-width));
 
-    .csssticky & {
+    .csspositionsticky & {
         position: sticky;
         top: 0;
         left: 0;
     }
 
-    .no-csssticky & {
+    .no-csspositionsticky & {
         position: relative;
     }
 
-    @include breakpoint(gamma-and-up) {
+    @include mq(gamma-and-up) {
         max-height: inherit;
         text-align: left;
     }
@@ -37,7 +37,7 @@
         @include rem(padding-top, 12px);
         @include rem(min-height, map-get($navBar, trigger-height));
 
-        @include breakpoint(gamma-and-up) {
+        @include mq(gamma-and-up) {
             float: left;
             padding-top: 0;
             min-height: inherit;
@@ -55,7 +55,7 @@
         }
 
         &.nav-bar--always-show-on-mobile {
-            @include breakpoint(alpha) {
+            @include mq(alpha) {
                 transform: translate3d(0, 0, 0);
             }
         }
@@ -63,7 +63,7 @@
 
     &--transparent {
         &:not(.nav-bar--fixed) {
-            @include breakpoint(gamma-and-up) {
+            @include mq(gamma-and-up) {
                 background: transparent;
 
                 .nav-bar__link {
@@ -85,7 +85,7 @@
     }
 
     &--fixed {
-        .no-csssticky & {
+        .no-csspositionsticky & {
             position: fixed;
             top: 0;
             left: 0;
@@ -101,7 +101,7 @@
         @include rem(max-width, map-get($container, max-width));
         @include rem(min-width, map-get($container, min-width));
 
-        @include breakpoint(gamma-and-up) {
+        @include mq(gamma-and-up) {
             @include rem(padding-left, map-get($container, padding)*4);
             @include rem(padding-right, map-get($container, padding)*4);
         }
@@ -110,7 +110,7 @@
     &__nav {
         @extend .clearfix;
 
-        @include breakpoint(gamma-and-up) {
+        @include mq(gamma-and-up) {
             @if map-get($navBar, nav-position) == left {
                 float: left;
             } @else {
@@ -136,7 +136,7 @@
         @include rem(height, map-get($navBar, trigger-height));
         @include rem(width, map-get($navBar, trigger-height));
 
-        @include breakpoint(gamma-and-up) {
+        @include mq(gamma-and-up) {
             display: none;
         }
 
@@ -165,7 +165,7 @@
         overflow: hidden;
         transition: all map-get($base, transition-speed);
 
-        @include breakpoint(gamma-and-up) {
+        @include mq(gamma-and-up) {
             overflow: inherit;
             max-height: inherit;
             float: right;
@@ -180,7 +180,7 @@
             display: block;
             margin: 0;
 
-            @include breakpoint(gamma-and-up) {
+            @include mq(gamma-and-up) {
                 display: inline-block;
                 margin-right: -4px;
             }
@@ -194,7 +194,7 @@
 
         @include rem(padding, map-get($navBar, link-padding));
 
-        @include breakpoint(gamma-and-up) {
+        @include mq(gamma-and-up) {
             display: inline-block;
         }
 

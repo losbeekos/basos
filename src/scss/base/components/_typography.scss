@@ -19,12 +19,12 @@ h1, .h1 {
     @include rem(font-size, 30px);
     @include rem(margin-bottom, 10px);
 
-    @include breakpoint(beta) {
+    @include mq(beta) {
         @include rem(font-size, 35px);
         @include rem(margin-bottom, 20px);
     }
 
-    @include breakpoint(gamma-and-up) {
+    @include mq(gamma-and-up) {
         @include rem(font-size, 40px);
         @include rem(margin-bottom, 40px);
     }
@@ -34,7 +34,7 @@ h2, .h2 {
     @include rem(font-size, 22px);
     @include rem(margin-bottom, 10px);
 
-    @include breakpoint(gamma-and-up) {
+    @include mq(gamma-and-up) {
         @include rem(font-size, 26px);
     }
 }

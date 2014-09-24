@@ -11,7 +11,7 @@
     &--medium {
         @include rem(padding, map-get($btn, padding-medium));
 
-        @include breakpoint(beta-and-up) {
+        @include mq(beta-and-up) {
             @include rem(padding, map-get($btn, padding-medium-beta));
             @include rem(font-size, map-get($btn, font-size-medium));
         }
@@ -20,7 +20,7 @@
     &--large {
         @include rem(padding, map-get($btn, padding-large));
 
-        @include breakpoint(beta-and-up) {
+        @include mq(beta-and-up) {
             @include rem(padding, map-get($btn, padding-large-beta));
             @include rem(font-size, map-get($btn, font-size-large));
         }

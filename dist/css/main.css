@@ -547,10 +547,10 @@ textarea {
 /* Mixins
 ==========
 */
-/* Breakpoint
+/* Media queries
 ==========
 */
-/* Grid breakpoint
+/* Grid mq
 ==========
 */
 /* Arrow
@@ -594,7 +594,7 @@ textarea {
 /**
 *
 * Usage:
-* @include breakpoint('gamma-and-up') {
+* @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
 }
@@ -616,7 +616,7 @@ textarea {
 /**
 *
 * Usage:
-* @include breakpoint('gamma-and-up') {
+* @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
 }
@@ -638,7 +638,7 @@ textarea {
 /**
 *
 * Usage:
-* @include breakpoint('gamma-and-up') {
+* @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
 }
@@ -659,7 +659,7 @@ textarea {
 /**
 *
 * Usage:
-* @include breakpoint('gamma-and-up') {
+* @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
 }
@@ -2044,7 +2044,7 @@ Add this class to an element to fire an animation.
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -2082,7 +2082,7 @@ Add this class to an element to fire an animation.
 /**
 *
 * Usage:
-* @include breakpoint('gamma-and-up') {
+* @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
 }
@@ -2324,7 +2324,7 @@ Add this class to an element to fire an animation.
 /**
 *
 * Usage:
-* @include breakpoint('gamma-and-up') {
+* @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
 }
@@ -2422,7 +2422,7 @@ Add this class to an element to fire an animation.
 /**
 *
 * Usage:
-* @include breakpoint('gamma-and-up') {
+* @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
 }
@@ -2520,7 +2520,7 @@ Add this class to an element to fire an animation.
 /**
 *
 * Usage:
-* @include breakpoint('gamma-and-up') {
+* @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
 }
@@ -2618,7 +2618,7 @@ Add this class to an element to fire an animation.
 /**
 *
 * Usage:
-* @include breakpoint('gamma-and-up') {
+* @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
 }
@@ -2800,7 +2800,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -2831,7 +2831,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -2840,7 +2840,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -2941,7 +2941,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -2950,7 +2950,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3003,7 +3003,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3012,7 +3012,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3059,20 +3059,20 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
   *
   **/
 }
-.csssticky .nav-bar {
+.csspositionsticky .nav-bar {
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   left: 0;
 }
-.no-csssticky .nav-bar {
+.no-csspositionsticky .nav-bar {
   position: relative;
 }
 @media (min-width: 900px) {
@@ -3091,7 +3091,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3120,7 +3120,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3137,7 +3137,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3159,7 +3159,7 @@ p {
     color: #ffffff;
   }
 }
-.no-csssticky .nav-bar--fixed {
+.no-csspositionsticky .nav-bar--fixed {
   position: fixed;
   top: 0;
   left: 0;
@@ -3174,7 +3174,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3193,7 +3193,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3223,7 +3223,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3256,7 +3256,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3281,7 +3281,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3303,7 +3303,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3472,7 +3472,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3481,7 +3481,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3548,20 +3548,20 @@ p {
     /**
     *
     * Usage:
-    * @include breakpoint('gamma-and-up') {
+    * @include mq('gamma-and-up') {
     *     CSS properties here..
     * }
     }
     *
     **/
   }
-  .csssticky .off-canvas-nav-bar {
+  .csspositionsticky .off-canvas-nav-bar {
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     left: 0;
   }
-  .no-csssticky .off-canvas-nav-bar {
+  .no-csspositionsticky .off-canvas-nav-bar {
     position: relative;
   }
 }
@@ -3582,7 +3582,7 @@ p {
     /**
     *
     * Usage:
-    * @include breakpoint('gamma-and-up') {
+    * @include mq('gamma-and-up') {
     *     CSS properties here..
     * }
     }
@@ -3613,7 +3613,7 @@ p {
     /**
     *
     * Usage:
-    * @include breakpoint('gamma-and-up') {
+    * @include mq('gamma-and-up') {
     *     CSS properties here..
     * }
     }
@@ -3632,7 +3632,7 @@ p {
     /**
     *
     * Usage:
-    * @include breakpoint('gamma-and-up') {
+    * @include mq('gamma-and-up') {
     *     CSS properties here..
     * }
     }
@@ -3656,7 +3656,7 @@ p {
   }
 }
 @media (min-width: 900px) {
-  .no-csssticky .off-canvas-nav-bar--fixed {
+  .no-csspositionsticky .off-canvas-nav-bar--fixed {
     position: fixed;
     top: 0;
     left: 0;
@@ -3671,7 +3671,7 @@ p {
     /**
     *
     * Usage:
-    * @include breakpoint('gamma-and-up') {
+    * @include mq('gamma-and-up') {
     *     CSS properties here..
     * }
     }
@@ -3692,7 +3692,7 @@ p {
     /**
     *
     * Usage:
-    * @include breakpoint('gamma-and-up') {
+    * @include mq('gamma-and-up') {
     *     CSS properties here..
     * }
     }
@@ -3718,7 +3718,7 @@ p {
     /**
     *
     * Usage:
-    * @include breakpoint('gamma-and-up') {
+    * @include mq('gamma-and-up') {
     *     CSS properties here..
     * }
     }
@@ -3745,7 +3745,7 @@ p {
     /**
     *
     * Usage:
-    * @include breakpoint('gamma-and-up') {
+    * @include mq('gamma-and-up') {
     *     CSS properties here..
     * }
     }
@@ -3769,7 +3769,7 @@ p {
     /**
     *
     * Usage:
-    * @include breakpoint('gamma-and-up') {
+    * @include mq('gamma-and-up') {
     *     CSS properties here..
     * }
     }
@@ -3797,7 +3797,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3821,7 +3821,7 @@ p {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3868,7 +3868,7 @@ h1, .h1 {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3877,7 +3877,7 @@ h1, .h1 {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -3909,7 +3909,7 @@ h2, .h2 {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -4350,7 +4350,7 @@ h6, .h6 {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -4611,7 +4611,7 @@ progress:not([value])::-ms-fill {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -4620,7 +4620,7 @@ progress:not([value])::-ms-fill {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -4644,7 +4644,7 @@ progress:not([value])::-ms-fill {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -4653,7 +4653,7 @@ progress:not([value])::-ms-fill {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -4662,7 +4662,7 @@ progress:not([value])::-ms-fill {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -4671,7 +4671,8 @@ progress:not([value])::-ms-fill {
 }
 @media (min-width: 650px) and (max-width: 900px) {
   .parallax__img {
-    left: -20%;
+    left: -25%;
+    min-width: 150%;
   }
 }
 @media (min-width: 650px) {
@@ -4714,7 +4715,7 @@ progress:not([value])::-ms-fill {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -4723,7 +4724,7 @@ progress:not([value])::-ms-fill {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -4762,7 +4763,7 @@ progress:not([value])::-ms-fill {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -4894,7 +4895,7 @@ progress:not([value])::-ms-fill {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -4915,7 +4916,7 @@ progress:not([value])::-ms-fill {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -5309,7 +5310,7 @@ select::-ms-expand {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -5398,7 +5399,7 @@ select::-ms-expand {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -5427,7 +5428,7 @@ select::-ms-expand {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -5799,7 +5800,7 @@ input[type=radio] + label:after {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
@@ -5855,7 +5856,7 @@ input[type=radio] + label:after {
   /**
   *
   * Usage:
-  * @include breakpoint('gamma-and-up') {
+  * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
   }
