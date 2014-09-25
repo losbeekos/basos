@@ -77,7 +77,7 @@
 /* Media
 ==========
 */
-/* Thumbnail grid
+/* Block grid
 ==========
 */
 /* Vendor
@@ -573,12 +573,12 @@ textarea {
 .off-canvas-nar-bar__container:before,
 .off-canvas-nar-bar__nav:before,
 .off-canvas-nar-bar__list:before,
-.off-canvas-nar-bar__link:before, .tabs:before, .media:before, .thumbnail-grid:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|=column]:after, .container:after,
+.off-canvas-nar-bar__link:before, .tabs:before, .media:before, .block-grid:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|=column]:after, .container:after,
 .container-beta:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .off-canvas-nar-bar:after,
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
 .off-canvas-nar-bar__list:after,
-.off-canvas-nar-bar__link:after, .tabs:after, .media:after, .thumbnail-grid:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
+.off-canvas-nar-bar__link:after, .tabs:after, .media:after, .block-grid:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
   content: '';
   display: table;
 }
@@ -587,7 +587,7 @@ textarea {
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
 .off-canvas-nar-bar__list:after,
-.off-canvas-nar-bar__link:after, .tabs:after, .media:after, .thumbnail-grid:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
+.off-canvas-nar-bar__link:after, .tabs:after, .media:after, .block-grid:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
   clear: both;
 }
 
@@ -4761,14 +4761,14 @@ progress:not([value])::-ms-fill {
   }
 }
 
-/* Thumbnail grid
+/* Block grid
 ==========
 */
-.thumbnail-grid {
+.block-grid {
   margin-left: -1%;
   margin-right: -1%;
 }
-.thumbnail-grid__item {
+.block-grid__item {
   position: relative;
   overflow: hidden;
   display: block;
@@ -4788,11 +4788,11 @@ progress:not([value])::-ms-fill {
   **/
 }
 @media (min-width: 650px) {
-  .thumbnail-grid__item {
+  .block-grid__item {
     width: 23%;
   }
 }
-.thumbnail-grid__item:before {
+.block-grid__item:before {
   content: '';
   background: rgba(0, 0, 0, 0.4);
   width: 100%;
@@ -4806,10 +4806,10 @@ progress:not([value])::-ms-fill {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.thumbnail-grid__item:hover:before {
+.block-grid__item:hover:before {
   opacity: 1;
 }
-.thumbnail-grid__img {
+.block-grid__img {
   width: 100%;
 }
 

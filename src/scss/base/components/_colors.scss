@@ -4,7 +4,7 @@
 
 .color {
     @each $key, $value in $color {
-        &-#{$key} {
+        &-#{"" + $key} {
             color: map-get($color, $key);
         }
     }
@@ -12,7 +12,7 @@
 
 .bg-color {
     @each $key, $value in $color {
-        &-#{$key} {
+        &-#{"" + $key} {
             background: map-get($color, $key);
         }
     }

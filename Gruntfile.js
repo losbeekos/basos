@@ -43,19 +43,43 @@ module.exports = function(grunt) {
         basos: basosConfig,
         pkg: grunt.file.readJSON('package.json'),
 
-        clean: ['<%= basos.dist %>'],
+        clean: {
+            js: ['<%= basos.dist %>/js'],
+            fonts: ['<%= basos.dist %>/fonts'],
+            images: ['<%= basos.dist %>/img']
+        },
 
         copy: {
-            now: {
+            js: {
                 files: [{
                     expand: true,
                     cwd: '<%= basos.src %>/',
                     src: [
                         'js/main.js',
                         'js/vendor/**/*',
+                    ],
+                    dest: '<%= basos.dist %>/'
+                }]
+            },
+
+            fonts: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= basos.src %>/',
+                    src: [
                         'fonts/**',
-                        'img/**',
                         '!fonts/src/**'
+                    ],
+                    dest: '<%= basos.dist %>/'
+                }]
+            },
+
+            images: {
+                files: [{
+                    expand: true,
+                    cwd: '<%= basos.src %>/',
+                    src: [
+                        'img/**',
                     ],
                     dest: '<%= basos.dist %>/'
                 }]
@@ -81,7 +105,6 @@ module.exports = function(grunt) {
 
         jshint: {
             files: [
-                'Gruntfile.js',
                 '<%= basos.src %>/js/*.js',
                 '<%= basos.src %>/js/helpers/*.js',
                 '<%= basos.src %>/js/modules/*.js',
@@ -219,22 +242,29 @@ module.exports = function(grunt) {
                 livereload: true,
             },
 
-            files: [
-                '<%= jshint.files %>',
-                '**/*.tpl',
-                '**/*.php',
-                '**/*.html',
-                'src/**/*'
-            ],
+            js: {
+                files: ['<%= jshint.files %>'],
+                tasks: ['clean:js', 'jshint', 'concat', 'copy:js'],
+            },
 
-            tasks: [
-                'jshint',
-                'clean',
-                'concat',
-                'copy',
-                'sass:dev',
-                'autoprefixer:dev'
-            ]
+            sass: {
+                files: ['src/scss/**/*'],
+                tasks: ['sass:dev', 'autoprefixer:dev'],
+            },
+
+            fonts: {
+                files: ['src/fonts/**/*'],
+                tasks: ['clean:fonts', 'copy:fonts']
+            },
+
+            images: {
+                files: ['src/img/**/*'],
+                tasks: ['clean:images', 'copy:images']
+            }
+
+            // dom: {
+            //     files: ['**/*.tpl', '**/*.php', '**/*.html'],
+            // }
         },
 
         connect: {
@@ -270,11 +300,19 @@ module.exports = function(grunt) {
                 bsFiles: {
                     src : [
                         'dist/js/app.js',
-                        'dist/css/main.css'
+                        'dist/js/main.js',
+                        'dist/js/vendor/modernizr/modernizr.js',
+                        'dist/css/main.css',
+                        'dist/img/**/*',
+                        'dist/fonts/**/*',
+                        '*.html',
+                        '*.php',
+                        '*.tpl'
                     ]
                 },
 
                 options: {
+                    browser: ['google chrome', 'firefox', 'safari', 'opera'],
                     proxy: '0.0.0.0:9000',
                     ghostMode: {
                         clicks: true,
