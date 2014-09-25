@@ -283,7 +283,7 @@ module.exports = function(grunt) {
                         scroll: true
                     },
                     scrollProportionally: true,
-                    startPath: '/index.php'
+                    startPath: '/index.html'
                 }
             }
         }
