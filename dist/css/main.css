@@ -568,11 +568,13 @@ textarea {
 /* Clearfix
 ==========
 */
-.clearfix:before, .grid:before, [class|=column]:before, .container:before, .nav-bar:before, .nav-bar__container:before, .nav-bar__nav:before, .off-canvas-nar-bar:before,
+.clearfix:before, .grid:before, [class|=column]:before, .container:before,
+.container-beta:before, .nav-bar:before, .nav-bar__container:before, .nav-bar__nav:before, .off-canvas-nar-bar:before,
 .off-canvas-nar-bar__container:before,
 .off-canvas-nar-bar__nav:before,
 .off-canvas-nar-bar__list:before,
-.off-canvas-nar-bar__link:before, .tabs:before, .media:before, .thumbnail-grid:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|=column]:after, .container:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .off-canvas-nar-bar:after,
+.off-canvas-nar-bar__link:before, .tabs:before, .media:before, .thumbnail-grid:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|=column]:after, .container:after,
+.container-beta:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .off-canvas-nar-bar:after,
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
 .off-canvas-nar-bar__list:after,
@@ -580,7 +582,8 @@ textarea {
   content: '';
   display: table;
 }
-.clearfix:after, .grid:after, [class|=column]:after, .container:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .off-canvas-nar-bar:after,
+.clearfix:after, .grid:after, [class|=column]:after, .container:after,
+.container-beta:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .off-canvas-nar-bar:after,
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
 .off-canvas-nar-bar__list:after,
@@ -2796,6 +2799,9 @@ p {
   pointer-events: none !important;
 }
 
+/* Container
+==========
+*/
 #container {
   /**
   *
@@ -2813,11 +2819,10 @@ p {
   }
 }
 
-.container {
+.container,
+.container-beta {
   margin-left: auto;
   margin-right: auto;
-  max-width: 1280px;
-  max-width: 80rem;
   min-width: 320px;
   min-width: 20rem;
   padding-left: 10px;
@@ -2848,7 +2853,8 @@ p {
   **/
 }
 @media (min-width: 650px) and (max-width: 900px) {
-  .container {
+  .container,
+  .container-beta {
     padding-left: 20px;
     padding-left: 1.25rem;
     padding-right: 20px;
@@ -2856,12 +2862,23 @@ p {
   }
 }
 @media (min-width: 900px) {
-  .container {
+  .container,
+  .container-beta {
     padding-left: 40px;
     padding-left: 2.5rem;
     padding-right: 40px;
     padding-right: 2.5rem;
   }
+}
+
+.container {
+  max-width: 1280px;
+  max-width: 80rem;
+}
+
+.container-beta {
+  max-width: 800px;
+  max-width: 50rem;
 }
 
 /*==============================
