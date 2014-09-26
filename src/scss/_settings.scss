@@ -11,6 +11,20 @@ $base: (
 );
 
 
+/* Media queries
+==========
+*/
+
+$mq: (
+    alpha   : 0px,
+    beta    : 600px,
+    gamma   : 800px,
+    epsilon : 1000px,
+    zeta    : 1200px,
+    eta     : 1400px
+);
+
+
 /* Colors
 ==========
 */

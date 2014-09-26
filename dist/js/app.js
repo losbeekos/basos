@@ -727,7 +727,7 @@ app.parallax = {
     init: function (_scrollTop) {
         var self = this;
 
-        if (app.parallax.settings.$el.length > 0 && app.settings.$html.hasClass('no-touch')) {
+        if (app.parallax.settings.$el.length > 0) {
             app.parallax.settings.$el.each(function () {
                 var $parallax = $(this),
                     parallaxData = $parallax.data(),
@@ -744,7 +744,7 @@ app.parallax = {
                     $img.removeAttr('style');
                 }
 
-                if (!helper.outView($parallax) && Modernizr.mq(app.mediaQueries.betaAndUp)) {
+                if (!helper.outView($parallax) && Modernizr.mq(app.mediaQueries.betaAndUp && app.settings.$html.hasClass('no-touch'))) {
                     var yPos = (_scrollTop / parallaxSpeed);
 
                     if (parallaxOffsetTop > app.settings.windowHeight) {

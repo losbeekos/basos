@@ -3,47 +3,63 @@
 */
 
 
-@mixin mq($point) {
+@mixin mq($query) {
     /**
     *
     * Usage:
     * @include mq('gamma-and-up') {
     *     CSS properties here..
     * }
-    }
     *
     **/
 
-    @if $point == gamma-and-up {
-        @media (min-width: 900px) { @content; }
+    @if $query == eta-and-up {
+        @media (min-width: map-get($mq, eta)) { @content; }
     }
 
-    @else if $point == alpha-and-beta {
-       @media (max-width: 900px)  { @content; }
+    @if $query == zeta {
+       @media (min-width: map-get($mq, zeta)) and (max-width: map-get($mq, eta)) { @content; }
     }
 
-    @else if $point == beta {
-        @media (min-width: 650px) and (max-width: 900px) { @content; }
+    @if $query == zeta-and-up {
+        @media (min-width: map-get($mq, zeta)) { @content; }
     }
 
-    @else if $point == beta-and-up {
-        @media (min-width: 650px) { @content; }
+    @if $query == epsilon {
+       @media (min-width: map-get($mq, epsilon)) and (max-width: map-get($mq, zeta)) { @content; }
     }
 
-    @else if $point == alpha {
-       @media (max-width: 650px)  { @content; }
+    @if $query == epsilon-and-up {
+        @media (min-width: map-get($mq, epsilon)) { @content; }
     }
 
-    @else if $point == alpha-and-up {
-       @media (min-width: 0)  { @content; }
+    @if $query == gamma-and-up {
+        @media (min-width: map-get($mq, gamma)) { @content; }
     }
-}
 
-@mixin mq-img-retina($width, $orientation) {
-    @media print,
-           (min-width: $width) and (orientation: $orientation) and (-o-min-device-pixel-ratio: 5/4),
-           (min-width: $width) and (orientation: $orientation) and (-webkit-min-device-pixel-ratio: 1.25),
-           (min-width: $width) and (orientation: $orientation) and (min-resolution: 144dppx) { @content }
+    @if $query == gamma {
+        @media (min-width: map-get($mq, gamma)) and (max-width: map-get($mq, epsilon)) { @content; }
+    }
+
+    @else if $query == alpha-and-beta {
+       @media (max-width: map-get($mq, gamma))  { @content; }
+    }
+
+    @else if $query == beta {
+        @media (min-width: map-get($mq, beta)) and (max-width: map-get($mq, gamma)) { @content; }
+    }
+
+    @else if $query == beta-and-up {
+        @media (min-width: map-get($mq, beta)) { @content; }
+    }
+
+    @else if $query == alpha {
+       @media (max-width: map-get($mq, alpha))  { @content; }
+    }
+
+    @else if $query == alpha-and-up {
+       @media (min-width: map-get($mq, alpha))  { @content; }
+    }
 }
 
 @mixin mq-img($path) {
@@ -54,20 +70,11 @@
     *
     **/
 
-    // Crappy displays
-    @media (min-width: 0)     and (orientation: landscape) { background-image: url(../img/#{$path}/480x320.jpg);   }
-    @media (min-width: 0)     and (orientation: portrait)  { background-image: url(../img/#{$path}/320x480.jpg);   }
-    @media (min-width: 480px) and (orientation: landscape) { background-image: url(../img/#{$path}/800x600.jpg);   }
-    @media (min-width: 480px) and (orientation: portrait)  { background-image: url(../img/#{$path}/600x800.jpg);   }
-    @media (min-width: 800px) and (orientation: landscape) { background-image: url(../img/#{$path}/1280x1024.jpg); }
-    @media (min-width: 800px) and (orientation: portrait)  { background-image: url(../img/#{$path}/1024x1280.jpg); }
-
-    // Retina displays
-    @include mq-img-retina(0, landscape)     { background-image: url(../img/#{$path}/480x320@2x.jpg);   }
-    @include mq-img-retina(0, portrait)      { background-image: url(../img/#{$path}/320x480@2x.jpg);   }
-    @include mq-img-retina(480px, landscape) { background-image: url(../img/#{$path}/800x600@2x.jpg);   }
-    @include mq-img-retina(480px, portrait)  { background-image: url(../img/#{$path}/600x800@2x.jpg);   }
-    @include mq-img-retina(800px, landscape) { background-image: url(../img/#{$path}/1280x1024@2x.jpg); }
-    @include mq-img-retina(800px, portrait)  { background-image: url(../img/#{$path}/1024x1280@2x.jpg); }
+    @media (min-width: map-get($mq, alpha)) and (orientation: landscape) { background-image: url(../img/#{$path}/480x320.jpg);   }
+    @media (min-width: map-get($mq, alpha)) and (orientation: portrait)  { background-image: url(../img/#{$path}/320x480.jpg);   }
+    @media (min-width: map-get($mq, beta)) and (orientation: landscape) { background-image: url(../img/#{$path}/1024x768.jpg);   }
+    @media (min-width: map-get($mq, beta)) and (orientation: portrait)  { background-image: url(../img/#{$path}/1024x768.jpg);   }
+    @media (min-width: map-get($mq, gamma)) and (orientation: landscape) { background-image: url(../img/#{$path}/1280x1024.jpg); }
+    @media (min-width: map-get($mq, gamma)) and (orientation: portrait)  { background-image: url(../img/#{$path}/1024x1280.jpg); }
 }
 

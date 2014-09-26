@@ -45,6 +45,7 @@ module.exports = function(grunt) {
 
         clean: {
             js: ['<%= basos.dist %>/js'],
+            tempsass: ['<%= basos.dist %>/css/temp.*'],
             fonts: ['<%= basos.dist %>/fonts'],
             images: ['<%= basos.dist %>/img']
         },
@@ -155,7 +156,7 @@ module.exports = function(grunt) {
                 },
 
                 files: {
-                    '<%= basos.dist %>/css/main.css': '<%= basos.src %>/scss/main.scss'
+                    '<%= basos.dist %>/css/temp.css': '<%= basos.src %>/scss/main.scss'
                 }
             }
         },
@@ -163,7 +164,7 @@ module.exports = function(grunt) {
         autoprefixer: {
             dev: {
                 files: {
-                    '<%= basos.dist %>/css/main.css': '<%= basos.dist %>/css/main.css'
+                    '<%= basos.dist %>/css/main.css': '<%= basos.dist %>/css/temp.css'
                 }
             }
         },
@@ -249,7 +250,7 @@ module.exports = function(grunt) {
 
             sass: {
                 files: ['src/scss/**/*'],
-                tasks: ['sass:dev', 'autoprefixer:dev'],
+                tasks: ['sass:dev', 'autoprefixer:dev', 'clean:tempsass'],
             },
 
             fonts: {
@@ -334,7 +335,8 @@ module.exports = function(grunt) {
         'concat',
         'copy',
         'sass:dev',
-        'autoprefixer:dev'
+        'autoprefixer:dev',
+        'clean:tempsass'
     ]);
 
     grunt.registerTask('dist', [
@@ -344,6 +346,7 @@ module.exports = function(grunt) {
         'copy',
         'sass:dev',
         'autoprefixer:dev',
+        'clean:tempsass',
         'cssmin',
         'uglify',
         'imagemin',

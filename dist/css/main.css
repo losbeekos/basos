@@ -8,6 +8,9 @@
 /* Base
 ==========
 */
+/* Media queries
+==========
+*/
 /* Colors
 ==========
 */
@@ -569,25 +572,25 @@ textarea {
 ==========
 */
 .clearfix:before, .grid:before, [class|=column]:before, .container:before,
-.container-beta:before, .nav-bar:before, .nav-bar__container:before, .nav-bar__nav:before, .off-canvas-nar-bar:before,
+.container-beta:before, .block-grid:before, .tabs:before, .nav-bar:before, .nav-bar__container:before, .nav-bar__nav:before, .media:before, .off-canvas-nar-bar:before,
 .off-canvas-nar-bar__container:before,
 .off-canvas-nar-bar__nav:before,
 .off-canvas-nar-bar__list:before,
-.off-canvas-nar-bar__link:before, .tabs:before, .media:before, .block-grid:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|=column]:after, .container:after,
-.container-beta:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .off-canvas-nar-bar:after,
+.off-canvas-nar-bar__link:before, .btn-container:before, .btn-group:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|=column]:after, .container:after,
+.container-beta:after, .block-grid:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
 .off-canvas-nar-bar__list:after,
-.off-canvas-nar-bar__link:after, .tabs:after, .media:after, .block-grid:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
+.off-canvas-nar-bar__link:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
   content: '';
   display: table;
 }
 .clearfix:after, .grid:after, [class|=column]:after, .container:after,
-.container-beta:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .off-canvas-nar-bar:after,
+.container-beta:after, .block-grid:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
 .off-canvas-nar-bar__list:after,
-.off-canvas-nar-bar__link:after, .tabs:after, .media:after, .block-grid:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
+.off-canvas-nar-bar__link:after, .btn-container:after, .btn-group:after, form:after, .form__row:after {
   clear: both;
 }
 
@@ -600,10 +603,9 @@ textarea {
 * @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
-}
 *
 **/
-@media (max-width: 650px) {
+@media (max-width: 0px) {
   .hide-alpha,
   .hide-alpha-and-beta {
     border: 0;
@@ -622,10 +624,9 @@ textarea {
 * @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
-}
 *
 **/
-@media (min-width: 650px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 800px) {
   .hide-beta,
   .hide-alpha-and-beta {
     border: 0;
@@ -644,10 +645,9 @@ textarea {
 * @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
-}
 *
 **/
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   .hide-beta-and-up {
     border: 0;
     clip: rect(0 0 0 0);
@@ -665,10 +665,9 @@ textarea {
 * @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
-}
 *
 **/
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .hide-gamma-and-up {
     border: 0;
     clip: rect(0 0 0 0);
@@ -686,13 +685,13 @@ textarea {
 /* Lists
 ==========
 */
-.list-unstyled, .list-inline, .nav-bar__list, .off-canvas-nar-bar__list, .tabs, .btn-group--inline, .dropdown ul, .media-list, .pricing-table, .btn-group--block, .parsley-container {
+.list-unstyled, .list-inline, .tabs, .nav-bar__list, .off-canvas-nar-bar__list, .btn-group--inline, .dropdown ul, .pricing-table, .media-list, .btn-group--block, .parsley-container {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
-.list-inline li, .nav-bar__list li, .off-canvas-nar-bar__list li, .tabs li, .btn-group--inline li {
+.list-inline li, .tabs li, .nav-bar__list li, .off-canvas-nar-bar__list li, .btn-group--inline li {
   display: inline;
   margin-right: 10px;
   margin-right: 0.625rem;
@@ -701,7 +700,8 @@ textarea {
 /* Visually hidden
 ==========
 */
-.visuallyhidden, .show-screenreaders {
+.visuallyhidden,
+.show-screenreaders {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -712,9 +712,8 @@ textarea {
   width: 1px;
 }
 
-.visuallyhidden.focusable:active, .focusable.show-screenreaders:active,
-.visuallyhidden.focusable:focus,
-.focusable.show-screenreaders:focus {
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
   clip: auto;
   height: auto;
   margin: 0;
@@ -2031,7 +2030,7 @@ Add this class to an element to fire an animation.
   animation-name: flipInY;
 }
 
-/* Components
+/* Mandatory components
 ==========
 */
 /* Grid
@@ -2050,11 +2049,10 @@ Add this class to an element to fire an animation.
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   [class|=column] {
     float: left;
     margin-left: 2.85714%;
@@ -2088,10 +2086,9 @@ Add this class to an element to fire an animation.
 * @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
-}
 *
 **/
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   .column-beta-and-up--first {
     margin-left: 0;
   }
@@ -2330,10 +2327,9 @@ Add this class to an element to fire an animation.
 * @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
-}
 *
 **/
-@media (max-width: 650px) {
+@media (max-width: 0px) {
   .column-alpha--first {
     margin-left: 0;
   }
@@ -2428,10 +2424,9 @@ Add this class to an element to fire an animation.
 * @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
-}
 *
 **/
-@media (min-width: 0) {
+@media (min-width: 0px) {
   .column-alpha-and-up--first {
     margin-left: 0;
   }
@@ -2526,10 +2521,9 @@ Add this class to an element to fire an animation.
 * @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
-}
 *
 **/
-@media (min-width: 650px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 800px) {
   .column-beta--first {
     margin-left: 0;
   }
@@ -2624,10 +2618,9 @@ Add this class to an element to fire an animation.
 * @include mq('gamma-and-up') {
 *     CSS properties here..
 * }
-}
 *
 **/
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .column-gamma-and-up--first {
     margin-left: 0;
   }
@@ -2723,20 +2716,6 @@ Add this class to an element to fire an animation.
   margin-right: auto;
 }
 
-/* Fonts
-==========
-*/
-@font-face {
-  font-family: "icons";
-  src: url("../fonts/icons/icons.eot");
-  src: url("../fonts/icons/icons.eot#iefix") format("embedded-opentype"), url("../fonts/icons/icons.svg#icons") format("svg"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype");
-}
-.nav-bar__trigger, .off-canvas-toggle-left,
-.off-canvas-toggle-right, .accordion__trigger:after, .spinner:after, .form__select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form__password-toggle:after, .notification:before, .notification__close {
-  font-family: 'icons', arial, verdana;
-  font-weight: normal;
-}
-
 /* Layout
 ==========
 */
@@ -2809,11 +2788,10 @@ p {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (max-width: 900px) {
+@media (max-width: 800px) {
   #container {
     padding-top: 0 !important;
   }
@@ -2839,7 +2817,6 @@ p {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
   /**
@@ -2848,11 +2825,10 @@ p {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (min-width: 650px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 800px) {
   .container,
   .container-beta {
     padding-left: 20px;
@@ -2861,7 +2837,7 @@ p {
     padding-right: 1.25rem;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .container,
   .container-beta {
     padding-left: 40px;
@@ -2879,6 +2855,237 @@ p {
 .container-beta {
   max-width: 800px;
   max-width: 50rem;
+}
+
+/* Sections
+==========
+*/
+.section {
+  color: #ffffff;
+  padding-top: 60px;
+  padding-top: 3.75rem;
+  padding-bottom: 60px;
+  padding-bottom: 3.75rem;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  .section {
+    padding-top: 90px;
+    padding-top: 5.625rem;
+    padding-bottom: 90px;
+    padding-bottom: 5.625rem;
+  }
+}
+@media (min-width: 800px) {
+  .section {
+    padding-top: 120px;
+    padding-top: 7.5rem;
+    padding-bottom: 120px;
+    padding-bottom: 7.5rem;
+  }
+}
+.section--alpha {
+  background: #ffffff;
+}
+.section--beta {
+  background: #2690b0;
+}
+.section--gamma {
+  background: #26a8b0;
+}
+.section--delta {
+  background: #26b0a1;
+}
+.section--epsilon {
+  background: #333333;
+}
+.section > .container > *:last-child {
+  margin-bottom: 0;
+}
+.section--alpha {
+  color: #222222;
+}
+
+.section-img {
+  background: url(../dist/img/someimage.jpg) center center fixed;
+  background-size: cover;
+  height: 300px;
+  height: 18.75rem;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  .section-img {
+    height: 400px;
+    height: 25rem;
+  }
+}
+@media (min-width: 800px) {
+  .section-img {
+    height: 500px;
+    height: 31.25rem;
+  }
+}
+
+.section__list {
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+
+.section__paragraph {
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+
+/* Fonts
+==========
+*/
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons/icons.eot");
+  src: url("../fonts/icons/icons.eot#iefix") format("embedded-opentype"), url("../fonts/icons/icons.svg#icons") format("svg"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype");
+}
+.nav-bar__trigger, .accordion__trigger:after, .spinner:after, .off-canvas-toggle-left,
+.off-canvas-toggle-right, .form__select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form__password-toggle:after, .notification:before, .notification__close {
+  font-family: 'icons', arial, verdana;
+  font-weight: normal;
+}
+
+/* Typography
+==========
+*/
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin-top: 0;
+}
+h1.no-margin, .h1.no-margin,
+h2.no-margin, .h2.no-margin,
+h3.no-margin, .h3.no-margin,
+h4.no-margin, .h4.no-margin,
+h5.no-margin, .h5.no-margin,
+h6.no-margin, .h6.no-margin {
+  margin-bottom: 0;
+}
+
+h1, .h1 {
+  font-size: 30px;
+  font-size: 1.875rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 600px) and (max-width: 800px) {
+  h1, .h1 {
+    font-size: 35px;
+    font-size: 2.1875rem;
+    margin-bottom: 20px;
+    margin-bottom: 1.25rem;
+  }
+}
+@media (min-width: 800px) {
+  h1, .h1 {
+    font-size: 40px;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    margin-bottom: 2.5rem;
+  }
+}
+
+h2, .h2 {
+  font-size: 22px;
+  font-size: 1.375rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 800px) {
+  h2, .h2 {
+    font-size: 26px;
+    font-size: 1.625rem;
+  }
+}
+
+h3, .h3 {
+  font-size: 22px;
+  font-size: 1.375rem;
+  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
+}
+
+h4, .h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+}
+
+h5, .h5 {
+  font-size: 16px;
+  font-size: 1rem;
+  margin-bottom: 8px;
+  margin-bottom: 0.5rem;
+}
+
+h6, .h6 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
 }
 
 /*==============================
@@ -2946,22 +3153,24 @@ p {
   background: #333333;
 }
 
-/* Sections
+/* Optional components
+==========
+You can comments some of these out
+for a smaller generated CSS file.
+*/
+/* Block
 ==========
 */
-.section {
-  color: #ffffff;
-  padding-top: 60px;
-  padding-top: 3.75rem;
-  padding-bottom: 60px;
-  padding-bottom: 3.75rem;
+.block {
+  background: whitesmoke;
+  padding: 10px;
+  padding: 0.625rem;
   /**
   *
   * Usage:
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
   /**
@@ -2970,1043 +3179,71 @@ p {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (min-width: 650px) and (max-width: 900px) {
-  .section {
-    padding-top: 90px;
-    padding-top: 5.625rem;
-    padding-bottom: 90px;
-    padding-bottom: 5.625rem;
-  }
-}
-@media (min-width: 900px) {
-  .section {
-    padding-top: 120px;
-    padding-top: 7.5rem;
-    padding-bottom: 120px;
-    padding-bottom: 7.5rem;
-  }
-}
-.section--alpha {
-  background: #ffffff;
-}
-.section--beta {
-  background: #2690b0;
-}
-.section--gamma {
-  background: #26a8b0;
-}
-.section--delta {
-  background: #26b0a1;
-}
-.section--epsilon {
-  background: #333333;
-}
-.section > .container > *:last-child {
-  margin-bottom: 0;
-}
-.section--alpha {
-  color: #222222;
-}
-
-.section-img {
-  background: url(../dist/img/someimage.jpg) center center fixed;
-  background-size: cover;
-  height: 300px;
-  height: 18.75rem;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 650px) and (max-width: 900px) {
-  .section-img {
-    height: 400px;
-    height: 25rem;
-  }
-}
-@media (min-width: 900px) {
-  .section-img {
-    height: 500px;
-    height: 31.25rem;
-  }
-}
-
-.section__list {
-  margin-bottom: 30px;
-  margin-bottom: 1.875rem;
-}
-
-.section__paragraph {
-  margin-bottom: 30px;
-  margin-bottom: 1.875rem;
-}
-
-/* Navigation bar
-==========
-*/
-.nav-bar {
-  background: #222222;
-  width: 100%;
-  max-height: 100%;
-  overflow-y: auto;
-  z-index: 999;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  text-align: center;
-  min-width: 320px;
-  min-width: 20rem;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-.csspositionsticky .nav-bar {
-  position: -webkit-sticky;
-  position: sticky;
-  top: 0;
-  left: 0;
-}
-.no-csspositionsticky .nav-bar {
-  position: relative;
-}
-@media (min-width: 900px) {
-  .nav-bar {
-    max-height: inherit;
-    text-align: left;
-  }
-}
-.nav-bar .logo {
-  display: inline-block;
-  margin-bottom: -6px;
-  padding-top: 12px;
-  padding-top: 0.75rem;
-  min-height: 50px;
-  min-height: 3.125rem;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 900px) {
-  .nav-bar .logo {
-    float: left;
-    padding-top: 0;
-    min-height: inherit;
-    margin-bottom: 0;
-    margin-top: 18px;
-    margin-top: 1.125rem;
-  }
-}
-.nav-bar--transform {
-  -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
-}
-.nav-bar--transform.nav-bar--show {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.nav-bar--transform.nav-bar--always-show-on-mobile {
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (max-width: 650px) {
-  .nav-bar--transform.nav-bar--always-show-on-mobile {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-.nav-bar--transparent:not(.nav-bar--fixed) {
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 900px) {
-  .nav-bar--transparent:not(.nav-bar--fixed) {
-    background: transparent;
-  }
-  .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
-    color: #000000;
-  }
-  .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
-    background: transparent;
-    color: #2690b0;
-  }
-  .nav-bar--transparent .nav-bar--transparent:not(.nav-bar--fixed) {
-    color: #ffffff;
-  }
-}
-.no-csspositionsticky .nav-bar--fixed {
-  position: fixed;
-  top: 0;
-  left: 0;
-}
-.nav-bar__container {
-  margin-left: auto;
-  margin-right: auto;
-  max-width: 1280px;
-  max-width: 80rem;
-  min-width: 320px;
-  min-width: 20rem;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 900px) {
-  .nav-bar__container {
-    padding-left: 40px;
-    padding-left: 2.5rem;
-    padding-right: 40px;
-    padding-right: 2.5rem;
-  }
-}
-.nav-bar__nav {
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 900px) {
-  .nav-bar__nav {
-    float: right;
-    margin-left: 0;
-    margin-left: 0;
-  }
-}
-.nav-bar__trigger {
-  display: inline-block;
-  background: #222222;
-  float: right;
-  text-align: center;
-  line-height: 50px;
-  position: absolute;
-  top: 0;
-  right: 0;
-  height: 50px;
-  height: 3.125rem;
-  width: 50px;
-  width: 3.125rem;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 900px) {
-  .nav-bar__trigger {
-    display: none;
-  }
-}
-.nav-bar__trigger:active, .nav-bar__trigger:hover {
-  background: #3c3c3c;
-}
-.nav-bar__trigger:before {
-  content: "";
-  color: #ffffff;
-  font-size: 30px;
-  font-size: 1.875rem;
-}
-.nav-bar--mobile-show .nav-bar__trigger:before {
-  content: "";
-}
-.nav-bar__list {
-  clear: both;
-  max-height: 0;
-  overflow: hidden;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 900px) {
-  .nav-bar__list {
-    overflow: inherit;
-    max-height: inherit;
-    float: right;
-    border-top: 0;
-  }
-}
-.nav-bar--mobile-show .nav-bar__list {
-  max-height: 800px;
-  max-height: 50rem;
-}
-.nav-bar__list li {
-  display: block;
-  margin: 0;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 900px) {
-  .nav-bar__list li {
-    display: inline-block;
-    margin-right: -4px;
-  }
-}
-.nav-bar__link {
-  display: block;
-  color: #ffffff;
-  text-align: center;
-  padding: 20px 30px;
-  padding: 1.25rem 1.875rem;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 900px) {
-  .nav-bar__link {
-    display: inline-block;
-  }
-}
-.nav-bar__link:hover {
-  background: #3c3c3c;
-  color: #ffffff;
-}
-.nav-bar__link.nav-bar__link--active, .nav-bar__link.scrollspy-nav--active {
-  background: #2690b0;
-  color: #ffffff;
-}
-
-/* Off canvas
-==========
-*/
-.off-canvas-toggle-left,
-.off-canvas-toggle-right {
-  background: #2690b0;
-  position: absolute;
-  top: 0;
-  z-index: 10000;
-  color: #ffffff;
-  text-align: center;
-  border: none;
-  font-size: 30px;
-  font-size: 1.875rem;
-  width: 50px;
-  width: 3.125rem;
-  height: 50px;
-  height: 3.125rem;
-}
-.off-canvas-toggle-left:hover,
-.off-canvas-toggle-right:hover {
-  background: #2ba1c5;
-  color: #ffffff;
-  text-decoration: none;
-}
-.off-canvas-toggle-left:active, .off-canvas-toggle-left:focus,
-.off-canvas-toggle-right:active,
-.off-canvas-toggle-right:focus {
-  outline: none;
-}
-
-.off-canvas-toggle-left {
-  right: -50px;
-  right: -3.125rem;
-}
-.off-canvas-toggle-left:before {
-  content: "";
-}
-.off-canvas-show-left .off-canvas-toggle-left:before {
-  content: "";
-}
-
-.off-canvas-toggle-right {
-  left: -50px;
-  left: -3.125rem;
-}
-.off-canvas-toggle-right:before {
-  content: "";
-}
-.off-canvas-show-right .off-canvas-toggle-right:before {
-  content: "";
-}
-
-.off-canvas {
-  background: #f2f2f2;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  height: 100%;
-  width: 260px;
-  width: 16.25rem;
-}
-.off-canvas--left {
-  left: 0;
-  -webkit-transform: translate3d(-260px, 0, 0);
-  transform: translate3d(-260px, 0, 0);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-}
-.off-canvas-show-left .off-canvas--left {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.no-csstransforms3d .off-canvas--left {
-  left: -260px;
-}
-.no-csstransforms3d.off-canvas-show-left .off-canvas--left {
-  left: 0;
-}
-.off-canvas--right {
-  right: 0;
-  -webkit-transform: translate3d(260px, 0, 0);
-  transform: translate3d(260px, 0, 0);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-}
-.off-canvas-show-right .off-canvas--right {
-  -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-.no-csstransforms3d .off-canvas--right {
-  right: -260px;
-}
-.no-csstransforms3d.off-canvas-show-left .off-canvas--right {
-  right: 0;
-}
-
-.off-canvas-push:after {
-  content: '';
-  background: #000000;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 999;
-  visibility: hidden;
-  opacity: 0;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-.off-canvas-show-left .off-canvas-push:after, .off-canvas-show-right .off-canvas-push:after {
-  visibility: visible;
-  opacity: 0.3;
-}
-.lt-ie10 .off-canvas-push:after {
-  display: none;
-}
-
-.off-canvas-nav__item {
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #e6e6e6;
-}
-.off-canvas-nav__item:first-child {
-  border-top: 0;
-}
-.off-canvas-nav__item:last-child {
-  border-bottom: 0;
-}
-
-.off-canvas-nav__link {
-  display: block;
-  color: #000000;
-  padding: 20px;
-  padding: 1.25rem;
-}
-.off-canvas-nav__link.active, .off-canvas-nav__link.scrollspy-nav--active
-.off-canvas-nav__link:hover {
-  background: #fafafa;
-}
-
-/* Off canvas
-==========
-*/
-.off-canvas-nav-bar {
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (max-width: 900px) {
-  .off-canvas-nav-bar {
-    background: #f2f2f2;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    height: 100%;
-    width: 260px;
-    width: 16.25rem;
-  }
-  .off-canvas-nav-bar--left {
-    left: 0;
-    -webkit-transform: translate3d(-260px, 0, 0);
-    transform: translate3d(-260px, 0, 0);
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-  }
-  .off-canvas-show-left .off-canvas-nav-bar--left {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .no-csstransforms3d .off-canvas-nav-bar--left {
-    left: -260px;
-  }
-  .no-csstransforms3d.off-canvas-show-left .off-canvas-nav-bar--left {
-    left: 0;
-  }
-  .off-canvas-nav-bar--right {
-    right: 0;
-    -webkit-transform: translate3d(260px, 0, 0);
-    transform: translate3d(260px, 0, 0);
-    -webkit-transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-  }
-  .off-canvas-show-right .off-canvas-nav-bar--right {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .no-csstransforms3d .off-canvas-nav-bar--right {
-    right: -260px;
-  }
-  .no-csstransforms3d.off-canvas-show-left .off-canvas-nav-bar--right {
-    right: 0;
-  }
-}
-@media (min-width: 900px) {
-  .off-canvas-nav-bar {
-    background: #222222;
-    width: 100%;
-    max-height: 100%;
-    overflow-y: auto;
-    z-index: 999;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    text-align: center;
-    min-width: 320px;
-    min-width: 20rem;
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    }
-    *
-    **/
-  }
-  .csspositionsticky .off-canvas-nav-bar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    left: 0;
-  }
-  .no-csspositionsticky .off-canvas-nav-bar {
-    position: relative;
-  }
-}
-@media (min-width: 900px) and (min-width: 900px) {
-  .off-canvas-nav-bar {
-    max-height: inherit;
-    text-align: left;
-  }
-}
-@media (min-width: 900px) {
-  .off-canvas-nav-bar .logo {
-    display: inline-block;
-    margin-bottom: -6px;
-    padding-top: 12px;
-    padding-top: 0.75rem;
-    min-height: 50px;
-    min-height: 3.125rem;
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    }
-    *
-    **/
-  }
-}
-@media (min-width: 900px) and (min-width: 900px) {
-  .off-canvas-nav-bar .logo {
-    float: left;
-    padding-top: 0;
-    min-height: inherit;
-    margin-bottom: 0;
-    margin-top: 18px;
-    margin-top: 1.125rem;
-  }
-}
-@media (min-width: 900px) {
-  .off-canvas-nav-bar--transform {
-    -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
-  }
-  .off-canvas-nav-bar--transform.nav-bar--show {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-  .off-canvas-nav-bar--transform.nav-bar--always-show-on-mobile {
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    }
-    *
-    **/
-  }
-}
-@media (min-width: 900px) and (max-width: 650px) {
-  .off-canvas-nav-bar--transform.nav-bar--always-show-on-mobile {
-    -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
-  }
-}
-@media (min-width: 900px) {
-  .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    }
-    *
-    **/
-  }
-}
-@media (min-width: 900px) and (min-width: 900px) {
-  .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
-    background: transparent;
-  }
-  .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
-    color: #000000;
-  }
-  .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active, .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
-    background: transparent;
-    color: #2690b0;
-  }
-  .nav-bar--transparent .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
-    color: #ffffff;
-  }
-}
-@media (min-width: 900px) {
-  .no-csspositionsticky .off-canvas-nav-bar--fixed {
-    position: fixed;
-    top: 0;
-    left: 0;
-  }
-  .off-canvas-nav-bar__container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 1280px;
-    max-width: 80rem;
-    min-width: 320px;
-    min-width: 20rem;
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    }
-    *
-    **/
-  }
-}
-@media (min-width: 900px) and (min-width: 900px) {
-  .off-canvas-nav-bar__container {
-    padding-left: 40px;
-    padding-left: 2.5rem;
-    padding-right: 40px;
-    padding-right: 2.5rem;
-  }
-}
-@media (min-width: 900px) {
-  .off-canvas-nav-bar__nav {
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    }
-    *
-    **/
-  }
-}
-@media (min-width: 900px) and (min-width: 900px) {
-  .off-canvas-nav-bar__nav {
-    float: right;
-    margin-left: 0;
-    margin-left: 0;
-  }
-}
-@media (min-width: 900px) {
-  .off-canvas-nav-bar__list {
-    clear: both;
-    border-top: 1px solid #3c3c3c;
-    max-height: 0;
-    overflow: hidden;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    }
-    *
-    **/
-  }
-}
-@media (min-width: 900px) and (min-width: 900px) {
-  .off-canvas-nav-bar__list {
-    overflow: inherit;
-    max-height: inherit;
-    float: right;
-    border-top: 0;
-  }
-}
-@media (min-width: 900px) {
-  .nav-bar--mobile-show .off-canvas-nav-bar__list {
-    max-height: 800px;
-    max-height: 50rem;
-  }
-  .off-canvas-nav-bar__list li {
-    display: block;
-    margin: 0;
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    }
-    *
-    **/
-  }
-}
-@media (min-width: 900px) and (min-width: 900px) {
-  .off-canvas-nav-bar__list li {
-    display: inline-block;
-    margin-right: -4px;
-  }
-}
-@media (min-width: 900px) {
-  .off-canvas-nav-bar__link {
-    display: block;
-    color: #ffffff;
-    text-align: center;
-    padding: 20px 30px;
-    padding: 1.25rem 1.875rem;
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    }
-    *
-    **/
-  }
-}
-@media (min-width: 900px) and (min-width: 900px) {
-  .off-canvas-nav-bar__link {
-    display: inline-block;
-  }
-}
-@media (min-width: 900px) {
-  .off-canvas-nav-bar__link:hover {
-    background: #3c3c3c;
-    color: #ffffff;
-  }
-  .off-canvas-nav-bar__link.nav-bar__link--active, .off-canvas-nav-bar__link.scrollspy-nav--active {
-    background: #2690b0;
-    color: #ffffff;
-  }
-}
-
-.off-canvas-nav-bar__item {
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (max-width: 900px) {
-  .off-canvas-nav-bar__item {
-    border-top: 1px solid #ffffff;
-    border-bottom: 1px solid #e6e6e6;
-  }
-  .off-canvas-nav-bar__item:first-child {
-    border-top: 0;
-  }
-  .off-canvas-nav-bar__item:last-child {
-    border-bottom: 0;
-  }
-}
-
-.off-canvas-nav-bar__link {
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (max-width: 900px) {
-  .off-canvas-nav-bar__link {
-    display: block;
-    color: #000000;
+@media (min-width: 600px) and (max-width: 800px) {
+  .block {
     padding: 20px;
     padding: 1.25rem;
   }
-  .off-canvas-nav-bar__link.active, .off-canvas-nav-bar__link:hover, .off-canvas-nav-bar__link.scrollspy-nav--active {
-    background: #fafafa;
+}
+@media (min-width: 800px) {
+  .block {
+    padding: 30px;
+    padding: 1.875rem;
   }
 }
 
-/* Typography
+/* Block grid
 ==========
 */
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  margin-top: 0;
+.block-grid {
+  margin-left: -1%;
+  margin-right: -1%;
 }
-h1.no-margin, .h1.no-margin,
-h2.no-margin, .h2.no-margin,
-h3.no-margin, .h3.no-margin,
-h4.no-margin, .h4.no-margin,
-h5.no-margin, .h5.no-margin,
-h6.no-margin, .h6.no-margin {
-  margin-bottom: 0;
-}
-
-h1, .h1 {
-  font-size: 30px;
-  font-size: 1.875rem;
-  margin-bottom: 10px;
-  margin-bottom: 0.625rem;
+.block-grid__item {
+  position: relative;
+  overflow: hidden;
+  display: block;
+  float: left;
+  width: 48%;
+  margin-bottom: 2%;
+  margin-left: 1%;
+  margin-right: 1%;
   /**
   *
   * Usage:
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
-  *
-  **/
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
   *
   **/
 }
-@media (min-width: 650px) and (max-width: 900px) {
-  h1, .h1 {
-    font-size: 35px;
-    font-size: 2.1875rem;
-    margin-bottom: 20px;
-    margin-bottom: 1.25rem;
+@media (min-width: 600px) {
+  .block-grid__item {
+    width: 23%;
   }
 }
-@media (min-width: 900px) {
-  h1, .h1 {
-    font-size: 40px;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-    margin-bottom: 2.5rem;
-  }
-}
-
-h2, .h2 {
-  font-size: 22px;
-  font-size: 1.375rem;
-  margin-bottom: 10px;
-  margin-bottom: 0.625rem;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 900px) {
-  h2, .h2 {
-    font-size: 26px;
-    font-size: 1.625rem;
-  }
-}
-
-h3, .h3 {
-  font-size: 22px;
-  font-size: 1.375rem;
-  margin-bottom: 10px;
-  margin-bottom: 0.625rem;
-}
-
-h4, .h4 {
-  font-size: 18px;
-  font-size: 1.125rem;
-  margin-bottom: 8px;
-  margin-bottom: 0.5rem;
-}
-
-h5, .h5 {
-  font-size: 16px;
-  font-size: 1rem;
-  margin-bottom: 8px;
-  margin-bottom: 0.5rem;
-}
-
-h6, .h6 {
-  font-size: 14px;
-  font-size: 0.875rem;
-  margin-bottom: 5px;
-  margin-bottom: 0.3125rem;
-}
-
-/* Tables
-==========
-*/
-.table-responsive {
+.block-grid__item:before {
+  content: '';
+  background: rgba(0, 0, 0, 0.4);
   width: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
 }
-
-.table {
+.block-grid__item:hover:before {
+  opacity: 1;
+}
+.block-grid__img {
   width: 100%;
-  margin-bottom: 30px;
-  margin-bottom: 1.875rem;
-}
-.table td,
-.table th {
-  padding: 10px;
-  text-align: left;
-  vertical-align: top;
-}
-.table td {
-  border-top: 1px solid #e3e3e3;
-}
-.table--hover tr:hover td {
-  background: #f6f6f6;
-}
-.table--zebra tr:nth-child(odd) td {
-  background: #f8f8f8;
-}
-.table--bordered {
-  border: 1px solid #e3e3e3;
-}
-.table--bordered td,
-.table--bordered th {
-  border-left: 1px solid #e3e3e3;
-}
-.table--bordered td:first-child,
-.table--bordered th:first-child {
-  border-left: none;
 }
 
 /* Tabs
@@ -4066,6 +3303,319 @@ h6, .h6 {
   height: auto;
   width: 100%;
   opacity: 1;
+}
+
+/* Navigation bar
+==========
+*/
+.nav-bar {
+  background: #222222;
+  width: 100%;
+  max-height: 100%;
+  overflow-y: auto;
+  z-index: 999;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  text-align: center;
+  min-width: 320px;
+  min-width: 20rem;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+.csspositionsticky .nav-bar {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+.no-csspositionsticky .nav-bar {
+  position: relative;
+}
+@media (min-width: 800px) {
+  .nav-bar {
+    max-height: inherit;
+    text-align: left;
+  }
+}
+.nav-bar .logo {
+  display: inline-block;
+  margin-bottom: -6px;
+  padding-top: 12px;
+  padding-top: 0.75rem;
+  min-height: 50px;
+  min-height: 3.125rem;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 800px) {
+  .nav-bar .logo {
+    float: left;
+    padding-top: 0;
+    min-height: inherit;
+    margin-bottom: 0;
+    margin-top: 18px;
+    margin-top: 1.125rem;
+  }
+}
+.nav-bar--transform {
+  -webkit-transform: translate3d(0, -100%, 0);
+  transform: translate3d(0, -100%, 0);
+}
+.nav-bar--transform.nav-bar--show {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.nav-bar--transform.nav-bar--always-show-on-mobile {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (max-width: 0px) {
+  .nav-bar--transform.nav-bar--always-show-on-mobile {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.nav-bar--transparent:not(.nav-bar--fixed) {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 800px) {
+  .nav-bar--transparent:not(.nav-bar--fixed) {
+    background: transparent;
+  }
+  .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
+    color: #000000;
+  }
+  .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
+    background: transparent;
+    color: #2690b0;
+  }
+  .nav-bar--transparent .nav-bar--transparent:not(.nav-bar--fixed) {
+    color: #ffffff;
+  }
+}
+.no-csspositionsticky .nav-bar--fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.nav-bar__container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1280px;
+  max-width: 80rem;
+  min-width: 320px;
+  min-width: 20rem;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 800px) {
+  .nav-bar__container {
+    padding-left: 40px;
+    padding-left: 2.5rem;
+    padding-right: 40px;
+    padding-right: 2.5rem;
+  }
+}
+.nav-bar__nav {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 800px) {
+  .nav-bar__nav {
+    float: right;
+    margin-left: 0;
+    margin-left: 0;
+  }
+}
+.nav-bar__trigger {
+  display: inline-block;
+  background: #222222;
+  float: right;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  height: 3.125rem;
+  width: 50px;
+  width: 3.125rem;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 800px) {
+  .nav-bar__trigger {
+    display: none;
+  }
+}
+.nav-bar__trigger:active, .nav-bar__trigger:hover {
+  background: #3c3c3c;
+}
+.nav-bar__trigger:before {
+  content: "";
+  color: #ffffff;
+  font-size: 30px;
+  font-size: 1.875rem;
+}
+.nav-bar--mobile-show .nav-bar__trigger:before {
+  content: "";
+}
+.nav-bar__list {
+  clear: both;
+  max-height: 0;
+  overflow: hidden;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 800px) {
+  .nav-bar__list {
+    overflow: inherit;
+    max-height: inherit;
+    float: right;
+    border-top: 0;
+  }
+}
+.nav-bar--mobile-show .nav-bar__list {
+  max-height: 800px;
+  max-height: 50rem;
+}
+.nav-bar__list li {
+  display: block;
+  margin: 0;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 800px) {
+  .nav-bar__list li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+}
+.nav-bar__link {
+  display: block;
+  color: #ffffff;
+  text-align: center;
+  padding: 20px 30px;
+  padding: 1.25rem 1.875rem;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 800px) {
+  .nav-bar__link {
+    display: inline-block;
+  }
+}
+.nav-bar__link:hover {
+  background: #3c3c3c;
+  color: #ffffff;
+}
+.nav-bar__link.nav-bar__link--active, .nav-bar__link.scrollspy-nav--active {
+  background: #2690b0;
+  color: #ffffff;
+}
+
+/* Tables
+==========
+*/
+.table-responsive {
+  width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.table {
+  width: 100%;
+  margin-bottom: 30px;
+  margin-bottom: 1.875rem;
+}
+.table td,
+.table th {
+  padding: 10px;
+  text-align: left;
+  vertical-align: top;
+}
+.table td {
+  border-top: 1px solid #e3e3e3;
+}
+.table--hover tr:hover td {
+  background: #f6f6f6;
+}
+.table--zebra tr:nth-child(odd) td {
+  background: #f8f8f8;
+}
+.table--bordered {
+  border: 1px solid #e3e3e3;
+}
+.table--bordered td,
+.table--bordered th {
+  border-left: 1px solid #e3e3e3;
+}
+.table--bordered td:first-child,
+.table--bordered th:first-child {
+  border-left: none;
 }
 
 /* Dropdowns
@@ -4339,57 +3889,6 @@ h6, .h6 {
   color: #aaaaaa;
 }
 
-/* Media
-==========
-*/
-.media-list--bordered .media {
-  border-top: 1px solid #e3e3e3;
-  margin-bottom: 0;
-  padding: 20px 0;
-  padding: 1.25rem 0;
-}
-.media-list--bordered .media .media {
-  margin: 0;
-}
-
-.media {
-  margin-bottom: 40px;
-  margin-bottom: 2.5rem;
-}
-.media .media {
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem;
-}
-.media__alpha {
-  float: left;
-  margin-bottom: 20px;
-  margin-bottom: 1.25rem;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 650px) {
-  .media__alpha {
-    margin-bottom: 0;
-  }
-}
-.media--right .media__alpha {
-  float: right;
-}
-.media--left .media__beta {
-  float: right;
-  margin: 0;
-}
-.media--right .media__beta {
-  float: left;
-}
-
 /* Pricing tables
 ==========
 */
@@ -4429,6 +3928,56 @@ h6, .h6 {
   padding-top: 1.25rem;
   padding-bottom: 20px;
   padding-bottom: 1.25rem;
+}
+
+/* Media
+==========
+*/
+.media-list--bordered .media {
+  border-top: 1px solid #e3e3e3;
+  margin-bottom: 0;
+  padding: 20px 0;
+  padding: 1.25rem 0;
+}
+.media-list--bordered .media .media {
+  margin: 0;
+}
+
+.media {
+  margin-bottom: 40px;
+  margin-bottom: 2.5rem;
+}
+.media .media {
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+}
+.media__alpha {
+  float: left;
+  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 600px) {
+  .media__alpha {
+    margin-bottom: 0;
+  }
+}
+.media--right .media__alpha {
+  float: right;
+}
+.media--left .media__beta {
+  float: right;
+  margin: 0;
+}
+.media--right .media__beta {
+  float: left;
 }
 
 /* Progress bar
@@ -4631,7 +4180,6 @@ progress:not([value])::-ms-fill {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
   /**
@@ -4640,17 +4188,16 @@ progress:not([value])::-ms-fill {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (min-width: 650px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 800px) {
   .parallax {
     height: 350px;
     height: 21.875rem;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .parallax {
     height: 450px;
     height: 28.125rem;
@@ -4664,7 +4211,6 @@ progress:not([value])::-ms-fill {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
   /**
@@ -4673,7 +4219,6 @@ progress:not([value])::-ms-fill {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
   /**
@@ -4682,23 +4227,22 @@ progress:not([value])::-ms-fill {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (min-width: 650px) and (max-width: 900px) {
+@media (min-width: 600px) and (max-width: 800px) {
   .parallax__img {
     left: -25%;
     min-width: 150%;
   }
 }
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   .parallax__img {
     position: absolute;
     top: 0;
   }
 }
-@media (min-width: 900px) {
+@media (min-width: 800px) {
   .parallax__img {
     left: 0;
   }
@@ -4722,95 +4266,507 @@ progress:not([value])::-ms-fill {
   max-height: 0;
 }
 
-/* Block
+/* Off canvas
 ==========
 */
-.block {
-  background: whitesmoke;
-  padding: 10px;
-  padding: 0.625rem;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 650px) and (max-width: 900px) {
-  .block {
-    padding: 20px;
-    padding: 1.25rem;
-  }
-}
-@media (min-width: 900px) {
-  .block {
-    padding: 30px;
-    padding: 1.875rem;
-  }
-}
-
-/* Block grid
-==========
-*/
-.block-grid {
-  margin-left: -1%;
-  margin-right: -1%;
-}
-.block-grid__item {
-  position: relative;
-  overflow: hidden;
-  display: block;
-  float: left;
-  width: 48%;
-  margin-bottom: 2%;
-  margin-left: 1%;
-  margin-right: 1%;
-  /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  }
-  *
-  **/
-}
-@media (min-width: 650px) {
-  .block-grid__item {
-    width: 23%;
-  }
-}
-.block-grid__item:before {
-  content: '';
-  background: rgba(0, 0, 0, 0.4);
-  width: 100%;
-  height: 100%;
-  display: block;
+.off-canvas-toggle-left,
+.off-canvas-toggle-right {
+  background: #2690b0;
   position: absolute;
   top: 0;
+  z-index: 10000;
+  color: #ffffff;
+  text-align: center;
+  border: none;
+  font-size: 30px;
+  font-size: 1.875rem;
+  width: 50px;
+  width: 3.125rem;
+  height: 50px;
+  height: 3.125rem;
+}
+.off-canvas-toggle-left:hover,
+.off-canvas-toggle-right:hover {
+  background: #2ba1c5;
+  color: #ffffff;
+  text-decoration: none;
+}
+.off-canvas-toggle-left:active, .off-canvas-toggle-left:focus,
+.off-canvas-toggle-right:active,
+.off-canvas-toggle-right:focus {
+  outline: none;
+}
+
+.off-canvas-toggle-left {
+  right: -50px;
+  right: -3.125rem;
+}
+.off-canvas-toggle-left:before {
+  content: "";
+}
+.off-canvas-show-left .off-canvas-toggle-left:before {
+  content: "";
+}
+
+.off-canvas-toggle-right {
+  left: -50px;
+  left: -3.125rem;
+}
+.off-canvas-toggle-right:before {
+  content: "";
+}
+.off-canvas-show-right .off-canvas-toggle-right:before {
+  content: "";
+}
+
+.off-canvas {
+  background: #f2f2f2;
+  position: fixed;
+  z-index: 9999;
+  top: 0;
+  height: 100%;
+  width: 260px;
+  width: 16.25rem;
+}
+.off-canvas--left {
   left: 0;
+  -webkit-transform: translate3d(-260px, 0, 0);
+  transform: translate3d(-260px, 0, 0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+}
+.off-canvas-show-left .off-canvas--left {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.no-csstransforms3d .off-canvas--left {
+  left: -260px;
+}
+.no-csstransforms3d.off-canvas-show-left .off-canvas--left {
+  left: 0;
+}
+.off-canvas--right {
+  right: 0;
+  -webkit-transform: translate3d(260px, 0, 0);
+  transform: translate3d(260px, 0, 0);
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+}
+.off-canvas-show-right .off-canvas--right {
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+}
+.no-csstransforms3d .off-canvas--right {
+  right: -260px;
+}
+.no-csstransforms3d.off-canvas-show-left .off-canvas--right {
+  right: 0;
+}
+
+.off-canvas-push:after {
+  content: '';
+  background: #000000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  visibility: hidden;
   opacity: 0;
-  z-index: 1;
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
 }
-.block-grid__item:hover:before {
-  opacity: 1;
+.off-canvas-show-left .off-canvas-push:after, .off-canvas-show-right .off-canvas-push:after {
+  visibility: visible;
+  opacity: 0.3;
 }
-.block-grid__img {
-  width: 100%;
+.lt-ie10 .off-canvas-push:after {
+  display: none;
+}
+
+.off-canvas-nav__item {
+  border-top: 1px solid #ffffff;
+  border-bottom: 1px solid #e6e6e6;
+}
+.off-canvas-nav__item:first-child {
+  border-top: 0;
+}
+.off-canvas-nav__item:last-child {
+  border-bottom: 0;
+}
+
+.off-canvas-nav__link {
+  display: block;
+  color: #000000;
+  padding: 20px;
+  padding: 1.25rem;
+}
+.off-canvas-nav__link.active, .off-canvas-nav__link.scrollspy-nav--active
+.off-canvas-nav__link:hover {
+  background: #fafafa;
+}
+
+/* Off canvas
+==========
+*/
+.off-canvas-nav-bar {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (max-width: 800px) {
+  .off-canvas-nav-bar {
+    background: #f2f2f2;
+    position: fixed;
+    z-index: 9999;
+    top: 0;
+    height: 100%;
+    width: 260px;
+    width: 16.25rem;
+  }
+  .off-canvas-nav-bar--left {
+    left: 0;
+    -webkit-transform: translate3d(-260px, 0, 0);
+    transform: translate3d(-260px, 0, 0);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+  }
+  .off-canvas-show-left .off-canvas-nav-bar--left {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .no-csstransforms3d .off-canvas-nav-bar--left {
+    left: -260px;
+  }
+  .no-csstransforms3d.off-canvas-show-left .off-canvas-nav-bar--left {
+    left: 0;
+  }
+  .off-canvas-nav-bar--right {
+    right: 0;
+    -webkit-transform: translate3d(260px, 0, 0);
+    transform: translate3d(260px, 0, 0);
+    -webkit-transition: -webkit-transform 0.2s;
+    transition: transform 0.2s;
+  }
+  .off-canvas-show-right .off-canvas-nav-bar--right {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .no-csstransforms3d .off-canvas-nav-bar--right {
+    right: -260px;
+  }
+  .no-csstransforms3d.off-canvas-show-left .off-canvas-nav-bar--right {
+    right: 0;
+  }
+}
+@media (min-width: 800px) {
+  .off-canvas-nav-bar {
+    background: #222222;
+    width: 100%;
+    max-height: 100%;
+    overflow-y: auto;
+    z-index: 999;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    text-align: center;
+    min-width: 320px;
+    min-width: 20rem;
+    /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  }
+  .csspositionsticky .off-canvas-nav-bar {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    left: 0;
+  }
+  .no-csspositionsticky .off-canvas-nav-bar {
+    position: relative;
+  }
+}
+@media (min-width: 800px) and (min-width: 800px) {
+  .off-canvas-nav-bar {
+    max-height: inherit;
+    text-align: left;
+  }
+}
+@media (min-width: 800px) {
+  .off-canvas-nav-bar .logo {
+    display: inline-block;
+    margin-bottom: -6px;
+    padding-top: 12px;
+    padding-top: 0.75rem;
+    min-height: 50px;
+    min-height: 3.125rem;
+    /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  }
+}
+@media (min-width: 800px) and (min-width: 800px) {
+  .off-canvas-nav-bar .logo {
+    float: left;
+    padding-top: 0;
+    min-height: inherit;
+    margin-bottom: 0;
+    margin-top: 18px;
+    margin-top: 1.125rem;
+  }
+}
+@media (min-width: 800px) {
+  .off-canvas-nav-bar--transform {
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+  .off-canvas-nav-bar--transform.nav-bar--show {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+  .off-canvas-nav-bar--transform.nav-bar--always-show-on-mobile {
+    /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  }
+}
+@media (min-width: 800px) and (max-width: 0px) {
+  .off-canvas-nav-bar--transform.nav-bar--always-show-on-mobile {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@media (min-width: 800px) {
+  .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
+    /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  }
+}
+@media (min-width: 800px) and (min-width: 800px) {
+  .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
+    background: transparent;
+  }
+  .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
+    color: #000000;
+  }
+  .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active, .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
+    background: transparent;
+    color: #2690b0;
+  }
+  .nav-bar--transparent .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
+    color: #ffffff;
+  }
+}
+@media (min-width: 800px) {
+  .no-csspositionsticky .off-canvas-nav-bar--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+  .off-canvas-nav-bar__container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1280px;
+    max-width: 80rem;
+    min-width: 320px;
+    min-width: 20rem;
+    /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  }
+}
+@media (min-width: 800px) and (min-width: 800px) {
+  .off-canvas-nav-bar__container {
+    padding-left: 40px;
+    padding-left: 2.5rem;
+    padding-right: 40px;
+    padding-right: 2.5rem;
+  }
+}
+@media (min-width: 800px) {
+  .off-canvas-nav-bar__nav {
+    /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  }
+}
+@media (min-width: 800px) and (min-width: 800px) {
+  .off-canvas-nav-bar__nav {
+    float: right;
+    margin-left: 0;
+    margin-left: 0;
+  }
+}
+@media (min-width: 800px) {
+  .off-canvas-nav-bar__list {
+    clear: both;
+    border-top: 1px solid #3c3c3c;
+    max-height: 0;
+    overflow: hidden;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+    /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  }
+}
+@media (min-width: 800px) and (min-width: 800px) {
+  .off-canvas-nav-bar__list {
+    overflow: inherit;
+    max-height: inherit;
+    float: right;
+    border-top: 0;
+  }
+}
+@media (min-width: 800px) {
+  .nav-bar--mobile-show .off-canvas-nav-bar__list {
+    max-height: 800px;
+    max-height: 50rem;
+  }
+  .off-canvas-nav-bar__list li {
+    display: block;
+    margin: 0;
+    /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  }
+}
+@media (min-width: 800px) and (min-width: 800px) {
+  .off-canvas-nav-bar__list li {
+    display: inline-block;
+    margin-right: -4px;
+  }
+}
+@media (min-width: 800px) {
+  .off-canvas-nav-bar__link {
+    display: block;
+    color: #ffffff;
+    text-align: center;
+    padding: 20px 30px;
+    padding: 1.25rem 1.875rem;
+    /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  }
+}
+@media (min-width: 800px) and (min-width: 800px) {
+  .off-canvas-nav-bar__link {
+    display: inline-block;
+  }
+}
+@media (min-width: 800px) {
+  .off-canvas-nav-bar__link:hover {
+    background: #3c3c3c;
+    color: #ffffff;
+  }
+  .off-canvas-nav-bar__link.nav-bar__link--active, .off-canvas-nav-bar__link.scrollspy-nav--active {
+    background: #2690b0;
+    color: #ffffff;
+  }
+}
+
+.off-canvas-nav-bar__item {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (max-width: 800px) {
+  .off-canvas-nav-bar__item {
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #e6e6e6;
+  }
+  .off-canvas-nav-bar__item:first-child {
+    border-top: 0;
+  }
+  .off-canvas-nav-bar__item:last-child {
+    border-bottom: 0;
+  }
+}
+
+.off-canvas-nav-bar__link {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (max-width: 800px) {
+  .off-canvas-nav-bar__link {
+    display: block;
+    color: #000000;
+    padding: 20px;
+    padding: 1.25rem;
+  }
+  .off-canvas-nav-bar__link.active, .off-canvas-nav-bar__link:hover, .off-canvas-nav-bar__link.scrollspy-nav--active {
+    background: #fafafa;
+  }
 }
 
 /* Buttons
@@ -4915,11 +4871,10 @@ progress:not([value])::-ms-fill {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   .btn--medium {
     padding: 12px 35px;
     padding: 0.75rem 2.1875rem;
@@ -4936,11 +4891,10 @@ progress:not([value])::-ms-fill {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   .btn--large {
     padding: 18px 50px;
     padding: 1.125rem 3.125rem;
@@ -5330,7 +5284,6 @@ select::-ms-expand {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
@@ -5338,7 +5291,7 @@ select::-ms-expand {
   line-height: 40px;
   line-height: 2.5rem;
 }
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   .form__label {
     text-align: right;
   }
@@ -5419,11 +5372,10 @@ select::-ms-expand {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   .form__input-list {
     margin-top: 8px;
     margin-top: 0.5rem;
@@ -5448,11 +5400,10 @@ select::-ms-expand {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   .form__actions {
     margin-left: 42.85714%;
   }
@@ -5820,11 +5771,10 @@ input[type=radio] + label:after {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   .notification--beta {
     padding: 30px 60px 30px 30px;
     padding: 1.875rem 3.75rem 1.875rem 1.875rem;
@@ -5876,11 +5826,10 @@ input[type=radio] + label:after {
   * @include mq('gamma-and-up') {
   *     CSS properties here..
   * }
-  }
   *
   **/
 }
-@media (min-width: 650px) {
+@media (min-width: 600px) {
   .notification--beta .notification__text {
     margin-left: 70px;
     margin-left: 4.375rem;

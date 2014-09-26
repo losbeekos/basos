@@ -13,6 +13,7 @@
 
     li {
         display: inline;
+
         @include rem(margin-right, 10px);
     }
 }

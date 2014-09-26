@@ -60,35 +60,43 @@
 @import "base/animations/flipInY";
 
 
-/* Components
+/* Mandatory components
 ==========
 */
 
 @import "base/components/grid";
-@import "base/components/fonts";
 @import "base/components/layout";
 @import "base/components/containers";
-@import "base/components/colors";
 @import "base/components/sections";
-@import "base/components/nav_bar";
-@import "base/components/off_canvas";
-@import "base/components/off_canvas_navbar";
+@import "base/components/fonts";
 @import "base/components/typography";
-@import "base/components/tables";
+@import "base/components/colors";
+
+
+/* Optional components
+==========
+You can comments some of these out
+for a smaller generated CSS file.
+*/
+
+@import "base/components/block";
+@import "base/components/block_grid";
 @import "base/components/tabs";
+@import "base/components/nav_bar";
+@import "base/components/tables";
 @import "base/components/dropdowns";
 @import "base/components/tooltips";
 @import "base/components/accordion";
 @import "base/components/breadcrumbs";
-@import "base/components/media";
 @import "base/components/pricing_tables";
+@import "base/components/media";
 @import "base/components/progress";
 @import "base/components/spinners";
 @import "base/components/scrollspy";
 @import "base/components/parallax";
 @import "base/components/toggle";
-@import "base/components/block";
-@import "base/components/block_grid";
+@import "base/components/off_canvas";
+@import "base/components/off_canvas_navbar";
 
 
 /* Buttons
