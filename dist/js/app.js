@@ -81,6 +81,17 @@ helper.outView = function(el) {
         rect.top > app.settings.$window.height()
     );
 };
+helper.partiallyInView = function(el) {
+    if (el instanceof jQuery) {
+        el = el[0];
+    }
+
+    var rect = el.getBoundingClientRect();
+
+    return (
+        rect.bottom - (rect.height/2) <= app.settings.$window.height()
+    );
+};
 app.accordion = {
     settings: {
         $el: $('.accordion'),
@@ -165,26 +176,46 @@ app.accordion = {
 };
 app.cycle = {
     settings: {
-        $el: $('.cycle-wrap', '.cycle'),
-        slides: '> .cycle-item',
-        pager : '> .cycle-pager',
-        pagerActiveClass: 'cycle-pager-active'
+        $el: $('.cycle__wrap', '.cycle'),
+        slides: '> .cycle__item',
+        pager: '> .cycle__pager',
+        prev: '> .cycle__prev',
+        next: '> .cycle__next',
+        pagerActiveClass: 'cycle__pager--active'
     },
 
     init: function(){
         var self = this;
 
-        if(app.cycle.settings.$el.el.length > 0){
-            yepnope.injectJs(app.pathBower + 'cycle2/build/jquery.cycle2.min.js',
+        if(app.cycle.settings.$el.length > 0){
+            yepnope.injectJs(app.pathBower + 'jquery-cycle2/build/jquery.cycle2.min.js',
                 function(){
-                    self.el.cycle({
-                        slides           : app.cycle.settings.slides,
-                        pager            : app.cycle.settings.pager,
-                        pagerActiveClass : app.cycle.settings.pagerActiveClass,
-                        pauseOnHover     : true,
-                        swipe            : true,
-                        log              : false
-                    });
+                    app.cycle.settings.$el
+                        .cycle({
+                            slides           : app.cycle.settings.slides,
+                            pager            : app.cycle.settings.pager,
+                            prev             : app.cycle.settings.prev,
+                            next             : app.cycle.settings.next,
+                            pagerActiveClass : app.cycle.settings.pagerActiveClass,
+                            pauseOnHover     : true,
+                            swipe            : true,
+                            log              : false,
+                            paused           : true,
+                            fx               : 'none'
+                        })
+                        .on('cycle-update-view', function (event, optionHash, slideOptionsHash, currentSlideEl) {
+                            if (optionHash.slideCount > 1) {
+                                $(this).addClass('cycle-active');
+                            }
+                        })
+                        .on('cycle-before', function () {
+                            // $('.thumbnail-grid__item').each(function () {
+                            //     $(this).removeClass('scrollspy--in-view').removeClass('animation-fadeIn');
+                            // });
+                        })
+                        .on('cycle-after', function () {
+                            // app.scrollSpy.init();
+                        });
                 });
         }
     }
@@ -769,30 +800,38 @@ app.scrollSpy = {
         repeat: true
     },
 
-    init: function () {
+    init: function (_scrollTop, _windowHeight, _load) {
         var self = this,
             windowHeight = app.settings.$window.height();
 
-        if (app.scrollSpy.settings.$el.length > 0 && app.settings.$html.hasClass('no-touch')) {
-            app.scrollSpy.settings.$el.each(function () {
+        if (app.scrollSpy.settings.$el.length > 0) {
+            app.scrollSpy.settings.$el.each(function (index) {
                 var $this = $(this),
+                    elPositionTop = Math.round($this.offset().top),
+                    elHeight = $this.height(),
                     inView = helper.inView($this),
                     outView = helper.outView($this),
+                    partiallyInView = helper.partiallyInView($this),
                     data = $this.data(),
                     combinedClasses = (data.scrollspyClass === undefined) ? app.scrollSpy.settings.defaultClass : data.scrollspyClass;
 
                 combinedClasses += ' scrollspy--in-view';
 
-                var hasCombinedClasses = $this.hasClass(combinedClasses),
-                    delay = (data.scrollspyDelay > 0) ? data.scrollspyDelay : 0;
+                if (app.settings.$html.hasClass('touch')) {
+                    $this.addClass(combinedClasses);
+                } else {
+                    var hasCombinedClasses = $this.hasClass(combinedClasses),
+                        delay = (data.scrollspyDelay > 0) ? data.scrollspyDelay : 0;
 
-                inView && !hasCombinedClasses || data.scrollspyKickoff !== undefined ? setTimeout(function () { $this.addClass(combinedClasses); }, delay) : '';
+                    inView && !hasCombinedClasses ? setTimeout(function () { $this.addClass(combinedClasses); }, delay) : '';
+                    _load && partiallyInView && data.scrollspyPartiallyInView !== undefined ? setTimeout(function () { $this.addClass(combinedClasses); }, delay) : '';
 
-                if (data.scrollspyRepeat !== undefined || app.scrollSpy.settings.repeat) {
-                    outView && hasCombinedClasses ?  $this.removeClass(combinedClasses) : '';
+                    if (data.scrollspyRepeat !== undefined || app.scrollSpy.settings.repeat) {
+                        outView && hasCombinedClasses ?  $this.removeClass(combinedClasses) : '';
+                    }
+
+                    $this.outerHeight() > windowHeight ? $this.addClass(combinedClasses) : '';
                 }
-
-                $this.outerHeight() > windowHeight ? $this.addClass(combinedClasses) : '';
             });
         }
     }
@@ -946,7 +985,8 @@ app.tooltips = {
     }
 };
 app.settings.$document.ready(function () {
-    var scrollTop = $(this).scrollTop();
+    var $this = $(this),
+        scrollTop = $this.scrollTop();
 
     app.equalize.init();
     app.scrollSpyNav.init(scrollTop);
@@ -972,13 +1012,19 @@ app.settings.$document.ready(function () {
 });
 
 app.settings.$window.ready(function () {
-    app.scrollSpy.init();
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        windowHeight = $this.height();
+
+    app.scrollSpy.init(scrollTop, windowHeight, true);
 });
 
 app.settings.$window.on('scroll', function () {
-    var scrollTop = $(this).scrollTop();
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        windowHeight = $this.height();
 
-    app.scrollSpy.init();
+    app.scrollSpy.init(scrollTop, windowHeight, false);
     app.scrollSpyNav.init(scrollTop);
     app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
@@ -986,18 +1032,22 @@ app.settings.$window.on('scroll', function () {
 });
 
 app.settings.$window.on('touchmove', function(){
-    var scrollTop = $(this).scrollTop();
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        windowHeight = $this.height();
 
-    app.scrollSpy.init();
+    app.scrollSpy.init(scrollTop, windowHeight, false);
     app.scrollSpyNav.init(scrollTop);
 });
 
 app.settings.$window.on('resize', function () {
-    var scrollTop = $(this).scrollTop();
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        windowHeight = $this.height();
 
     app.navBar.init(scrollTop);
     app.equalize.init();
-    app.scrollSpy.init();
+    app.scrollSpy.init(scrollTop, windowHeight, true);
     app.scrollSpyNav.init(scrollTop);
     app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);

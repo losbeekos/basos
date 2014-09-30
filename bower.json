@@ -4,7 +4,7 @@
   "dependencies": {
     "respond": "~1.4.2",
     "selectivizr": "~1.0.2",
-    "jquery": "~1.x",
+    "jquery": "~1.*",
     "fastclick": "~1.0.3",
     "fitvids": "~1.1",
     "parsleyjs": "~2.0.3",

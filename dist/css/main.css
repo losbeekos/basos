@@ -908,7 +908,7 @@ textarea {
 ==========
 Add this class to an element to fire an animation.
 */
-.animated, .no-touch .scrollspy--in-view {
+.animated, .scrollspy--in-view {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -4164,10 +4164,10 @@ progress:not([value])::-ms-fill {
 /* Scrollspy
 ==========
 */
-.no-touch [data-scrollspy] {
+.csstransitions [data-scrollspy] {
   opacity: 0;
 }
-.no-touch [data-scrollspy].scrollspy--in-view {
+[data-scrollspy].scrollspy--in-view {
   opacity: 1;
 }
 
@@ -6109,6 +6109,16 @@ input[type=radio] + label:after {
 /* Header
 ==========
 */
+.header {
+  background-image: url(../img/header.jpg);
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  height: 100%;
+}
+
 /* Footer
 ==========
 */

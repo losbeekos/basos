@@ -1,5 +1,6 @@
 app.settings.$document.ready(function () {
-    var scrollTop = $(this).scrollTop();
+    var $this = $(this),
+        scrollTop = $this.scrollTop();
 
     app.equalize.init();
     app.scrollSpyNav.init(scrollTop);
@@ -25,13 +26,19 @@ app.settings.$document.ready(function () {
 });
 
 app.settings.$window.ready(function () {
-    app.scrollSpy.init();
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        windowHeight = $this.height();
+
+    app.scrollSpy.init(scrollTop, windowHeight, true);
 });
 
 app.settings.$window.on('scroll', function () {
-    var scrollTop = $(this).scrollTop();
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        windowHeight = $this.height();
 
-    app.scrollSpy.init();
+    app.scrollSpy.init(scrollTop, windowHeight, false);
     app.scrollSpyNav.init(scrollTop);
     app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
@@ -39,18 +46,22 @@ app.settings.$window.on('scroll', function () {
 });
 
 app.settings.$window.on('touchmove', function(){
-    var scrollTop = $(this).scrollTop();
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        windowHeight = $this.height();
 
-    app.scrollSpy.init();
+    app.scrollSpy.init(scrollTop, windowHeight, false);
     app.scrollSpyNav.init(scrollTop);
 });
 
 app.settings.$window.on('resize', function () {
-    var scrollTop = $(this).scrollTop();
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        windowHeight = $this.height();
 
     app.navBar.init(scrollTop);
     app.equalize.init();
-    app.scrollSpy.init();
+    app.scrollSpy.init(scrollTop, windowHeight, true);
     app.scrollSpyNav.init(scrollTop);
     app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
