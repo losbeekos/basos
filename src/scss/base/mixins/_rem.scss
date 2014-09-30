@@ -2,7 +2,7 @@
 ==========
 */
 
-@mixin rem($property, $values) {
+@mixin rem($property, $values, $important: false) {
     // Create a couple of empty lists as output buffers.
     $px-values: ();
     $rem-values: ();
@@ -29,6 +29,11 @@
     }
 
     // output the converted rules
-    #{$property}: $px-values;
-    #{$property}: $rem-values;
+    @if ($important == true) {
+        #{$property}: $px-values !important;
+        #{$property}: $rem-values !important;
+    } @else {
+        #{$property}: $px-values;
+        #{$property}: $rem-values;
+    }
 }

@@ -2,16 +2,13 @@
 ==========
 */
 
-h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
+%heading {
     margin-top: 0;
+}
 
-    &.no-margin {
-        margin-bottom: 0;
+@for $i from 1 through 6 {
+    .h#{$i} {
+        @extend %heading;
     }
 }
 
