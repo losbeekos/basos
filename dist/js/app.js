@@ -773,7 +773,7 @@ app.scrollSpy = {
         var self = this,
             windowHeight = app.settings.$window.height();
 
-        if (app.scrollSpy.settings.$el.length > 0) {
+        if (app.scrollSpy.settings.$el.length > 0 && app.settings.$html.hasClass('no-touch')) {
             app.scrollSpy.settings.$el.each(function () {
                 var $this = $(this),
                     inView = helper.inView($this),

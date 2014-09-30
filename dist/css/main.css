@@ -908,7 +908,7 @@ textarea {
 ==========
 Add this class to an element to fire an animation.
 */
-.animated, .scrollspy--in-view {
+.animated, .no-touch .scrollspy--in-view {
   -webkit-animation-duration: 1s;
   animation-duration: 1s;
   -webkit-animation-fill-mode: both;
@@ -3568,6 +3568,10 @@ for a smaller generated CSS file.
     display: inline-block;
   }
 }
+.touch .nav-bar__link {
+  -webkit-transition: none;
+  transition: none;
+}
 .nav-bar__link:hover {
   background: #3c3c3c;
   color: #ffffff;
@@ -4160,10 +4164,10 @@ progress:not([value])::-ms-fill {
 /* Scrollspy
 ==========
 */
-[data-scrollspy] {
+.no-touch [data-scrollspy] {
   opacity: 0;
 }
-[data-scrollspy].scrollspy--in-view {
+.no-touch [data-scrollspy].scrollspy--in-view {
   opacity: 1;
 }
 

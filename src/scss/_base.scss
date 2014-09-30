@@ -79,6 +79,7 @@ You can comments some of these out
 for a smaller generated CSS file.
 */
 
+@import "base/components/header";
 @import "base/components/block";
 @import "base/components/block_grid";
 @import "base/components/tabs";

@@ -198,6 +198,10 @@
             display: inline-block;
         }
 
+        .touch & {
+            transition: none;
+        }
+
         &:hover {
             background: lighten(map-get($navBar, bg-color), 10%);
             color: map-get($navBar, link-color);

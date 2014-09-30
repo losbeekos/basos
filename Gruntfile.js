@@ -316,12 +316,12 @@ module.exports = function(grunt) {
                     browser: ['google chrome', 'firefox', 'safari', 'opera'],
                     proxy: '0.0.0.0:9000',
                     ghostMode: {
-                        clicks: true,
-                        location: true,
+                        clicks: false,
+                        location: false,
                         forms: true,
-                        scroll: true
+                        scroll: false
                     },
-                    scrollProportionally: true,
+                    scrollProportionally: false,
                     startPath: '/index.html'
                 }
             }

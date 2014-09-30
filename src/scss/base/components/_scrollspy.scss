@@ -3,13 +3,19 @@
 */
 
 [data-scrollspy] {
-    opacity: 0;
+    .no-touch & {
+        opacity: 0;
+    }
 
     &.scrollspy--in-view {
-        opacity: 1;
+        .no-touch & {
+            opacity: 1;
+        }
     }
 }
 
 .scrollspy--in-view {
-    @extend .animated;
+    .no-touch & {
+        @extend .animated;
+    }
 }
