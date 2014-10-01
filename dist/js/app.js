@@ -1041,14 +1041,22 @@ app.settings.$window.on('touchmove', function(){
 });
 
 app.settings.$window.on('resize', function () {
-    var $this = $(this),
-        scrollTop = $this.scrollTop(),
-        windowHeight = $this.height();
 
-    app.navBar.init(scrollTop);
-    app.equalize.init();
-    app.scrollSpy.init(scrollTop, windowHeight, true);
-    app.scrollSpyNav.init(scrollTop);
-    app.parallax.init(scrollTop);
-    app.navBar.scroller(scrollTop);
+    if(this.resizeTo) {
+        clearTimeout(this.resizeTo);
+    }
+
+    this.resizeTo = setTimeout(function() {
+        var $this = $(this),
+            scrollTop = $this.scrollTop(),
+            windowHeight = $this.height();
+
+        console.log('do it');
+
+        app.equalize.init();
+        app.scrollSpy.init(scrollTop, windowHeight, true);
+        app.scrollSpyNav.init(scrollTop);
+        app.parallax.init(scrollTop);
+        app.navBar.scroller(scrollTop);
+    }, 500);
 });

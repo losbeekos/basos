@@ -2,12 +2,6 @@
 ==========
 */
 
-#container {
-    @include mq(alpha-and-beta) {
-        padding-top: 0 !important;
-    }
-}
-
 .container,
 .container-beta {
     @extend .clearfix;
