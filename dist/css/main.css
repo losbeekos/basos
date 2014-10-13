@@ -497,6 +497,7 @@ textarea {
 }
 
 body {
+  background: #ffffff;
   font-size: 1em;
   line-height: 1.4;
 }
@@ -605,7 +606,7 @@ textarea {
 * }
 *
 **/
-@media (max-width: 0px) {
+@media (max-width: 600px) {
   .hide-alpha,
   .hide-alpha-and-beta {
     border: 0;
@@ -756,7 +757,7 @@ textarea {
   margin-right: 10px !important;
   margin-right: 0.625rem !important;
 }
-.margin-alpha-right {
+.margin-alpha-right, .icon--margin-alpha:before {
   margin-right: 10px !important;
   margin-right: 0.625rem !important;
 }
@@ -788,7 +789,7 @@ textarea {
   margin-right: 20px !important;
   margin-right: 1.25rem !important;
 }
-.margin-beta-right {
+.margin-beta-right, .icon--margin-beta:before {
   margin-right: 20px !important;
   margin-right: 1.25rem !important;
 }
@@ -2359,7 +2360,7 @@ Add this class to an element to fire an animation.
 * }
 *
 **/
-@media (max-width: 0px) {
+@media (max-width: 600px) {
   .column-alpha--first {
     margin-left: 0;
   }
@@ -2762,6 +2763,7 @@ body {
 }
 
 html {
+  background-color: #ffffff;
   overflow-x: hidden;
 }
 
@@ -2988,7 +2990,7 @@ p {
   src: url("../fonts/icons/icons.eot");
   src: url("../fonts/icons/icons.eot#iefix") format("embedded-opentype"), url("../fonts/icons/icons.svg#icons") format("svg"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype");
 }
-.nav-bar__trigger, .accordion__trigger:after, .spinner:after, .off-canvas-toggle-left,
+.icon:before, .nav-bar__trigger, .accordion__trigger:after, .spinner:after, .off-canvas-toggle-left,
 .off-canvas-toggle-right, .form__select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form__password-toggle:after, .notification:before, .notification__close {
   font-family: 'icons', arial, verdana;
   font-weight: normal;
@@ -3098,6 +3100,9 @@ h6, .h6 {
 .color-black {
   color: #000000;
 }
+.color-body {
+  color: #ffffff;
+}
 .color-text {
   color: #222222;
 }
@@ -3129,6 +3134,9 @@ h6, .h6 {
 .bg-color-black {
   background: #000000;
 }
+.bg-color-body {
+  background: #ffffff;
+}
 .bg-color-text {
   background: #222222;
 }
@@ -3152,6 +3160,81 @@ h6, .h6 {
 }
 .bg-color-epsilon {
   background: #333333;
+}
+
+/* Icons
+==========
+*/
+.icon:before {
+  display: inline-block;
+  text-decoration: inherit;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+}
+
+.icon--ok-circled:before {
+  content: '\e800';
+}
+
+.icon--cancel-circled:before {
+  content: '\e801';
+}
+
+.icon--info-circled:before {
+  content: '\e802';
+}
+
+.icon--ok:before {
+  content: '\e803';
+}
+
+.icon--up-open:before {
+  content: '\e804';
+}
+
+.icon--right-open:before {
+  content: '\e805';
+}
+
+.icon--left-open:before {
+  content: '\e806';
+}
+
+.icon--down-open:before {
+  content: '\e807';
+}
+
+.icon--cancel:before {
+  content: '\e808';
+}
+
+.icon--spin2:before {
+  content: '\e809';
+}
+
+.icon--spin5:before {
+  content: '\e80a';
+}
+
+.icon--spinner1:before {
+  content: '\e80b';
+}
+
+.icon--attention:before {
+  content: '\e80c';
+}
+
+.icon--menu:before {
+  content: '\e80d';
+}
+
+.icon--eye:before {
+  content: '\e80e';
+}
+
+.icon--eye-off:before {
+  content: '\e80f';
 }
 
 /* Optional components
@@ -3317,6 +3400,8 @@ for a smaller generated CSS file.
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   text-align: center;
+  -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
   height: 50px;
   height: 3.125rem;
   min-width: 320px;
@@ -3392,7 +3477,7 @@ for a smaller generated CSS file.
   *
   **/
 }
-@media (max-width: 0px) {
+@media (max-width: 600px) {
   .nav-bar--transform.nav-bar--always-show-on-mobile {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -3558,6 +3643,7 @@ for a smaller generated CSS file.
     transform: translate3d(0, 0, 0);
     float: right;
     border-top: 0;
+    overflow-y: inherit;
   }
 }
 .nav-bar--mobile-show .nav-bar__list {
@@ -4596,7 +4682,7 @@ progress:not([value])::-ms-fill {
     **/
   }
 }
-@media (min-width: 800px) and (max-width: 0px) {
+@media (min-width: 800px) and (max-width: 600px) {
   .off-canvas-nav-bar--transform.nav-bar--always-show-on-mobile {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -4945,6 +5031,7 @@ progress:not([value])::-ms-fill {
 ==========
 */
 .btn {
+  background-image: none;
   position: relative;
   display: inline-block;
   color: #222222;
@@ -5256,6 +5343,7 @@ textarea:disabled {
 }
 
 textarea {
+  display: block;
   height: 160px;
   height: 10rem;
 }

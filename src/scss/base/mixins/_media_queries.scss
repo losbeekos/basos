@@ -54,7 +54,7 @@
     }
 
     @else if $query == alpha {
-       @media (max-width: map-get($mq, alpha))  { @content; }
+       @media (max-width: map-get($mq, beta))  { @content; }
     }
 
     @else if $query == alpha-and-up {

@@ -61,6 +61,8 @@ textarea {
 }
 
 textarea {
+    display: block;
+
     @include rem(height, map-get($form, textarea-height));
 }
 

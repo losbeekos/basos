@@ -860,6 +860,11 @@ app.scrollSpyNav = {
                 } else {
                     $this.removeClass('scrollspy-nav--active');
                 }
+
+                if (_scrollTop === (app.settings.$document.height()-windowHeight)) {
+                   $this.removeClass('scrollspy-nav--active');
+                   $('[data-scrollspy-nav=contact]').addClass('scrollspy-nav--active');
+               }
             });
         }
     }
@@ -1050,8 +1055,6 @@ app.settings.$window.on('resize', function () {
         var $this = $(this),
             scrollTop = $this.scrollTop(),
             windowHeight = $this.height();
-
-        console.log('do it');
 
         app.equalize.init();
         app.scrollSpy.init(scrollTop, windowHeight, true);

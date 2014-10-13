@@ -65,8 +65,6 @@ app.settings.$window.on('resize', function () {
             scrollTop = $this.scrollTop(),
             windowHeight = $this.height();
 
-        console.log('do it');
-
         app.equalize.init();
         app.scrollSpy.init(scrollTop, windowHeight, true);
         app.scrollSpyNav.init(scrollTop);

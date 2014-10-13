@@ -11,6 +11,7 @@
     z-index: 999;
     transition: all map-get($base, transition-speed);
     text-align: center;
+    transform: translate3d(0, 0, 0);
 
     @include rem(height, 50px);
 
@@ -193,6 +194,7 @@
             transform: translate3d(0, 0, 0);
             float: right;
             border-top: 0;
+            overflow-y: inherit;
         }
 
         .nav-bar--mobile-show & {

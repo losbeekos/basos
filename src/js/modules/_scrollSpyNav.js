@@ -22,6 +22,11 @@ app.scrollSpyNav = {
                 } else {
                     $this.removeClass('scrollspy-nav--active');
                 }
+
+                if (_scrollTop === (app.settings.$document.height()-windowHeight)) {
+                   $this.removeClass('scrollspy-nav--active');
+                   $('[data-scrollspy-nav=contact]').addClass('scrollspy-nav--active');
+               }
             });
         }
     }

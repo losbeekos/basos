@@ -34,6 +34,7 @@
 }
 
 .btn {
+    background-image: none;
     position: relative;
     display: inline-block;
     color: map-get($color, text);
