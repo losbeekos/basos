@@ -492,7 +492,12 @@ $media: (
 */
 
 $block-grid: (
-    row-count: 4,
+    row-count-alpha: 2,
+    row-count-beta: 3,
+    row-count-gamma: 4,
+    row-count-epsilon: 4,
+    row-count-zeta: 4,
+    row-count-eta: 4,
     margin: 2%,
     overlay-bg: rgba(0, 0, 0, 0.4)
 );

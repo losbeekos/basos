@@ -3303,8 +3303,55 @@ for a smaller generated CSS file.
   * }
   *
   **/
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
 }
-@media (min-width: 600px) {
+@media (min-width: 600px) and (max-width: 800px) {
+  .block-grid__item {
+    width: 31.33333%;
+  }
+}
+@media (min-width: 800px) and (max-width: 1000px) {
+  .block-grid__item {
+    width: 23%;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .block-grid__item {
+    width: 23%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
   .block-grid__item {
     width: 23%;
   }
