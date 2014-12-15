@@ -1,11 +1,19 @@
 'use strict';
 app.mediaQueries = {
     alphaAndUp:   '(min-width: 0px)',
-    alpha:        '(max-width: 650px)',
-    betaAndUp:    '(min-width: 650px)',
-    beta:         '(min-width: 650px) and (max-width: 900px)',
-    alphaAndBeta: '(max-width: 900px)',
-    gammaAndUp:   '(min-width: 900px)'
+    alpha:        '(max-width: 600px)',
+    betaAndUp:    '(min-width: 600px)',
+    beta:         '(min-width: 600px) and (max-width: 700px)',
+    alphaAndBeta: '(max-width: 700px)',
+    gammaAndUp:   '(min-width: 700px)',
+    gamma:        '(min-width: 700px) and (max-width: 800px)',
+    deltaAndUp:   '(min-width: 800px)',
+    delta:        '(min-width: 800px) and (max-width: 900px)',
+    epsilonAndUp: '(min-width: 1000px)',
+    epsilon:      '(min-width: 1000px) and (max-width: 1200px)',
+    zetaAndUp:    '(min-width: 1200px)',
+    zeta:         '(min-width: 1200px) and (max-width: 1400px)',
+    etaAndUp:     '(min-width: 1400px)'
 };
 app.settings = {
     $document: $(document),
@@ -385,8 +393,8 @@ app.formModules = {
             };
 
         if(app.formModules.settings.$validation.length > 0){
-            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.formModules.settings.validationLanguage + '.js' + app.settings.version, function () {
-                yepnope.injectJs(app.pathBower + 'parsleyjs/dist/parsley.js' + app.settings.version,
+            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.formModules.settings.validationLanguage + '.js', function () {
+                yepnope.injectJs(app.pathBower + 'parsleyjs/dist/parsley.js',
                     function(){
                         app.formModules.settings.$validation.each(function () {
                             $(this).parsley(parsleyOptions);
@@ -396,6 +404,26 @@ app.formModules = {
                     });
             });
         }
+    }
+};
+app.groupCheckable = {
+    init: function () {
+        $('[data-group-checkable]').on('change', function () {
+            var $this = $(this),
+                $group = $('[data-group-checkable-target=' + $this.attr('data-group-checkable') + ']');
+
+            $this.is(':checked') ? $group.prop('checked', true) : $group.prop('checked', false);
+        });
+
+        $('[data-group-checkable-target]').on('change', function () {
+            var $this = $(this),
+                group = $this.attr('data-group-checkable-target'),
+                $group = $('[data-group-checkable-target=' + group + ']'),
+                $groupChecked = $('[data-group-checkable-target=' + group + ']:checked'),
+                $trigger = $('[data-group-checkable=' + group + ']');
+
+            $group.length === $groupChecked.length ? $trigger.prop('checked', true) : $trigger.prop('checked', false);
+        });
     }
 };
 app.jump = {
@@ -433,63 +461,156 @@ app.modals = {
     },
 
     init: function () {
-        var self = this;
-
-        if (app.modals.settings.$trigger.length > 0 && app.modals.settings.$modal.length > 0) {
+        if (app.modals.settings.$modal.length > 0) {
             app.settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
 
-            self.triggers();
+            app.modals.triggers();
         }
     },
 
     triggers: function () {
-        var self = this;
-
         app.modals.settings.$trigger.on('click', function (event) {
             event.preventDefault();
 
-            var $trigger = $(this);
+            var $trigger = $(this),
+                data = $trigger.data();
 
-            self.openModal($trigger, $trigger.data('modalId'));
+            data.modal === 'ajax' ? app.modals.ajax(data.modalAjaxActivity, data.modalAjaxSection) : app.modals.openModal($trigger, data);
         });
 
         app.settings.$body.on('keydown', function(event){
             if (event.keyCode === 27) {
-                self.closeModal();
+                app.modals.closeModal();
             }
         });
 
-        $('[data-modal-close]').on('click', function(event) {
+        app.settings.$body.on('click', '[data-modal-close]', function(event) {
             event.preventDefault();
-            self.closeModal();
+            app.modals.closeModal();
         });
     },
 
-    openModal: function (_trigger, _modalId) {
-        var self = this,
-            scrollTopPosition = app.settings.$window.scrollTop(),
-            $targetModal = $('#' + _modalId);
+    createModal: function (_triggerData, _targetModal) {
+        var html = '<div id="' + _triggerData.modalId + '" class="modal" data-modal-effect="fadescale"><div class="modal__content">';
+
+        if (_triggerData.modal === 'ajax') {
+            html += _triggerData.modalAjaxContent;
+        } else {
+            if (_triggerData.modalTitle !== undefined) {
+                html +='<h2>' + _triggerData.modalTitle + '</h2>';
+            }
+
+            if (_triggerData.modalText !== undefined) {
+                html += '<p>' + _triggerData.modalText + '</p>';
+            }
+
+            if (_triggerData.modalCloseBtn !== undefined) {
+                if (_triggerData.modal === 'confirm') {
+                    if ( typeof _triggerData.modalConfirmAction === "function") {
+                        html += '<a class="btn btn--beta btn--medium confirm-ok" href="javascript:void(0)" data-modal-close>' + _triggerData.modalConfirmBtn + '</a>';
+                    } else {
+                        html += '<a class="btn btn--beta btn--medium" href="' + _triggerData.modalConfirmAction + '">' + _triggerData.modalConfirmBtn + '</a>';
+                    }
+                    html += '<button class="btn btn--alpha btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button>';
+                } else {
+                    html += '<button class="btn btn--beta btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button>';
+                }
+            }
+        }
+
+        html += '</div></div>';
+
+        app.settings.$body.append(html);
+
+        if ( app.settings.$html.find('.confirm-ok').length ) {
+            app.settings.$body.find('#' + _triggerData.modalId + ' .confirm-ok').click(_triggerData.modalConfirmAction);
+        }
+    },
+
+    openModal: function (_trigger, _triggerData) {
+        var scrollTopPosition = app.settings.$window.scrollTop(),
+            $targetModal = (typeof _triggerData === 'string') ? $('#' + _triggerData) : $('#' + _triggerData.modalId);
 
         app.modals.settings.scrollTopPosition = scrollTopPosition;
 
+        if ($targetModal.length > 0) {
+            app.modals.showModal($targetModal, scrollTopPosition, _triggerData.modalOpenCallback);
+        } else {
+            app.modals.createModal(_triggerData, $targetModal);
+
+            setTimeout(function () {
+                app.modals.showModal($('#' + _triggerData.modalId), scrollTopPosition, _triggerData.modalOpenCallback);
+            }, 100);
+        }
+    },
+
+    showModal: function (_targetModal, _scrollTopPosition, _modalOpenCallback) {
         app.settings.$html
             .addClass('modal-show')
-            .attr('data-modal-effect', $targetModal.data('modal-effect'));
+            .attr('data-modal-effect', _targetModal.data('modal-effect'));
 
-        $targetModal.addClass('modal-show');
+        _targetModal.addClass('modal-show');
 
-        app.settings.$background.scrollTop(scrollTopPosition);
+        app.settings.$background.scrollTop(_scrollTopPosition);
+
+        if (_modalOpenCallback && typeof _modalOpenCallback === 'function') {
+            _modalOpenCallback();
+        }
     },
 
     closeModal: function () {
-        var self = this;
-
         $('.modal-show').removeClass('modal-show');
         app.settings.$html
             .removeClass('modal-show')
             .removeAttr('data-modal-effect');
 
         app.settings.$window.scrollTop(app.modals.settings.scrollTopPosition);
+    },
+
+    confirm: function (_options) {
+        var modalId = 'js-modal-confirm',
+            options = $.extend({
+                            modal: 'confirm',
+                            modalId: modalId,
+                            modalConfirmBtn: 'bevestigen',
+                            modalCloseBtn: 'annuleren',
+                        }, _options);
+
+        $('#' + modalId).remove();
+
+        app.modals.openModal(this, options);
+
+        /*
+        * Usage:
+        *
+        app.modals.confirm({
+            modalTitle: 'title',
+            modalText: 'text',
+            modalConfirmAction: 'http://google.nl',
+
+            modalOpenCallback: function () {
+                console.log('hoi');
+            }
+        });
+        */
+    },
+
+    ajax: function (activity, request) {
+        var modalId = 'js-modal-ajax';
+
+        $('#' + modalId).remove();
+
+        $.ajax({
+            url: 'ajax_html.php',
+            method: 'GET',
+            success: function (data) {
+                app.modals.openModal(this, {
+                    modal: 'ajax',
+                    modalId: modalId,
+                    modalAjaxContent: data
+                });
+            }
+        });
     }
 };
 app.navBar = {
@@ -1008,6 +1129,7 @@ app.settings.$document.ready(function () {
     app.offCanvas.init();
     app.toggle.init();
     app.parallax.init(scrollTop);
+    app.groupCheckable.init();
 
     //app.cycle.init();
     //app.fancybox.init();

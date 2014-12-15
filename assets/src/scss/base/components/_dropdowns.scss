@@ -39,6 +39,10 @@
         @include rem(min-width, map-get($dropdown, min-width));
         @include rem(max-width, map-get($dropdown, max-width));
 
+        [data-dropdown-trigger=click] & {
+            transition-delay: 0;
+        }
+
         a {
             background-color: map-get($dropdown, link-bg-color);
             display: block;

@@ -53,8 +53,8 @@ app.formModules = {
             };
 
         if(app.formModules.settings.$validation.length > 0){
-            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.formModules.settings.validationLanguage + '.js' + app.settings.version, function () {
-                yepnope.injectJs(app.pathBower + 'parsleyjs/dist/parsley.js' + app.settings.version,
+            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.formModules.settings.validationLanguage + '.js', function () {
+                yepnope.injectJs(app.pathBower + 'parsleyjs/dist/parsley.js',
                     function(){
                         app.formModules.settings.$validation.each(function () {
                             $(this).parsley(parsleyOptions);

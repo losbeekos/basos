@@ -18,6 +18,7 @@ app.settings.$document.ready(function () {
     app.offCanvas.init();
     app.toggle.init();
     app.parallax.init(scrollTop);
+    app.groupCheckable.init();
 
     //app.cycle.init();
     //app.fancybox.init();

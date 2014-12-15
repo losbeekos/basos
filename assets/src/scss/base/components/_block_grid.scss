@@ -18,25 +18,12 @@
         margin-left: map-get($block-grid, margin) / 2;
         margin-right: map-get($block-grid, margin) / 2;
 
-        @include mq(beta) {
-            width: (100 / map-get($block-grid, row-count-beta))-(map-get($block-grid, margin));
-        }
-
-        @include mq(gamma) {
-            width: (100 / map-get($block-grid, row-count-gamma))-(map-get($block-grid, margin));
-        }
-
-        @include mq(epsilon) {
-            width: (100 / map-get($block-grid, row-count-epsilon))-(map-get($block-grid, margin));
-        }
-
-        @include mq(zeta) {
-            width: (100 / map-get($block-grid, row-count-zeta))-(map-get($block-grid, margin));
-        }
-
-        @include mq(eta) {
-            width: (100 / map-get($block-grid, row-count-eta))-(map-get($block-grid, margin));
-        }
+        @include mq(beta)       { width: (100 / map-get($block-grid, row-count-beta))-(map-get($block-grid, margin));    }
+        @include mq(gamma)      { width: (100 / map-get($block-grid, row-count-gamma))-(map-get($block-grid, margin));   }
+        @include mq(delta)      { width: (100 / map-get($block-grid, row-count-delta))-(map-get($block-grid, margin));   }
+        @include mq(epsilon)    { width: (100 / map-get($block-grid, row-count-epsilon))-(map-get($block-grid, margin)); }
+        @include mq(zeta)       { width: (100 / map-get($block-grid, row-count-zeta))-(map-get($block-grid, margin));    }
+        @include mq(eta-and-up) { width: (100 / map-get($block-grid, row-count-eta))-(map-get($block-grid, margin));     }
 
         &:before {
             content: '';

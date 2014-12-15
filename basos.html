@@ -1434,6 +1434,15 @@
                         <h2 class="h3">Slide effects</h2>
                         <ul class="btn-group btn-group--inline">
                             <li>
+                                <a class="btn btn--alpha btn--small modal__trigger" data-modal="ajax" data-modal-ajax-activity="someActivity" data-modal-ajax-section="someSection">Ajax modal</a>
+                            </li>
+                            <li>
+                                <a class="btn btn--alpha btn--small modal__trigger" data-modal-id="modal-make" data-modal-title="Weet je het zeker?" data-modal-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." data-modal-close-btn="sluiten">Make modal</a>
+                            </li>
+                            <li>
+                                <a class="btn btn--alpha btn--small modal__trigger" data-modal-id="modal-make2" data-modal-title="Weet je het zeker?" data-modal-close-btn="annuleren" data-modal="confirm" data-modal-confirm-action="http://www.google.nl" data-modal-confirm-btn="Ja, verwijder">Confirm modal</a>
+                            </li>
+                            <li>
                                 <a class="btn btn--alpha btn--small modal__trigger" data-modal-id="modal-1">slide-top</a>
                                 <div id="modal-1" class="modal" data-modal-effect="slide-top">
                                     <div class="modal__content">
@@ -1778,6 +1787,6 @@
         </div>
     </div>
 
-    <script src="src/js/main.js"></script>
+    <script src="assets/dist/js/main.js"></script>
 </body>
 </html>

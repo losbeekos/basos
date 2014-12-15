@@ -624,7 +624,7 @@ textarea {
 * }
 *
 **/
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 700px) {
   .hide-beta,
   .hide-alpha-and-beta {
     border: 0;
@@ -665,7 +665,7 @@ textarea {
 * }
 *
 **/
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .hide-gamma-and-up {
     border: 0;
     clip: rect(0 0 0 0);
@@ -726,13 +726,103 @@ textarea {
 .text-align-right {
   text-align: right;
 }
+.text-align-right-beta-and-up {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 600px) {
+  .text-align-right-beta-and-up {
+    text-align: right;
+  }
+}
+.text-align-right-gamma-and-up {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 700px) {
+  .text-align-right-gamma-and-up {
+    text-align: right;
+  }
+}
 
 .text-align-left {
   text-align: left;
 }
+.text-align-left-beta-and-up {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 600px) {
+  .text-align-left-beta-and-up {
+    text-align: left;
+  }
+}
+.text-align-left-gamma-and-up {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 700px) {
+  .text-align-left-gamma-and-up {
+    text-align: left;
+  }
+}
 
 .text-align-center {
   text-align: center;
+}
+.text-align-center-beta-and-up {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 600px) {
+  .text-align-center-beta-and-up {
+    text-align: center;
+  }
+}
+.text-align-center-gamma-and-up {
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 700px) {
+  .text-align-center-gamma-and-up {
+    text-align: center;
+  }
 }
 
 /* Margin classes
@@ -2551,7 +2641,7 @@ Add this class to an element to fire an animation.
 * }
 *
 **/
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 700px) {
   .column-beta--first {
     margin-left: 0;
   }
@@ -2648,7 +2738,7 @@ Add this class to an element to fire an animation.
 * }
 *
 **/
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .column-gamma-and-up--first {
     margin-left: 0;
   }
@@ -2840,7 +2930,7 @@ p {
   *
   **/
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 700px) {
   .container,
   .container-beta {
     padding-left: 20px;
@@ -2849,7 +2939,7 @@ p {
     padding-right: 1.25rem;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .container,
   .container-beta {
     padding-left: 40px;
@@ -2895,7 +2985,7 @@ p {
   *
   **/
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 700px) {
   .section {
     padding-top: 90px;
     padding-top: 5.625rem;
@@ -2903,7 +2993,7 @@ p {
     padding-bottom: 5.625rem;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .section {
     padding-top: 120px;
     padding-top: 7.5rem;
@@ -2955,13 +3045,13 @@ p {
   *
   **/
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 700px) {
   .section-img {
     height: 400px;
     height: 25rem;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .section-img {
     height: 500px;
     height: 31.25rem;
@@ -3021,7 +3111,7 @@ h1, .h1 {
   *
   **/
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 700px) {
   h1, .h1 {
     font-size: 35px;
     font-size: 2.1875rem;
@@ -3029,7 +3119,7 @@ h1, .h1 {
     margin-bottom: 1.25rem;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   h1, .h1 {
     font-size: 40px;
     font-size: 2.5rem;
@@ -3052,7 +3142,7 @@ h2, .h2 {
   *
   **/
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   h2, .h2 {
     font-size: 26px;
     font-size: 1.625rem;
@@ -3262,13 +3352,13 @@ for a smaller generated CSS file.
   *
   **/
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 700px) {
   .block {
     padding: 20px;
     padding: 1.25rem;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .block {
     padding: 30px;
     padding: 1.875rem;
@@ -3331,10 +3421,23 @@ for a smaller generated CSS file.
   * }
   *
   **/
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 700px) {
   .block-grid__item {
     width: 31.33333%;
+  }
+}
+@media (min-width: 700px) and (max-width: 800px) {
+  .block-grid__item {
+    width: 23%;
   }
 }
 @media (min-width: 800px) and (max-width: 1000px) {
@@ -3348,6 +3451,11 @@ for a smaller generated CSS file.
   }
 }
 @media (min-width: 1200px) and (max-width: 1400px) {
+  .block-grid__item {
+    width: 23%;
+  }
+}
+@media (min-width: 1400px) {
   .block-grid__item {
     width: 23%;
   }
@@ -3467,7 +3575,7 @@ for a smaller generated CSS file.
 .no-csspositionsticky .nav-bar {
   position: relative;
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .nav-bar {
     max-height: inherit;
     text-align: left;
@@ -3492,7 +3600,7 @@ for a smaller generated CSS file.
   *
   **/
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .nav-bar .logo {
     float: left;
     padding-top: 0;
@@ -3536,7 +3644,7 @@ for a smaller generated CSS file.
   *
   **/
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .nav-bar--transparent:not(.nav-bar--fixed) {
     background: transparent;
   }
@@ -3572,7 +3680,7 @@ for a smaller generated CSS file.
   *
   **/
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .nav-bar__container {
     padding-left: 40px;
     padding-left: 2.5rem;
@@ -3598,7 +3706,7 @@ for a smaller generated CSS file.
   *
   **/
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .nav-bar__container:before {
     display: none;
   }
@@ -3613,7 +3721,7 @@ for a smaller generated CSS file.
   *
   **/
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .nav-bar__nav {
     float: right;
     margin-left: 0;
@@ -3643,7 +3751,7 @@ for a smaller generated CSS file.
   *
   **/
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .nav-bar__trigger {
     display: none;
   }
@@ -3679,7 +3787,7 @@ for a smaller generated CSS file.
   *
   **/
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .nav-bar__list {
     background: transparent;
     -webkit-transform: translate3d(0, 0, 0);
@@ -3705,7 +3813,7 @@ for a smaller generated CSS file.
   *
   **/
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .nav-bar__list li {
     display: inline-block;
     margin-right: -4px;
@@ -3726,7 +3834,7 @@ for a smaller generated CSS file.
   *
   **/
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .nav-bar__link {
     display: inline-block;
   }
@@ -3820,6 +3928,10 @@ for a smaller generated CSS file.
   min-width: 12.5rem;
   max-width: 300px;
   max-width: 18.75rem;
+}
+[data-dropdown-trigger=click] .dropdown__content {
+  -webkit-transition-delay: 0;
+          transition-delay: 0;
 }
 .dropdown__content a {
   background-color: transparent;
@@ -4358,13 +4470,13 @@ progress:not([value])::-ms-fill {
   *
   **/
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 700px) {
   .parallax {
     height: 350px;
     height: 21.875rem;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .parallax {
     height: 450px;
     height: 28.125rem;
@@ -4397,7 +4509,7 @@ progress:not([value])::-ms-fill {
   *
   **/
 }
-@media (min-width: 600px) and (max-width: 800px) {
+@media (min-width: 600px) and (max-width: 700px) {
   .parallax__img {
     left: -25%;
     min-width: 150%;
@@ -4409,7 +4521,7 @@ progress:not([value])::-ms-fill {
     top: 0;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .parallax__img {
     left: 0;
   }
@@ -4595,7 +4707,7 @@ progress:not([value])::-ms-fill {
   *
   **/
 }
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .off-canvas-nav-bar {
     background: #f2f2f2;
     position: fixed;
@@ -4640,7 +4752,7 @@ progress:not([value])::-ms-fill {
     right: 0;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .off-canvas-nav-bar {
     background: #222222;
     width: 100%;
@@ -4671,13 +4783,13 @@ progress:not([value])::-ms-fill {
     position: relative;
   }
 }
-@media (min-width: 800px) and (min-width: 800px) {
+@media (min-width: 700px) and (min-width: 700px) {
   .off-canvas-nav-bar {
     max-height: inherit;
     text-align: left;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .off-canvas-nav-bar .logo {
     display: inline-block;
     margin-bottom: -6px;
@@ -4695,7 +4807,7 @@ progress:not([value])::-ms-fill {
     **/
   }
 }
-@media (min-width: 800px) and (min-width: 800px) {
+@media (min-width: 700px) and (min-width: 700px) {
   .off-canvas-nav-bar .logo {
     float: left;
     padding-top: 0;
@@ -4705,7 +4817,7 @@ progress:not([value])::-ms-fill {
     margin-top: 1.125rem;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .off-canvas-nav-bar--transform {
     -webkit-transform: translate3d(0, -100%, 0);
             transform: translate3d(0, -100%, 0);
@@ -4725,13 +4837,13 @@ progress:not([value])::-ms-fill {
     **/
   }
 }
-@media (min-width: 800px) and (max-width: 600px) {
+@media (min-width: 700px) and (max-width: 600px) {
   .off-canvas-nav-bar--transform.nav-bar--always-show-on-mobile {
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0);
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
     /**
     *
@@ -4743,7 +4855,7 @@ progress:not([value])::-ms-fill {
     **/
   }
 }
-@media (min-width: 800px) and (min-width: 800px) {
+@media (min-width: 700px) and (min-width: 700px) {
   .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
     background: transparent;
   }
@@ -4758,7 +4870,7 @@ progress:not([value])::-ms-fill {
     color: #ffffff;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .no-csspositionsticky .off-canvas-nav-bar--fixed {
     position: fixed;
     top: 0;
@@ -4781,7 +4893,7 @@ progress:not([value])::-ms-fill {
     **/
   }
 }
-@media (min-width: 800px) and (min-width: 800px) {
+@media (min-width: 700px) and (min-width: 700px) {
   .off-canvas-nav-bar__container {
     padding-left: 40px;
     padding-left: 2.5rem;
@@ -4789,7 +4901,7 @@ progress:not([value])::-ms-fill {
     padding-right: 2.5rem;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .off-canvas-nav-bar__nav {
     /**
     *
@@ -4801,14 +4913,14 @@ progress:not([value])::-ms-fill {
     **/
   }
 }
-@media (min-width: 800px) and (min-width: 800px) {
+@media (min-width: 700px) and (min-width: 700px) {
   .off-canvas-nav-bar__nav {
     float: right;
     margin-left: 0;
     margin-left: 0;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .off-canvas-nav-bar__list {
     clear: both;
     border-top: 1px solid #3c3c3c;
@@ -4826,7 +4938,7 @@ progress:not([value])::-ms-fill {
     **/
   }
 }
-@media (min-width: 800px) and (min-width: 800px) {
+@media (min-width: 700px) and (min-width: 700px) {
   .off-canvas-nav-bar__list {
     overflow: inherit;
     max-height: inherit;
@@ -4834,7 +4946,7 @@ progress:not([value])::-ms-fill {
     border-top: 0;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .nav-bar--mobile-show .off-canvas-nav-bar__list {
     max-height: 800px;
     max-height: 50rem;
@@ -4852,13 +4964,13 @@ progress:not([value])::-ms-fill {
     **/
   }
 }
-@media (min-width: 800px) and (min-width: 800px) {
+@media (min-width: 700px) and (min-width: 700px) {
   .off-canvas-nav-bar__list li {
     display: inline-block;
     margin-right: -4px;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .off-canvas-nav-bar__link {
     display: block;
     color: #ffffff;
@@ -4875,12 +4987,12 @@ progress:not([value])::-ms-fill {
     **/
   }
 }
-@media (min-width: 800px) and (min-width: 800px) {
+@media (min-width: 700px) and (min-width: 700px) {
   .off-canvas-nav-bar__link {
     display: inline-block;
   }
 }
-@media (min-width: 800px) {
+@media (min-width: 700px) {
   .off-canvas-nav-bar__link:hover {
     background: #3c3c3c;
     color: #ffffff;
@@ -4901,7 +5013,7 @@ progress:not([value])::-ms-fill {
   *
   **/
 }
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .off-canvas-nav-bar__item {
     border-top: 1px solid #ffffff;
     border-bottom: 1px solid #e6e6e6;
@@ -4924,7 +5036,7 @@ progress:not([value])::-ms-fill {
   *
   **/
 }
-@media (max-width: 800px) {
+@media (max-width: 700px) {
   .off-canvas-nav-bar__link {
     display: block;
     color: #000000;
@@ -6288,9 +6400,6 @@ input[type=radio] + label:after {
 ==========
 */
 /* Navigation
-==========
-*/
-/* Spotlight
 ==========
 */
 /* Print
