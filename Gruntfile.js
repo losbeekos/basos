@@ -1,43 +1,14 @@
 module.exports = function(grunt) {
 
-    grunt.loadNpmTasks('grunt-contrib-clean');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-contrib-concat');
-    grunt.loadNpmTasks('grunt-contrib-watch');
-    grunt.loadNpmTasks('grunt-contrib-jshint');
-    grunt.loadNpmTasks('grunt-contrib-uglify');
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-cssmin');
-    grunt.loadNpmTasks('grunt-contrib-imagemin');
-    grunt.loadNpmTasks('grunt-imageoptim');
-    grunt.loadNpmTasks('grunt-autoprefixer');
-    grunt.loadNpmTasks('grunt-contrib-connect');
-    grunt.loadNpmTasks('grunt-browser-sync');
+     //load all grunt tasks matching the `grunt-*` pattern
+    require('load-grunt-tasks')(grunt);
 
-    var todayTimestamp = '<%= grunt.template.today("ddmmyyyyhhMMss") %>';
-
-    var basosConfig = {
-      src: 'src',
-      dist: 'dist'
-    };
-
-    var http = require('http');
-    var gateway = require('gateway');
-
-    var app = http.createServer(gateway(__dirname, {
-      '.php': 'php-cgi'
-    }));
-
-    var LIVERELOAD_PORT = 35729;
-    var lrSnippet = require('connect-livereload')({ port: LIVERELOAD_PORT });
-    var mountFolder = function (connect, dir) {
-      return connect.static(require('path').resolve(dir));
-    };
-    var phpMiddleware = require('connect-php');
-
-    try {
-        basosConfig.app = require('./bower.json').appPath || basosConfig.app;
-    } catch (e) {}
+    var todayTimestamp = '<%= grunt.template.today("ddmmyyyyhhMMss") %>',
+        basosConfig = {
+            src: 'assets/src',
+            dist: 'assets/dist'
+        },
+        gateway = require('gateway');
 
     grunt.initConfig({
         basos: basosConfig,
@@ -239,33 +210,25 @@ module.exports = function(grunt) {
         },
 
         watch: {
-            options: {
-                livereload: true,
-            },
-
             js: {
                 files: ['<%= jshint.files %>'],
                 tasks: ['clean:js', 'jshint', 'concat', 'copy:js'],
             },
 
             sass: {
-                files: ['src/scss/**/*'],
+                files: ['<%= basos.src %>/scss/**/*'],
                 tasks: ['sass:dev', 'autoprefixer:dev', 'clean:tempsass'],
             },
 
             fonts: {
-                files: ['src/fonts/**/*'],
+                files: ['<%= basos.src %>/fonts/**/*'],
                 tasks: ['clean:fonts', 'copy:fonts']
             },
 
             images: {
-                files: ['src/img/**/*'],
+                files: ['<%= basos.src %>/img/**/*'],
                 tasks: ['clean:images', 'copy:images']
             }
-
-            // dom: {
-            //     files: ['**/*.tpl', '**/*.php', '**/*.html'],
-            // }
         },
 
         connect: {
@@ -273,25 +236,7 @@ module.exports = function(grunt) {
                 options: {
                     hostname: '0.0.0.0',
                     port: 9000,
-                    keepalive: true,
-                    middleware: function(connect, options) {
-                        var middlewares = [];
-                        var directory = options.directory ||
-                        options.base[options.base.length - 1];
-
-                        if (!Array.isArray(options.base)) {
-                            options.base = [options.base];
-                        }
-
-                        middlewares.push(phpMiddleware(directory));
-
-                        options.base.forEach(function(base) {
-                            middlewares.push(connect.static(base));
-                        });
-
-                        middlewares.push(connect.directory(directory));
-                        return middlewares;
-                    }
+                    keepalive: true
                 }
             }
         },
@@ -313,7 +258,6 @@ module.exports = function(grunt) {
                 },
 
                 options: {
-                    browser: ['google chrome', 'firefox', 'safari', 'opera'],
                     proxy: '0.0.0.0:9000',
                     ghostMode: {
                         clicks: false,

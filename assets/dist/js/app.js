@@ -8,7 +8,6 @@ app.mediaQueries = {
     gammaAndUp:   '(min-width: 900px)'
 };
 app.settings = {
-    version: '?v=1.0', // If the file changes, update this number
     $document: $(document),
     $window: $(window),
     windowHeight: $(window).height(),

@@ -3,7 +3,7 @@
 var app = app || {},
     helper = helper || {};
 
-app.path = 'dist/js/';
+app.path = 'assets/dist/js/';
 app.pathBower = 'bower_components/';
 
 yepnope.errorTimeout = 2000;

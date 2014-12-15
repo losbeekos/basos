@@ -278,7 +278,6 @@ figure {
  * Address differences between Firefox and other browsers.
  */
 hr {
-  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -395,7 +394,6 @@ input {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -420,7 +418,6 @@ input[type="number"]::-webkit-outer-spin-button {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
-  -moz-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -941,9 +938,9 @@ Add this class to an element to fire an animation.
 */
 .animated, .scrollspy--in-view {
   -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+          animation-duration: 1s;
   -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+          animation-fill-mode: both;
 }
 
 /* Shake animation
@@ -952,34 +949,34 @@ Add this class to an element to fire an animation.
 @-webkit-keyframes shake {
   0%, 100% {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
   20%, 60% {
     -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
   }
   40%, 80% {
     -webkit-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
   }
 }
 @keyframes shake {
   0%, 100% {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
   20%, 60% {
     -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
   }
   40%, 80% {
     -webkit-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
   }
 }
 .animation-shake {
   -webkit-animation-name: shake;
-  animation-name: shake;
+          animation-name: shake;
 }
 
 /* BounceIn animation
@@ -988,74 +985,74 @@ Add this class to an element to fire an animation.
 @-webkit-keyframes bounceIn {
   0%, 20%, 40%, 60%, 80%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
   }
   20% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1);
-    transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
   }
   40% {
     -webkit-transform: scale3d(0.9, 0.9, 0.9);
-    transform: scale3d(0.9, 0.9, 0.9);
+            transform: scale3d(0.9, 0.9, 0.9);
   }
   60% {
     opacity: 1;
     -webkit-transform: scale3d(1.03, 1.03, 1.03);
-    transform: scale3d(1.03, 1.03, 1.03);
+            transform: scale3d(1.03, 1.03, 1.03);
   }
   80% {
     -webkit-transform: scale3d(0.97, 0.97, 0.97);
-    transform: scale3d(0.97, 0.97, 0.97);
+            transform: scale3d(0.97, 0.97, 0.97);
   }
   100% {
     opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
 }
 @keyframes bounceIn {
   0%, 20%, 40%, 60%, 80%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
   }
   20% {
     -webkit-transform: scale3d(1.1, 1.1, 1.1);
-    transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
   }
   40% {
     -webkit-transform: scale3d(0.9, 0.9, 0.9);
-    transform: scale3d(0.9, 0.9, 0.9);
+            transform: scale3d(0.9, 0.9, 0.9);
   }
   60% {
     opacity: 1;
     -webkit-transform: scale3d(1.03, 1.03, 1.03);
-    transform: scale3d(1.03, 1.03, 1.03);
+            transform: scale3d(1.03, 1.03, 1.03);
   }
   80% {
     -webkit-transform: scale3d(0.97, 0.97, 0.97);
-    transform: scale3d(0.97, 0.97, 0.97);
+            transform: scale3d(0.97, 0.97, 0.97);
   }
   100% {
     opacity: 1;
     -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+            transform: scale3d(1, 1, 1);
   }
 }
 .animation-bounceIn {
   -webkit-animation-name: bounceIn;
-  animation-name: bounceIn;
+          animation-name: bounceIn;
   -webkit-animation-duration: .75s;
-  animation-duration: .75s;
+          animation-duration: .75s;
 }
 
 /* BounceInDown animation
@@ -1064,62 +1061,62 @@ Add this class to an element to fire an animation.
 @-webkit-keyframes bounceInDown {
   0%, 60%, 75%, 90%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -3000px, 0);
-    transform: translate3d(0, -3000px, 0);
+            transform: translate3d(0, -3000px, 0);
   }
   60% {
     opacity: 1;
     -webkit-transform: translate3d(0, 25px, 0);
-    transform: translate3d(0, 25px, 0);
+            transform: translate3d(0, 25px, 0);
   }
   75% {
     -webkit-transform: translate3d(0, -10px, 0);
-    transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
   }
   90% {
     -webkit-transform: translate3d(0, 5px, 0);
-    transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
   }
   100% {
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 @keyframes bounceInDown {
   0%, 60%, 75%, 90%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -3000px, 0);
-    transform: translate3d(0, -3000px, 0);
+            transform: translate3d(0, -3000px, 0);
   }
   60% {
     opacity: 1;
     -webkit-transform: translate3d(0, 25px, 0);
-    transform: translate3d(0, 25px, 0);
+            transform: translate3d(0, 25px, 0);
   }
   75% {
     -webkit-transform: translate3d(0, -10px, 0);
-    transform: translate3d(0, -10px, 0);
+            transform: translate3d(0, -10px, 0);
   }
   90% {
     -webkit-transform: translate3d(0, 5px, 0);
-    transform: translate3d(0, 5px, 0);
+            transform: translate3d(0, 5px, 0);
   }
   100% {
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 .animation-bounceInDown {
   -webkit-animation-name: bounceInDown;
-  animation-name: bounceInDown;
+          animation-name: bounceInDown;
 }
 
 /* BounceInLeft animation
@@ -1128,62 +1125,62 @@ Add this class to an element to fire an animation.
 @-webkit-keyframes bounceInLeft {
   0%, 60%, 75%, 90%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
     -webkit-transform: translate3d(-3000px, 0, 0);
-    transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
   }
   60% {
     opacity: 1;
     -webkit-transform: translate3d(25px, 0, 0);
-    transform: translate3d(25px, 0, 0);
+            transform: translate3d(25px, 0, 0);
   }
   75% {
     -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
   }
   90% {
     -webkit-transform: translate3d(5px, 0, 0);
-    transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0);
   }
   100% {
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 @keyframes bounceInLeft {
   0%, 60%, 75%, 90%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
     -webkit-transform: translate3d(-3000px, 0, 0);
-    transform: translate3d(-3000px, 0, 0);
+            transform: translate3d(-3000px, 0, 0);
   }
   60% {
     opacity: 1;
     -webkit-transform: translate3d(25px, 0, 0);
-    transform: translate3d(25px, 0, 0);
+            transform: translate3d(25px, 0, 0);
   }
   75% {
     -webkit-transform: translate3d(-10px, 0, 0);
-    transform: translate3d(-10px, 0, 0);
+            transform: translate3d(-10px, 0, 0);
   }
   90% {
     -webkit-transform: translate3d(5px, 0, 0);
-    transform: translate3d(5px, 0, 0);
+            transform: translate3d(5px, 0, 0);
   }
   100% {
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 .animation-bounceInLeft {
   -webkit-animation-name: bounceInLeft;
-  animation-name: bounceInLeft;
+          animation-name: bounceInLeft;
 }
 
 /* BounceInRight animation
@@ -1192,62 +1189,62 @@ Add this class to an element to fire an animation.
 @-webkit-keyframes bounceInRight {
   0%, 60%, 75%, 90%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
     -webkit-transform: translate3d(3000px, 0, 0);
-    transform: translate3d(3000px, 0, 0);
+            transform: translate3d(3000px, 0, 0);
   }
   60% {
     opacity: 1;
     -webkit-transform: translate3d(-25px, 0, 0);
-    transform: translate3d(-25px, 0, 0);
+            transform: translate3d(-25px, 0, 0);
   }
   75% {
     -webkit-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
   }
   90% {
     -webkit-transform: translate3d(-5px, 0, 0);
-    transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0);
   }
   100% {
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 @keyframes bounceInRight {
   0%, 60%, 75%, 90%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
     -webkit-transform: translate3d(3000px, 0, 0);
-    transform: translate3d(3000px, 0, 0);
+            transform: translate3d(3000px, 0, 0);
   }
   60% {
     opacity: 1;
     -webkit-transform: translate3d(-25px, 0, 0);
-    transform: translate3d(-25px, 0, 0);
+            transform: translate3d(-25px, 0, 0);
   }
   75% {
     -webkit-transform: translate3d(10px, 0, 0);
-    transform: translate3d(10px, 0, 0);
+            transform: translate3d(10px, 0, 0);
   }
   90% {
     -webkit-transform: translate3d(-5px, 0, 0);
-    transform: translate3d(-5px, 0, 0);
+            transform: translate3d(-5px, 0, 0);
   }
   100% {
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 .animation-bounceInRight {
   -webkit-animation-name: bounceInRight;
-  animation-name: bounceInRight;
+          animation-name: bounceInRight;
 }
 
 /* BounceInUp animation
@@ -1256,62 +1253,62 @@ Add this class to an element to fire an animation.
 @-webkit-keyframes bounceInUp {
   0%, 60%, 75%, 90%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 3000px, 0);
-    transform: translate3d(0, 3000px, 0);
+            transform: translate3d(0, 3000px, 0);
   }
   60% {
     opacity: 1;
     -webkit-transform: translate3d(0, -20px, 0);
-    transform: translate3d(0, -20px, 0);
+            transform: translate3d(0, -20px, 0);
   }
   75% {
     -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0);
+            transform: translate3d(0, 10px, 0);
   }
   90% {
     -webkit-transform: translate3d(0, -5px, 0);
-    transform: translate3d(0, -5px, 0);
+            transform: translate3d(0, -5px, 0);
   }
   100% {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 @keyframes bounceInUp {
   0%, 60%, 75%, 90%, 100% {
     -webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+            transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
   }
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 3000px, 0);
-    transform: translate3d(0, 3000px, 0);
+            transform: translate3d(0, 3000px, 0);
   }
   60% {
     opacity: 1;
     -webkit-transform: translate3d(0, -20px, 0);
-    transform: translate3d(0, -20px, 0);
+            transform: translate3d(0, -20px, 0);
   }
   75% {
     -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0);
+            transform: translate3d(0, 10px, 0);
   }
   90% {
     -webkit-transform: translate3d(0, -5px, 0);
-    transform: translate3d(0, -5px, 0);
+            transform: translate3d(0, -5px, 0);
   }
   100% {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 .animation-bounceInUp {
   -webkit-animation-name: bounceInUp;
-  animation-name: bounceInUp;
+          animation-name: bounceInUp;
 }
 
 /* FadeIn animation
@@ -1335,7 +1332,7 @@ Add this class to an element to fire an animation.
 }
 .animation-fadeIn {
   -webkit-animation-name: fadeIn;
-  animation-name: fadeIn;
+          animation-name: fadeIn;
 }
 
 /* FadeInDown animation
@@ -1345,29 +1342,29 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 @keyframes fadeInDown {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 .animation-fadeInDown {
   -webkit-animation-name: fadeInDown;
-  animation-name: fadeInDown;
+          animation-name: fadeInDown;
 }
 
 /* FadeInDownBig animation
@@ -1377,29 +1374,29 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -2000px, 0);
-    transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 @keyframes fadeInDownBig {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, -2000px, 0);
-    transform: translate3d(0, -2000px, 0);
+            transform: translate3d(0, -2000px, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 .animation-fadeInDownBig {
   -webkit-animation-name: fadeInDownBig;
-  animation-name: fadeInDownBig;
+          animation-name: fadeInDownBig;
 }
 
 /* FadeInLeft animation
@@ -1409,29 +1406,29 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 @keyframes fadeInLeft {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(-100%, 0, 0);
-    transform: translate3d(-100%, 0, 0);
+            transform: translate3d(-100%, 0, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 .animation-fadeInLeft {
   -webkit-animation-name: fadeInLeft;
-  animation-name: fadeInLeft;
+          animation-name: fadeInLeft;
 }
 
 /* FadeInLeftBig animation
@@ -1441,29 +1438,29 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: translate3d(-2000px, 0, 0);
-    transform: translate3d(-2000px, 0, 0);
+            transform: translate3d(-2000px, 0, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 @keyframes fadeInLeftBig {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(-2000px, 0, 0);
-    transform: translate3d(-2000px, 0, 0);
+            transform: translate3d(-2000px, 0, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 .animation-fadeInLeftBig {
   -webkit-animation-name: fadeInLeftBig;
-  animation-name: fadeInLeftBig;
+          animation-name: fadeInLeftBig;
 }
 
 /* FadeInRight animation
@@ -1473,29 +1470,29 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 @keyframes fadeInRight {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(100%, 0, 0);
-    transform: translate3d(100%, 0, 0);
+            transform: translate3d(100%, 0, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 .animation-fadeInRight {
   -webkit-animation-name: fadeInRight;
-  animation-name: fadeInRight;
+          animation-name: fadeInRight;
 }
 
 /* FadeInRightBig animation
@@ -1505,29 +1502,29 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: translate3d(2000px, 0, 0);
-    transform: translate3d(2000px, 0, 0);
+            transform: translate3d(2000px, 0, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 @keyframes fadeInRightBig {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(2000px, 0, 0);
-    transform: translate3d(2000px, 0, 0);
+            transform: translate3d(2000px, 0, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 .animation-fadeInRightBig {
   -webkit-animation-name: fadeInRightBig;
-  animation-name: fadeInRightBig;
+          animation-name: fadeInRightBig;
 }
 
 /* FadeInUp animation
@@ -1536,26 +1533,26 @@ Add this class to an element to fire an animation.
 @-webkit-keyframes fadeInUp {
   0% {
     -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
   }
   100% {
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 @keyframes fadeInUp {
   0% {
     -webkit-transform: translate3d(0, 100%, 0);
-    transform: translate3d(0, 100%, 0);
+            transform: translate3d(0, 100%, 0);
   }
   100% {
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 .animation-fadeInUp {
   -webkit-animation-name: fadeInUp;
-  animation-name: fadeInUp;
+          animation-name: fadeInUp;
 }
 
 /* FadeInUpBig animation
@@ -1565,29 +1562,29 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 2000px, 0);
-    transform: translate3d(0, 2000px, 0);
+            transform: translate3d(0, 2000px, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 @keyframes fadeInUpBig {
   0% {
     opacity: 0;
     -webkit-transform: translate3d(0, 2000px, 0);
-    transform: translate3d(0, 2000px, 0);
+            transform: translate3d(0, 2000px, 0);
   }
   100% {
     opacity: 1;
     -webkit-transform: none;
-    transform: none;
+            transform: none;
   }
 }
 .animation-fadeInUpBig {
   -webkit-animation-name: fadeInUpBig;
-  animation-name: fadeInUpBig;
+          animation-name: fadeInUpBig;
 }
 
 /* FadeIn animation
@@ -1597,7 +1594,7 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: rotate(-2deg);
-    transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   25% {
     opacity: 0.8;
@@ -1605,14 +1602,14 @@ Add this class to an element to fire an animation.
   100% {
     opacity: 1;
     -webkit-transform: rotate(5deg);
-    transform: rotate(5deg);
+            transform: rotate(5deg);
   }
 }
 @keyframes fadeInRotateAlpha {
   0% {
     opacity: 0;
     -webkit-transform: rotate(-2deg);
-    transform: rotate(-2deg);
+            transform: rotate(-2deg);
   }
   25% {
     opacity: 0.8;
@@ -1620,14 +1617,14 @@ Add this class to an element to fire an animation.
   100% {
     opacity: 1;
     -webkit-transform: rotate(5deg);
-    transform: rotate(5deg);
+            transform: rotate(5deg);
   }
 }
 @-webkit-keyframes fadeInRotateBeta {
   0% {
     opacity: 0;
     -webkit-transform: rotate(8deg);
-    transform: rotate(8deg);
+            transform: rotate(8deg);
   }
   25% {
     opacity: 0.8;
@@ -1635,14 +1632,14 @@ Add this class to an element to fire an animation.
   100% {
     opacity: 1;
     -webkit-transform: rotate(2.5deg);
-    transform: rotate(2.5deg);
+            transform: rotate(2.5deg);
   }
 }
 @keyframes fadeInRotateBeta {
   0% {
     opacity: 0;
     -webkit-transform: rotate(8deg);
-    transform: rotate(8deg);
+            transform: rotate(8deg);
   }
   25% {
     opacity: 0.8;
@@ -1650,14 +1647,14 @@ Add this class to an element to fire an animation.
   100% {
     opacity: 1;
     -webkit-transform: rotate(2.5deg);
-    transform: rotate(2.5deg);
+            transform: rotate(2.5deg);
   }
 }
 @-webkit-keyframes fadeInRotateGamma {
   0% {
     opacity: 0;
     -webkit-transform: rotate(3deg);
-    transform: rotate(3deg);
+            transform: rotate(3deg);
   }
   25% {
     opacity: 0.8;
@@ -1665,14 +1662,14 @@ Add this class to an element to fire an animation.
   100% {
     opacity: 1;
     -webkit-transform: rotate(-4deg);
-    transform: rotate(-4deg);
+            transform: rotate(-4deg);
   }
 }
 @keyframes fadeInRotateGamma {
   0% {
     opacity: 0;
     -webkit-transform: rotate(3deg);
-    transform: rotate(3deg);
+            transform: rotate(3deg);
   }
   25% {
     opacity: 0.8;
@@ -1680,14 +1677,14 @@ Add this class to an element to fire an animation.
   100% {
     opacity: 1;
     -webkit-transform: rotate(-4deg);
-    transform: rotate(-4deg);
+            transform: rotate(-4deg);
   }
 }
 @-webkit-keyframes fadeInRotateEpsilon {
   0% {
     opacity: 0;
     -webkit-transform: rotate(-12deg);
-    transform: rotate(-12deg);
+            transform: rotate(-12deg);
   }
   25% {
     opacity: 0.8;
@@ -1695,14 +1692,14 @@ Add this class to an element to fire an animation.
   100% {
     opacity: 1;
     -webkit-transform: rotate(-6deg);
-    transform: rotate(-6deg);
+            transform: rotate(-6deg);
   }
 }
 @keyframes fadeInRotateEpsilon {
   0% {
     opacity: 0;
     -webkit-transform: rotate(-12deg);
-    transform: rotate(-12deg);
+            transform: rotate(-12deg);
   }
   25% {
     opacity: 0.8;
@@ -1710,35 +1707,35 @@ Add this class to an element to fire an animation.
   100% {
     opacity: 1;
     -webkit-transform: rotate(-6deg);
-    transform: rotate(-6deg);
+            transform: rotate(-6deg);
   }
 }
 .animation-fadeInRotateAlpha {
   -webkit-animation-name: fadeInRotateAlpha;
-  animation-name: fadeInRotateAlpha;
+          animation-name: fadeInRotateAlpha;
   -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .animation-fadeInRotateBeta {
   -webkit-animation-name: fadeInRotateBeta;
-  animation-name: fadeInRotateBeta;
+          animation-name: fadeInRotateBeta;
   -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .animation-fadeInRotateGamma {
   -webkit-animation-name: fadeInRotateGamma;
-  animation-name: fadeInRotateGamma;
+          animation-name: fadeInRotateGamma;
   -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 .animation-fadeInRotateEpsilon {
   -webkit-animation-name: fadeInRotateEpsilon;
-  animation-name: fadeInRotateEpsilon;
+          animation-name: fadeInRotateEpsilon;
   -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 /* ZoomIn animation
@@ -1748,7 +1745,7 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
   }
   50% {
     opacity: 1;
@@ -1758,7 +1755,7 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.3, 0.3, 0.3);
-    transform: scale3d(0.3, 0.3, 0.3);
+            transform: scale3d(0.3, 0.3, 0.3);
   }
   50% {
     opacity: 1;
@@ -1766,7 +1763,7 @@ Add this class to an element to fire an animation.
 }
 .animation-zoomIn {
   -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
+          animation-name: zoomIn;
 }
 
 /* ZoomInDown animation
@@ -1776,37 +1773,37 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
     -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
 @keyframes zoomInDown {
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
     -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
 .animation-zoomInDown {
   -webkit-animation-name: zoomInDown;
-  animation-name: zoomInDown;
+          animation-name: zoomInDown;
 }
 
 /* ZoomInLeft animation
@@ -1816,37 +1813,37 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
     -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
 @keyframes zoomInLeft {
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
     -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
 .animation-zoomInLeft {
   -webkit-animation-name: zoomInLeft;
-  animation-name: zoomInLeft;
+          animation-name: zoomInLeft;
 }
 
 /* ZoomInRight animation
@@ -1856,37 +1853,37 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
     -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
 @keyframes zoomInRight {
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(1000px, 0, 0);
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
     -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
 .animation-zoomInRight {
   -webkit-animation-name: zoomInRight;
-  animation-name: zoomInRight;
+          animation-name: zoomInRight;
 }
 
 /* ZoomInUp animation
@@ -1896,37 +1893,37 @@ Add this class to an element to fire an animation.
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
     -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
 @keyframes zoomInUp {
   0% {
     opacity: 0;
     -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
+            transform: scale3d(0.1, 0.1, 0.1) translate3d(0, 1000px, 0);
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+            animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
+            transform: scale3d(0.475, 0.475, 0.475) translate3d(0, -60px, 0);
     -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
 .animation-zoomInUp {
   -webkit-animation-name: zoomInUp;
-  animation-name: zoomInUp;
+          animation-name: zoomInUp;
 }
 
 /* FlipInX animation
@@ -1935,64 +1932,64 @@ Add this class to an element to fire an animation.
 @-webkit-keyframes flipInX {
   0% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
     opacity: 0;
   }
   40% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
   }
   60% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
     opacity: 1;
   }
   80% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
   }
   100% {
     -webkit-transform: perspective(400px);
-    transform: perspective(400px);
+            transform: perspective(400px);
   }
 }
 @keyframes flipInX {
   0% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
     -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
     opacity: 0;
   }
   40% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
     -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
   }
   60% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
     opacity: 1;
   }
   80% {
     -webkit-transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
-    transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+            transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
   }
   100% {
     -webkit-transform: perspective(400px);
-    transform: perspective(400px);
+            transform: perspective(400px);
   }
 }
 .animation-flipInX {
   -webkit-backface-visibility: visible !important;
-  backface-visibility: visible !important;
+          backface-visibility: visible !important;
   -webkit-animation-name: flipInX;
-  animation-name: flipInX;
+          animation-name: flipInX;
 }
 
 /* FlipInY animation
@@ -2001,64 +1998,64 @@ Add this class to an element to fire an animation.
 @-webkit-keyframes flipInY {
   0% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
     -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
     opacity: 0;
   }
   40% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
     -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
   }
   60% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
     opacity: 1;
   }
   80% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
   }
   100% {
     -webkit-transform: perspective(400px);
-    transform: perspective(400px);
+            transform: perspective(400px);
   }
 }
 @keyframes flipInY {
   0% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
     -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
     opacity: 0;
   }
   40% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
     -webkit-transition-timing-function: ease-in;
-    transition-timing-function: ease-in;
+            transition-timing-function: ease-in;
   }
   60% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, 10deg);
     opacity: 1;
   }
   80% {
     -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
-    transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
+            transform: perspective(400px) rotate3d(0, 1, 0, -5deg);
   }
   100% {
     -webkit-transform: perspective(400px);
-    transform: perspective(400px);
+            transform: perspective(400px);
   }
 }
 .animation-flipInY {
   -webkit-backface-visibility: visible !important;
-  backface-visibility: visible !important;
+          backface-visibility: visible !important;
   -webkit-animation-name: flipInY;
-  animation-name: flipInY;
+          animation-name: flipInY;
 }
 
 /* Mandatory components
@@ -2753,7 +2750,6 @@ Add this class to an element to fire an animation.
 *,
 :before,
 :after {
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
@@ -2782,7 +2778,7 @@ a {
   display: inline;
   cursor: pointer;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
 }
 a:hover {
   color: #222222;
@@ -2790,7 +2786,7 @@ a:hover {
 
 button {
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
 }
 
 img {
@@ -3368,7 +3364,7 @@ for a smaller generated CSS file.
   opacity: 0;
   z-index: 1;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
 }
 .block-grid__item:hover:before {
   opacity: 1;
@@ -3397,9 +3393,9 @@ for a smaller generated CSS file.
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   padding: 15px 20px;
   padding: 0.9375rem 1.25rem;
 }
@@ -3428,7 +3424,7 @@ for a smaller generated CSS file.
   width: 0;
   opacity: 0;
   -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+          transition: opacity 0.5s;
 }
 .tab-item.tab-item--active {
   height: auto;
@@ -3445,10 +3441,10 @@ for a smaller generated CSS file.
   max-height: 100%;
   z-index: 999;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
   text-align: center;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
   height: 50px;
   height: 3.125rem;
   min-width: 320px;
@@ -3508,11 +3504,11 @@ for a smaller generated CSS file.
 }
 .nav-bar--transform {
   -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
 }
 .nav-bar--transform.nav-bar--show {
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 .nav-bar--transform.nav-bar--always-show-on-mobile {
   /**
@@ -3527,7 +3523,7 @@ for a smaller generated CSS file.
 @media (max-width: 600px) {
   .nav-bar--transform.nav-bar--always-show-on-mobile {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 .nav-bar--transparent:not(.nav-bar--fixed) {
@@ -3671,9 +3667,9 @@ for a smaller generated CSS file.
   clear: both;
   overflow-y: auto;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
   -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
   /**
   *
   * Usage:
@@ -3687,7 +3683,7 @@ for a smaller generated CSS file.
   .nav-bar__list {
     background: transparent;
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
     float: right;
     border-top: 0;
     overflow-y: inherit;
@@ -3695,7 +3691,7 @@ for a smaller generated CSS file.
 }
 .nav-bar--mobile-show .nav-bar__list {
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 .nav-bar__list li {
   display: block;
@@ -3737,7 +3733,7 @@ for a smaller generated CSS file.
 }
 .touch .nav-bar__link {
   -webkit-transition: none;
-  transition: none;
+          transition: none;
 }
 .nav-bar__link:hover {
   background: #3c3c3c;
@@ -3799,9 +3795,9 @@ for a smaller generated CSS file.
   visibility: visible;
   opacity: 1;
   -webkit-transition: all 0.2s 0;
-  transition: all 0.2s 0;
+          transition: all 0.2s 0;
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 .dropdown li {
   display: block;
@@ -3817,9 +3813,9 @@ for a smaller generated CSS file.
   opacity: 0;
   z-index: 999;
   -webkit-transition: all 0.2s 0.5s;
-  transition: all 0.2s 0.5s;
+          transition: all 0.2s 0.5s;
   -webkit-transform: translate3d(0, 10%, 0);
-  transform: translate3d(0, 10%, 0);
+          transform: translate3d(0, 10%, 0);
   min-width: 200px;
   min-width: 12.5rem;
   max-width: 300px;
@@ -3854,22 +3850,22 @@ for a smaller generated CSS file.
   z-index: 100;
   opacity: 0;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
 }
 .tooltip.tooltip--active[data-tooltip-position=top] .tooltip__content, .tooltip.tooltip--active[data-tooltip-position=bottom] .tooltip__content {
   -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 .tooltip.tooltip--active[data-tooltip-position=right] .tooltip__content {
   -webkit-transform: translate(100%, 0);
-  -ms-transform: translate(100%, 0);
-  transform: translate(100%, 0);
+      -ms-transform: translate(100%, 0);
+          transform: translate(100%, 0);
 }
 .tooltip.tooltip--active[data-tooltip-position=left] .tooltip__content {
   -webkit-transform: translate(-100%, 0);
-  -ms-transform: translate(-100%, 0);
-  transform: translate(-100%, 0);
+      -ms-transform: translate(-100%, 0);
+          transform: translate(-100%, 0);
 }
 .tooltip.tooltip--active .tooltip__content {
   visibility: visible;
@@ -3898,8 +3894,8 @@ for a smaller generated CSS file.
 [data-tooltip-position=bottom] .tooltip__content {
   left: 50%;
   -webkit-transform: translate(-50%, 0);
-  -ms-transform: translate(-50%, 0);
-  transform: translate(-50%, 0);
+      -ms-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
 }
 [data-tooltip-position=top] .tooltip__content:after,
 [data-tooltip-position=bottom] .tooltip__content:after {
@@ -3913,8 +3909,8 @@ for a smaller generated CSS file.
 
 [data-tooltip-position=top] .tooltip__content {
   -webkit-transform: translate(-50%, 10%);
-  -ms-transform: translate(-50%, 10%);
-  transform: translate(-50%, 10%);
+      -ms-transform: translate(-50%, 10%);
+          transform: translate(-50%, 10%);
 }
 [data-tooltip-position=top] .tooltip__content:after {
   border-top-color: #2690b0;
@@ -3923,8 +3919,8 @@ for a smaller generated CSS file.
 
 [data-tooltip-position=bottom] .tooltip__content {
   -webkit-transform: translate(-50%, -10%);
-  -ms-transform: translate(-50%, -10%);
-  transform: translate(-50%, -10%);
+      -ms-transform: translate(-50%, -10%);
+          transform: translate(-50%, -10%);
 }
 [data-tooltip-position=bottom] .tooltip__content:after {
   border-bottom-color: #2690b0;
@@ -3944,8 +3940,8 @@ for a smaller generated CSS file.
 [data-tooltip-position=right] .tooltip__content {
   right: -10px;
   -webkit-transform: translate(90%, 0);
-  -ms-transform: translate(90%, 0);
-  transform: translate(90%, 0);
+      -ms-transform: translate(90%, 0);
+          transform: translate(90%, 0);
 }
 [data-tooltip-position=right] .tooltip__content:after {
   border-right-color: #2690b0;
@@ -3958,8 +3954,8 @@ for a smaller generated CSS file.
 [data-tooltip-position=left] .tooltip__content {
   left: -10px;
   -webkit-transform: translate(-90%, 0);
-  -ms-transform: translate(-90%, 0);
-  transform: translate(-90%, 0);
+      -ms-transform: translate(-90%, 0);
+          transform: translate(-90%, 0);
 }
 [data-tooltip-position=left] .tooltip__content:after {
   border-left-color: #2690b0;
@@ -4002,8 +3998,8 @@ for a smaller generated CSS file.
   top: 50%;
   color: #222222;
   -webkit-transform: translate(0, -50%);
-  -ms-transform: translate(0, -50%);
-  transform: translate(0, -50%);
+      -ms-transform: translate(0, -50%);
+          transform: translate(0, -50%);
   right: 20px;
   right: 1.25rem;
 }
@@ -4018,7 +4014,7 @@ for a smaller generated CSS file.
   overflow: hidden;
   padding: 0 20px;
   -webkit-transition: all, 0.2s;
-  transition: all, 0.2s;
+          transition: all, 0.2s;
 }
 .lt-ie9 .accordion__content {
   height: 0;
@@ -4190,9 +4186,9 @@ progress[value]::-webkit-progress-value {
   border-radius: 0;
   border: 0;
   -webkit-transition: width 0.2s;
-  transition: width 0.2s;
+          transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  animation: progress-bar 1s linear infinite;
+          animation: progress-bar 1s linear infinite;
   height: 15px;
   height: 0.9375rem;
   background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
@@ -4227,9 +4223,9 @@ progress[value]::-ms-fill {
   border-radius: 0;
   border: 0;
   -webkit-transition: width 0.2s;
-  transition: width 0.2s;
+          transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  animation: progress-bar 1s linear infinite;
+          animation: progress-bar 1s linear infinite;
   height: 15px;
   height: 0.9375rem;
   background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
@@ -4243,9 +4239,9 @@ progress:not([value]) {
   border-radius: 0;
   border: 0;
   -webkit-transition: width 0.2s;
-  transition: width 0.2s;
+          transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  animation: progress-bar 1s linear infinite;
+          animation: progress-bar 1s linear infinite;
   height: 15px;
   height: 0.9375rem;
   background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
@@ -4256,9 +4252,9 @@ progress:not([value])::-webkit-progress-bar {
   border-radius: 0;
   border: 0;
   -webkit-transition: width 0.2s;
-  transition: width 0.2s;
+          transition: width 0.2s;
   -webkit-animation: progress-bar 1s linear infinite;
-  animation: progress-bar 1s linear infinite;
+          animation: progress-bar 1s linear infinite;
   height: 15px;
   height: 0.9375rem;
   background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
@@ -4299,19 +4295,19 @@ progress:not([value])::-ms-fill {
 @-webkit-keyframes spinner {
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 @keyframes spinner {
   100% {
     -webkit-transform: rotate(360deg);
-    transform: rotate(360deg);
+            transform: rotate(360deg);
   }
 }
 .spinner {
   display: inline-block;
   -webkit-animation: spinner 1s infinite linear;
-  animation: spinner 1s infinite linear;
+          animation: spinner 1s infinite linear;
 }
 .spinner:after {
   content: "";
@@ -4425,13 +4421,13 @@ progress:not([value])::-ms-fill {
 .toggle {
   overflow: hidden;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
   max-height: 500px;
   max-height: 31.25rem;
 }
 .toggle--no-animation {
   -webkit-transition: none;
-  transition: none;
+          transition: none;
 }
 .toggle--hide {
   max-height: 0;
@@ -4502,13 +4498,13 @@ progress:not([value])::-ms-fill {
 .off-canvas--left {
   left: 0;
   -webkit-transform: translate3d(-260px, 0, 0);
-  transform: translate3d(-260px, 0, 0);
+          transform: translate3d(-260px, 0, 0);
   -webkit-transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
+          transition: transform 0.2s;
 }
 .off-canvas-show-left .off-canvas--left {
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 .no-csstransforms3d .off-canvas--left {
   left: -260px;
@@ -4519,13 +4515,13 @@ progress:not([value])::-ms-fill {
 .off-canvas--right {
   right: 0;
   -webkit-transform: translate3d(260px, 0, 0);
-  transform: translate3d(260px, 0, 0);
+          transform: translate3d(260px, 0, 0);
   -webkit-transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
+          transition: transform 0.2s;
 }
 .off-canvas-show-right .off-canvas--right {
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 .no-csstransforms3d .off-canvas--right {
   right: -260px;
@@ -4546,7 +4542,7 @@ progress:not([value])::-ms-fill {
   visibility: hidden;
   opacity: 0;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
 }
 .off-canvas-show-left .off-canvas-push:after, .off-canvas-show-right .off-canvas-push:after {
   visibility: visible;
@@ -4612,13 +4608,13 @@ progress:not([value])::-ms-fill {
   .off-canvas-nav-bar--left {
     left: 0;
     -webkit-transform: translate3d(-260px, 0, 0);
-    transform: translate3d(-260px, 0, 0);
+            transform: translate3d(-260px, 0, 0);
     -webkit-transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
+            transition: transform 0.2s;
   }
   .off-canvas-show-left .off-canvas-nav-bar--left {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
   .no-csstransforms3d .off-canvas-nav-bar--left {
     left: -260px;
@@ -4629,13 +4625,13 @@ progress:not([value])::-ms-fill {
   .off-canvas-nav-bar--right {
     right: 0;
     -webkit-transform: translate3d(260px, 0, 0);
-    transform: translate3d(260px, 0, 0);
+            transform: translate3d(260px, 0, 0);
     -webkit-transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
+            transition: transform 0.2s;
   }
   .off-canvas-show-right .off-canvas-nav-bar--right {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
   .no-csstransforms3d .off-canvas-nav-bar--right {
     right: -260px;
@@ -4652,7 +4648,7 @@ progress:not([value])::-ms-fill {
     overflow-y: auto;
     z-index: 999;
     -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+            transition: all 0.2s;
     text-align: center;
     min-width: 320px;
     min-width: 20rem;
@@ -4712,11 +4708,11 @@ progress:not([value])::-ms-fill {
 @media (min-width: 800px) {
   .off-canvas-nav-bar--transform {
     -webkit-transform: translate3d(0, -100%, 0);
-    transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0);
   }
   .off-canvas-nav-bar--transform.nav-bar--show {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
   .off-canvas-nav-bar--transform.nav-bar--always-show-on-mobile {
     /**
@@ -4732,7 +4728,7 @@ progress:not([value])::-ms-fill {
 @media (min-width: 800px) and (max-width: 600px) {
   .off-canvas-nav-bar--transform.nav-bar--always-show-on-mobile {
     -webkit-transform: translate3d(0, 0, 0);
-    transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0);
   }
 }
 @media (min-width: 800px) {
@@ -4819,7 +4815,7 @@ progress:not([value])::-ms-fill {
     max-height: 0;
     overflow: hidden;
     -webkit-transition: all 0.2s;
-    transition: all 0.2s;
+            transition: all 0.2s;
     /**
     *
     * Usage:
@@ -5089,13 +5085,13 @@ progress:not([value])::-ms-fill {
   border-width: 0;
   border-style: solid;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
   -webkit-appearance: none;
   -moz-appearance: none;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background-color: #f0f0f0;
   border-color: #e3e3e3;
   line-height: 16px;
@@ -5125,7 +5121,7 @@ progress:not([value])::-ms-fill {
 .btn:focus {
   outline: none;
   -webkit-transition-duration: 0.05s;
-  transition-duration: 0.05s;
+          transition-duration: 0.05s;
 }
 .btn:disabled, .btn:disabled:hover {
   cursor: not-allowed;
@@ -5348,7 +5344,7 @@ textarea {
   width: 100%;
   box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
   -webkit-appearance: none;
   -moz-appearance: none;
   padding: 10px;
@@ -5407,7 +5403,7 @@ select {
   z-index: 2;
   border: none;
   -webkit-transition: box-shadow 0.2s;
-  transition: box-shadow 0.2s;
+          transition: box-shadow 0.2s;
   -webkit-appearance: none;
   -moz-appearance: window;
   text-overflow: '';
@@ -5482,9 +5478,9 @@ select::-ms-expand {
 
 .form__select {
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   background: #ffffff;
   border: 1px solid #e0e0e0;
   border-radius: 0;
@@ -5645,9 +5641,9 @@ input[type=checkbox] + label, input[type=radio] + label {
   cursor: pointer;
   padding-left: 30px;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 .no-borderradius input[type=checkbox] + label, .no-borderradius input[type=radio] + label {
   padding: 0 0 0 5px;
@@ -5664,7 +5660,7 @@ input[type=checkbox] + label:before, input[type=radio] + label:before {
   border-radius: 0;
   border: 1px solid #e0e0e0;
   -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+          transition: all 0.4s;
 }
 .no-borderradius input[type=checkbox] + label:before, .no-borderradius input[type=radio] + label:before {
   display: none;
@@ -5681,7 +5677,7 @@ input[type=checkbox] + label:after, input[type=radio] + label:after {
   color: #2690b0;
   opacity: 0;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
 }
 .no-borderradius input[type=checkbox] + label:after, .no-borderradius input[type=radio] + label:after {
   display: none;
@@ -5715,9 +5711,9 @@ input[type=radio] + label:after {
 
 .form__input--error {
   -webkit-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-name: shake;
-  animation-name: shake;
+          animation-name: shake;
 }
 .form__input--error input[type="text"],
 .form__input--error input[type="password"],
@@ -5886,11 +5882,11 @@ input[type=radio] + label:after {
   border-radius: 0;
   position: relative;
   -webkit-transition: all 0.2s;
-  transition: all 0.2s;
+          transition: all 0.2s;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+          transform-style: preserve-3d;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
   color: #09222a;
   background: #eaf7fa;
   border-color: #d5eef6;
@@ -5920,7 +5916,7 @@ input[type=radio] + label:after {
   margin: 0;
   border: 0;
   -webkit-transform: scale3d(0.5);
-  transform: scale3d(0.5);
+          transform: scale3d(0.5);
 }
 
 /* Notification sizes
@@ -6024,7 +6020,7 @@ input[type=radio] + label:after {
   content: "";
   opacity: 0.2;
   -webkit-transition: opacity 0.2s;
-  transition: opacity 0.2s;
+          transition: opacity 0.2s;
 }
 .notification__close:hover:before {
   opacity: 0.5;
@@ -6049,30 +6045,30 @@ input[type=radio] + label:after {
   border: none;
   color: #ffffff;
   -webkit-transition: all 0.4s;
-  transition: all 0.4s;
+          transition: all 0.4s;
   padding: 20px 0;
   padding: 1.25rem 0;
 }
 .notification-cookie-show[notification-cookie-position] .notification--cookie.notification--close {
   -webkit-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
 }
 .notification--cookie:before {
   display: none;
 }
 .notification-cookie-show[notification-cookie-position] .notification--cookie {
   -webkit-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
 }
 [notification-cookie-position=top] .notification--cookie {
   top: 0;
   -webkit-transform: translate3d(0, -100%, 0);
-  transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0);
 }
 [notification-cookie-position=bottom] .notification--cookie {
   bottom: 0;
   -webkit-transform: translate3d(0, 100%, 0);
-  transform: translate3d(0, 100%, 0);
+          transform: translate3d(0, 100%, 0);
 }
 .notification--cookie .notification__more-info {
   color: #ffffff;
@@ -6104,10 +6100,10 @@ input[type=radio] + label:after {
   z-index: 2000;
   visibility: hidden;
   -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+          backface-visibility: hidden;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 .modal.modal-show {
   visibility: visible;
@@ -6135,17 +6131,17 @@ input[type=radio] + label:after {
   z-index: 1000;
   opacity: 0;
   -webkit-transition-property: visibility opacity;
-  transition-property: visibility opacity;
+          transition-property: visibility opacity;
   -webkit-transition-delay: 0.5s 0.1s;
-  transition-delay: 0.5s 0.1s;
+          transition-delay: 0.5s 0.1s;
   -webkit-transition-duration: 0 0.5s;
-  transition-duration: 0 0.5s;
+          transition-duration: 0 0.5s;
 }
 .modal-show .modal__overlay {
   visibility: visible;
   opacity: 0.4;
   -webkit-transition: opacity 0.5s;
-  transition: opacity 0.5s;
+          transition: opacity 0.5s;
 }
 
 /* Modal Slide
@@ -6154,52 +6150,52 @@ input[type=radio] + label:after {
 .modal[data-modal-effect|=slide] .modal__content {
   opacity: 0;
   -webkit-transition: all 0.5s 0;
-  transition: all 0.5s 0;
+          transition: all 0.5s 0;
 }
 .modal[data-modal-effect|=slide].modal-show .modal__content {
   opacity: 1;
   -webkit-transition: all 0.5s 0.1s;
-  transition: all 0.5s 0.1s;
+          transition: all 0.5s 0.1s;
 }
 .modal[data-modal-effect=slide-top] .modal__content {
   -webkit-transform: translateY(-300%);
-  -ms-transform: translateY(-300%);
-  transform: translateY(-300%);
+      -ms-transform: translateY(-300%);
+          transform: translateY(-300%);
 }
 .modal[data-modal-effect=slide-top].modal-show .modal__content {
   -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 .modal[data-modal-effect=slide-right] .modal__content {
   -webkit-transform: translateX(300%);
-  -ms-transform: translateX(300%);
-  transform: translateX(300%);
+      -ms-transform: translateX(300%);
+          transform: translateX(300%);
 }
 .modal[data-modal-effect=slide-right].modal-show .modal__content {
   -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 .modal[data-modal-effect=slide-bottom] .modal__content {
   -webkit-transform: translateY(300%);
-  -ms-transform: translateY(300%);
-  transform: translateY(300%);
+      -ms-transform: translateY(300%);
+          transform: translateY(300%);
 }
 .modal[data-modal-effect=slide-bottom].modal-show .modal__content {
   -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
 }
 .modal[data-modal-effect=slide-left] .modal__content {
   -webkit-transform: translateX(-300%);
-  -ms-transform: translateX(-300%);
-  transform: translateX(-300%);
+      -ms-transform: translateX(-300%);
+          transform: translateX(-300%);
 }
 .modal[data-modal-effect=slide-left].modal-show .modal__content {
   -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 /* Modal Flip
@@ -6207,33 +6203,33 @@ input[type=radio] + label:after {
 */
 .modal[data-modal-effect|=flip] {
   -webkit-perspective: 1300;
-  perspective: 1300;
+          perspective: 1300;
 }
 .modal[data-modal-effect|=flip] .modal__content {
   opacity: 0;
   -webkit-transform-style: preserve-3d;
-  transform-style: preserve-3d;
+          transform-style: preserve-3d;
   -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+          transition: all 0.3s;
 }
 .modal[data-modal-effect|=flip].modal-show .modal__content {
   opacity: 1;
 }
 .modal[data-modal-effect=flip-horizontal] .modal__content {
   -webkit-transform: rotateY(-70deg);
-  transform: rotateY(-70deg);
+          transform: rotateY(-70deg);
 }
 .modal[data-modal-effect=flip-horizontal].modal-show .modal__content {
   -webkit-transform: rotateY(0);
-  transform: rotateY(0);
+          transform: rotateY(0);
 }
 .modal[data-modal-effect=flip-vertical] .modal__content {
   -webkit-transform: rotateX(-70deg);
-  transform: rotateX(-70deg);
+          transform: rotateX(-70deg);
 }
 .modal[data-modal-effect=flip-vertical].modal-show .modal__content {
   -webkit-transform: rotateX(0);
-  transform: rotateX(0);
+          transform: rotateX(0);
 }
 
 /* Modal Fadescale
@@ -6242,16 +6238,16 @@ input[type=radio] + label:after {
 .modal[data-modal-effect=fadescale] .modal__content {
   opacity: 0;
   -webkit-transform: scale(0.7);
-  -ms-transform: scale(0.7);
-  transform: scale(0.7);
+      -ms-transform: scale(0.7);
+          transform: scale(0.7);
   -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+          transition: all 0.3s;
 }
 .modal[data-modal-effect=fadescale].modal-show .modal__content {
   opacity: 1;
   -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 /* Modal Superscale
@@ -6260,16 +6256,16 @@ input[type=radio] + label:after {
 .modal[data-modal-effect=superscale] .modal__content {
   opacity: 0;
   -webkit-transform: scale(2);
-  -ms-transform: scale(2);
-  transform: scale(2);
+      -ms-transform: scale(2);
+          transform: scale(2);
   -webkit-transition: all 0.3s;
-  transition: all 0.3s;
+          transition: all 0.3s;
 }
 .modal[data-modal-effect=superscale].modal-show .modal__content {
   opacity: 1;
   -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
 }
 
 /* Project
@@ -6366,5 +6362,3 @@ input[type=radio] + label:after {
     page-break-after: avoid;
   }
 }
-
-/*# sourceMappingURL=main.css.map */
