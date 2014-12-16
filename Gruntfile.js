@@ -245,12 +245,12 @@ module.exports = function(grunt) {
             dev: {
                 bsFiles: {
                     src : [
-                        'dist/js/app.js',
-                        'dist/js/main.js',
-                        'dist/js/vendor/modernizr/modernizr.js',
-                        'dist/css/main.css',
-                        'dist/img/**/*',
-                        'dist/fonts/**/*',
+                        '<%= basos.dist %>/js/app.js',
+                        '<%= basos.dist %>/js/main.js',
+                        '<%= basos.dist %>/js/vendor/modernizr/modernizr.js',
+                        '<%= basos.dist %>/css/main.css',
+                        '<%= basos.dist %>/img/**/*',
+                        '<%= basos.dist %>/fonts/**/*',
                         '*.html',
                         '*.php',
                         '*.tpl'
