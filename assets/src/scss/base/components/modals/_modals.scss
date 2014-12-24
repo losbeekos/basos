@@ -12,7 +12,6 @@
     height: auto;
     z-index: 2000;
     visibility: hidden;
-    backface-visibility: hidden;
     transform: translate(-50%, -50%);
 
     &.modal-show {

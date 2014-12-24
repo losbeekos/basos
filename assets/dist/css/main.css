@@ -3085,7 +3085,13 @@ p {
 /* Typography
 ==========
 */
-.h1, .h2, .h3, .h4, .h5, .h6 {
+.h1,
+h1, .h2,
+h2, .h3,
+h3, .h4,
+h4, .h5,
+h5, .h6,
+h6 {
   margin-top: 0;
 }
 
@@ -6251,8 +6257,6 @@ input[type=radio] + label:after {
   height: auto;
   z-index: 2000;
   visibility: hidden;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
   -webkit-transform: translate(-50%, -50%);
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
