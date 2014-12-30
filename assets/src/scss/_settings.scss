@@ -137,10 +137,16 @@ $btn: (
     container-btn-padding   : 10px 18px,
     group-margin            : 0 0 30px 0,
     group-border-radius     : map-get($base, border-radius),
-    holder-margin           : 40px 0 0 0
+    holder-margin           : 40px 0 0 0,
+    ghost-border-width      : 2px,
+    ghost-border-radius     : 5px,
+    ghost-opacity           : 1,
+    ghost-opacty-hover      : 1
 );
 
 $btn-bg: (
+    light   : map-get($color, white),
+    dark    : map-get($color, black),
     alpha   : map-get($color, alpha),
     beta    : map-get($color, beta),
     gamma   : map-get($color, gamma),

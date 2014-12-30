@@ -7,21 +7,32 @@
     border-color: darken($bg-color, map-get($btn, border-color-darken));
 
     &:hover {
-        background-color: darken($bg-color, 5%);
+        background-color: lighten($bg-color, 5%);
+        border-color: $bg-color;
     }
 
     &:active {
-        background-color: darken($bg-color, 10%);
+        background-color: lighten($bg-color, 10%);
+        border-color: lighten($bg-color, 5%);
     }
 
     &:focus {
-        box-shadow: map-get($btn, box-shadow-focus) rgba($bg-color, 1);
+        border-color: darken($bg-color, map-get($btn, border-color-darken));
     }
 
     &--divider:hover,
     &:disabled,
     &:disabled:hover {
         background-color: $bg-color;
+    }
+
+    &.btn--ghost {
+        color: $bg-color;
+        border-color: $bg-color;
+
+        &:hover {
+            border-color: lighten($bg-color, 10%);
+        }
     }
 
     .btn-group--inline & {
@@ -90,6 +101,20 @@
         &:disabled,
         &:disabled:hover {
             color: darken(map-get($color, white), 20%);
+        }
+    }
+
+    &--ghost {
+        background: transparent !important;
+        border-width: map-get($btn, ghost-border-width);
+        border-radius: map-get($btn, ghost-border-radius);
+        color: map-get($color, text);
+        text-shadow: none;
+        opacity: map-get($btn, ghost-opacity);
+
+        &:hover {
+            opacity: map-get($btn, ghost-opacity-hover);
+            color: map-get($color, text);
         }
     }
 

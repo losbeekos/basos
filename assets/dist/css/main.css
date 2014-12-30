@@ -5256,16 +5256,25 @@ progress:not([value])::-ms-fill {
   line-height: 1rem;
 }
 .btn:hover {
-  background-color: #e3e3e3;
+  background-color: #fdfdfd;
+  border-color: #f0f0f0;
 }
 .btn:active {
-  background-color: #d6d6d6;
+  background-color: white;
+  border-color: #fdfdfd;
 }
 .btn:focus {
-  box-shadow: 0 0 10px #f0f0f0;
+  border-color: #e3e3e3;
 }
 .btn--divider:hover, .btn:disabled, .btn:disabled:hover {
   background-color: #f0f0f0;
+}
+.btn.btn--ghost {
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+.btn.btn--ghost:hover {
+  border-color: white;
 }
 .btn-group--inline .btn {
   border-left: 1px solid #f8f8f8;
@@ -5299,21 +5308,41 @@ progress:not([value])::-ms-fill {
 .btn--beta:disabled, .btn--beta:disabled:hover, .btn--gamma:disabled, .btn--gamma:disabled:hover, .btn--delta:disabled, .btn--delta:disabled:hover, .btn--epsilon:disabled, .btn--epsilon:disabled:hover {
   color: #cccccc;
 }
+.btn--ghost {
+  background: transparent !important;
+  border-width: 2px;
+  border-radius: 5px;
+  color: #222222;
+  text-shadow: none;
+  opacity: 1;
+}
+.btn--ghost:hover {
+  color: #222222;
+}
 .btn--mask {
   background-color: transparent;
   border-color: transparent;
 }
 .btn--mask:hover {
-  background-color: transparent;
+  background-color: rgba(13, 13, 13, 0);
+  border-color: transparent;
 }
 .btn--mask:active {
-  background-color: transparent;
+  background-color: rgba(26, 26, 26, 0);
+  border-color: rgba(13, 13, 13, 0);
 }
 .btn--mask:focus {
-  box-shadow: 0 0 10px black;
+  border-color: transparent;
 }
 .btn--mask--divider:hover, .btn--mask:disabled, .btn--mask:disabled:hover {
   background-color: transparent;
+}
+.btn--mask.btn--ghost {
+  color: transparent;
+  border-color: transparent;
+}
+.btn--mask.btn--ghost:hover {
+  border-color: rgba(26, 26, 26, 0);
 }
 .btn-group--inline .btn--mask {
   border-left: 1px solid rgba(8, 8, 8, 0);
@@ -5334,21 +5363,92 @@ progress:not([value])::-ms-fill {
 .btn--divider {
   cursor: default;
 }
+.btn--light {
+  background-color: #ffffff;
+  border-color: #f2f2f2;
+}
+.btn--light:hover {
+  background-color: white;
+  border-color: #ffffff;
+}
+.btn--light:active {
+  background-color: white;
+  border-color: white;
+}
+.btn--light:focus {
+  border-color: #f2f2f2;
+}
+.btn--light--divider:hover, .btn--light:disabled, .btn--light:disabled:hover {
+  background-color: #ffffff;
+}
+.btn--light.btn--ghost {
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.btn--light.btn--ghost:hover {
+  border-color: white;
+}
+.btn-group--inline .btn--light {
+  border-left: 1px solid white;
+}
+.btn-group--block .btn--light {
+  border-top: 1px solid white;
+}
+.btn--dark {
+  background-color: #000000;
+  border-color: black;
+}
+.btn--dark:hover {
+  background-color: #0d0d0d;
+  border-color: #000000;
+}
+.btn--dark:active {
+  background-color: #1a1a1a;
+  border-color: #0d0d0d;
+}
+.btn--dark:focus {
+  border-color: black;
+}
+.btn--dark--divider:hover, .btn--dark:disabled, .btn--dark:disabled:hover {
+  background-color: #000000;
+}
+.btn--dark.btn--ghost {
+  color: #000000;
+  border-color: #000000;
+}
+.btn--dark.btn--ghost:hover {
+  border-color: #1a1a1a;
+}
+.btn-group--inline .btn--dark {
+  border-left: 1px solid #080808;
+}
+.btn-group--block .btn--dark {
+  border-top: 1px solid #080808;
+}
 .btn--alpha {
   background-color: #f0f0f0;
   border-color: #e3e3e3;
 }
 .btn--alpha:hover {
-  background-color: #e3e3e3;
+  background-color: #fdfdfd;
+  border-color: #f0f0f0;
 }
 .btn--alpha:active {
-  background-color: #d6d6d6;
+  background-color: white;
+  border-color: #fdfdfd;
 }
 .btn--alpha:focus {
-  box-shadow: 0 0 10px #f0f0f0;
+  border-color: #e3e3e3;
 }
 .btn--alpha--divider:hover, .btn--alpha:disabled, .btn--alpha:disabled:hover {
   background-color: #f0f0f0;
+}
+.btn--alpha.btn--ghost {
+  color: #f0f0f0;
+  border-color: #f0f0f0;
+}
+.btn--alpha.btn--ghost:hover {
+  border-color: white;
 }
 .btn-group--inline .btn--alpha {
   border-left: 1px solid #f8f8f8;
@@ -5361,16 +5461,25 @@ progress:not([value])::-ms-fill {
   border-color: #217f9b;
 }
 .btn--beta:hover {
-  background-color: #217f9b;
+  background-color: #2ba1c5;
+  border-color: #2690b0;
 }
 .btn--beta:active {
-  background-color: #1d6e86;
+  background-color: #36afd3;
+  border-color: #2ba1c5;
 }
 .btn--beta:focus {
-  box-shadow: 0 0 10px #2690b0;
+  border-color: #217f9b;
 }
 .btn--beta--divider:hover, .btn--beta:disabled, .btn--beta:disabled:hover {
   background-color: #2690b0;
+}
+.btn--beta.btn--ghost {
+  color: #2690b0;
+  border-color: #2690b0;
+}
+.btn--beta.btn--ghost:hover {
+  border-color: #36afd3;
 }
 .btn-group--inline .btn--beta {
   border-left: 1px solid #299abd;
@@ -5383,16 +5492,25 @@ progress:not([value])::-ms-fill {
   border-color: #21949b;
 }
 .btn--gamma:hover {
-  background-color: #21949b;
+  background-color: #2bbcc5;
+  border-color: #26a8b0;
 }
 .btn--gamma:active {
-  background-color: #1d8086;
+  background-color: #36cad3;
+  border-color: #2bbcc5;
 }
 .btn--gamma:focus {
-  box-shadow: 0 0 10px #26a8b0;
+  border-color: #21949b;
 }
 .btn--gamma--divider:hover, .btn--gamma:disabled, .btn--gamma:disabled:hover {
   background-color: #26a8b0;
+}
+.btn--gamma.btn--ghost {
+  color: #26a8b0;
+  border-color: #26a8b0;
+}
+.btn--gamma.btn--ghost:hover {
+  border-color: #36cad3;
 }
 .btn-group--inline .btn--gamma {
   border-left: 1px solid #29b4bd;
@@ -5405,16 +5523,25 @@ progress:not([value])::-ms-fill {
   border-color: #219b8e;
 }
 .btn--delta:hover {
-  background-color: #219b8e;
+  background-color: #2bc5b4;
+  border-color: #26b0a1;
 }
 .btn--delta:active {
-  background-color: #1d867b;
+  background-color: #36d3c2;
+  border-color: #2bc5b4;
 }
 .btn--delta:focus {
-  box-shadow: 0 0 10px #26b0a1;
+  border-color: #219b8e;
 }
 .btn--delta--divider:hover, .btn--delta:disabled, .btn--delta:disabled:hover {
   background-color: #26b0a1;
+}
+.btn--delta.btn--ghost {
+  color: #26b0a1;
+  border-color: #26b0a1;
+}
+.btn--delta.btn--ghost:hover {
+  border-color: #36d3c2;
 }
 .btn-group--inline .btn--delta {
   border-left: 1px solid #29bdad;
@@ -5427,16 +5554,25 @@ progress:not([value])::-ms-fill {
   border-color: #262626;
 }
 .btn--epsilon:hover {
-  background-color: #262626;
+  background-color: #404040;
+  border-color: #333333;
 }
 .btn--epsilon:active {
-  background-color: #1a1a1a;
+  background-color: #4d4d4d;
+  border-color: #404040;
 }
 .btn--epsilon:focus {
-  box-shadow: 0 0 10px #333333;
+  border-color: #262626;
 }
 .btn--epsilon--divider:hover, .btn--epsilon:disabled, .btn--epsilon:disabled:hover {
   background-color: #333333;
+}
+.btn--epsilon.btn--ghost {
+  color: #333333;
+  border-color: #333333;
+}
+.btn--epsilon.btn--ghost:hover {
+  border-color: #4d4d4d;
 }
 .btn-group--inline .btn--epsilon {
   border-left: 1px solid #3b3b3b;
