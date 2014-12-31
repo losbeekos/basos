@@ -31,6 +31,7 @@
         border-color: $bg-color;
 
         &:hover {
+            color: lighten($bg-color, 10%);
             border-color: lighten($bg-color, 10%);
         }
     }
@@ -104,20 +105,6 @@
         }
     }
 
-    &--ghost {
-        background: transparent !important;
-        border-width: map-get($btn, ghost-border-width);
-        border-radius: map-get($btn, ghost-border-radius);
-        color: map-get($color, text);
-        text-shadow: none;
-        opacity: map-get($btn, ghost-opacity);
-
-        &:hover {
-            opacity: map-get($btn, ghost-opacity-hover);
-            color: map-get($color, text);
-        }
-    }
-
     &--mask {
         @include btn-style(transparent);
 
@@ -142,6 +129,26 @@
     @each $key, $value in $btn-bg {
         &--#{$key} {
             @include btn-style(map-get($btn-bg, $key));
+        }
+    }
+
+    &--ghost {
+        background: transparent;
+        border-width: map-get($btn, ghost-border-width);
+        border-radius: map-get($btn, ghost-border-radius);
+        color: map-get($color, text);
+        text-shadow: none;
+        opacity: map-get($btn, ghost-opacity);
+
+        &:hover {
+            opacity: map-get($btn, ghost-opacity-hover);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: transparent;
+            color: map-get($color, text);
         }
     }
 }
