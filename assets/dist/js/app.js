@@ -895,8 +895,6 @@ app.parallax = {
                     $img.removeAttr('style');
                 }
 
-                console.log(app.settings.$html.hasClass('no-touch'));
-
                 if (!helper.outView($parallax) && Modernizr.mq(app.mediaQueries.betaAndUp) && app.settings.$html.hasClass('no-touch')) {
                     var yPos = (_scrollTop / parallaxSpeed);
 

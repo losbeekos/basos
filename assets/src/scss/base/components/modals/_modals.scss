@@ -10,12 +10,16 @@
     min-width: map-get($modal, min-width);
     max-width: map-get($modal, max-width);
     height: auto;
+    max-height: 90%;
     z-index: 2000;
     visibility: hidden;
+    overflow: hidden;
+    backface-visibility: hidden;
     transform: translate(-50%, -50%);
 
     &.modal-show {
         visibility: visible;
+        overflow: auto;
     }
 
     .lt-ie9 & {

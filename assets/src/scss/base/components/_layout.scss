@@ -21,6 +21,11 @@ html {
 body {
     font-family: arial, verdana, sans-serif;
     color: map-get($color, text);
+    overflow-x: hidden;
+
+    .modal-show & {
+        overflow-y: hidden;
+    }
 }
 
 .background {

@@ -27,7 +27,7 @@
         position: relative;
     }
 
-    @include mq(gamma-and-up) {
+    @include mq(map-get($navBar, mq)) {
         max-height: inherit;
         text-align: left;
         height: auto;
@@ -42,7 +42,7 @@
         @include rem(padding-top, 12px);
         @include rem(min-height, map-get($navBar, trigger-height));
 
-        @include mq(gamma-and-up) {
+        @include mq(map-get($navBar, mq)) {
             float: left;
             padding-top: 0;
             min-height: inherit;
@@ -68,7 +68,7 @@
 
     &--transparent {
         &:not(.nav-bar--fixed) {
-            @include mq(gamma-and-up) {
+            @include mq(map-get($navBar, mq)) {
                 background: transparent;
 
                 .nav-bar__link {
@@ -106,7 +106,7 @@
         @include rem(max-width, map-get($container, max-width));
         @include rem(min-width, map-get($container, min-width));
 
-        @include mq(gamma-and-up) {
+        @include mq(map-get($navBar, mq)) {
             @include rem(padding-left, map-get($container, padding)*4);
             @include rem(padding-right, map-get($container, padding)*4);
         }
@@ -121,7 +121,7 @@
             width: 100%;
             height: 100%;
 
-            @include mq(gamma-and-up) {
+            @include mq(map-get($navBar, mq)) {
                 display: none;
             }
         }
@@ -130,14 +130,22 @@
     &__nav {
         @extend .clearfix;
 
-        @include mq(gamma-and-up) {
+        height: 0;
+
+        @include mq(map-get($navBar, mq)) {
             @if map-get($navBar, nav-position) == left {
                 float: left;
             } @else {
                 float: right;
             }
 
+            height: auto;
+
             @include rem(margin-left, map-get($navBar, nav-margin-left));
+        }
+
+        .nav-bar--mobile-show & {
+            height: auto;
         }
     }
 
@@ -157,7 +165,7 @@
         @include rem(height, map-get($navBar, trigger-height));
         @include rem(width, map-get($navBar, trigger-height));
 
-        @include mq(gamma-and-up) {
+        @include mq(map-get($navBar, mq)) {
             display: none;
         }
 
@@ -189,7 +197,7 @@
         transition: all map-get($base, transition-speed);
         transform: translate3d(0, -100%, 0);
 
-        @include mq(gamma-and-up) {
+        @include mq(map-get($navBar, mq)) {
             background: transparent;
             transform: translate3d(0, 0, 0);
             float: right;
@@ -205,7 +213,7 @@
             display: block;
             margin: 0;
 
-            @include mq(gamma-and-up) {
+            @include mq(map-get($navBar, mq)) {
                 display: inline-block;
                 margin-right: -4px;
             }
@@ -219,7 +227,7 @@
 
         @include rem(padding, map-get($navBar, link-padding));
 
-        @include mq(gamma-and-up) {
+        @include mq(map-get($navBar, mq)) {
             display: inline-block;
         }
 
