@@ -62,3 +62,45 @@ input[type=range] {
         background: map-get($color, beta);
     }
 }
+
+.range-output {
+    display: inline-block;
+    color: map-get($color, beta);
+
+    @include rem(margin-top, 8px);
+}
+
+.rangeslider,
+.rangeslider__fill {
+    @include range-track();
+}
+
+.rangeslider {
+    position: relative;
+
+    @include rem(margin-top, 7px);
+    @include rem(width, 300px);
+}
+
+.rangeslider--disabled {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+    opacity: 0.4;
+}
+
+.rangeslider__fill {
+    background: map-get($color, beta);
+    height: map-get($form, switch-height)-2;
+    position: absolute;
+    top: 0;
+    border: 0;
+    transition: none;
+}
+
+.rangeslider__handle {
+  @include range-thumb();
+
+    position: absolute;
+    display: inline-block;
+    top: -1px;
+    margin-left: -1px;
+}

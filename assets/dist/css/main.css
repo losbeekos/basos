@@ -2030,6 +2030,7 @@ Add this class to an element to fire an animation.
             animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
+.zoomInUp,
 .animation-zoomInUp {
   -webkit-animation-name: zoomInUp;
           animation-name: zoomInUp;
@@ -6223,6 +6224,63 @@ input[type=range]::-ms-thumb:focus {
 }
 input[type=range]::-ms-fill-lower {
   background: #2690b0;
+}
+
+.range-output {
+  display: inline-block;
+  color: #2690b0;
+  margin-top: 8px;
+  margin-top: 0.5rem;
+}
+
+.rangeslider,
+.rangeslider__fill {
+  background: #f1f1f1;
+  height: 25px;
+  border-radius: 0;
+  border: 1px solid #e0e0e0;
+  -webkit-transition: all 0.4s;
+          transition: all 0.4s;
+}
+
+.rangeslider {
+  position: relative;
+  margin-top: 7px;
+  margin-top: 0.4375rem;
+  width: 300px;
+  width: 18.75rem;
+}
+
+.rangeslider--disabled {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=40);
+  opacity: 0.4;
+}
+
+.rangeslider__fill {
+  background: #2690b0;
+  height: 23px;
+  position: absolute;
+  top: 0;
+  border: 0;
+  -webkit-transition: none;
+          transition: none;
+}
+
+.rangeslider__handle {
+  background: #ffffff;
+  content: '';
+  width: 30px;
+  height: 25px;
+  border-radius: 0;
+  border: 1px solid #e0e0e0;
+  opacity: 1;
+  position: absolute;
+  display: inline-block;
+  top: -1px;
+  margin-left: -1px;
+}
+.rangeslider__handle:focus {
+  background: red;
 }
 
 /* Form validation

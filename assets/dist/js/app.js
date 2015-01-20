@@ -347,8 +347,29 @@ app.formModules = {
     },
 
     init: function () {
+        app.formModules.range();
         app.formModules.validation();
         app.formModules.password();
+    },
+
+    range: function () {
+        if (!Modernizr.inputtypes.range) {
+            yepnope.injectJs(app.pathBower + 'rangeslider.js/dist/rangeslider.min.js', function () {
+                $('input[type=range]').rangeslider({
+                    polyfill: false
+                });
+            });
+        }
+
+        $('input[type=range]').on('input change', function () {
+            var $this = $(this),
+                data = $this.data(),
+                id = $this.attr('id');
+
+            if (id !== undefined) {
+                $('[data-range=' + id +']').html($this.val() + data.rangeMeasurement);
+            }
+        });
     },
 
     password: function () {
