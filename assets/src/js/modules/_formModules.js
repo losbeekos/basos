@@ -3,7 +3,8 @@ app.formModules = {
         $passwordToggle: $('.form__password-toggle'),
         passwordShowClass: 'form__input--show-password',
         $validation: $('[data-form-validate]'),
-        validationLanguage: 'nl'
+        validationLanguage: 'nl',
+        $range: $('input[type=range]')
     },
 
     init: function () {
@@ -15,19 +16,19 @@ app.formModules = {
     range: function () {
         if (!Modernizr.inputtypes.range) {
             yepnope.injectJs(app.pathBower + 'rangeslider.js/dist/rangeslider.min.js', function () {
-                $('input[type=range]').rangeslider({
-                    polyfill: false
-                });
+                app.formModules.settings.$range.rangeslider();
             });
         }
 
-        $('input[type=range]').on('input change', function () {
+        app.formModules.settings.$range.on('input change', function () {
             var $this = $(this),
                 data = $this.data(),
-                id = $this.attr('id');
+                id = $this.attr('id'),
+                val = $this.val(),
+                $range = $('[data-range=' + id +']');
 
             if (id !== undefined) {
-                $('[data-range=' + id +']').html($this.val() + data.rangeMeasurement);
+                data.rangeMeasurement === undefined ? $range.html(val) : $range.html(val + data.rangeMeasurement);
             }
         });
     },
