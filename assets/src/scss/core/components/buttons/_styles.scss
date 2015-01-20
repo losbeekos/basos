@@ -1,0 +1,171 @@
+/* Button styles
+==========
+*/
+
+@mixin btn-style($bg-color) {
+    background-color: $bg-color;
+    border-color: darken($bg-color, map-get($btn, border-color-darken));
+
+    &:hover {
+        background-color: lighten($bg-color, 5%);
+        border-color: $bg-color;
+    }
+
+    &:active {
+        background-color: lighten($bg-color, 10%);
+        border-color: lighten($bg-color, 5%);
+    }
+
+    &:focus {
+        border-color: darken($bg-color, map-get($btn, border-color-darken));
+    }
+
+    &--divider:hover,
+    &:disabled,
+    &:disabled:hover {
+        background-color: $bg-color;
+    }
+
+    &.btn--ghost {
+        color: $bg-color;
+        border-color: $bg-color;
+
+        &:hover {
+            @if map-get($btn, ghost-bg-hover) {
+                background: lighten($bg-color, 50%);
+            }
+
+            color: lighten($bg-color, 10%);
+            border-color: lighten($bg-color, 10%);
+        }
+    }
+
+    .btn-group--inline & {
+        border-left: 1px solid lighten($bg-color, 3%);
+    }
+
+    .btn-group--block & {
+        border-top: 1px solid lighten($bg-color, 3%);
+    }
+}
+
+.btn {
+    background-image: none;
+    position: relative;
+    display: inline-block;
+    color: map-get($color, text);
+    border-radius: map-get($btn, border-radius);
+    border: 0;
+    outline: 0;
+    text-align: center;
+    border-width: map-get($btn, border-width);
+    border-style: solid;
+    transition: all map-get($base, transition-speed);
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    user-select: none;
+
+    @include btn-style(map-get($btn-bg, alpha));
+    @include rem(line-height, map-get($btn, line-height));
+
+    @if map-get($btn, gradient) {
+        background-image: map-get($btn, gradient-bg);
+    }
+
+    &:hover {
+        color: map-get($color, text);
+    }
+
+    &:focus {
+        outline: none;
+        transition-duration: 0.05s;
+    }
+
+    &:disabled,
+    &:disabled:hover {
+        cursor: not-allowed;
+        color: darken(map-get($color, white), 20%);
+        opacity: 0.5;
+
+        &:focus {
+            box-shadow: none;
+        }
+    }
+
+    &--beta,
+    &--gamma,
+    &--delta,
+    &--epsilon {
+        color: map-get($color, white);
+        text-shadow: map-get($btn, text-shadow);
+
+        &:hover {
+            color: map-get($color, white);
+        }
+
+        &:disabled,
+        &:disabled:hover {
+            color: darken(map-get($color, white), 20%);
+        }
+    }
+
+    &--mask {
+        @include btn-style(transparent);
+
+        &:hover {
+            background-color: darken(map-get($color, white), 5%);
+        }
+
+        &:active {
+            background-color: darken(map-get($color, white), 10%);
+        }
+    }
+
+    &--block {
+        min-width: 100%;
+        display: block;
+    }
+
+    &--divider {
+        cursor: default;
+    }
+
+    @each $key, $value in $btn-bg {
+        &--#{$key} {
+            @include btn-style(map-get($btn-bg, $key));
+        }
+    }
+
+    &--ghost {
+        background: transparent;
+        border-width: map-get($btn, ghost-border-width);
+        border-radius: map-get($btn, ghost-border-radius);
+        color: map-get($color, text);
+        text-shadow: none;
+        opacity: map-get($btn, ghost-opacity);
+
+        &:hover {
+            opacity: map-get($btn, ghost-opacity-hover);
+        }
+
+        &:hover,
+        &:active,
+        &:focus {
+            background: transparent;
+            color: map-get($color, text);
+        }
+    }
+}
+
+.no-btn-style {
+    background: none;
+    box-shadow: none;
+    border: 0;
+    padding: 0;
+    text-shadow: none;
+
+    &:active,
+    &:focus {
+        outline: none;
+    }
+}

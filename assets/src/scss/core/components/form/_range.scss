@@ -1,0 +1,64 @@
+/* Range input
+==========
+*/
+
+@mixin range-track() {
+    background: map-get($form, checkbox-radio-bg-color);
+    height: map-get($form, switch-height);
+    border-radius: map-get($base, border-radius);
+    border: map-get($form, input-border);
+    transition: all map-get($base, transition-speed)*2;
+}
+
+@mixin range-thumb() {
+    background: map-get($color, white);
+    content: '';
+    width: map-get($form, switch-width);
+    height: map-get($form, switch-height);
+    border-radius: map-get($base, border-radius);
+    border: map-get($form, input-border);
+    opacity: 1;
+
+    &:focus {
+        background: red;
+    }
+}
+
+input[type=range] {
+    -webkit-appearance: none;
+
+    @include rem(margin-top, 7px);
+    @include rem(width, 300px);
+
+    &:focus {
+        outline: none;
+    }
+
+    &::-webkit-slider-runnable-track { @include range-track(); }
+    &::-moz-range-track { @include range-track(); }
+
+    &::-ms-track {
+        @include range-track();
+
+        color: transparent;
+    }
+
+    &::-webkit-slider-thumb {
+        @include range-thumb();
+
+        -webkit-appearance: none;
+        margin-top: -1px;
+    }
+
+    &::-moz-range-thumb {
+        @include range-thumb();
+    }
+
+    &::-ms-thumb {
+        @include range-thumb();
+    }
+
+    &::-ms-fill-lower {
+        background: map-get($color, beta);
+    }
+}

@@ -491,10 +491,11 @@ app.modals = {
     },
 
     createModal: function (_triggerData, _targetModal) {
-        var html = '<div id="' + _triggerData.modalId + '" class="modal" data-modal-effect="fadescale"><div class="modal__content">';
+        var html = '<div id="' + _triggerData.modalId + '" class="modal"><div class="modal__content">';
 
         if (_triggerData.modal === 'ajax') {
             html += _triggerData.modalAjaxContent;
+            html += '<a class="modal__close" data-modal-close></a>';
         } else {
             if (_triggerData.modalTitle !== undefined) {
                 html +='<h2>' + _triggerData.modalTitle + '</h2>';
@@ -514,6 +515,7 @@ app.modals = {
                     html += '<button class="btn btn--alpha btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button>';
                 } else {
                     html += '<button class="btn btn--beta btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button>';
+                    html += '<a class="modal__close" data-modal-close></a>';
                 }
             }
         }
@@ -545,13 +547,10 @@ app.modals = {
     },
 
     showModal: function (_targetModal, _scrollTopPosition, _modalOpenCallback) {
-        app.settings.$html
-            .addClass('modal-show')
-            .attr('data-modal-effect', _targetModal.data('modal-effect'));
-
+        app.settings.$html.addClass('modal-show');
         _targetModal.addClass('modal-show');
 
-        app.settings.$background.scrollTop(_scrollTopPosition);
+        //app.settings.$background.scrollTop(_scrollTopPosition);
 
         if (_modalOpenCallback && typeof _modalOpenCallback === 'function') {
             _modalOpenCallback();
@@ -560,11 +559,8 @@ app.modals = {
 
     closeModal: function () {
         $('.modal-show').removeClass('modal-show');
-        app.settings.$html
-            .removeClass('modal-show')
-            .removeAttr('data-modal-effect');
 
-        app.settings.$window.scrollTop(app.modals.settings.scrollTopPosition);
+        //app.settings.$window.scrollTop(app.modals.settings.scrollTopPosition);
     },
 
     confirm: function (_options) {
@@ -601,7 +597,7 @@ app.modals = {
         $('#' + modalId).remove();
 
         $.ajax({
-            url: 'ajax_html.php',
+            url: 'modal-ajax.html',
             method: 'GET',
             success: function (data) {
                 app.modals.openModal(this, {
@@ -646,6 +642,11 @@ app.navBar = {
             app.navBar.scroller(_scrollTop);
             app.navBar.trigger();
         }
+    },
+
+    resize: function () {
+        app.navBar.settings.navBarOffsetTop = app.settings.$background.offset().top,
+        app.navBar.settings.navBarHeight = app.navBar.settings.$el.height();
     },
 
     addClasses: function () {
@@ -1181,6 +1182,7 @@ app.settings.$window.on('resize', function () {
         app.scrollSpy.init(scrollTop, windowHeight, true);
         app.scrollSpyNav.init(scrollTop);
         app.parallax.init(scrollTop);
+        app.navBar.resize(scrollTop);
         app.navBar.scroller(scrollTop);
     }, 500);
 });

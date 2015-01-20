@@ -33,6 +33,11 @@ app.navBar = {
         }
     },
 
+    resize: function () {
+        app.navBar.settings.navBarOffsetTop = app.settings.$background.offset().top,
+        app.navBar.settings.navBarHeight = app.navBar.settings.$el.height();
+    },
+
     addClasses: function () {
         if (app.settings.$html.hasClass('no-csspositionsticky')) {
             if (app.navBar.settings.$el.hasClass(app.navBar.settings.fixedClass)) {

@@ -1,0 +1,62 @@
+/* Layout
+==========
+*/
+
+*,
+:before,
+:after {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+html {
+    background-color: map-get($color, body);
+    overflow-x: hidden;
+}
+
+body {
+    font-family: arial, verdana, sans-serif;
+    color: map-get($color, text);
+}
+
+.background {
+    background: map-get($color, background);
+    min-height: 100%;
+}
+
+a {
+    color: map-get($color, beta);
+    text-decoration: none;
+    display: inline;
+    cursor: pointer;
+    transition: all map-get($base, transition-speed);
+
+    &:hover {
+        color: map-get($color, text);
+    }
+}
+
+button {
+    transition: all map-get($base, transition-speed);
+}
+
+img {
+    max-width: 100%;
+}
+
+address {
+    font-style: normal;
+}
+
+p {
+    margin-top: 0;
+}
+
+.disable-hover,
+.disable-hover * {
+    pointer-events: none !important;
+}

@@ -70,6 +70,7 @@ app.settings.$window.on('resize', function () {
         app.scrollSpy.init(scrollTop, windowHeight, true);
         app.scrollSpyNav.init(scrollTop);
         app.parallax.init(scrollTop);
+        app.navBar.resize(scrollTop);
         app.navBar.scroller(scrollTop);
     }, 500);
 });

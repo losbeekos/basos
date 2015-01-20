@@ -844,7 +844,7 @@ textarea {
   margin-right: 10px !important;
   margin-right: 0.625rem !important;
 }
-.margin-alpha-right, .icon.icon--margin-alpha:before {
+.margin-alpha-right, .icon.icon--margin-alpha:before, .icon--margin-alpha.modal__close:before {
   margin-right: 10px !important;
   margin-right: 0.625rem !important;
 }
@@ -876,7 +876,7 @@ textarea {
   margin-right: 20px !important;
   margin-right: 1.25rem !important;
 }
-.margin-beta-right, .icon.icon--margin-beta:before {
+.margin-beta-right, .icon.icon--margin-beta:before, .icon--margin-beta.modal__close:before {
   margin-right: 20px !important;
   margin-right: 1.25rem !important;
 }
@@ -1064,6 +1064,7 @@ Add this class to an element to fire an animation.
             transform: translate3d(10px, 0, 0);
   }
 }
+.shake,
 .animation-shake {
   -webkit-animation-name: shake;
           animation-name: shake;
@@ -1138,6 +1139,7 @@ Add this class to an element to fire an animation.
             transform: scale3d(1, 1, 1);
   }
 }
+.bounceIn,
 .animation-bounceIn {
   -webkit-animation-name: bounceIn;
           animation-name: bounceIn;
@@ -1204,6 +1206,7 @@ Add this class to an element to fire an animation.
             transform: none;
   }
 }
+.bounceInDown,
 .animation-bounceInDown {
   -webkit-animation-name: bounceInDown;
           animation-name: bounceInDown;
@@ -1268,6 +1271,7 @@ Add this class to an element to fire an animation.
             transform: none;
   }
 }
+.bounceInLeft,
 .animation-bounceInLeft {
   -webkit-animation-name: bounceInLeft;
           animation-name: bounceInLeft;
@@ -1332,6 +1336,7 @@ Add this class to an element to fire an animation.
             transform: none;
   }
 }
+.bounceInRight,
 .animation-bounceInRight {
   -webkit-animation-name: bounceInRight;
           animation-name: bounceInRight;
@@ -1396,6 +1401,7 @@ Add this class to an element to fire an animation.
             transform: translate3d(0, 0, 0);
   }
 }
+.bounceInUp,
 .animation-bounceInUp {
   -webkit-animation-name: bounceInUp;
           animation-name: bounceInUp;
@@ -1420,6 +1426,7 @@ Add this class to an element to fire an animation.
     opacity: 1;
   }
 }
+.fadeIn,
 .animation-fadeIn {
   -webkit-animation-name: fadeIn;
           animation-name: fadeIn;
@@ -1452,6 +1459,7 @@ Add this class to an element to fire an animation.
             transform: none;
   }
 }
+.fadeInDown,
 .animation-fadeInDown {
   -webkit-animation-name: fadeInDown;
           animation-name: fadeInDown;
@@ -1484,6 +1492,7 @@ Add this class to an element to fire an animation.
             transform: none;
   }
 }
+.fadeInDownBig,
 .animation-fadeInDownBig {
   -webkit-animation-name: fadeInDownBig;
           animation-name: fadeInDownBig;
@@ -1516,6 +1525,7 @@ Add this class to an element to fire an animation.
             transform: none;
   }
 }
+.fadeInLeft,
 .animation-fadeInLeft {
   -webkit-animation-name: fadeInLeft;
           animation-name: fadeInLeft;
@@ -1548,6 +1558,7 @@ Add this class to an element to fire an animation.
             transform: none;
   }
 }
+.fadeInLeftBig,
 .animation-fadeInLeftBig {
   -webkit-animation-name: fadeInLeftBig;
           animation-name: fadeInLeftBig;
@@ -1580,6 +1591,7 @@ Add this class to an element to fire an animation.
             transform: none;
   }
 }
+.fadeInRight,
 .animation-fadeInRight {
   -webkit-animation-name: fadeInRight;
           animation-name: fadeInRight;
@@ -1612,6 +1624,7 @@ Add this class to an element to fire an animation.
             transform: none;
   }
 }
+.fadeInRightBig,
 .animation-fadeInRightBig {
   -webkit-animation-name: fadeInRightBig;
           animation-name: fadeInRightBig;
@@ -1640,6 +1653,7 @@ Add this class to an element to fire an animation.
             transform: none;
   }
 }
+.fadeInUp,
 .animation-fadeInUp {
   -webkit-animation-name: fadeInUp;
           animation-name: fadeInUp;
@@ -1672,6 +1686,7 @@ Add this class to an element to fire an animation.
             transform: none;
   }
 }
+.fadeInUpBig,
 .animation-fadeInUpBig {
   -webkit-animation-name: fadeInUpBig;
           animation-name: fadeInUpBig;
@@ -1851,6 +1866,7 @@ Add this class to an element to fire an animation.
     opacity: 1;
   }
 }
+.zoomIn,
 .animation-zoomIn {
   -webkit-animation-name: zoomIn;
           animation-name: zoomIn;
@@ -1891,6 +1907,7 @@ Add this class to an element to fire an animation.
             animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
+.zoomInDown,
 .animation-zoomInDown {
   -webkit-animation-name: zoomInDown;
           animation-name: zoomInDown;
@@ -1931,6 +1948,7 @@ Add this class to an element to fire an animation.
             animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
+.zoomInLeft,
 .animation-zoomInLeft {
   -webkit-animation-name: zoomInLeft;
           animation-name: zoomInLeft;
@@ -1971,6 +1989,7 @@ Add this class to an element to fire an animation.
             animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }
 }
+.zoomInRight,
 .animation-zoomInRight {
   -webkit-animation-name: zoomInRight;
           animation-name: zoomInRight;
@@ -2075,6 +2094,7 @@ Add this class to an element to fire an animation.
             transform: perspective(400px);
   }
 }
+.flipInX,
 .animation-flipInX {
   -webkit-backface-visibility: visible !important;
           backface-visibility: visible !important;
@@ -2141,6 +2161,7 @@ Add this class to an element to fire an animation.
             transform: perspective(400px);
   }
 }
+.flipInY,
 .animation-flipInY {
   -webkit-backface-visibility: visible !important;
           backface-visibility: visible !important;
@@ -2856,10 +2877,6 @@ html {
 body {
   font-family: arial, verdana, sans-serif;
   color: #222222;
-  overflow-x: hidden;
-}
-.modal-show body {
-  overflow-y: hidden;
 }
 
 .background {
@@ -3080,7 +3097,7 @@ p {
   src: url("../fonts/icons/icons.eot");
   src: url("../fonts/icons/icons.eot#iefix") format("embedded-opentype"), url("../fonts/icons/icons.svg#icons") format("svg"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype");
 }
-.icon:before, .icon-after:after, .nav-bar__trigger, .accordion__trigger:after, .spinner:after, .off-canvas-toggle-left,
+.icon:before, .modal__close:before, .icon-after:after, .nav-bar__trigger, .accordion__trigger:after, .spinner:after, .off-canvas-toggle-left,
 .off-canvas-toggle-right, .form__select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form__password-toggle:after, .notification:before, .notification__close {
   font-family: 'icons', arial, verdana;
   font-weight: normal;
@@ -3220,7 +3237,7 @@ h6, .h6 {
 .color-delta {
   color: #26b0a1;
 }
-.color-epsilon {
+.color-epsilon, .modal__close {
   color: #333333;
 }
 
@@ -3261,55 +3278,55 @@ h6, .h6 {
 /* Icons
 ==========
 */
-.icon.icon--ok-circled:before {
+.icon.icon--ok-circled:before, .icon--ok-circled.modal__close:before {
   content: '\e800';
 }
-.icon.icon--cancel-circled:before {
+.icon.icon--cancel-circled:before, .icon--cancel-circled.modal__close:before {
   content: '\e801';
 }
-.icon.icon--info-circled:before {
+.icon.icon--info-circled:before, .icon--info-circled.modal__close:before {
   content: '\e802';
 }
-.icon.icon--ok:before {
+.icon.icon--ok:before, .icon--ok.modal__close:before {
   content: '\e803';
 }
-.icon.icon--up-open:before {
+.icon.icon--up-open:before, .icon--up-open.modal__close:before {
   content: '\e804';
 }
-.icon.icon--right-open:before {
+.icon.icon--right-open:before, .icon--right-open.modal__close:before {
   content: '\e805';
 }
-.icon.icon--left-open:before {
+.icon.icon--left-open:before, .icon--left-open.modal__close:before {
   content: '\e806';
 }
-.icon.icon--down-open:before {
+.icon.icon--down-open:before, .icon--down-open.modal__close:before {
   content: '\e807';
 }
-.icon.icon--cancel:before {
+.icon.icon--cancel:before, .modal__close:before {
   content: '\e808';
 }
-.icon.icon--spin2:before {
+.icon.icon--spin2:before, .icon--spin2.modal__close:before {
   content: '\e809';
 }
-.icon.icon--spin5:before {
+.icon.icon--spin5:before, .icon--spin5.modal__close:before {
   content: '\e80a';
 }
-.icon.icon--spinner1:before {
+.icon.icon--spinner1:before, .icon--spinner1.modal__close:before {
   content: '\e80b';
 }
-.icon.icon--attention:before {
+.icon.icon--attention:before, .icon--attention.modal__close:before {
   content: '\e80c';
 }
-.icon.icon--menu:before {
+.icon.icon--menu:before, .icon--menu.modal__close:before {
   content: '\e80d';
 }
-.icon.icon--eye:before {
+.icon.icon--eye:before, .icon--eye.modal__close:before {
   content: '\e80e';
 }
-.icon.icon--eye-off:before {
+.icon.icon--eye-off:before, .icon--eye-off.modal__close:before {
   content: '\e80f';
 }
-.icon:before {
+.icon:before, .modal__close:before {
   display: inline-block;
   text-decoration: inherit;
   speak: none;
@@ -3341,7 +3358,7 @@ h6, .h6 {
 .icon-after.icon--down-open:after {
   content: '\e807';
 }
-.icon-after.icon--cancel:after {
+.icon-after.icon--cancel:after, .icon-after.modal__close:after {
   content: '\e808';
 }
 .icon-after.icon--spin2:after {
@@ -3378,6 +3395,121 @@ h6, .h6 {
 You can comments some of these out
 for a smaller generated CSS file.
 */
+/* Modals
+==========
+*/
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  min-width: 320px;
+  max-width: 630px;
+  height: 100%;
+  z-index: 2000;
+  visibility: hidden;
+  overflow-y: auto;
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+  /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+@media (min-width: 600px) {
+  .modal {
+    min-width: 500px;
+    min-width: 31.25rem;
+  }
+}
+@media (min-width: 700px) {
+  .modal {
+    height: auto;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    max-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    max-width: 630px;
+  }
+}
+.modal.modal-show {
+  visibility: visible;
+}
+.lt-ie9 .modal {
+  top: 0;
+  margin-left: -315px;
+}
+.modal__content {
+  background: #ffffff;
+  border-radius: 0;
+  position: relative;
+  margin: 0 auto;
+  opacity: 0;
+  height: 100%;
+  -webkit-transform: scale(0.7);
+      -ms-transform: scale(0.7);
+          transform: scale(0.7);
+  -webkit-transition: all 0.3s;
+          transition: all 0.3s;
+  padding: 40px;
+  padding: 2.5rem;
+}
+.modal-show .modal__content {
+  opacity: 1;
+  -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
+}
+.modal__overlay {
+  background: #000000;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  opacity: 0;
+  -webkit-transition-property: visibility opacity;
+          transition-property: visibility opacity;
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+}
+.modal-show .modal__overlay {
+  visibility: visible;
+  opacity: 0.4;
+  -webkit-transition: opacity 0.5s;
+          transition: opacity 0.5s;
+}
+.modal__close {
+  position: absolute;
+  top: 10px;
+  top: 0.625rem;
+  right: 10px;
+  right: 0.625rem;
+  padding: 10px;
+  padding: 0.625rem;
+  font-size: 30px;
+  font-size: 1.875rem;
+  line-height: 30px;
+  line-height: 1.875rem;
+}
+
 /* Block
 ==========
 */
@@ -5607,6 +5739,9 @@ progress:not([value])::-ms-fill {
   padding: 0;
   text-shadow: none;
 }
+.no-btn-style:active, .no-btn-style:focus {
+  outline: none;
+}
 
 /* Forms
 ==========
@@ -6474,195 +6609,7 @@ input[type=range]::-ms-fill-lower {
   color: #ffffff;
 }
 
-/* Modals
-==========
-*/
-/* Modals
-==========
-*/
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  width: 50%;
-  min-width: 320px;
-  max-width: 630px;
-  height: auto;
-  max-height: 90%;
-  z-index: 2000;
-  visibility: hidden;
-  overflow: hidden;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
-  -webkit-transform: translate(-50%, -50%);
-      -ms-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-}
-.modal.modal-show {
-  visibility: visible;
-  overflow: auto;
-}
-.lt-ie9 .modal {
-  top: 0;
-  margin-left: -315px;
-}
-.modal__content {
-  background: #ffffff;
-  position: relative;
-  margin: 0 auto;
-  border-radius: 0;
-  padding: 40px;
-  padding: 2.5rem;
-}
-.modal__overlay {
-  background: #000000;
-  position: fixed;
-  visibility: hidden;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1000;
-  opacity: 0;
-  -webkit-transition-property: visibility opacity;
-          transition-property: visibility opacity;
-  -webkit-transition-delay: 0.5s 0.1s;
-          transition-delay: 0.5s 0.1s;
-  -webkit-transition-duration: 0 0.5s;
-          transition-duration: 0 0.5s;
-}
-.modal-show .modal__overlay {
-  visibility: visible;
-  opacity: 0.4;
-  -webkit-transition: opacity 0.5s;
-          transition: opacity 0.5s;
-}
-
-/* Modal Slide
-==========
-*/
-.modal[data-modal-effect|=slide] .modal__content {
-  opacity: 0;
-  -webkit-transition: all 0.5s 0;
-          transition: all 0.5s 0;
-}
-.modal[data-modal-effect|=slide].modal-show .modal__content {
-  opacity: 1;
-  -webkit-transition: all 0.5s 0.1s;
-          transition: all 0.5s 0.1s;
-}
-.modal[data-modal-effect=slide-top] .modal__content {
-  -webkit-transform: translateY(-300%);
-      -ms-transform: translateY(-300%);
-          transform: translateY(-300%);
-}
-.modal[data-modal-effect=slide-top].modal-show .modal__content {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-}
-.modal[data-modal-effect=slide-right] .modal__content {
-  -webkit-transform: translateX(300%);
-      -ms-transform: translateX(300%);
-          transform: translateX(300%);
-}
-.modal[data-modal-effect=slide-right].modal-show .modal__content {
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
-}
-.modal[data-modal-effect=slide-bottom] .modal__content {
-  -webkit-transform: translateY(300%);
-      -ms-transform: translateY(300%);
-          transform: translateY(300%);
-}
-.modal[data-modal-effect=slide-bottom].modal-show .modal__content {
-  -webkit-transform: translateY(0);
-      -ms-transform: translateY(0);
-          transform: translateY(0);
-}
-.modal[data-modal-effect=slide-left] .modal__content {
-  -webkit-transform: translateX(-300%);
-      -ms-transform: translateX(-300%);
-          transform: translateX(-300%);
-}
-.modal[data-modal-effect=slide-left].modal-show .modal__content {
-  -webkit-transform: translateX(0);
-      -ms-transform: translateX(0);
-          transform: translateX(0);
-}
-
-/* Modal Flip
-==========
-*/
-.modal[data-modal-effect|=flip] {
-  -webkit-perspective: 1300;
-          perspective: 1300;
-}
-.modal[data-modal-effect|=flip] .modal__content {
-  opacity: 0;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-}
-.modal[data-modal-effect|=flip].modal-show .modal__content {
-  opacity: 1;
-}
-.modal[data-modal-effect=flip-horizontal] .modal__content {
-  -webkit-transform: rotateY(-70deg);
-          transform: rotateY(-70deg);
-}
-.modal[data-modal-effect=flip-horizontal].modal-show .modal__content {
-  -webkit-transform: rotateY(0);
-          transform: rotateY(0);
-}
-.modal[data-modal-effect=flip-vertical] .modal__content {
-  -webkit-transform: rotateX(-70deg);
-          transform: rotateX(-70deg);
-}
-.modal[data-modal-effect=flip-vertical].modal-show .modal__content {
-  -webkit-transform: rotateX(0);
-          transform: rotateX(0);
-}
-
-/* Modal Fadescale
-==========
-*/
-.modal[data-modal-effect=fadescale] .modal__content {
-  opacity: 0;
-  -webkit-transform: scale(0.7);
-      -ms-transform: scale(0.7);
-          transform: scale(0.7);
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-}
-.modal[data-modal-effect=fadescale].modal-show .modal__content {
-  opacity: 1;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-
-/* Modal Superscale
-==========
-*/
-.modal[data-modal-effect=superscale] .modal__content {
-  opacity: 0;
-  -webkit-transform: scale(2);
-      -ms-transform: scale(2);
-          transform: scale(2);
-  -webkit-transition: all 0.3s;
-          transition: all 0.3s;
-}
-.modal[data-modal-effect=superscale].modal-show .modal__content {
-  opacity: 1;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-}
-
-/* Project
+/* App
 ==========
 */
 /* Header
