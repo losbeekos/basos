@@ -475,6 +475,31 @@ app.jump = {
         app.settings.$htmlAndBody.animate({scrollTop: offsetTop}, app.jump.settings.speed);
     }
 };
+app.leave = {
+    init: function () {
+        app.settings.$body.on('click', '[type=submit]', function () {
+            app.leave.inActive();
+        });
+
+        app.settings.$body.on('change input', '[data-leave-target]', function () {
+            app.leave.active();
+        });
+    },
+
+    active: function (_message) {
+        if (_message === undefined) {
+            _message = 'U heeft wijzigingen aangebracht en nog niet opgeslagen.';
+        }
+
+        window.onbeforeunload = function() {
+            return _message;
+        };
+    },
+
+    inActive: function () {
+        window.onbeforeunload = undefined;
+    }
+};
 app.modals = {
     settings: {
         scrollTopPosition: null,
@@ -1153,6 +1178,7 @@ app.settings.$document.ready(function () {
     app.toggle.init();
     app.parallax.init(scrollTop);
     app.groupCheckable.init();
+    app.leave.init();
 
     //app.cycle.init();
     //app.fancybox.init();

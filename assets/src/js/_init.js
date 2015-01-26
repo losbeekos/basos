@@ -19,6 +19,7 @@ app.settings.$document.ready(function () {
     app.toggle.init();
     app.parallax.init(scrollTop);
     app.groupCheckable.init();
+    app.leave.init();
 
     //app.cycle.init();
     //app.fancybox.init();
