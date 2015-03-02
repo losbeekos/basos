@@ -26,7 +26,8 @@
     "grunt-contrib-copy": "~0.7.0",
     "grunt-autoprefixer": "~2.0.0",
     "grunt-imageoptim": "~1.4.1",
-    "grunt-browser-sync": "~1.5.3"
+    "grunt-browser-sync": "~1.5.3",
+    "grunt-combine-media-queries": "~1.0.19"
   },
   "dependencies": {
     "connect": "~3.3.3",

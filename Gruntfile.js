@@ -140,6 +140,14 @@ module.exports = function(grunt) {
             }
         },
 
+        cmq: {
+            dev: {
+                files: {
+                    '<%= basos.dist %>/css': ['<%= basos.dist %>/css/main.css']
+                }
+            }
+        },
+
         cssmin: {
             minify: {
                 expand: true,
@@ -217,7 +225,7 @@ module.exports = function(grunt) {
 
             sass: {
                 files: ['<%= basos.src %>/scss/**/*'],
-                tasks: ['sass:dev', 'autoprefixer:dev', 'clean:tempsass'],
+                tasks: ['sass:dev', 'autoprefixer:dev', 'cmq:dev', 'clean:tempsass'],
             },
 
             fonts: {
@@ -280,6 +288,7 @@ module.exports = function(grunt) {
         'copy',
         'sass:dev',
         'autoprefixer:dev',
+        'cmq:dev',
         'clean:tempsass'
     ]);
 
@@ -290,6 +299,7 @@ module.exports = function(grunt) {
         'copy',
         'sass:dev',
         'autoprefixer:dev',
+        'cmq:dev',
         'clean:tempsass',
         'cssmin',
         'uglify',
