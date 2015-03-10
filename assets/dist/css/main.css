@@ -808,82 +808,6 @@ form:after,
 	width: auto;
 }
 
-/* Text align
-==========
-*/
-
-.text-align-right {
-	text-align: right;
-}
-
-.text-align-right-beta-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
-}
-
-.text-align-right-gamma-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
-}
-
-.text-align-left {
-	text-align: left;
-}
-
-.text-align-left-beta-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
-}
-
-.text-align-left-gamma-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
-}
-
-.text-align-center {
-	text-align: center;
-}
-
-.text-align-center-beta-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
-}
-
-.text-align-center-gamma-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
-}
-
 /* Margin classes
 ==========
 */
@@ -1117,6 +1041,364 @@ form:after,
 .no-horizontal-margin {
 	margin-left: 0 !important;
 	margin-right: 0 !important;
+}
+
+/* Padding classes
+==========
+*/
+
+.padding-alpha {
+	padding: 10px !important;
+	padding: 0.625rem !important;
+}
+
+.padding-alpha-vertical {
+	padding-top: 10px !important;
+	padding-top: 0.625rem !important;
+	padding-bottom: 10px !important;
+	padding-bottom: 0.625rem !important;
+}
+
+.padding-alpha-horizontal {
+	padding-left: 10px !important;
+	padding-left: 0.625rem !important;
+	padding-right: 10px !important;
+	padding-right: 0.625rem !important;
+}
+
+.padding-alpha-right {
+	padding-right: 10px !important;
+	padding-right: 0.625rem !important;
+}
+
+.padding-alpha-left {
+	padding-left: 10px !important;
+	padding-left: 0.625rem !important;
+}
+
+.padding-alpha-top {
+	padding-top: 10px !important;
+	padding-top: 0.625rem !important;
+}
+
+.padding-alpha-bottom {
+	padding-bottom: 10px !important;
+	padding-bottom: 0.625rem !important;
+}
+
+.padding-beta {
+	padding: 20px !important;
+	padding: 1.25rem !important;
+}
+
+.padding-beta-vertical {
+	padding-top: 20px !important;
+	padding-top: 1.25rem !important;
+	padding-bottom: 20px !important;
+	padding-bottom: 1.25rem !important;
+}
+
+.padding-beta-horizontal {
+	padding-left: 20px !important;
+	padding-left: 1.25rem !important;
+	padding-right: 20px !important;
+	padding-right: 1.25rem !important;
+}
+
+.padding-beta-right {
+	padding-right: 20px !important;
+	padding-right: 1.25rem !important;
+}
+
+.padding-beta-left {
+	padding-left: 20px !important;
+	padding-left: 1.25rem !important;
+}
+
+.padding-beta-top {
+	padding-top: 20px !important;
+	padding-top: 1.25rem !important;
+}
+
+.padding-beta-bottom {
+	padding-bottom: 20px !important;
+	padding-bottom: 1.25rem !important;
+}
+
+.padding-gamma {
+	padding: 30px !important;
+	padding: 1.875rem !important;
+}
+
+.padding-gamma-vertical {
+	padding-top: 30px !important;
+	padding-top: 1.875rem !important;
+	padding-bottom: 30px !important;
+	padding-bottom: 1.875rem !important;
+}
+
+.padding-gamma-horizontal {
+	padding-left: 30px !important;
+	padding-left: 1.875rem !important;
+	padding-right: 30px !important;
+	padding-right: 1.875rem !important;
+}
+
+.padding-gamma-right {
+	padding-right: 30px !important;
+	padding-right: 1.875rem !important;
+}
+
+.padding-gamma-left {
+	padding-left: 30px !important;
+	padding-left: 1.875rem !important;
+}
+
+.padding-gamma-top {
+	padding-top: 30px !important;
+	padding-top: 1.875rem !important;
+}
+
+.padding-gamma-bottom {
+	padding-bottom: 30px !important;
+	padding-bottom: 1.875rem !important;
+}
+
+.padding-delta {
+	padding: 40px !important;
+	padding: 2.5rem !important;
+}
+
+.padding-delta-vertical {
+	padding-top: 40px !important;
+	padding-top: 2.5rem !important;
+	padding-bottom: 40px !important;
+	padding-bottom: 2.5rem !important;
+}
+
+.padding-delta-horizontal {
+	padding-left: 40px !important;
+	padding-left: 2.5rem !important;
+	padding-right: 40px !important;
+	padding-right: 2.5rem !important;
+}
+
+.padding-delta-right {
+	padding-right: 40px !important;
+	padding-right: 2.5rem !important;
+}
+
+.padding-delta-left {
+	padding-left: 40px !important;
+	padding-left: 2.5rem !important;
+}
+
+.padding-delta-top {
+	padding-top: 40px !important;
+	padding-top: 2.5rem !important;
+}
+
+.padding-delta-bottom {
+	padding-bottom: 40px !important;
+	padding-bottom: 2.5rem !important;
+}
+
+.padding-epsilon {
+	padding: 50px !important;
+	padding: 3.125rem !important;
+}
+
+.padding-epsilon-vertical {
+	padding-top: 50px !important;
+	padding-top: 3.125rem !important;
+	padding-bottom: 50px !important;
+	padding-bottom: 3.125rem !important;
+}
+
+.padding-epsilon-horizontal {
+	padding-left: 50px !important;
+	padding-left: 3.125rem !important;
+	padding-right: 50px !important;
+	padding-right: 3.125rem !important;
+}
+
+.padding-epsilon-right {
+	padding-right: 50px !important;
+	padding-right: 3.125rem !important;
+}
+
+.padding-epsilon-left {
+	padding-left: 50px !important;
+	padding-left: 3.125rem !important;
+}
+
+.padding-epsilon-top {
+	padding-top: 50px !important;
+	padding-top: 3.125rem !important;
+}
+
+.padding-epsilon-bottom {
+	padding-bottom: 50px !important;
+	padding-bottom: 3.125rem !important;
+}
+
+.no-padding {
+	padding: 0 !important;
+}
+
+.no-bottom-padding {
+	padding-bottom: 0 !important;
+}
+
+.no-top-padding {
+	padding-top: 0 !important;
+}
+
+.no-left-padding {
+	padding-left: 0 !important;
+}
+
+.no-right-padding {
+	padding-right: 0 !important;
+}
+
+.no-vertical-padding {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.no-horizontal-padding {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+/* Float
+==========
+*/
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.float-none {
+	float: none;
+}
+
+/* Round
+==========
+*/
+
+.round {
+	overflow: hidden;
+	border-radius: 50%;
+}
+
+/* Text align
+==========
+*/
+
+.text-align-right {
+	text-align: right;
+}
+
+.text-align-right-beta-and-up { /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+
+.text-align-right-gamma-and-up { /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+
+.text-align-left {
+	text-align: left;
+}
+
+.text-align-left-beta-and-up { /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+
+.text-align-left-gamma-and-up { /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+
+.text-align-center {
+	text-align: center;
+}
+
+.text-align-center-beta-and-up { /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+
+.text-align-center-gamma-and-up { /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+
+/* Text transform
+==========
+*/
+
+.text-transform-caps {
+	text-transform: caps;
+}
+
+.text-transform-caps {
+	text-transform: thin;
+}
+
+.text-transform-caps {
+	text-transform: small;
+}
+
+/* Text type
+==========
+*/
+
+.text-type-italic {
+	font-style: italic;
+}
+
+.text-type-bold {
+	font-style: bold;
 }
 
 /* Animations
@@ -1557,6 +1839,12 @@ p {
 .disable-hover,
 .disable-hover * {
 	pointer-events: none !important;
+}
+
+.disable-transitions,
+.disable-transitions * {
+	-webkit-transition: none !important;
+	transition: none !important;
 }
 
 /* Container

@@ -1217,6 +1217,8 @@ app.settings.$window.on('touchmove', function(){
 
 app.settings.$window.on('resize', function () {
 
+    app.settings.$html.addClass('disable-transitions');
+
     if(this.resizeTo) {
         clearTimeout(this.resizeTo);
     }
@@ -1232,5 +1234,7 @@ app.settings.$window.on('resize', function () {
         app.parallax.init(scrollTop);
         app.navBar.resize(scrollTop);
         app.navBar.scroller(scrollTop);
+
+        app.settings.$html.removeClass('disable-transitions');
     }, 500);
 });
