@@ -277,7 +277,15 @@ module.exports = function(grunt) {
                     startPath: '/index.html'
                 }
             }
-        }
+        },
+
+        hologram: {
+            generate: {
+                options: {
+                    config: 'hologram_config.yml'
+                }
+            }
+        },
 
     });
 

@@ -6,8 +6,15 @@
 ==========
 */
 
-/* Base
-==========
+/*doc
+---
+title: Settings
+name: settings
+category: core
+---
+```html_example
+    <div class='notification notification--beta notification--error'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus vitae consequatur debitis quos pariatur, ut, ad amet doloribus laudantium distinctio saepe sequi blanditiis harum tempore explicabo. Aspernatur architecto ex quibusdam.</div>
+```
 */
 
 /* Media queries
@@ -609,6 +616,28 @@ textarea {
 	resize: none;
 }
 
+/* Functions
+==========
+*/
+
+/* Tint
+==========
+    Slightly lighten a color
+    @access public
+    @param {Color} $color - color to tint
+    @param {Number} $percentage - percentage of `$color` in returned color
+    @return {Color}
+*/
+
+/* Shade
+==========
+    Slightly darken a color
+    @access public
+    @param {Color} $color - color to shade
+    @param {Number} $percentage - percentage of `$color` in returned color
+    @return {Color}
+*/
+
 /* Mixins
 ==========
 */
@@ -1013,6 +1042,84 @@ form:after,
 	margin-bottom: 3.125rem !important;
 }
 
+.margin-zeta {
+	margin: 80px !important;
+	margin: 5rem !important;
+}
+
+.margin-zeta-vertical {
+	margin-top: 80px !important;
+	margin-top: 5rem !important;
+	margin-bottom: 80px !important;
+	margin-bottom: 5rem !important;
+}
+
+.margin-zeta-horizontal {
+	margin-left: 80px !important;
+	margin-left: 5rem !important;
+	margin-right: 80px !important;
+	margin-right: 5rem !important;
+}
+
+.margin-zeta-right {
+	margin-right: 80px !important;
+	margin-right: 5rem !important;
+}
+
+.margin-zeta-left {
+	margin-left: 80px !important;
+	margin-left: 5rem !important;
+}
+
+.margin-zeta-top {
+	margin-top: 80px !important;
+	margin-top: 5rem !important;
+}
+
+.margin-zeta-bottom {
+	margin-bottom: 80px !important;
+	margin-bottom: 5rem !important;
+}
+
+.margin-eta {
+	margin: 100px !important;
+	margin: 6.25rem !important;
+}
+
+.margin-eta-vertical {
+	margin-top: 100px !important;
+	margin-top: 6.25rem !important;
+	margin-bottom: 100px !important;
+	margin-bottom: 6.25rem !important;
+}
+
+.margin-eta-horizontal {
+	margin-left: 100px !important;
+	margin-left: 6.25rem !important;
+	margin-right: 100px !important;
+	margin-right: 6.25rem !important;
+}
+
+.margin-eta-right {
+	margin-right: 100px !important;
+	margin-right: 6.25rem !important;
+}
+
+.margin-eta-left {
+	margin-left: 100px !important;
+	margin-left: 6.25rem !important;
+}
+
+.margin-eta-top {
+	margin-top: 100px !important;
+	margin-top: 6.25rem !important;
+}
+
+.margin-eta-bottom {
+	margin-bottom: 100px !important;
+	margin-bottom: 6.25rem !important;
+}
+
 .no-margin {
 	margin: 0 !important;
 }
@@ -1242,6 +1349,84 @@ form:after,
 	padding-bottom: 3.125rem !important;
 }
 
+.padding-zeta {
+	padding: 80px !important;
+	padding: 5rem !important;
+}
+
+.padding-zeta-vertical {
+	padding-top: 80px !important;
+	padding-top: 5rem !important;
+	padding-bottom: 80px !important;
+	padding-bottom: 5rem !important;
+}
+
+.padding-zeta-horizontal {
+	padding-left: 80px !important;
+	padding-left: 5rem !important;
+	padding-right: 80px !important;
+	padding-right: 5rem !important;
+}
+
+.padding-zeta-right {
+	padding-right: 80px !important;
+	padding-right: 5rem !important;
+}
+
+.padding-zeta-left {
+	padding-left: 80px !important;
+	padding-left: 5rem !important;
+}
+
+.padding-zeta-top {
+	padding-top: 80px !important;
+	padding-top: 5rem !important;
+}
+
+.padding-zeta-bottom {
+	padding-bottom: 80px !important;
+	padding-bottom: 5rem !important;
+}
+
+.padding-eta {
+	padding: 100px !important;
+	padding: 6.25rem !important;
+}
+
+.padding-eta-vertical {
+	padding-top: 100px !important;
+	padding-top: 6.25rem !important;
+	padding-bottom: 100px !important;
+	padding-bottom: 6.25rem !important;
+}
+
+.padding-eta-horizontal {
+	padding-left: 100px !important;
+	padding-left: 6.25rem !important;
+	padding-right: 100px !important;
+	padding-right: 6.25rem !important;
+}
+
+.padding-eta-right {
+	padding-right: 100px !important;
+	padding-right: 6.25rem !important;
+}
+
+.padding-eta-left {
+	padding-left: 100px !important;
+	padding-left: 6.25rem !important;
+}
+
+.padding-eta-top {
+	padding-top: 100px !important;
+	padding-top: 6.25rem !important;
+}
+
+.padding-eta-bottom {
+	padding-bottom: 100px !important;
+	padding-bottom: 6.25rem !important;
+}
+
 .no-padding {
 	padding: 0 !important;
 }
@@ -1381,11 +1566,11 @@ form:after,
 	text-transform: caps;
 }
 
-.text-transform-caps {
+.text-transform-thin {
 	text-transform: thin;
 }
 
-.text-transform-caps {
+.text-transform-small {
 	text-transform: small;
 }
 
@@ -1798,7 +1983,7 @@ html {
 }
 
 body {
-	font-family: arial, verdana, sans-serif;
+	font-family: 'arial', 'verdana', sans-serif;
 	color: #222222;
 }
 
@@ -1946,7 +2131,7 @@ p {
 }
 
 .section-img {
-	background: url(../dist/img/someimage.jpg) center center fixed;
+	background: url("../dist/img/someimage.jpg") center center fixed;
 	background-size: cover;
 	height: 300px;
 	height: 18.75rem; /**
@@ -2000,7 +2185,7 @@ input[type=radio] + label:after,
 .form__password-toggle:after,
 .notification:before,
 .notification__close {
-	font-family: 'icons', arial, verdana;
+	font-family: 'icons', 'arial', 'verdana';
 	font-weight: normal;
 }
 
@@ -4422,7 +4607,7 @@ progress:not([value])::-ms-fill {
 
 .btn--ghost {
 	background: transparent;
-	border-width: 2px;
+	border-width: 1px;
 	border-radius: 5px;
 	color: #222222;
 	text-shadow: none;
@@ -5452,7 +5637,7 @@ input[type=range]::-ms-fill-lower {
 */
 
 .header {
-	background-image: url(../img/header.jpg);
+	background-image: url("../img/header.jpg");
 	background-position: top center;
 	background-repeat: no-repeat;
 	background-size: cover;

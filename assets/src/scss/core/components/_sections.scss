@@ -34,7 +34,7 @@
 }
 
 .section-img {
-    background: url(../dist/img/someimage.jpg) center center fixed;
+    background: url('../dist/img/someimage.jpg') center center fixed;
     background-size: cover;
 
     @include rem(height, 300px);

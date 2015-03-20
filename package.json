@@ -27,11 +27,12 @@
     "grunt-autoprefixer": "~2.0.0",
     "grunt-imageoptim": "~1.4.1",
     "grunt-browser-sync": "~1.5.3",
-    "grunt-combine-media-queries": "~1.0.19"
+    "grunt-combine-media-queries": "~1.0.19",
+    // "grunt-hologram": "0.0.6"
   },
   "dependencies": {
     "connect": "~3.3.3",
     "gateway": "~1.0.0",
-    "load-grunt-tasks": "~3.1.0”
+    "load-grunt-tasks": "~3.1.0"
   }
 }

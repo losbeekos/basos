@@ -149,7 +149,7 @@ $btn: (
     group-margin            : 0 0 30px 0,
     group-border-radius     : map-get($base, border-radius),
     holder-margin           : 40px 0 0 0,
-    ghost-border-width      : 2px,
+    ghost-border-width      : 1px,
     ghost-border-radius     : 5px,
     ghost-opacity           : 1,
     ghost-opacty-hover      : 1,
@@ -176,11 +176,13 @@ $btn-bg: (
 */
 
 $margin: (
-    alpha: 10px,
-    beta: 20px,
-    gamma: 30px,
-    delta: 40px,
-    epsilon: 50px
+    alpha   : 10px,
+    beta    : 20px,
+    gamma   : 30px,
+    delta   : 40px,
+    epsilon : 50px,
+    zeta    : 80px,
+    eta     : 100px
 );
 
 
@@ -189,11 +191,13 @@ $margin: (
 */
 
 $padding: (
-    alpha: 10px,
-    beta: 20px,
-    gamma: 30px,
-    delta: 40px,
-    epsilon: 50px
+    alpha   : 10px,
+    beta    : 20px,
+    gamma   : 30px,
+    delta   : 40px,
+    epsilon : 50px,
+    zeta    : 80px,
+    eta     : 100px
 );
 
 

@@ -78,11 +78,11 @@
     *
     **/
 
-    @media (min-width: map-get($mq, alpha)) and (orientation: landscape) { background-image: url(../img/#{$path}/480x320.jpg);   }
-    @media (min-width: map-get($mq, alpha)) and (orientation: portrait)  { background-image: url(../img/#{$path}/320x480.jpg);   }
-    @media (min-width: map-get($mq, beta)) and (orientation: landscape) { background-image: url(../img/#{$path}/1024x768.jpg);   }
-    @media (min-width: map-get($mq, beta)) and (orientation: portrait)  { background-image: url(../img/#{$path}/1024x768.jpg);   }
-    @media (min-width: map-get($mq, gamma)) and (orientation: landscape) { background-image: url(../img/#{$path}/1280x1024.jpg); }
-    @media (min-width: map-get($mq, gamma)) and (orientation: portrait)  { background-image: url(../img/#{$path}/1024x1280.jpg); }
+    @media (min-width: map-get($mq, alpha)) and (orientation: landscape) { background-image: url('../img/#{$path}/480x320.jpg');   }
+    @media (min-width: map-get($mq, alpha)) and (orientation: portrait)  { background-image: url('../img/#{$path}/320x480.jpg');   }
+    @media (min-width: map-get($mq, beta)) and (orientation: landscape) { background-image: url('../img/#{$path}/1024x768.jpg');   }
+    @media (min-width: map-get($mq, beta)) and (orientation: portrait)  { background-image: url('../img/#{$path}/1024x768.jpg');   }
+    @media (min-width: map-get($mq, gamma)) and (orientation: landscape) { background-image: url('../img/#{$path}/1280x1024.jpg'); }
+    @media (min-width: map-get($mq, gamma)) and (orientation: portrait)  { background-image: url('../img/#{$path}/1024x1280.jpg'); }
 }
 

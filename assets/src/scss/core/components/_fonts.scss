@@ -5,12 +5,12 @@
 @include font-face('icons', 'fonts/icons');
 
 %font-icons {
-    font-family: 'icons', arial, verdana;
+    font-family: 'icons', 'arial', 'verdana';
     font-weight: normal;
 }
 
 //@include font-face('somefont', 'fonts/somefont');
 // %font-somefont {
-//     font-family: "somefont", arial, verdana;
+//     font-family: 'icons', 'arial', 'verdana';
 //     font-weight: normal;
 // }
