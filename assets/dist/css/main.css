@@ -6,15 +6,8 @@
 ==========
 */
 
-/*doc
----
-title: Settings
-name: settings
-category: core
----
-```html_example
-    <div class='notification notification--beta notification--error'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus vitae consequatur debitis quos pariatur, ut, ad amet doloribus laudantium distinctio saepe sequi blanditiis harum tempore explicabo. Aspernatur architecto ex quibusdam.</div>
-```
+/* Base
+==========
 */
 
 /* Media queries
@@ -1584,6 +1577,38 @@ form:after,
 
 .text-type-bold {
 	font-style: bold;
+}
+
+/* Position
+==========
+*/
+
+.position-relative {
+	position: relative;
+}
+
+.position-absolute {
+	position: absolute;
+}
+
+/* Display
+==========
+*/
+
+.display-inline {
+	display: inline;
+}
+
+.display-inline-block {
+	display: inline-block;
+}
+
+.display-block {
+	display: block;
+}
+
+.display-none {
+	display: none;
 }
 
 /* Animations
@@ -5298,51 +5323,6 @@ input[type=range]::-ms-fill-lower {
 .form__input--error input[type=checkbox] + label:after,
 .form__input--error input[type=radio] + label:after {
 	color: #b02626;
-}
-
-.form__input--success input[type="text"],
-.form__input--success input[type="password"],
-.form__input--success input[type="date"],
-.form__input--success input[type="datetime"],
-.form__input--success input[type="datetime-local"],
-.form__input--success input[type="month"],
-.form__input--success input[type="week"],
-.form__input--success input[type="email"],
-.form__input--success input[type="number"],
-.form__input--success input[type="search"],
-.form__input--success input[type="tel"],
-.form__input--success input[type="time"],
-.form__input--success input[type="url"],
-.form__input--success textarea {
-	border-color: #26b036;
-	box-shadow: none;
-	padding-right: 30px;
-	padding-right: 1.875rem;
-}
-
-.form__input--success input[type="text"]:focus,
-.form__input--success input[type="password"]:focus,
-.form__input--success input[type="date"]:focus,
-.form__input--success input[type="datetime"]:focus,
-.form__input--success input[type="datetime-local"]:focus,
-.form__input--success input[type="month"]:focus,
-.form__input--success input[type="week"]:focus,
-.form__input--success input[type="email"]:focus,
-.form__input--success input[type="number"]:focus,
-.form__input--success input[type="search"]:focus,
-.form__input--success input[type="tel"]:focus,
-.form__input--success input[type="time"]:focus,
-.form__input--success input[type="url"]:focus,
-.form__input--success textarea:focus {
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-}
-
-.form__input--success .form__select {
-	border-color: #26b036;
-}
-
-.form__input--success .form__select:after {
-	color: #26b036;
 }
 
 .parsley-container {

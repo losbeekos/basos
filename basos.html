@@ -470,7 +470,8 @@
                 <section id="form" class="section section--alpha">
                     <div class="container">
                         <h1>Form</h1>
-                        <form class="form" data-form-validate novalidate="novalidate">
+                        <form class="form" action="?action=ajax" data-form-ajax data-form-ajax-method="GET" data-form-ajax-datatype="json" data-form-ajax-url="form-ajax.json" data-form-ajax-msg-container="#form-message" data-form-validate novalidate="novalidate">
+                            <div id="form-message"></div>
                             <fieldset>
                                 <legend>Persoonlijke gegevens</legend>
                                 <div class="form__row">

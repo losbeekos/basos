@@ -11,6 +11,7 @@ app.formModules = {
         app.formModules.range();
         app.formModules.validation();
         app.formModules.password();
+        app.formModules.ajaxForm();
     },
 
     range: function () {
@@ -86,5 +87,47 @@ app.formModules = {
                     });
             });
         }
+    },
+
+    ajaxForm: function () {
+        app.settings.$body.on('submit', '[data-form-ajax]', function (event) {
+            var $form = $(this),
+                action = $form.attr('action'),
+                data = $form.data(),
+                url = null;
+
+            event.preventDefault();
+
+            url === undefined ? url = window.location : url = data.formAjaxUrl;
+
+            if ($form.parsley().isValid()) {
+                $.ajax({
+                    url: url,
+                    data: $form.serialize(),
+                    action: action,
+                    method: data.formAjaxMethod,
+                    dataType: data.formAjaxDatatype,
+                    success: function (response) {
+
+                        switch (response.status) {
+                            case 200:
+                                app.notifications.add(data.formAjaxMsgContainer, response.message, 'beta', 'success');
+                                app.formModules.emptyForm($form);
+                                break;
+                            case 500:
+                                app.notifications.add(data.formAjaxMsgContainer, response.message, 'beta', 'error');
+                                break;
+                        }
+
+                        app.jump.to(data.formAjaxMsgContainer, 40);
+                    }
+                });
+            }
+        });
+    },
+
+    emptyForm: function (_form) {
+        _form.find('input[type=text], input[type=password], textarea, select').val('');
+        _form.find('input[type=radio], input[type=checkbox]').prop('checked', false);
     }
 };

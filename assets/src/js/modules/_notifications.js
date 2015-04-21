@@ -17,6 +17,10 @@ app.notifications = {
         self.cookieLaw.init();
     },
 
+    add: function (_target, _message, _size, _type) {
+        $(_target).html('<div class="notification notification--' + _size + ' notification--' + _type + '"><div class="notification__text">' + _message + '</div></div>');
+    },
+
     close: function () {
         var self = this;
 
@@ -48,7 +52,7 @@ app.notifications = {
                 cookieValue = helper.cookies.read('basosCookieNotification'),
                 info = '';
 
-            if (cookieValue !== 'approved') {
+            if (cookieValue !== 'approved' && navigator.CookiesOK === undefined) {
                 app.settings.$html.attr('notification-cookie-position', app.notifications.settings.cookieLaw.position);
 
                 if (app.notifications.settings.cookieLaw.infoBtnShow) {
