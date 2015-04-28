@@ -16,7 +16,7 @@ app.parallax = {
                     $img = $parallax.find('.parallax__img');
 
                 if (parallaxSpeed === undefined) {
-                    parallaxSpeed = -4;
+                    parallaxSpeed = 10;
                 }
 
                 if (Modernizr.mq(app.mediaQueries.alpha)) {
@@ -31,7 +31,7 @@ app.parallax = {
                     }
 
                     $img.css({
-                        'transform': 'translate3d(0, ' + yPos +  'px, 0)',
+                        'transform': 'translateY(' + yPos +  'px)',
                         'transition': 'none'
                     });
                 }

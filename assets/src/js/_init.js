@@ -33,6 +33,7 @@ app.settings.$window.ready(function () {
         windowHeight = $this.height();
 
     app.scrollSpy.init(scrollTop, windowHeight, true);
+    app.affix.init(scrollTop);
 });
 
 app.settings.$window.on('scroll', function () {
@@ -45,6 +46,10 @@ app.settings.$window.on('scroll', function () {
     app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
     app.disableHover.init();
+
+    if (app.settings.$html.hasClass('no-touch')) {
+        // app.affix.scroller(scrollTop);
+    }
 });
 
 app.settings.$window.on('touchmove', function(){
@@ -52,6 +57,7 @@ app.settings.$window.on('touchmove', function(){
         scrollTop = $this.scrollTop(),
         windowHeight = $this.height();
 
+    app.affix.scroller(scrollTop);
     app.scrollSpy.init(scrollTop, windowHeight, false);
     app.scrollSpyNav.init(scrollTop);
 });
@@ -75,6 +81,7 @@ app.settings.$window.on('resize', function () {
         app.parallax.init(scrollTop);
         app.navBar.resize(scrollTop);
         app.navBar.scroller(scrollTop);
+        app.affix.init(scrollTop);
 
         app.settings.$html.removeClass('disable-transitions');
     }, 500);

@@ -25,7 +25,7 @@
 
         @include mq(beta-and-up) {
             position: absolute;
-            top: 0;
+            top: -50%;
         }
 
         @include mq(gamma-and-up) {

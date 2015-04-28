@@ -1,0 +1,22 @@
+/* Affix
+==========
+*/
+
+.affix-container {
+    position: relative;
+}
+
+.affix {
+    position: relative;
+
+    &--fixed {
+        position: fixed;
+        top: 0;
+    }
+
+    &--absolute {
+        position: absolute;
+        top: inherit !important;
+        bottom: 0;
+    }
+}

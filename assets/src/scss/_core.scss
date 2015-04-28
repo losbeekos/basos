@@ -112,8 +112,13 @@ for a smaller generated CSS file.
 @import "core/components/scrollspy";
 @import "core/components/parallax";
 @import "core/components/toggle";
-@import "core/components/off_canvas";
-@import "core/components/off_canvas_navbar";
+@import "core/components/affix";
+
+/* Off canvas
+==========
+*/
+@import "core/components/off_canvas/off_canvas";
+@import "core/components/off_canvas/off_canvas_navbar";
 
 
 /* Buttons

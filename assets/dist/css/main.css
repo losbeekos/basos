@@ -3811,6 +3811,33 @@ progress:not([value])::-ms-fill {
 	max-height: 0;
 }
 
+/* Affix
+==========
+*/
+
+.affix-container {
+	position: relative;
+}
+
+.affix {
+	position: relative;
+}
+
+.affix--fixed {
+	position: fixed;
+	top: 0;
+}
+
+.affix--absolute {
+	position: absolute;
+	top: inherit !important;
+	bottom: 0;
+}
+
+/* Off canvas
+==========
+*/
+
 /* Off canvas
 ==========
 */
@@ -6206,7 +6233,7 @@ h1,
 
 .parallax__img {
 	position: absolute;
-	top: 0;
+	top: -50%;
 }
 
 .btn--medium {
