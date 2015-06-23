@@ -6,7 +6,7 @@
 @mixin defaultGridColumn($key) {
     @include mq(#{$key}) {
         .column-#{$key}--first {
-            margin-left: 0;
+            margin-left: 0 !important;
         }
 
         @for $i from 1 through map-get($susy, columns) {
@@ -36,7 +36,7 @@
 @mixin gridColumn($key) {
     @include mq(#{$key}) {
         .column-#{$key}--first {
-            margin-left: 0;
+            margin-left: 0 !important;
         }
 
         @for $i from 1 through map-get($susy, columns) {
