@@ -1307,6 +1307,8 @@ app.settings.$window.ready(function () {
 
     app.scrollSpy.init(scrollTop, windowHeight, true);
     app.affix.init(scrollTop);
+
+    app.settings.$html.addClass('app-active');
 });
 
 app.settings.$window.on('scroll', function () {
