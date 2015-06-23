@@ -558,23 +558,19 @@ app.groupCheckable = {
 };
 app.jump = {
     settings: {
-        speed: 300,
-        $el: $('[data-jumpto]')
+        speed: 300
     },
 
     init: function () {
-        var self = this;
-
-        app.jump.settings.$el.on('click', function (event) {
+        app.settings.$body.on('click', '[data-jumpto]', function (event) {
             event.preventDefault();
 
-            self.to($(this).attr('href'));
+            app.jump.to($(this).attr('href'), 0);
         });
     },
 
     to: function (_target, _extraOffset) {
-        var self = this,
-            offsetTop = Math.round($(_target).offset().top);
+        var offsetTop = Math.round($(_target).offset().top);
 
         _extraOffset === undefined ? 0 : '';
 
