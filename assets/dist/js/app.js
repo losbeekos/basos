@@ -426,7 +426,7 @@ app.formModules = {
             });
         }
 
-        app.formModules.settings.$range.on('input change', function () {
+        app.formModules.settings.$range.on('input', function () {
             var $this = $(this),
                 data = $this.data(),
                 id = $this.attr('id'),
