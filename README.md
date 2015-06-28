@@ -1,8 +1,5 @@
 # Installation
-Make sure you have Git, GruntJS and Bower.
-
-#### Clone
-    $ git clone https://github.com/losbeekos/basos.git projectname
+Make sure you have GruntJS and Bower.
 
 #### Bower dependencies
 Install the Bower dependencies, see bower.json.
@@ -23,3 +20,7 @@ Start the web server which is used by BrowserSync.
 Run BrowserSync to auto reload when dist files change.
 
     $ grunt browserSync
+
+#### Watch for changes
+
+    $ grunt watch
