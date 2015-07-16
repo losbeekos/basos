@@ -5,9 +5,17 @@ app.jump = {
 
     init: function () {
         app.settings.$body.on('click', '[data-jumpto]', function (event) {
+            var $this = $(this),
+                data = $this.data(),
+                extraOffset = 0;
+
             event.preventDefault();
 
-            app.jump.to($(this).attr('href'), 0);
+            if (data.jumptoExtraOffset !== undefined) {
+                extraOffset = data.jumptoExtraOffset;
+            }
+
+            app.jump.to($(this).attr('href'), extraOffset);
         });
     },
 
