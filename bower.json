@@ -5,11 +5,11 @@
     "respond": "~1.4.2",
     "selectivizr": "~1.0.2",
     "jquery": "~1.*",
-    "fastclick": "~1.0.3",
+    "fastclick": "~1.0.6",
     "fitvids": "~1.1.0",
-    "parsleyjs": "~2.0.6",
-    "jquery-placeholder": "~2.0.8",
-    "rangeslider.js": "~0.3.7"
+    "parsleyjs": "~2.1.2",
+    "jquery-placeholder": "~2.1.2",
+    "rangeslider.js": "~1.2.1"
   },
   "private": true
 }
