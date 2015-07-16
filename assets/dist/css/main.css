@@ -1611,6 +1611,23 @@ form:after,
 	display: none;
 }
 
+.display-table {
+	display: table;
+}
+
+.display-table__middle,
+.display-table__bottom {
+	display: table-cell;
+}
+
+.display-table__middle {
+	vertical-align: middle;
+}
+
+.display-table__bottom {
+	vertical-align: bottom;
+}
+
 /* Animations
 ==========
 */

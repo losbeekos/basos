@@ -17,3 +17,20 @@
 .display-none {
     display: none;
 }
+
+.display-table {
+    display: table;
+
+    &__middle,
+    &__bottom {
+        display: table-cell;
+    }
+
+    &__middle {
+        vertical-align: middle;
+    }
+
+    &__bottom {
+        vertical-align: bottom;
+    }
+ }
