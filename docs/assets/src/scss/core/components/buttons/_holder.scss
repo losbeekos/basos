@@ -7,3 +7,18 @@
 
     @include rem(margin, map-get($btn, holder-margin));
 }
+
+/*doc
+---
+title: Holder
+name: holder
+category: Buttons
+---
+
+```html_example
+<a class="btn btn--beta btn--small" href="#">button small</a>
+<a class="btn btn--beta btn--medium" href="#">button medium</a>
+<a class="btn btn--beta btn--large" href="#">button large</a>
+```
+
+*/

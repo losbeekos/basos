@@ -1,5 +1,20 @@
-/* Button styles
-==========
+/*doc
+---
+title: Styles
+name: styles
+category: Buttons
+---
+
+Add more colors in the settings file under "buttons" if you need to.
+
+```html_example
+<a class="btn btn--alpha btn--small" href="#">alpha</a>
+<a class="btn btn--beta btn--small" href="#">beta</a>
+<a class="btn btn--gamma btn--small" href="#">gamma</a>
+<a class="btn btn--delta btn--small" href="#">delta</a>
+<a class="btn btn--epsilon btn--small" href="#">epsilon</a>
+```
+
 */
 
 @mixin btn-style($bg-color) {
@@ -109,6 +124,19 @@
         }
     }
 
+/*doc
+---
+title: Mask
+name: mask
+category: Buttons
+---
+
+```html_example
+<a class="btn btn--mask btn--medium" href="#">button medium</a>
+```
+
+*/
+
     &--mask {
         @include btn-style(transparent);
 
@@ -120,6 +148,26 @@
             background-color: darken(map-get($color, white), 10%);
         }
     }
+
+/*doc
+---
+title: Block
+name: block
+category: Buttons
+---
+
+```html_example
+<div class="grid">
+    <div class="column-6">
+        <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+    </div>
+    <div class="column-6">
+        <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+    </div>
+</div>
+```
+
+*/
 
     &--block {
         min-width: 100%;
@@ -135,6 +183,21 @@
             @include btn-style(map-get($btn-bg, $key));
         }
     }
+
+/*doc
+---
+title: Ghost
+name: ghost
+category: Buttons
+---
+
+Add more colors in the settings file under "buttons" if you need to.
+
+```html_example
+<a class="btn btn--ghost btn--dark btn--small" href="#">black</a>
+```
+
+*/
 
     &--ghost {
         background: transparent;
@@ -156,6 +219,21 @@
         }
     }
 }
+
+/*doc
+---
+title: No button style
+name: no_btn_style
+category: Buttons
+---
+
+Commonly used for triggers. For example a navigation trigger
+
+```html_example
+<button class="no-btn-style">Button</button>
+```
+
+*/
 
 .no-btn-style {
     background: none;

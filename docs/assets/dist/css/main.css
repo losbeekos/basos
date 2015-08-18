@@ -5338,8 +5338,15 @@ category: Navigation
   **/
 }
 
-/* Buttons
-==========
+/*doc
+---
+title: Buttons
+name: 5_buttons
+category: Buttons
+---
+
+Buttons
+
 */
 
 /* Button container
@@ -5382,13 +5389,46 @@ category: Navigation
 	margin: 2.5rem 0 0 0;
 }
 
+/*doc
+---
+title: Holder
+name: holder
+category: Buttons
+---
+
+```html_example
+<a class="btn btn--beta btn--small" href="#">button small</a>
+<a class="btn btn--beta btn--medium" href="#">button medium</a>
+<a class="btn btn--beta btn--large" href="#">button large</a>
+```
+
+*/
+
 /* Button group
 ==========
 */
 
 .btn-group {
 	margin: 0 0 30px 0;
-	margin: 0 0 1.875rem 0;
+	margin: 0 0 1.875rem 0; /*doc
+  ---
+  title: Inline
+  name: inline
+  category: Buttons
+  ---
+  
+  These work with the button classes so you can use those to change color and size.
+  
+  ```html_example
+  <ul class="btn-group btn-group--inline">
+      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+  </ul>
+  ```
+  
+  */
 }
 
 .btn-group > li a,
@@ -5440,6 +5480,119 @@ category: Navigation
 .btn-group--block > li:last-child span {
 	border-radius: 0 0 0 0;
 }
+
+/*doc
+---
+title: Group
+name: group
+category: Buttons
+---
+
+These work with the button classes so you can use those to change color, size is controlled with specific pagination padding.
+
+## Default pagination
+
+```html_example
+<div class="btn-container">
+    <a class="btn btn--alpha" href="#">&lsaquo;</a>
+    <a class="btn btn--alpha" href="#">1</a>
+    <a class="btn btn--alpha" href="#">2</a>
+    <a class="btn btn--alpha" href="#">3</a>
+    <a class="btn btn--alpha" href="#">4</a>
+    <a class="btn btn--alpha" href="#">5</a>
+    <a class="btn btn--divider">...</a>
+    <a class="btn btn--alpha" href="#">23</a>
+    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+</div>
+```
+
+## Centered pagination
+
+```html_example
+<div class="btn-container btn-container--center">
+    <a class="btn btn--alpha" href="#">&lsaquo;</a>
+    <a class="btn btn--alpha" href="#">1</a>
+    <a class="btn btn--alpha" href="#">2</a>
+    <a class="btn btn--alpha" href="#">3</a>
+    <a class="btn btn--alpha" href="#">4</a>
+    <a class="btn btn--alpha" href="#">5</a>
+    <a class="btn btn--divider">...</a>
+    <a class="btn btn--alpha" href="#">23</a>
+    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+</div>
+```
+
+## Right pagination
+
+```html_example
+<div class="btn-container btn-container--right">
+    <a class="btn btn--alpha" href="#">&lsaquo;</a>
+    <a class="btn btn--alpha" href="#">1</a>
+    <a class="btn btn--alpha" href="#">2</a>
+    <a class="btn btn--alpha" href="#">3</a>
+    <a class="btn btn--alpha" href="#">4</a>
+    <a class="btn btn--alpha" href="#">5</a>
+    <a class="btn btn--divider">...</a>
+    <a class="btn btn--alpha" href="#">23</a>
+    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+</div>
+```
+
+## Button group pagination
+
+```html_example
+<div class="btn-container">
+    <ul class="btn-group btn-group--inline">
+        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#">1</a></li>
+        <li><a class="btn btn--alpha" href="#">2</a></li>
+        <li><a class="btn btn--alpha" href="#">3</a></li>
+        <li><a class="btn btn--alpha" href="#">4</a></li>
+        <li><a class="btn btn--alpha" href="#">5</a></li>
+        <li><a class="btn btn--divider">...</a></li>
+        <li><a class="btn btn--alpha" href="#">23</a></li>
+        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+    </ul>
+</div>
+```
+
+## Centered button group pagination
+
+```html_example
+<div class="btn-container btn-container--center">
+    <ul class="btn-group btn-group--inline">
+        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#">1</a></li>
+        <li><a class="btn btn--alpha" href="#">2</a></li>
+        <li><a class="btn btn--alpha" href="#">3</a></li>
+        <li><a class="btn btn--alpha" href="#">4</a></li>
+        <li><a class="btn btn--alpha" href="#">5</a></li>
+        <li><a class="btn btn--divider">...</a></li>
+        <li><a class="btn btn--alpha" href="#">23</a></li>
+        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+    </ul>
+</div>
+```
+
+## Right button group pagination
+
+```html_example
+<div class="btn-container btn-container--right">
+    <ul class="btn-group btn-group--inline">
+        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#">1</a></li>
+        <li><a class="btn btn--alpha" href="#">2</a></li>
+        <li><a class="btn btn--alpha" href="#">3</a></li>
+        <li><a class="btn btn--alpha" href="#">4</a></li>
+        <li><a class="btn btn--alpha" href="#">5</a></li>
+        <li><a class="btn btn--divider">...</a></li>
+        <li><a class="btn btn--alpha" href="#">23</a></li>
+        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+    </ul>
+</div>
+```
+
+*/
 
 /*doc
 ---
@@ -5589,8 +5742,40 @@ These work with the button classes so you can use those to change color, size is
   **/
 }
 
-/* Button styles
-==========
+/*doc
+---
+title: Sizes
+name: sizes
+category: Buttons
+---
+
+All size related stuff can be edited in the settings file.
+
+```html_example
+<a class="btn btn--beta btn--small" href="#">button small</a>
+<a class="btn btn--beta btn--medium" href="#">button medium</a>
+<a class="btn btn--beta btn--large" href="#">button large</a>
+```
+
+*/
+
+/*doc
+---
+title: Styles
+name: styles
+category: Buttons
+---
+
+Add more colors in the settings file under "buttons" if you need to.
+
+```html_example
+<a class="btn btn--alpha btn--small" href="#">alpha</a>
+<a class="btn btn--beta btn--small" href="#">beta</a>
+<a class="btn btn--gamma btn--small" href="#">gamma</a>
+<a class="btn btn--delta btn--small" href="#">delta</a>
+<a class="btn btn--epsilon btn--small" href="#">epsilon</a>
+```
+
 */
 
 .btn {
@@ -5615,7 +5800,49 @@ These work with the button classes so you can use those to change color, size is
 	background-color: #f7f7f7;
 	border-color: #eaeaea;
 	line-height: 16px;
-	line-height: 1rem;
+	line-height: 1rem; /*doc
+  ---
+  title: Mask
+  name: mask
+  category: Buttons
+  ---
+  
+  ```html_example
+  <a class="btn btn--mask btn--medium" href="#">button medium</a>
+  ```
+  
+  */ /*doc
+  ---
+  title: Block
+  name: block
+  category: Buttons
+  ---
+  
+  ```html_example
+  <div class="grid">
+      <div class="column-6">
+          <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+      </div>
+      <div class="column-6">
+          <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+      </div>
+  </div>
+  ```
+  
+  */ /*doc
+  ---
+  title: Ghost
+  name: ghost
+  category: Buttons
+  ---
+  
+  Add more colors in the settings file under "buttons" if you need to.
+  
+  ```html_example
+  <a class="btn btn--ghost btn--dark btn--small" href="#">black</a>
+  ```
+  
+  */
 }
 
 .btn:hover {
@@ -6080,6 +6307,21 @@ These work with the button classes so you can use those to change color, size is
 	background: transparent;
 	color: #333333;
 }
+
+/*doc
+---
+title: No button style
+name: no_btn_style
+category: Buttons
+---
+
+Commonly used for triggers. For example a navigation trigger
+
+```html_example
+<button class="no-btn-style">Button</button>
+```
+
+*/
 
 .no-btn-style {
 	background: none;

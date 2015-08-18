@@ -14,6 +14,26 @@
         }
     }
 
+/*doc
+---
+title: Inline
+name: inline
+category: Buttons
+---
+
+These work with the button classes so you can use those to change color and size.
+
+```html_example
+<ul class="btn-group btn-group--inline">
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+</ul>
+```
+
+*/
+
     &--inline {
         @extend .list-inline;
 
@@ -82,6 +102,119 @@
         }
     }
 }
+
+/*doc
+---
+title: Group
+name: group
+category: Buttons
+---
+
+These work with the button classes so you can use those to change color, size is controlled with specific pagination padding.
+
+## Default group
+
+```html_example
+<div class="btn-container">
+    <a class="btn btn--alpha" href="#">&lsaquo;</a>
+    <a class="btn btn--alpha" href="#">1</a>
+    <a class="btn btn--alpha" href="#">2</a>
+    <a class="btn btn--alpha" href="#">3</a>
+    <a class="btn btn--alpha" href="#">4</a>
+    <a class="btn btn--alpha" href="#">5</a>
+    <a class="btn btn--divider">...</a>
+    <a class="btn btn--alpha" href="#">23</a>
+    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+</div>
+```
+
+## Centered group
+
+```html_example
+<div class="btn-container btn-container--center">
+    <a class="btn btn--alpha" href="#">&lsaquo;</a>
+    <a class="btn btn--alpha" href="#">1</a>
+    <a class="btn btn--alpha" href="#">2</a>
+    <a class="btn btn--alpha" href="#">3</a>
+    <a class="btn btn--alpha" href="#">4</a>
+    <a class="btn btn--alpha" href="#">5</a>
+    <a class="btn btn--divider">...</a>
+    <a class="btn btn--alpha" href="#">23</a>
+    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+</div>
+```
+
+## Right group
+
+```html_example
+<div class="btn-container btn-container--right">
+    <a class="btn btn--alpha" href="#">&lsaquo;</a>
+    <a class="btn btn--alpha" href="#">1</a>
+    <a class="btn btn--alpha" href="#">2</a>
+    <a class="btn btn--alpha" href="#">3</a>
+    <a class="btn btn--alpha" href="#">4</a>
+    <a class="btn btn--alpha" href="#">5</a>
+    <a class="btn btn--divider">...</a>
+    <a class="btn btn--alpha" href="#">23</a>
+    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+</div>
+```
+
+## Button group
+
+```html_example
+<div class="btn-container">
+    <ul class="btn-group btn-group--inline">
+        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#">1</a></li>
+        <li><a class="btn btn--alpha" href="#">2</a></li>
+        <li><a class="btn btn--alpha" href="#">3</a></li>
+        <li><a class="btn btn--alpha" href="#">4</a></li>
+        <li><a class="btn btn--alpha" href="#">5</a></li>
+        <li><a class="btn btn--divider">...</a></li>
+        <li><a class="btn btn--alpha" href="#">23</a></li>
+        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+    </ul>
+</div>
+```
+
+## Centered button group
+
+```html_example
+<div class="btn-container btn-container--center">
+    <ul class="btn-group btn-group--inline">
+        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#">1</a></li>
+        <li><a class="btn btn--alpha" href="#">2</a></li>
+        <li><a class="btn btn--alpha" href="#">3</a></li>
+        <li><a class="btn btn--alpha" href="#">4</a></li>
+        <li><a class="btn btn--alpha" href="#">5</a></li>
+        <li><a class="btn btn--divider">...</a></li>
+        <li><a class="btn btn--alpha" href="#">23</a></li>
+        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+    </ul>
+</div>
+```
+
+## Right button group
+
+```html_example
+<div class="btn-container btn-container--right">
+    <ul class="btn-group btn-group--inline">
+        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#">1</a></li>
+        <li><a class="btn btn--alpha" href="#">2</a></li>
+        <li><a class="btn btn--alpha" href="#">3</a></li>
+        <li><a class="btn btn--alpha" href="#">4</a></li>
+        <li><a class="btn btn--alpha" href="#">5</a></li>
+        <li><a class="btn btn--divider">...</a></li>
+        <li><a class="btn btn--alpha" href="#">23</a></li>
+        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+    </ul>
+</div>
+```
+
+*/
 
 
 /*doc
