@@ -1,0 +1,17 @@
+/* Scrollspy
+==========
+*/
+
+[data-scrollspy] {
+    .csstransitions & {
+        opacity: 0;
+    }
+
+    &.scrollspy--in-view {
+        opacity: 1;
+    }
+}
+
+.scrollspy--in-view {
+    @extend .animated;
+}

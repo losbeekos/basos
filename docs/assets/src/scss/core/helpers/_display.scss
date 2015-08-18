@@ -1,0 +1,36 @@
+/* Display
+==========
+*/
+
+.display-inline {
+    display: inline;
+}
+
+.display-inline-block {
+    display: inline-block;
+}
+
+.display-block {
+    display: block;
+}
+
+.display-none {
+    display: none;
+}
+
+.display-table {
+    display: table;
+
+    &__middle,
+    &__bottom {
+        display: table-cell;
+    }
+
+    &__middle {
+        vertical-align: middle;
+    }
+
+    &__bottom {
+        vertical-align: bottom;
+    }
+ }

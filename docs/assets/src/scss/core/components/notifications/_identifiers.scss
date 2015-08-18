@@ -1,0 +1,42 @@
+/* Notification identifiers
+==========
+*/
+
+.notification__text {
+    @include rem(margin-left, 40px);
+
+    .notification--beta & {
+        @include mq(beta-and-up) {
+            @include rem(margin-left, 70px);
+        }
+    }
+}
+
+.notification__close {
+    @extend %font-icons;
+
+    position: absolute;
+    color: map-get($notifications, close-color);
+    padding: 0;
+    background: none;
+    border: none;
+
+    @include rem(top, map-get($notifications, close-top));
+    @include rem(right, map-get($notifications, close-right));
+
+    &:before {
+        content: map-get($icon, notification-close);
+        opacity: map-get($notifications, close-opacity);
+        transition: opacity map-get($base, transition-speed);
+    }
+
+    &:hover {
+        &:before {
+            opacity: map-get($notifications, close-opacity-hover);
+        }
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

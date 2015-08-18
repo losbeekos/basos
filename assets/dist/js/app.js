@@ -313,14 +313,26 @@ app.dropdowns = {
     },
 
     init: function () {
-        app.dropdowns.settings.$el.on('click', function () {
+        app.dropdowns.settings.$el.on('click', function (event) {
             var $this = $(this);
+
+            event.stopPropagation();
 
             if (app.settings.$html.hasClass('touch') || $this.data('dropdownTrigger')) {
                 app.dropdowns.settings.$el.not($this).removeClass(app.dropdowns.settings.showClass);
                 $this.toggleClass(app.dropdowns.settings.showClass);
             }
         });
+
+        app.settings.$body
+            .on('keydown', function(event){
+                if (event.keyCode === 27) {
+                    $('.dropdown').removeClass('dropdown--show');
+                }
+            })
+            .on('click', function () {
+                $('.dropdown').removeClass('dropdown--show');
+            });
     }
 };
 app.equalize = {
@@ -806,8 +818,10 @@ app.navBar = {
     },
 
     resize: function () {
-        app.navBar.settings.navBarOffsetTop = app.settings.$background.offset().top,
-        app.navBar.settings.navBarHeight = app.navBar.settings.$el.height();
+        if (app.navBar.settings.$el.length > 0) {
+            app.navBar.settings.navBarOffsetTop = app.settings.$background.offset().top,
+            app.navBar.settings.navBarHeight = app.navBar.settings.$el.height();
+        }
     },
 
     addClasses: function () {
@@ -924,7 +938,7 @@ app.notifications = {
             $notification.addClass('notification--close');
 
             if (notificationId === 'notification-cookie') {
-                helper.cookies.create('basosCookieNotification', 'approved', 365);
+                helper.cookies.create('cookieNotification', 'approved', 365);
             }
 
             setTimeout(function () {
@@ -939,7 +953,7 @@ app.notifications = {
     cookieLaw: {
         init: function () {
             var self = this,
-                cookieValue = helper.cookies.read('basosCookieNotification'),
+                cookieValue = helper.cookies.read('cookieNotification'),
                 info = '';
 
             if (cookieValue !== 'approved' && navigator.CookiesOK === undefined) {
@@ -1147,10 +1161,11 @@ app.scrollSpyNav = {
                     $this.removeClass('scrollspy-nav--active');
                 }
 
-                if (_scrollTop === (app.settings.$document.height()-windowHeight)) {
-                   $this.removeClass('scrollspy-nav--active');
-                   $('[data-scrollspy-nav=contact]').addClass('scrollspy-nav--active');
-               }
+                // @TODO
+                // if (_scrollTop === (app.settings.$document.height()-windowHeight)) {
+                //    $this.removeClass('scrollspy-nav--active');
+                //    $('[data-scrollspy-nav=contact]').addClass('scrollspy-nav--active');
+                // }
             });
         }
     }

@@ -1,0 +1,29 @@
+/* Button container
+==========
+*/
+
+.btn-container {
+    @extend .clearfix;
+
+    @include rem(margin, map-get($btn, container-margin));
+
+    a {
+        @include rem(padding, map-get($btn, container-btn-padding));
+    }
+
+    &--center {
+        text-align: center;
+
+        ul {
+            display: inline-block;
+        }
+    }
+
+    &--right {
+        text-align: right;
+
+        ul {
+            float: right;
+        }
+    }
+}

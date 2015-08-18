@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9" lang="nl"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10" lang="nl"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="nl"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>Forms - Basos documentation</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link rel="stylesheet" href="assets/dist/css/main.css" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#0659a4">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+    <meta property="og:image" content="/apple-touch-icon-180x180.png" />
+    <meta property="og:title" content="Forms - Basos docs" />
+    <meta property="og:url" content="Current URL" />
+    <meta property="og:site_name" content="Site name" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="app" />
+    <meta name="twitter:site" content="@site_account" />
+    <meta name="twitter:creator" content="@article_author" />
+    <meta name="twitter:url" content="Current URL" />
+    <meta name="twitter:title" content="Forms - Basos docs" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="/apple-touch-icon-180x180" />
+
+    <script src="assets/dist/js/vendor/modernizr/modernizr.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="bower_components/respond/dist/respond.min.js"></script>
+        <script src="bower_components/selectivizr/selectivizr.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+      <div id="background" class="background">
+
+            <header class="section section--delta">
+                <div class="container text-align-center">
+                    <h1>Basos documentation</h1>
+                </div>
+            </header>
+        <div id="container" class="container">
+
+            <main id="main" role="main">
+
+              <section class="section section--alpha">
+                <div class="grid affix-container">
+                    <div class="column-3">
+                        <div class="block styleguide-nav affix" data-affix>
+                            
+                                <a class="styleguide-nav__category" href="index.html">Getting started</a>
+                                
+                            
+                                <a class="styleguide-nav__category" href="structure.html">Structure</a>
+                                
+                            
+                                <a class="styleguide-nav__category" href="navigation.html">Navigation</a>
+                                
+                            
+                                <a class="styleguide-nav__category color-black" href="forms.html">Forms</a>
+                                
+                                    
+                                    <ul class="list-unstyled margin-alpha-bottom">
+                                        
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#actions" data-jumpto>Actions</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#checkboxes" data-jumpto>Checkboxes</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#data" data-jumpto>Data</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#form_horizontal" data-jumpto>Form horizontal</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#form_vertical" data-jumpto>Form vertical</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#password_toggle" data-jumpto>Password toggle</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#radio_buttons" data-jumpto>Radio buttons</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#range" data-jumpto>Range</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#required_field" data-jumpto>Required field</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#select" data-jumpto>Select</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#switch" data-jumpto>Switch</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#textarea" data-jumpto>Textarea</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#validation" data-jumpto>Validation</a></li>
+                                            
+                                        
+                                    </ul>
+                                    
+                                
+                            
+                                <a class="styleguide-nav__category" href="callouts_&_prompts.html">Callouts & prompts</a>
+                                
+                            
+                                <a class="styleguide-nav__category" href="content.html">Content</a>
+                                
+                            
+                                <a class="styleguide-nav__category" href="javascript.html">Javascript</a>
+                                
+                            
+                        </div>
+                    </div>
+                    <div class="column-9">
+                    
+
+<h1 id="4_forms" class="styleguide">Forms</h1>
+
+<h1 id="actions" class="styleguide">Actions</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="form__actions">
+    <input class="btn btn--beta btn--medium" type="submit" value="send" />
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__actions"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"send"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="checkboxes" class="styleguide">Checkboxes</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="form__row">
+    <div class="column-5 form__label">
+        <label>Some checkboxes</label>
+    </div>
+    <div class="column-7">
+        <div class="column-6 form__input">
+            <ul class="form__input-list list-unstyled">
+                <li><input name="checkbox" type="checkbox" checked="checked" id="checkbox1" /><label for="checkbox1">Checkbox</label></li>
+                <li><input name="checkbox" type="checkbox" id="checkbox2" /><label for="checkbox2">Checkbox</label></li>
+                <li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox6" /><label for="checkbox6">Checkbox disabled</label></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Some checkboxes<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"form__input-list list-unstyled"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="na">id=</span><span class="s">"checkbox1"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"checkbox1"</span><span class="nt">&gt;</span>Checkbox<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox2"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"checkbox2"</span><span class="nt">&gt;</span>Checkbox<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"checkbox"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">id=</span><span class="s">"checkbox6"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"checkbox6"</span><span class="nt">&gt;</span>Checkbox disabled<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="data" class="styleguide">Data</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="form__row">
+    <div class="column-5 form__label">
+        <label>Form data</label>
+    </div>
+    <div class="column-7 form__data">Some data</div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Form data<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7 form__data"</span><span class="nt">&gt;</span>Some data<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="form_horizontal" class="styleguide">Form horizontal</h1>
+<p class="styleguide">Use the grid to your advantage.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <form class="form form--horizontal" data-form-validate novalidate="novalidate">
+    <div class="grid grid--no-gutters column-beta-6 column-gamma-and-up-5 column-centered">
+        <div class="column-8"><input type="text" placeholder="E-mailadres" /></div>
+        <div class="column-4"><input class="btn btn--beta btn--block btn--medium" type="submit" value="verzenden" /></div>
+    </div>
+</form>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form form--horizontal"</span> <span class="na">data-form-validate</span> <span class="na">novalidate=</span><span class="s">"novalidate"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid grid--no-gutters column-beta-6 column-gamma-and-up-5 column-centered"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-8"</span><span class="nt">&gt;&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"E-mailadres"</span> <span class="nt">/&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-4"</span><span class="nt">&gt;&lt;input</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--block btn--medium"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"verzenden"</span> <span class="nt">/&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="form_vertical" class="styleguide">Form vertical</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <form class="form form--vertical" data-form-validate novalidate="novalidate">
+    <h2>Vertical form</h2>
+    <div class="grid column-4 column-centered">
+        <div class="form__row">
+            <div class="form__label">
+                <label>Aanhef</label>
+            </div>
+            <div class="form__input">
+                <div class="form__select">
+                    <select name="aanhef" id="" required="required">
+                        <option value="" disabled="disabled" selected="selected">Kies een optie</option>
+                        <option value="Dhr.">Dhr.</option>
+                        <option value="Mevr.">Mevr.</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <div class="form__row">
+            <div class="form__label">
+                <label>Website *</label>
+            </div>
+            <div class="form__input">
+                <input type="url" />
+            </div>
+        </div>
+
+        <div class="form__actions">
+            <p class="form__required-field"><i>* = Verplicht veld</i></p>
+            <input class="btn btn--beta btn--medium" type="submit" value="verzenden" />
+        </div>
+    </div>
+</form>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form form--vertical"</span> <span class="na">data-form-validate</span> <span class="na">novalidate=</span><span class="s">"novalidate"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;h2&gt;</span>Vertical form<span class="nt">&lt;/h2&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid column-4 column-centered"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Aanhef<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__input"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__select"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"aanhef"</span> <span class="na">id=</span><span class="s">""</span> <span class="na">required=</span><span class="s">"required"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">selected=</span><span class="s">"selected"</span><span class="nt">&gt;</span>Kies een optie<span class="nt">&lt;/option&gt;</span>
+                        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Dhr."</span><span class="nt">&gt;</span>Dhr.<span class="nt">&lt;/option&gt;</span>
+                        <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Mevr."</span><span class="nt">&gt;</span>Mevr.<span class="nt">&lt;/option&gt;</span>
+                    <span class="nt">&lt;/select&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Website *<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__input"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"url"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__actions"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form__required-field"</span><span class="nt">&gt;&lt;i&gt;</span>* = Verplicht veld<span class="nt">&lt;/i&gt;&lt;/p&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"verzenden"</span> <span class="nt">/&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="password_toggle" class="styleguide">Password toggle</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="form__row">
+    <div class="column-5 form__label">
+        <label>Password toggle *</label>
+    </div>
+    <div class="column-7">
+        <div class="column-6 form__input">
+            <input type="password" placeholder="password" />
+            <a class="form__password-toggle tooltip" data-tooltip-position="top" title="Show/hide password"></a>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Password toggle *<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">placeholder=</span><span class="s">"password"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"form__password-toggle tooltip"</span> <span class="na">data-tooltip-position=</span><span class="s">"top"</span> <span class="na">title=</span><span class="s">"Show/hide password"</span><span class="nt">&gt;&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="radio_buttons" class="styleguide">Radio buttons</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="form__row">
+    <div class="column-5 form__label">
+        <label>Some radio buttons</label>
+    </div>
+    <div class="column-7">
+        <div class="column-6 form__input">
+            <ul class="form__input-list list-unstyled">
+                <li><input name="radio" type="radio" name="radio" id="radio1" /><label for="radio1">Radio</label></li>
+                <li><input name="radio" type="radio" name="radio" id="radio2" /><label for="radio2">Radio</label></li>
+                <li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio6" /><label for="radio6">Radio disabled</label></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Some radio buttons<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"form__input-list list-unstyled"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio1"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"radio1"</span><span class="nt">&gt;</span>Radio<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio2"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"radio2"</span><span class="nt">&gt;</span>Radio<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">name=</span><span class="s">"radio"</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">id=</span><span class="s">"radio6"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"radio6"</span><span class="nt">&gt;</span>Radio disabled<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+            <span class="nt">&lt;/ul&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="range" class="styleguide">Range</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="form__row">
+    <div class="column-5 form__label">
+        <label>Range</label>
+    </div>
+    <div class="column-7">
+        <div class="column-10 form__input">
+            <div class="column-2 text-align-center">
+                <output data-range="range-test" class="range-output">50s</output>
+            </div>
+            <div class="column-10">
+                <input type="range" min="0" max="100" step="1" value="50" id="range-test" data-range-measurement="s" />
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Range<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-10 form__input"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-2 text-align-center"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;output</span> <span class="na">data-range=</span><span class="s">"range-test"</span> <span class="na">class=</span><span class="s">"range-output"</span><span class="nt">&gt;</span>50s<span class="nt">&lt;/output&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-10"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"range"</span> <span class="na">min=</span><span class="s">"0"</span> <span class="na">max=</span><span class="s">"100"</span> <span class="na">step=</span><span class="s">"1"</span> <span class="na">value=</span><span class="s">"50"</span> <span class="na">id=</span><span class="s">"range-test"</span> <span class="na">data-range-measurement=</span><span class="s">"s"</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="required_field" class="styleguide">Required field</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="form__actions">
+    <p class="form__required-field"><i>* = Required field</i></p>
+    <input class="btn btn--beta btn--medium" type="submit" value="send" />
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__actions"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form__required-field"</span><span class="nt">&gt;&lt;i&gt;</span>* = Required field<span class="nt">&lt;/i&gt;&lt;/p&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"send"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="select" class="styleguide">Select</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="form__row">
+    <div class="column-5 form__label">
+        <label>Aanhef</label>
+    </div>
+    <div class="column-7">
+        <div class="column-6 form__input">
+            <div class="form__select">
+                <select name="select" id="" required="required">
+                    <option value="" disabled="disabled" selected="selected">Choose option</option>
+                    <option value="Dhr.">Some option</option>
+                    <option value="Mevr.">Another option</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Aanhef<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__select"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"select"</span> <span class="na">id=</span><span class="s">""</span> <span class="na">required=</span><span class="s">"required"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">selected=</span><span class="s">"selected"</span><span class="nt">&gt;</span>Choose option<span class="nt">&lt;/option&gt;</span>
+                    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Dhr."</span><span class="nt">&gt;</span>Some option<span class="nt">&lt;/option&gt;</span>
+                    <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Mevr."</span><span class="nt">&gt;</span>Another option<span class="nt">&lt;/option&gt;</span>
+                <span class="nt">&lt;/select&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="switch" class="styleguide">Switch</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="form__row">
+    <div class="column-5 form__label">
+        <label>Switch</label>
+    </div>
+    <div class="column-7">
+        <div class="form__switch">
+            <input name="switch1" type="checkbox" id="switch1" /><label for="switch1">Switch</label>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Switch<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__switch"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">name=</span><span class="s">"switch1"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"switch1"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"switch1"</span><span class="nt">&gt;</span>Switch<span class="nt">&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="textarea" class="styleguide">Textarea</h1>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="form__row">
+    <div class="column-5 form__label">
+        <label>Vraag / opmerking</label>
+    </div>
+    <div class="column-7">
+        <div class="column-10 form__input">
+            <textarea cols="30" rows="10"></textarea>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>Vraag / opmerking<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-10 form__input"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;textarea</span> <span class="na">cols=</span><span class="s">"30"</span> <span class="na">rows=</span><span class="s">"10"</span><span class="nt">&gt;&lt;/textarea&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="validation" class="styleguide">Validation</h1>
+<p class="styleguide">We use the jQuery plugin <a class="styleguide" href="http://parsleyjs.org" title="http://parsleyjs.org">parsleyjs</a> for our validation engine.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <form class="form" action="?action=ajax" data-form-ajax data-form-ajax-method="GET" data-form-ajax-datatype="json" data-form-ajax-url="form-ajax.json" data-form-ajax-msg-container="#form-message" data-form-validate novalidate="novalidate">
+    <div id="form-message"></div>
+        <div class="form__row">
+            <div class="column-5 form__label">
+                <label>Aanhef</label>
+            </div>
+            <div class="column-7">
+                <div class="column-6 form__input">
+                    <div class="form__select">
+                        <select name="aanhef" id="" required="required">
+                            <option value="" disabled="disabled" selected="selected">Kies een optie</option>
+                            <option value="Dhr.">Dhr.</option>
+                            <option value="Mevr.">Mevr.</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form__row">
+            <div class="column-5 form__label">
+                <label>Postcode</label>
+            </div>
+            <div class="column-7">
+                <div class="column-3 form__input">
+                    <input type="text" placeholder="0123AB" data-parsley-pattern="^\d{4}[a-zA-Z]{2}$" data-parsley-error-message="Dit is geen geldige postcode." data-parsley-maxlength="6" maxlength="6" />
+                </div>
+            </div>
+        </div>
+        <div class="form__row">
+            <div class="column-5 form__label">
+                <label>Telefoonnummer</label>
+            </div>
+            <div class="column-7">
+                <div class="column-4 form__input">
+                    <input type="tel" placeholder="0123456789" data-parsley-type="digits" data-parsley-minlength="10" data-parsley-error-message="Dit is geen geldig telefoonnummer." />
+                </div>
+            </div>
+        </div>
+        <div class="form__row">
+            <div class="column-5 form__label">
+                <label>IBAN-nummer (NL)</label>
+            </div>
+            <div class="column-7">
+                <div class="column-4 form__input">
+                    <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-parsley-error-message="Dit is geen gelding IBAN nummer." />
+                </div>
+            </div>
+        </div>
+        <div class="form__row">
+            <div class="column-5 form__label">
+                <label>E-mailadres *</label>
+            </div>
+            <div class="column-7">
+                <div class="column-6 form__input">
+                    <input type="email" placeholder="jouwnaam@adres.nl" />
+                </div>
+            </div>
+        </div>
+        <div class="form__row">
+            <div class="column-5 form__label">
+                <label>Wachtwoord *</label>
+            </div>
+            <div class="column-7">
+                <div class="column-6 form__input">
+                    <input id="password" type="password" />
+                </div>
+            </div>
+        </div>
+        <div class="form__row">
+            <div class="column-5 form__label">
+                <label>Herhaal wachtwoord *</label>
+            </div>
+            <div class="column-7">
+                <div class="column-6 form__input">
+                    <input type="password" data-parsley-equalto="#password" data-parsley-error-message="Wachtwoorden zijn niet identiek." />
+                </div>
+            </div>
+        </div>
+        <div class="form__row">
+            <div class="column-5 form__label">
+                <label>Website *</label>
+            </div>
+            <div class="column-7">
+                <div class="column-6 form__input">
+                    <input type="url" />
+                </div>
+            </div>
+        </div>
+        <div class="form__row">
+            <div class="column-5 form__label">
+                <label>Some checkboxes</label>
+            </div>
+            <div class="column-7">
+                <div class="column-6 form__input">
+                    <ul class="form__input-list list-unstyled">
+                        <li><input name="checkbox2" type="checkbox" checked="checked" id="checkbox10" data-parsley-mincheck="2" /><label for="checkbox10">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox11" /><label for="checkbox11">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox12" /><label for="checkbox12">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox13" /><label for="checkbox13">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox14" /><label for="checkbox14">Checkbox</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="form__row">
+            <div class="column-5 form__label">
+                <label>Some radio buttons</label>
+            </div>
+            <div class="column-7">
+                <div class="column-6 form__input">
+                    <ul class="form__input-list list-unstyled">
+                        <li><input required="required" name="radio2" type="radio" id="radio13" /><label for="radio13">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio14" /><label for="radio14">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio10" /><label for="radio10">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio11" /><label for="radio11">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio12" /><label for="radio12">Radio</label></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </fieldset>
+
+    <div class="form__actions">
+        <p class="form__required-field"><i>* = Required field</i></p>
+        <input class="btn btn--beta btn--medium" type="submit" value="send" />
+    </div>
+
+</form>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;form</span> <span class="na">class=</span><span class="s">"form"</span> <span class="na">action=</span><span class="s">"?action=ajax"</span> <span class="na">data-form-ajax</span> <span class="na">data-form-ajax-method=</span><span class="s">"GET"</span> <span class="na">data-form-ajax-datatype=</span><span class="s">"json"</span> <span class="na">data-form-ajax-url=</span><span class="s">"form-ajax.json"</span> <span class="na">data-form-ajax-msg-container=</span><span class="s">"#form-message"</span> <span class="na">data-form-validate</span> <span class="na">novalidate=</span><span class="s">"novalidate"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">id=</span><span class="s">"form-message"</span><span class="nt">&gt;&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Aanhef<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__select"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;select</span> <span class="na">name=</span><span class="s">"aanhef"</span> <span class="na">id=</span><span class="s">""</span> <span class="na">required=</span><span class="s">"required"</span><span class="nt">&gt;</span>
+                            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">""</span> <span class="na">disabled=</span><span class="s">"disabled"</span> <span class="na">selected=</span><span class="s">"selected"</span><span class="nt">&gt;</span>Kies een optie<span class="nt">&lt;/option&gt;</span>
+                            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Dhr."</span><span class="nt">&gt;</span>Dhr.<span class="nt">&lt;/option&gt;</span>
+                            <span class="nt">&lt;option</span> <span class="na">value=</span><span class="s">"Mevr."</span><span class="nt">&gt;</span>Mevr.<span class="nt">&lt;/option&gt;</span>
+                        <span class="nt">&lt;/select&gt;</span>
+                    <span class="nt">&lt;/div&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Postcode<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3 form__input"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">placeholder=</span><span class="s">"0123AB"</span> <span class="na">data-parsley-pattern=</span><span class="s">"^\d{4}[a-zA-Z]{2}$"</span> <span class="na">data-parsley-error-message=</span><span class="s">"Dit is geen geldige postcode."</span> <span class="na">data-parsley-maxlength=</span><span class="s">"6"</span> <span class="na">maxlength=</span><span class="s">"6"</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Telefoonnummer<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-4 form__input"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">placeholder=</span><span class="s">"0123456789"</span> <span class="na">data-parsley-type=</span><span class="s">"digits"</span> <span class="na">data-parsley-minlength=</span><span class="s">"10"</span> <span class="na">data-parsley-error-message=</span><span class="s">"Dit is geen geldig telefoonnummer."</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>IBAN-nummer (NL)<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-4 form__input"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"tel"</span> <span class="na">placeholder=</span><span class="s">"NL01INGB0123456789"</span> <span class="na">pattern=</span><span class="s">"^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$"</span> <span class="na">data-parsley-error-message=</span><span class="s">"Dit is geen gelding IBAN nummer."</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>E-mailadres *<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"email"</span> <span class="na">placeholder=</span><span class="s">"jouwnaam@adres.nl"</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Wachtwoord *<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">id=</span><span class="s">"password"</span> <span class="na">type=</span><span class="s">"password"</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Herhaal wachtwoord *<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"password"</span> <span class="na">data-parsley-equalto=</span><span class="s">"#password"</span> <span class="na">data-parsley-error-message=</span><span class="s">"Wachtwoorden zijn niet identiek."</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Website *<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"url"</span> <span class="nt">/&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Some checkboxes<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"form__input-list list-unstyled"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"checkbox2"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">checked=</span><span class="s">"checked"</span> <span class="na">id=</span><span class="s">"checkbox10"</span> <span class="na">data-parsley-mincheck=</span><span class="s">"2"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"checkbox10"</span><span class="nt">&gt;</span>Checkbox<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"checkbox2"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox11"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"checkbox11"</span><span class="nt">&gt;</span>Checkbox<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"checkbox2"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox12"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"checkbox12"</span><span class="nt">&gt;</span>Checkbox<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"checkbox2"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox13"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"checkbox13"</span><span class="nt">&gt;</span>Checkbox<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"checkbox2"</span> <span class="na">type=</span><span class="s">"checkbox"</span> <span class="na">id=</span><span class="s">"checkbox14"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"checkbox14"</span><span class="nt">&gt;</span>Checkbox<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;/ul&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Some radio buttons<span class="nt">&lt;/label&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+                <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"form__input-list list-unstyled"</span><span class="nt">&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">required=</span><span class="s">"required"</span> <span class="na">name=</span><span class="s">"radio2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio13"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"radio13"</span><span class="nt">&gt;</span>Radio<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"radio2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio14"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"radio14"</span><span class="nt">&gt;</span>Radio<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"radio2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio10"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"radio10"</span><span class="nt">&gt;</span>Radio<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"radio2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio11"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"radio11"</span><span class="nt">&gt;</span>Radio<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                        <span class="nt">&lt;li&gt;&lt;input</span> <span class="na">name=</span><span class="s">"radio2"</span> <span class="na">type=</span><span class="s">"radio"</span> <span class="na">id=</span><span class="s">"radio12"</span> <span class="nt">/&gt;&lt;label</span> <span class="na">for=</span><span class="s">"radio12"</span><span class="nt">&gt;</span>Radio<span class="nt">&lt;/label&gt;&lt;/li&gt;</span>
+                    <span class="nt">&lt;/ul&gt;</span>
+                <span class="nt">&lt;/div&gt;</span>
+            <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/fieldset&gt;</span>
+
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__actions"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;p</span> <span class="na">class=</span><span class="s">"form__required-field"</span><span class="nt">&gt;&lt;i&gt;</span>* = Required field<span class="nt">&lt;/i&gt;&lt;/p&gt;</span>
+        <span class="nt">&lt;input</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"send"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+
+<span class="nt">&lt;/form&gt;</span></pre>
+    </div>
+  </div>
+</div>
+                    </div>
+                </div>
+            </section>
+          </main>
+
+        </div>
+    </div>
+
+    <script src="assets/dist/js/main.js"></script>
+  </body>
+</html>

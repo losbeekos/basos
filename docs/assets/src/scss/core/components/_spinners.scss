@@ -1,0 +1,26 @@
+/* Spinners
+==========
+*/
+
+@keyframes spinner {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.spinner {
+    display: inline-block;
+    animation: spinner map-get($spinner, animation-speed) infinite linear;
+
+    &:after {
+        @extend %font-icons;
+
+        content: map-get($icon, spinner-alpha);
+
+        @include rem(font-size, map-get($spinner, font-size));
+    }
+
+    &--alpha:after { content: map-get($icon, spinner-alpha); }
+    &--beta:after  { content: map-get($icon, spinner-beta); }
+    &--gamma:after { content: map-get($icon, spinner-gamma); }
+}

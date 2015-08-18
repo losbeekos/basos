@@ -1,5 +1,16 @@
 'use strict';
 
+/*doc
+---
+title: Javascript
+name: javascript
+category: Javascript
+---
+
+Javascript
+
+*/
+
 var app = app || {},
     helper = helper || {};
 

@@ -1,0 +1,28 @@
+/* Button sizes
+==========
+*/
+
+.btn {
+    &--small {
+        @include rem(padding, map-get($btn, padding-small));
+        @include rem(font-size, map-get($btn, font-size-small));
+    }
+
+    &--medium {
+        @include rem(padding, map-get($btn, padding-medium));
+
+        @include mq(beta-and-up) {
+            @include rem(padding, map-get($btn, padding-medium-beta));
+            @include rem(font-size, map-get($btn, font-size-medium));
+        }
+    }
+
+    &--large {
+        @include rem(padding, map-get($btn, padding-large));
+
+        @include mq(beta-and-up) {
+            @include rem(padding, map-get($btn, padding-large-beta));
+            @include rem(font-size, map-get($btn, font-size-large));
+        }
+    }
+}

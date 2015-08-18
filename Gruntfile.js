@@ -281,17 +281,26 @@ module.exports = function(grunt) {
 
         // @TODO
         // https://github.com/FWeinb/grunt-svgstore
+        // Check this screencast: https://css-tricks.com/video-screencasts/screencast-134-tour-site-progress-built-jekyll-grunt-sass-svg-system/
         svgstore: {
             options: {
-                prefix : 'icon-', // This will prefix each ID
-                svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
-                    viewBox : '0 0 100 100',
-                    xmlns: 'http://www.w3.org/2000/svg'
-                }
+                prefix : 'shape-', // This will prefix each ID
+                // svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
+                //     viewBox : '0 0 100 100',
+                //     xmlns: 'http://www.w3.org/2000/svg'
+                // }
             },
             your_target: {
                 // Target-specific file lists and/or options go here.
             },
+        },
+
+        hologram: {
+            generate: {
+                options: {
+                    config: 'hologram_config.yml'
+                }
+            }
         },
 
     });

@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<!--[if IE 8]>         <html class="no-js lt-ie10 lt-ie9" lang="nl"> <![endif]-->
+<!--[if IE 9]>         <html class="no-js lt-ie10" lang="nl"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js" lang="nl"> <!--<![endif]-->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+    <title>Structure - Basos documentation</title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+
+    <link rel="stylesheet" href="assets/dist/css/main.css" />
+
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <meta name="apple-mobile-web-app-title" content="" />
+
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png">
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <meta name="msapplication-TileColor" content="#0659a4">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+
+    <meta property="og:image" content="/apple-touch-icon-180x180.png" />
+    <meta property="og:title" content="Structure - Basos docs" />
+    <meta property="og:url" content="Current URL" />
+    <meta property="og:site_name" content="Site name" />
+    <meta property="og:type" content="website" />
+
+    <meta name="twitter:card" content="app" />
+    <meta name="twitter:site" content="@site_account" />
+    <meta name="twitter:creator" content="@article_author" />
+    <meta name="twitter:url" content="Current URL" />
+    <meta name="twitter:title" content="Structure - Basos docs" />
+    <meta name="twitter:description" content="" />
+    <meta name="twitter:image" content="/apple-touch-icon-180x180" />
+
+    <script src="assets/dist/js/vendor/modernizr/modernizr.js"></script>
+
+    <!--[if lt IE 9]>
+        <script src="bower_components/respond/dist/respond.min.js"></script>
+        <script src="bower_components/selectivizr/selectivizr.js"></script>
+    <![endif]-->
+</head>
+
+  <body class="cortana-body"  ng-controller="MainController">
+
+      <div id="background" class="background">
+
+            <header class="section section--delta">
+                <div class="container text-align-center">
+                    <h1>Basos documentation</h1>
+                </div>
+            </header>
+        <div id="container" class="container">
+
+            <main id="main" role="main">
+
+              <section class="section section--alpha">
+                <div class="grid affix-container">
+                    <div class="column-3">
+                        <div class="block styleguide-nav affix" data-affix>
+                            
+                                <a class="styleguide-nav__category" href="index.html">Getting started</a>
+                                
+                            
+                                <a class="styleguide-nav__category color-black" href="structure.html">Structure</a>
+                                
+                                    
+                                    <ul class="list-unstyled margin-alpha-bottom">
+                                        
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#container" data-jumpto>Container</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#functions" data-jumpto>Functions</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#grid" data-jumpto>Grid</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#grid_block" data-jumpto>Grid (block)</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#helpers_classes" data-jumpto>Helper classes</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#Icons" data-jumpto>Icons</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#media_queries" data-jumpto>Media queries</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#mixins" data-jumpto>Mixins</a></li>
+                                            
+                                        
+                                            
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#sections" data-jumpto>Sections</a></li>
+                                            
+                                        
+                                    </ul>
+                                    
+                                
+                            
+                                <a class="styleguide-nav__category" href="navigation.html">Navigation</a>
+                                
+                            
+                                <a class="styleguide-nav__category" href="forms.html">Forms</a>
+                                
+                            
+                                <a class="styleguide-nav__category" href="callouts_&_prompts.html">Callouts & prompts</a>
+                                
+                            
+                                <a class="styleguide-nav__category" href="content.html">Content</a>
+                                
+                            
+                                <a class="styleguide-nav__category" href="javascript.html">Javascript</a>
+                                
+                            
+                        </div>
+                    </div>
+                    <div class="column-9">
+                    
+
+<h1 id="2_structure" class="styleguide">Structure</h1>
+<p class="styleguide">Structure</p>
+<h1 id="container" class="styleguide">Container</h1>
+<p class="styleguide">There are two containers available, &#39;container&#39; and &#39;container-beta&#39;. These containers will horizontally center the block with a specific min and max-width. Widths can be specified in the settings.scss file.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>&lt;div class="container"&gt;
+    your content
+&lt;/div&gt;</pre>
+  </div>
+</div>
+<h1 id="functions" class="styleguide">Functions</h1>
+
+<h2>Tint</h2>
+<p class="styleguide">Tint is a better way to make a color lighter instead of the standard Sass function &quot;lighten&quot;.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>.some-class {
+    color: tint( $color, $percentage );
+}</pre>
+  </div>
+</div>
+<h2>Shade</h2>
+<p class="styleguide">Shade is a better way to make a color darker instead of the standard Sass function &quot;darken&quot;.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>.some-class {
+    color: shade( $color, $percentage );
+}</pre>
+  </div>
+</div>
+<h1 id="grid" class="styleguide">Grid</h1>
+<p class="styleguide">The default grid is a 12 columns grid which you can change in the settings, even as the gutter width.</p>
+<h2>Just a basic grid</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="grid">
+    <div class="column-3">
+        <div class="block">column-3</div>
+    </div>
+    <div class="column-3">
+        <div class="block">column-3</div>
+    </div>
+    <div class="column-3">
+        <div class="block">column-3</div>
+    </div>
+    <div class="column-3">
+        <div class="block">column-3</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>No gutters</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="grid grid--no-gutters">
+    <div class="column-3">
+        <div class="block">column-3</div>
+    </div>
+    <div class="column-3">
+        <div class="block">column-3</div>
+    </div>
+    <div class="column-3">
+        <div class="block">column-3</div>
+    </div>
+    <div class="column-3">
+        <div class="block">column-3</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid grid--no-gutters"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Breakpoint specific</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="grid">
+    <div class="column-alpha-6 column-beta-12 column-gamma-and-up-3">
+        <div class="block">Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="column-alpha-6 column-beta-4 column-beta--first column-gamma-and-up-3">
+        <div class="block">Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="column-alpha-6 column-alpha--first column-beta-4 column-gamma-and-up-3">
+        <div class="block">Lorem ipsum dolor sit amet</div>
+    </div>
+    <div class="column-alpha-6 column-beta-4 column-gamma-and-up-3">
+        <div class="block">Lorem ipsum dolor sit amet</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-alpha-6 column-beta-12 column-gamma-and-up-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-alpha-6 column-beta-4 column-beta--first column-gamma-and-up-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-alpha-6 column-alpha--first column-beta-4 column-gamma-and-up-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-alpha-6 column-beta-4 column-gamma-and-up-3"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Centered</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="grid">
+    <div class="column-6 column-centered">
+        <div class="block">column-6</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 column-centered"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-6<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Pre class</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="grid">
+    <div class="column-6 pre-2">
+        <div class="block">column-6 pre-2</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 pre-2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-6 pre-2<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Post class</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="grid">
+    <div class="column-6 post-2">
+        <div class="block">column-7 post-1</div>
+    </div>
+    <div class="column-4">
+        <div class="block">column-4</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 post-2"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-7 post-1<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="grid_block" class="styleguide">Grid (block)</h1>
+<p class="styleguide">This little module will fancy you a nice block grid. Breakpoint settings can be modified in settings.scss.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="block-grid">
+    <a class="block-grid__item" href="#">
+        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/1" />
+    </a>
+    <a class="block-grid__item" href="#">
+        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/2" />
+    </a>
+    <a class="block-grid__item" href="#">
+        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/3" />
+    </a>
+    <a class="block-grid__item" href="#">
+        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/4" />
+    </a>
+    <a class="block-grid__item" href="#">
+        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/5" />
+    </a>
+    <a class="block-grid__item" href="#">
+        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/6" />
+    </a>
+    <a class="block-grid__item" href="#">
+        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/7" />
+    </a>
+    <a class="block-grid__item" href="#">
+        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/8" />
+    </a>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-grid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/1"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/2"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/3"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/4"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/5"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/6"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/7"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/8"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;/a&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="helpers_classes" class="styleguide">Helper classes</h1>
+
+<h2>Clearfix</h2>
+<p class="styleguide">Clearfix container class, add this class to a wrapping element which contains floating elements.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="clearfix">
+    <div class="float-left"></div>
+    <div class="float-left"></div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"clearfix"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-left"</span><span class="nt">&gt;&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"float-left"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<p class="styleguide">You can also extend it in your SCSS files like this;</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>.your-class {
+    @extend .clearfix;
+}</pre>
+  </div>
+</div>
+<h2>Hide</h2>
+<p class="styleguide">Hide classes are used for responsive design, for some breakpoints you can hide content if you need to.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="hide-alpha">This will show on medium to large screens</div>
+<div class="hide-alpha-and-beta">This will show on larger screens</div>
+<div class="hide-beta-and-up">This will show on small screens</div>
+<div class="hide-gamma-and-up">This will show on even larger screens</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hide-alpha"</span><span class="nt">&gt;</span>This will show on medium to large screens<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hide-alpha-and-beta"</span><span class="nt">&gt;</span>This will show on larger screens<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hide-beta-and-up"</span><span class="nt">&gt;</span>This will show on small screens<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"hide-gamma-and-up"</span><span class="nt">&gt;</span>This will show on even larger screens<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Lists</h2>
+
+<h3>Unordened list</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <ul>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+</ul>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Ordened list</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <ol>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+</ol>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ol&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ol&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Unstyled list</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <ul class="list-unstyled">
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+</ul>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-unstyled"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Inline list</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <ul class="list-inline">
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+</ul>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-inline"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;</span>Lorem ipsum<span class="nt">&lt;/li&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Visually hidden</h2>
+<p class="styleguide">Hide only visually, but have it available for screenreaders.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>.visuallyhidden
+.show-screenreaders</pre>
+  </div>
+</div>
+<h2>Margin</h2>
+<p class="styleguide">These classes will give margin to any element. It will overrule the specified margin of the element.</p><p class="styleguide">Keys available:</p><ul class="styleguide"><li>alpha (default: 10)</li>
+<li>beta (default: 20)</li>
+<li>gamma (default: 30)</li>
+<li>delta (default: 40)</li>
+<li>epsilon (default: 50)</li>
+<li>zeta (default: 80)</li>
+<li>eta (default: 100)</li>
+</ul>
+<h3>Default margin</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="margin-alpha">Margin alpha all around</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-alpha"</span><span class="nt">&gt;</span>Margin alpha all around<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Left margin</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="margin-beta-left">Margin beta left</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"margin-beta-left"</span><span class="nt">&gt;</span>Margin beta left<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Reset margin classes</h3>
+<ul class="styleguide"><li>no-margin</li>
+<li>no-bottom-margin</li>
+<li>no-top-margin</li>
+<li>no-left-margin</li>
+<li>no-right-margin</li>
+<li>no-vertical-margin</li>
+<li>no-horizontal-margin</li>
+</ul>
+<h2>Padding</h2>
+<p class="styleguide">These classes will give padding to any element. It will overrule the specified padding of the element.</p><p class="styleguide">Keys available:</p><ul class="styleguide"><li>alpha (default: 10)</li>
+<li>beta (default: 20)</li>
+<li>gamma (default: 30)</li>
+<li>delta (default: 40)</li>
+<li>epsilon (default: 50)</li>
+<li>zeta (default: 80)</li>
+<li>eta (default: 100)</li>
+</ul>
+<h3>Default padding</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="padding-alpha">padding alpha all around</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"padding-alpha"</span><span class="nt">&gt;</span>padding alpha all around<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Left padding</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="padding-beta-left">padding beta left</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"padding-beta-left"</span><span class="nt">&gt;</span>padding beta left<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Reset padding classes</h3>
+<ul class="styleguide"><li>no-padding</li>
+<li>no-bottom-padding</li>
+<li>no-top-padding</li>
+<li>no-left-padding</li>
+<li>no-right-padding</li>
+<li>no-vertical-padding</li>
+<li>no-horizontal-padding</li>
+</ul>
+<h2>Float</h2>
+<p class="styleguide">Give a float or disable float for an element.</p><ul class="styleguide"><li>float-left</li>
+<li>float-right</li>
+<li>float-none</li>
+</ul>
+<h2>Round</h2>
+<p class="styleguide">Make something round, for an avatar for example.</p><ul class="styleguide"><li>round</li>
+</ul>
+<h2>Text align</h2>
+<p class="styleguide">Align text. Available classes are;</p><ul class="styleguide"><li>text-align-left</li>
+<li>text-align-center</li>
+<li>text-align-right</li>
+</ul><p class="styleguide">You can also use these classes with a media query appendix.</p><ul class="styleguide"><li>text-align-left-beta-and-up</li>
+<li>text-align-left-gamma-and-up</li>
+</ul>
+<h2>Text transform</h2>
+<ul class="styleguide"><li>text-transform-caps</li>
+<li>text-transform-thin</li>
+<li>text-transform-small</li>
+</ul>
+<h2>Font style</h2>
+<ul class="styleguide"><li>font-style-normal</li>
+<li>font-style-italic</li>
+<li>font-style-bold</li>
+</ul>
+<h2>Position</h2>
+<ul class="styleguide"><li>position-relative</li>
+<li>position-absolute</li>
+</ul>
+<h2>Display</h2>
+<ul class="styleguide"><li>display-inline</li>
+<li>display-inline-block</li>
+<li>display-block</li>
+<li>display-none</li>
+</ul>
+<h3>Display table</h3>
+<p class="styleguide">Display table class needs some an extra child if you need to vertically center content.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="display-table block" style="height: 100px;">
+    <div class="display-table__middle">
+        This text will center align
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"display-table block"</span> <span class="na">style=</span><span class="s">"height: 100px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"display-table__middle"</span><span class="nt">&gt;</span>
+        This text will center align
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="display-table block" style="height: 100px;">
+    <div class="display-table__bottom">
+        This text will bottom align
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"display-table block"</span> <span class="na">style=</span><span class="s">"height: 100px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"display-table__bottom"</span><span class="nt">&gt;</span>
+        This text will bottom align
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Ellipsis</h2>
+<p class="styleguide">Pure CSS ellipsis class</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="ellipsis">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem, ullam magnam, esse numquam voluptatum culpa neque laboriosam officiis, sint animi beatae qui vero molestias aliquam dolore ea autem. Ipsam!
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"ellipsis"</span><span class="nt">&gt;</span>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem, ullam magnam, esse numquam voluptatum culpa neque laboriosam officiis, sint animi beatae qui vero molestias aliquam dolore ea autem. Ipsam!
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="Icons" class="styleguide">Icons</h1>
+<p class="styleguide">There are several icons predefined in basos, but you could ditch them all and add your own icons.</p><p class="styleguide">These icons are generated with <a class="styleguide" href="http://fontello.com" title="http://fontello.com">fontello.com</a>, you can use the fontello config.json in assets/src/fonts/src/fontello/ to preselect the icons already defined for basos on fontello.com.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="icon icon--ok-circled"></div>
+<div class="icon icon--cancel-circled"></div>
+<div class="icon icon--info-circled"></div>
+<div class="icon icon--ok"></div>
+<div class="icon icon--up-open"></div>
+<div class="icon icon--right-open"></div>
+<div class="icon icon--left-open"></div>
+<div class="icon icon--down-open"></div>
+<div class="icon icon--cancel"></div>
+<div class="icon icon--spin2"></div>
+<div class="icon icon--spin5"></div>
+<div class="icon icon--spinner1"></div>
+<div class="icon icon--attention"></div>
+<div class="icon icon--menu"></div>
+<div class="icon icon--eye"></div>
+<div class="icon icon--eye-off"></div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--ok-circled"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--cancel-circled"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--info-circled"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--ok"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--up-open"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--right-open"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--left-open"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--down-open"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--cancel"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--spin2"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--spin5"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--spinner1"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--attention"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--menu"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--eye"</span><span class="nt">&gt;&lt;/div&gt;</span>
+<span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"icon icon--eye-off"</span><span class="nt">&gt;&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Icon margin</h2>
+<p class="styleguide">You can add margin with the icon margin modifier to the icons if you use it in a button for example.</p><p class="styleguide">Margin modifiers available;</p><ul class="styleguide"><li>icon--margin-alpha (default: 10)</li>
+<li>icon--margin-beta (default: 20)</li>
+</ul><div class="codeExample">
+  <div class="exampleOutput">
+    <a class="btn btn--beta btn--medium icon icon--menu icon--margin-alpha">just a button</a>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium icon icon--menu icon--margin-alpha"</span><span class="nt">&gt;</span>just a button<span class="nt">&lt;/a&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="media_queries" class="styleguide">Media queries</h1>
+<p class="styleguide">Basos uses the mobile first principle so you will never write a mobile media query. There are several breakpoints defined in the settings.scss file which will get you covered in most cases, if you need an even bigger media query (eg. TV), you could simply add a rule in the settings file.</p><p class="styleguide">How to add a media query to your SCSS file:</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>@include mq(gamma-and-up) {
+    ...
+}</pre>
+  </div>
+</div><p class="styleguide">You can nest the above code in your CSS selector like this.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>.your-selector {
+    @include mq(gamma) {
+        ...
+    }
+
+    @include mq(epsilon-and-up) {
+        ...
+    }
+
+    etc..
+}</pre>
+  </div>
+</div>
+<h1 id="mixins" class="styleguide">Mixins</h1>
+
+<h2>Arrow</h2>
+<p class="styleguide">This mixin will create a CSS triangle.
+Direction values: up, right, bottom, left.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>@include arrow($width, $height, $direction, $color);</pre>
+  </div>
+</div><div class="codeBlock">
+  <div class="highlight">
+    <pre>@access public
+@param {Color} $color - color to shade
+@param {Number} $percentage - percentage of `$color` in returned color
+@return {Color}</pre>
+  </div>
+</div>
+<h2>REM</h2>
+<p class="styleguide">You should use this mixin for all your CSS pixel values. The properties you should use this for are:</p><ul class="styleguide"><li>height</li>
+<li>width</li>
+<li>margin</li>
+<li>padding</li>
+<li>font-size</li>
+<li>line-height</li>
+</ul><div class="codeBlock">
+  <div class="highlight">
+    <pre>@include rem($property, $values, $important: false);</pre>
+  </div>
+</div><div class="codeBlock">
+  <div class="highlight">
+    <pre>@access public
+@param {Value} $property - CSS property
+@param {Value} $values - CSS value(s) in pixels
+@param {Boolean} $important - adds important at the end of the return value, you probably never need this.
+@return {Value} - returns the px fallback for older browsers and it's calculated rem value.</pre>
+  </div>
+</div>
+<h2>Font face</h2>
+<p class="styleguide">Includes a font-face rule for a custom local font.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>@include font-face($fontname, $directory, $woff2: false);</pre>
+  </div>
+</div><div class="codeBlock">
+  <div class="highlight">
+    <pre>@access public
+@param {Value} $fontname - name used in the filename, this should be the same for every font type.
+@param {Value} $directory - directory relative from the assets/dist, (eg. fonts/somefont).
+@param {Boolean} $woff2 - adds woff2 support if you need to. Defaults to false.
+@return {Value} - returns compiled font-face rule.</pre>
+  </div>
+</div>
+<h1 id="sections" class="styleguide">Sections</h1>
+<p class="styleguide">Sections are blocks of content with a background color or image. Usually you combine this with a container class child element.
+There are five colors defined for you as modifiers (section--alpha, section--beta, etc..) but you can add extra or change the predefined colors in the settings.scss file if you need to.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="section section--alpha">
+    <div class="container">
+        Some content..
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section section--alpha"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+        Some content..
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="section section--beta">
+    <div class="container">
+        Some content..
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section section--beta"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+        Some content..
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="section section--gamma">
+    <div class="container">
+        Some content..
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section section--gamma"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+        Some content..
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="section section--delta">
+    <div class="container">
+        Some content..
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section section--delta"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+        Some content..
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="section section--epsilon">
+    <div class="container">
+        Some content..
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"section section--epsilon"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"container"</span><span class="nt">&gt;</span>
+        Some content..
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+                    </div>
+                </div>
+            </section>
+          </main>
+
+        </div>
+    </div>
+
+    <script src="assets/dist/js/main.js"></script>
+  </body>
+</html>

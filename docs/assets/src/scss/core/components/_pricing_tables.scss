@@ -1,0 +1,46 @@
+/* Pricing tables
+==========
+*/
+
+.pricing-table {
+    @extend .list-unstyled;
+
+    border: 1px solid map-get($pricing-table, border-color);
+    text-align: center;
+    border-radius:map-get($base, border-radius);
+    overflow: hidden;
+
+    &__header {
+        background: map-get($pricing-table, header-bg-color);
+        color: map-get($color, white);
+
+        @include rem(padding, map-get($pricing-table, header-padding));
+    }
+
+    &__content {
+        @include rem(padding, map-get($pricing-table, header-padding));
+
+        &--alpha {
+            background: map-get($color, alpha);
+        }
+
+        + .pricing-table__content {
+            border-top: 1px solid map-get($pricing-table, border-color);
+        }
+    }
+
+    &__price {
+        @include rem(font-size, map-get($pricing-table, price-font-size));
+    }
+
+    &__description {
+        color: #999999;
+
+        @include rem(font-size, map-get($pricing-table, description-font-size));
+    }
+
+    &__content--action {
+        @include rem(padding-top, map-get($pricing-table, action-padding-top));
+        @include rem(padding-bottom, map-get($pricing-table, action-padding-bottom));
+    }
+}

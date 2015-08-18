@@ -1,0 +1,11 @@
+/* Form placeholder
+==========
+*/
+
+::placeholder {
+   color: map-get($color, placeholder);
+}
+
+.placeholder {
+   color: map-get($color, placeholder);
+}

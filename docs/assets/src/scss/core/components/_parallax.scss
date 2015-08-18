@@ -1,0 +1,35 @@
+/* Parallax scrolling
+==========
+*/
+
+.parallax {
+    position: relative;
+    overflow: hidden;
+    display: none;
+
+    @include mq(beta) {
+        @include rem(height, 350px);
+    }
+
+    @include mq(gamma-and-up) {
+        @include rem(height, 450px);
+    }
+
+    &__img {
+        min-width: 100%;
+
+        @include mq(beta) {
+            left: -25%;
+            min-width: 150%;
+        }
+
+        @include mq(beta-and-up) {
+            position: absolute;
+            top: -50%;
+        }
+
+        @include mq(gamma-and-up) {
+            left: 0;
+        }
+    }
+}

@@ -1,0 +1,87 @@
+/* FadeIn animation
+==========
+*/
+
+@keyframes fadeInRotateAlpha {
+    0% {
+        opacity: 0;
+        transform: rotate(-2deg);
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(5deg);
+    }
+}
+
+@keyframes fadeInRotateBeta {
+    0% {
+        opacity: 0;
+        transform: rotate(8deg);
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(2.5deg);
+    }
+}
+
+@keyframes fadeInRotateGamma {
+    0% {
+        opacity: 0;
+        transform: rotate(3deg);
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(-4deg);
+    }
+}
+
+@keyframes fadeInRotateEpsilon {
+    0% {
+        opacity: 0;
+        transform: rotate(-12deg);
+    }
+
+    25% {
+        opacity: 0.8;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(-6deg);
+    }
+}
+
+.animation-fadeInRotateAlpha {
+    animation-name: fadeInRotateAlpha;
+    animation-duration: 0.5s;
+}
+
+.animation-fadeInRotateBeta {
+    animation-name: fadeInRotateBeta;
+    animation-duration: 0.5s;
+}
+
+.animation-fadeInRotateGamma {
+    animation-name: fadeInRotateGamma;
+    animation-duration: 0.5s;
+}
+
+.animation-fadeInRotateEpsilon {
+    animation-name: fadeInRotateEpsilon;
+    animation-duration: 0.5s;
+}

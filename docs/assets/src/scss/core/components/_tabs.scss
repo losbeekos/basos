@@ -1,0 +1,63 @@
+/* Tabs
+==========
+*/
+
+.tabs {
+    @extend .list-inline;
+    @extend .clearfix;
+
+    li {
+        margin: 0;
+        float: left;
+
+        + li {
+            @include rem(margin-left, map-get($tabs, margin-left));
+        }
+    }
+}
+
+.tab {
+    position: relative;
+    display: inline-block;
+    background: map-get($tabs, bg-color);
+    color: map-get($tabs, color);
+    border-top-left-radius: map-get($base, border-radius);
+    border-top-right-radius: map-get($base, border-radius);
+    user-select: none;
+
+    @include rem(padding, map-get($tabs, padding));
+
+    &:hover {
+        background: darken(map-get($tabs, bg-color), 5%);
+    }
+
+    &:focus {
+        outline: none;
+        color: map-get($color, text);
+        background: darken(map-get($tabs, bg-color), 10%);
+    }
+
+    &.tab--active {
+        background: map-get($tabs, bg-color-active);
+        border-bottom-color: map-get($tabs, bg-color-active);
+        color: map-get($color, text);
+    }
+}
+
+.tab-content {
+    @include rem(padding, map-get($tabs, content-padding));
+}
+
+.tab-item {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    opacity: 0;
+    transition: opacity map-get($tabs, item-transition-speed);
+
+    &.tab-item--active {
+        height: auto;
+        width: 100%;
+        opacity: 1;
+    }
+}

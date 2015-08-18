@@ -1,0 +1,42 @@
+/* Margin classes
+==========
+*/
+
+.margin {
+    @each $key, $value in $margin {
+        &-#{$key} {
+            @include rem(margin, map-get($margin, $key), true);
+
+            &-vertical {
+                @include rem(margin-top, map-get($margin, $key), true);
+                @include rem(margin-bottom, map-get($margin, $key), true);
+            }
+
+            &-horizontal {
+                @include rem(margin-left, map-get($margin, $key), true);
+                @include rem(margin-right, map-get($margin, $key), true);
+            }
+
+            &-right   { @include rem(margin-right, map-get($margin, $key), true); }
+            &-left    { @include rem(margin-left, map-get($margin, $key), true); }
+            &-top     { @include rem(margin-top, map-get($margin, $key), true); }
+            &-bottom  { @include rem(margin-bottom, map-get($margin, $key), true); }
+        }
+    }
+}
+
+.no-margin        { margin: 0 !important; }
+.no-bottom-margin { margin-bottom: 0 !important; }
+.no-top-margin    { margin-top: 0 !important; }
+.no-left-margin   { margin-left: 0 !important; }
+.no-right-margin  { margin-right: 0 !important; }
+
+.no-vertical-margin {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+}
+
+.no-horizontal-margin {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}

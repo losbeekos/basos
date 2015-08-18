@@ -1,0 +1,9 @@
+/* Button holder
+==========
+*/
+
+.btn-holder {
+    text-align: center;
+
+    @include rem(margin, map-get($btn, holder-margin));
+}

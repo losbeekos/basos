@@ -1,0 +1,59 @@
+/* Media
+==========
+*/
+
+.media-list {
+    @extend .list-unstyled;
+
+    &--bordered {
+        .media {
+            border-top: map-get($media, bordered-border-top);
+            margin-bottom: 0;
+
+            @include rem(padding, map-get($media, bordered-padding));
+
+            .media {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.media {
+    @extend .clearfix;
+
+    @include rem(margin-bottom, map-get($media, margin-bottom));
+
+    .media {
+        @include rem(margin-bottom, map-get($media, margin-bottom)/2);
+    }
+
+    &__alpha {
+        @extend .column-3;
+
+        float: left;
+
+        @include rem(margin-bottom, map-get($media, margin-bottom)/2);
+
+        @include mq(beta-and-up) {
+            margin-bottom: 0;
+        }
+
+        .media--right & {
+            float: right;
+        }
+    }
+
+    &__beta {
+        @extend .column-9;
+
+        .media--left & {
+            float: right;
+            margin: 0;
+        }
+
+        .media--right & {
+            float: left;
+        }
+    }
+}

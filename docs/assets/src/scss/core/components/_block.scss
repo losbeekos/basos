@@ -1,0 +1,17 @@
+/* Block
+==========
+*/
+
+.block {
+    background: map-get($block, bg);
+
+    @include rem(padding, map-get($block, padding-alpha));
+
+    @include mq(beta) {
+        @include rem(padding, map-get($block, padding-beta));
+    }
+
+    @include mq(gamma-and-up) {
+        @include rem(padding, map-get($block, padding-gamma));
+    }
+}

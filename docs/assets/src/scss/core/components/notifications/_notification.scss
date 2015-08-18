@@ -1,0 +1,52 @@
+/* Notification
+==========
+*/
+
+@mixin notification($background, $border-color, $color, $before-content, $before-color) {
+    color: $color;
+    background: $background;
+    border-color: $border-color;
+
+    &:before {
+        content: $before-content;
+        color: $before-color;
+    }
+}
+
+.notification {
+    border-width: map-get($notifications, border-width);
+    border-style: solid;
+    border-radius: map-get($base, border-radius);
+    position: relative;
+    transition: all map-get($base, transition-speed);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+
+    @include notification(lighten(map-get($notifications, bg-color-info), 53%), lighten(map-get($notifications, bg-color-info), 48%), darken(map-get($notifications, bg-color-info), 32%), map-get($icon, notification-info), map-get($notifications, bg-color-info));
+    @include rem(margin-bottom, map-get($notifications, margin-bottom));
+
+    &:before {
+        @extend %font-icons;
+
+        position: absolute;
+        top: 0;
+
+        @include rem(left, 10px);
+        @include rem(font-size, 40px);
+    }
+
+
+    &.notification--close {
+        opacity: 0;
+
+        &:not(.notification--cookie) {
+            height: 0;
+            overflow: hidden;
+            padding: 0;
+            min-height: 0;
+            margin: 0;
+            border: 0;
+            transform: scale3d(0.5);
+        }
+    }
+}

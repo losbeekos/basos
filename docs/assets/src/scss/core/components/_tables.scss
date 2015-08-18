@@ -1,0 +1,53 @@
+/* Tables
+==========
+*/
+
+.table-responsive {
+    width: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.table {
+    width: 100%;
+
+    @include rem(margin-bottom, map-get($table, margin-bottom));
+
+    td,
+    th {
+        padding: map-get($table, padding);
+        text-align: left;
+        vertical-align: top;
+    }
+
+    td {
+        border-top: 1px solid map-get($table, border-color);
+    }
+
+    &--hover {
+        tr:hover {
+            td {
+                background: map-get($table, bg-color-hover);
+            }
+        }
+    }
+
+    &--zebra {
+        tr:nth-child(odd) td {
+            background: map-get($table, bg-color-zebra);
+        }
+    }
+
+    &--bordered {
+        border: 1px solid map-get($table, border-color);
+
+        td,
+        th {
+            border-left: 1px solid map-get($table, border-color);
+
+            &:first-child {
+                border-left: none;
+            }
+        }
+    }
+}
