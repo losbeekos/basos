@@ -1,5 +1,7 @@
 /* Block
 ==========
+
+@TODO: Rename to cards
 */
 
 .block {
@@ -15,3 +17,16 @@
         @include rem(padding, map-get($block, padding-gamma));
     }
 }
+
+/*doc
+---
+title: Cards
+name: cards
+category: Content
+---
+
+```html_example
+<div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima eos aperiam nesciunt veniam ex ipsa rem delectus accusamus eligendi saepe. Dolorum, distinctio aspernatur doloremque, obcaecati necessitatibus accusamus laborum! Odit, tempore!</div>
+```
+
+*/

@@ -3,7 +3,7 @@
 /*doc
 ---
 title: Javascript
-name: javascript
+name: 9_javascript
 category: Javascript
 ---
 

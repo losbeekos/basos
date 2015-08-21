@@ -50,3 +50,59 @@
         }
     }
 }
+
+/*doc
+---
+title: Notifications
+name: notifications
+category: Callouts and prompts
+---
+
+## Alpha
+
+```html_example
+<div class="notification notification--alpha">
+    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--alpha notification--error">
+    <div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--alpha notification--success">
+    <div class="notification__text">Je bent nu geregistreerd op onze website.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+```
+
+## Beta
+
+```html_example
+<div class="notification notification--beta">
+    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--beta notification--error">
+    <div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--beta notification--success">
+    <div class="notification__text">Je bent nu geregistreerd op onze website.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+```
+
+## Add
+
+You can call this function to insert a notification in the DOM.
+
+```
+app.notifications.add(target, message, size, type);
+```
+
+- target: notification container {string selector}
+- message: message to be shown {string}
+- size: alpha, beta {string}
+- type: success, error, info {string}
+
+*/

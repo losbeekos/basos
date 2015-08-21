@@ -18,3 +18,14 @@ app.groupCheckable = {
         });
     }
 };
+
+/*doc
+---
+title: Group checkable
+name: group_checkable
+category: Javascript
+---
+
+Todo
+
+*/

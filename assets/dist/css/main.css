@@ -1114,15 +1114,66 @@ form:after,
 *
 **/
 
-/* Lists
-==========
+/*doc
+---
+title: Default lists
+name: default_list
+category: Typography
+---
+
+## Unordened list
+
+```html_example
+<ul>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+</ul>
+```
+
+## Ordened list
+
+```html_example
+<ol>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+</ol>
+```
+
 */
 
-ol,
 ul {
 	padding-left: 18px;
 	padding-left: 1.125rem;
 }
+
+ol {
+	padding-left: 24px;
+	padding-left: 1.5rem;
+}
+
+/*doc
+---
+title: Unstyled list
+name: unstyled_list
+category: Typography
+---
+
+## Unordened list
+
+```html_example
+<ul class="list-unstyled">
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+</ul>
+```
+
+*/
 
 .list-unstyled,
 .list-inline,
@@ -1139,6 +1190,24 @@ ul {
 	padding: 0;
 	list-style-type: none;
 }
+
+/*doc
+---
+title: Inline list
+name: inline_list
+category: Typography
+---
+
+```html_example
+<ul class="list-inline">
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+    <li>list item</li>
+</ul>
+```
+
+*/
 
 .list-inline li,
 .tabs li,
@@ -1819,6 +1888,34 @@ ul {
 .round {
 	overflow: hidden;
 	border-radius: 50%;
+}
+
+/* Text align
+==========
+*/
+
+.vertical-align-top {
+	vertical-align: top !important;
+}
+
+.vertical-align-bottom {
+	vertical-align: bottom !important;
+}
+
+.vertical-align-middle {
+	vertical-align: middle !important;
+}
+
+.vertical-align-baseline {
+	vertical-align: baseline !important;
+}
+
+.vertical-align-initial {
+	vertical-align: initial !important;
+}
+
+.vertical-align-inherit {
+	vertical-align: inherit !important;
 }
 
 /* Text align
@@ -2576,8 +2673,8 @@ body {
 	color: #333333;
 	opacity: 0;
 	font-weight: 300;
-	-webkit-transition: opacity 0.4s ease-in;
-	transition: opacity 0.4s ease-in;
+	-webkit-transition: opacity 0.05s ease-in;
+	transition: opacity 0.05s ease-in;
 }
 
 .app-active body {
@@ -2853,8 +2950,15 @@ input[type=radio] + label:after,
 	font-weight: normal;
 }
 
-/* Typography
-==========
+/*doc
+---
+title: Typography
+name: 7_typography
+category: Typography
+---
+
+Typography
+
 */
 
 .h1,
@@ -2940,6 +3044,39 @@ h6,
 	margin-bottom: 5px;
 	margin-bottom: 0.3125rem;
 }
+
+/*doc
+---
+title: Type
+name: 8_type
+category: Typography
+---
+
+```html_example
+<h1>Heading 1</h1>
+```
+
+```html_example
+<h2>Heading 2</h2>
+```
+
+```html_example
+<h3>Heading 3</h3>
+```
+
+```html_example
+<h3>Heading 4</h4>
+```
+
+```html_example
+<h5>Heading 5</h5>
+```
+
+```html_example
+<h6>Heading 6</h6>
+```
+
+*/
 
 /*==============================
 =            Colors            =
@@ -3835,8 +3972,83 @@ hll {
 	line-height: 1.875rem;
 }
 
+/*doc
+---
+title: Modals
+name: modals
+category: Callouts and prompts
+---
+
+## Make
+
+```html_example
+<a class="btn btn--alpha btn--small modal__trigger" data-modal-id="modal-make" data-modal-title="Weet je het zeker?" data-modal-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." data-modal-close-btn="sluiten">Make</a>
+```
+
+## Confirm
+
+You can go both ways with the confirm modal. You could call it from your HTML with data attributes or you could call it from Javascript. If you use Javascript you can set a callback function, this function will trigger when the modal has opened.
+
+### HTML
+```html_example
+<a class="btn btn--alpha btn--small modal__trigger" data-modal-id="modal-make2" data-modal-title="Weet je het zeker?" data-modal-close-btn="annuleren" data-modal="confirm" data-modal-confirm-action="http://www.google.nl" data-modal-confirm-btn="Ja, verwijder">Confirm</a>
+```
+
+
+### Javascript call
+```
+app.modals.confirm({
+    modalTitle: 'title', // Title printed in the modal (optional)
+    modalText: 'text', // Text to explain the action (optional)
+    modalConfirmAction: 'http://google.nl', // URL for the confirm button
+    modalConfirmBtn: 'bevestigen', // Confirm button text (optional, default: bevestigen)
+    modalCloseBtn: 'annuleren', // Cancel button text (optional, default: annuleren)
+
+    modalOpenCallback: function () {
+        // Do magic here..
+    }
+});
+```
+
+
+## Static
+
+```html_example
+<a class="btn btn--alpha btn--small modal__trigger" data-modal-id="modal-static">Static</a>
+<div id="modal-static" class="modal">
+    <div class="modal__content">
+        <a class="modal__close" data-modal-close></a>
+        <h2>Dit is een titel</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <a href="#" class="btn btn--beta btn--medium" data-modal-close>Akkoord</a>
+    </div>
+</div>
+```
+
+
+## Open
+
+Function to open a modal from Javascript.
+
+```
+app.modals.openModal(this, options);
+```
+
+
+## Close
+
+Function to close an open modal.
+
+```
+app.modals.closeModal();
+```
+
+*/
+
 /* Block
 ==========
+
+@TODO: Rename to cards
 */
 
 .block,
@@ -3859,6 +4071,19 @@ hll {
   *
   **/
 }
+
+/*doc
+---
+title: Cards
+name: cards
+category: Content
+---
+
+```html_example
+<div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima eos aperiam nesciunt veniam ex ipsa rem delectus accusamus eligendi saepe. Dolorum, distinctio aspernatur doloremque, obcaecati necessitatibus accusamus laborum! Odit, tempore!</div>
+```
+
+*/
 
 /* Block grid
 ==========
@@ -4049,6 +4274,44 @@ This little module will fancy you a nice block grid. Breakpoint settings can be 
 	width: 100%;
 	opacity: 1;
 }
+
+/*doc
+---
+title: Tabs
+name: tabs
+category: Content
+---
+
+```html_example
+<ul class="tabs">
+    <li><a class="tab tab--active" href="#tab-home">Home</a></li>
+    <li><a class="tab" href="#tab-lorem">Lorem</a></li>
+    <li><a class="tab" href="#tab-ipsum">Ipsum</a></li>
+</ul>
+<div class="tab-content">
+    <div class="tab-item tab-item--active" id="tab-home">
+        <div class="grid">
+            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+        </div>
+    </div>
+    <div class="tab-item" id="tab-lorem">
+        <p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
+    </div>
+    <div class="tab-item" id="tab-ipsum">
+        <div class="grid">
+            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+        </div>
+        <div class="grid">
+            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+        </div>
+    </div>
+</div>
+```
+
+*/
 
 /* Navigation bar
 ==========
@@ -4371,6 +4634,274 @@ category: Navigation
 	border-left: none;
 }
 
+/*doc
+---
+title: Tables
+name: tables
+category: Content
+---
+
+## Default table
+
+```html_example
+<table class="table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Show</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Bender</td>
+            <td>Rodrigues</td>
+            <td>Futurama</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Philip</td>
+            <td>Fry</td>
+            <td>Futurama</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jerry</td>
+            <td>Seinfeld</td>
+            <td>Seinfeld</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Larry</td>
+            <td>David</td>
+            <td>Seinfeld</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+## Hover table
+
+```html_example
+<table class="table table--hover">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Show</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Bender</td>
+            <td>Rodrigues</td>
+            <td>Futurama</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Philip</td>
+            <td>Fry</td>
+            <td>Futurama</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jerry</td>
+            <td>Seinfeld</td>
+            <td>Seinfeld</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Larry</td>
+            <td>David</td>
+            <td>Seinfeld</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+## Zebra table
+
+```html_example
+<table class="table table--zebra">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Show</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Bender</td>
+            <td>Rodrigues</td>
+            <td>Futurama</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Philip</td>
+            <td>Fry</td>
+            <td>Futurama</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jerry</td>
+            <td>Seinfeld</td>
+            <td>Seinfeld</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Larry</td>
+            <td>David</td>
+            <td>Seinfeld</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+## Bordered table
+
+```html_example
+<table class="table table--bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Show</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Bender</td>
+            <td>Rodrigues</td>
+            <td>Futurama</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Philip</td>
+            <td>Fry</td>
+            <td>Futurama</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jerry</td>
+            <td>Seinfeld</td>
+            <td>Seinfeld</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Larry</td>
+            <td>David</td>
+            <td>Seinfeld</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+## Zebra & bordered table
+
+```html_example
+<table class="table table--zebra table--bordered">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Show</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Bender</td>
+            <td>Rodrigues</td>
+            <td>Futurama</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Philip</td>
+            <td>Fry</td>
+            <td>Futurama</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jerry</td>
+            <td>Seinfeld</td>
+            <td>Seinfeld</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Larry</td>
+            <td>David</td>
+            <td>Seinfeld</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+## Responsive table
+
+```html_example
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Show</th>
+                <th>Yada</th>
+                <th>Yada</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Bender</td>
+                <td>Rodrigues</td>
+                <td>Futurama</td>
+                <td>Yada</td>
+                <td>Yada</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Philip</td>
+                <td>Fry</td>
+                <td>Futurama</td>
+                <td>Yada</td>
+                <td>Yada</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Jerry</td>
+                <td>Seinfeld</td>
+                <td>Seinfeld</td>
+                <td>Yada</td>
+                <td>Yada</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Larry</td>
+                <td>David</td>
+                <td>Seinfeld</td>
+                <td>Yada</td>
+                <td>Yada</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+```
+
+
+*/
+
 /* Dropdowns
 ==========
 */
@@ -4430,6 +4961,47 @@ category: Navigation
 .dropdown__content a:hover {
 	background-color: white;
 }
+
+/*doc
+---
+title: Dropdowns
+name: dropdowns
+category: Content
+---
+
+## Hover
+
+```html_example
+<div class="dropdown">
+    <a class="btn btn--alpha btn--small">dropdown</a>
+    <div class="dropdown__content">
+        <ul>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+        </ul>
+    </div>
+</div>
+```
+
+## Click trigger
+
+```html_example
+<div class="dropdown" data-dropdown-trigger="click">
+    <a class="btn btn--alpha btn--small">dropdown</a>
+    <div class="dropdown__content">
+        <ul>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+        </ul>
+    </div>
+</div>
+```
+
+*/
 
 /* Tooltips
 ==========
@@ -4584,6 +5156,47 @@ category: Navigation
 	left: -230px;
 }
 
+/*doc
+---
+title: Tooltips
+name: tooltips
+category: Callouts and prompts
+---
+
+Tooltips are used as fancy title attributes to display some info about a certain section.
+
+## Top position
+
+```html_example
+<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a>
+```
+
+## Right position
+
+```html_example
+<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="right" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">right</a>
+```
+
+## Bottom position
+
+```html_example
+<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="bottom" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">bottom</a>
+```
+
+## Left position
+
+```html_example
+<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="left" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">left</a>
+```
+
+## Click trigger
+
+```html_example
+<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness." data-tooltip-trigger="click">click trigger</a>
+```
+
+*/
+
 /* Accordion
 ==========
 */
@@ -4657,6 +5270,67 @@ category: Navigation
 	height: auto;
 	max-height: 1000px !important;
 }
+
+/*doc
+---
+title: Accordion
+name: accordion
+category: Content
+---
+
+```html_example
+<div class="accordion">
+    <div class="accordion__group accordion-content-show">
+        <a class="accordion__trigger">Accordion item #1</a>
+        <div class="accordion__content">
+            <div class="grid">
+                <div class="column-12">
+                    <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion__group">
+        <a class="accordion__trigger">Accordion item #2</a>
+        <div class="accordion__content">
+            <div class="grid">
+                <div class="column-12">
+                    <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion__group">
+        <a class="accordion__trigger">Accordion item #3</a>
+        <div class="accordion__content">
+            <div class="grid">
+                <div class="column-12">
+                    <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="accordion__group">
+        <a class="accordion__trigger">Accordion item #4</a>
+        <div class="accordion__content">
+            <h2>With a grid inside</h2>
+            <div class="grid">
+                <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+            </div>
+            <div class="grid">
+                <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+                <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+*/
 
 /* Breadcrumbs
 ==========
@@ -4758,6 +5432,41 @@ category: Navigation
 	padding-bottom: 1.25rem;
 }
 
+/*doc
+---
+title: Pricing tables
+name: pricing_tables
+category: Content
+---
+
+```html_example
+<ul class="pricing-table">
+    <li class="pricing-table__header">
+        Basos package
+    </li>
+    <li class="pricing-table__content pricing-table__content--alpha">
+        <div class="pricing-table__price">&euro; 500,-</div>
+    </li>
+    <li class="pricing-table__content pricing-table__content--beta">
+        <div class="pricing-table__description">Lorem ipsum dolor sit amet.</div>
+    </li>
+    <li class="pricing-table__content pricing-table__content--beta">
+        <div class="pricing-table__item">50 components</div>
+    </li>
+    <li class="pricing-table__content pricing-table__content--beta">
+        <div class="pricing-table__item">100 lorems</div>
+    </li>
+    <li class="pricing-table__content pricing-table__content--beta">
+        <div class="pricing-table__item">5 dolirs</div>
+    </li>
+    <li class="pricing-table__content pricing-table__content--beta price-table__content--action">
+        <a class="btn btn--beta btn--medium" href="">buy now</a>
+    </li>
+</ul>
+```
+
+*/
+
 /* Media
 ==========
 */
@@ -4808,6 +5517,121 @@ category: Navigation
 .media--right .media__beta {
 	float: left;
 }
+
+/*doc
+---
+title: Media
+name: media
+category: Content
+---
+
+## Left
+
+```html_example
+<div class="media media--left">
+    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+    <div class="media__beta">
+        <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+        <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+    </div>
+</div>
+```
+
+## Right
+
+```html_example
+<div class="media media--right">
+    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+    <div class="media__beta">
+        <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+        <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+    </div>
+</div>
+```
+
+## Nested
+
+```html_example
+<div class="media media--left">
+    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+    <div class="media__beta">
+        <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+        <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+        <div class="media media--left">
+            <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+            <div class="media__beta">
+                <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+                <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+            </div>
+        </div>
+        <div class="media media--left">
+            <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+            <div class="media__beta">
+                <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+                <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+## List
+
+```html_example
+<ul class="media-list">
+    <li class="media media--left">
+        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+        <div class="media__beta">
+            <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+        </div>
+    </li>
+    <li class="media media--left">
+        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+        <div class="media__beta">
+            <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+        </div>
+    </li>
+</ul>
+```
+
+## Bordered list
+
+```html_example
+<ul class="media-list media-list--bordered">
+    <li class="media media--left">
+        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+        <div class="media__beta">
+            <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+        </div>
+    </li>
+    <li class="media media--left">
+        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+        <div class="media__beta">
+            <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+            <div class="media media--left">
+                <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+                <div class="media__beta">
+                    <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+                    <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                </div>
+            </div>
+            <div class="media media--left">
+                <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+                <div class="media__beta">
+                    <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+                    <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
+```
+
+*/
 
 /* Progress bar
 ==========
@@ -4950,6 +5774,42 @@ progress:not([value])::-ms-fill {
 	background-color: #f7f7f7;
 }
 
+/*doc
+---
+title: Progress bars
+name: progress_bars
+category: Content
+---
+
+## Indeterminate
+
+```html_example
+<progress>
+    <div class="progress-bar">
+        <div class="progress-bar__value"></div>
+    </div>
+</progress>
+<div class="progress-bar">
+    <div class="progress-bar__value"></div>
+</div>
+```
+
+
+## Determinate
+
+```html_example
+<progress max="100" value="80">
+    <div class="progress-bar">
+        <div class="progress-bar__value" style="width: 80%;"></div>
+    </div>
+</progress>
+<div class="progress-bar">
+    <div class="progress-bar__value" style="width: 80%;"></div>
+</div>
+```
+
+*/
+
 /* Spinners
 ==========
 */
@@ -4989,6 +5849,52 @@ progress:not([value])::-ms-fill {
 [data-scrollspy].scrollspy--in-view {
 	opacity: 1;
 }
+
+/*doc
+---
+title: Scrollspy
+name: scrollspy
+category: Content
+---
+
+```html_example
+<div class="grid">
+    <div data-scrollspy data-scrollspy-repeat data-scrollspy-class="animation-bounceIn" class="column-12 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there.</div>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-8 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" class="column-7 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" data-scrollspy-delay="200" class="column-5 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-8 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="100" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateAlpha" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateGamma" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateBeta" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+```
+
+*/
 
 /* Parallax scrolling
 ==========
@@ -5039,6 +5945,21 @@ progress:not([value])::-ms-fill {
   **/
 }
 
+/*doc
+---
+title: Parallax
+name: parallax
+category: Content
+---
+
+```html_example
+<div class="parallax">
+    <img src="http://www.lorempixel.com/1280/1000/business/1" class="parallax__img">
+</div>
+```
+
+*/
+
 /* Toggle
 ==========
 */
@@ -5059,6 +5980,26 @@ progress:not([value])::-ms-fill {
 .toggle--hide {
 	max-height: 0;
 }
+
+/*doc
+---
+title: Toggle
+name: toggle
+category: Content
+---
+
+You can add a no animation modifier to the target (toggle--no-animation).
+
+```html_example
+<button class="btn btn--alpha btn--small" data-toggle="#toggle-target">toggle</button>
+<div id="toggle-target" class="toggle toggle--hide">
+    <div class="block">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nemo nisi, pariatur doloremque itaque exercitationem odio libero odit dolores voluptate voluptas nulla voluptates nam nobis illo veritatis aperiam cupiditate dolor.
+    </div>
+</div>
+```
+
+*/
 
 /* Affix
 ==========
@@ -6569,50 +7510,6 @@ category: Forms
 
 /*doc
 ---
-title: Form vertical
-name: form_vertical
-category: Forms
----
-
-```html_example
-<form class="form form--vertical" data-form-validate novalidate="novalidate">
-    <div class="grid column-4 column-centered">
-        <div class="form__row">
-            <div class="form__label">
-                <label>Aanhef</label>
-            </div>
-            <div class="form__input">
-                <div class="form__select">
-                    <select name="aanhef" id="" required="required">
-                        <option value="" disabled="disabled" selected="selected">Kies een optie</option>
-                        <option value="Dhr.">Dhr.</option>
-                        <option value="Mevr.">Mevr.</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="form__row">
-            <div class="form__label">
-                <label>Website *</label>
-            </div>
-            <div class="form__input">
-                <input type="url" />
-            </div>
-        </div>
-
-        <div class="form__actions">
-            <p class="form__required-field"><i>* = Verplicht veld</i></p>
-            <input class="btn btn--beta btn--medium" type="submit" value="verzenden" />
-        </div>
-    </div>
-</form>
-```
-
-*/
-
-/*doc
----
 title: Form horizontal
 name: form_horizontal
 category: Forms
@@ -7608,6 +8505,62 @@ category: Forms
 	transform: scale3d(0.5);
 }
 
+/*doc
+---
+title: Notifications
+name: notifications
+category: Callouts and prompts
+---
+
+## Alpha
+
+```html_example
+<div class="notification notification--alpha">
+    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--alpha notification--error">
+    <div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--alpha notification--success">
+    <div class="notification__text">Je bent nu geregistreerd op onze website.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+```
+
+## Beta
+
+```html_example
+<div class="notification notification--beta">
+    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--beta notification--error">
+    <div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--beta notification--success">
+    <div class="notification__text">Je bent nu geregistreerd op onze website.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+```
+
+## Add
+
+You can call this function to insert a notification in the DOM.
+
+```
+app.notifications.add(target, message, size, type);
+```
+
+- target: notification container {string selector}
+- message: message to be shown {string}
+- size: alpha, beta {string}
+- type: success, error, info {string}
+
+*/
+
 /* Notification sizes
 ==========
 */
@@ -7822,18 +8775,18 @@ Navigation
 
 /*doc
 ---
-title: Callouts & prompts
-name: callouts_prompts
-category: Callouts & prompts
+title: Callouts and prompts
+name: 8_callouts
+category: Callouts and prompts
 ---
 
-Callouts & prompts
+Callouts and prompts
 */
 
 /*doc
 ---
 title: Content
-name: content
+name: 7_content
 category: Content
 ---
 
@@ -8409,7 +9362,7 @@ h1,
 
 .parallax__img {
 	position: absolute;
-	top: -50%;
+	top: -25%;
 }
 
 .btn--medium {

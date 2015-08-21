@@ -27,3 +27,22 @@ app.equalize = {
         }
     }
 };
+
+/*doc
+---
+title: Equalize
+name: equalize
+category: Content
+---
+
+Equalize targets in just a snap. It can be everything not just columns or blocks.
+
+```html_example
+<div class="grid" data-equalize>
+    <div data-equalize-target class="column-4 block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
+    <div data-equalize-target class="column-4 block">column-4</div>
+    <div data-equalize-target class="column-4 block">column-4</div>
+</div>
+```
+
+*/

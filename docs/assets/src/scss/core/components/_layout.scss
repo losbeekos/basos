@@ -23,7 +23,7 @@ body {
     color: map-get($color, text);
     opacity: 0;
     font-weight: 300;
-    transition: opacity map-get($base, transition-speed)*2 ease-in;
+    transition: opacity map-get($base, transition-speed)/4 ease-in;
 
     .app-active & {
         opacity: 1;

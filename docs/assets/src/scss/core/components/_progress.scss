@@ -38,7 +38,7 @@ progress[value]::-webkit-progress-bar {
     border-radius: map-get($base, border-radius);
     border: 0;
     transition: width map-get($base, transition-speed);
-    animation: progress-bar 1s linear infinite;;
+    animation: progress-bar 1s linear infinite;
 
 
     @include rem(height, 15px);
@@ -77,3 +77,40 @@ progress:not([value]) {
 .progress-bar__value:not([style]) {
     background-color: map-get($progress-bar, bg-color);
 }
+
+
+/*doc
+---
+title: Progress bars
+name: progress_bars
+category: Content
+---
+
+## Indeterminate
+
+```html_example
+<progress>
+    <div class="progress-bar">
+        <div class="progress-bar__value"></div>
+    </div>
+</progress>
+<div class="progress-bar">
+    <div class="progress-bar__value"></div>
+</div>
+```
+
+
+## Determinate
+
+```html_example
+<progress max="100" value="80">
+    <div class="progress-bar">
+        <div class="progress-bar__value" style="width: 80%;"></div>
+    </div>
+</progress>
+<div class="progress-bar">
+    <div class="progress-bar__value" style="width: 80%;"></div>
+</div>
+```
+
+*/

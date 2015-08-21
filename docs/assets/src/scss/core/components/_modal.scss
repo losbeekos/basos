@@ -90,3 +90,77 @@
         @include rem(line-height, 30px);
     }
 }
+
+
+/*doc
+---
+title: Modals
+name: modals
+category: Callouts and prompts
+---
+
+## Make
+
+```html_example
+<a class="btn btn--alpha btn--small modal__trigger" data-modal-id="modal-make" data-modal-title="Weet je het zeker?" data-modal-text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." data-modal-close-btn="sluiten">Make</a>
+```
+
+## Confirm
+
+You can go both ways with the confirm modal. You could call it from your HTML with data attributes or you could call it from Javascript. If you use Javascript you can set a callback function, this function will trigger when the modal has opened.
+
+### HTML
+```html_example
+<a class="btn btn--alpha btn--small modal__trigger" data-modal-id="modal-make2" data-modal-title="Weet je het zeker?" data-modal-close-btn="annuleren" data-modal="confirm" data-modal-confirm-action="http://www.google.nl" data-modal-confirm-btn="Ja, verwijder">Confirm</a>
+```
+
+
+### Javascript call
+```
+app.modals.confirm({
+    modalTitle: 'title', // Title printed in the modal (optional)
+    modalText: 'text', // Text to explain the action (optional)
+    modalConfirmAction: 'http://google.nl', // URL for the confirm button
+    modalConfirmBtn: 'bevestigen', // Confirm button text (optional, default: bevestigen)
+    modalCloseBtn: 'annuleren', // Cancel button text (optional, default: annuleren)
+
+    modalOpenCallback: function () {
+        // Do magic here..
+    }
+});
+```
+
+
+## Static
+
+```html_example
+<a class="btn btn--alpha btn--small modal__trigger" data-modal-id="modal-static">Static</a>
+<div id="modal-static" class="modal">
+    <div class="modal__content">
+        <a class="modal__close" data-modal-close></a>
+        <h2>Dit is een titel</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+        <a href="#" class="btn btn--beta btn--medium" data-modal-close>Akkoord</a>
+    </div>
+</div>
+```
+
+
+## Open
+
+Function to open a modal from Javascript.
+
+```
+app.modals.openModal(this, options);
+```
+
+
+## Close
+
+Function to close an open modal.
+
+```
+app.modals.closeModal();
+```
+
+*/

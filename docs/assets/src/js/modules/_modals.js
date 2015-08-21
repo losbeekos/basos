@@ -6,7 +6,7 @@ app.modals = {
     },
 
     init: function () {
-        if (app.modals.settings.$modal.length > 0) {
+        if (app.modals.settings.$trigger.length > 0) {
             app.settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
 
             app.modals.triggers();
@@ -14,7 +14,7 @@ app.modals = {
     },
 
     triggers: function () {
-        app.modals.settings.$trigger.on('click', function (event) {
+        app.settings.$body.on('click', '.modal__trigger', function (event) {
             event.preventDefault();
 
             var $trigger = $(this),
@@ -120,22 +120,11 @@ app.modals = {
         $('#' + modalId).remove();
 
         app.modals.openModal(this, options);
-
-        /*
-        * Usage:
-        *
-        app.modals.confirm({
-            modalTitle: 'title',
-            modalText: 'text',
-            modalConfirmAction: 'http://google.nl',
-
-            modalOpenCallback: function () {
-                console.log('hoi');
-            }
-        });
-        */
     },
 
+    /**
+     * @TODO: Needs work..
+     */
     ajax: function (activity, request) {
         var modalId = 'js-modal-ajax';
 

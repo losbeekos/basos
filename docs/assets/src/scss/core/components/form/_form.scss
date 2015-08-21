@@ -202,51 +202,6 @@ category: Forms
 
 /*doc
 ---
-title: Form vertical
-name: form_vertical
-category: Forms
----
-
-```html_example
-<form class="form form--vertical" data-form-validate novalidate="novalidate">
-    <div class="grid column-4 column-centered">
-        <div class="form__row">
-            <div class="form__label">
-                <label>Aanhef</label>
-            </div>
-            <div class="form__input">
-                <div class="form__select">
-                    <select name="aanhef" id="" required="required">
-                        <option value="" disabled="disabled" selected="selected">Kies een optie</option>
-                        <option value="Dhr.">Dhr.</option>
-                        <option value="Mevr.">Mevr.</option>
-                    </select>
-                </div>
-            </div>
-        </div>
-
-        <div class="form__row">
-            <div class="form__label">
-                <label>Website *</label>
-            </div>
-            <div class="form__input">
-                <input type="url" />
-            </div>
-        </div>
-
-        <div class="form__actions">
-            <p class="form__required-field"><i>* = Verplicht veld</i></p>
-            <input class="btn btn--beta btn--medium" type="submit" value="verzenden" />
-        </div>
-    </div>
-</form>
-```
-
-*/
-
-
-/*doc
----
 title: Form horizontal
 name: form_horizontal
 category: Forms

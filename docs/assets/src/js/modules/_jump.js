@@ -31,3 +31,16 @@ app.jump = {
         app.settings.$htmlAndBody.animate({scrollTop: offsetTop}, app.jump.settings.speed);
     }
 };
+
+/*doc
+---
+title: Jump
+name: jump
+category: Javascript
+---
+
+```html_example
+<a href="#background" data-jumpto>grid</a>
+```
+
+*/

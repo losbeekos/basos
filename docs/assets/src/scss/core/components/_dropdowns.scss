@@ -57,3 +57,44 @@
         }
     }
 }
+
+/*doc
+---
+title: Dropdowns
+name: dropdowns
+category: Content
+---
+
+## Hover
+
+```html_example
+<div class="dropdown">
+    <a class="btn btn--alpha btn--small">dropdown</a>
+    <div class="dropdown__content">
+        <ul>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+        </ul>
+    </div>
+</div>
+```
+
+## Click trigger
+
+```html_example
+<div class="dropdown" data-dropdown-trigger="click">
+    <a class="btn btn--alpha btn--small">dropdown</a>
+    <div class="dropdown__content">
+        <ul>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+        </ul>
+    </div>
+</div>
+```
+
+*/

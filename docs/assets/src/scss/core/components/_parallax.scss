@@ -25,7 +25,7 @@
 
         @include mq(beta-and-up) {
             position: absolute;
-            top: -50%;
+            top: -25%;
         }
 
         @include mq(gamma-and-up) {
@@ -33,3 +33,18 @@
         }
     }
 }
+
+/*doc
+---
+title: Parallax
+name: parallax
+category: Content
+---
+
+```html_example
+<div class="parallax">
+    <img src="http://www.lorempixel.com/1280/1000/business/1" class="parallax__img">
+</div>
+```
+
+*/

@@ -306,6 +306,18 @@ app.disableHover = {
         }, 100);
     }
 };
+
+/*doc
+---
+title: Disable hover
+name: disable_hover
+category: Javascript
+---
+
+A disable hover (.disable-hover) class is added to the body. 
+This class prevents pointer events so there won't be any hover effect repaints, just the repaints for scrolling. This results in a better scrolling performance.
+
+*/
 app.dropdowns = {
     settings: {
         $el: $('.dropdown'),
@@ -364,6 +376,25 @@ app.equalize = {
         }
     }
 };
+
+/*doc
+---
+title: Equalize
+name: equalize
+category: Content
+---
+
+Equalize targets in just a snap. It can be everything not just columns or blocks.
+
+```html_example
+<div class="grid" data-equalize>
+    <div data-equalize-target class="column-4 block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
+    <div data-equalize-target class="column-4 block">column-4</div>
+    <div data-equalize-target class="column-4 block">column-4</div>
+</div>
+```
+
+*/
 app.fancybox = {
     el: $('.fancybox'),
 
@@ -399,6 +430,17 @@ app.fastClick = {
         }
     }
 };
+
+/*doc
+---
+title: Fastclick
+name: fastclick
+category: Javascript
+---
+
+Polyfill to remove click delays on browsers with touch UIs
+
+*/
 app.fitVids = {
     settings: {
         $el: $('.fitvids')
@@ -415,6 +457,18 @@ app.fitVids = {
         }
     }
 };
+
+/*doc
+---
+title: Fitvids
+name: fitvids
+category: Javascript
+---
+
+A lightweight, easy-to-use jQuery plugin for fluid width video embeds.
+Use the class fitvids as a container for your video and the plugin will take care of the rest.
+
+*/
 app.formModules = {
     settings: {
         $passwordToggle: $('.form__password-toggle'),
@@ -568,6 +622,17 @@ app.groupCheckable = {
         });
     }
 };
+
+/*doc
+---
+title: Group checkable
+name: group_checkable
+category: Javascript
+---
+
+Todo
+
+*/
 app.jump = {
     settings: {
         speed: 300
@@ -601,6 +666,19 @@ app.jump = {
         app.settings.$htmlAndBody.animate({scrollTop: offsetTop}, app.jump.settings.speed);
     }
 };
+
+/*doc
+---
+title: Jump
+name: jump
+category: Javascript
+---
+
+```html_example
+<a href="#background" data-jumpto>grid</a>
+```
+
+*/
 app.leave = {
     init: function () {
         app.settings.$body.on('click', '[type=submit]', function () {
@@ -634,7 +712,7 @@ app.modals = {
     },
 
     init: function () {
-        if (app.modals.settings.$modal.length > 0) {
+        if (app.modals.settings.$trigger.length > 0) {
             app.settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
 
             app.modals.triggers();
@@ -642,7 +720,7 @@ app.modals = {
     },
 
     triggers: function () {
-        app.modals.settings.$trigger.on('click', function (event) {
+        app.settings.$body.on('click', '.modal__trigger', function (event) {
             event.preventDefault();
 
             var $trigger = $(this),
@@ -748,22 +826,11 @@ app.modals = {
         $('#' + modalId).remove();
 
         app.modals.openModal(this, options);
-
-        /*
-        * Usage:
-        *
-        app.modals.confirm({
-            modalTitle: 'title',
-            modalText: 'text',
-            modalConfirmAction: 'http://google.nl',
-
-            modalOpenCallback: function () {
-                console.log('hoi');
-            }
-        });
-        */
     },
 
+    /**
+     * @TODO: Needs work..
+     */
     ajax: function (activity, request) {
         var modalId = 'js-modal-ajax';
 
