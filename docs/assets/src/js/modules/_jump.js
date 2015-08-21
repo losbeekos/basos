@@ -40,7 +40,7 @@ category: Javascript
 ---
 
 ```html_example
-<a href="#background" data-jumpto>grid</a>
+<a href="#background" data-jumpto>Jump to background id</a>
 ```
 
 */

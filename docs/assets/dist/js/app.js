@@ -675,7 +675,7 @@ category: Javascript
 ---
 
 ```html_example
-<a href="#background" data-jumpto>grid</a>
+<a href="#background" data-jumpto>Jump to background id</a>
 ```
 
 */
@@ -685,7 +685,7 @@ app.leave = {
             app.leave.inActive();
         });
 
-        app.settings.$body.on('change input', '[data-leave-target]', function () {
+        app.settings.$body.on('change input', '[data-leave-target], [data-leave-target] input:not(submit)', function () {
             app.leave.active();
         });
     },
@@ -704,6 +704,17 @@ app.leave = {
         window.onbeforeunload = undefined;
     }
 };
+
+/*doc
+---
+title: Leave
+name: leave
+category: Javascript
+---
+
+Show a message when leaving the page and form elements are edited.
+
+*/
 app.modals = {
     settings: {
         scrollTopPosition: null,

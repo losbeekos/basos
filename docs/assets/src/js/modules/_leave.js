@@ -4,7 +4,7 @@ app.leave = {
             app.leave.inActive();
         });
 
-        app.settings.$body.on('change input', '[data-leave-target]', function () {
+        app.settings.$body.on('change input', '[data-leave-target], [data-leave-target] input:not(submit)', function () {
             app.leave.active();
         });
     },
@@ -23,3 +23,14 @@ app.leave = {
         window.onbeforeunload = undefined;
     }
 };
+
+/*doc
+---
+title: Leave
+name: leave
+category: Javascript
+---
+
+Show a message when leaving the page and form elements are edited.
+
+*/
