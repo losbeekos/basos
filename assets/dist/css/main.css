@@ -6320,31 +6320,6 @@ Buttons
 	float: right;
 }
 
-/* Button holder
-==========
-*/
-
-.btn-holder {
-	text-align: center;
-	margin: 40px 0 0 0;
-	margin: 2.5rem 0 0 0;
-}
-
-/*doc
----
-title: Holder
-name: holder
-category: Buttons
----
-
-```html_example
-<a class="btn btn--beta btn--small" href="#">button small</a>
-<a class="btn btn--beta btn--medium" href="#">button medium</a>
-<a class="btn btn--beta btn--large" href="#">button large</a>
-```
-
-*/
-
 /* Button group
 ==========
 */
