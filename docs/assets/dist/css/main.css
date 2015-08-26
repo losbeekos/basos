@@ -16,7 +16,7 @@ category: Getting started
 */
 
 /*
-Imports settings.scss and the grid dependency [Susy](http://susy.oddbird.net)
+    Imports settings.scss and the grid dependency [Susy](http://susy.oddbird.net)
 */
 
 /*
@@ -684,28 +684,6 @@ Direction values: up, right, bottom, left.
 @return {Color}
 ````
 
-## REM
-You should use this mixin for all your CSS pixel values. The properties you should use this for are:
-
-- height
-- width
-- margin
-- padding
-- font-size
-- line-height
-
-```
-@include rem($property, $values, $important: false);
-```
-
-```
-@access public
-@param {Value} $property - CSS property
-@param {Value} $values - CSS value(s) in pixels
-@param {Boolean} $important - adds important at the end of the return value, you probably never need this.
-@return {Value} - returns the px fallback for older browsers and it's calculated rem value.
-````
-
 
 ## Font face
 Includes a font-face rule for a custom local font.
@@ -1085,40 +1063,40 @@ form:after,
 */
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /*doc
 ---
@@ -1152,12 +1130,10 @@ category: Typography
 */
 
 ul {
-	padding-left: 18px;
 	padding-left: 1.125rem;
 }
 
 ol {
-	padding-left: 24px;
 	padding-left: 1.5rem;
 }
 
@@ -1221,7 +1197,6 @@ category: Typography
 .off-canvas-nar-bar__list li,
 .btn-group--inline li {
 	display: inline;
-	margin-right: 10px;
 	margin-right: 0.625rem;
 }
 
@@ -1256,281 +1231,218 @@ category: Typography
 */
 
 .margin-alpha {
-	margin: 10px !important;
 	margin: 0.625rem !important;
 }
 
 .margin-alpha-vertical {
-	margin-top: 10px !important;
 	margin-top: 0.625rem !important;
-	margin-bottom: 10px !important;
 	margin-bottom: 0.625rem !important;
 }
 
 .margin-alpha-horizontal {
-	margin-left: 10px !important;
 	margin-left: 0.625rem !important;
-	margin-right: 10px !important;
 	margin-right: 0.625rem !important;
 }
 
 .margin-alpha-right,
 .icon.icon--margin-alpha:before,
 .icon--margin-alpha.modal__close:before {
-	margin-right: 10px !important;
 	margin-right: 0.625rem !important;
 }
 
 .margin-alpha-left,
 .icon-after.icon--margin-alpha:after {
-	margin-left: 10px !important;
 	margin-left: 0.625rem !important;
 }
 
 .margin-alpha-top {
-	margin-top: 10px !important;
 	margin-top: 0.625rem !important;
 }
 
 .margin-alpha-bottom {
-	margin-bottom: 10px !important;
 	margin-bottom: 0.625rem !important;
 }
 
 .margin-beta {
-	margin: 20px !important;
 	margin: 1.25rem !important;
 }
 
 .margin-beta-vertical {
-	margin-top: 20px !important;
 	margin-top: 1.25rem !important;
-	margin-bottom: 20px !important;
 	margin-bottom: 1.25rem !important;
 }
 
 .margin-beta-horizontal {
-	margin-left: 20px !important;
 	margin-left: 1.25rem !important;
-	margin-right: 20px !important;
 	margin-right: 1.25rem !important;
 }
 
 .margin-beta-right,
 .icon.icon--margin-beta:before,
 .icon--margin-beta.modal__close:before {
-	margin-right: 20px !important;
 	margin-right: 1.25rem !important;
 }
 
 .margin-beta-left,
 .icon-after.icon--margin-beta:after {
-	margin-left: 20px !important;
 	margin-left: 1.25rem !important;
 }
 
 .margin-beta-top {
-	margin-top: 20px !important;
 	margin-top: 1.25rem !important;
 }
 
 .margin-beta-bottom {
-	margin-bottom: 20px !important;
 	margin-bottom: 1.25rem !important;
 }
 
 .margin-gamma {
-	margin: 30px !important;
 	margin: 1.875rem !important;
 }
 
 .margin-gamma-vertical {
-	margin-top: 30px !important;
 	margin-top: 1.875rem !important;
-	margin-bottom: 30px !important;
 	margin-bottom: 1.875rem !important;
 }
 
 .margin-gamma-horizontal {
-	margin-left: 30px !important;
 	margin-left: 1.875rem !important;
-	margin-right: 30px !important;
 	margin-right: 1.875rem !important;
 }
 
 .margin-gamma-right {
-	margin-right: 30px !important;
 	margin-right: 1.875rem !important;
 }
 
 .margin-gamma-left {
-	margin-left: 30px !important;
 	margin-left: 1.875rem !important;
 }
 
 .margin-gamma-top {
-	margin-top: 30px !important;
 	margin-top: 1.875rem !important;
 }
 
 .margin-gamma-bottom {
-	margin-bottom: 30px !important;
 	margin-bottom: 1.875rem !important;
 }
 
 .margin-delta {
-	margin: 40px !important;
 	margin: 2.5rem !important;
 }
 
 .margin-delta-vertical {
-	margin-top: 40px !important;
 	margin-top: 2.5rem !important;
-	margin-bottom: 40px !important;
 	margin-bottom: 2.5rem !important;
 }
 
 .margin-delta-horizontal {
-	margin-left: 40px !important;
 	margin-left: 2.5rem !important;
-	margin-right: 40px !important;
 	margin-right: 2.5rem !important;
 }
 
 .margin-delta-right {
-	margin-right: 40px !important;
 	margin-right: 2.5rem !important;
 }
 
 .margin-delta-left {
-	margin-left: 40px !important;
 	margin-left: 2.5rem !important;
 }
 
 .margin-delta-top {
-	margin-top: 40px !important;
 	margin-top: 2.5rem !important;
 }
 
 .margin-delta-bottom {
-	margin-bottom: 40px !important;
 	margin-bottom: 2.5rem !important;
 }
 
 .margin-epsilon {
-	margin: 50px !important;
 	margin: 3.125rem !important;
 }
 
 .margin-epsilon-vertical {
-	margin-top: 50px !important;
 	margin-top: 3.125rem !important;
-	margin-bottom: 50px !important;
 	margin-bottom: 3.125rem !important;
 }
 
 .margin-epsilon-horizontal {
-	margin-left: 50px !important;
 	margin-left: 3.125rem !important;
-	margin-right: 50px !important;
 	margin-right: 3.125rem !important;
 }
 
 .margin-epsilon-right {
-	margin-right: 50px !important;
 	margin-right: 3.125rem !important;
 }
 
 .margin-epsilon-left {
-	margin-left: 50px !important;
 	margin-left: 3.125rem !important;
 }
 
 .margin-epsilon-top {
-	margin-top: 50px !important;
 	margin-top: 3.125rem !important;
 }
 
 .margin-epsilon-bottom {
-	margin-bottom: 50px !important;
 	margin-bottom: 3.125rem !important;
 }
 
 .margin-zeta {
-	margin: 80px !important;
 	margin: 5rem !important;
 }
 
 .margin-zeta-vertical {
-	margin-top: 80px !important;
 	margin-top: 5rem !important;
-	margin-bottom: 80px !important;
 	margin-bottom: 5rem !important;
 }
 
 .margin-zeta-horizontal {
-	margin-left: 80px !important;
 	margin-left: 5rem !important;
-	margin-right: 80px !important;
 	margin-right: 5rem !important;
 }
 
 .margin-zeta-right {
-	margin-right: 80px !important;
 	margin-right: 5rem !important;
 }
 
 .margin-zeta-left {
-	margin-left: 80px !important;
 	margin-left: 5rem !important;
 }
 
 .margin-zeta-top {
-	margin-top: 80px !important;
 	margin-top: 5rem !important;
 }
 
 .margin-zeta-bottom {
-	margin-bottom: 80px !important;
 	margin-bottom: 5rem !important;
 }
 
 .margin-eta {
-	margin: 100px !important;
 	margin: 6.25rem !important;
 }
 
 .margin-eta-vertical {
-	margin-top: 100px !important;
 	margin-top: 6.25rem !important;
-	margin-bottom: 100px !important;
 	margin-bottom: 6.25rem !important;
 }
 
 .margin-eta-horizontal {
-	margin-left: 100px !important;
 	margin-left: 6.25rem !important;
-	margin-right: 100px !important;
 	margin-right: 6.25rem !important;
 }
 
 .margin-eta-right {
-	margin-right: 100px !important;
 	margin-right: 6.25rem !important;
 }
 
 .margin-eta-left {
-	margin-left: 100px !important;
 	margin-left: 6.25rem !important;
 }
 
 .margin-eta-top {
-	margin-top: 100px !important;
 	margin-top: 6.25rem !important;
 }
 
 .margin-eta-bottom {
-	margin-bottom: 100px !important;
 	margin-bottom: 6.25rem !important;
 }
 
@@ -1569,275 +1481,212 @@ category: Typography
 */
 
 .padding-alpha {
-	padding: 10px !important;
 	padding: 0.625rem !important;
 }
 
 .padding-alpha-vertical {
-	padding-top: 10px !important;
 	padding-top: 0.625rem !important;
-	padding-bottom: 10px !important;
 	padding-bottom: 0.625rem !important;
 }
 
 .padding-alpha-horizontal {
-	padding-left: 10px !important;
 	padding-left: 0.625rem !important;
-	padding-right: 10px !important;
 	padding-right: 0.625rem !important;
 }
 
 .padding-alpha-right {
-	padding-right: 10px !important;
 	padding-right: 0.625rem !important;
 }
 
 .padding-alpha-left {
-	padding-left: 10px !important;
 	padding-left: 0.625rem !important;
 }
 
 .padding-alpha-top {
-	padding-top: 10px !important;
 	padding-top: 0.625rem !important;
 }
 
 .padding-alpha-bottom {
-	padding-bottom: 10px !important;
 	padding-bottom: 0.625rem !important;
 }
 
 .padding-beta {
-	padding: 20px !important;
 	padding: 1.25rem !important;
 }
 
 .padding-beta-vertical {
-	padding-top: 20px !important;
 	padding-top: 1.25rem !important;
-	padding-bottom: 20px !important;
 	padding-bottom: 1.25rem !important;
 }
 
 .padding-beta-horizontal {
-	padding-left: 20px !important;
 	padding-left: 1.25rem !important;
-	padding-right: 20px !important;
 	padding-right: 1.25rem !important;
 }
 
 .padding-beta-right {
-	padding-right: 20px !important;
 	padding-right: 1.25rem !important;
 }
 
 .padding-beta-left {
-	padding-left: 20px !important;
 	padding-left: 1.25rem !important;
 }
 
 .padding-beta-top {
-	padding-top: 20px !important;
 	padding-top: 1.25rem !important;
 }
 
 .padding-beta-bottom {
-	padding-bottom: 20px !important;
 	padding-bottom: 1.25rem !important;
 }
 
 .padding-gamma {
-	padding: 30px !important;
 	padding: 1.875rem !important;
 }
 
 .padding-gamma-vertical {
-	padding-top: 30px !important;
 	padding-top: 1.875rem !important;
-	padding-bottom: 30px !important;
 	padding-bottom: 1.875rem !important;
 }
 
 .padding-gamma-horizontal {
-	padding-left: 30px !important;
 	padding-left: 1.875rem !important;
-	padding-right: 30px !important;
 	padding-right: 1.875rem !important;
 }
 
 .padding-gamma-right {
-	padding-right: 30px !important;
 	padding-right: 1.875rem !important;
 }
 
 .padding-gamma-left {
-	padding-left: 30px !important;
 	padding-left: 1.875rem !important;
 }
 
 .padding-gamma-top {
-	padding-top: 30px !important;
 	padding-top: 1.875rem !important;
 }
 
 .padding-gamma-bottom {
-	padding-bottom: 30px !important;
 	padding-bottom: 1.875rem !important;
 }
 
 .padding-delta {
-	padding: 40px !important;
 	padding: 2.5rem !important;
 }
 
 .padding-delta-vertical {
-	padding-top: 40px !important;
 	padding-top: 2.5rem !important;
-	padding-bottom: 40px !important;
 	padding-bottom: 2.5rem !important;
 }
 
 .padding-delta-horizontal {
-	padding-left: 40px !important;
 	padding-left: 2.5rem !important;
-	padding-right: 40px !important;
 	padding-right: 2.5rem !important;
 }
 
 .padding-delta-right {
-	padding-right: 40px !important;
 	padding-right: 2.5rem !important;
 }
 
 .padding-delta-left {
-	padding-left: 40px !important;
 	padding-left: 2.5rem !important;
 }
 
 .padding-delta-top {
-	padding-top: 40px !important;
 	padding-top: 2.5rem !important;
 }
 
 .padding-delta-bottom {
-	padding-bottom: 40px !important;
 	padding-bottom: 2.5rem !important;
 }
 
 .padding-epsilon {
-	padding: 50px !important;
 	padding: 3.125rem !important;
 }
 
 .padding-epsilon-vertical {
-	padding-top: 50px !important;
 	padding-top: 3.125rem !important;
-	padding-bottom: 50px !important;
 	padding-bottom: 3.125rem !important;
 }
 
 .padding-epsilon-horizontal {
-	padding-left: 50px !important;
 	padding-left: 3.125rem !important;
-	padding-right: 50px !important;
 	padding-right: 3.125rem !important;
 }
 
 .padding-epsilon-right {
-	padding-right: 50px !important;
 	padding-right: 3.125rem !important;
 }
 
 .padding-epsilon-left {
-	padding-left: 50px !important;
 	padding-left: 3.125rem !important;
 }
 
 .padding-epsilon-top {
-	padding-top: 50px !important;
 	padding-top: 3.125rem !important;
 }
 
 .padding-epsilon-bottom {
-	padding-bottom: 50px !important;
 	padding-bottom: 3.125rem !important;
 }
 
 .padding-zeta {
-	padding: 80px !important;
 	padding: 5rem !important;
 }
 
 .padding-zeta-vertical {
-	padding-top: 80px !important;
 	padding-top: 5rem !important;
-	padding-bottom: 80px !important;
 	padding-bottom: 5rem !important;
 }
 
 .padding-zeta-horizontal {
-	padding-left: 80px !important;
 	padding-left: 5rem !important;
-	padding-right: 80px !important;
 	padding-right: 5rem !important;
 }
 
 .padding-zeta-right {
-	padding-right: 80px !important;
 	padding-right: 5rem !important;
 }
 
 .padding-zeta-left {
-	padding-left: 80px !important;
 	padding-left: 5rem !important;
 }
 
 .padding-zeta-top {
-	padding-top: 80px !important;
 	padding-top: 5rem !important;
 }
 
 .padding-zeta-bottom {
-	padding-bottom: 80px !important;
 	padding-bottom: 5rem !important;
 }
 
 .padding-eta {
-	padding: 100px !important;
 	padding: 6.25rem !important;
 }
 
 .padding-eta-vertical {
-	padding-top: 100px !important;
 	padding-top: 6.25rem !important;
-	padding-bottom: 100px !important;
 	padding-bottom: 6.25rem !important;
 }
 
 .padding-eta-horizontal {
-	padding-left: 100px !important;
 	padding-left: 6.25rem !important;
-	padding-right: 100px !important;
 	padding-right: 6.25rem !important;
 }
 
 .padding-eta-right {
-	padding-right: 100px !important;
 	padding-right: 6.25rem !important;
 }
 
 .padding-eta-left {
-	padding-left: 100px !important;
 	padding-left: 6.25rem !important;
 }
 
 .padding-eta-top {
-	padding-top: 100px !important;
 	padding-top: 6.25rem !important;
 }
 
 .padding-eta-bottom {
-	padding-bottom: 100px !important;
 	padding-bottom: 6.25rem !important;
 }
 
@@ -1933,23 +1782,23 @@ category: Typography
 }
 
 .text-align-right-beta-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .text-align-right-gamma-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .text-align-left {
@@ -1957,23 +1806,23 @@ category: Typography
 }
 
 .text-align-left-beta-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .text-align-left-gamma-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .text-align-center {
@@ -1981,23 +1830,23 @@ category: Typography
 }
 
 .text-align-center-beta-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .text-align-center-gamma-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /* Text transform
@@ -2098,49 +1947,46 @@ category: Typography
 .css-columns-2,
 .css-columns-3,
 .css-columns-4 {
-	-webkit-column-gap: 20px;
-	-moz-column-gap: 20px;
-	column-gap: 20px;
 	-webkit-column-gap: 1.25rem;
 	-moz-column-gap: 1.25rem;
 	column-gap: 1.25rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .css-columns-2 { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .css-columns-3 { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .css-columns-4 { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /*doc
@@ -2449,14 +2295,14 @@ Add this class to an element to fire an animation.
 
 [class|=column] {
 	width: 100%;
-	margin-bottom: 2.85714%; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+	margin-bottom: 2.8571428571%; /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 [class|=column]:first-child {
@@ -2490,134 +2336,134 @@ Add this class to an element to fire an animation.
 [class|=column-eta],
 [class|=column-eta-and-up] {
 	float: left;
-	margin-left: 2.85714%;
+	margin-left: 2.8571428571%;
 }
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 .column-centered,
 .column-centered:first-child {
@@ -2748,7 +2594,6 @@ body {
 	color: #333333;
 	opacity: 0;
 	font-weight: 300;
-	-webkit-transition: opacity 0.05s ease-in;
 	transition: opacity 0.05s ease-in;
 }
 
@@ -2765,7 +2610,6 @@ a {
 	text-decoration: none;
 	display: inline;
 	cursor: pointer;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }
 
@@ -2774,7 +2618,6 @@ a:hover {
 }
 
 button {
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }
 
@@ -2797,7 +2640,6 @@ p {
 
 .disable-transitions,
 .disable-transitions * {
-	-webkit-transition: none !important;
 	transition: none !important;
 }
 
@@ -2809,39 +2651,32 @@ p {
 .container-beta {
 	margin-left: auto;
 	margin-right: auto;
-	min-width: 320px;
 	min-width: 20rem;
-	padding-left: 10px;
 	padding-left: 0.625rem;
-	padding-right: 10px;
 	padding-right: 0.625rem;
 	margin-top: 0;
-	margin-top: 0;
-	margin-bottom: 0;
 	margin-bottom: 0; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .container {
-	max-width: 1280px;
 	max-width: 80rem;
 }
 
 .container-beta {
-	max-width: 800px;
 	max-width: 50rem;
 }
 
@@ -2866,24 +2701,22 @@ There are two containers available, 'container' and 'container-beta'. These cont
 
 .section {
 	color: #ffffff;
-	padding-top: 30px;
 	padding-top: 1.875rem;
-	padding-bottom: 30px;
 	padding-bottom: 1.875rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .section--alpha {
@@ -2917,31 +2750,28 @@ There are two containers available, 'container' and 'container-beta'. These cont
 .section-img {
 	background: url("../dist/img/someimage.jpg") center center fixed;
 	background-size: cover;
-	height: 300px;
 	height: 18.75rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .section__list {
-	margin-bottom: 30px;
 	margin-bottom: 1.875rem;
 }
 
 .section__paragraph {
-	margin-bottom: 30px;
 	margin-bottom: 1.875rem;
 }
 
@@ -3053,70 +2883,58 @@ h6 {
 
 h1,
 .h1 {
-	font-size: 26px;
 	font-size: 1.625rem;
-	margin-bottom: 10px;
 	margin-bottom: 0.625rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 h2,
 .h2 {
-	font-size: 22px;
 	font-size: 1.375rem;
-	margin-bottom: 10px;
 	margin-bottom: 0.625rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 h3,
 .h3 {
-	font-size: 22px;
 	font-size: 1.375rem;
-	margin-bottom: 10px;
 	margin-bottom: 0.625rem;
 }
 
 h4,
 .h4 {
-	font-size: 18px;
 	font-size: 1.125rem;
-	margin-bottom: 8px;
 	margin-bottom: 0.5rem;
 }
 
 h5,
 .h5 {
-	font-size: 16px;
 	font-size: 1rem;
-	margin-bottom: 8px;
 	margin-bottom: 0.5rem;
 }
 
 h6,
 .h6 {
-	font-size: 14px;
 	font-size: 0.875rem;
-	margin-bottom: 5px;
 	margin-bottom: 0.3125rem;
 }
 
@@ -3496,11 +3314,8 @@ h2.styleguide {
 }
 
 .styleguide-nav__item {
-	font-size: 14px;
 	font-size: 0.875rem;
-	margin-left: 10px;
 	margin-left: 0.625rem;
-	margin-top: 5px;
 	margin-top: 0.3125rem;
 }
 
@@ -3513,7 +3328,6 @@ h2.styleguide {
 }
 
 .codeBlock {
-	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
 }
 
@@ -3960,20 +3774,20 @@ hll {
 	z-index: 2000;
 	visibility: hidden;
 	overflow-y: auto; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .modal.modal-show {
@@ -3993,18 +3807,14 @@ hll {
 	opacity: 0;
 	height: 100%;
 	-webkit-transform: scale(0.7);
-	-ms-transform: scale(0.7);
 	transform: scale(0.7);
-	-webkit-transition: all 0.3s;
 	transition: all 0.3s;
-	padding: 40px;
 	padding: 2.5rem;
 }
 
 .modal-show .modal__content {
 	opacity: 1;
 	-webkit-transform: scale(1);
-	-ms-transform: scale(1);
 	transform: scale(1);
 }
 
@@ -4018,32 +3828,23 @@ hll {
 	height: 100%;
 	z-index: 1000;
 	opacity: 0;
-	-webkit-transition-property: visibility opacity;
 	transition-property: visibility opacity;
-	-webkit-transition-delay: 0.1s;
 	transition-delay: 0.1s;
-	-webkit-transition-duration: 0.5s;
 	transition-duration: 0.5s;
 }
 
 .modal-show .modal__overlay {
 	visibility: visible;
 	opacity: 0.4;
-	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 }
 
 .modal__close {
 	position: absolute;
-	top: 10px;
 	top: 0.625rem;
-	right: 10px;
 	right: 0.625rem;
-	padding: 10px;
 	padding: 0.625rem;
-	font-size: 30px;
 	font-size: 1.875rem;
-	line-height: 30px;
 	line-height: 1.875rem;
 }
 
@@ -4129,22 +3930,21 @@ app.modals.closeModal();
 .block,
 .styleguide-nav {
 	background: #f7f7f7;
-	padding: 10px;
 	padding: 0.625rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /*doc
@@ -4178,48 +3978,48 @@ category: Content
 	margin-bottom: 2%;
 	margin-left: 1%;
 	margin-right: 1%; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .block-grid__item:before {
@@ -4233,7 +4033,6 @@ category: Content
 	left: 0;
 	opacity: 0;
 	z-index: 1;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }
 
@@ -4296,7 +4095,6 @@ This little module will fancy you a nice block grid. Breakpoint settings can be 
 
 .tabs li + li {
 	margin-left: 0;
-	margin-left: 0;
 }
 
 .tab {
@@ -4310,7 +4108,6 @@ This little module will fancy you a nice block grid. Breakpoint settings can be 
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	padding: 15px 20px;
 	padding: 0.9375rem 1.25rem;
 }
 
@@ -4331,7 +4128,6 @@ This little module will fancy you a nice block grid. Breakpoint settings can be 
 }
 
 .tab-content {
-	padding: 20px 0;
 	padding: 1.25rem 0;
 }
 
@@ -4340,7 +4136,6 @@ This little module will fancy you a nice block grid. Breakpoint settings can be 
 	height: 0;
 	width: 0;
 	opacity: 0;
-	-webkit-transition: opacity 0.5s;
 	transition: opacity 0.5s;
 }
 
@@ -4397,22 +4192,19 @@ category: Content
 	width: 100%;
 	max-height: 100%;
 	z-index: 999;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 	text-align: center;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
-	height: 50px;
 	height: 3.125rem;
-	min-width: 320px;
 	min-width: 20rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .csspositionsticky .nav-bar {
@@ -4431,17 +4223,15 @@ category: Content
 	z-index: 2;
 	display: inline-block;
 	margin-bottom: -6px;
-	padding-top: 12px;
 	padding-top: 0.75rem;
-	min-height: 50px;
 	min-height: 3.125rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar--transform {
@@ -4455,23 +4245,23 @@ category: Content
 }
 
 .nav-bar--transform.nav-bar--always-show-on-mobile { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar--transparent:not(.nav-bar--fixed) { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .no-csspositionsticky .nav-bar--fixed {
@@ -4483,17 +4273,15 @@ category: Content
 .nav-bar__container {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 1280px;
 	max-width: 80rem;
-	min-width: 320px;
 	min-width: 20rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar__container:before {
@@ -4505,24 +4293,24 @@ category: Content
 	z-index: 1;
 	width: 100%;
 	height: 100%; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar__nav {
 	height: 0; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar--mobile-show .nav-bar__nav {
@@ -4539,17 +4327,15 @@ category: Content
 	top: 0;
 	right: 0;
 	z-index: 2;
-	height: 50px;
 	height: 3.125rem;
-	width: 50px;
 	width: 3.125rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar__trigger:active,
@@ -4560,7 +4346,6 @@ category: Content
 .nav-bar__trigger:before {
 	content: "";
 	color: #ffffff;
-	font-size: 30px;
 	font-size: 1.875rem;
 }
 
@@ -4574,17 +4359,16 @@ category: Content
 	z-index: 0;
 	clear: both;
 	overflow-y: auto;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 	-webkit-transform: translate3d(0, -100%, 0);
 	transform: translate3d(0, -100%, 0); /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar--mobile-show .nav-bar__list {
@@ -4595,32 +4379,30 @@ category: Content
 .nav-bar__list li {
 	display: block;
 	margin: 0; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar__link {
 	display: block;
 	color: #ffffff;
 	text-align: center;
-	padding: 20px 30px;
 	padding: 1.25rem 1.875rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .touch .nav-bar__link {
-	-webkit-transition: none;
 	transition: none;
 }
 
@@ -4672,7 +4454,6 @@ category: Navigation
 
 .table {
 	width: 100%;
-	margin-bottom: 30px;
 	margin-bottom: 1.875rem;
 }
 
@@ -4989,7 +4770,6 @@ category: Content
 .dropdown.dropdown--show .dropdown__content {
 	visibility: visible;
 	opacity: 1;
-	-webkit-transition: all 0.2s 0;
 	transition: all 0.2s 0;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
@@ -5009,18 +4789,14 @@ category: Content
 	border: 0 solid #dedede;
 	opacity: 0;
 	z-index: 999;
-	-webkit-transition: all 0.2s 0.5s;
 	transition: all 0.2s 0.5s;
 	-webkit-transform: translate3d(0, 10%, 0);
 	transform: translate3d(0, 10%, 0);
-	min-width: 200px;
 	min-width: 12.5rem;
-	max-width: 300px;
 	max-width: 18.75rem;
 }
 
 [data-dropdown-trigger=click] .dropdown__content {
-	-webkit-transition-delay: 0;
 	transition-delay: 0;
 }
 
@@ -5029,7 +4805,6 @@ category: Content
 	display: block;
 	border-top: 0 solid #f4f4f4;
 	color: #333333;
-	padding: 10px 15px;
 	padding: 0.625rem 0.9375rem;
 }
 
@@ -5097,26 +4872,22 @@ category: Content
 	position: absolute;
 	z-index: 100;
 	opacity: 0;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }
 
 .tooltip.tooltip--active[data-tooltip-position=top] .tooltip__content,
 .tooltip.tooltip--active[data-tooltip-position=bottom] .tooltip__content {
 	-webkit-transform: translate(-50%, 0);
-	-ms-transform: translate(-50%, 0);
 	transform: translate(-50%, 0);
 }
 
 .tooltip.tooltip--active[data-tooltip-position=right] .tooltip__content {
 	-webkit-transform: translate(100%, 0);
-	-ms-transform: translate(100%, 0);
 	transform: translate(100%, 0);
 }
 
 .tooltip.tooltip--active[data-tooltip-position=left] .tooltip__content {
 	-webkit-transform: translate(-100%, 0);
-	-ms-transform: translate(-100%, 0);
 	transform: translate(-100%, 0);
 }
 
@@ -5132,7 +4903,6 @@ category: Content
 	min-width: 150px;
 	padding: 10px;
 	border-radius: 0;
-	font-size: 12px;
 	font-size: 0.75rem;
 }
 
@@ -5150,7 +4920,6 @@ category: Content
 [data-tooltip-position=bottom] .tooltip__content {
 	left: 50%;
 	-webkit-transform: translate(-50%, 0);
-	-ms-transform: translate(-50%, 0);
 	transform: translate(-50%, 0);
 }
 
@@ -5161,14 +4930,12 @@ category: Content
 }
 
 .no-csstransforms [data-tooltip-position=top] .tooltip__content,
-.no-csstransforms
-[data-tooltip-position=bottom] .tooltip__content {
+.no-csstransforms [data-tooltip-position=bottom] .tooltip__content {
 	margin-left: -110px;
 }
 
 [data-tooltip-position=top] .tooltip__content {
 	-webkit-transform: translate(-50%, 10%);
-	-ms-transform: translate(-50%, 10%);
 	transform: translate(-50%, 10%);
 }
 
@@ -5179,7 +4946,6 @@ category: Content
 
 [data-tooltip-position=bottom] .tooltip__content {
 	-webkit-transform: translate(-50%, -10%);
-	-ms-transform: translate(-50%, -10%);
 	transform: translate(-50%, -10%);
 }
 
@@ -5202,7 +4968,6 @@ category: Content
 [data-tooltip-position=right] .tooltip__content {
 	right: -10px;
 	-webkit-transform: translate(90%, 0);
-	-ms-transform: translate(90%, 0);
 	transform: translate(90%, 0);
 }
 
@@ -5218,7 +4983,6 @@ category: Content
 [data-tooltip-position=left] .tooltip__content {
 	left: -10px;
 	-webkit-transform: translate(-90%, 0);
-	-ms-transform: translate(-90%, 0);
 	transform: translate(-90%, 0);
 }
 
@@ -5311,9 +5075,7 @@ Tooltips are used as fancy title attributes to display some info about a certain
 	top: 50%;
 	color: #333333;
 	-webkit-transform: translate(0, -50%);
-	-ms-transform: translate(0, -50%);
 	transform: translate(0, -50%);
-	right: 20px;
 	right: 1.25rem;
 }
 
@@ -5329,7 +5091,6 @@ Tooltips are used as fancy title attributes to display some info about a certain
 .accordion__content {
 	overflow: hidden;
 	padding: 0 20px;
-	-webkit-transition: all, 0.2s;
 	transition: all, 0.2s;
 }
 
@@ -5414,9 +5175,7 @@ category: Content
 .breadcrumbs {
 	background: #f5f5f5;
 	border-radius: 0;
-	padding: 15px 20px;
 	padding: 0.9375rem 1.25rem;
-	margin: 0 0 40px 0;
 	margin: 0 0 2.5rem 0;
 }
 
@@ -5426,14 +5185,12 @@ category: Content
 }
 
 .breadcrumbs a {
-	margin-right: 10px;
 	margin-right: 0.625rem;
 }
 
 .breadcrumbs a:after {
 	content: "/";
 	color: #cccccc;
-	margin-left: 10px;
 	margin-left: 0.625rem;
 }
 
@@ -5472,12 +5229,10 @@ category: Navigation
 .pricing-table__header {
 	background: #333333;
 	color: #ffffff;
-	padding: 15px 20px;
 	padding: 0.9375rem 1.25rem;
 }
 
 .pricing-table__content {
-	padding: 15px 20px;
 	padding: 0.9375rem 1.25rem;
 }
 
@@ -5490,20 +5245,16 @@ category: Navigation
 }
 
 .pricing-table__price {
-	font-size: 30px;
 	font-size: 1.875rem;
 }
 
 .pricing-table__description {
 	color: #999999;
-	font-size: 20px;
 	font-size: 1.25rem;
 }
 
 .pricing-table__content--action {
-	padding-top: 20px;
 	padding-top: 1.25rem;
-	padding-bottom: 20px;
 	padding-bottom: 1.25rem;
 }
 
@@ -5549,7 +5300,6 @@ category: Content
 .media-list--bordered .media {
 	border-top: 1px solid #eaeaea;
 	margin-bottom: 0;
-	padding: 20px 0;
 	padding: 1.25rem 0;
 }
 
@@ -5558,26 +5308,23 @@ category: Content
 }
 
 .media {
-	margin-bottom: 40px;
 	margin-bottom: 2.5rem;
 }
 
 .media .media {
-	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
 }
 
 .media__alpha {
 	float: left;
-	margin-bottom: 20px;
 	margin-bottom: 1.25rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .media--right .media__alpha {
@@ -5725,7 +5472,6 @@ progress,
 	border-radius: 0;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	height: 15px;
 	height: 0.9375rem;
 }
 
@@ -5739,13 +5485,10 @@ progress[value]::-webkit-progress-value {
 	background-size: 25px 15px, 100% 100%, 100% 100%;
 	border-radius: 0;
 	border: 0;
-	-webkit-transition: width 0.2s;
 	transition: width 0.2s;
 	-webkit-animation: progress-bar 1s linear infinite;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
-	background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #2690b0;
 }
@@ -5756,7 +5499,6 @@ progress[value]::-moz-progress-bar {
 	border: 0;
 	transition: width 0.2s;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #2690b0;
@@ -5768,7 +5510,6 @@ progress[value]::-ms-fill {
 	border: 0;
 	transition: width 0.2s;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #2690b0;
@@ -5778,13 +5519,10 @@ progress[value]::-ms-fill {
 	background-size: 25px 15px, 100% 100%, 100% 100%;
 	border-radius: 0;
 	border: 0;
-	-webkit-transition: width 0.2s;
 	transition: width 0.2s;
 	-webkit-animation: progress-bar 1s linear infinite;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
-	background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #2690b0;
 }
@@ -5795,13 +5533,10 @@ progress:not([value]) {
 	background-size: 25px 15px, 100% 100%, 100% 100%;
 	border-radius: 0;
 	border: 0;
-	-webkit-transition: width 0.2s;
 	transition: width 0.2s;
 	-webkit-animation: progress-bar 1s linear infinite;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
-	background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 }
 
@@ -5809,13 +5544,10 @@ progress:not([value])::-webkit-progress-bar {
 	background-size: 25px 15px, 100% 100%, 100% 100%;
 	border-radius: 0;
 	border: 0;
-	-webkit-transition: width 0.2s;
 	transition: width 0.2s;
 	-webkit-animation: progress-bar 1s linear infinite;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
-	background-image: -webkit-linear-gradient(135deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #f7f7f7;
 }
@@ -5826,7 +5558,6 @@ progress:not([value])::-moz-progress-bar {
 	border: 0;
 	transition: width 0.2s;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #f7f7f7;
@@ -5838,7 +5569,6 @@ progress:not([value])::-ms-fill {
 	border: 0;
 	transition: width 0.2s;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #f7f7f7;
@@ -5897,7 +5627,6 @@ category: Content
 
 .spinner:after {
 	content: "";
-	font-size: 30px;
 	font-size: 1.875rem;
 }
 
@@ -5979,45 +5708,45 @@ category: Content
 	position: relative;
 	overflow: hidden;
 	display: none; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .parallax__img {
 	min-width: 100%; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /*doc
@@ -6041,14 +5770,11 @@ category: Content
 
 .toggle {
 	overflow: hidden;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
-	max-height: 500px;
 	max-height: 31.25rem;
 }
 
 .toggle--no-animation {
-	-webkit-transition: none;
 	transition: none;
 }
 
@@ -6151,11 +5877,8 @@ category: Navigation
 	color: #ffffff;
 	text-align: center;
 	border: none;
-	font-size: 30px;
 	font-size: 1.875rem;
-	width: 50px;
 	width: 3.125rem;
-	height: 50px;
 	height: 3.125rem;
 }
 
@@ -6174,7 +5897,6 @@ category: Navigation
 }
 
 .off-canvas-toggle-left {
-	right: -50px;
 	right: -3.125rem;
 }
 
@@ -6187,7 +5909,6 @@ category: Navigation
 }
 
 .off-canvas-toggle-right {
-	left: -50px;
 	left: -3.125rem;
 }
 
@@ -6205,7 +5926,6 @@ category: Navigation
 	z-index: 9999;
 	top: 0;
 	height: 100%;
-	width: 260px;
 	width: 16.25rem;
 }
 
@@ -6213,7 +5933,7 @@ category: Navigation
 	left: 0;
 	-webkit-transform: translate3d(-260px, 0, 0);
 	transform: translate3d(-260px, 0, 0);
-	-webkit-transition: -webkit-transform 0.2s;
+	transition: -webkit-transform 0.2s;
 	transition: transform 0.2s;
 }
 
@@ -6234,7 +5954,7 @@ category: Navigation
 	right: 0;
 	-webkit-transform: translate3d(260px, 0, 0);
 	transform: translate3d(260px, 0, 0);
-	-webkit-transition: -webkit-transform 0.2s;
+	transition: -webkit-transform 0.2s;
 	transition: transform 0.2s;
 }
 
@@ -6252,13 +5972,11 @@ category: Navigation
 }
 
 .off-canvas-push {
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }
 
 .off-canvas-show-left .off-canvas-push {
 	-webkit-transform: translateX(260px);
-	-ms-transform: translateX(260px);
 	transform: translateX(260px);
 }
 
@@ -6273,7 +5991,6 @@ category: Navigation
 	z-index: 999;
 	visibility: hidden;
 	opacity: 0;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }
 
@@ -6303,7 +6020,6 @@ category: Navigation
 .off-canvas-nav__link {
 	display: block;
 	color: #000000;
-	padding: 20px;
 	padding: 1.25rem;
 }
 
@@ -6318,40 +6034,60 @@ category: Navigation
 */
 
 .off-canvas-nav-bar { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+}
+
+.off-canvas-nav-bar--transparent:not(.nav-bar--fixed) { /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+}
+
+.off-canvas-nav-bar__nav { /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .off-canvas-nav-bar__item { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .off-canvas-nav-bar__link { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /*doc
@@ -6370,12 +6106,10 @@ Buttons
 */
 
 .btn-container {
-	margin: 0 0 30px 0;
 	margin: 0 0 1.875rem 0;
 }
 
 .btn-container a {
-	padding: 10px 18px;
 	padding: 0.625rem 1.125rem;
 }
 
@@ -6400,26 +6134,25 @@ Buttons
 */
 
 .btn-group {
-	margin: 0 0 30px 0;
 	margin: 0 0 1.875rem 0; /*doc
-  ---
-  title: Inline
-  name: inline
-  category: Buttons
-  ---
-  
-  These work with the button classes so you can use those to change color and size.
-  
-  ```html_example
-  <ul class="btn-group btn-group--inline">
-      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-  </ul>
-  ```
-  
-  */
+---
+title: Inline
+name: inline
+category: Buttons
+---
+
+These work with the button classes so you can use those to change color and size.
+
+```html_example
+<ul class="btn-group btn-group--inline">
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+</ul>
+```
+
+*/
 }
 
 .btn-group > li a,
@@ -6703,34 +6436,30 @@ These work with the button classes so you can use those to change color, size is
 */
 
 .btn--small {
-	padding: 8px 30px;
 	padding: 0.5rem 1.875rem;
-	font-size: 16px;
 	font-size: 1rem;
 }
 
 .btn--medium {
-	padding: 12px 35px;
 	padding: 0.75rem 2.1875rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .btn--large {
-	padding: 15px 40px;
 	padding: 0.9375rem 2.5rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /*doc
@@ -6780,7 +6509,6 @@ Add more colors in the settings file under "buttons" if you need to.
 	text-align: center;
 	border-width: 0;
 	border-style: solid;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 	-webkit-appearance: none;
 	-moz-appearance: none;
@@ -6790,50 +6518,49 @@ Add more colors in the settings file under "buttons" if you need to.
 	user-select: none;
 	background-color: #f7f7f7;
 	border-color: #eaeaea;
-	line-height: 16px;
 	line-height: 1rem; /*doc
-  ---
-  title: Mask
-  name: mask
-  category: Buttons
-  ---
-  
-  ```html_example
-  <a class="btn btn--mask btn--medium" href="#">button medium</a>
-  ```
-  
-  */ /*doc
-  ---
-  title: Block
-  name: block
-  category: Buttons
-  ---
-  
-  ```html_example
-  <div class="grid">
-      <div class="column-6">
-          <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
-      </div>
-      <div class="column-6">
-          <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
-      </div>
-  </div>
-  ```
-  
-  */ /*doc
-  ---
-  title: Ghost
-  name: ghost
-  category: Buttons
-  ---
-  
-  Add more colors in the settings file under "buttons" if you need to.
-  
-  ```html_example
-  <a class="btn btn--ghost btn--dark btn--small" href="#">black</a>
-  ```
-  
-  */
+---
+title: Mask
+name: mask
+category: Buttons
+---
+
+```html_example
+<a class="btn btn--mask btn--medium" href="#">button medium</a>
+```
+
+*/ /*doc
+---
+title: Block
+name: block
+category: Buttons
+---
+
+```html_example
+<div class="grid">
+    <div class="column-6">
+        <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+    </div>
+    <div class="column-6">
+        <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+    </div>
+</div>
+```
+
+*/ /*doc
+---
+title: Ghost
+name: ghost
+category: Buttons
+---
+
+Add more colors in the settings file under "buttons" if you need to.
+
+```html_example
+<a class="btn btn--ghost btn--dark btn--small" href="#">black</a>
+```
+
+*/
 }
 
 .btn:hover {
@@ -6880,7 +6607,6 @@ Add more colors in the settings file under "buttons" if you need to.
 
 .btn:focus {
 	outline: none;
-	-webkit-transition-duration: 0.05s;
 	transition-duration: 0.05s;
 }
 
@@ -7336,7 +7062,6 @@ Commonly used for triggers. For example a navigation trigger
 */
 
 form {
-	margin: 0 0 40px 0;
 	margin: 0 0 2.5rem 0;
 }
 
@@ -7350,11 +7075,8 @@ legend {
 	padding: 0;
 	border: 0;
 	border-bottom: 1px solid #e5e5e5;
-	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
-	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 32px;
 	line-height: 2rem;
 }
 
@@ -7378,11 +7100,9 @@ textarea {
 	outline: 0;
 	width: 100%;
 	box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.1);
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	padding: 10px;
 	padding: 0.625rem;
 }
 
@@ -7446,7 +7166,6 @@ category: Forms
 
 textarea {
 	display: block;
-	height: 160px;
 	height: 10rem;
 }
 
@@ -7461,14 +7180,12 @@ select {
 	cursor: pointer;
 	z-index: 2;
 	border: none;
-	-webkit-transition: box-shadow 0.2s;
 	transition: box-shadow 0.2s;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 	appearance: none;
 	text-overflow: '';
 	text-indent: 1px;
-	padding: 10px 10px 10px 5px;
 	padding: 0.625rem 0.625rem 0.625rem 0.3125rem;
 }
 
@@ -7583,22 +7300,21 @@ Use the grid to your advantage.
 */
 
 .form--vertical .form__row {
-	margin-bottom: 2.85714%;
+	margin-bottom: 2.8571428571%;
 }
 
 .form__label {
 	margin-bottom: 0; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .form__label label {
-	line-height: 40px;
 	line-height: 2.5rem;
 }
 
@@ -7659,9 +7375,7 @@ category: Forms
 	z-index: 1;
 	color: #bbbbbb;
 	line-height: 42px;
-	font-size: 14px;
 	font-size: 0.875rem;
-	height: 42px;
 	height: 2.625rem;
 }
 
@@ -7694,7 +7408,6 @@ category: Forms
 */
 
 .form__switch {
-	margin-top: 5px;
 	margin-top: 0.3125rem;
 }
 
@@ -7731,17 +7444,16 @@ category: Forms
 }
 
 .form__input-list { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .form__input-list li + li {
-	margin-top: 5px;
 	margin-top: 0.3125rem;
 }
 
@@ -7764,7 +7476,6 @@ category: Forms
 */
 
 .form__data {
-	line-height: 40px;
 	line-height: 2.5rem;
 }
 
@@ -7784,15 +7495,14 @@ category: Forms
 */
 
 .form__actions {
-	margin-top: 20px;
 	margin-top: 1.25rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .form--vertical .form__actions {
@@ -7816,7 +7526,6 @@ category: Forms
 */
 
 .form__required-field {
-	font-size: 14px;
 	font-size: 0.875rem;
 }
 
@@ -7917,7 +7626,6 @@ input[type=radio] + label:before {
 	display: block;
 	border-radius: 0;
 	border: 1px solid #e0e0e0;
-	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }
 
@@ -7938,7 +7646,6 @@ input[type=radio] + label:after {
 	text-align: center;
 	color: #2690b0;
 	opacity: 0;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 }
 
@@ -8023,9 +7730,7 @@ category: Forms
 
 input[type=range] {
 	-webkit-appearance: none;
-	margin-top: 7px;
 	margin-top: 0.4375rem;
-	width: 300px;
 	width: 18.75rem;
 }
 
@@ -8038,7 +7743,6 @@ input[type=range]::-webkit-slider-runnable-track {
 	height: 25px;
 	border-radius: 0;
 	border: 1px solid #e0e0e0;
-	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }
 
@@ -8110,7 +7814,6 @@ input[type=range]::-ms-fill-lower {
 .range-output {
 	display: inline-block;
 	color: #2690b0;
-	margin-top: 8px;
 	margin-top: 0.5rem;
 }
 
@@ -8120,15 +7823,12 @@ input[type=range]::-ms-fill-lower {
 	height: 25px;
 	border-radius: 0;
 	border: 1px solid #e0e0e0;
-	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
 }
 
 .rangeslider {
 	position: relative;
-	margin-top: 7px;
 	margin-top: 0.4375rem;
-	width: 300px;
 	width: 18.75rem;
 }
 
@@ -8143,7 +7843,6 @@ input[type=range]::-ms-fill-lower {
 	position: absolute;
 	top: 0;
 	border: 0;
-	-webkit-transition: none;
 	transition: none;
 }
 
@@ -8228,7 +7927,6 @@ category: Forms
 	box-shadow: none;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
-	padding-right: 30px;
 	padding-right: 1.875rem;
 }
 
@@ -8276,10 +7974,7 @@ category: Forms
 	background: #b02626;
 	color: #ffffff;
 	border-radius: 0 0 0 0;
-	border-radius: 0 0 0 0;
-	padding: 10px;
 	padding: 0.625rem;
-	font-size: 14px;
 	font-size: 0.875rem;
 }
 
@@ -8290,8 +7985,6 @@ category: Forms
 .form__input--error + .parsley-container {
 	display: inline-block;
 	border-radius: 0 0 0 0;
-	border-radius: 0 0 0 0;
-	margin-top: 16px;
 	margin-top: 1rem;
 }
 
@@ -8455,16 +8148,13 @@ We use the jQuery plugin [parsleyjs](http://parsleyjs.org) for our validation en
 .form__password-toggle {
 	position: absolute;
 	text-decoration: none;
-	top: 8px;
 	top: 0.5rem;
-	right: 10px;
 	right: 0.625rem;
 }
 
 .form__password-toggle:after {
 	display: inline-block;
 	content: "";
-	font-size: 18px;
 	font-size: 1.125rem;
 }
 
@@ -8513,7 +8203,6 @@ category: Forms
 	border-style: solid;
 	border-radius: 0;
 	position: relative;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 	-webkit-transform-style: preserve-3d;
 	transform-style: preserve-3d;
@@ -8522,7 +8211,6 @@ category: Forms
 	color: #09222a;
 	background: #eaf7fa;
 	border-color: #d5eef6;
-	margin-bottom: 30px;
 	margin-bottom: 1.875rem;
 }
 
@@ -8534,9 +8222,7 @@ category: Forms
 .notification:before {
 	position: absolute;
 	top: 0;
-	left: 10px;
 	left: 0.625rem;
-	font-size: 40px;
 	font-size: 2.5rem;
 }
 
@@ -8616,25 +8302,22 @@ app.notifications.add(target, message, size, type);
 */
 
 .notification--alpha {
-	padding: 20px 60px 20px 20px;
 	padding: 1.25rem 3.75rem 1.25rem 1.25rem;
 }
 
 .notification--alpha:before {
-	top: 2px;
 	top: 0.125rem;
 }
 
 .notification--beta {
-	padding: 20px 60px 20px 20px;
 	padding: 1.25rem 3.75rem 1.25rem 1.25rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /* Notification styles
@@ -8668,18 +8351,17 @@ app.notifications.add(target, message, size, type);
 */
 
 .notification__text {
-	margin-left: 40px;
 	margin-left: 2.5rem;
 }
 
 .notification--beta .notification__text { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .notification__close {
@@ -8688,16 +8370,13 @@ app.notifications.add(target, message, size, type);
 	padding: 0;
 	background: none;
 	border: none;
-	top: 20px;
 	top: 1.25rem;
-	right: 20px;
 	right: 1.25rem;
 }
 
 .notification__close:before {
 	content: "";
 	opacity: 0.2;
-	-webkit-transition: opacity 0.2s;
 	transition: opacity 0.2s;
 }
 
@@ -8725,9 +8404,7 @@ app.notifications.add(target, message, size, type);
 	margin-bottom: 0;
 	border: none;
 	color: #ffffff;
-	-webkit-transition: all 0.4s;
 	transition: all 0.4s;
-	padding: 20px 0;
 	padding: 1.25rem 0;
 }
 
@@ -8764,7 +8441,6 @@ app.notifications.add(target, message, size, type);
 
 .notification--cookie .notification__text {
 	margin-left: 0;
-	margin-bottom: 10px;
 	margin-bottom: 0.625rem;
 }
 
@@ -8843,6 +8519,8 @@ category: Content
 Content
 */
 
+/*# sourceMappingURL=main.css.map */
+
 @media (min-width: 0px) {
 
 .column-alpha-and-up--first {
@@ -8850,23 +8528,23 @@ Content
 }
 
 .column-alpha-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-alpha-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-alpha-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-alpha-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-alpha-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-alpha-and-up-3 {
@@ -8874,11 +8552,11 @@ Content
 }
 
 .column-alpha-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-alpha-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-alpha-and-up-5 {
@@ -8886,11 +8564,11 @@ Content
 }
 
 .grid--no-gutters .column-alpha-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-alpha-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-alpha-and-up-6 {
@@ -8898,23 +8576,23 @@ Content
 }
 
 .column-alpha-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-alpha-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-alpha-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-alpha-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-alpha-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-alpha-and-up-9 {
@@ -8922,19 +8600,19 @@ Content
 }
 
 .column-alpha-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-alpha-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-alpha-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-alpha-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-alpha-and-up-12 {
@@ -8966,23 +8644,23 @@ Content
 }
 
 .column-beta-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-beta-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-beta-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-beta-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-beta-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-beta-3 {
@@ -8990,11 +8668,11 @@ Content
 }
 
 .column-beta-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-beta-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-beta-5 {
@@ -9002,11 +8680,11 @@ Content
 }
 
 .grid--no-gutters .column-beta-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-beta-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-beta-6 {
@@ -9014,23 +8692,23 @@ Content
 }
 
 .column-beta-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-beta-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-beta-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-beta-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-beta-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-beta-9 {
@@ -9038,19 +8716,19 @@ Content
 }
 
 .column-beta-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-beta-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-beta-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-beta-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-beta-12 {
@@ -9063,44 +8741,35 @@ Content
 
 .container,
 .container-beta {
-	padding-left: 20px;
 	padding-left: 1.25rem;
-	padding-right: 20px;
 	padding-right: 1.25rem;
 }
 
 .section {
-	padding-top: 45px;
 	padding-top: 2.8125rem;
-	padding-bottom: 45px;
 	padding-bottom: 2.8125rem;
 }
 
 .section-img {
-	height: 400px;
 	height: 25rem;
 }
 
 h1,
 .h1 {
-	font-size: 30px;
 	font-size: 1.875rem;
-	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
 }
 
 .block,
 .styleguide-nav {
-	padding: 20px;
 	padding: 1.25rem;
 }
 
 .block-grid__item {
-	width: 31.33333%;
+	width: 31.3333333333%;
 }
 
 .parallax {
-	height: 350px;
 	height: 21.875rem;
 }
 
@@ -9138,7 +8807,7 @@ h1,
 
 [class|=column] {
 	float: left;
-	margin-left: 2.85714%;
+	margin-left: 2.8571428571%;
 }
 
 .column-beta-and-up--first {
@@ -9147,88 +8816,84 @@ h1,
 
 .column-1,
 .column-beta-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-1,
-.grid--no-gutters
-  .column-beta-and-up-1 {
-	width: 8.33333%;
+.grid--no-gutters .column-beta-and-up-1 {
+	width: 8.3333333333%;
 }
 
 .pre-1,
 .pre-1:first-child {
-	margin-left: 8.57143%;
+	margin-left: 8.5714285714%;
 }
 
 .post-1,
 .post-1:first-child {
-	margin-right: 8.57143%;
+	margin-right: 8.5714285714%;
 }
 
 .column-2,
 .column-beta-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-2,
-.grid--no-gutters
-  .column-beta-and-up-2 {
-	width: 16.66667%;
+.grid--no-gutters .column-beta-and-up-2 {
+	width: 16.6666666667%;
 }
 
 .pre-2,
 .pre-2:first-child {
-	margin-left: 17.14286%;
+	margin-left: 17.1428571429%;
 }
 
 .post-2,
 .post-2:first-child {
-	margin-right: 17.14286%;
+	margin-right: 17.1428571429%;
 }
 
 .column-3,
 .media__alpha,
 .column-beta-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-3,
 .grid--no-gutters .media__alpha,
-.grid--no-gutters
-  .column-beta-and-up-3 {
+.grid--no-gutters .column-beta-and-up-3 {
 	width: 25%;
 }
 
 .pre-3,
 .pre-3:first-child {
-	margin-left: 25.71429%;
+	margin-left: 25.7142857143%;
 }
 
 .post-3,
 .post-3:first-child {
-	margin-right: 25.71429%;
+	margin-right: 25.7142857143%;
 }
 
 .column-4,
 .column-beta-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-4,
-.grid--no-gutters
-  .column-beta-and-up-4 {
-	width: 33.33333%;
+.grid--no-gutters .column-beta-and-up-4 {
+	width: 33.3333333333%;
 }
 
 .pre-4,
 .pre-4:first-child {
-	margin-left: 34.28571%;
+	margin-left: 34.2857142857%;
 }
 
 .post-4,
 .post-4:first-child {
-	margin-right: 34.28571%;
+	margin-right: 34.2857142857%;
 }
 
 .column-5,
@@ -9237,51 +8902,48 @@ h1,
 }
 
 .grid--no-gutters .column-5,
-.grid--no-gutters
-  .column-beta-and-up-5 {
-	width: 41.66667%;
+.grid--no-gutters .column-beta-and-up-5 {
+	width: 41.6666666667%;
 }
 
 .pre-5,
 .pre-5:first-child {
-	margin-left: 42.85714%;
+	margin-left: 42.8571428571%;
 }
 
 .post-5,
 .post-5:first-child {
-	margin-right: 42.85714%;
+	margin-right: 42.8571428571%;
 }
 
 .column-6,
 .column-beta-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-6,
-.grid--no-gutters
-  .column-beta-and-up-6 {
+.grid--no-gutters .column-beta-and-up-6 {
 	width: 50%;
 }
 
 .pre-6,
 .pre-6:first-child {
-	margin-left: 51.42857%;
+	margin-left: 51.4285714286%;
 }
 
 .post-6,
 .post-6:first-child {
-	margin-right: 51.42857%;
+	margin-right: 51.4285714286%;
 }
 
 .column-7,
 .column-beta-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-7,
-.grid--no-gutters
-  .column-beta-and-up-7 {
-	width: 58.33333%;
+.grid--no-gutters .column-beta-and-up-7 {
+	width: 58.3333333333%;
 }
 
 .pre-7,
@@ -9296,88 +8958,84 @@ h1,
 
 .column-8,
 .column-beta-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-8,
-.grid--no-gutters
-  .column-beta-and-up-8 {
-	width: 66.66667%;
+.grid--no-gutters .column-beta-and-up-8 {
+	width: 66.6666666667%;
 }
 
 .pre-8,
 .pre-8:first-child {
-	margin-left: 68.57143%;
+	margin-left: 68.5714285714%;
 }
 
 .post-8,
 .post-8:first-child {
-	margin-right: 68.57143%;
+	margin-right: 68.5714285714%;
 }
 
 .column-9,
 .media__beta,
 .column-beta-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-9,
 .grid--no-gutters .media__beta,
-.grid--no-gutters
-  .column-beta-and-up-9 {
+.grid--no-gutters .column-beta-and-up-9 {
 	width: 75%;
 }
 
 .pre-9,
 .pre-9:first-child {
-	margin-left: 77.14286%;
+	margin-left: 77.1428571429%;
 }
 
 .post-9,
 .post-9:first-child {
-	margin-right: 77.14286%;
+	margin-right: 77.1428571429%;
 }
 
 .column-10,
 .column-beta-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-10,
-.grid--no-gutters
-  .column-beta-and-up-10 {
-	width: 83.33333%;
+.grid--no-gutters .column-beta-and-up-10 {
+	width: 83.3333333333%;
 }
 
 .pre-10,
 .pre-10:first-child {
-	margin-left: 85.71429%;
+	margin-left: 85.7142857143%;
 }
 
 .post-10,
 .post-10:first-child {
-	margin-right: 85.71429%;
+	margin-right: 85.7142857143%;
 }
 
 .column-11,
 .column-beta-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-11,
-.grid--no-gutters
-  .column-beta-and-up-11 {
-	width: 91.66667%;
+.grid--no-gutters .column-beta-and-up-11 {
+	width: 91.6666666667%;
 }
 
 .pre-11,
 .pre-11:first-child {
-	margin-left: 94.28571%;
+	margin-left: 94.2857142857%;
 }
 
 .post-11,
 .post-11:first-child {
-	margin-right: 94.28571%;
+	margin-right: 94.2857142857%;
 }
 
 .column-12,
@@ -9386,23 +9044,21 @@ h1,
 }
 
 .grid--no-gutters .column-12,
-.grid--no-gutters
-  .column-beta-and-up-12 {
+.grid--no-gutters .column-beta-and-up-12 {
 	width: 100%;
 }
 
 .pre-12,
 .pre-12:first-child {
-	margin-left: 102.85714%;
+	margin-left: 102.857142857%;
 }
 
 .post-12,
 .post-12:first-child {
-	margin-right: 102.85714%;
+	margin-right: 102.857142857%;
 }
 
 .modal {
-	min-width: 500px;
 	min-width: 31.25rem;
 }
 
@@ -9416,16 +9072,12 @@ h1,
 }
 
 .btn--medium {
-	padding: 12px 35px;
 	padding: 0.75rem 2.1875rem;
-	font-size: 17px;
 	font-size: 1.0625rem;
 }
 
 .btn--large {
-	padding: 18px 50px;
 	padding: 1.125rem 3.125rem;
-	font-size: 18px;
 	font-size: 1.125rem;
 }
 
@@ -9434,30 +9086,24 @@ h1,
 }
 
 .form__input-list {
-	margin-top: 8px;
 	margin-top: 0.5rem;
 }
 
 .form__actions {
-	margin-left: 42.85714%;
+	margin-left: 42.8571428571%;
 }
 
 .notification--beta {
-	padding: 30px 60px 30px 30px;
 	padding: 1.875rem 3.75rem 1.875rem 1.875rem;
-	min-height: 85px;
 	min-height: 5.3125rem;
 }
 
 .notification--beta:before {
-	font-size: 60px;
 	font-size: 3.75rem;
-	left: 20px;
 	left: 1.25rem;
 }
 
 .notification--beta .notification__text {
-	margin-left: 70px;
 	margin-left: 4.375rem;
 }
 
@@ -9479,23 +9125,23 @@ h1,
 }
 
 .column-gamma-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-gamma-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-gamma-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-gamma-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-gamma-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-gamma-3 {
@@ -9503,11 +9149,11 @@ h1,
 }
 
 .column-gamma-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-gamma-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-gamma-5 {
@@ -9515,11 +9161,11 @@ h1,
 }
 
 .grid--no-gutters .column-gamma-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-gamma-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-gamma-6 {
@@ -9527,23 +9173,23 @@ h1,
 }
 
 .column-gamma-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-gamma-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-gamma-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-gamma-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-gamma-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-gamma-9 {
@@ -9551,19 +9197,19 @@ h1,
 }
 
 .column-gamma-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-gamma-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-gamma-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-gamma-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-gamma-12 {
@@ -9592,7 +9238,6 @@ h1,
 	padding-top: 0;
 	min-height: inherit;
 	margin-bottom: 0;
-	margin-top: 18px;
 	margin-top: 1.125rem;
 }
 
@@ -9616,15 +9261,12 @@ h1,
 }
 
 .off-canvas-nav-bar__container {
-	padding-left: 40px;
 	padding-left: 2.5rem;
-	padding-right: 40px;
 	padding-right: 2.5rem;
 }
 
 .off-canvas-nav-bar__nav {
 	float: right;
-	margin-left: 0;
 	margin-left: 0;
 }
 
@@ -9674,9 +9316,6 @@ h1,
 .css-columns-2,
 .css-columns-3,
 .css-columns-4 {
-	-webkit-column-gap: 40px;
-	-moz-column-gap: 40px;
-	column-gap: 40px;
 	-webkit-column-gap: 2.5rem;
 	-moz-column-gap: 2.5rem;
 	column-gap: 2.5rem;
@@ -9705,23 +9344,23 @@ h1,
 }
 
 .column-gamma-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-gamma-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-gamma-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-gamma-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-gamma-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-gamma-and-up-3 {
@@ -9729,11 +9368,11 @@ h1,
 }
 
 .column-gamma-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-gamma-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-gamma-and-up-5 {
@@ -9741,11 +9380,11 @@ h1,
 }
 
 .grid--no-gutters .column-gamma-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-gamma-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-gamma-and-up-6 {
@@ -9753,23 +9392,23 @@ h1,
 }
 
 .column-gamma-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-gamma-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-gamma-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-gamma-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-gamma-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-gamma-and-up-9 {
@@ -9777,19 +9416,19 @@ h1,
 }
 
 .column-gamma-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-gamma-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-gamma-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-gamma-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-gamma-and-up-12 {
@@ -9802,35 +9441,27 @@ h1,
 
 .container,
 .container-beta {
-	padding-left: 40px;
 	padding-left: 2.5rem;
-	padding-right: 40px;
 	padding-right: 2.5rem;
 }
 
 .section {
-	padding-top: 60px;
 	padding-top: 3.75rem;
-	padding-bottom: 60px;
 	padding-bottom: 3.75rem;
 }
 
 .section-img {
-	height: 500px;
 	height: 31.25rem;
 }
 
 h1,
 .h1 {
-	font-size: 34px;
 	font-size: 2.125rem;
-	margin-bottom: 34px;
 	margin-bottom: 2.125rem;
 }
 
 h2,
 .h2 {
-	font-size: 26px;
 	font-size: 1.625rem;
 }
 
@@ -9841,14 +9472,12 @@ h2,
 	width: 50%;
 	max-height: 100%;
 	-webkit-transform: translate(-50%, -50%);
-	-ms-transform: translate(-50%, -50%);
 	transform: translate(-50%, -50%);
 	max-width: 630px;
 }
 
 .block,
 .styleguide-nav {
-	padding: 30px;
 	padding: 1.875rem;
 }
 
@@ -9863,7 +9492,6 @@ h2,
 	padding-top: 0;
 	min-height: inherit;
 	margin-bottom: 0;
-	margin-top: 18px;
 	margin-top: 1.125rem;
 }
 
@@ -9887,9 +9515,7 @@ h2,
 }
 
 .nav-bar__container {
-	padding-left: 40px;
 	padding-left: 2.5rem;
-	padding-right: 40px;
 	padding-right: 2.5rem;
 }
 
@@ -9900,7 +9526,6 @@ h2,
 .nav-bar__nav {
 	float: right;
 	height: auto;
-	margin-left: 0;
 	margin-left: 0;
 }
 
@@ -9927,7 +9552,6 @@ h2,
 }
 
 .parallax {
-	height: 450px;
 	height: 28.125rem;
 }
 
@@ -9941,10 +9565,8 @@ h2,
 	max-height: 100%;
 	overflow-y: auto;
 	z-index: 999;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s;
 	text-align: center;
-	min-width: 320px;
 	min-width: 20rem; /**
     *
     * Usage:
@@ -9969,9 +9591,7 @@ h2,
 .off-canvas-nav-bar .logo {
 	display: inline-block;
 	margin-bottom: -6px;
-	padding-top: 12px;
 	padding-top: 0.75rem;
-	min-height: 50px;
 	min-height: 3.125rem; /**
     *
     * Usage:
@@ -10002,16 +9622,6 @@ h2,
     **/
 }
 
-.off-canvas-nav-bar--transparent:not(.nav-bar--fixed) { /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-}
-
 .no-csspositionsticky .off-canvas-nav-bar--fixed {
 	position: fixed;
 	top: 0;
@@ -10021,20 +9631,8 @@ h2,
 .off-canvas-nav-bar__container {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 1280px;
 	max-width: 80rem;
-	min-width: 320px;
 	min-width: 20rem; /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-}
-
-.off-canvas-nav-bar__nav { /**
     *
     * Usage:
     * @include mq('gamma-and-up') {
@@ -10049,7 +9647,6 @@ h2,
 	border-top: 1px solid #3c3c3c;
 	max-height: 0;
 	overflow: hidden;
-	-webkit-transition: all 0.2s;
 	transition: all 0.2s; /**
     *
     * Usage:
@@ -10061,7 +9658,6 @@ h2,
 }
 
 .nav-bar--mobile-show .off-canvas-nav-bar__list {
-	max-height: 800px;
 	max-height: 50rem;
 }
 
@@ -10081,7 +9677,6 @@ h2,
 	display: block;
 	color: #ffffff;
 	text-align: center;
-	padding: 20px 30px;
 	padding: 1.25rem 1.875rem; /**
     *
     * Usage:
@@ -10112,23 +9707,23 @@ h2,
 }
 
 .column-delta-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-delta-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-delta-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-delta-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-delta-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-delta-and-up-3 {
@@ -10136,11 +9731,11 @@ h2,
 }
 
 .column-delta-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-delta-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-delta-and-up-5 {
@@ -10148,11 +9743,11 @@ h2,
 }
 
 .grid--no-gutters .column-delta-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-delta-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-delta-and-up-6 {
@@ -10160,23 +9755,23 @@ h2,
 }
 
 .column-delta-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-delta-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-delta-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-delta-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-delta-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-delta-and-up-9 {
@@ -10184,19 +9779,19 @@ h2,
 }
 
 .column-delta-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-delta-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-delta-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-delta-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-delta-and-up-12 {
@@ -10216,23 +9811,23 @@ h2,
 }
 
 .column-delta-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-delta-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-delta-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-delta-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-delta-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-delta-3 {
@@ -10240,11 +9835,11 @@ h2,
 }
 
 .column-delta-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-delta-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-delta-5 {
@@ -10252,11 +9847,11 @@ h2,
 }
 
 .grid--no-gutters .column-delta-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-delta-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-delta-6 {
@@ -10264,23 +9859,23 @@ h2,
 }
 
 .column-delta-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-delta-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-delta-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-delta-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-delta-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-delta-9 {
@@ -10288,19 +9883,19 @@ h2,
 }
 
 .column-delta-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-delta-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-delta-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-delta-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-delta-12 {
@@ -10324,23 +9919,23 @@ h2,
 }
 
 .column-epsilon-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-epsilon-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-epsilon-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-3 {
@@ -10348,11 +9943,11 @@ h2,
 }
 
 .column-epsilon-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-epsilon-and-up-5 {
@@ -10360,11 +9955,11 @@ h2,
 }
 
 .grid--no-gutters .column-epsilon-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-epsilon-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-6 {
@@ -10372,23 +9967,23 @@ h2,
 }
 
 .column-epsilon-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-epsilon-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-epsilon-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-9 {
@@ -10396,19 +9991,19 @@ h2,
 }
 
 .column-epsilon-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-epsilon-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-epsilon-and-up-12 {
@@ -10428,23 +10023,23 @@ h2,
 }
 
 .column-epsilon-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-epsilon-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-epsilon-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-epsilon-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-epsilon-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-epsilon-3 {
@@ -10452,11 +10047,11 @@ h2,
 }
 
 .column-epsilon-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-epsilon-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-epsilon-5 {
@@ -10464,11 +10059,11 @@ h2,
 }
 
 .grid--no-gutters .column-epsilon-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-epsilon-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-epsilon-6 {
@@ -10476,23 +10071,23 @@ h2,
 }
 
 .column-epsilon-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-epsilon-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-epsilon-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-epsilon-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-epsilon-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-epsilon-9 {
@@ -10500,19 +10095,19 @@ h2,
 }
 
 .column-epsilon-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-epsilon-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-epsilon-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-epsilon-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-epsilon-12 {
@@ -10536,23 +10131,23 @@ h2,
 }
 
 .column-zeta-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-zeta-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-zeta-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-zeta-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-zeta-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-zeta-3 {
@@ -10560,11 +10155,11 @@ h2,
 }
 
 .column-zeta-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-zeta-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-zeta-5 {
@@ -10572,11 +10167,11 @@ h2,
 }
 
 .grid--no-gutters .column-zeta-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-zeta-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-zeta-6 {
@@ -10584,23 +10179,23 @@ h2,
 }
 
 .column-zeta-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-zeta-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-zeta-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-zeta-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-zeta-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-zeta-9 {
@@ -10608,19 +10203,19 @@ h2,
 }
 
 .column-zeta-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-zeta-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-zeta-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-zeta-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-zeta-12 {
@@ -10644,23 +10239,23 @@ h2,
 }
 
 .column-zeta-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-zeta-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-zeta-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-zeta-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-zeta-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-zeta-and-up-3 {
@@ -10668,11 +10263,11 @@ h2,
 }
 
 .column-zeta-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-zeta-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-zeta-and-up-5 {
@@ -10680,11 +10275,11 @@ h2,
 }
 
 .grid--no-gutters .column-zeta-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-zeta-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-zeta-and-up-6 {
@@ -10692,23 +10287,23 @@ h2,
 }
 
 .column-zeta-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-zeta-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-zeta-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-zeta-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-zeta-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-zeta-and-up-9 {
@@ -10716,19 +10311,19 @@ h2,
 }
 
 .column-zeta-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-zeta-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-zeta-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-zeta-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-zeta-and-up-12 {
@@ -10748,23 +10343,23 @@ h2,
 }
 
 .column-eta-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-eta-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-eta-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-eta-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-eta-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-eta-and-up-3 {
@@ -10772,11 +10367,11 @@ h2,
 }
 
 .column-eta-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-eta-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-eta-and-up-5 {
@@ -10784,11 +10379,11 @@ h2,
 }
 
 .grid--no-gutters .column-eta-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-eta-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-eta-and-up-6 {
@@ -10796,23 +10391,23 @@ h2,
 }
 
 .column-eta-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-eta-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-eta-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-eta-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-eta-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-eta-and-up-9 {
@@ -10820,19 +10415,19 @@ h2,
 }
 
 .column-eta-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-eta-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-eta-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-eta-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-eta-and-up-12 {
@@ -10857,7 +10452,6 @@ h2,
 	z-index: 9999;
 	top: 0;
 	height: 100%;
-	width: 260px;
 	width: 16.25rem;
 }
 
@@ -10865,7 +10459,7 @@ h2,
 	left: 0;
 	-webkit-transform: translate3d(-260px, 0, 0);
 	transform: translate3d(-260px, 0, 0);
-	-webkit-transition: -webkit-transform 0.2s;
+	transition: -webkit-transform 0.2s;
 	transition: transform 0.2s;
 }
 
@@ -10886,7 +10480,7 @@ h2,
 	right: 0;
 	-webkit-transform: translate3d(260px, 0, 0);
 	transform: translate3d(260px, 0, 0);
-	-webkit-transition: -webkit-transform 0.2s;
+	transition: -webkit-transform 0.2s;
 	transition: transform 0.2s;
 }
 
@@ -10919,7 +10513,6 @@ h2,
 .off-canvas-nav-bar__link {
 	display: block;
 	color: #000000;
-	padding: 20px;
 	padding: 1.25rem;
 }
 
@@ -10950,23 +10543,23 @@ h2,
 }
 
 .column-alpha-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-alpha-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-alpha-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-alpha-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-alpha-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-alpha-3 {
@@ -10974,11 +10567,11 @@ h2,
 }
 
 .column-alpha-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-alpha-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-alpha-5 {
@@ -10986,11 +10579,11 @@ h2,
 }
 
 .grid--no-gutters .column-alpha-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-alpha-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-alpha-6 {
@@ -10998,23 +10591,23 @@ h2,
 }
 
 .column-alpha-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-alpha-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-alpha-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-alpha-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-alpha-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-alpha-9 {
@@ -11022,19 +10615,19 @@ h2,
 }
 
 .column-alpha-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-alpha-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-alpha-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-alpha-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-alpha-12 {
@@ -11075,8 +10668,8 @@ abbr[title]:after {
 }
 
 /*
-   * Don't show links for images, or javascript/internal links
-   */
+     * Don't show links for images, or javascript/internal links
+     */
 
 .ir a:after,
 a[href^="javascript:"]:after,
@@ -11158,7 +10751,6 @@ h3 {
 @-webkit-keyframes bounceIn {
 
 0%,20%,40%,60%,80%,100% {
-	-webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -11200,7 +10792,6 @@ h3 {
 @keyframes bounceIn {
 
 0%,20%,40%,60%,80%,100% {
-	-webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -11242,7 +10833,6 @@ h3 {
 @-webkit-keyframes bounceInDown {
 
 0%,60%,75%,90%,100% {
-	-webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -11278,7 +10868,6 @@ h3 {
 @keyframes bounceInDown {
 
 0%,60%,75%,90%,100% {
-	-webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -11314,7 +10903,6 @@ h3 {
 @-webkit-keyframes bounceInLeft {
 
 0%,60%,75%,90%,100% {
-	-webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -11350,7 +10938,6 @@ h3 {
 @keyframes bounceInLeft {
 
 0%,60%,75%,90%,100% {
-	-webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -11386,7 +10973,6 @@ h3 {
 @-webkit-keyframes bounceInRight {
 
 0%,60%,75%,90%,100% {
-	-webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -11422,7 +11008,6 @@ h3 {
 @keyframes bounceInRight {
 
 0%,60%,75%,90%,100% {
-	-webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -11458,7 +11043,6 @@ h3 {
 @-webkit-keyframes bounceInUp {
 
 0%,60%,75%,90%,100% {
-	-webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -11494,7 +11078,6 @@ h3 {
 @keyframes bounceInUp {
 
 0%,60%,75%,90%,100% {
-	-webkit-transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 	transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
@@ -12156,7 +11739,6 @@ h3 {
 0% {
 	-webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
 	transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-	-webkit-transition-timing-function: ease-in;
 	transition-timing-function: ease-in;
 	opacity: 0;
 }
@@ -12164,7 +11746,6 @@ h3 {
 40% {
 	-webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
 	transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-	-webkit-transition-timing-function: ease-in;
 	transition-timing-function: ease-in;
 }
 
@@ -12191,7 +11772,6 @@ h3 {
 0% {
 	-webkit-transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
 	transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
-	-webkit-transition-timing-function: ease-in;
 	transition-timing-function: ease-in;
 	opacity: 0;
 }
@@ -12199,7 +11779,6 @@ h3 {
 40% {
 	-webkit-transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
 	transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
-	-webkit-transition-timing-function: ease-in;
 	transition-timing-function: ease-in;
 }
 
@@ -12226,7 +11805,6 @@ h3 {
 0% {
 	-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
 	transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-	-webkit-transition-timing-function: ease-in;
 	transition-timing-function: ease-in;
 	opacity: 0;
 }
@@ -12234,7 +11812,6 @@ h3 {
 40% {
 	-webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
 	transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-	-webkit-transition-timing-function: ease-in;
 	transition-timing-function: ease-in;
 }
 
@@ -12261,7 +11838,6 @@ h3 {
 0% {
 	-webkit-transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
 	transform: perspective(400px) rotate3d(0, 1, 0, 90deg);
-	-webkit-transition-timing-function: ease-in;
 	transition-timing-function: ease-in;
 	opacity: 0;
 }
@@ -12269,7 +11845,6 @@ h3 {
 40% {
 	-webkit-transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
 	transform: perspective(400px) rotate3d(0, 1, 0, -20deg);
-	-webkit-transition-timing-function: ease-in;
 	transition-timing-function: ease-in;
 }
 

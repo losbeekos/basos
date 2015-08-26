@@ -863,26 +863,6 @@ Direction values: up, right, bottom, left.</p><div class="codeBlock">
 @return {Color}</pre>
   </div>
 </div>
-<h2>REM</h2>
-<p class="styleguide">You should use this mixin for all your CSS pixel values. The properties you should use this for are:</p><ul class="styleguide"><li>height</li>
-<li>width</li>
-<li>margin</li>
-<li>padding</li>
-<li>font-size</li>
-<li>line-height</li>
-</ul><div class="codeBlock">
-  <div class="highlight">
-    <pre>@include rem($property, $values, $important: false);</pre>
-  </div>
-</div><div class="codeBlock">
-  <div class="highlight">
-    <pre>@access public
-@param {Value} $property - CSS property
-@param {Value} $values - CSS value(s) in pixels
-@param {Boolean} $important - adds important at the end of the return value, you probably never need this.
-@return {Value} - returns the px fallback for older browsers and it's calculated rem value.</pre>
-  </div>
-</div>
 <h2>Font face</h2>
 <p class="styleguide">Includes a font-face rule for a custom local font.</p><div class="codeBlock">
   <div class="highlight">
