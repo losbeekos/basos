@@ -12,34 +12,31 @@ app.cycle = {
         var self = this;
 
         if(app.cycle.settings.$el.length > 0){
-            yepnope.injectJs(app.pathBower + 'jquery-cycle2/build/jquery.cycle2.min.js',
-                function(){
-                    app.cycle.settings.$el
-                        .cycle({
-                            slides           : app.cycle.settings.slides,
-                            pager            : app.cycle.settings.pager,
-                            prev             : app.cycle.settings.prev,
-                            next             : app.cycle.settings.next,
-                            pagerActiveClass : app.cycle.settings.pagerActiveClass,
-                            pauseOnHover     : true,
-                            swipe            : true,
-                            log              : false,
-                            paused           : true,
-                            fx               : 'none'
-                        })
-                        .on('cycle-update-view', function (event, optionHash, slideOptionsHash, currentSlideEl) {
-                            if (optionHash.slideCount > 1) {
-                                $(this).addClass('cycle-active');
-                            }
-                        })
-                        .on('cycle-before', function () {
-                            // $('.thumbnail-grid__item').each(function () {
-                            //     $(this).removeClass('scrollspy--in-view').removeClass('animation-fadeIn');
-                            // });
-                        })
-                        .on('cycle-after', function () {
-                            // app.scrollSpy.init();
-                        });
+            app.cycle.settings.$el
+                .cycle({
+                    slides           : app.cycle.settings.slides,
+                    pager            : app.cycle.settings.pager,
+                    prev             : app.cycle.settings.prev,
+                    next             : app.cycle.settings.next,
+                    pagerActiveClass : app.cycle.settings.pagerActiveClass,
+                    pauseOnHover     : true,
+                    swipe            : true,
+                    log              : false,
+                    paused           : true,
+                    fx               : 'none'
+                })
+                .on('cycle-update-view', function (event, optionHash, slideOptionsHash, currentSlideEl) {
+                    if (optionHash.slideCount > 1) {
+                        $(this).addClass('cycle-active');
+                    }
+                })
+                .on('cycle-before', function () {
+                    // $('.thumbnail-grid__item').each(function () {
+                    //     $(this).removeClass('scrollspy--in-view').removeClass('animation-fadeIn');
+                    // });
+                })
+                .on('cycle-after', function () {
+                    // app.scrollSpy.init();
                 });
         }
     }

@@ -1,3 +1,17 @@
+/*doc
+---
+title: Javascript
+name: 9_javascript
+category: Javascript
+---
+
+Javascript
+
+*/
+
+var app = app || {},
+    helper = helper || {};
+
 app.settings = {
     $document: $(document),
     $window: $(window),

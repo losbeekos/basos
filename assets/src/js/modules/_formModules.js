@@ -16,9 +16,7 @@ app.formModules = {
 
     range: function () {
         if (!Modernizr.inputtypes.range) {
-            yepnope.injectJs(app.pathBower + 'rangeslider.js/dist/rangeslider.min.js', function () {
-                app.formModules.settings.$range.rangeslider();
-            });
+            app.formModules.settings.$range.rangeslider();
         }
 
         app.formModules.settings.$range.on('input', function () {
@@ -75,17 +73,12 @@ app.formModules = {
                 }
             };
 
-        if(app.formModules.settings.$validation.length > 0){
-            yepnope.injectJs(app.pathBower + 'parsleyjs/src/i18n/' + app.formModules.settings.validationLanguage + '.js', function () {
-                yepnope.injectJs(app.pathBower + 'parsleyjs/dist/parsley.js',
-                    function(){
-                        app.formModules.settings.$validation.each(function () {
-                            $(this).parsley(parsleyOptions);
-                        });
-
-                        window.ParsleyValidator.setLocale(app.formModules.settings.validationLanguage);
-                    });
+        if(app.formModules.settings.$validation.length > 0) {
+            app.formModules.settings.$validation.each(function () {
+                $(this).parsley(parsleyOptions);
             });
+
+            window.ParsleyValidator.setLocale(app.formModules.settings.validationLanguage);
         }
     },
 

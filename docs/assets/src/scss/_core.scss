@@ -411,7 +411,7 @@ Pure CSS ellipsis class
 
 /* Optional components
 ==========
-You can comments some of these out
+You can comment some of these out
 for a smaller generated CSS file.
 */
 
@@ -454,7 +454,6 @@ Buttons
 */
 
 @import "core/components/buttons/container";
-@import "core/components/buttons/holder";
 @import "core/components/buttons/group";
 @import "core/components/buttons/sizes";
 @import "core/components/buttons/styles";

@@ -5,7 +5,13 @@ name: 1_getting_started
 category: Getting started
 ---
 
-Explain a little bit about the framework and who made it. Describe an installation process. Explanation of h5bp and normalize.
+## Normalize
+
+## H5BP
+
+## Animate
+
+## 
 
 */
 
@@ -3383,7 +3389,7 @@ Margin modifiers available;
 
 /* Optional components
 ==========
-You can comments some of these out
+You can comment some of these out
 for a smaller generated CSS file.
 */
 
@@ -6319,31 +6325,6 @@ Buttons
 .btn-container--right ul {
 	float: right;
 }
-
-/* Button holder
-==========
-*/
-
-.btn-holder {
-	text-align: center;
-	margin: 40px 0 0 0;
-	margin: 2.5rem 0 0 0;
-}
-
-/*doc
----
-title: Holder
-name: holder
-category: Buttons
----
-
-```html_example
-<a class="btn btn--beta btn--small" href="#">button small</a>
-<a class="btn btn--beta btn--medium" href="#">button medium</a>
-<a class="btn btn--beta btn--large" href="#">button large</a>
-```
-
-*/
 
 /* Button group
 ==========

@@ -27,7 +27,6 @@ module.exports = function(grunt) {
                     expand: true,
                     cwd: '<%= basos.src %>/',
                     src: [
-                        'js/main.js',
                         'js/vendor/**/*',
                     ],
                     dest: '<%= basos.dist %>/'
@@ -59,14 +58,20 @@ module.exports = function(grunt) {
         },
 
         concat: {
-            options: {
-                banner: "'use strict';\n",
-            },
-
             app: {
                 src: [
-                    '<%= basos.src %>/js/_mediaQueries.js',
+                    // Bower components
+                    'bower_components/fastclick/lib/fastclick.js',
+                    'bower_components/fitvids/jquery.fitvids.js',
+                    'bower_components/jquery-placeholder/jquery.placeholder.js',
+                    'bower_components/packery/dist/packery.pkgd.js',
+                    'bower_components/parsleyjs/src/i18n/nl.js',
+                    'bower_components/parsleyjs/dist/parsley.js',
+                    'bower_components/rangeslider.js/dist/rangeslider.js',
+
+                    // Basos
                     '<%= basos.src %>/js/_settings.js',
+                    '<%= basos.src %>/js/_mediaQueries.js',
                     '<%= basos.src %>/js/helpers/*.js',
                     '<%= basos.src %>/js/modules/*.js',
                     '<%= basos.src %>/js/_init.js'
@@ -107,7 +112,6 @@ module.exports = function(grunt) {
                     helper: true,
                     document: true,
                     window: true,
-                    yepnope: true,
                     FastClick: true,
                     Modernizr: true,
                     url: true,
@@ -170,7 +174,7 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: '<%= basos.dist %>/js/',
-                        src: ['main.js', 'app.js'],
+                        src: ['app.js'],
                         dest: '<%= basos.dist %>/js/',
                         ext: '.'+todayTimestamp+'.min.js',
                         extDot: 'first'
@@ -254,7 +258,6 @@ module.exports = function(grunt) {
                 bsFiles: {
                     src : [
                         '<%= basos.dist %>/js/app.js',
-                        '<%= basos.dist %>/js/main.js',
                         '<%= basos.dist %>/js/vendor/modernizr/modernizr.js',
                         '<%= basos.dist %>/css/main.css',
                         '<%= basos.dist %>/img/**/*',
