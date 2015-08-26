@@ -6589,8 +6589,14 @@ Add more colors in the settings file under "buttons" if you need to.
 }
 
 .btn.btn--ghost:hover {
-	color: white;
-	border-color: white;
+	background: #f7f7f7;
+	color: #ffffff;
+	border-color: #f7f7f7;
+}
+
+.btn.btn--ghost.btn--alpha:hover,
+.btn.btn--ghost.btn--light:hover {
+	color: #333333;
 }
 
 .btn-group--inline .btn {
@@ -6679,8 +6685,14 @@ Add more colors in the settings file under "buttons" if you need to.
 }
 
 .btn--mask.btn--ghost:hover {
-	color: rgba(26, 26, 26, 0);
-	border-color: rgba(26, 26, 26, 0);
+	background: transparent;
+	color: #ffffff;
+	border-color: transparent;
+}
+
+.btn--mask.btn--ghost.btn--alpha:hover,
+.btn--mask.btn--ghost.btn--light:hover {
+	color: #333333;
 }
 
 .btn-group--inline .btn--mask {
@@ -6739,8 +6751,14 @@ Add more colors in the settings file under "buttons" if you need to.
 }
 
 .btn--light.btn--ghost:hover {
-	color: white;
-	border-color: white;
+	background: #ffffff;
+	color: #ffffff;
+	border-color: #ffffff;
+}
+
+.btn--light.btn--ghost.btn--alpha:hover,
+.btn--light.btn--ghost.btn--light:hover {
+	color: #333333;
 }
 
 .btn-group--inline .btn--light {
@@ -6782,8 +6800,14 @@ Add more colors in the settings file under "buttons" if you need to.
 }
 
 .btn--dark.btn--ghost:hover {
-	color: #1a1a1a;
-	border-color: #1a1a1a;
+	background: #000000;
+	color: #ffffff;
+	border-color: #000000;
+}
+
+.btn--dark.btn--ghost.btn--alpha:hover,
+.btn--dark.btn--ghost.btn--light:hover {
+	color: #333333;
 }
 
 .btn-group--inline .btn--dark {
@@ -6825,8 +6849,14 @@ Add more colors in the settings file under "buttons" if you need to.
 }
 
 .btn--alpha.btn--ghost:hover {
-	color: white;
-	border-color: white;
+	background: #f7f7f7;
+	color: #ffffff;
+	border-color: #f7f7f7;
+}
+
+.btn--alpha.btn--ghost.btn--alpha:hover,
+.btn--alpha.btn--ghost.btn--light:hover {
+	color: #333333;
 }
 
 .btn-group--inline .btn--alpha {
@@ -6868,8 +6898,14 @@ Add more colors in the settings file under "buttons" if you need to.
 }
 
 .btn--beta.btn--ghost:hover {
-	color: #36afd3;
-	border-color: #36afd3;
+	background: #2690b0;
+	color: #ffffff;
+	border-color: #2690b0;
+}
+
+.btn--beta.btn--ghost.btn--alpha:hover,
+.btn--beta.btn--ghost.btn--light:hover {
+	color: #333333;
 }
 
 .btn-group--inline .btn--beta {
@@ -6911,8 +6947,14 @@ Add more colors in the settings file under "buttons" if you need to.
 }
 
 .btn--gamma.btn--ghost:hover {
-	color: #36cad3;
-	border-color: #36cad3;
+	background: #26a8b0;
+	color: #ffffff;
+	border-color: #26a8b0;
+}
+
+.btn--gamma.btn--ghost.btn--alpha:hover,
+.btn--gamma.btn--ghost.btn--light:hover {
+	color: #333333;
 }
 
 .btn-group--inline .btn--gamma {
@@ -6954,8 +6996,14 @@ Add more colors in the settings file under "buttons" if you need to.
 }
 
 .btn--delta.btn--ghost:hover {
-	color: #36d3c2;
-	border-color: #36d3c2;
+	background: #26b0a1;
+	color: #ffffff;
+	border-color: #26b0a1;
+}
+
+.btn--delta.btn--ghost.btn--alpha:hover,
+.btn--delta.btn--ghost.btn--light:hover {
+	color: #333333;
 }
 
 .btn-group--inline .btn--delta {
@@ -6997,8 +7045,14 @@ Add more colors in the settings file under "buttons" if you need to.
 }
 
 .btn--epsilon.btn--ghost:hover {
-	color: #4d4d4d;
-	border-color: #4d4d4d;
+	background: #333333;
+	color: #ffffff;
+	border-color: #333333;
+}
+
+.btn--epsilon.btn--ghost.btn--alpha:hover,
+.btn--epsilon.btn--ghost.btn--light:hover {
+	color: #333333;
 }
 
 .btn-group--inline .btn--epsilon {

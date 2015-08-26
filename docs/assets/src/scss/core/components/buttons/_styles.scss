@@ -46,12 +46,16 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: $bg-color;
 
         &:hover {
-            @if map-get($btn, ghost-bg-hover) {
-                background: lighten($bg-color, 50%);
-            }
+            background: $bg-color;
+            color: map-get($color, white);
+            border-color: $bg-color;
+        }
 
-            color: lighten($bg-color, 10%);
-            border-color: lighten($bg-color, 10%);
+        &.btn--alpha,
+        &.btn--light {
+            &:hover {
+                color: map-get($color, text);
+            }
         }
     }
 
