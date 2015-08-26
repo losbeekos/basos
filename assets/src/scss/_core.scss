@@ -67,28 +67,6 @@ Direction values: up, right, bottom, left.
 @return {Color}
 ````
 
-## REM
-You should use this mixin for all your CSS pixel values. The properties you should use this for are:
-
-- height
-- width
-- margin
-- padding
-- font-size
-- line-height
-
-```
-@include rem($property, $values, $important: false);
-```
-
-```
-@access public
-@param {Value} $property - CSS property
-@param {Value} $values - CSS value(s) in pixels
-@param {Boolean} $important - adds important at the end of the return value, you probably never need this.
-@return {Value} - returns the px fallback for older browsers and it's calculated rem value.
-````
-
 
 ## Font face
 Includes a font-face rule for a custom local font.

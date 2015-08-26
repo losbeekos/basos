@@ -684,28 +684,6 @@ Direction values: up, right, bottom, left.
 @return {Color}
 ````
 
-## REM
-You should use this mixin for all your CSS pixel values. The properties you should use this for are:
-
-- height
-- width
-- margin
-- padding
-- font-size
-- line-height
-
-```
-@include rem($property, $values, $important: false);
-```
-
-```
-@access public
-@param {Value} $property - CSS property
-@param {Value} $values - CSS value(s) in pixels
-@param {Boolean} $important - adds important at the end of the return value, you probably never need this.
-@return {Value} - returns the px fallback for older browsers and it's calculated rem value.
-````
-
 
 ## Font face
 Includes a font-face rule for a custom local font.
@@ -1152,12 +1130,10 @@ category: Typography
 */
 
 ul {
-	padding-left: 18px;
 	padding-left: 1.125rem;
 }
 
 ol {
-	padding-left: 24px;
 	padding-left: 1.5rem;
 }
 
@@ -1221,7 +1197,6 @@ category: Typography
 .off-canvas-nar-bar__list li,
 .btn-group--inline li {
 	display: inline;
-	margin-right: 10px;
 	margin-right: 0.625rem;
 }
 
@@ -1256,281 +1231,218 @@ category: Typography
 */
 
 .margin-alpha {
-	margin: 10px !important;
 	margin: 0.625rem !important;
 }
 
 .margin-alpha-vertical {
-	margin-top: 10px !important;
 	margin-top: 0.625rem !important;
-	margin-bottom: 10px !important;
 	margin-bottom: 0.625rem !important;
 }
 
 .margin-alpha-horizontal {
-	margin-left: 10px !important;
 	margin-left: 0.625rem !important;
-	margin-right: 10px !important;
 	margin-right: 0.625rem !important;
 }
 
 .margin-alpha-right,
 .icon.icon--margin-alpha:before,
 .icon--margin-alpha.modal__close:before {
-	margin-right: 10px !important;
 	margin-right: 0.625rem !important;
 }
 
 .margin-alpha-left,
 .icon-after.icon--margin-alpha:after {
-	margin-left: 10px !important;
 	margin-left: 0.625rem !important;
 }
 
 .margin-alpha-top {
-	margin-top: 10px !important;
 	margin-top: 0.625rem !important;
 }
 
 .margin-alpha-bottom {
-	margin-bottom: 10px !important;
 	margin-bottom: 0.625rem !important;
 }
 
 .margin-beta {
-	margin: 20px !important;
 	margin: 1.25rem !important;
 }
 
 .margin-beta-vertical {
-	margin-top: 20px !important;
 	margin-top: 1.25rem !important;
-	margin-bottom: 20px !important;
 	margin-bottom: 1.25rem !important;
 }
 
 .margin-beta-horizontal {
-	margin-left: 20px !important;
 	margin-left: 1.25rem !important;
-	margin-right: 20px !important;
 	margin-right: 1.25rem !important;
 }
 
 .margin-beta-right,
 .icon.icon--margin-beta:before,
 .icon--margin-beta.modal__close:before {
-	margin-right: 20px !important;
 	margin-right: 1.25rem !important;
 }
 
 .margin-beta-left,
 .icon-after.icon--margin-beta:after {
-	margin-left: 20px !important;
 	margin-left: 1.25rem !important;
 }
 
 .margin-beta-top {
-	margin-top: 20px !important;
 	margin-top: 1.25rem !important;
 }
 
 .margin-beta-bottom {
-	margin-bottom: 20px !important;
 	margin-bottom: 1.25rem !important;
 }
 
 .margin-gamma {
-	margin: 30px !important;
 	margin: 1.875rem !important;
 }
 
 .margin-gamma-vertical {
-	margin-top: 30px !important;
 	margin-top: 1.875rem !important;
-	margin-bottom: 30px !important;
 	margin-bottom: 1.875rem !important;
 }
 
 .margin-gamma-horizontal {
-	margin-left: 30px !important;
 	margin-left: 1.875rem !important;
-	margin-right: 30px !important;
 	margin-right: 1.875rem !important;
 }
 
 .margin-gamma-right {
-	margin-right: 30px !important;
 	margin-right: 1.875rem !important;
 }
 
 .margin-gamma-left {
-	margin-left: 30px !important;
 	margin-left: 1.875rem !important;
 }
 
 .margin-gamma-top {
-	margin-top: 30px !important;
 	margin-top: 1.875rem !important;
 }
 
 .margin-gamma-bottom {
-	margin-bottom: 30px !important;
 	margin-bottom: 1.875rem !important;
 }
 
 .margin-delta {
-	margin: 40px !important;
 	margin: 2.5rem !important;
 }
 
 .margin-delta-vertical {
-	margin-top: 40px !important;
 	margin-top: 2.5rem !important;
-	margin-bottom: 40px !important;
 	margin-bottom: 2.5rem !important;
 }
 
 .margin-delta-horizontal {
-	margin-left: 40px !important;
 	margin-left: 2.5rem !important;
-	margin-right: 40px !important;
 	margin-right: 2.5rem !important;
 }
 
 .margin-delta-right {
-	margin-right: 40px !important;
 	margin-right: 2.5rem !important;
 }
 
 .margin-delta-left {
-	margin-left: 40px !important;
 	margin-left: 2.5rem !important;
 }
 
 .margin-delta-top {
-	margin-top: 40px !important;
 	margin-top: 2.5rem !important;
 }
 
 .margin-delta-bottom {
-	margin-bottom: 40px !important;
 	margin-bottom: 2.5rem !important;
 }
 
 .margin-epsilon {
-	margin: 50px !important;
 	margin: 3.125rem !important;
 }
 
 .margin-epsilon-vertical {
-	margin-top: 50px !important;
 	margin-top: 3.125rem !important;
-	margin-bottom: 50px !important;
 	margin-bottom: 3.125rem !important;
 }
 
 .margin-epsilon-horizontal {
-	margin-left: 50px !important;
 	margin-left: 3.125rem !important;
-	margin-right: 50px !important;
 	margin-right: 3.125rem !important;
 }
 
 .margin-epsilon-right {
-	margin-right: 50px !important;
 	margin-right: 3.125rem !important;
 }
 
 .margin-epsilon-left {
-	margin-left: 50px !important;
 	margin-left: 3.125rem !important;
 }
 
 .margin-epsilon-top {
-	margin-top: 50px !important;
 	margin-top: 3.125rem !important;
 }
 
 .margin-epsilon-bottom {
-	margin-bottom: 50px !important;
 	margin-bottom: 3.125rem !important;
 }
 
 .margin-zeta {
-	margin: 80px !important;
 	margin: 5rem !important;
 }
 
 .margin-zeta-vertical {
-	margin-top: 80px !important;
 	margin-top: 5rem !important;
-	margin-bottom: 80px !important;
 	margin-bottom: 5rem !important;
 }
 
 .margin-zeta-horizontal {
-	margin-left: 80px !important;
 	margin-left: 5rem !important;
-	margin-right: 80px !important;
 	margin-right: 5rem !important;
 }
 
 .margin-zeta-right {
-	margin-right: 80px !important;
 	margin-right: 5rem !important;
 }
 
 .margin-zeta-left {
-	margin-left: 80px !important;
 	margin-left: 5rem !important;
 }
 
 .margin-zeta-top {
-	margin-top: 80px !important;
 	margin-top: 5rem !important;
 }
 
 .margin-zeta-bottom {
-	margin-bottom: 80px !important;
 	margin-bottom: 5rem !important;
 }
 
 .margin-eta {
-	margin: 100px !important;
 	margin: 6.25rem !important;
 }
 
 .margin-eta-vertical {
-	margin-top: 100px !important;
 	margin-top: 6.25rem !important;
-	margin-bottom: 100px !important;
 	margin-bottom: 6.25rem !important;
 }
 
 .margin-eta-horizontal {
-	margin-left: 100px !important;
 	margin-left: 6.25rem !important;
-	margin-right: 100px !important;
 	margin-right: 6.25rem !important;
 }
 
 .margin-eta-right {
-	margin-right: 100px !important;
 	margin-right: 6.25rem !important;
 }
 
 .margin-eta-left {
-	margin-left: 100px !important;
 	margin-left: 6.25rem !important;
 }
 
 .margin-eta-top {
-	margin-top: 100px !important;
 	margin-top: 6.25rem !important;
 }
 
 .margin-eta-bottom {
-	margin-bottom: 100px !important;
 	margin-bottom: 6.25rem !important;
 }
 
@@ -1569,275 +1481,212 @@ category: Typography
 */
 
 .padding-alpha {
-	padding: 10px !important;
 	padding: 0.625rem !important;
 }
 
 .padding-alpha-vertical {
-	padding-top: 10px !important;
 	padding-top: 0.625rem !important;
-	padding-bottom: 10px !important;
 	padding-bottom: 0.625rem !important;
 }
 
 .padding-alpha-horizontal {
-	padding-left: 10px !important;
 	padding-left: 0.625rem !important;
-	padding-right: 10px !important;
 	padding-right: 0.625rem !important;
 }
 
 .padding-alpha-right {
-	padding-right: 10px !important;
 	padding-right: 0.625rem !important;
 }
 
 .padding-alpha-left {
-	padding-left: 10px !important;
 	padding-left: 0.625rem !important;
 }
 
 .padding-alpha-top {
-	padding-top: 10px !important;
 	padding-top: 0.625rem !important;
 }
 
 .padding-alpha-bottom {
-	padding-bottom: 10px !important;
 	padding-bottom: 0.625rem !important;
 }
 
 .padding-beta {
-	padding: 20px !important;
 	padding: 1.25rem !important;
 }
 
 .padding-beta-vertical {
-	padding-top: 20px !important;
 	padding-top: 1.25rem !important;
-	padding-bottom: 20px !important;
 	padding-bottom: 1.25rem !important;
 }
 
 .padding-beta-horizontal {
-	padding-left: 20px !important;
 	padding-left: 1.25rem !important;
-	padding-right: 20px !important;
 	padding-right: 1.25rem !important;
 }
 
 .padding-beta-right {
-	padding-right: 20px !important;
 	padding-right: 1.25rem !important;
 }
 
 .padding-beta-left {
-	padding-left: 20px !important;
 	padding-left: 1.25rem !important;
 }
 
 .padding-beta-top {
-	padding-top: 20px !important;
 	padding-top: 1.25rem !important;
 }
 
 .padding-beta-bottom {
-	padding-bottom: 20px !important;
 	padding-bottom: 1.25rem !important;
 }
 
 .padding-gamma {
-	padding: 30px !important;
 	padding: 1.875rem !important;
 }
 
 .padding-gamma-vertical {
-	padding-top: 30px !important;
 	padding-top: 1.875rem !important;
-	padding-bottom: 30px !important;
 	padding-bottom: 1.875rem !important;
 }
 
 .padding-gamma-horizontal {
-	padding-left: 30px !important;
 	padding-left: 1.875rem !important;
-	padding-right: 30px !important;
 	padding-right: 1.875rem !important;
 }
 
 .padding-gamma-right {
-	padding-right: 30px !important;
 	padding-right: 1.875rem !important;
 }
 
 .padding-gamma-left {
-	padding-left: 30px !important;
 	padding-left: 1.875rem !important;
 }
 
 .padding-gamma-top {
-	padding-top: 30px !important;
 	padding-top: 1.875rem !important;
 }
 
 .padding-gamma-bottom {
-	padding-bottom: 30px !important;
 	padding-bottom: 1.875rem !important;
 }
 
 .padding-delta {
-	padding: 40px !important;
 	padding: 2.5rem !important;
 }
 
 .padding-delta-vertical {
-	padding-top: 40px !important;
 	padding-top: 2.5rem !important;
-	padding-bottom: 40px !important;
 	padding-bottom: 2.5rem !important;
 }
 
 .padding-delta-horizontal {
-	padding-left: 40px !important;
 	padding-left: 2.5rem !important;
-	padding-right: 40px !important;
 	padding-right: 2.5rem !important;
 }
 
 .padding-delta-right {
-	padding-right: 40px !important;
 	padding-right: 2.5rem !important;
 }
 
 .padding-delta-left {
-	padding-left: 40px !important;
 	padding-left: 2.5rem !important;
 }
 
 .padding-delta-top {
-	padding-top: 40px !important;
 	padding-top: 2.5rem !important;
 }
 
 .padding-delta-bottom {
-	padding-bottom: 40px !important;
 	padding-bottom: 2.5rem !important;
 }
 
 .padding-epsilon {
-	padding: 50px !important;
 	padding: 3.125rem !important;
 }
 
 .padding-epsilon-vertical {
-	padding-top: 50px !important;
 	padding-top: 3.125rem !important;
-	padding-bottom: 50px !important;
 	padding-bottom: 3.125rem !important;
 }
 
 .padding-epsilon-horizontal {
-	padding-left: 50px !important;
 	padding-left: 3.125rem !important;
-	padding-right: 50px !important;
 	padding-right: 3.125rem !important;
 }
 
 .padding-epsilon-right {
-	padding-right: 50px !important;
 	padding-right: 3.125rem !important;
 }
 
 .padding-epsilon-left {
-	padding-left: 50px !important;
 	padding-left: 3.125rem !important;
 }
 
 .padding-epsilon-top {
-	padding-top: 50px !important;
 	padding-top: 3.125rem !important;
 }
 
 .padding-epsilon-bottom {
-	padding-bottom: 50px !important;
 	padding-bottom: 3.125rem !important;
 }
 
 .padding-zeta {
-	padding: 80px !important;
 	padding: 5rem !important;
 }
 
 .padding-zeta-vertical {
-	padding-top: 80px !important;
 	padding-top: 5rem !important;
-	padding-bottom: 80px !important;
 	padding-bottom: 5rem !important;
 }
 
 .padding-zeta-horizontal {
-	padding-left: 80px !important;
 	padding-left: 5rem !important;
-	padding-right: 80px !important;
 	padding-right: 5rem !important;
 }
 
 .padding-zeta-right {
-	padding-right: 80px !important;
 	padding-right: 5rem !important;
 }
 
 .padding-zeta-left {
-	padding-left: 80px !important;
 	padding-left: 5rem !important;
 }
 
 .padding-zeta-top {
-	padding-top: 80px !important;
 	padding-top: 5rem !important;
 }
 
 .padding-zeta-bottom {
-	padding-bottom: 80px !important;
 	padding-bottom: 5rem !important;
 }
 
 .padding-eta {
-	padding: 100px !important;
 	padding: 6.25rem !important;
 }
 
 .padding-eta-vertical {
-	padding-top: 100px !important;
 	padding-top: 6.25rem !important;
-	padding-bottom: 100px !important;
 	padding-bottom: 6.25rem !important;
 }
 
 .padding-eta-horizontal {
-	padding-left: 100px !important;
 	padding-left: 6.25rem !important;
-	padding-right: 100px !important;
 	padding-right: 6.25rem !important;
 }
 
 .padding-eta-right {
-	padding-right: 100px !important;
 	padding-right: 6.25rem !important;
 }
 
 .padding-eta-left {
-	padding-left: 100px !important;
 	padding-left: 6.25rem !important;
 }
 
 .padding-eta-top {
-	padding-top: 100px !important;
 	padding-top: 6.25rem !important;
 }
 
 .padding-eta-bottom {
-	padding-bottom: 100px !important;
 	padding-bottom: 6.25rem !important;
 }
 
@@ -2098,9 +1947,6 @@ category: Typography
 .css-columns-2,
 .css-columns-3,
 .css-columns-4 {
-	-webkit-column-gap: 20px;
-	-moz-column-gap: 20px;
-	column-gap: 20px;
 	-webkit-column-gap: 1.25rem;
 	-moz-column-gap: 1.25rem;
 	column-gap: 1.25rem; /**
@@ -2805,15 +2651,10 @@ p {
 .container-beta {
 	margin-left: auto;
 	margin-right: auto;
-	min-width: 320px;
 	min-width: 20rem;
-	padding-left: 10px;
 	padding-left: 0.625rem;
-	padding-right: 10px;
 	padding-right: 0.625rem;
 	margin-top: 0;
-	margin-top: 0;
-	margin-bottom: 0;
 	margin-bottom: 0; /**
     *
     * Usage:
@@ -2832,12 +2673,10 @@ p {
 }
 
 .container {
-	max-width: 1280px;
 	max-width: 80rem;
 }
 
 .container-beta {
-	max-width: 800px;
 	max-width: 50rem;
 }
 
@@ -2862,9 +2701,7 @@ There are two containers available, 'container' and 'container-beta'. These cont
 
 .section {
 	color: #ffffff;
-	padding-top: 30px;
 	padding-top: 1.875rem;
-	padding-bottom: 30px;
 	padding-bottom: 1.875rem; /**
     *
     * Usage:
@@ -2913,7 +2750,6 @@ There are two containers available, 'container' and 'container-beta'. These cont
 .section-img {
 	background: url("../dist/img/someimage.jpg") center center fixed;
 	background-size: cover;
-	height: 300px;
 	height: 18.75rem; /**
     *
     * Usage:
@@ -2932,12 +2768,10 @@ There are two containers available, 'container' and 'container-beta'. These cont
 }
 
 .section__list {
-	margin-bottom: 30px;
 	margin-bottom: 1.875rem;
 }
 
 .section__paragraph {
-	margin-bottom: 30px;
 	margin-bottom: 1.875rem;
 }
 
@@ -3049,9 +2883,7 @@ h6 {
 
 h1,
 .h1 {
-	font-size: 26px;
 	font-size: 1.625rem;
-	margin-bottom: 10px;
 	margin-bottom: 0.625rem; /**
     *
     * Usage:
@@ -3071,9 +2903,7 @@ h1,
 
 h2,
 .h2 {
-	font-size: 22px;
 	font-size: 1.375rem;
-	margin-bottom: 10px;
 	margin-bottom: 0.625rem; /**
     *
     * Usage:
@@ -3086,33 +2916,25 @@ h2,
 
 h3,
 .h3 {
-	font-size: 22px;
 	font-size: 1.375rem;
-	margin-bottom: 10px;
 	margin-bottom: 0.625rem;
 }
 
 h4,
 .h4 {
-	font-size: 18px;
 	font-size: 1.125rem;
-	margin-bottom: 8px;
 	margin-bottom: 0.5rem;
 }
 
 h5,
 .h5 {
-	font-size: 16px;
 	font-size: 1rem;
-	margin-bottom: 8px;
 	margin-bottom: 0.5rem;
 }
 
 h6,
 .h6 {
-	font-size: 14px;
 	font-size: 0.875rem;
-	margin-bottom: 5px;
 	margin-bottom: 0.3125rem;
 }
 
@@ -3492,11 +3314,8 @@ h2.styleguide {
 }
 
 .styleguide-nav__item {
-	font-size: 14px;
 	font-size: 0.875rem;
-	margin-left: 10px;
 	margin-left: 0.625rem;
-	margin-top: 5px;
 	margin-top: 0.3125rem;
 }
 
@@ -3509,7 +3328,6 @@ h2.styleguide {
 }
 
 .codeBlock {
-	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
 }
 
@@ -3991,7 +3809,6 @@ hll {
 	-webkit-transform: scale(0.7);
 	transform: scale(0.7);
 	transition: all 0.3s;
-	padding: 40px;
 	padding: 2.5rem;
 }
 
@@ -4024,15 +3841,10 @@ hll {
 
 .modal__close {
 	position: absolute;
-	top: 10px;
 	top: 0.625rem;
-	right: 10px;
 	right: 0.625rem;
-	padding: 10px;
 	padding: 0.625rem;
-	font-size: 30px;
 	font-size: 1.875rem;
-	line-height: 30px;
 	line-height: 1.875rem;
 }
 
@@ -4118,7 +3930,6 @@ app.modals.closeModal();
 .block,
 .styleguide-nav {
 	background: #f7f7f7;
-	padding: 10px;
 	padding: 0.625rem; /**
     *
     * Usage:
@@ -4284,7 +4095,6 @@ This little module will fancy you a nice block grid. Breakpoint settings can be 
 
 .tabs li + li {
 	margin-left: 0;
-	margin-left: 0;
 }
 
 .tab {
@@ -4298,7 +4108,6 @@ This little module will fancy you a nice block grid. Breakpoint settings can be 
 	-moz-user-select: none;
 	-ms-user-select: none;
 	user-select: none;
-	padding: 15px 20px;
 	padding: 0.9375rem 1.25rem;
 }
 
@@ -4319,7 +4128,6 @@ This little module will fancy you a nice block grid. Breakpoint settings can be 
 }
 
 .tab-content {
-	padding: 20px 0;
 	padding: 1.25rem 0;
 }
 
@@ -4388,9 +4196,7 @@ category: Content
 	text-align: center;
 	-webkit-transform: translate3d(0, 0, 0);
 	transform: translate3d(0, 0, 0);
-	height: 50px;
 	height: 3.125rem;
-	min-width: 320px;
 	min-width: 20rem; /**
     *
     * Usage:
@@ -4417,9 +4223,7 @@ category: Content
 	z-index: 2;
 	display: inline-block;
 	margin-bottom: -6px;
-	padding-top: 12px;
 	padding-top: 0.75rem;
-	min-height: 50px;
 	min-height: 3.125rem; /**
     *
     * Usage:
@@ -4469,9 +4273,7 @@ category: Content
 .nav-bar__container {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 1280px;
 	max-width: 80rem;
-	min-width: 320px;
 	min-width: 20rem; /**
     *
     * Usage:
@@ -4525,9 +4327,7 @@ category: Content
 	top: 0;
 	right: 0;
 	z-index: 2;
-	height: 50px;
 	height: 3.125rem;
-	width: 50px;
 	width: 3.125rem; /**
     *
     * Usage:
@@ -4546,7 +4346,6 @@ category: Content
 .nav-bar__trigger:before {
 	content: "";
 	color: #ffffff;
-	font-size: 30px;
 	font-size: 1.875rem;
 }
 
@@ -4593,7 +4392,6 @@ category: Content
 	display: block;
 	color: #ffffff;
 	text-align: center;
-	padding: 20px 30px;
 	padding: 1.25rem 1.875rem; /**
     *
     * Usage:
@@ -4656,7 +4454,6 @@ category: Navigation
 
 .table {
 	width: 100%;
-	margin-bottom: 30px;
 	margin-bottom: 1.875rem;
 }
 
@@ -4995,9 +4792,7 @@ category: Content
 	transition: all 0.2s 0.5s;
 	-webkit-transform: translate3d(0, 10%, 0);
 	transform: translate3d(0, 10%, 0);
-	min-width: 200px;
 	min-width: 12.5rem;
-	max-width: 300px;
 	max-width: 18.75rem;
 }
 
@@ -5010,7 +4805,6 @@ category: Content
 	display: block;
 	border-top: 0 solid #f4f4f4;
 	color: #333333;
-	padding: 10px 15px;
 	padding: 0.625rem 0.9375rem;
 }
 
@@ -5109,7 +4903,6 @@ category: Content
 	min-width: 150px;
 	padding: 10px;
 	border-radius: 0;
-	font-size: 12px;
 	font-size: 0.75rem;
 }
 
@@ -5283,7 +5076,6 @@ Tooltips are used as fancy title attributes to display some info about a certain
 	color: #333333;
 	-webkit-transform: translate(0, -50%);
 	transform: translate(0, -50%);
-	right: 20px;
 	right: 1.25rem;
 }
 
@@ -5383,9 +5175,7 @@ category: Content
 .breadcrumbs {
 	background: #f5f5f5;
 	border-radius: 0;
-	padding: 15px 20px;
 	padding: 0.9375rem 1.25rem;
-	margin: 0 0 40px 0;
 	margin: 0 0 2.5rem 0;
 }
 
@@ -5395,14 +5185,12 @@ category: Content
 }
 
 .breadcrumbs a {
-	margin-right: 10px;
 	margin-right: 0.625rem;
 }
 
 .breadcrumbs a:after {
 	content: "/";
 	color: #cccccc;
-	margin-left: 10px;
 	margin-left: 0.625rem;
 }
 
@@ -5441,12 +5229,10 @@ category: Navigation
 .pricing-table__header {
 	background: #333333;
 	color: #ffffff;
-	padding: 15px 20px;
 	padding: 0.9375rem 1.25rem;
 }
 
 .pricing-table__content {
-	padding: 15px 20px;
 	padding: 0.9375rem 1.25rem;
 }
 
@@ -5459,20 +5245,16 @@ category: Navigation
 }
 
 .pricing-table__price {
-	font-size: 30px;
 	font-size: 1.875rem;
 }
 
 .pricing-table__description {
 	color: #999999;
-	font-size: 20px;
 	font-size: 1.25rem;
 }
 
 .pricing-table__content--action {
-	padding-top: 20px;
 	padding-top: 1.25rem;
-	padding-bottom: 20px;
 	padding-bottom: 1.25rem;
 }
 
@@ -5518,7 +5300,6 @@ category: Content
 .media-list--bordered .media {
 	border-top: 1px solid #eaeaea;
 	margin-bottom: 0;
-	padding: 20px 0;
 	padding: 1.25rem 0;
 }
 
@@ -5527,18 +5308,15 @@ category: Content
 }
 
 .media {
-	margin-bottom: 40px;
 	margin-bottom: 2.5rem;
 }
 
 .media .media {
-	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
 }
 
 .media__alpha {
 	float: left;
-	margin-bottom: 20px;
 	margin-bottom: 1.25rem; /**
     *
     * Usage:
@@ -5694,7 +5472,6 @@ progress,
 	border-radius: 0;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	height: 15px;
 	height: 0.9375rem;
 }
 
@@ -5711,7 +5488,6 @@ progress[value]::-webkit-progress-value {
 	transition: width 0.2s;
 	-webkit-animation: progress-bar 1s linear infinite;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #2690b0;
@@ -5723,7 +5499,6 @@ progress[value]::-moz-progress-bar {
 	border: 0;
 	transition: width 0.2s;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #2690b0;
@@ -5735,7 +5510,6 @@ progress[value]::-ms-fill {
 	border: 0;
 	transition: width 0.2s;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #2690b0;
@@ -5748,7 +5522,6 @@ progress[value]::-ms-fill {
 	transition: width 0.2s;
 	-webkit-animation: progress-bar 1s linear infinite;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #2690b0;
@@ -5763,7 +5536,6 @@ progress:not([value]) {
 	transition: width 0.2s;
 	-webkit-animation: progress-bar 1s linear infinite;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 }
@@ -5775,7 +5547,6 @@ progress:not([value])::-webkit-progress-bar {
 	transition: width 0.2s;
 	-webkit-animation: progress-bar 1s linear infinite;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #f7f7f7;
@@ -5787,7 +5558,6 @@ progress:not([value])::-moz-progress-bar {
 	border: 0;
 	transition: width 0.2s;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #f7f7f7;
@@ -5799,7 +5569,6 @@ progress:not([value])::-ms-fill {
 	border: 0;
 	transition: width 0.2s;
 	animation: progress-bar 1s linear infinite;
-	height: 15px;
 	height: 0.9375rem;
 	background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
 	background-color: #f7f7f7;
@@ -5858,7 +5627,6 @@ category: Content
 
 .spinner:after {
 	content: "";
-	font-size: 30px;
 	font-size: 1.875rem;
 }
 
@@ -6003,7 +5771,6 @@ category: Content
 .toggle {
 	overflow: hidden;
 	transition: all 0.2s;
-	max-height: 500px;
 	max-height: 31.25rem;
 }
 
@@ -6110,11 +5877,8 @@ category: Navigation
 	color: #ffffff;
 	text-align: center;
 	border: none;
-	font-size: 30px;
 	font-size: 1.875rem;
-	width: 50px;
 	width: 3.125rem;
-	height: 50px;
 	height: 3.125rem;
 }
 
@@ -6133,7 +5897,6 @@ category: Navigation
 }
 
 .off-canvas-toggle-left {
-	right: -50px;
 	right: -3.125rem;
 }
 
@@ -6146,7 +5909,6 @@ category: Navigation
 }
 
 .off-canvas-toggle-right {
-	left: -50px;
 	left: -3.125rem;
 }
 
@@ -6164,7 +5926,6 @@ category: Navigation
 	z-index: 9999;
 	top: 0;
 	height: 100%;
-	width: 260px;
 	width: 16.25rem;
 }
 
@@ -6259,7 +6020,6 @@ category: Navigation
 .off-canvas-nav__link {
 	display: block;
 	color: #000000;
-	padding: 20px;
 	padding: 1.25rem;
 }
 
@@ -6346,12 +6106,10 @@ Buttons
 */
 
 .btn-container {
-	margin: 0 0 30px 0;
 	margin: 0 0 1.875rem 0;
 }
 
 .btn-container a {
-	padding: 10px 18px;
 	padding: 0.625rem 1.125rem;
 }
 
@@ -6376,7 +6134,6 @@ Buttons
 */
 
 .btn-group {
-	margin: 0 0 30px 0;
 	margin: 0 0 1.875rem 0; /*doc
 ---
 title: Inline
@@ -6679,14 +6436,11 @@ These work with the button classes so you can use those to change color, size is
 */
 
 .btn--small {
-	padding: 8px 30px;
 	padding: 0.5rem 1.875rem;
-	font-size: 16px;
 	font-size: 1rem;
 }
 
 .btn--medium {
-	padding: 12px 35px;
 	padding: 0.75rem 2.1875rem; /**
     *
     * Usage:
@@ -6698,7 +6452,6 @@ These work with the button classes so you can use those to change color, size is
 }
 
 .btn--large {
-	padding: 15px 40px;
 	padding: 0.9375rem 2.5rem; /**
     *
     * Usage:
@@ -6765,7 +6518,6 @@ Add more colors in the settings file under "buttons" if you need to.
 	user-select: none;
 	background-color: #f7f7f7;
 	border-color: #eaeaea;
-	line-height: 16px;
 	line-height: 1rem; /*doc
 ---
 title: Mask
@@ -7310,7 +7062,6 @@ Commonly used for triggers. For example a navigation trigger
 */
 
 form {
-	margin: 0 0 40px 0;
 	margin: 0 0 2.5rem 0;
 }
 
@@ -7324,11 +7075,8 @@ legend {
 	padding: 0;
 	border: 0;
 	border-bottom: 1px solid #e5e5e5;
-	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
-	font-size: 20px;
 	font-size: 1.25rem;
-	line-height: 32px;
 	line-height: 2rem;
 }
 
@@ -7355,7 +7103,6 @@ textarea {
 	transition: all 0.2s;
 	-webkit-appearance: none;
 	-moz-appearance: none;
-	padding: 10px;
 	padding: 0.625rem;
 }
 
@@ -7419,7 +7166,6 @@ category: Forms
 
 textarea {
 	display: block;
-	height: 160px;
 	height: 10rem;
 }
 
@@ -7440,7 +7186,6 @@ select {
 	appearance: none;
 	text-overflow: '';
 	text-indent: 1px;
-	padding: 10px 10px 10px 5px;
 	padding: 0.625rem 0.625rem 0.625rem 0.3125rem;
 }
 
@@ -7570,7 +7315,6 @@ Use the grid to your advantage.
 }
 
 .form__label label {
-	line-height: 40px;
 	line-height: 2.5rem;
 }
 
@@ -7631,9 +7375,7 @@ category: Forms
 	z-index: 1;
 	color: #bbbbbb;
 	line-height: 42px;
-	font-size: 14px;
 	font-size: 0.875rem;
-	height: 42px;
 	height: 2.625rem;
 }
 
@@ -7666,7 +7408,6 @@ category: Forms
 */
 
 .form__switch {
-	margin-top: 5px;
 	margin-top: 0.3125rem;
 }
 
@@ -7713,7 +7454,6 @@ category: Forms
 }
 
 .form__input-list li + li {
-	margin-top: 5px;
 	margin-top: 0.3125rem;
 }
 
@@ -7736,7 +7476,6 @@ category: Forms
 */
 
 .form__data {
-	line-height: 40px;
 	line-height: 2.5rem;
 }
 
@@ -7756,7 +7495,6 @@ category: Forms
 */
 
 .form__actions {
-	margin-top: 20px;
 	margin-top: 1.25rem; /**
     *
     * Usage:
@@ -7788,7 +7526,6 @@ category: Forms
 */
 
 .form__required-field {
-	font-size: 14px;
 	font-size: 0.875rem;
 }
 
@@ -7993,9 +7730,7 @@ category: Forms
 
 input[type=range] {
 	-webkit-appearance: none;
-	margin-top: 7px;
 	margin-top: 0.4375rem;
-	width: 300px;
 	width: 18.75rem;
 }
 
@@ -8079,7 +7814,6 @@ input[type=range]::-ms-fill-lower {
 .range-output {
 	display: inline-block;
 	color: #2690b0;
-	margin-top: 8px;
 	margin-top: 0.5rem;
 }
 
@@ -8094,9 +7828,7 @@ input[type=range]::-ms-fill-lower {
 
 .rangeslider {
 	position: relative;
-	margin-top: 7px;
 	margin-top: 0.4375rem;
-	width: 300px;
 	width: 18.75rem;
 }
 
@@ -8195,7 +7927,6 @@ category: Forms
 	box-shadow: none;
 	border-bottom-left-radius: 0;
 	border-bottom-right-radius: 0;
-	padding-right: 30px;
 	padding-right: 1.875rem;
 }
 
@@ -8243,10 +7974,7 @@ category: Forms
 	background: #b02626;
 	color: #ffffff;
 	border-radius: 0 0 0 0;
-	border-radius: 0 0 0 0;
-	padding: 10px;
 	padding: 0.625rem;
-	font-size: 14px;
 	font-size: 0.875rem;
 }
 
@@ -8257,8 +7985,6 @@ category: Forms
 .form__input--error + .parsley-container {
 	display: inline-block;
 	border-radius: 0 0 0 0;
-	border-radius: 0 0 0 0;
-	margin-top: 16px;
 	margin-top: 1rem;
 }
 
@@ -8422,16 +8148,13 @@ We use the jQuery plugin [parsleyjs](http://parsleyjs.org) for our validation en
 .form__password-toggle {
 	position: absolute;
 	text-decoration: none;
-	top: 8px;
 	top: 0.5rem;
-	right: 10px;
 	right: 0.625rem;
 }
 
 .form__password-toggle:after {
 	display: inline-block;
 	content: "";
-	font-size: 18px;
 	font-size: 1.125rem;
 }
 
@@ -8488,7 +8211,6 @@ category: Forms
 	color: #09222a;
 	background: #eaf7fa;
 	border-color: #d5eef6;
-	margin-bottom: 30px;
 	margin-bottom: 1.875rem;
 }
 
@@ -8500,9 +8222,7 @@ category: Forms
 .notification:before {
 	position: absolute;
 	top: 0;
-	left: 10px;
 	left: 0.625rem;
-	font-size: 40px;
 	font-size: 2.5rem;
 }
 
@@ -8582,17 +8302,14 @@ app.notifications.add(target, message, size, type);
 */
 
 .notification--alpha {
-	padding: 20px 60px 20px 20px;
 	padding: 1.25rem 3.75rem 1.25rem 1.25rem;
 }
 
 .notification--alpha:before {
-	top: 2px;
 	top: 0.125rem;
 }
 
 .notification--beta {
-	padding: 20px 60px 20px 20px;
 	padding: 1.25rem 3.75rem 1.25rem 1.25rem; /**
     *
     * Usage:
@@ -8634,7 +8351,6 @@ app.notifications.add(target, message, size, type);
 */
 
 .notification__text {
-	margin-left: 40px;
 	margin-left: 2.5rem;
 }
 
@@ -8654,9 +8370,7 @@ app.notifications.add(target, message, size, type);
 	padding: 0;
 	background: none;
 	border: none;
-	top: 20px;
 	top: 1.25rem;
-	right: 20px;
 	right: 1.25rem;
 }
 
@@ -8691,7 +8405,6 @@ app.notifications.add(target, message, size, type);
 	border: none;
 	color: #ffffff;
 	transition: all 0.4s;
-	padding: 20px 0;
 	padding: 1.25rem 0;
 }
 
@@ -8728,7 +8441,6 @@ app.notifications.add(target, message, size, type);
 
 .notification--cookie .notification__text {
 	margin-left: 0;
-	margin-bottom: 10px;
 	margin-bottom: 0.625rem;
 }
 
@@ -9029,35 +8741,27 @@ Content
 
 .container,
 .container-beta {
-	padding-left: 20px;
 	padding-left: 1.25rem;
-	padding-right: 20px;
 	padding-right: 1.25rem;
 }
 
 .section {
-	padding-top: 45px;
 	padding-top: 2.8125rem;
-	padding-bottom: 45px;
 	padding-bottom: 2.8125rem;
 }
 
 .section-img {
-	height: 400px;
 	height: 25rem;
 }
 
 h1,
 .h1 {
-	font-size: 30px;
 	font-size: 1.875rem;
-	margin-bottom: 20px;
 	margin-bottom: 1.25rem;
 }
 
 .block,
 .styleguide-nav {
-	padding: 20px;
 	padding: 1.25rem;
 }
 
@@ -9066,7 +8770,6 @@ h1,
 }
 
 .parallax {
-	height: 350px;
 	height: 21.875rem;
 }
 
@@ -9356,7 +9059,6 @@ h1,
 }
 
 .modal {
-	min-width: 500px;
 	min-width: 31.25rem;
 }
 
@@ -9370,16 +9072,12 @@ h1,
 }
 
 .btn--medium {
-	padding: 12px 35px;
 	padding: 0.75rem 2.1875rem;
-	font-size: 17px;
 	font-size: 1.0625rem;
 }
 
 .btn--large {
-	padding: 18px 50px;
 	padding: 1.125rem 3.125rem;
-	font-size: 18px;
 	font-size: 1.125rem;
 }
 
@@ -9388,7 +9086,6 @@ h1,
 }
 
 .form__input-list {
-	margin-top: 8px;
 	margin-top: 0.5rem;
 }
 
@@ -9397,21 +9094,16 @@ h1,
 }
 
 .notification--beta {
-	padding: 30px 60px 30px 30px;
 	padding: 1.875rem 3.75rem 1.875rem 1.875rem;
-	min-height: 85px;
 	min-height: 5.3125rem;
 }
 
 .notification--beta:before {
-	font-size: 60px;
 	font-size: 3.75rem;
-	left: 20px;
 	left: 1.25rem;
 }
 
 .notification--beta .notification__text {
-	margin-left: 70px;
 	margin-left: 4.375rem;
 }
 
@@ -9546,7 +9238,6 @@ h1,
 	padding-top: 0;
 	min-height: inherit;
 	margin-bottom: 0;
-	margin-top: 18px;
 	margin-top: 1.125rem;
 }
 
@@ -9570,15 +9261,12 @@ h1,
 }
 
 .off-canvas-nav-bar__container {
-	padding-left: 40px;
 	padding-left: 2.5rem;
-	padding-right: 40px;
 	padding-right: 2.5rem;
 }
 
 .off-canvas-nav-bar__nav {
 	float: right;
-	margin-left: 0;
 	margin-left: 0;
 }
 
@@ -9628,9 +9316,6 @@ h1,
 .css-columns-2,
 .css-columns-3,
 .css-columns-4 {
-	-webkit-column-gap: 40px;
-	-moz-column-gap: 40px;
-	column-gap: 40px;
 	-webkit-column-gap: 2.5rem;
 	-moz-column-gap: 2.5rem;
 	column-gap: 2.5rem;
@@ -9756,35 +9441,27 @@ h1,
 
 .container,
 .container-beta {
-	padding-left: 40px;
 	padding-left: 2.5rem;
-	padding-right: 40px;
 	padding-right: 2.5rem;
 }
 
 .section {
-	padding-top: 60px;
 	padding-top: 3.75rem;
-	padding-bottom: 60px;
 	padding-bottom: 3.75rem;
 }
 
 .section-img {
-	height: 500px;
 	height: 31.25rem;
 }
 
 h1,
 .h1 {
-	font-size: 34px;
 	font-size: 2.125rem;
-	margin-bottom: 34px;
 	margin-bottom: 2.125rem;
 }
 
 h2,
 .h2 {
-	font-size: 26px;
 	font-size: 1.625rem;
 }
 
@@ -9801,7 +9478,6 @@ h2,
 
 .block,
 .styleguide-nav {
-	padding: 30px;
 	padding: 1.875rem;
 }
 
@@ -9816,7 +9492,6 @@ h2,
 	padding-top: 0;
 	min-height: inherit;
 	margin-bottom: 0;
-	margin-top: 18px;
 	margin-top: 1.125rem;
 }
 
@@ -9840,9 +9515,7 @@ h2,
 }
 
 .nav-bar__container {
-	padding-left: 40px;
 	padding-left: 2.5rem;
-	padding-right: 40px;
 	padding-right: 2.5rem;
 }
 
@@ -9853,7 +9526,6 @@ h2,
 .nav-bar__nav {
 	float: right;
 	height: auto;
-	margin-left: 0;
 	margin-left: 0;
 }
 
@@ -9880,7 +9552,6 @@ h2,
 }
 
 .parallax {
-	height: 450px;
 	height: 28.125rem;
 }
 
@@ -9896,7 +9567,6 @@ h2,
 	z-index: 999;
 	transition: all 0.2s;
 	text-align: center;
-	min-width: 320px;
 	min-width: 20rem; /**
     *
     * Usage:
@@ -9921,9 +9591,7 @@ h2,
 .off-canvas-nav-bar .logo {
 	display: inline-block;
 	margin-bottom: -6px;
-	padding-top: 12px;
 	padding-top: 0.75rem;
-	min-height: 50px;
 	min-height: 3.125rem; /**
     *
     * Usage:
@@ -9963,9 +9631,7 @@ h2,
 .off-canvas-nav-bar__container {
 	margin-left: auto;
 	margin-right: auto;
-	max-width: 1280px;
 	max-width: 80rem;
-	min-width: 320px;
 	min-width: 20rem; /**
     *
     * Usage:
@@ -9992,7 +9658,6 @@ h2,
 }
 
 .nav-bar--mobile-show .off-canvas-nav-bar__list {
-	max-height: 800px;
 	max-height: 50rem;
 }
 
@@ -10012,7 +9677,6 @@ h2,
 	display: block;
 	color: #ffffff;
 	text-align: center;
-	padding: 20px 30px;
 	padding: 1.25rem 1.875rem; /**
     *
     * Usage:
@@ -10788,7 +10452,6 @@ h2,
 	z-index: 9999;
 	top: 0;
 	height: 100%;
-	width: 260px;
 	width: 16.25rem;
 }
 
@@ -10850,7 +10513,6 @@ h2,
 .off-canvas-nav-bar__link {
 	display: block;
 	color: #000000;
-	padding: 20px;
 	padding: 1.25rem;
 }
 
