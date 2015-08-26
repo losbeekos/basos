@@ -2,14 +2,12 @@
   "name": "basos",
   "version": "1.0.2",
   "dependencies": {
-    "respond": "~1.4.2",
-    "selectivizr": "~1.0.2",
-    "jquery": "~1.*",
+    "jquery": "~2.*",
     "fastclick": "~1.0.6",
     "fitvids": "~1.1.0",
     "parsleyjs": "~2.1.2",
     "jquery-placeholder": "~2.1.2",
-    "rangeslider.js": "~1.2.1"
+    "rangeslider.js": "~1.3.3"
   },
   "private": true
 }
