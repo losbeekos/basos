@@ -131,16 +131,29 @@ module.exports = function(grunt) {
                 },
 
                 files: {
-                    '<%= basos.dist %>/css/temp.css': '<%= basos.src %>/scss/main.scss'
+                    '<%= basos.dist %>/css/main.css': '<%= basos.src %>/scss/main.scss'
                 }
             }
         },
 
-        autoprefixer: {
-            dev: {
-                files: {
-                    '<%= basos.dist %>/css/main.css': '<%= basos.dist %>/css/temp.css'
-                }
+        postcss: {
+            options: {
+                map: true, // inline sourcemaps
+
+              // or
+              // map: {
+              //     inline: false, // save all sourcemaps as separate files...
+              //     annotation: 'dist/css/maps/' // ...to the specified directory
+              // },
+
+                processors: [
+                    require('autoprefixer-core')({
+                        browsers: 'last 2 versions'
+                    })
+                ]
+            },
+            dist: {
+                src: '<%= basos.dist %>/css/main.css'
             }
         },
 
@@ -230,13 +243,13 @@ module.exports = function(grunt) {
             // Basos
             sass: {
                 files: ['<%= basos.src %>/scss/**/*'],
-                tasks: ['sass:dev', 'autoprefixer:dev', 'cmq:dev', 'clean:tempsass'],
+                tasks: ['sass:dev', 'postcss', 'cmq:dev', 'clean:tempsass'],
             },
 
             // Peanuts
             // sass: {
             //     files: ['<%= basos.src %>/scss/**/*'],
-            //     tasks: ['sass:dev', 'autoprefixer:dev', 'cmq:dev', 'clean:tempsass', 'css_wrap'],
+            //     tasks: ['sass:dev', 'postcss', 'cmq:dev', 'clean:tempsass', 'css_wrap'],
             // },
 
             fonts: {
@@ -336,7 +349,7 @@ module.exports = function(grunt) {
         'concat',
         'copy',
         'sass:dev',
-        'autoprefixer:dev',
+        'postcss',
         'cmq:dev',
         'clean:tempsass',
     ]);
@@ -347,7 +360,7 @@ module.exports = function(grunt) {
         'concat',
         'copy',
         'sass:dev',
-        'autoprefixer:dev',
+        'postcss',
         'cmq:dev',
         'clean:tempsass',
         'cssmin',
@@ -364,7 +377,7 @@ module.exports = function(grunt) {
     //     'concat',
     //     'copy',
     //     'sass:dev',
-    //     'autoprefixer:dev',
+    //     'postcss',
     //     'cmq:dev',
     //     'clean:tempsass',
     //     'css_wrap',
@@ -376,7 +389,7 @@ module.exports = function(grunt) {
     //     'concat',
     //     'copy',
     //     'sass:dev',
-    //     'autoprefixer:dev',
+    //     'postcss',
     //     'cmq:dev',
     //     'clean:tempsass',
     //     'cssmin',
