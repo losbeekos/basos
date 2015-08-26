@@ -227,10 +227,17 @@ module.exports = function(grunt) {
                 tasks: ['clean:js', 'jshint', 'concat', 'copy:js'],
             },
 
+            // Basos
             sass: {
                 files: ['<%= basos.src %>/scss/**/*'],
                 tasks: ['sass:dev', 'autoprefixer:dev', 'cmq:dev', 'clean:tempsass'],
             },
+
+            // Peanuts
+            // sass: {
+            //     files: ['<%= basos.src %>/scss/**/*'],
+            //     tasks: ['sass:dev', 'autoprefixer:dev', 'cmq:dev', 'clean:tempsass', 'css_wrap'],
+            // },
 
             fonts: {
                 files: ['<%= basos.src %>/fonts/**/*'],
@@ -306,7 +313,22 @@ module.exports = function(grunt) {
             }
         },
 
+        /**
+          * Create frontend styles specifically for peanuts
+         */
+        css_wrap: {
+            compile: {
+                src: '<%= basos.dist %>/css/main.css',
+                dest: '<%= basos.dist %>/css/peanuts.css',
+                options: {
+                    selector: '.peanuts'
+                }
+            }
+        },
+
     });
+
+    // Basos tasks
 
     grunt.registerTask('dev', [
         'jshint',
@@ -316,7 +338,7 @@ module.exports = function(grunt) {
         'sass:dev',
         'autoprefixer:dev',
         'cmq:dev',
-        'clean:tempsass'
+        'clean:tempsass',
     ]);
 
     grunt.registerTask('dist', [
@@ -333,6 +355,36 @@ module.exports = function(grunt) {
         'imagemin',
         'imageoptim'
     ]);
+
+    // Peanuts tasks
+    
+    // grunt.registerTask('dev', [
+    //     'jshint',
+    //     'clean',
+    //     'concat',
+    //     'copy',
+    //     'sass:dev',
+    //     'autoprefixer:dev',
+    //     'cmq:dev',
+    //     'clean:tempsass',
+    //     'css_wrap',
+    // ]);
+
+    // grunt.registerTask('dist', [
+    //     'jshint',
+    //     'clean',
+    //     'concat',
+    //     'copy',
+    //     'sass:dev',
+    //     'autoprefixer:dev',
+    //     'cmq:dev',
+    //     'clean:tempsass',
+    //     'cssmin',
+    //     'uglify',
+    //     'imagemin',
+    //     'imageoptim',
+    //     'css_wrap',
+    // ]);
 
     grunt.registerTask('default', ['dev', 'watch']);
 
