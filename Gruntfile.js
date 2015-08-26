@@ -276,7 +276,7 @@ module.exports = function(grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    src : [
+                    files : [
                         '<%= basos.dist %>/js/app.js',
                         '<%= basos.dist %>/js/vendor/modernizr/modernizr.js',
                         '<%= basos.dist %>/css/main.css',
