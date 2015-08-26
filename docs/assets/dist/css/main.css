@@ -2091,6 +2091,75 @@ category: Typography
 	text-overflow: ellipsis;
 }
 
+/* CSS columns
+==========
+*/
+
+.css-columns-2,
+.css-columns-3,
+.css-columns-4 {
+	-webkit-column-gap: 20px;
+	-moz-column-gap: 20px;
+	column-gap: 20px;
+	-webkit-column-gap: 1.25rem;
+	-moz-column-gap: 1.25rem;
+	column-gap: 1.25rem; /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+
+.css-columns-2 { /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+
+.css-columns-3 { /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+
+.css-columns-4 { /**
+  *
+  * Usage:
+  * @include mq('gamma-and-up') {
+  *     CSS properties here..
+  * }
+  *
+  **/
+}
+
+/*doc
+---
+title: CSS columns
+name: css_columns
+category: Structure
+---
+
+Pure CSS columns. Classes available for 2, 3 and 4 columns.
+
+```html_example
+<p class="css-columns-4">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique animi cupiditate inventore repellendus placeat voluptate at nobis assumenda! Accusantium aspernatur id voluptatum itaque autem at dolore eligendi quisquam vitae dolor?
+</p>
+```
+
+*/
+
 /* Animations
 ==========
 */
@@ -9600,6 +9669,35 @@ h1,
 
 .text-align-center-gamma-and-up {
 	text-align: center;
+}
+
+.css-columns-2,
+.css-columns-3,
+.css-columns-4 {
+	-webkit-column-gap: 40px;
+	-moz-column-gap: 40px;
+	column-gap: 40px;
+	-webkit-column-gap: 2.5rem;
+	-moz-column-gap: 2.5rem;
+	column-gap: 2.5rem;
+}
+
+.css-columns-2 {
+	-webkit-column-count: 2;
+	-moz-column-count: 2;
+	column-count: 2;
+}
+
+.css-columns-3 {
+	-webkit-column-count: 3;
+	-moz-column-count: 3;
+	column-count: 3;
+}
+
+.css-columns-4 {
+	-webkit-column-count: 4;
+	-moz-column-count: 4;
+	column-count: 4;
 }
 
 .column-gamma-and-up--first {
