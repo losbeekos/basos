@@ -16,7 +16,7 @@ category: Getting started
 */
 
 /*
-Imports settings.scss and the grid dependency [Susy](http://susy.oddbird.net)
+    Imports settings.scss and the grid dependency [Susy](http://susy.oddbird.net)
 */
 
 /*
@@ -1085,40 +1085,40 @@ form:after,
 */
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /*doc
 ---
@@ -1933,23 +1933,23 @@ category: Typography
 }
 
 .text-align-right-beta-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .text-align-right-gamma-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .text-align-left {
@@ -1957,23 +1957,23 @@ category: Typography
 }
 
 .text-align-left-beta-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .text-align-left-gamma-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .text-align-center {
@@ -1981,23 +1981,23 @@ category: Typography
 }
 
 .text-align-center-beta-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .text-align-center-gamma-and-up { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /* Text transform
@@ -2104,43 +2104,43 @@ category: Typography
 	-webkit-column-gap: 1.25rem;
 	-moz-column-gap: 1.25rem;
 	column-gap: 1.25rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .css-columns-2 { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .css-columns-3 { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .css-columns-4 { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /*doc
@@ -2449,14 +2449,14 @@ Add this class to an element to fire an animation.
 
 [class|=column] {
 	width: 100%;
-	margin-bottom: 2.85714%; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+	margin-bottom: 2.8571428571%; /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 [class|=column]:first-child {
@@ -2490,134 +2490,134 @@ Add this class to an element to fire an animation.
 [class|=column-eta],
 [class|=column-eta-and-up] {
 	float: left;
-	margin-left: 2.85714%;
+	margin-left: 2.8571428571%;
 }
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 /**
-*
-* Usage:
-* @include mq('gamma-and-up') {
-*     CSS properties here..
-* }
-*
-**/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 
 .column-centered,
 .column-centered:first-child {
@@ -2819,20 +2819,20 @@ p {
 	margin-top: 0;
 	margin-bottom: 0;
 	margin-bottom: 0; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .container {
@@ -2870,20 +2870,20 @@ There are two containers available, 'container' and 'container-beta'. These cont
 	padding-top: 1.875rem;
 	padding-bottom: 30px;
 	padding-bottom: 1.875rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .section--alpha {
@@ -2919,20 +2919,20 @@ There are two containers available, 'container' and 'container-beta'. These cont
 	background-size: cover;
 	height: 300px;
 	height: 18.75rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .section__list {
@@ -3057,20 +3057,20 @@ h1,
 	font-size: 1.625rem;
 	margin-bottom: 10px;
 	margin-bottom: 0.625rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 h2,
@@ -3079,13 +3079,13 @@ h2,
 	font-size: 1.375rem;
 	margin-bottom: 10px;
 	margin-bottom: 0.625rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 h3,
@@ -3960,20 +3960,20 @@ hll {
 	z-index: 2000;
 	visibility: hidden;
 	overflow-y: auto; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .modal.modal-show {
@@ -4131,20 +4131,20 @@ app.modals.closeModal();
 	background: #f7f7f7;
 	padding: 10px;
 	padding: 0.625rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /*doc
@@ -4178,48 +4178,48 @@ category: Content
 	margin-bottom: 2%;
 	margin-left: 1%;
 	margin-right: 1%; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .block-grid__item:before {
@@ -4406,13 +4406,13 @@ category: Content
 	height: 3.125rem;
 	min-width: 320px;
 	min-width: 20rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .csspositionsticky .nav-bar {
@@ -4435,13 +4435,13 @@ category: Content
 	padding-top: 0.75rem;
 	min-height: 50px;
 	min-height: 3.125rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar--transform {
@@ -4455,23 +4455,23 @@ category: Content
 }
 
 .nav-bar--transform.nav-bar--always-show-on-mobile { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar--transparent:not(.nav-bar--fixed) { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .no-csspositionsticky .nav-bar--fixed {
@@ -4487,13 +4487,13 @@ category: Content
 	max-width: 80rem;
 	min-width: 320px;
 	min-width: 20rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar__container:before {
@@ -4505,24 +4505,24 @@ category: Content
 	z-index: 1;
 	width: 100%;
 	height: 100%; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar__nav {
 	height: 0; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar--mobile-show .nav-bar__nav {
@@ -4543,13 +4543,13 @@ category: Content
 	height: 3.125rem;
 	width: 50px;
 	width: 3.125rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar__trigger:active,
@@ -4578,13 +4578,13 @@ category: Content
 	transition: all 0.2s;
 	-webkit-transform: translate3d(0, -100%, 0);
 	transform: translate3d(0, -100%, 0); /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar--mobile-show .nav-bar__list {
@@ -4595,13 +4595,13 @@ category: Content
 .nav-bar__list li {
 	display: block;
 	margin: 0; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .nav-bar__link {
@@ -4610,13 +4610,13 @@ category: Content
 	text-align: center;
 	padding: 20px 30px;
 	padding: 1.25rem 1.875rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .touch .nav-bar__link {
@@ -5161,8 +5161,7 @@ category: Content
 }
 
 .no-csstransforms [data-tooltip-position=top] .tooltip__content,
-.no-csstransforms
-[data-tooltip-position=bottom] .tooltip__content {
+.no-csstransforms [data-tooltip-position=bottom] .tooltip__content {
 	margin-left: -110px;
 }
 
@@ -5571,13 +5570,13 @@ category: Content
 	float: left;
 	margin-bottom: 20px;
 	margin-bottom: 1.25rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .media--right .media__alpha {
@@ -5979,45 +5978,45 @@ category: Content
 	position: relative;
 	overflow: hidden;
 	display: none; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .parallax__img {
 	min-width: 100%; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /*doc
@@ -6318,40 +6317,60 @@ category: Navigation
 */
 
 .off-canvas-nav-bar { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/ /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+}
+
+.off-canvas-nav-bar--transparent:not(.nav-bar--fixed) { /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+}
+
+.off-canvas-nav-bar__nav { /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .off-canvas-nav-bar__item { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .off-canvas-nav-bar__link { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /*doc
@@ -6402,24 +6421,24 @@ Buttons
 .btn-group {
 	margin: 0 0 30px 0;
 	margin: 0 0 1.875rem 0; /*doc
-  ---
-  title: Inline
-  name: inline
-  category: Buttons
-  ---
-  
-  These work with the button classes so you can use those to change color and size.
-  
-  ```html_example
-  <ul class="btn-group btn-group--inline">
-      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-      <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-  </ul>
-  ```
-  
-  */
+---
+title: Inline
+name: inline
+category: Buttons
+---
+
+These work with the button classes so you can use those to change color and size.
+
+```html_example
+<ul class="btn-group btn-group--inline">
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+</ul>
+```
+
+*/
 }
 
 .btn-group > li a,
@@ -6712,25 +6731,25 @@ These work with the button classes so you can use those to change color, size is
 .btn--medium {
 	padding: 12px 35px;
 	padding: 0.75rem 2.1875rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .btn--large {
 	padding: 15px 40px;
 	padding: 0.9375rem 2.5rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /*doc
@@ -6792,48 +6811,48 @@ Add more colors in the settings file under "buttons" if you need to.
 	border-color: #eaeaea;
 	line-height: 16px;
 	line-height: 1rem; /*doc
-  ---
-  title: Mask
-  name: mask
-  category: Buttons
-  ---
-  
-  ```html_example
-  <a class="btn btn--mask btn--medium" href="#">button medium</a>
-  ```
-  
-  */ /*doc
-  ---
-  title: Block
-  name: block
-  category: Buttons
-  ---
-  
-  ```html_example
-  <div class="grid">
-      <div class="column-6">
-          <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
-      </div>
-      <div class="column-6">
-          <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
-      </div>
-  </div>
-  ```
-  
-  */ /*doc
-  ---
-  title: Ghost
-  name: ghost
-  category: Buttons
-  ---
-  
-  Add more colors in the settings file under "buttons" if you need to.
-  
-  ```html_example
-  <a class="btn btn--ghost btn--dark btn--small" href="#">black</a>
-  ```
-  
-  */
+---
+title: Mask
+name: mask
+category: Buttons
+---
+
+```html_example
+<a class="btn btn--mask btn--medium" href="#">button medium</a>
+```
+
+*/ /*doc
+---
+title: Block
+name: block
+category: Buttons
+---
+
+```html_example
+<div class="grid">
+    <div class="column-6">
+        <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+    </div>
+    <div class="column-6">
+        <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+    </div>
+</div>
+```
+
+*/ /*doc
+---
+title: Ghost
+name: ghost
+category: Buttons
+---
+
+Add more colors in the settings file under "buttons" if you need to.
+
+```html_example
+<a class="btn btn--ghost btn--dark btn--small" href="#">black</a>
+```
+
+*/
 }
 
 .btn:hover {
@@ -7583,18 +7602,18 @@ Use the grid to your advantage.
 */
 
 .form--vertical .form__row {
-	margin-bottom: 2.85714%;
+	margin-bottom: 2.8571428571%;
 }
 
 .form__label {
 	margin-bottom: 0; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .form__label label {
@@ -7731,13 +7750,13 @@ category: Forms
 }
 
 .form__input-list { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .form__input-list li + li {
@@ -7786,13 +7805,13 @@ category: Forms
 .form__actions {
 	margin-top: 20px;
 	margin-top: 1.25rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .form--vertical .form__actions {
@@ -8628,13 +8647,13 @@ app.notifications.add(target, message, size, type);
 .notification--beta {
 	padding: 20px 60px 20px 20px;
 	padding: 1.25rem 3.75rem 1.25rem 1.25rem; /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 /* Notification styles
@@ -8673,13 +8692,13 @@ app.notifications.add(target, message, size, type);
 }
 
 .notification--beta .notification__text { /**
-  *
-  * Usage:
-  * @include mq('gamma-and-up') {
-  *     CSS properties here..
-  * }
-  *
-  **/
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
 }
 
 .notification__close {
@@ -8850,23 +8869,23 @@ Content
 }
 
 .column-alpha-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-alpha-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-alpha-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-alpha-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-alpha-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-alpha-and-up-3 {
@@ -8874,11 +8893,11 @@ Content
 }
 
 .column-alpha-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-alpha-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-alpha-and-up-5 {
@@ -8886,11 +8905,11 @@ Content
 }
 
 .grid--no-gutters .column-alpha-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-alpha-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-alpha-and-up-6 {
@@ -8898,23 +8917,23 @@ Content
 }
 
 .column-alpha-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-alpha-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-alpha-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-alpha-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-alpha-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-alpha-and-up-9 {
@@ -8922,19 +8941,19 @@ Content
 }
 
 .column-alpha-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-alpha-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-alpha-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-alpha-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-alpha-and-up-12 {
@@ -8966,23 +8985,23 @@ Content
 }
 
 .column-beta-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-beta-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-beta-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-beta-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-beta-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-beta-3 {
@@ -8990,11 +9009,11 @@ Content
 }
 
 .column-beta-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-beta-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-beta-5 {
@@ -9002,11 +9021,11 @@ Content
 }
 
 .grid--no-gutters .column-beta-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-beta-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-beta-6 {
@@ -9014,23 +9033,23 @@ Content
 }
 
 .column-beta-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-beta-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-beta-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-beta-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-beta-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-beta-9 {
@@ -9038,19 +9057,19 @@ Content
 }
 
 .column-beta-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-beta-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-beta-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-beta-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-beta-12 {
@@ -9096,7 +9115,7 @@ h1,
 }
 
 .block-grid__item {
-	width: 31.33333%;
+	width: 31.3333333333%;
 }
 
 .parallax {
@@ -9138,7 +9157,7 @@ h1,
 
 [class|=column] {
 	float: left;
-	margin-left: 2.85714%;
+	margin-left: 2.8571428571%;
 }
 
 .column-beta-and-up--first {
@@ -9147,88 +9166,84 @@ h1,
 
 .column-1,
 .column-beta-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-1,
-.grid--no-gutters
-  .column-beta-and-up-1 {
-	width: 8.33333%;
+.grid--no-gutters .column-beta-and-up-1 {
+	width: 8.3333333333%;
 }
 
 .pre-1,
 .pre-1:first-child {
-	margin-left: 8.57143%;
+	margin-left: 8.5714285714%;
 }
 
 .post-1,
 .post-1:first-child {
-	margin-right: 8.57143%;
+	margin-right: 8.5714285714%;
 }
 
 .column-2,
 .column-beta-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-2,
-.grid--no-gutters
-  .column-beta-and-up-2 {
-	width: 16.66667%;
+.grid--no-gutters .column-beta-and-up-2 {
+	width: 16.6666666667%;
 }
 
 .pre-2,
 .pre-2:first-child {
-	margin-left: 17.14286%;
+	margin-left: 17.1428571429%;
 }
 
 .post-2,
 .post-2:first-child {
-	margin-right: 17.14286%;
+	margin-right: 17.1428571429%;
 }
 
 .column-3,
 .media__alpha,
 .column-beta-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-3,
 .grid--no-gutters .media__alpha,
-.grid--no-gutters
-  .column-beta-and-up-3 {
+.grid--no-gutters .column-beta-and-up-3 {
 	width: 25%;
 }
 
 .pre-3,
 .pre-3:first-child {
-	margin-left: 25.71429%;
+	margin-left: 25.7142857143%;
 }
 
 .post-3,
 .post-3:first-child {
-	margin-right: 25.71429%;
+	margin-right: 25.7142857143%;
 }
 
 .column-4,
 .column-beta-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-4,
-.grid--no-gutters
-  .column-beta-and-up-4 {
-	width: 33.33333%;
+.grid--no-gutters .column-beta-and-up-4 {
+	width: 33.3333333333%;
 }
 
 .pre-4,
 .pre-4:first-child {
-	margin-left: 34.28571%;
+	margin-left: 34.2857142857%;
 }
 
 .post-4,
 .post-4:first-child {
-	margin-right: 34.28571%;
+	margin-right: 34.2857142857%;
 }
 
 .column-5,
@@ -9237,51 +9252,48 @@ h1,
 }
 
 .grid--no-gutters .column-5,
-.grid--no-gutters
-  .column-beta-and-up-5 {
-	width: 41.66667%;
+.grid--no-gutters .column-beta-and-up-5 {
+	width: 41.6666666667%;
 }
 
 .pre-5,
 .pre-5:first-child {
-	margin-left: 42.85714%;
+	margin-left: 42.8571428571%;
 }
 
 .post-5,
 .post-5:first-child {
-	margin-right: 42.85714%;
+	margin-right: 42.8571428571%;
 }
 
 .column-6,
 .column-beta-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-6,
-.grid--no-gutters
-  .column-beta-and-up-6 {
+.grid--no-gutters .column-beta-and-up-6 {
 	width: 50%;
 }
 
 .pre-6,
 .pre-6:first-child {
-	margin-left: 51.42857%;
+	margin-left: 51.4285714286%;
 }
 
 .post-6,
 .post-6:first-child {
-	margin-right: 51.42857%;
+	margin-right: 51.4285714286%;
 }
 
 .column-7,
 .column-beta-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-7,
-.grid--no-gutters
-  .column-beta-and-up-7 {
-	width: 58.33333%;
+.grid--no-gutters .column-beta-and-up-7 {
+	width: 58.3333333333%;
 }
 
 .pre-7,
@@ -9296,88 +9308,84 @@ h1,
 
 .column-8,
 .column-beta-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-8,
-.grid--no-gutters
-  .column-beta-and-up-8 {
-	width: 66.66667%;
+.grid--no-gutters .column-beta-and-up-8 {
+	width: 66.6666666667%;
 }
 
 .pre-8,
 .pre-8:first-child {
-	margin-left: 68.57143%;
+	margin-left: 68.5714285714%;
 }
 
 .post-8,
 .post-8:first-child {
-	margin-right: 68.57143%;
+	margin-right: 68.5714285714%;
 }
 
 .column-9,
 .media__beta,
 .column-beta-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-9,
 .grid--no-gutters .media__beta,
-.grid--no-gutters
-  .column-beta-and-up-9 {
+.grid--no-gutters .column-beta-and-up-9 {
 	width: 75%;
 }
 
 .pre-9,
 .pre-9:first-child {
-	margin-left: 77.14286%;
+	margin-left: 77.1428571429%;
 }
 
 .post-9,
 .post-9:first-child {
-	margin-right: 77.14286%;
+	margin-right: 77.1428571429%;
 }
 
 .column-10,
 .column-beta-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-10,
-.grid--no-gutters
-  .column-beta-and-up-10 {
-	width: 83.33333%;
+.grid--no-gutters .column-beta-and-up-10 {
+	width: 83.3333333333%;
 }
 
 .pre-10,
 .pre-10:first-child {
-	margin-left: 85.71429%;
+	margin-left: 85.7142857143%;
 }
 
 .post-10,
 .post-10:first-child {
-	margin-right: 85.71429%;
+	margin-right: 85.7142857143%;
 }
 
 .column-11,
 .column-beta-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-11,
-.grid--no-gutters
-  .column-beta-and-up-11 {
-	width: 91.66667%;
+.grid--no-gutters .column-beta-and-up-11 {
+	width: 91.6666666667%;
 }
 
 .pre-11,
 .pre-11:first-child {
-	margin-left: 94.28571%;
+	margin-left: 94.2857142857%;
 }
 
 .post-11,
 .post-11:first-child {
-	margin-right: 94.28571%;
+	margin-right: 94.2857142857%;
 }
 
 .column-12,
@@ -9386,19 +9394,18 @@ h1,
 }
 
 .grid--no-gutters .column-12,
-.grid--no-gutters
-  .column-beta-and-up-12 {
+.grid--no-gutters .column-beta-and-up-12 {
 	width: 100%;
 }
 
 .pre-12,
 .pre-12:first-child {
-	margin-left: 102.85714%;
+	margin-left: 102.857142857%;
 }
 
 .post-12,
 .post-12:first-child {
-	margin-right: 102.85714%;
+	margin-right: 102.857142857%;
 }
 
 .modal {
@@ -9439,7 +9446,7 @@ h1,
 }
 
 .form__actions {
-	margin-left: 42.85714%;
+	margin-left: 42.8571428571%;
 }
 
 .notification--beta {
@@ -9479,23 +9486,23 @@ h1,
 }
 
 .column-gamma-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-gamma-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-gamma-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-gamma-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-gamma-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-gamma-3 {
@@ -9503,11 +9510,11 @@ h1,
 }
 
 .column-gamma-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-gamma-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-gamma-5 {
@@ -9515,11 +9522,11 @@ h1,
 }
 
 .grid--no-gutters .column-gamma-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-gamma-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-gamma-6 {
@@ -9527,23 +9534,23 @@ h1,
 }
 
 .column-gamma-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-gamma-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-gamma-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-gamma-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-gamma-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-gamma-9 {
@@ -9551,19 +9558,19 @@ h1,
 }
 
 .column-gamma-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-gamma-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-gamma-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-gamma-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-gamma-12 {
@@ -9705,23 +9712,23 @@ h1,
 }
 
 .column-gamma-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-gamma-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-gamma-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-gamma-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-gamma-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-gamma-and-up-3 {
@@ -9729,11 +9736,11 @@ h1,
 }
 
 .column-gamma-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-gamma-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-gamma-and-up-5 {
@@ -9741,11 +9748,11 @@ h1,
 }
 
 .grid--no-gutters .column-gamma-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-gamma-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-gamma-and-up-6 {
@@ -9753,23 +9760,23 @@ h1,
 }
 
 .column-gamma-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-gamma-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-gamma-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-gamma-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-gamma-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-gamma-and-up-9 {
@@ -9777,19 +9784,19 @@ h1,
 }
 
 .column-gamma-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-gamma-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-gamma-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-gamma-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-gamma-and-up-12 {
@@ -10002,16 +10009,6 @@ h2,
     **/
 }
 
-.off-canvas-nav-bar--transparent:not(.nav-bar--fixed) { /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-}
-
 .no-csspositionsticky .off-canvas-nav-bar--fixed {
 	position: fixed;
 	top: 0;
@@ -10025,16 +10022,6 @@ h2,
 	max-width: 80rem;
 	min-width: 320px;
 	min-width: 20rem; /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-}
-
-.off-canvas-nav-bar__nav { /**
     *
     * Usage:
     * @include mq('gamma-and-up') {
@@ -10112,23 +10099,23 @@ h2,
 }
 
 .column-delta-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-delta-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-delta-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-delta-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-delta-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-delta-and-up-3 {
@@ -10136,11 +10123,11 @@ h2,
 }
 
 .column-delta-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-delta-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-delta-and-up-5 {
@@ -10148,11 +10135,11 @@ h2,
 }
 
 .grid--no-gutters .column-delta-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-delta-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-delta-and-up-6 {
@@ -10160,23 +10147,23 @@ h2,
 }
 
 .column-delta-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-delta-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-delta-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-delta-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-delta-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-delta-and-up-9 {
@@ -10184,19 +10171,19 @@ h2,
 }
 
 .column-delta-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-delta-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-delta-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-delta-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-delta-and-up-12 {
@@ -10216,23 +10203,23 @@ h2,
 }
 
 .column-delta-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-delta-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-delta-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-delta-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-delta-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-delta-3 {
@@ -10240,11 +10227,11 @@ h2,
 }
 
 .column-delta-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-delta-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-delta-5 {
@@ -10252,11 +10239,11 @@ h2,
 }
 
 .grid--no-gutters .column-delta-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-delta-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-delta-6 {
@@ -10264,23 +10251,23 @@ h2,
 }
 
 .column-delta-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-delta-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-delta-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-delta-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-delta-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-delta-9 {
@@ -10288,19 +10275,19 @@ h2,
 }
 
 .column-delta-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-delta-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-delta-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-delta-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-delta-12 {
@@ -10324,23 +10311,23 @@ h2,
 }
 
 .column-epsilon-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-epsilon-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-epsilon-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-3 {
@@ -10348,11 +10335,11 @@ h2,
 }
 
 .column-epsilon-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-epsilon-and-up-5 {
@@ -10360,11 +10347,11 @@ h2,
 }
 
 .grid--no-gutters .column-epsilon-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-epsilon-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-6 {
@@ -10372,23 +10359,23 @@ h2,
 }
 
 .column-epsilon-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-epsilon-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-epsilon-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-9 {
@@ -10396,19 +10383,19 @@ h2,
 }
 
 .column-epsilon-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-epsilon-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-epsilon-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-epsilon-and-up-12 {
@@ -10428,23 +10415,23 @@ h2,
 }
 
 .column-epsilon-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-epsilon-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-epsilon-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-epsilon-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-epsilon-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-epsilon-3 {
@@ -10452,11 +10439,11 @@ h2,
 }
 
 .column-epsilon-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-epsilon-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-epsilon-5 {
@@ -10464,11 +10451,11 @@ h2,
 }
 
 .grid--no-gutters .column-epsilon-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-epsilon-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-epsilon-6 {
@@ -10476,23 +10463,23 @@ h2,
 }
 
 .column-epsilon-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-epsilon-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-epsilon-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-epsilon-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-epsilon-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-epsilon-9 {
@@ -10500,19 +10487,19 @@ h2,
 }
 
 .column-epsilon-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-epsilon-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-epsilon-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-epsilon-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-epsilon-12 {
@@ -10536,23 +10523,23 @@ h2,
 }
 
 .column-zeta-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-zeta-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-zeta-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-zeta-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-zeta-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-zeta-3 {
@@ -10560,11 +10547,11 @@ h2,
 }
 
 .column-zeta-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-zeta-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-zeta-5 {
@@ -10572,11 +10559,11 @@ h2,
 }
 
 .grid--no-gutters .column-zeta-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-zeta-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-zeta-6 {
@@ -10584,23 +10571,23 @@ h2,
 }
 
 .column-zeta-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-zeta-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-zeta-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-zeta-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-zeta-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-zeta-9 {
@@ -10608,19 +10595,19 @@ h2,
 }
 
 .column-zeta-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-zeta-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-zeta-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-zeta-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-zeta-12 {
@@ -10644,23 +10631,23 @@ h2,
 }
 
 .column-zeta-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-zeta-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-zeta-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-zeta-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-zeta-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-zeta-and-up-3 {
@@ -10668,11 +10655,11 @@ h2,
 }
 
 .column-zeta-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-zeta-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-zeta-and-up-5 {
@@ -10680,11 +10667,11 @@ h2,
 }
 
 .grid--no-gutters .column-zeta-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-zeta-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-zeta-and-up-6 {
@@ -10692,23 +10679,23 @@ h2,
 }
 
 .column-zeta-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-zeta-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-zeta-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-zeta-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-zeta-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-zeta-and-up-9 {
@@ -10716,19 +10703,19 @@ h2,
 }
 
 .column-zeta-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-zeta-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-zeta-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-zeta-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-zeta-and-up-12 {
@@ -10748,23 +10735,23 @@ h2,
 }
 
 .column-eta-and-up-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-eta-and-up-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-eta-and-up-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-eta-and-up-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-eta-and-up-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-eta-and-up-3 {
@@ -10772,11 +10759,11 @@ h2,
 }
 
 .column-eta-and-up-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-eta-and-up-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-eta-and-up-5 {
@@ -10784,11 +10771,11 @@ h2,
 }
 
 .grid--no-gutters .column-eta-and-up-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-eta-and-up-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-eta-and-up-6 {
@@ -10796,23 +10783,23 @@ h2,
 }
 
 .column-eta-and-up-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-eta-and-up-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-eta-and-up-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-eta-and-up-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-eta-and-up-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-eta-and-up-9 {
@@ -10820,19 +10807,19 @@ h2,
 }
 
 .column-eta-and-up-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-eta-and-up-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-eta-and-up-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-eta-and-up-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-eta-and-up-12 {
@@ -10950,23 +10937,23 @@ h2,
 }
 
 .column-alpha-1 {
-	width: 5.71429%;
+	width: 5.7142857143%;
 }
 
 .grid--no-gutters .column-alpha-1 {
-	width: 8.33333%;
+	width: 8.3333333333%;
 }
 
 .column-alpha-2 {
-	width: 14.28571%;
+	width: 14.2857142857%;
 }
 
 .grid--no-gutters .column-alpha-2 {
-	width: 16.66667%;
+	width: 16.6666666667%;
 }
 
 .column-alpha-3 {
-	width: 22.85714%;
+	width: 22.8571428571%;
 }
 
 .grid--no-gutters .column-alpha-3 {
@@ -10974,11 +10961,11 @@ h2,
 }
 
 .column-alpha-4 {
-	width: 31.42857%;
+	width: 31.4285714286%;
 }
 
 .grid--no-gutters .column-alpha-4 {
-	width: 33.33333%;
+	width: 33.3333333333%;
 }
 
 .column-alpha-5 {
@@ -10986,11 +10973,11 @@ h2,
 }
 
 .grid--no-gutters .column-alpha-5 {
-	width: 41.66667%;
+	width: 41.6666666667%;
 }
 
 .column-alpha-6 {
-	width: 48.57143%;
+	width: 48.5714285714%;
 }
 
 .grid--no-gutters .column-alpha-6 {
@@ -10998,23 +10985,23 @@ h2,
 }
 
 .column-alpha-7 {
-	width: 57.14286%;
+	width: 57.1428571429%;
 }
 
 .grid--no-gutters .column-alpha-7 {
-	width: 58.33333%;
+	width: 58.3333333333%;
 }
 
 .column-alpha-8 {
-	width: 65.71429%;
+	width: 65.7142857143%;
 }
 
 .grid--no-gutters .column-alpha-8 {
-	width: 66.66667%;
+	width: 66.6666666667%;
 }
 
 .column-alpha-9 {
-	width: 74.28571%;
+	width: 74.2857142857%;
 }
 
 .grid--no-gutters .column-alpha-9 {
@@ -11022,19 +11009,19 @@ h2,
 }
 
 .column-alpha-10 {
-	width: 82.85714%;
+	width: 82.8571428571%;
 }
 
 .grid--no-gutters .column-alpha-10 {
-	width: 83.33333%;
+	width: 83.3333333333%;
 }
 
 .column-alpha-11 {
-	width: 91.42857%;
+	width: 91.4285714286%;
 }
 
 .grid--no-gutters .column-alpha-11 {
-	width: 91.66667%;
+	width: 91.6666666667%;
 }
 
 .column-alpha-12 {
@@ -11075,8 +11062,8 @@ abbr[title]:after {
 }
 
 /*
-   * Don't show links for images, or javascript/internal links
-   */
+     * Don't show links for images, or javascript/internal links
+     */
 
 .ir a:after,
 a[href^="javascript:"]:after,

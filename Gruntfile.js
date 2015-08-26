@@ -126,8 +126,8 @@ module.exports = function(grunt) {
         sass: {
             dev: {
                 options: {
-                    style: 'expanded',
-                    require: 'susy'
+                    sourceMap: true,
+                    style: 'expanded'
                 },
 
                 files: {
@@ -353,7 +353,7 @@ module.exports = function(grunt) {
         'cssmin',
         'uglify',
         'imagemin',
-        'imageoptim'
+        'imageoptim',
     ]);
 
     // Peanuts tasks

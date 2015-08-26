@@ -1,6 +1,6 @@
 /*
-Imports settings.scss and the grid dependency [Susy](http://susy.oddbird.net)
+    Imports settings.scss and the grid dependency [Susy](http://susy.oddbird.net)
 */
 
 @import "settings";
-@import "susy";
+@import "../../../bower_components/susy/sass/susy";
