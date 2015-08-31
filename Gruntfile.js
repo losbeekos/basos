@@ -1,7 +1,8 @@
 module.exports = function(grunt) {
 
      //load all grunt tasks matching the `grunt-*` pattern
-    require('load-grunt-tasks')(grunt);
+    require('jit-grunt')(grunt);
+    require('time-grunt')(grunt);
 
     var todayTimestamp = '<%= grunt.template.today("ddmmyyyyhhMMss") %>',
         basosConfig = {
@@ -16,7 +17,6 @@ module.exports = function(grunt) {
 
         clean: {
             js: ['<%= basos.dist %>/js'],
-            tempsass: ['<%= basos.dist %>/css/temp.*'],
             fonts: ['<%= basos.dist %>/fonts'],
             images: ['<%= basos.dist %>/img']
         },
@@ -59,6 +59,10 @@ module.exports = function(grunt) {
 
         concat: {
             app: {
+                options: {
+                    sourceMap: true
+                }, 
+
                 src: [
                     // Bower components
                     'bower_components/fastclick/lib/fastclick.js',
@@ -157,14 +161,6 @@ module.exports = function(grunt) {
             }
         },
 
-        cmq: {
-            dev: {
-                files: {
-                    '<%= basos.dist %>/css': ['<%= basos.dist %>/css/main.css']
-                }
-            }
-        },
-
         cssmin: {
             minify: {
                 expand: true,
@@ -243,13 +239,13 @@ module.exports = function(grunt) {
             // Basos
             sass: {
                 files: ['<%= basos.src %>/scss/**/*'],
-                tasks: ['sass:dev', 'postcss', 'cmq:dev', 'clean:tempsass'],
+                tasks: ['sass:dev', 'postcss'],
             },
 
             // Peanuts
             // sass: {
             //     files: ['<%= basos.src %>/scss/**/*'],
-            //     tasks: ['sass:dev', 'postcss', 'cmq:dev', 'clean:tempsass', 'css_wrap'],
+            //     tasks: ['sass:dev', 'postcss', 'css_wrap'],
             // },
 
             fonts: {
@@ -276,9 +272,8 @@ module.exports = function(grunt) {
         browserSync: {
             dev: {
                 bsFiles: {
-                    files : [
-                        '<%= basos.dist %>/js/app.js',
-                        '<%= basos.dist %>/js/vendor/modernizr/modernizr.js',
+                    src: [
+                        '<%= basos.dist %>/js/**/*.js',
                         '<%= basos.dist %>/css/main.css',
                         '<%= basos.dist %>/img/**/*',
                         '<%= basos.dist %>/fonts/**/*',
@@ -289,6 +284,7 @@ module.exports = function(grunt) {
                 },
 
                 options: {
+                    ui: false,
                     proxy: '0.0.0.0:9000',
                     ghostMode: {
                         clicks: false,
@@ -349,9 +345,7 @@ module.exports = function(grunt) {
         'concat',
         'copy',
         'sass:dev',
-        'postcss',
-        'cmq:dev',
-        'clean:tempsass',
+        'postcss'
     ]);
 
     grunt.registerTask('dist', [
@@ -361,8 +355,6 @@ module.exports = function(grunt) {
         'copy',
         'sass:dev',
         'postcss',
-        'cmq:dev',
-        'clean:tempsass',
         'cssmin',
         'uglify',
         'imagemin',
@@ -378,8 +370,6 @@ module.exports = function(grunt) {
     //     'copy',
     //     'sass:dev',
     //     'postcss',
-    //     'cmq:dev',
-    //     'clean:tempsass',
     //     'css_wrap',
     // ]);
 
@@ -390,8 +380,6 @@ module.exports = function(grunt) {
     //     'copy',
     //     'sass:dev',
     //     'postcss',
-    //     'cmq:dev',
-    //     'clean:tempsass',
     //     'cssmin',
     //     'uglify',
     //     'imagemin',

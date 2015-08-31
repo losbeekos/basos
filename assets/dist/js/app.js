@@ -5246,3 +5246,4 @@ app.settings.$window.on('resize', function () {
         app.settings.$html.removeClass('disable-transitions');
     }, 500);
 });
+//# sourceMappingURL=app.js.map
