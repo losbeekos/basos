@@ -1,855 +1,865 @@
-/* Modernizr 2.8.3 (Custom Build) | MIT & BSD
- * Build: http://modernizr.com/download/#-fontface-backgroundsize-borderimage-borderradius-boxshadow-flexbox-flexboxlegacy-hsla-multiplebgs-opacity-rgba-textshadow-cssanimations-csscolumns-generatedcontent-cssgradients-cssreflections-csstransforms-csstransforms3d-csstransitions-applicationcache-canvas-canvastext-draganddrop-hashchange-history-audio-video-indexeddb-input-inputtypes-localstorage-postmessage-sessionstorage-websockets-websqldatabase-webworkers-geolocation-inlinesvg-smil-svg-svgclippaths-touch-webgl-shiv-mq-cssclasses-teststyles-testprop-testallprops-hasevent-prefixes-domprefixes-css_positionsticky-load
+/*!
+ * modernizr v3.0.0-alpha.3
+ * Build http://v3.modernizr.com/download/#-csspositionsticky-input-inputtypes-mq-shiv-dontmin
+ *
+ * Copyright (c)
+ *  Faruk Ates
+ *  Paul Irish
+ *  Alex Sexton
+ *  Ryan Seddon
+ *  Alexander Farkas
+ *  Patrick Kettner
+ *  Stu Cox
+ *  Richard Herrera
+
+ * MIT License
  */
-;
 
+/*
+ * Modernizr tests which native CSS3 and HTML5 features are available in the
+ * current UA and makes the results available to you in two ways: as properties on
+ * a global `Modernizr` object, and as classes on the `<html>` element. This
+ * information allows you to progressively enhance your pages with a granular level
+ * of control over the experience.
+*/
 
+;(function(window, document, undefined){
+  var classes = [];
+  
 
-window.Modernizr = (function( window, document, undefined ) {
+  // Take the html5 variable out of the
+  // html5shiv scope so we can return it.
+  var html5;
+  /**
+  * @preserve HTML5 Shiv 3.7.2 | @afarkas @jdalton @jon_neal @rem | MIT/GPL2 Licensed
+  */
+  ;(function(window, document) {
+  /*jshint evil:true */
+    /** version */
+    var version = '3.7.2';
 
-    var version = '2.8.3',
+    /** Preset options */
+    var options = window.html5 || {};
 
-    Modernizr = {},
+    /** Used to skip problem elements */
+    var reSkip = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i;
 
-    enableClasses = true,
+    /** Not all elements can be cloned in IE **/
+    var saveClones = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i;
 
-    docElement = document.documentElement,
+    /** Detect whether the browser supports default html5 styles */
+    var supportsHtml5Styles;
 
-    mod = 'modernizr',
-    modElem = document.createElement(mod),
-    mStyle = modElem.style,
+    /** Name of the expando, to work with multiple documents or to re-shiv one document */
+    var expando = '_html5shiv';
 
-    inputElem  = document.createElement('input')  ,
+    /** The id for the the documents expando */
+    var expanID = 0;
 
-    smile = ':)',
+    /** Cached data for each document */
+    var expandoData = {};
 
-    toString = {}.toString,
+    /** Detect whether the browser supports unknown elements */
+    var supportsUnknownElements;
 
-    prefixes = ' -webkit- -moz- -o- -ms- '.split(' '),
+    (function() {
+      try {
+          var a = document.createElement('a');
+          a.innerHTML = '<xyz></xyz>';
+          //if the hidden property is implemented we can assume, that the browser supports basic HTML5 Styles
+          supportsHtml5Styles = ('hidden' in a);
 
-
-
-    omPrefixes = 'Webkit Moz O ms',
-
-    cssomPrefixes = omPrefixes.split(' '),
-
-    domPrefixes = omPrefixes.toLowerCase().split(' '),
-
-    ns = {'svg': 'http://www.w3.org/2000/svg'},
-
-    tests = {},
-    inputs = {},
-    attrs = {},
-
-    classes = [],
-
-    slice = classes.slice,
-
-    featureName,
-
-
-    injectElementWithStyles = function( rule, callback, nodes, testnames ) {
-
-      var style, ret, node, docOverflow,
-          div = document.createElement('div'),
-                body = document.body,
-                fakeBody = body || document.createElement('body');
-
-      if ( parseInt(nodes, 10) ) {
-                      while ( nodes-- ) {
-              node = document.createElement('div');
-              node.id = testnames ? testnames[nodes] : mod + (nodes + 1);
-              div.appendChild(node);
-          }
+          supportsUnknownElements = a.childNodes.length == 1 || (function() {
+            // assign a false positive if unable to shiv
+            (document.createElement)('a');
+            var frag = document.createDocumentFragment();
+            return (
+              typeof frag.cloneNode == 'undefined' ||
+              typeof frag.createDocumentFragment == 'undefined' ||
+              typeof frag.createElement == 'undefined'
+            );
+          }());
+      } catch(e) {
+        // assign a false positive if detection fails => unable to shiv
+        supportsHtml5Styles = true;
+        supportsUnknownElements = true;
       }
 
-                style = ['&#173;','<style id="s', mod, '">', rule, '</style>'].join('');
-      div.id = mod;
-          (body ? div : fakeBody).innerHTML += style;
-      fakeBody.appendChild(div);
-      if ( !body ) {
-                fakeBody.style.background = '';
-                fakeBody.style.overflow = 'hidden';
-          docOverflow = docElement.style.overflow;
-          docElement.style.overflow = 'hidden';
-          docElement.appendChild(fakeBody);
-      }
-
-      ret = callback(div, rule);
-        if ( !body ) {
-          fakeBody.parentNode.removeChild(fakeBody);
-          docElement.style.overflow = docOverflow;
-      } else {
-          div.parentNode.removeChild(div);
-      }
-
-      return !!ret;
-
-    },
-
-    testMediaQuery = function( mq ) {
-
-      var matchMedia = window.matchMedia || window.msMatchMedia;
-      if ( matchMedia ) {
-        return matchMedia(mq) && matchMedia(mq).matches || false;
-      }
-
-      var bool;
-
-      injectElementWithStyles('@media ' + mq + ' { #' + mod + ' { position: absolute; } }', function( node ) {
-        bool = (window.getComputedStyle ?
-                  getComputedStyle(node, null) :
-                  node.currentStyle)['position'] == 'absolute';
-      });
-
-      return bool;
-
-     },
-
-
-    isEventSupported = (function() {
-
-      var TAGNAMES = {
-        'select': 'input', 'change': 'input',
-        'submit': 'form', 'reset': 'form',
-        'error': 'img', 'load': 'img', 'abort': 'img'
-      };
-
-      function isEventSupported( eventName, element ) {
-
-        element = element || document.createElement(TAGNAMES[eventName] || 'div');
-        eventName = 'on' + eventName;
-
-            var isSupported = eventName in element;
-
-        if ( !isSupported ) {
-                if ( !element.setAttribute ) {
-            element = document.createElement('div');
-          }
-          if ( element.setAttribute && element.removeAttribute ) {
-            element.setAttribute(eventName, '');
-            isSupported = is(element[eventName], 'function');
-
-                    if ( !is(element[eventName], 'undefined') ) {
-              element[eventName] = undefined;
-            }
-            element.removeAttribute(eventName);
-          }
-        }
-
-        element = null;
-        return isSupported;
-      }
-      return isEventSupported;
-    })(),
-
-
-    _hasOwnProperty = ({}).hasOwnProperty, hasOwnProp;
-
-    if ( !is(_hasOwnProperty, 'undefined') && !is(_hasOwnProperty.call, 'undefined') ) {
-      hasOwnProp = function (object, property) {
-        return _hasOwnProperty.call(object, property);
-      };
-    }
-    else {
-      hasOwnProp = function (object, property) {
-        return ((property in object) && is(object.constructor.prototype[property], 'undefined'));
-      };
-    }
-
-
-    if (!Function.prototype.bind) {
-      Function.prototype.bind = function bind(that) {
-
-        var target = this;
-
-        if (typeof target != "function") {
-            throw new TypeError();
-        }
-
-        var args = slice.call(arguments, 1),
-            bound = function () {
-
-            if (this instanceof bound) {
-
-              var F = function(){};
-              F.prototype = target.prototype;
-              var self = new F();
-
-              var result = target.apply(
-                  self,
-                  args.concat(slice.call(arguments))
-              );
-              if (Object(result) === result) {
-                  return result;
-              }
-              return self;
-
-            } else {
-
-              return target.apply(
-                  that,
-                  args.concat(slice.call(arguments))
-              );
-
-            }
-
-        };
-
-        return bound;
-      };
-    }
-
-    function setCss( str ) {
-        mStyle.cssText = str;
-    }
-
-    function setCssAll( str1, str2 ) {
-        return setCss(prefixes.join(str1 + ';') + ( str2 || '' ));
-    }
-
-    function is( obj, type ) {
-        return typeof obj === type;
-    }
-
-    function contains( str, substr ) {
-        return !!~('' + str).indexOf(substr);
-    }
-
-    function testProps( props, prefixed ) {
-        for ( var i in props ) {
-            var prop = props[i];
-            if ( !contains(prop, "-") && mStyle[prop] !== undefined ) {
-                return prefixed == 'pfx' ? prop : true;
-            }
-        }
-        return false;
-    }
-
-    function testDOMProps( props, obj, elem ) {
-        for ( var i in props ) {
-            var item = obj[props[i]];
-            if ( item !== undefined) {
-
-                            if (elem === false) return props[i];
-
-                            if (is(item, 'function')){
-                                return item.bind(elem || obj);
-                }
-
-                            return item;
-            }
-        }
-        return false;
-    }
-
-    function testPropsAll( prop, prefixed, elem ) {
-
-        var ucProp  = prop.charAt(0).toUpperCase() + prop.slice(1),
-            props   = (prop + ' ' + cssomPrefixes.join(ucProp + ' ') + ucProp).split(' ');
-
-            if(is(prefixed, "string") || is(prefixed, "undefined")) {
-          return testProps(props, prefixed);
-
-            } else {
-          props = (prop + ' ' + (domPrefixes).join(ucProp + ' ') + ucProp).split(' ');
-          return testDOMProps(props, prefixed, elem);
-        }
-    }    tests['flexbox'] = function() {
-      return testPropsAll('flexWrap');
-    };
-
-
-    tests['flexboxlegacy'] = function() {
-        return testPropsAll('boxDirection');
-    };
-
-
-    tests['canvas'] = function() {
-        var elem = document.createElement('canvas');
-        return !!(elem.getContext && elem.getContext('2d'));
-    };
-
-    tests['canvastext'] = function() {
-        return !!(Modernizr['canvas'] && is(document.createElement('canvas').getContext('2d').fillText, 'function'));
-    };
-
-
-
-    tests['webgl'] = function() {
-        return !!window.WebGLRenderingContext;
-    };
-
-
-    tests['touch'] = function() {
-        var bool;
-
-        if(('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-          bool = true;
-        } else {
-          injectElementWithStyles(['@media (',prefixes.join('touch-enabled),('),mod,')','{#modernizr{top:9px;position:absolute}}'].join(''), function( node ) {
-            bool = node.offsetTop === 9;
-          });
-        }
-
-        return bool;
-    };
-
-
-
-    tests['geolocation'] = function() {
-        return 'geolocation' in navigator;
-    };
-
-
-    tests['postmessage'] = function() {
-      return !!window.postMessage;
-    };
-
-
-    tests['websqldatabase'] = function() {
-      return !!window.openDatabase;
-    };
-
-    tests['indexedDB'] = function() {
-      return !!testPropsAll("indexedDB", window);
-    };
-
-    tests['hashchange'] = function() {
-      return isEventSupported('hashchange', window) && (document.documentMode === undefined || document.documentMode > 7);
-    };
-
-    tests['history'] = function() {
-      return !!(window.history && history.pushState);
-    };
-
-    tests['draganddrop'] = function() {
-        var div = document.createElement('div');
-        return ('draggable' in div) || ('ondragstart' in div && 'ondrop' in div);
-    };
-
-    tests['websockets'] = function() {
-        return 'WebSocket' in window || 'MozWebSocket' in window;
-    };
-
-
-    tests['rgba'] = function() {
-        setCss('background-color:rgba(150,255,150,.5)');
-
-        return contains(mStyle.backgroundColor, 'rgba');
-    };
-
-    tests['hsla'] = function() {
-            setCss('background-color:hsla(120,40%,100%,.5)');
-
-        return contains(mStyle.backgroundColor, 'rgba') || contains(mStyle.backgroundColor, 'hsla');
-    };
-
-    tests['multiplebgs'] = function() {
-                setCss('background:url(https://),url(https://),red url(https://)');
-
-            return (/(url\s*\(.*?){3}/).test(mStyle.background);
-    };    tests['backgroundsize'] = function() {
-        return testPropsAll('backgroundSize');
-    };
-
-    tests['borderimage'] = function() {
-        return testPropsAll('borderImage');
-    };
-
-
-
-    tests['borderradius'] = function() {
-        return testPropsAll('borderRadius');
-    };
-
-    tests['boxshadow'] = function() {
-        return testPropsAll('boxShadow');
-    };
-
-    tests['textshadow'] = function() {
-        return document.createElement('div').style.textShadow === '';
-    };
-
-
-    tests['opacity'] = function() {
-                setCssAll('opacity:.55');
-
-                    return (/^0.55$/).test(mStyle.opacity);
-    };
-
-
-    tests['cssanimations'] = function() {
-        return testPropsAll('animationName');
-    };
-
-
-    tests['csscolumns'] = function() {
-        return testPropsAll('columnCount');
-    };
-
-
-    tests['cssgradients'] = function() {
-        var str1 = 'background-image:',
-            str2 = 'gradient(linear,left top,right bottom,from(#9f9),to(white));',
-            str3 = 'linear-gradient(left top,#9f9, white);';
-
-        setCss(
-                       (str1 + '-webkit- '.split(' ').join(str2 + str1) +
-                       prefixes.join(str3 + str1)).slice(0, -str1.length)
-        );
-
-        return contains(mStyle.backgroundImage, 'gradient');
-    };
-
-
-    tests['cssreflections'] = function() {
-        return testPropsAll('boxReflect');
-    };
-
-
-    tests['csstransforms'] = function() {
-        return !!testPropsAll('transform');
-    };
-
-
-    tests['csstransforms3d'] = function() {
-
-        var ret = !!testPropsAll('perspective');
-
-                        if ( ret && 'webkitPerspective' in docElement.style ) {
-
-                      injectElementWithStyles('@media (transform-3d),(-webkit-transform-3d){#modernizr{left:9px;position:absolute;height:3px;}}', function( node, rule ) {
-            ret = node.offsetLeft === 9 && node.offsetHeight === 3;
-          });
-        }
-        return ret;
-    };
-
-
-    tests['csstransitions'] = function() {
-        return testPropsAll('transition');
-    };
-
-
-
-    tests['fontface'] = function() {
-        var bool;
-
-        injectElementWithStyles('@font-face {font-family:"font";src:url("https://")}', function( node, rule ) {
-          var style = document.getElementById('smodernizr'),
-              sheet = style.sheet || style.styleSheet,
-              cssText = sheet ? (sheet.cssRules && sheet.cssRules[0] ? sheet.cssRules[0].cssText : sheet.cssText || '') : '';
-
-          bool = /src/i.test(cssText) && cssText.indexOf(rule.split(' ')[0]) === 0;
-        });
-
-        return bool;
-    };
-
-    tests['generatedcontent'] = function() {
-        var bool;
-
-        injectElementWithStyles(['#',mod,'{font:0/0 a}#',mod,':after{content:"',smile,'";visibility:hidden;font:3px/1 a}'].join(''), function( node ) {
-          bool = node.offsetHeight >= 3;
-        });
-
-        return bool;
-    };
-    tests['video'] = function() {
-        var elem = document.createElement('video'),
-            bool = false;
-
-            try {
-            if ( bool = !!elem.canPlayType ) {
-                bool      = new Boolean(bool);
-                bool.ogg  = elem.canPlayType('video/ogg; codecs="theora"')      .replace(/^no$/,'');
-
-                            bool.h264 = elem.canPlayType('video/mp4; codecs="avc1.42E01E"') .replace(/^no$/,'');
-
-                bool.webm = elem.canPlayType('video/webm; codecs="vp8, vorbis"').replace(/^no$/,'');
-            }
-
-        } catch(e) { }
-
-        return bool;
-    };
-
-    tests['audio'] = function() {
-        var elem = document.createElement('audio'),
-            bool = false;
-
-        try {
-            if ( bool = !!elem.canPlayType ) {
-                bool      = new Boolean(bool);
-                bool.ogg  = elem.canPlayType('audio/ogg; codecs="vorbis"').replace(/^no$/,'');
-                bool.mp3  = elem.canPlayType('audio/mpeg;')               .replace(/^no$/,'');
-
-                                                    bool.wav  = elem.canPlayType('audio/wav; codecs="1"')     .replace(/^no$/,'');
-                bool.m4a  = ( elem.canPlayType('audio/x-m4a;')            ||
-                              elem.canPlayType('audio/aac;'))             .replace(/^no$/,'');
-            }
-        } catch(e) { }
-
-        return bool;
-    };
-
-
-    tests['localstorage'] = function() {
-        try {
-            localStorage.setItem(mod, mod);
-            localStorage.removeItem(mod);
-            return true;
-        } catch(e) {
-            return false;
-        }
-    };
-
-    tests['sessionstorage'] = function() {
-        try {
-            sessionStorage.setItem(mod, mod);
-            sessionStorage.removeItem(mod);
-            return true;
-        } catch(e) {
-            return false;
-        }
-    };
-
-
-    tests['webworkers'] = function() {
-        return !!window.Worker;
-    };
-
-
-    tests['applicationcache'] = function() {
-        return !!window.applicationCache;
-    };
-
-
-    tests['svg'] = function() {
-        return !!document.createElementNS && !!document.createElementNS(ns.svg, 'svg').createSVGRect;
-    };
-
-    tests['inlinesvg'] = function() {
-      var div = document.createElement('div');
-      div.innerHTML = '<svg/>';
-      return (div.firstChild && div.firstChild.namespaceURI) == ns.svg;
-    };
-
-    tests['smil'] = function() {
-        return !!document.createElementNS && /SVGAnimate/.test(toString.call(document.createElementNS(ns.svg, 'animate')));
-    };
-
-
-    tests['svgclippaths'] = function() {
-        return !!document.createElementNS && /SVGClipPath/.test(toString.call(document.createElementNS(ns.svg, 'clipPath')));
-    };
-
-    function webforms() {
-                                            Modernizr['input'] = (function( props ) {
-            for ( var i = 0, len = props.length; i < len; i++ ) {
-                attrs[ props[i] ] = !!(props[i] in inputElem);
-            }
-            if (attrs.list){
-                                  attrs.list = !!(document.createElement('datalist') && window.HTMLDataListElement);
-            }
-            return attrs;
-        })('autocomplete autofocus list placeholder max min multiple pattern required step'.split(' '));
-                            Modernizr['inputtypes'] = (function(props) {
-
-            for ( var i = 0, bool, inputElemType, defaultView, len = props.length; i < len; i++ ) {
-
-                inputElem.setAttribute('type', inputElemType = props[i]);
-                bool = inputElem.type !== 'text';
-
-                                                    if ( bool ) {
-
-                    inputElem.value         = smile;
-                    inputElem.style.cssText = 'position:absolute;visibility:hidden;';
-
-                    if ( /^range$/.test(inputElemType) && inputElem.style.WebkitAppearance !== undefined ) {
-
-                      docElement.appendChild(inputElem);
-                      defaultView = document.defaultView;
-
-                                        bool =  defaultView.getComputedStyle &&
-                              defaultView.getComputedStyle(inputElem, null).WebkitAppearance !== 'textfield' &&
-                                                                                  (inputElem.offsetHeight !== 0);
-
-                      docElement.removeChild(inputElem);
-
-                    } else if ( /^(search|tel)$/.test(inputElemType) ){
-                                                                                    } else if ( /^(url|email)$/.test(inputElemType) ) {
-                                        bool = inputElem.checkValidity && inputElem.checkValidity() === false;
-
-                    } else {
-                                        bool = inputElem.value != smile;
-                    }
-                }
-
-                inputs[ props[i] ] = !!bool;
-            }
-            return inputs;
-        })('search tel url email datetime date month week time datetime-local number range color'.split(' '));
-        }
-    for ( var feature in tests ) {
-        if ( hasOwnProp(tests, feature) ) {
-                                    featureName  = feature.toLowerCase();
-            Modernizr[featureName] = tests[feature]();
-
-            classes.push((Modernizr[featureName] ? '' : 'no-') + featureName);
-        }
-    }
-
-    Modernizr.input || webforms();
-
-
-     Modernizr.addTest = function ( feature, test ) {
-       if ( typeof feature == 'object' ) {
-         for ( var key in feature ) {
-           if ( hasOwnProp( feature, key ) ) {
-             Modernizr.addTest( key, feature[ key ] );
-           }
-         }
-       } else {
-
-         feature = feature.toLowerCase();
-
-         if ( Modernizr[feature] !== undefined ) {
-                                              return Modernizr;
-         }
-
-         test = typeof test == 'function' ? test() : test;
-
-         if (typeof enableClasses !== "undefined" && enableClasses) {
-           docElement.className += ' ' + (test ? '' : 'no-') + feature;
-         }
-         Modernizr[feature] = test;
-
-       }
-
-       return Modernizr;
-     };
-
-
-    setCss('');
-    modElem = inputElem = null;
-
-    ;(function(window, document) {
-                var version = '3.7.0';
-
-            var options = window.html5 || {};
-
-            var reSkip = /^<|^(?:button|map|select|textarea|object|iframe|option|optgroup)$/i;
-
-            var saveClones = /^(?:a|b|code|div|fieldset|h1|h2|h3|h4|h5|h6|i|label|li|ol|p|q|span|strong|style|table|tbody|td|th|tr|ul)$/i;
-
-            var supportsHtml5Styles;
-
-            var expando = '_html5shiv';
-
-            var expanID = 0;
-
-            var expandoData = {};
-
-            var supportsUnknownElements;
-
-        (function() {
-          try {
-            var a = document.createElement('a');
-            a.innerHTML = '<xyz></xyz>';
-                    supportsHtml5Styles = ('hidden' in a);
-
-            supportsUnknownElements = a.childNodes.length == 1 || (function() {
-                        (document.createElement)('a');
-              var frag = document.createDocumentFragment();
-              return (
-                typeof frag.cloneNode == 'undefined' ||
-                typeof frag.createDocumentFragment == 'undefined' ||
-                typeof frag.createElement == 'undefined'
-              );
-            }());
-          } catch(e) {
-                    supportsHtml5Styles = true;
-            supportsUnknownElements = true;
-          }
-
-        }());
-
-            function addStyleSheet(ownerDocument, cssText) {
-          var p = ownerDocument.createElement('p'),
+    }());
+
+    /*--------------------------------------------------------------------------*/
+
+    /**
+     * Creates a style sheet with the given CSS text and adds it to the document.
+     * @private
+     * @param {Document} ownerDocument The document.
+     * @param {String} cssText The CSS text.
+     * @returns {StyleSheet} The style element.
+     */
+    function addStyleSheet(ownerDocument, cssText) {
+      var p = ownerDocument.createElement('p'),
           parent = ownerDocument.getElementsByTagName('head')[0] || ownerDocument.documentElement;
 
-          p.innerHTML = 'x<style>' + cssText + '</style>';
-          return parent.insertBefore(p.lastChild, parent.firstChild);
-        }
+      p.innerHTML = 'x<style>' + cssText + '</style>';
+      return parent.insertBefore(p.lastChild, parent.firstChild);
+    }
 
-            function getElements() {
-          var elements = html5.elements;
-          return typeof elements == 'string' ? elements.split(' ') : elements;
-        }
+    /**
+     * Returns the value of `html5.elements` as an array.
+     * @private
+     * @returns {Array} An array of shived element node names.
+     */
+    function getElements() {
+      var elements = html5.elements;
+      return typeof elements == 'string' ? elements.split(' ') : elements;
+    }
 
-            function getExpandoData(ownerDocument) {
-          var data = expandoData[ownerDocument[expando]];
-          if (!data) {
-            data = {};
-            expanID++;
-            ownerDocument[expando] = expanID;
-            expandoData[expanID] = data;
-          }
-          return data;
-        }
+    /**
+     * Extends the built-in list of html5 elements
+     * @memberOf html5
+     * @param {String|Array} newElements whitespace separated list or array of new element names to shiv
+     * @param {Document} ownerDocument The context document.
+     */
+    function addElements(newElements, ownerDocument) {
+      var elements = html5.elements;
+      if(typeof elements != 'string'){
+        elements = elements.join(' ');
+      }
+      if(typeof newElements != 'string'){
+        newElements = newElements.join(' ');
+      }
+      html5.elements = elements +' '+ newElements;
+      shivDocument(ownerDocument);
+    }
 
-            function createElement(nodeName, ownerDocument, data){
-          if (!ownerDocument) {
-            ownerDocument = document;
-          }
-          if(supportsUnknownElements){
-            return ownerDocument.createElement(nodeName);
-          }
-          if (!data) {
-            data = getExpandoData(ownerDocument);
-          }
-          var node;
+     /**
+     * Returns the data associated to the given document
+     * @private
+     * @param {Document} ownerDocument The document.
+     * @returns {Object} An object of data.
+     */
+    function getExpandoData(ownerDocument) {
+      var data = expandoData[ownerDocument[expando]];
+      if (!data) {
+          data = {};
+          expanID++;
+          ownerDocument[expando] = expanID;
+          expandoData[expanID] = data;
+      }
+      return data;
+    }
 
-          if (data.cache[nodeName]) {
-            node = data.cache[nodeName].cloneNode();
-          } else if (saveClones.test(nodeName)) {
-            node = (data.cache[nodeName] = data.createElem(nodeName)).cloneNode();
-          } else {
-            node = data.createElem(nodeName);
-          }
+    /**
+     * returns a shived element for the given nodeName and document
+     * @memberOf html5
+     * @param {String} nodeName name of the element
+     * @param {Document} ownerDocument The context document.
+     * @returns {Object} The shived element.
+     */
+    function createElement(nodeName, ownerDocument, data){
+      if (!ownerDocument) {
+          ownerDocument = document;
+      }
+      if(supportsUnknownElements){
+          return ownerDocument.createElement(nodeName);
+      }
+      if (!data) {
+          data = getExpandoData(ownerDocument);
+      }
+      var node;
 
-                                                    return node.canHaveChildren && !reSkip.test(nodeName) && !node.tagUrn ? data.frag.appendChild(node) : node;
-        }
+      if (data.cache[nodeName]) {
+          node = data.cache[nodeName].cloneNode();
+      } else if (saveClones.test(nodeName)) {
+          node = (data.cache[nodeName] = data.createElem(nodeName)).cloneNode();
+      } else {
+          node = data.createElem(nodeName);
+      }
 
-            function createDocumentFragment(ownerDocument, data){
-          if (!ownerDocument) {
-            ownerDocument = document;
-          }
-          if(supportsUnknownElements){
-            return ownerDocument.createDocumentFragment();
-          }
-          data = data || getExpandoData(ownerDocument);
-          var clone = data.frag.cloneNode(),
+      // Avoid adding some elements to fragments in IE < 9 because
+      // * Attributes like `name` or `type` cannot be set/changed once an element
+      //   is inserted into a document/fragment
+      // * Link elements with `src` attributes that are inaccessible, as with
+      //   a 403 response, will cause the tab/window to crash
+      // * Script elements appended to fragments will execute when their `src`
+      //   or `text` property is set
+      return node.canHaveChildren && !reSkip.test(nodeName) && !node.tagUrn ? data.frag.appendChild(node) : node;
+    }
+
+    /**
+     * returns a shived DocumentFragment for the given document
+     * @memberOf html5
+     * @param {Document} ownerDocument The context document.
+     * @returns {Object} The shived DocumentFragment.
+     */
+    function createDocumentFragment(ownerDocument, data){
+      if (!ownerDocument) {
+          ownerDocument = document;
+      }
+      if(supportsUnknownElements){
+          return ownerDocument.createDocumentFragment();
+      }
+      data = data || getExpandoData(ownerDocument);
+      var clone = data.frag.cloneNode(),
           i = 0,
           elems = getElements(),
           l = elems.length;
-          for(;i<l;i++){
-            clone.createElement(elems[i]);
-          }
-          return clone;
+      for(;i<l;i++){
+          clone.createElement(elems[i]);
+      }
+      return clone;
+    }
+
+    /**
+     * Shivs the `createElement` and `createDocumentFragment` methods of the document.
+     * @private
+     * @param {Document|DocumentFragment} ownerDocument The document.
+     * @param {Object} data of the document.
+     */
+    function shivMethods(ownerDocument, data) {
+      if (!data.cache) {
+          data.cache = {};
+          data.createElem = ownerDocument.createElement;
+          data.createFrag = ownerDocument.createDocumentFragment;
+          data.frag = data.createFrag();
+      }
+
+
+      ownerDocument.createElement = function(nodeName) {
+        //abort shiv
+        if (!html5.shivMethods) {
+            return data.createElem(nodeName);
         }
+        return createElement(nodeName, ownerDocument, data);
+      };
 
-            function shivMethods(ownerDocument, data) {
-          if (!data.cache) {
-            data.cache = {};
-            data.createElem = ownerDocument.createElement;
-            data.createFrag = ownerDocument.createDocumentFragment;
-            data.frag = data.createFrag();
-          }
-
-
-          ownerDocument.createElement = function(nodeName) {
-                    if (!html5.shivMethods) {
-              return data.createElem(nodeName);
-            }
-            return createElement(nodeName, ownerDocument, data);
-          };
-
-          ownerDocument.createDocumentFragment = Function('h,f', 'return function(){' +
-                                                          'var n=f.cloneNode(),c=n.createElement;' +
-                                                          'h.shivMethods&&(' +
-                                                                                                                getElements().join().replace(/[\w\-]+/g, function(nodeName) {
+      ownerDocument.createDocumentFragment = Function('h,f', 'return function(){' +
+        'var n=f.cloneNode(),c=n.createElement;' +
+        'h.shivMethods&&(' +
+          // unroll the `createElement` calls
+          getElements().join().replace(/[\w\-:]+/g, function(nodeName) {
             data.createElem(nodeName);
             data.frag.createElement(nodeName);
             return 'c("' + nodeName + '")';
           }) +
-            ');return n}'
-                                                         )(html5, data.frag);
-        }
+        ');return n}'
+      )(html5, data.frag);
+    }
 
-            function shivDocument(ownerDocument) {
-          if (!ownerDocument) {
-            ownerDocument = document;
-          }
-          var data = getExpandoData(ownerDocument);
+    /*--------------------------------------------------------------------------*/
 
-          if (html5.shivCSS && !supportsHtml5Styles && !data.hasCSS) {
-            data.hasCSS = !!addStyleSheet(ownerDocument,
-                                                                                'article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}' +
-                                                                                    'mark{background:#FF0;color:#000}' +
-                                                                                    'template{display:none}'
-                                         );
-          }
-          if (!supportsUnknownElements) {
-            shivMethods(ownerDocument, data);
-          }
-          return ownerDocument;
-        }
+    /**
+     * Shivs the given document.
+     * @memberOf html5
+     * @param {Document} ownerDocument The document to shiv.
+     * @returns {Document} The shived document.
+     */
+    function shivDocument(ownerDocument) {
+      if (!ownerDocument) {
+          ownerDocument = document;
+      }
+      var data = getExpandoData(ownerDocument);
 
-            var html5 = {
+      if (html5.shivCSS && !supportsHtml5Styles && !data.hasCSS) {
+        data.hasCSS = !!addStyleSheet(ownerDocument,
+          // corrects block display not defined in IE6/7/8/9
+          'article,aside,dialog,figcaption,figure,footer,header,hgroup,main,nav,section{display:block}' +
+          // adds styling not present in IE6/7/8/9
+          'mark{background:#FF0;color:#000}' +
+          // hides non-rendered elements
+          'template{display:none}'
+        );
+      }
+      if (!supportsUnknownElements) {
+        shivMethods(ownerDocument, data);
+      }
+      return ownerDocument;
+    }
 
-                'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output progress section summary template time video',
+    /*--------------------------------------------------------------------------*/
 
-                'version': version,
+    /**
+     * The `html5` object is exposed so that more elements can be shived and
+     * existing shiving can be detected on iframes.
+     * @type Object
+     * @example
+     *
+     * // options can be changed before the script is included
+     * html5 = { 'elements': 'mark section', 'shivCSS': false, 'shivMethods': false };
+     */
+    var html5 = {
 
-                'shivCSS': (options.shivCSS !== false),
+      /**
+       * An array or space separated string of node names of the elements to shiv.
+       * @memberOf html5
+       * @type Array|String
+       */
+      'elements': options.elements || 'abbr article aside audio bdi canvas data datalist details dialog figcaption figure footer header hgroup main mark meter nav output picture progress section summary template time video',
 
-                'supportsUnknownElements': supportsUnknownElements,
+      /**
+       * current version of html5shiv
+       */
+      'version': version,
 
-                'shivMethods': (options.shivMethods !== false),
+      /**
+       * A flag to indicate that the HTML5 style sheet should be inserted.
+       * @memberOf html5
+       * @type Boolean
+       */
+      'shivCSS': (options.shivCSS !== false),
 
-                'type': 'default',
+      /**
+       * Is equal to true if a browser supports creating unknown/HTML5 elements
+       * @memberOf html5
+       * @type boolean
+       */
+      'supportsUnknownElements': supportsUnknownElements,
 
-                'shivDocument': shivDocument,
+      /**
+       * A flag to indicate that the document's `createElement` and `createDocumentFragment`
+       * methods should be overwritten.
+       * @memberOf html5
+       * @type Boolean
+       */
+      'shivMethods': (options.shivMethods !== false),
 
-                createElement: createElement,
+      /**
+       * A string to describe the type of `html5` object ("default" or "default print").
+       * @memberOf html5
+       * @type String
+       */
+      'type': 'default',
 
-                createDocumentFragment: createDocumentFragment
-        };
+      // shivs the document according to the specified `html5` object options
+      'shivDocument': shivDocument,
 
-            window.html5 = html5;
+      //creates a shived element
+      createElement: createElement,
 
-            shivDocument(document);
+      //creates a shived documentFragment
+      createDocumentFragment: createDocumentFragment,
 
-    }(this, document));
-
-    Modernizr._version      = version;
-
-    Modernizr._prefixes     = prefixes;
-    Modernizr._domPrefixes  = domPrefixes;
-    Modernizr._cssomPrefixes  = cssomPrefixes;
-
-    Modernizr.mq            = testMediaQuery;
-
-    Modernizr.hasEvent      = isEventSupported;
-
-    Modernizr.testProp      = function(prop){
-        return testProps([prop]);
+      //extends list of elements
+      addElements: addElements
     };
 
-    Modernizr.testAllProps  = testPropsAll;
+    /*--------------------------------------------------------------------------*/
+
+    // expose html5
+    window.html5 = html5;
+
+    // shiv the document
+    shivDocument(document);
+
+  }(this, document));
 
 
-    Modernizr.testStyles    = injectElementWithStyles;    docElement.className = docElement.className.replace(/(^|\s)no-js(\s|$)/, '$1$2') +
+  var tests = [];
+  
 
-                                                    (enableClasses ? ' js ' + classes.join(' ') : '');
+  var ModernizrProto = {
+    // The current version, dummy
+    _version: '3.0.0-alpha.3',
 
-    return Modernizr;
+    // Any settings that don't work as separate modules
+    // can go in here as configuration.
+    _config: {
+      'classPrefix' : '',
+      'enableClasses' : true,
+      'enableJSClass' : true,
+      'usePrefixes' : true
+    },
 
-})(this, this.document);
-// Sticky positioning - constrains an element to be positioned inside the
-// intersection of its container box, and the viewport.
-Modernizr.addTest('csspositionsticky', function () {
+    // Queue of tests
+    _q: [],
 
+    // Stub these for people who are listening
+    on: function( test, cb ) {
+      // I don't really think people should do this, but we can
+      // safe guard it a bit.
+      // -- NOTE:: this gets WAY overridden in src/addTest for
+      // actual async tests. This is in case people listen to
+      // synchronous tests. I would leave it out, but the code
+      // to *disallow* sync tests in the real version of this
+      // function is actually larger than this.
+      var self = this;
+      setTimeout(function() {
+        cb(self[test]);
+      }, 0);
+    },
+
+    addTest: function( name, fn, options ) {
+      tests.push({name : name, fn : fn, options : options });
+    },
+
+    addAsyncTest: function (fn) {
+      tests.push({name : null, fn : fn});
+    }
+  };
+
+  
+
+  // Fake some of Object.create
+  // so we can force non test results
+  // to be non "own" properties.
+  var Modernizr = function(){};
+  Modernizr.prototype = ModernizrProto;
+
+  // Leak modernizr globally when you `require` it
+  // rather than force it here.
+  // Overwrite name so constructor name is nicer :D
+  Modernizr = new Modernizr();
+
+  
+
+  /**
+   * is returns a boolean for if typeof obj is exactly type.
+   */
+  function is( obj, type ) {
+    return typeof obj === type;
+  }
+  ;
+
+  // Run through all tests and detect their support in the current UA.
+  function testRunner() {
+    var featureNames;
+    var feature;
+    var aliasIdx;
+    var result;
+    var nameIdx;
+    var featureName;
+    var featureNameSplit;
+
+    for ( var featureIdx in tests ) {
+      featureNames = [];
+      feature = tests[featureIdx];
+      // run the test, throw the return value into the Modernizr,
+      //   then based on that boolean, define an appropriate className
+      //   and push it into an array of classes we'll join later.
+      //
+      //   If there is no name, it's an 'async' test that is run,
+      //   but not directly added to the object. That should
+      //   be done with a post-run addTest call.
+      if ( feature.name ) {
+        featureNames.push(feature.name.toLowerCase());
+
+        if (feature.options && feature.options.aliases && feature.options.aliases.length) {
+          // Add all the aliases into the names list
+          for (aliasIdx = 0; aliasIdx < feature.options.aliases.length; aliasIdx++) {
+            featureNames.push(feature.options.aliases[aliasIdx].toLowerCase());
+          }
+        }
+      }
+
+      // Run the test, or use the raw value if it's not a function
+      result = is(feature.fn, 'function') ? feature.fn() : feature.fn;
+
+
+      // Set each of the names on the Modernizr object
+      for (nameIdx = 0; nameIdx < featureNames.length; nameIdx++) {
+        featureName = featureNames[nameIdx];
+        // Support dot properties as sub tests. We don't do checking to make sure
+        // that the implied parent tests have been added. You must call them in
+        // order (either in the test, or make the parent test a dependency).
+        //
+        // Cap it to TWO to make the logic simple and because who needs that kind of subtesting
+        // hashtag famous last words
+        featureNameSplit = featureName.split('.');
+
+        if (featureNameSplit.length === 1) {
+          Modernizr[featureNameSplit[0]] = result;
+        } else {
+          // cast to a Boolean, if not one already
+          /* jshint -W053 */
+          if (Modernizr[featureNameSplit[0]] && !(Modernizr[featureNameSplit[0]] instanceof Boolean)) {
+            Modernizr[featureNameSplit[0]] = new Boolean(Modernizr[featureNameSplit[0]]);
+          }
+
+          Modernizr[featureNameSplit[0]][featureNameSplit[1]] = result;
+        }
+
+        classes.push((result ? '' : 'no-') + featureNameSplit.join('-'));
+      }
+    }
+  }
+
+  ;
+
+  var docElement = document.documentElement;
+  
+
+  // Pass in an and array of class names, e.g.:
+  //  ['no-webp', 'borderradius', ...]
+  function setClasses( classes ) {
+    var className = docElement.className;
+    var classPrefix = Modernizr._config.classPrefix || '';
+
+    // Change `no-js` to `js` (we do this independently of the `enableClasses`
+    // option)
+    // Handle classPrefix on this too
+    if(Modernizr._config.enableJSClass) {
+      var reJS = new RegExp('(^|\\s)'+classPrefix+'no-js(\\s|$)');
+      className = className.replace(reJS, '$1'+classPrefix+'js$2');
+    }
+
+    if(Modernizr._config.enableClasses) {
+      // Add the new classes
+      className += ' ' + classPrefix + classes.join(' ' + classPrefix);
+      docElement.className = className;
+    }
+
+  }
+
+  ;
+
+  var createElement = function() {
+    if (typeof document.createElement !== 'function') {
+      // This is the case in IE7, where the type of createElement is "object".
+      // For this reason, we cannot call apply() as Object is not a Function.
+      return document.createElement(arguments[0]);
+    } else {
+      return document.createElement.apply(document, arguments);
+    }
+  };
+  
+
+  // List of property values to set for css tests. See ticket #21
+  var prefixes = (ModernizrProto._config.usePrefixes ? ' -webkit- -moz- -o- -ms- '.split(' ') : []);
+
+  // expose these for the plugin API. Look in the source for how to join() them against your input
+  ModernizrProto._prefixes = prefixes;
+
+  
+/*!
+{
+  "name": "CSS position: sticky",
+  "property": "csspositionsticky",
+  "tags": ["css"],
+  "builderAliases": ["css_positionsticky"],
+  "notes": [{
+    "name": "Chrome bug report",
+    "href":"https://code.google.com/p/chromium/issues/detail?id=322972"
+  }],
+  "warnings": [ "using position:sticky on anything but top aligned elements is buggy in Chrome < 37 and iOS <=7+" ]
+}
+!*/
+
+  // Sticky positioning - constrains an element to be positioned inside the
+  // intersection of its container box, and the viewport.
+  Modernizr.addTest('csspositionsticky', function() {
     var prop = 'position:';
     var value = 'sticky';
-    var el = document.createElement('modernizr');
+    var el = createElement('modernizr');
     var mStyle = el.style;
 
-    mStyle.cssText = prop + Modernizr._prefixes.join(value + ';' + prop).slice(0, -prop.length);
+    mStyle.cssText = prop + prefixes.join(value + ';' + prop).slice(0, -prop.length);
 
     return mStyle.position.indexOf(value) !== -1;
-});
+  });
+
+
+  var inputElem = createElement('input');
+  
+
+  var inputtypes = 'search tel url email datetime date month week time datetime-local number range color'.split(' ');
+  
+
+  var inputs = {};
+  
+
+  var smile = ':)';
+  
+/*!
+{
+  "name": "Form input types",
+  "property": "inputtypes",
+  "caniuse": "forms",
+  "tags": ["forms"],
+  "authors": ["Mike Taylor"],
+  "polyfills": [
+    "jquerytools",
+    "webshims",
+    "h5f",
+    "webforms2",
+    "nwxforms",
+    "fdslider",
+    "html5slider",
+    "galleryhtml5forms",
+    "jscolor",
+    "html5formshim",
+    "selectedoptionsjs",
+    "formvalidationjs"
+  ]
+}
+!*/
+/* DOC
+Detects support for HTML5 form input types and exposes Boolean subproperties with the results:
+
+```javascript
+Modernizr.inputtypes.color
+Modernizr.inputtypes.date
+Modernizr.inputtypes.datetime
+Modernizr.inputtypes['datetime-local']
+Modernizr.inputtypes.email
+Modernizr.inputtypes.month
+Modernizr.inputtypes.number
+Modernizr.inputtypes.range
+Modernizr.inputtypes.search
+Modernizr.inputtypes.tel
+Modernizr.inputtypes.time
+Modernizr.inputtypes.url
+Modernizr.inputtypes.week
+```
+*/
+
+  // Run through HTML5's new input types to see if the UA understands any.
+  //   This is put behind the tests runloop because it doesn't return a
+  //   true/false like all the other tests; instead, it returns an object
+  //   containing each input type with its corresponding true/false value
+
+  // Big thanks to @miketaylr for the html5 forms expertise. miketaylr.com/
+  Modernizr['inputtypes'] = (function(props) {
+    var bool;
+    var inputElemType;
+    var defaultView;
+    var len = props.length;
+
+    for ( var i = 0; i < len; i++ ) {
+
+      inputElem.setAttribute('type', inputElemType = props[i]);
+      bool = inputElem.type !== 'text';
+
+      // We first check to see if the type we give it sticks..
+      // If the type does, we feed it a textual value, which shouldn't be valid.
+      // If the value doesn't stick, we know there's input sanitization which infers a custom UI
+      if ( bool ) {
+
+        inputElem.value         = smile;
+        inputElem.style.cssText = 'position:absolute;visibility:hidden;';
+
+        if ( /^range$/.test(inputElemType) && inputElem.style.WebkitAppearance !== undefined ) {
+
+          docElement.appendChild(inputElem);
+          defaultView = document.defaultView;
+
+          // Safari 2-4 allows the smiley as a value, despite making a slider
+          bool =  defaultView.getComputedStyle &&
+            defaultView.getComputedStyle(inputElem, null).WebkitAppearance !== 'textfield' &&
+            // Mobile android web browser has false positive, so must
+            // check the height to see if the widget is actually there.
+            (inputElem.offsetHeight !== 0);
+
+          docElement.removeChild(inputElem);
+
+        } else if ( /^(search|tel)$/.test(inputElemType) ){
+          // Spec doesn't define any special parsing or detectable UI
+          //   behaviors so we pass these through as true
+
+          // Interestingly, opera fails the earlier test, so it doesn't
+          //  even make it here.
+
+        } else if ( /^(url|email|number)$/.test(inputElemType) ) {
+          // Real url and email support comes with prebaked validation.
+          bool = inputElem.checkValidity && inputElem.checkValidity() === false;
+
+        } else {
+          // If the upgraded input compontent rejects the :) text, we got a winner
+          bool = inputElem.value != smile;
+        }
+      }
+
+      inputs[ props[i] ] = !!bool;
+    }
+    return inputs;
+  })(inputtypes);
+
+
+  var attrs = {};
+  
+
+  var inputattrs = 'autocomplete autofocus list placeholder max min multiple pattern required step'.split(' ');
+  
+/*!
+{
+  "name": "Input attributes",
+  "property": "input",
+  "tags": ["forms"],
+  "authors": ["Mike Taylor"],
+  "notes": [{
+    "name": "WHATWG spec",
+    "href": "http://www.whatwg.org/specs/web-apps/current-work/multipage/the-input-element.html#input-type-attr-summary"
+  }],
+  "knownBugs": ["Some blackberry devices report false positive for input.multiple"]
+}
+!*/
+/* DOC
+Detects support for HTML5 `<input>` element attributes and exposes Boolean subproperties with the results:
+
+```javascript
+Modernizr.input.autocomplete
+Modernizr.input.autofocus
+Modernizr.input.list
+Modernizr.input.max
+Modernizr.input.min
+Modernizr.input.multiple
+Modernizr.input.pattern
+Modernizr.input.placeholder
+Modernizr.input.required
+Modernizr.input.step
+```
+*/
+
+  // Run through HTML5's new input attributes to see if the UA understands any.
+  // Mike Taylr has created a comprehensive resource for testing these attributes
+  //   when applied to all input types:
+  //   miketaylr.com/code/input-type-attr.html
+
+  // Only input placeholder is tested while textarea's placeholder is not.
+  // Currently Safari 4 and Opera 11 have support only for the input placeholder
+  // Both tests are available in feature-detects/forms-placeholder.js
+  Modernizr['input'] = (function( props ) {
+    for ( var i = 0, len = props.length; i < len; i++ ) {
+      attrs[ props[i] ] = !!(props[i] in inputElem);
+    }
+    if (attrs.list){
+      // safari false positive's on datalist: webk.it/74252
+      // see also github.com/Modernizr/Modernizr/issues/146
+      attrs.list = !!(createElement('datalist') && window.HTMLDataListElement);
+    }
+    return attrs;
+  })(inputattrs);
+
+
+  function getBody() {
+    // After page load injecting a fake body doesn't work so check if body exists
+    var body = document.body;
+
+    if(!body) {
+      // Can't use the real body create a fake one.
+      body = createElement('body');
+      body.fake = true;
+    }
+
+    return body;
+  }
+
+  ;
+
+  // Inject element with style element and some CSS rules
+  function injectElementWithStyles( rule, callback, nodes, testnames ) {
+    var mod = 'modernizr';
+    var style;
+    var ret;
+    var node;
+    var docOverflow;
+    var div = createElement('div');
+    var body = getBody();
+
+    if ( parseInt(nodes, 10) ) {
+      // In order not to give false positives we create a node for each test
+      // This also allows the method to scale for unspecified uses
+      while ( nodes-- ) {
+        node = createElement('div');
+        node.id = testnames ? testnames[nodes] : mod + (nodes + 1);
+        div.appendChild(node);
+      }
+    }
+
+    // <style> elements in IE6-9 are considered 'NoScope' elements and therefore will be removed
+    // when injected with innerHTML. To get around this you need to prepend the 'NoScope' element
+    // with a 'scoped' element, in our case the soft-hyphen entity as it won't mess with our measurements.
+    // msdn.microsoft.com/en-us/library/ms533897%28VS.85%29.aspx
+    // Documents served as xml will throw if using &shy; so use xml friendly encoded version. See issue #277
+    style = ['&#173;','<style id="s', mod, '">', rule, '</style>'].join('');
+    div.id = mod;
+    // IE6 will false positive on some tests due to the style element inside the test div somehow interfering offsetHeight, so insert it into body or fakebody.
+    // Opera will act all quirky when injecting elements in documentElement when page is served as xml, needs fakebody too. #270
+    (!body.fake ? div : body).innerHTML += style;
+    body.appendChild(div);
+    if ( body.fake ) {
+      //avoid crashing IE8, if background image is used
+      body.style.background = '';
+      //Safari 5.13/5.1.4 OSX stops loading if ::-webkit-scrollbar is used and scrollbars are visible
+      body.style.overflow = 'hidden';
+      docOverflow = docElement.style.overflow;
+      docElement.style.overflow = 'hidden';
+      docElement.appendChild(body);
+    }
+
+    ret = callback(div, rule);
+    // If this is done after page load we don't want to remove the body so check if body exists
+    if ( body.fake ) {
+      body.parentNode.removeChild(body);
+      docElement.style.overflow = docOverflow;
+      // Trigger layout so kinetic scrolling isn't disabled in iOS6+
+      docElement.offsetHeight;
+    } else {
+      div.parentNode.removeChild(div);
+    }
+
+    return !!ret;
+
+  }
+
+  ;
+
+  // adapted from matchMedia polyfill
+  // by Scott Jehl and Paul Irish
+  // gist.github.com/786768
+  var testMediaQuery = (function () {
+    var matchMedia = window.matchMedia || window.msMatchMedia;
+    if ( matchMedia ) {
+      return function ( mq ) {
+        var mql = matchMedia(mq);
+        return mql && mql.matches || false;
+      };
+    }
+
+    return function ( mq ) {
+      var bool = false;
+
+      injectElementWithStyles('@media ' + mq + ' { #modernizr { position: absolute; } }', function( node ) {
+        bool = (window.getComputedStyle ?
+                window.getComputedStyle(node, null) :
+                node.currentStyle)['position'] == 'absolute';
+      });
+
+      return bool;
+    };
+  })();
+
+  
+
+  /** Modernizr.mq tests a given media query, live against the current state of the window
+   * A few important notes:
+        * If a browser does not support media queries at all (eg. oldIE) the mq() will always return false
+        * A max-width or orientation query will be evaluated against the current state, which may change later.
+        * You must specify values. Eg. If you are testing support for the min-width media query use:
+              Modernizr.mq('(min-width:0)')
+   * usage:
+   * Modernizr.mq('only screen and (max-width:768)')
+   */
+  var mq = ModernizrProto.mq = testMediaQuery;
+  
+
+  // Run each test
+  testRunner();
+
+  // Remove the "no-js" class if it exists
+  setClasses(classes);
+
+  delete ModernizrProto.addTest;
+  delete ModernizrProto.addAsyncTest;
+
+  // Run the things that are supposed to run after the tests
+  for (var i = 0; i < Modernizr._q.length; i++) {
+    Modernizr._q[i]();
+  }
+
+  // Leak Modernizr namespace
+  window.Modernizr = Modernizr;
+
+
 ;
+
+})(window, document);

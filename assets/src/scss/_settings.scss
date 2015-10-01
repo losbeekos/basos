@@ -135,16 +135,16 @@ $block: (
 $btn: (
     gradient                : map-get($base, gradient),
     gradient-bg             : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
-    border-width            : 0,
+    border-width            : 1px,
     border-radius           : map-get($base, border-radius),
-    padding-small           : 8px 30px,
-    padding-medium          : 12px 35px,
-    padding-medium-beta     : 12px 35px,
-    padding-large           : 15px 40px,
-    padding-large-beta      : 18px 50px,
-    font-size-small         : 16px,
-    font-size-medium        : 17px,
-    font-size-large         : 18px,
+    padding-small           : 8px 20px,
+    padding-medium          : 12px 20px,
+    padding-medium-beta     : 12px 20px,
+    padding-large           : 15px 25px,
+    padding-large-beta      : 18px 30px,
+    font-size-small         : 12px,
+    font-size-medium        : 14px,
+    font-size-large         : 16px,
     line-height             : 16px,
     text-shadow             : 1px 0 1px rgba(0, 0, 0, 0.2),
     box-shadow-focus        : 0 0 10px,
@@ -211,26 +211,24 @@ $padding: (
 */
 
 $icon: (
-    notification-info         : '\e802',
-    notification-success      : '\e800',
-    notification-error        : '\e801',
-    notification-close        : '\e808',
+    notification-info         : '\e804',
+    notification-success      : '\e801',
+    notification-error        : '\e803',
+    notification-close        : '\e802',
 
-    form-checkbox             : '\e803',
-    form-select               : '\e807',
-    form-password-toggle      : '\e80e',
-    form-password-toggle-show : '\e80f',
+    form-checkbox             : '\e801',
+    form-select               : '\e80a',
+    form-password-toggle      : '\e807',
+    form-password-toggle-show : '\e808',
 
-    nav-bar-trigger           : '\e80d',
-    nav-bar-trigger-close     : '\e808',
+    nav-bar-trigger           : '\e809',
+    nav-bar-trigger-close     : '\e802',
 
-    off-canvas-toggle-left    : '\e80d',
-    off-canvas-toggle-right   : '\e80d',
-    off-canvas-toggle-close   : '\e808',
+    off-canvas-toggle-left    : '\e809',
+    off-canvas-toggle-right   : '\e809',
+    off-canvas-toggle-close   : '\e802',
 
-    spinner-alpha             : '\e809',
-    spinner-beta              : '\e80a',
-    spinner-gamma             : '\e80b'
+    spinner                   : '\e800'
 );
 
 
@@ -508,14 +506,14 @@ $dropdown: (
     min-width           : 200px,
     max-width           : 300px,
     bg-color            : lighten(map-get($btn-bg, alpha), 5%),
-    border              : 0 solid darken(map-get($btn-bg, alpha), 10%),
+    border              : 1px solid darken(map-get($btn-bg, alpha), 5%),
     transition-duration : 0.2s,
     transition-delay    : 0.5s,
     transform           : translate3d(0, 10%, 0),
     transform-hover     : translate3d(0, 0, 0),
     link-padding        : 10px 15px,
     link-bg-color       : transparent,
-    link-bg-color-hover : lighten(map-get($accordion, trigger-bg-color), 3%),
+    link-bg-color-hover : darken(map-get($color, alpha), 2%),
     link-border-top     : 0 solid darken(map-get($btn-bg, alpha), 1%)
 );
 

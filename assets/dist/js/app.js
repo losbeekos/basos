@@ -4045,10 +4045,10 @@ app.affix = {
             bottomTrigger = (bottomTrigger - app.navBar.settings.navBarHeight);
         }
 
-        if (_scrollTop >= affixOffsetTop && _scrollTop < bottomTrigger) {
+        if (_scrollTop >= affixOffsetTop && _scrollTop < bottomTrigger && _el.height() < $container.height()) {
             _el.addClass('affix--fixed').removeClass('affix--absolute');
             _el.css({top: app.affix.settings.$navBar.height()});
-        } else if (_scrollTop >= bottomTrigger) {
+        } else if (_scrollTop >= bottomTrigger && _el.height() < $container.height()) {
             _el.removeClass('affix--fixed').addClass('affix--absolute');
         } else {
             _el.removeClass('affix--fixed').removeClass('affix--absolute');
@@ -4076,6 +4076,42 @@ app.affix = {
     resizeWidth: function (_el) {
         app.affix.settings.$el.removeClass('affix--fixed').removeClass('affix--absolute').removeAttr('style').width(app.affix.settings.$el.width());
     }
+};
+app.btnDropdown = {
+	init: function() {
+		app.settings.$body.on('click', '[data-btn-dropdown-toggle]', function (event) {
+			event.preventDefault();
+			event.stopPropagation();
+
+			var $this = $(this),
+				$btnDropdown = $this.closest('.btn-dropdown');
+
+			if ($btnDropdown.hasClass('btn-dropdown--open')) {
+				$btnDropdown.removeClass('btn-dropdown--open');
+			} else {
+				$('.btn-dropdown--open').removeClass('btn-dropdown--open');
+				$btnDropdown.addClass('btn-dropdown--open');
+			}
+		});
+
+		app.settings.$body.on('keydown', function(event){
+		    if (event.keyCode === 27) {
+		        $('.btn-dropdown--open').removeClass('btn-dropdown--open');
+		    }
+		});
+
+		app.settings.$body.on('click', '.btn-dropdown__dropdown, .btn-dropdown__list', function (event) {
+			var allowProp = $(this).attr("data-btn-dropdown");
+			if (allowProp !== "allowPropagation") {
+				event.stopPropagation();
+			}
+		});
+
+		app.settings.$body.on('click', function () {
+		    $('.btn-dropdown--open').removeClass('btn-dropdown--open');
+		});
+	}
+
 };
 app.cycle = {
     settings: {
@@ -5178,6 +5214,7 @@ app.settings.$document.ready(function () {
     app.parallax.init(scrollTop);
     app.groupCheckable.init();
     app.leave.init();
+    app.btnDropdown.init();
 
     //app.cycle.init();
     //app.fancybox.init();

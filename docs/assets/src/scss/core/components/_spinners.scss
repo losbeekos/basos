@@ -20,7 +20,5 @@
         @include rem(font-size, map-get($spinner, font-size));
     }
 
-    &--alpha:after { content: map-get($icon, spinner-alpha); }
-    &--beta:after  { content: map-get($icon, spinner-beta); }
-    &--gamma:after { content: map-get($icon, spinner-gamma); }
+    &--alpha:after { content: map-get($icon, spinner); }
 }

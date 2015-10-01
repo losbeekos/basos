@@ -360,6 +360,34 @@
                         <a class="btn btn--epsilon btn--large" href="#">button large</a>
                         <input class="btn btn--epsilon btn--large" value="button disabled" type="submit" disabled="disabled" />
 
+                        <h2>Split button</h2>
+                        <div class="btn-dropdown">
+                            <button data-datatables-btn="action" type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--cog icon--margin-alpha">Activate</button>
+                            <button data-datatables-btn="action" type="button" class="btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered" data-btn-dropdown-toggle aria-haspopup="true" aria-expanded="false"></button>
+                            <div class="btn-dropdown__dropdown" data-btn-dropdown="allowPropagation">
+                                <ul class="btn-dropdown__list btn-dropdown__list--border-bottom" data-btn-dropdown="allowPropagation">
+                                    <li><a class="btn-dropdown__link" href="#">Deactivate</a></li>
+                                    <li><a class="btn-dropdown__link" href="#">Concept</a></li>
+                                </ul>
+                                <a class="btn btn--mask btn--medium btn--block" href="#">Delete</a>
+                            </div>
+                        </div>
+
+                        <h2>Dropdown button</h2>
+                        <div class="btn-dropdown btn-dropdown--action">
+                            <button type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--filter icon--margin-beta-before" data-btn-dropdown-toggle>Filter</button>
+                            <div class="btn-dropdown__dropdown">
+                                <ul class="btn-dropdown__list btn-dropdown__list--border-bottom btn-dropdown__list--padding">
+                                    <li class="btn-dropdown__item"><input name="checkbox-active" type="checkbox" id="checkbox-active"><label for="checkbox-active">Active</label></li>
+                                    <li class="btn-dropdown__item"><input name="checkbox-inactive" type="checkbox" id="checkbox-inactive"><label for="checkbox-inactive">Inactive</label></li>
+                                    <li class="btn-dropdown__item"><input name="checkbox-concept" type="checkbox" id="checkbox-concept"><label for="checkbox-concept">Concept</label></li>
+                                    <li class="btn-dropdown__item"><input name="checkbox-published" type="checkbox" id="checkbox-published"><label for="checkbox-published">Published</label></li>
+                                    <li class="btn-dropdown__item"><input name="checkbox-notpublished" type="checkbox" id="checkbox-notpublished"><label for="checkbox-notpublished">Unpublished</label></li>
+                                </ul>
+                                <a class="btn btn--mask btn--medium btn--block" data-status-clear-checkboxes>Remove filters</a>
+                            </div>
+                        </div>
+
                         <h2>Ghost</h2>
                         <a class="btn btn--ghost btn--light btn--large" href="#">white</a>
                         <a class="btn btn--ghost btn--dark btn--large" href="#">black</a>

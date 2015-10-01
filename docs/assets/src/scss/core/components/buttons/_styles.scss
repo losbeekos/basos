@@ -22,17 +22,15 @@ Add more colors in the settings file under "buttons" if you need to.
     border-color: darken($bg-color, map-get($btn, border-color-darken));
 
     &:hover {
-        background-color: lighten($bg-color, 5%);
-        border-color: $bg-color;
+        background-color: darken($bg-color, 2%);
     }
 
     &:active {
-        background-color: lighten($bg-color, 10%);
-        border-color: lighten($bg-color, 5%);
+        background-color: darken($bg-color, 4%);
     }
 
     &:focus {
-        border-color: darken($bg-color, map-get($btn, border-color-darken));
+        box-shadow: map-get($btn, box-shadow-focus) rgba($bg-color, 1);
     }
 
     &--divider:hover,
@@ -249,5 +247,193 @@ Commonly used for triggers. For example a navigation trigger
     &:active,
     &:focus {
         outline: none;
+    }
+}
+
+/*doc
+---
+title: Split
+name: split_button
+category: Buttons
+---
+
+```html_example
+<div class="btn-dropdown">
+    <button data-datatables-btn="action" type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--cog icon--margin-alpha">Activate</button>
+    <button data-datatables-btn="action" type="button" class="btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered" data-btn-dropdown-toggle aria-haspopup="true" aria-expanded="false"></button>
+    <div class="btn-dropdown__dropdown" data-btn-dropdown="allowPropagation">
+        <ul class="btn-dropdown__list btn-dropdown__list--border-bottom" data-btn-dropdown="allowPropagation">
+            <li><a class="btn-dropdown__link" href="#">Deactivate</a></li>
+            <li><a class="btn-dropdown__link" href="#">Concept</a></li>
+        </ul>
+        <a class="btn btn--mask btn--medium btn--block" href="#">Delete</a>
+    </div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Dropdown
+name: dropdown_button
+category: Buttons
+---
+
+```html_example
+<div class="btn-dropdown btn-dropdown--action">
+    <button type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--filter icon--margin-beta-before" data-btn-dropdown-toggle>Filter</button>
+    <div class="btn-dropdown__dropdown">
+        <ul class="btn-dropdown__list btn-dropdown__list--border-bottom btn-dropdown__list--padding">
+            <li class="btn-dropdown__item"><input name="checkbox-active" type="checkbox" id="checkbox-active"><label for="checkbox-active">Active</label></li>
+            <li class="btn-dropdown__item"><input name="checkbox-inactive" type="checkbox" id="checkbox-inactive"><label for="checkbox-inactive">Inactive</label></li>
+            <li class="btn-dropdown__item"><input name="checkbox-concept" type="checkbox" id="checkbox-concept"><label for="checkbox-concept">Concept</label></li>
+            <li class="btn-dropdown__item"><input name="checkbox-published" type="checkbox" id="checkbox-published"><label for="checkbox-published">Published</label></li>
+            <li class="btn-dropdown__item"><input name="checkbox-notpublished" type="checkbox" id="checkbox-notpublished"><label for="checkbox-notpublished">Unpublished</label></li>
+        </ul>
+        <a class="btn btn--mask btn--medium btn--block" data-status-clear-checkboxes>Remove filters</a>
+    </div>
+</div>
+```
+
+*/
+
+.btn-dropdown {
+    position: relative;
+    display: inline-block;
+
+    &__action {
+        float: left;
+
+        @include rem(border-top-left-radius, 4px);
+        @include rem(border-bottom-left-radius, 4px);
+
+        .btn-dropdown--action & {
+            float: none;
+
+            @include rem(border-radius, 4px);
+        }
+
+        &:before {
+            color: map-get($color, kappa);
+        }
+
+        &:after {
+            @extend %font-icons;
+
+            color: map-get($color, kappa);
+
+            .btn-dropdown--action & {
+                content: '\e80a';
+
+                @include rem(margin-left, 10px);
+
+                // transition: transform map-get($dropdown, transition-duration); // Creates a renderbug in chrome when rotating...
+            }
+
+            .btn-dropdown--action.btn-dropdown--open & {
+                transform: rotate(180deg);
+            }
+
+            .btn-dropdown--no-arrow & {
+                display: none;
+            }
+        }
+    }
+
+    &__toggle {
+        @extend .icon;
+        @extend .icon--down;
+
+        margin-left: -1px;
+        
+        @include rem(border-top-right-radius, 4px);
+        @include rem(border-bottom-right-radius, 4px);
+
+        &:before {
+            // transition: transform map-get($dropdown, transition-duration); // Creates a renderbug in chrome when rotating...
+
+            .btn-dropdown--open & {
+                transform: rotate(180deg);
+            }
+        }
+    }
+
+    &__dropdown {
+        @extend .list-unstyled;
+
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        margin-top: 1px;
+        visibility: hidden;
+        background-color: map-get($color, white);
+        border: map-get($dropdown, border);
+        opacity: 0;
+        z-index: 9999;
+        transition: all map-get($dropdown, transition-duration);
+        transform: map-get($dropdown, transform);
+
+        @include rem(min-width, map-get($dropdown, min-width));
+        @include rem(max-width, map-get($dropdown, max-width));
+        @include rem(border-radius, 4px);
+
+        &--right {
+            left: inherit;
+            right: 0;
+        }
+
+        .btn-dropdown--open & {
+            visibility: visible;
+            opacity: 1;
+            transition: all map-get($dropdown, transition-duration);
+            transform: map-get($dropdown, transform-hover);
+        }
+    }
+
+    &__list {
+        @extend .clearfix;
+        @extend .list-unstyled;
+
+        &--border-bottom {
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        &--padding {
+            @include rem(padding, 14px 16px);
+        }
+    }
+
+    &__item {
+        @include rem(font-size, 14px);
+
+        .btn--small & {
+            @include rem(font-size, map-get($btn, font-size-small));
+        }
+
+        .btn--medium & {
+            @include rem(font-size, map-get($btn, font-size-medium));
+        }
+
+        .btn--large & {
+            @include rem(font-size, map-get($btn, font-size-large));
+        }
+
+        + .btn-dropdown__item {
+            @include rem(margin-top, 10px);
+        }
+    }
+
+    &__link {
+        background-color: map-get($dropdown, link-bg-color);
+        display: block;
+        color: map-get($color, text);
+
+        @include rem(padding, map-get($dropdown, link-padding));
+        @include rem(font-size, 14px);
+
+        &:hover {
+            background-color: map-get($dropdown, link-bg-color-hover);
+        }
     }
 }

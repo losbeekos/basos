@@ -101,7 +101,7 @@
 }
 
 .off-canvas-push {
-    transition: all map-get($base, transition-speed);
+    transition: transform map-get($base, transition-speed);
 
     .off-canvas-show-left & {
         transform: translateX(map-get($off-canvas, width));
@@ -118,7 +118,7 @@
         z-index: 999;
         visibility: hidden;
         opacity: 0;
-        transition: all map-get($base, transition-speed);
+        transition: transform map-get($base, transition-speed);
 
         .off-canvas-show-left &,
         .off-canvas-show-right & {

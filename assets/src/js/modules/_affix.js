@@ -31,10 +31,10 @@ app.affix = {
             bottomTrigger = (bottomTrigger - app.navBar.settings.navBarHeight);
         }
 
-        if (_scrollTop >= affixOffsetTop && _scrollTop < bottomTrigger) {
+        if (_scrollTop >= affixOffsetTop && _scrollTop < bottomTrigger && _el.height() < $container.height()) {
             _el.addClass('affix--fixed').removeClass('affix--absolute');
             _el.css({top: app.affix.settings.$navBar.height()});
-        } else if (_scrollTop >= bottomTrigger) {
+        } else if (_scrollTop >= bottomTrigger && _el.height() < $container.height()) {
             _el.removeClass('affix--fixed').addClass('affix--absolute');
         } else {
             _el.removeClass('affix--fixed').removeClass('affix--absolute');

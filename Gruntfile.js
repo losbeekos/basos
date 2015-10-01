@@ -151,7 +151,7 @@ module.exports = function(grunt) {
               // },
 
                 processors: [
-                    require('autoprefixer-core')({
+                    require('autoprefixer')({
                         browsers: 'last 2 versions'
                     })
                 ]
@@ -284,7 +284,7 @@ module.exports = function(grunt) {
                 },
 
                 options: {
-                    ui: false,
+                    // ui: false,
                     proxy: '0.0.0.0:9000',
                     ghostMode: {
                         clicks: false,

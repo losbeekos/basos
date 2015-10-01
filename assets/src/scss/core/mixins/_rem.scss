@@ -26,8 +26,8 @@
 
     // output the converted rules
     @if ($important == true) {
-        #{$property}: $rem-values !important;
+        #{$property}: $rem-values !important;  /* =#{$values} */
     } @else {
-        #{$property}: $rem-values;
+        #{$property}: $rem-values; /* =#{$values} */
     }
 }

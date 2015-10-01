@@ -13,7 +13,7 @@
     "url": "https://github.com/losbeekos/basos/issues"
   },
   "devDependencies": {
-    "autoprefixer-core": "^5.2.1",
+    "autoprefixer": "^6.0.2",
     "grunt": "^0.4.5",
     "grunt-browser-sync": "^2.1.3",
     "grunt-contrib-clean": "^0.6.0",
