@@ -18,12 +18,22 @@
         @include rem(padding-bottom, 6px);
 
         &:focus,
-        &:active,
-        &.is-filled {
+        &:active {
             border: none;
             box-shadow: none;
             border-bottom: 1px solid map-get($color, beta);
 
+            + label {
+                color: map-get($color, beta);
+
+                @include rem(top, 4px);
+                @include rem(font-size, 12px);
+            }
+        }
+
+        &:focus,
+        &:active,
+        &.is-filled {
             + label {
                 color: map-get($color, beta);
 

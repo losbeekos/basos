@@ -4569,22 +4569,21 @@ There are several icons predefined in basos, but you could ditch them all and ad
 These icons are generated with [fontello.com](http://fontello.com), you can use the fontello config.json in assets/src/fonts/src/fontello/ to preselect the icons already defined for basos on fontello.com.
 
 ```html_example
-<div class="icon icon--ok-circled"></div>
-<div class="icon icon--cancel-circled"></div>
-<div class="icon icon--info-circled"></div>
+<div class="icon icon--spinner"></div>
 <div class="icon icon--ok"></div>
-<div class="icon icon--up-open"></div>
-<div class="icon icon--right-open"></div>
-<div class="icon icon--left-open"></div>
-<div class="icon icon--down-open"></div>
 <div class="icon icon--cancel"></div>
-<div class="icon icon--spin2"></div>
-<div class="icon icon--spin5"></div>
-<div class="icon icon--spinner1"></div>
+<div class="icon icon--cancel-circle"></div>
+<div class="icon icon--info"></div>
 <div class="icon icon--attention"></div>
-<div class="icon icon--menu"></div>
+<div class="icon icon--question"></div>
 <div class="icon icon--eye"></div>
 <div class="icon icon--eye-off"></div>
+<div class="icon icon--menu"></div>
+<div class="icon icon--down"></div>
+<div class="icon icon--left"></div>
+<div class="icon icon--right"></div>
+<div class="icon icon--up"></div>
+<div class="icon icon--cog"></div>
 ```
 
 ## Icon margin
@@ -6820,9 +6819,7 @@ You can add a no animation modifier to the target (toggle--no-animation).
 ```html_example
 <button class="btn btn--alpha btn--small" data-toggle="#toggle-target">toggle</button>
 <div id="toggle-target" class="toggle toggle--hide">
-    <div class="block">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nemo nisi, pariatur doloremque itaque exercitationem odio libero odit dolores voluptate voluptas nulla voluptates nam nobis illo veritatis aperiam cupiditate dolor.
-    </div>
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nemo nisi, pariatur doloremque itaque exercitationem odio libero odit dolores voluptate voluptas nulla voluptates nam nobis illo veritatis aperiam cupiditate dolor.</div>
 </div>
 ```
 
@@ -9232,19 +9229,25 @@ category: Forms
     padding-bottom: 0.375rem;
     /* =6px */ }
     .form__input--floating-label input:focus,
-    .form__input--floating-label input:active,
-    .form__input--floating-label input.is-filled {
+    .form__input--floating-label input:active {
       border: none;
       box-shadow: none;
       border-bottom: 1px solid #2690b0; }
       .form__input--floating-label input:focus + label,
-      .form__input--floating-label input:active + label,
-      .form__input--floating-label input.is-filled + label {
+      .form__input--floating-label input:active + label {
         color: #2690b0;
         top: 0.25rem;
         /* =4px */
         font-size: 0.75rem;
         /* =12px */ }
+    .form__input--floating-label input:focus + label,
+    .form__input--floating-label input:active + label,
+    .form__input--floating-label input.is-filled + label {
+      color: #2690b0;
+      top: 0.25rem;
+      /* =4px */
+      font-size: 0.75rem;
+      /* =12px */ }
   .form__input--floating-label label {
     bottom: 0;
     color: rgba(0, 0, 0, 0.26);

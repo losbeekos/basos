@@ -60,22 +60,21 @@ There are several icons predefined in basos, but you could ditch them all and ad
 These icons are generated with [fontello.com](http://fontello.com), you can use the fontello config.json in assets/src/fonts/src/fontello/ to preselect the icons already defined for basos on fontello.com.
 
 ```html_example
-<div class="icon icon--ok-circled"></div>
-<div class="icon icon--cancel-circled"></div>
-<div class="icon icon--info-circled"></div>
+<div class="icon icon--spinner"></div>
 <div class="icon icon--ok"></div>
-<div class="icon icon--up-open"></div>
-<div class="icon icon--right-open"></div>
-<div class="icon icon--left-open"></div>
-<div class="icon icon--down-open"></div>
 <div class="icon icon--cancel"></div>
-<div class="icon icon--spin2"></div>
-<div class="icon icon--spin5"></div>
-<div class="icon icon--spinner1"></div>
+<div class="icon icon--cancel-circle"></div>
+<div class="icon icon--info"></div>
 <div class="icon icon--attention"></div>
-<div class="icon icon--menu"></div>
+<div class="icon icon--question"></div>
 <div class="icon icon--eye"></div>
 <div class="icon icon--eye-off"></div>
+<div class="icon icon--menu"></div>
+<div class="icon icon--down"></div>
+<div class="icon icon--left"></div>
+<div class="icon icon--right"></div>
+<div class="icon icon--up"></div>
+<div class="icon icon--cog"></div>
 ```
 
 ## Icon margin
