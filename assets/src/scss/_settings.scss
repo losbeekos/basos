@@ -272,10 +272,11 @@ $form: (
     actions-pre                       : 5,
 
     required-field-font-size          : 14px,
-
+    
+    validation-color                  : #444444,
     validation-icon-right             : 10px,
     validation-icon-top               : 9px,
-    validation-font-size              : 14px,
+    validation-font-size              : 12px,
     validation-arrow-size             : 8px
 
 );
@@ -286,18 +287,20 @@ $form: (
 */
 
 $notifications: (
-    bg-color-info       : #2690b0,
-    bg-color-success    : #26b036,
-    bg-color-error      : #b02626,
+    bg-color            : map-get($color, alpha),
     padding-alpha       : 20px 60px 20px 20px,
     padding-beta        : 30px 60px 30px 30px,
     margin-bottom       : 30px,
-    border-width        : 0,
+    border-width        : 1px,
+    border-color        : darken(map-get($color, alpha), 5%),
+    icon-color-info     : #2690b0,
+    icon-color-success  : #26b036,
+    icon-color-error    : #b02626,
     close-color         : map-get($color, black),
     close-opacity       : 0.2,
     close-opacity-hover : 0.5,
-    close-top           : 20px,
-    close-right         : 20px,
+    close-top           : 10px,
+    close-right         : 14px,
     cookie-bg           : rgba(0, 0, 0, 0.85),
     cookie-padding      : 20px 0
 );

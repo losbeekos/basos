@@ -3,9 +3,9 @@
 */
 
 .notification--error {
-    @include notification(lighten(map-get($notifications, bg-color-error), 53%), lighten(map-get($notifications, bg-color-error), 48%), darken(map-get($notifications, bg-color-error), 32%), map-get($icon, notification-error), map-get($notifications, bg-color-error));
+    @include notification(map-get($icon, notification-error), map-get($notifications, icon-color-error));
 }
 
 .notification--success {
-    @include notification(lighten(map-get($notifications, bg-color-success), 53%), lighten(map-get($notifications, bg-color-success), 48%), darken(map-get($notifications, bg-color-success), 32%), map-get($icon, notification-success), map-get($notifications, bg-color-success));
+    @include notification(map-get($icon, notification-success), map-get($notifications, icon-color-success));
 }

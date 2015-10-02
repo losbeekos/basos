@@ -2,11 +2,7 @@
 ==========
 */
 
-@mixin notification($background, $border-color, $color, $before-content, $before-color) {
-    color: $color;
-    background: $background;
-    border-color: $border-color;
-
+@mixin notification($before-content, $before-color) {
     &:before {
         content: $before-content;
         color: $before-color;
@@ -14,15 +10,14 @@
 }
 
 .notification {
-    border-width: map-get($notifications, border-width);
-    border-style: solid;
+    background: #f5f5f5;
     border-radius: map-get($base, border-radius);
     position: relative;
     transition: all map-get($base, transition-speed);
     transform-style: preserve-3d;
     backface-visibility: hidden;
 
-    @include notification(lighten(map-get($notifications, bg-color-info), 53%), lighten(map-get($notifications, bg-color-info), 48%), darken(map-get($notifications, bg-color-info), 32%), map-get($icon, notification-info), map-get($notifications, bg-color-info));
+    @include notification(map-get($icon, notification-info), map-get($notifications, icon-color-info));
     @include rem(margin-bottom, map-get($notifications, margin-bottom));
 
     &:before {

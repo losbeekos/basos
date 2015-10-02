@@ -48,7 +48,6 @@
     input[type="time"],
     input[type="url"],
     textarea {
-        border-color: map-get($notifications, bg-color-error);
         box-shadow: none;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
@@ -61,24 +60,8 @@
     }
 
     .form__select {
-        border-color: map-get($notifications, bg-color-error);
-
         &:after {
-            color: map-get($notifications, bg-color-error);
-        }
-    }
-
-    input[type=checkbox],
-    input[type=radio] {
-        + label {
-            &:before {
-                background: lighten(map-get($notifications, bg-color-error), 45%);
-                border-color: map-get($notifications, bg-color-error);
-            }
-
-            &:after {
-                color: map-get($notifications, bg-color-error);
-            }
+            color: map-get($form, validation-color);
         }
     }
 }
@@ -92,7 +75,7 @@
         top: -#{map-get($form, validation-arrow-size)*2};
         left: 0;
         border: map-get($form, validation-arrow-size) solid transparent;
-        border-bottom-color: map-get($notifications, bg-color-error);
+        border-bottom-color: map-get($form, validation-color);
     }
 }
 
@@ -103,7 +86,7 @@
     clear: both;
     max-width: 100%;
     position: relative;
-    background: map-get($notifications, bg-color-error);
+    background: map-get($form, validation-color);
     color: map-get($color, white);
 
     @include rem(border-radius, 0 0 map-get($base, border-radius) map-get($base, border-radius));
@@ -115,6 +98,8 @@
     }
 
     .form__input--validation-absolute & {
+        @extend %arrow;
+
         position: absolute;
         bottom: 0;
         left: 0;
@@ -123,28 +108,17 @@
 
         @include rem(border-radius, 0 map-get($base, border-radius) map-get($base, border-radius) map-get($base, border-radius));
         @include rem(bottom, -(map-get($form, validation-arrow-size)*1.5));
-
-        @extend %arrow;
     }
 }
 
 .form__input--error {
     + .parsley-container {
+        @extend %arrow;
+
         display: inline-block;
 
         @include rem(border-radius, 0 map-get($base, border-radius) map-get($base, border-radius) map-get($base, border-radius));
         @include rem(margin-top, map-get($form, validation-arrow-size)*2);
-
-        &:after {
-            content: '';
-            width: 0;
-            height: 0;
-            position: absolute;
-            top: -#{map-get($form, validation-arrow-size)*2};
-            left: 0;
-            border: map-get($form, validation-arrow-size) solid transparent;
-            border-bottom-color: map-get($notifications, bg-color-error);
-        }
     }
 }
 
@@ -241,7 +215,7 @@ We use the jQuery plugin [parsleyjs](http://parsleyjs.org) for our validation en
                 <label>Website *</label>
             </div>
             <div class="column-7">
-                <div class="column-6 form__input form__input--validation-absolute">
+                <div class="column-6 form__input">
                     <input type="url" />
                 </div>
             </div>
