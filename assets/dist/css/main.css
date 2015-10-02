@@ -7522,8 +7522,8 @@ These work with the button classes so you can use those to change color, size is
   /* =12px */ }
 
 .btn--medium {
-  padding: 0.75rem 1.25rem;
-  /* =12px 20px */
+  padding: 0.6875rem 1.25rem;
+  /* =11px 20px */
   /**
     *
     * Usage:
@@ -7534,14 +7534,14 @@ These work with the button classes so you can use those to change color, size is
     **/ }
   @media (min-width: 600px) {
     .btn--medium {
-      padding: 0.75rem 1.25rem;
-      /* =12px 20px */
+      padding: 0.6875rem 1.25rem;
+      /* =11px 20px */
       font-size: 0.875rem;
       /* =14px */ } }
 
 .btn--large {
-  padding: 0.9375rem 1.5625rem;
-  /* =15px 25px */
+  padding: 0.875rem 1.5625rem;
+  /* =14px 25px */
   /**
     *
     * Usage:
@@ -7552,8 +7552,8 @@ These work with the button classes so you can use those to change color, size is
     **/ }
   @media (min-width: 600px) {
     .btn--large {
-      padding: 1.125rem 1.875rem;
-      /* =18px 30px */
+      padding: 1rem 1.875rem;
+      /* =16px 30px */
       font-size: 1rem;
       /* =16px */ } }
 
@@ -8840,6 +8840,22 @@ category: Forms
           animation-duration: 0.5s;
   -webkit-animation-name: shake;
           animation-name: shake; }
+  .form__input--error.form__input--validation-absolute input[type="text"],
+  .form__input--error.form__input--validation-absolute input[type="password"],
+  .form__input--error.form__input--validation-absolute input[type="date"],
+  .form__input--error.form__input--validation-absolute input[type="datetime"],
+  .form__input--error.form__input--validation-absolute input[type="datetime-local"],
+  .form__input--error.form__input--validation-absolute input[type="month"],
+  .form__input--error.form__input--validation-absolute input[type="week"],
+  .form__input--error.form__input--validation-absolute input[type="email"],
+  .form__input--error.form__input--validation-absolute input[type="number"],
+  .form__input--error.form__input--validation-absolute input[type="search"],
+  .form__input--error.form__input--validation-absolute input[type="tel"],
+  .form__input--error.form__input--validation-absolute input[type="time"],
+  .form__input--error.form__input--validation-absolute input[type="url"],
+  .form__input--error.form__input--validation-absolute textarea {
+    border-radius: 0 0;
+    /* =0 0 */ }
   .form__input--error input[type="text"],
   .form__input--error input[type="password"],
   .form__input--error input[type="date"],
@@ -8887,6 +8903,16 @@ category: Forms
   .form__input--error input[type=radio] + label:after {
     color: #b02626; }
 
+.form__input--validation-absolute .parsley-container:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -16px;
+  left: 0;
+  border: 8px solid transparent;
+  border-bottom-color: #b02626; }
+
 .parsley-container {
   display: none;
   clear: both;
@@ -8902,6 +8928,17 @@ category: Forms
   /* =14px */ }
   .form__input--error .parsley-container {
     display: block; }
+  .form__input--validation-absolute .parsley-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+    -webkit-transform: translateY(100%);
+            transform: translateY(100%);
+    border-radius: 0 0 0 0;
+    /* =0 0 0 0 */
+    bottom: -0.75rem;
+    /* =-12px */ }
 
 .form__input--error + .parsley-container {
   display: inline-block;
@@ -9012,7 +9049,7 @@ We use the jQuery plugin [parsleyjs](http://parsleyjs.org) for our validation en
                 <label>Website *</label>
             </div>
             <div class="column-7">
-                <div class="column-6 form__input">
+                <div class="column-6 form__input form__input--validation-absolute">
                     <input type="url" />
                 </div>
             </div>

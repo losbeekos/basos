@@ -15,6 +15,25 @@
     animation-duration: 0.5s;
     animation-name: shake;
 
+    &.form__input--validation-absolute {
+        input[type="text"],
+        input[type="password"],
+        input[type="date"],
+        input[type="datetime"],
+        input[type="datetime-local"],
+        input[type="month"],
+        input[type="week"],
+        input[type="email"],
+        input[type="number"],
+        input[type="search"],
+        input[type="tel"],
+        input[type="time"],
+        input[type="url"],
+        textarea {
+            @include rem(border-radius, map-get($base, border-radius) map-get($base, border-radius));
+        }
+    }
+
     input[type="text"],
     input[type="password"],
     input[type="date"],
@@ -64,6 +83,19 @@
     }
 }
 
+%arrow {
+    &:after {
+        content: '';
+        width: 0;
+        height: 0;
+        position: absolute;
+        top: -#{map-get($form, validation-arrow-size)*2};
+        left: 0;
+        border: map-get($form, validation-arrow-size) solid transparent;
+        border-bottom-color: map-get($notifications, bg-color-error);
+    }
+}
+
 .parsley-container {
     @extend .list-unstyled;
 
@@ -80,6 +112,19 @@
 
     .form__input--error & {
         display: block;
+    }
+
+    .form__input--validation-absolute & {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 100;
+        transform: translateY(100%);
+
+        @include rem(border-radius, 0 map-get($base, border-radius) map-get($base, border-radius) map-get($base, border-radius));
+        @include rem(bottom, -(map-get($form, validation-arrow-size)*1.5));
+
+        @extend %arrow;
     }
 }
 
@@ -196,7 +241,7 @@ We use the jQuery plugin [parsleyjs](http://parsleyjs.org) for our validation en
                 <label>Website *</label>
             </div>
             <div class="column-7">
-                <div class="column-6 form__input">
+                <div class="column-6 form__input form__input--validation-absolute">
                     <input type="url" />
                 </div>
             </div>
