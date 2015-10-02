@@ -9121,6 +9121,65 @@ category: Forms
 ```
 
 */
+/* Floating label
+==========
+*/
+.form__input--floating-label {
+  position: relative;
+  padding-top: 1.25rem;
+  /* =20px */ }
+  .form__input--floating-label input {
+    border: none;
+    border-bottom: 1px solid #e0e0e0;
+    text-align: left;
+    box-shadow: none;
+    padding: 0;
+    padding-top: 0.375rem;
+    /* =6px */
+    padding-bottom: 0.375rem;
+    /* =6px */ }
+    .form__input--floating-label input:focus,
+    .form__input--floating-label input:active {
+      border: none;
+      box-shadow: none;
+      border-bottom: 1px solid #2690b0; }
+      .form__input--floating-label input:focus + label,
+      .form__input--floating-label input:active + label {
+        color: #2690b0;
+        top: 0.25rem;
+        /* =4px */
+        font-size: 0.75rem;
+        /* =12px */ }
+  .form__input--floating-label label {
+    bottom: 0;
+    color: rgba(0, 0, 0, 0.26);
+    left: 0;
+    right: 0;
+    pointer-events: none;
+    position: absolute;
+    display: block;
+    top: 24px;
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-align: left;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); }
+
+/*doc
+---
+title: Floating label
+name: floating_label
+category: Forms
+---
+
+```html_example
+<div class="form__input form__input--floating-label">
+    <input id="floating-label" type="url" />
+    <label for="floating-label">Website</label>
+</div>
+```
+
+*/
 /* Notifications
 ==========
 */
