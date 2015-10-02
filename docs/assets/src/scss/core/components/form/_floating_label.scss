@@ -18,7 +18,8 @@
         @include rem(padding-bottom, 6px);
 
         &:focus,
-        &:active {
+        &:active,
+        &.is-filled {
             border: none;
             box-shadow: none;
             border-bottom: 1px solid map-get($color, beta);

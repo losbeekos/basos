@@ -82,16 +82,24 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid">
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
 </div>
 ```
@@ -101,16 +109,24 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid grid--no-gutters">
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
 </div>
 ```
@@ -119,16 +135,24 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid">
     <div class="column-alpha-6 column-beta-12 column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
     <div class="column-alpha-6 column-beta-4 column-beta--first column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
     <div class="column-alpha-6 column-alpha--first column-beta-4 column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
     <div class="column-alpha-6 column-beta-4 column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
 </div>
 ```
@@ -137,7 +161,9 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid">
     <div class="column-6 column-centered">
-        <div class="block">column-6</div>
+        <div class="card">
+            <div class="card__content">column-6</div>
+        </div>
     </div>
 </div>
 ```
@@ -146,7 +172,9 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid">
     <div class="column-6 pre-2">
-        <div class="block">column-6 pre-2</div>
+        <div class="card">
+            <div class="card__content">column-6 pre-2</div>
+        </div>
     </div>
 </div>
 ```
@@ -155,10 +183,14 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid">
     <div class="column-6 post-2">
-        <div class="block">column-7 post-1</div>
+        <div class="card">
+            <div class="card__content">column-7 post-1</div>
+        </div>
     </div>
     <div class="column-4">
-        <div class="block">column-4</div>
+        <div class="card">
+            <div class="card__content">column-4</div>
+        </div>
     </div>
 </div>
 ```

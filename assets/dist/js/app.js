@@ -4074,7 +4074,11 @@ app.affix = {
     },
 
     resizeWidth: function (_el) {
-        app.affix.settings.$el.removeClass('affix--fixed').removeClass('affix--absolute').removeAttr('style').width(app.affix.settings.$el.width());
+        app.affix.settings.$el.each(function (){
+            var $affix = $(this);
+            
+            $affix.removeClass('affix--fixed').removeClass('affix--absolute').removeAttr('style').width($affix.width());
+        });
     }
 };
 app.btnDropdown = {
@@ -4314,6 +4318,7 @@ app.formModules = {
         app.formModules.validation();
         app.formModules.password();
         app.formModules.ajaxForm();
+        app.formModules.floatingLabel();
     },
 
     range: function () {
@@ -4424,6 +4429,14 @@ app.formModules = {
     emptyForm: function (_form) {
         _form.find('input[type=text], input[type=password], textarea, select').val('');
         _form.find('input[type=radio], input[type=checkbox]').prop('checked', false);
+    },
+
+    floatingLabel: function () {
+        app.settings.$body.on('change', '.form__input--floating-label input', function () {
+            var $input = $(this);
+
+            $input.val().length > 0 ? $input.addClass('is-filled') : $input.removeClass('is-filled');
+        });
     }
 };
 app.groupCheckable = {

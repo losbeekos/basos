@@ -97,9 +97,6 @@ category: Getting started
 /* Media
 ==========
 */
-/* Block grid
-==========
-*/
 /**
  * Imports all the core components.
  */
@@ -868,10 +865,10 @@ Pure CSS ellipsis class
 .clearfix:before,
 .grid:before,
 [class|=column]:before,
+.flexible-grid:before,
 .container:before,
 .container-beta:before,
 .card__content:before,
-.block-grid:before,
 .tabs:before,
 .nav-bar:before,
 .nav-bar__container:before,
@@ -887,8 +884,8 @@ Pure CSS ellipsis class
 .btn-dropdown__list:before,
 form:before,
 .form__row:before,
-.clearfix:after, .grid:after, [class|=column]:after, .container:after,
-.container-beta:after, .card__content:after, .block-grid:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
+.clearfix:after, .grid:after, [class|=column]:after, .flexible-grid:after, .container:after,
+.container-beta:after, .card__content:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
 .off-canvas-nar-bar__list:after,
@@ -896,8 +893,8 @@ form:before,
   content: '';
   display: table; }
 
-.clearfix:after, .grid:after, [class|=column]:after, .container:after,
-.container-beta:after, .card__content:after, .block-grid:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
+.clearfix:after, .grid:after, [class|=column]:after, .flexible-grid:after, .container:after,
+.container-beta:after, .card__content:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
 .off-canvas-nar-bar__list:after,
@@ -3659,16 +3656,24 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid">
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
 </div>
 ```
@@ -3678,16 +3683,24 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid grid--no-gutters">
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
 </div>
 ```
@@ -3696,16 +3709,24 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid">
     <div class="column-alpha-6 column-beta-12 column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
     <div class="column-alpha-6 column-beta-4 column-beta--first column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
     <div class="column-alpha-6 column-alpha--first column-beta-4 column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
     <div class="column-alpha-6 column-beta-4 column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
 </div>
 ```
@@ -3714,7 +3735,9 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid">
     <div class="column-6 column-centered">
-        <div class="block">column-6</div>
+        <div class="card">
+            <div class="card__content">column-6</div>
+        </div>
     </div>
 </div>
 ```
@@ -3723,7 +3746,9 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid">
     <div class="column-6 pre-2">
-        <div class="block">column-6 pre-2</div>
+        <div class="card">
+            <div class="card__content">column-6 pre-2</div>
+        </div>
     </div>
 </div>
 ```
@@ -3732,10 +3757,217 @@ The default grid is a 12 columns grid which you can change in the settings, even
 ```html_example
 <div class="grid">
     <div class="column-6 post-2">
-        <div class="block">column-7 post-1</div>
+        <div class="card">
+            <div class="card__content">column-7 post-1</div>
+        </div>
     </div>
     <div class="column-4">
-        <div class="block">column-4</div>
+        <div class="card">
+            <div class="card__content">column-4</div>
+        </div>
+    </div>
+</div>
+```
+
+*/
+/* Flexible grid
+==========
+*/
+.flexible-grid--col-2 {
+  /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ }
+  @media (min-width: 700px) {
+    .flexible-grid--col-2 {
+      margin-left: -2%;
+      margin-right: -2%; } }
+  .flexible-grid--col-2 .card {
+    margin-bottom: 4%; }
+  @media (min-width: 700px) {
+    .flexible-grid--col-2 .card {
+      width: 46%;
+      margin-left: 2%;
+      margin-right: 2%;
+      float: left; } }
+
+.flexible-grid--col-3 {
+  /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ }
+  @media (min-width: 700px) {
+    .flexible-grid--col-3 {
+      margin-left: -1%;
+      margin-right: -1%; } }
+  .flexible-grid--col-3 .card {
+    margin-bottom: 4%; }
+  @media (min-width: 600px) {
+    .flexible-grid--col-3 .card {
+      width: 48%;
+      margin-left: 1%;
+      margin-right: 1%;
+      float: left; } }
+  @media (min-width: 1000px) {
+    .flexible-grid--col-3 .card {
+      width: 31.333339%;
+      margin-left: 1%;
+      margin-right: 1%;
+      float: left; } }
+
+.flexible-grid--col-4 {
+  /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ }
+  @media (min-width: 700px) {
+    .flexible-grid--col-4 {
+      margin-left: -1%;
+      margin-right: -1%; } }
+  .flexible-grid--col-4 .card {
+    margin-bottom: 4%; }
+  @media (min-width: 600px) {
+    .flexible-grid--col-4 .card {
+      width: 48%;
+      margin-left: 1%;
+      margin-right: 1%;
+      float: left; } }
+  @media (min-width: 1000px) {
+    .flexible-grid--col-4 .card {
+      width: 23%;
+      margin-left: 1%;
+      margin-right: 1%;
+      float: left; } }
+
+/*doc
+---
+title: Flexible grid
+name: flexible_grid
+category: Structure
+---
+
+This module can be used to fancy yourself a flexible grid with evenly height elements, just drop these elements in the flexible grid element. 
+It's important to note twice that these elements need the same height, or you'll get in trouble. You could use the equalize module if you have variable content.
+
+```html_example
+<div class="flexible-grid flexible-grid--col-3">
+    <div class="card">
+        <div class="card__header card__header--beta">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__header card__header--gamma">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__header card__header--delta">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__header card__header--beta">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__header card__header--gamma">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__header card__header--delta">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
     </div>
 </div>
 ```
@@ -4974,143 +5206,6 @@ You could always remove some elements you won't be using such as action.
     <div class="card__action">
         <button class="btn btn--beta btn--medium">action</a>
     </div>
-</div>
-```
-
-*/
-/* Block grid
-==========
-*/
-.block-grid {
-  margin-left: -1%;
-  margin-right: -1%; }
-  .block-grid__item {
-    position: relative;
-    overflow: hidden;
-    display: block;
-    float: left;
-    width: 48%;
-    margin-bottom: 2%;
-    margin-left: 1%;
-    margin-right: 1%;
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/ }
-    @media (min-width: 600px) and (max-width: 700px) {
-      .block-grid__item {
-        width: 31.3333333333%; } }
-    @media (min-width: 700px) and (max-width: 800px) {
-      .block-grid__item {
-        width: 23%; } }
-    @media (min-width: 800px) and (max-width: 1000px) {
-      .block-grid__item {
-        width: 23%; } }
-    @media (min-width: 1000px) and (max-width: 1200px) {
-      .block-grid__item {
-        width: 23%; } }
-    @media (min-width: 1200px) and (max-width: 1400px) {
-      .block-grid__item {
-        width: 23%; } }
-    @media (min-width: 1400px) {
-      .block-grid__item {
-        width: 23%; } }
-    .block-grid__item:before {
-      content: '';
-      background: rgba(0, 0, 0, 0.4);
-      width: 100%;
-      height: 100%;
-      display: block;
-      position: absolute;
-      top: 0;
-      left: 0;
-      opacity: 0;
-      z-index: 1;
-      transition: all 0.2s; }
-    .block-grid__item:hover:before {
-      opacity: 1; }
-  .block-grid__img {
-    width: 100%; }
-
-/*doc
----
-title: Grid (block)
-name: grid_block
-category: Structure
----
-
-This little module will fancy you a nice block grid. Breakpoint settings can be modified in settings.scss.
-
-```html_example
-<div class="block-grid">
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/1" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/2" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/3" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/4" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/5" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/6" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/7" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/8" />
-    </a>
 </div>
 ```
 
@@ -6759,9 +6854,7 @@ category: Navigation
 <div class="grid affix-container">
     <div class="column-3">
         <div class="affix" data-affix>
-            <div class="block">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ducimus voluptates veniam a. Suscipit esse eaque nemo ratione voluptatibus amet maxime ipsam voluptas, reiciendis veniam, asperiores pariatur, dolorem at repellendus?
-            </div>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ducimus voluptates veniam a. Suscipit esse eaque nemo ratione voluptatibus amet maxime ipsam voluptas, reiciendis veniam, asperiores pariatur, dolorem at repellendus?
         </div>
     </div>
     <div class="column-9">
@@ -9139,12 +9232,14 @@ category: Forms
     padding-bottom: 0.375rem;
     /* =6px */ }
     .form__input--floating-label input:focus,
-    .form__input--floating-label input:active {
+    .form__input--floating-label input:active,
+    .form__input--floating-label input.is-filled {
       border: none;
       box-shadow: none;
       border-bottom: 1px solid #2690b0; }
       .form__input--floating-label input:focus + label,
-      .form__input--floating-label input:active + label {
+      .form__input--floating-label input:active + label,
+      .form__input--floating-label input.is-filled + label {
         color: #2690b0;
         top: 0.25rem;
         /* =4px */

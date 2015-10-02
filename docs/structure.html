@@ -6,8 +6,9 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
     <title>Structure - Basos documentation</title>
+    <meta name="theme-color" content="#2690b0" />
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <link rel="stylesheet" href="assets/dist/css/main.css" />
 
@@ -15,25 +16,25 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black" />
     <meta name="apple-mobile-web-app-title" content="" />
 
-    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
-    <link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
-    <link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
-    <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
-    <link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
-    <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
-    <meta name="msapplication-TileColor" content="#0659a4">
-    <meta name="msapplication-TileImage" content="mstile-144x144.png">
+    <link rel="apple-touch-icon" sizes="57x57" href="/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon" sizes="144x144" href="/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon" sizes="60x60" href="/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon" sizes="120x120" href="/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon" sizes="76x76" href="/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon" sizes="152x152" href="/apple-touch-icon-152x152.png" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon-180x180.png" />
+    <link rel="icon" type="image/png" href="/favicon-192x192.png" sizes="192x192" />
+    <link rel="icon" type="image/png" href="/favicon-160x160.png" sizes="160x160" />
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32" />
+    <meta name="msapplication-TileColor" content="#0659a4" />
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
 
     <meta property="og:image" content="/apple-touch-icon-180x180.png" />
-    <meta property="og:title" content="Structure - Basos docs" />
+    <meta property="og:title" content="Basos by @losbeekos" />
     <meta property="og:url" content="Current URL" />
     <meta property="og:site_name" content="Site name" />
     <meta property="og:type" content="website" />
@@ -42,16 +43,12 @@
     <meta name="twitter:site" content="@site_account" />
     <meta name="twitter:creator" content="@article_author" />
     <meta name="twitter:url" content="Current URL" />
-    <meta name="twitter:title" content="Structure - Basos docs" />
+    <meta name="twitter:title" content="Basos by @losbeekos" />
     <meta name="twitter:description" content="" />
     <meta name="twitter:image" content="/apple-touch-icon-180x180" />
 
     <script src="assets/dist/js/vendor/modernizr/modernizr.js"></script>
-
-    <!--[if lt IE 9]>
-        <script src="bower_components/respond/dist/respond.min.js"></script>
-        <script src="bower_components/selectivizr/selectivizr.js"></script>
-    <![endif]-->
+    <script src="bower_components/picturefill/dist/picturefill.js" async></script>
 </head>
 
   <body class="cortana-body"  ng-controller="MainController">
@@ -70,7 +67,7 @@
               <section class="section section--alpha">
                 <div class="grid affix-container">
                     <div class="column-3">
-                        <div class="block styleguide-nav affix" data-affix>
+                        <div class="styleguide-nav affix padding-alpha" data-affix>
                             
                                 <a class="styleguide-nav__category" href="index.html">Getting started</a>
                                 
@@ -91,15 +88,15 @@
                                             
                                         
                                             
+                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#flexible_grid" data-jumpto>Flexible grid</a></li>
+                                            
+                                        
+                                            
                                                 <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#functions" data-jumpto>Functions</a></li>
                                             
                                         
                                             
                                                 <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#grid" data-jumpto>Grid</a></li>
-                                            
-                                        
-                                            
-                                                <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#grid_block" data-jumpto>Grid (block)</a></li>
                                             
                                         
                                             
@@ -179,6 +176,154 @@
   </div>
 </div>
 
+<h1 id="flexible_grid" class="styleguide">Flexible grid</h1>
+<p class="styleguide">This module can be used to fancy yourself a flexible grid with evenly height elements, just drop these elements in the flexible grid element. 
+It&#39;s important to note twice that these elements need the same height, or you&#39;ll get in trouble. You could use the equalize module if you have variable content.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexible-grid flexible-grid--col-3">
+    <div class="card">
+        <div class="card__header card__header--beta">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__header card__header--gamma">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__header card__header--delta">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__header card__header--beta">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__header card__header--gamma">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card__header card__header--delta">
+            <div class="card__title">Some title</div>
+        </div>
+        <div class="card__content">
+            Some content
+        </div>
+        <div class="card__action">
+            <button class="btn btn--beta btn--medium">action</a>
+        </div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexible-grid flexible-grid--col-3"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__header card__header--beta"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__title"</span><span class="nt">&gt;</span>Some title<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>
+            Some content
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__action"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span><span class="nt">&gt;</span>action<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__header card__header--gamma"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__title"</span><span class="nt">&gt;</span>Some title<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>
+            Some content
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__action"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span><span class="nt">&gt;</span>action<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__header card__header--delta"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__title"</span><span class="nt">&gt;</span>Some title<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>
+            Some content
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__action"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span><span class="nt">&gt;</span>action<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__header card__header--beta"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__title"</span><span class="nt">&gt;</span>Some title<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>
+            Some content
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__action"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span><span class="nt">&gt;</span>action<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__header card__header--gamma"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__title"</span><span class="nt">&gt;</span>Some title<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>
+            Some content
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__action"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span><span class="nt">&gt;</span>action<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__header card__header--delta"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__title"</span><span class="nt">&gt;</span>Some title<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>
+            Some content
+        <span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__action"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span><span class="nt">&gt;</span>action<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
 <h1 id="functions" class="styleguide">Functions</h1>
 
 <h2>Tint</h2>
@@ -204,16 +349,24 @@
   <div class="exampleOutput">
     <div class="grid">
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
 </div>
 
@@ -222,16 +375,24 @@
     <div class="highlight">
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
@@ -243,16 +404,24 @@
   <div class="exampleOutput">
     <div class="grid grid--no-gutters">
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
     <div class="column-3">
-        <div class="block">column-3</div>
+        <div class="card">
+            <div class="card__content">column-3</div>
+        </div>
     </div>
 </div>
 
@@ -261,16 +430,24 @@
     <div class="highlight">
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid grid--no-gutters"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-3<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
@@ -282,16 +459,24 @@
   <div class="exampleOutput">
     <div class="grid">
     <div class="column-alpha-6 column-beta-12 column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
     <div class="column-alpha-6 column-beta-4 column-beta--first column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
     <div class="column-alpha-6 column-alpha--first column-beta-4 column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
     <div class="column-alpha-6 column-beta-4 column-gamma-and-up-3">
-        <div class="block">Lorem ipsum dolor sit amet</div>
+        <div class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet</div>
+        </div>
     </div>
 </div>
 
@@ -300,16 +485,24 @@
     <div class="highlight">
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-alpha-6 column-beta-12 column-gamma-and-up-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-alpha-6 column-beta-4 column-beta--first column-gamma-and-up-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-alpha-6 column-alpha--first column-beta-4 column-gamma-and-up-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-alpha-6 column-beta-4 column-gamma-and-up-3"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
@@ -321,7 +514,9 @@
   <div class="exampleOutput">
     <div class="grid">
     <div class="column-6 column-centered">
-        <div class="block">column-6</div>
+        <div class="card">
+            <div class="card__content">column-6</div>
+        </div>
     </div>
 </div>
 
@@ -330,7 +525,9 @@
     <div class="highlight">
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 column-centered"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-6<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-6<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
@@ -342,7 +539,9 @@
   <div class="exampleOutput">
     <div class="grid">
     <div class="column-6 pre-2">
-        <div class="block">column-6 pre-2</div>
+        <div class="card">
+            <div class="card__content">column-6 pre-2</div>
+        </div>
     </div>
 </div>
 
@@ -351,7 +550,9 @@
     <div class="highlight">
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 pre-2"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-6 pre-2<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-6 pre-2<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
@@ -363,10 +564,14 @@
   <div class="exampleOutput">
     <div class="grid">
     <div class="column-6 post-2">
-        <div class="block">column-7 post-1</div>
+        <div class="card">
+            <div class="card__content">column-7 post-1</div>
+        </div>
     </div>
     <div class="column-4">
-        <div class="block">column-4</div>
+        <div class="card">
+            <div class="card__content">column-4</div>
+        </div>
     </div>
 </div>
 
@@ -375,74 +580,15 @@
     <div class="highlight">
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 post-2"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-7 post-1<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-7 post-1<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-4"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>column-4<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-4<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
-<span class="nt">&lt;/div&gt;</span></pre>
-    </div>
-  </div>
-</div>
-
-<h1 id="grid_block" class="styleguide">Grid (block)</h1>
-<p class="styleguide">This little module will fancy you a nice block grid. Breakpoint settings can be modified in settings.scss.</p><div class="codeExample">
-  <div class="exampleOutput">
-    <div class="block-grid">
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/1" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/2" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/3" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/4" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/5" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/6" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/7" />
-    </a>
-    <a class="block-grid__item" href="#">
-        <img class="block-grid__img" src="http://www.lorempixel.com/300/300/business/8" />
-    </a>
-</div>
-
-  </div>
-  <div class="codeBlock">
-    <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block-grid"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/1"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/2"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/3"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/4"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/5"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/6"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/7"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"block-grid__item"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;img</span> <span class="na">class=</span><span class="s">"block-grid__img"</span> <span class="na">src=</span><span class="s">"http://www.lorempixel.com/300/300/business/8"</span> <span class="nt">/&gt;</span>
-    <span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>

@@ -60,6 +60,10 @@ app.affix = {
     },
 
     resizeWidth: function (_el) {
-        app.affix.settings.$el.removeClass('affix--fixed').removeClass('affix--absolute').removeAttr('style').width(app.affix.settings.$el.width());
+        app.affix.settings.$el.each(function (){
+            var $affix = $(this);
+            
+            $affix.removeClass('affix--fixed').removeClass('affix--absolute').removeAttr('style').width($affix.width());
+        });
     }
 };

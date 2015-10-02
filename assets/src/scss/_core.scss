@@ -379,6 +379,7 @@ Pure CSS ellipsis class
 */
 
 @import "core/components/grid";
+@import "core/components/flexible_grid";
 @import "core/components/layout";
 @import "core/components/containers";
 @import "core/components/sections";
@@ -397,7 +398,6 @@ for a smaller generated CSS file.
 @import "core/components/styleguide";
 @import "core/components/modal";
 @import "core/components/card";
-@import "core/components/block_grid";
 @import "core/components/tabs";
 @import "core/components/nav_bar";
 @import "core/components/tables";

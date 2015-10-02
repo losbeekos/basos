@@ -12,6 +12,7 @@ app.formModules = {
         app.formModules.validation();
         app.formModules.password();
         app.formModules.ajaxForm();
+        app.formModules.floatingLabel();
     },
 
     range: function () {
@@ -122,5 +123,13 @@ app.formModules = {
     emptyForm: function (_form) {
         _form.find('input[type=text], input[type=password], textarea, select').val('');
         _form.find('input[type=radio], input[type=checkbox]').prop('checked', false);
+    },
+
+    floatingLabel: function () {
+        app.settings.$body.on('change', '.form__input--floating-label input', function () {
+            var $input = $(this);
+
+            $input.val().length > 0 ? $input.addClass('is-filled') : $input.removeClass('is-filled');
+        });
     }
 };
