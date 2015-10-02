@@ -1,0 +1,94 @@
+/* Cards
+==========
+*/
+
+.card {
+    position: relative;
+    display: block;
+    background: white;
+    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2);
+
+    &__header {
+        background-color: transparent;
+        background-size: cover;
+        background-position: center center;
+        position: relative;
+        color: map-get($color, white);
+
+        @include rem(padding, 20px);
+        @include rem(height, 220px);
+
+        @each $key, $value in $btn-bg {
+            &--#{$key} {
+                background-color: map-get($btn-bg, $key);
+            }
+        }
+    }
+
+    &__content {
+        @extend .clearfix;
+
+        @include rem(padding, 20px);
+    }
+
+    &__action {
+        border: 1px solid darken(map-get($btn-bg, alpha), 5%);
+        @include rem(padding, 20px);
+    }
+
+    &__title {
+        position: absolute;
+        
+        @include rem(bottom, 20px);
+        @include rem(left, 20px);
+        @include rem(font-size, 24px);
+    }
+}
+
+/*doc
+---
+title: Cards
+name: cards
+category: Content
+---
+
+Cards borrow the button color settings. Basic styling of the cards are heavily inspired by the MDL cards. 
+You could always remove some elements you won't be using such as action.
+
+## Color
+
+```html_example
+<div class="card">
+    <div class="card__header card__header--gamma">
+        <div class="card__title">Some title</div>
+    </div>
+    <div class="card__content">
+        Some content
+    </div>
+    <div class="card__action">
+        <button class="btn btn--beta btn--medium">action</a>
+    </div>
+</div>
+```
+
+## Image
+```html_example
+<div class="card">
+    <div class="card__header card__header--gamma" style="background-image: url(http://lorempixel.com/output/nightlife-q-c-640-480-5.jpg)">
+        <div class="card__title">Some title</div>
+    </div>
+    <div class="card__content">
+        Some content
+    </div>
+    <div class="card__action">
+        <button class="btn btn--beta btn--medium">action</a>
+    </div>
+</div>
+```
+
+*/
+
+
+
+
+

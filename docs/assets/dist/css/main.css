@@ -40,9 +40,6 @@ category: Getting started
 /* Susy grid
 ==========
 */
-/* Block
-==========
-*/
 /* Buttons
 ==========
 */
@@ -483,7 +480,7 @@ button,
 input,
 select,
 textarea {
-  color: #333333; }
+  color: #555555; }
 
 body {
   background: #ffffff;
@@ -873,6 +870,7 @@ Pure CSS ellipsis class
 [class|=column]:before,
 .container:before,
 .container-beta:before,
+.card__content:before,
 .block-grid:before,
 .tabs:before,
 .nav-bar:before,
@@ -890,7 +888,7 @@ Pure CSS ellipsis class
 form:before,
 .form__row:before,
 .clearfix:after, .grid:after, [class|=column]:after, .container:after,
-.container-beta:after, .block-grid:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
+.container-beta:after, .card__content:after, .block-grid:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
 .off-canvas-nar-bar__list:after,
@@ -899,7 +897,7 @@ form:before,
   display: table; }
 
 .clearfix:after, .grid:after, [class|=column]:after, .container:after,
-.container-beta:after, .block-grid:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
+.container-beta:after, .card__content:after, .block-grid:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
 .off-canvas-nar-bar__list:after,
@@ -3761,7 +3759,7 @@ html {
 
 body {
   font-family: 'helvetica neue', 'arial', 'verdana', sans-serif;
-  color: #333333;
+  color: #555555;
   opacity: 0;
   font-weight: 300;
   transition: opacity 0.05s ease-in; }
@@ -3778,7 +3776,7 @@ a {
   cursor: pointer;
   transition: all 0.2s; }
   a:hover {
-    color: #333333; }
+    color: #555555; }
 
 button {
   transition: all 0.2s; }
@@ -3920,7 +3918,7 @@ There are two containers available, 'container' and 'container-beta'. These cont
   .section > .container > *:last-child {
     margin-bottom: 0; }
   .section--alpha {
-    color: #333333; }
+    color: #555555; }
 
 .section-img {
   background: url("../dist/img/someimage.jpg") center center fixed;
@@ -4164,7 +4162,7 @@ category: Typography
   color: #ffffff; }
 
 .color-text {
-  color: #333333; }
+  color: #555555; }
 
 .color-placeholder {
   color: #94adc4; }
@@ -4197,7 +4195,7 @@ category: Typography
   background: #ffffff; }
 
 .bg-color-text {
-  background: #333333; }
+  background: #555555; }
 
 .bg-color-placeholder {
   background: #94adc4; }
@@ -4411,7 +4409,7 @@ h2.styleguide {
 .styleguide-nav__link {
   display: block; }
   .styleguide-nav__link.scrollspy-nav--active {
-    color: #333333; }
+    color: #555555; }
 
 .codeBlock {
   margin-bottom: 1.25rem;
@@ -4890,39 +4888,53 @@ app.modals.closeModal();
 ```
 
 */
-/* Block
+/* Cards
 ==========
-
-@TODO: Rename to cards
 */
-.block, .styleguide-nav {
-  background: #f7f7f7;
-  padding: 0.625rem;
-  /* =10px */
-  /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-  /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/ }
-  @media (min-width: 600px) and (max-width: 700px) {
-    .block, .styleguide-nav {
-      padding: 1.25rem;
-      /* =20px */ } }
-  @media (min-width: 700px) {
-    .block, .styleguide-nav {
-      padding: 1.875rem;
-      /* =30px */ } }
+.card {
+  position: relative;
+  display: block;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2); }
+  .card__header {
+    background-color: transparent;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    color: #ffffff;
+    padding: 1.25rem;
+    /* =20px */
+    height: 13.75rem;
+    /* =220px */ }
+    .card__header--light {
+      background-color: #ffffff; }
+    .card__header--dark {
+      background-color: #000000; }
+    .card__header--alpha {
+      background-color: #f7f7f7; }
+    .card__header--beta {
+      background-color: #2690b0; }
+    .card__header--gamma {
+      background-color: #26a8b0; }
+    .card__header--delta {
+      background-color: #26b0a1; }
+    .card__header--epsilon {
+      background-color: #333333; }
+  .card__content {
+    padding: 1.25rem;
+    /* =20px */ }
+  .card__action {
+    border: 1px solid #eaeaea;
+    padding: 1.25rem;
+    /* =20px */ }
+  .card__title {
+    position: absolute;
+    bottom: 1.25rem;
+    /* =20px */
+    left: 1.25rem;
+    /* =20px */
+    font-size: 1.5rem;
+    /* =24px */ }
 
 /*doc
 ---
@@ -4931,8 +4943,38 @@ name: cards
 category: Content
 ---
 
+Cards borrow the button color settings. Basic styling of the cards are heavily inspired by the MDL cards. 
+You could always remove some elements you won't be using such as action.
+
+## Color
+
 ```html_example
-<div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima eos aperiam nesciunt veniam ex ipsa rem delectus accusamus eligendi saepe. Dolorum, distinctio aspernatur doloremque, obcaecati necessitatibus accusamus laborum! Odit, tempore!</div>
+<div class="card">
+    <div class="card__header card__header--gamma">
+        <div class="card__title">Some title</div>
+    </div>
+    <div class="card__content">
+        Some content
+    </div>
+    <div class="card__action">
+        <button class="btn btn--beta btn--medium">action</a>
+    </div>
+</div>
+```
+
+## Image
+```html_example
+<div class="card">
+    <div class="card__header card__header--gamma" style="background-image: url(http://lorempixel.com/output/nightlife-q-c-640-480-5.jpg)">
+        <div class="card__title">Some title</div>
+    </div>
+    <div class="card__content">
+        Some content
+    </div>
+    <div class="card__action">
+        <button class="btn btn--beta btn--medium">action</a>
+    </div>
+</div>
 ```
 
 */
@@ -5087,7 +5129,7 @@ This little module will fancy you a nice block grid. Breakpoint settings can be 
   position: relative;
   display: inline-block;
   background: #f7f7f7;
-  color: #666666;
+  color: #888888;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   -webkit-user-select: none;
@@ -5100,12 +5142,12 @@ This little module will fancy you a nice block grid. Breakpoint settings can be 
     background: #eaeaea; }
   .tab:focus {
     outline: none;
-    color: #333333;
+    color: #555555;
     background: #dedede; }
   .tab.tab--active {
     background: #ffffff;
     border-bottom-color: #ffffff;
-    color: #333333; }
+    color: #555555; }
 
 .tab-content {
   padding: 1.25rem 0;
@@ -5788,7 +5830,7 @@ category: Content
       background-color: transparent;
       display: block;
       border-top: 0 solid #f4f4f4;
-      color: #333333;
+      color: #555555;
       padding: 0.625rem 0.9375rem;
       /* =10px 15px */ }
       .dropdown__content a:hover {
@@ -5986,20 +6028,20 @@ Tooltips are used as fancy title attributes to display some info about a certain
     display: block;
     position: relative;
     background-color: #f7f7f7;
-    color: #333333;
+    color: #555555;
     padding: 15px 20px;
     border-bottom: 1px solid white; }
     .accordion__trigger:hover {
       background-color: #eaeaea;
-      color: #262626; }
+      color: #484848; }
     .accordion-content-show .accordion__trigger {
       background-color: #2690b0;
       color: #ffffff; }
     .accordion__trigger:after {
-      content: "";
+      content: "";
       position: absolute;
       top: 50%;
-      color: #333333;
+      color: #555555;
       -webkit-transform: translate(0, -50%);
               transform: translate(0, -50%);
       right: 1.25rem;
@@ -6007,7 +6049,7 @@ Tooltips are used as fancy title attributes to display some info about a certain
       .no-csstransforms .accordion__trigger:after {
         margin-top: -10px; }
       .accordion-content-show .accordion__trigger:after {
-        content: "";
+        content: "";
         color: #ffffff; }
   .accordion__content {
     overflow: hidden;
@@ -7553,7 +7595,7 @@ Add more colors in the settings file under "buttons" if you need to.
   background-image: none;
   position: relative;
   display: inline-block;
-  color: #333333;
+  color: #555555;
   border-radius: 0;
   border: 0;
   outline: 0;
@@ -7618,10 +7660,9 @@ Add more colors in the settings file under "buttons" if you need to.
 */ }
   .btn:hover {
     background-color: #f2f2f2; }
-  .btn:active {
-    background-color: #ededed; }
+  .btn:active,
   .btn:focus {
-    box-shadow: 0 0 10px #f7f7f7; }
+    background-color: #ededed; }
   .btn--divider:hover,
   .btn:disabled,
   .btn:disabled:hover {
@@ -7635,13 +7676,13 @@ Add more colors in the settings file under "buttons" if you need to.
       border-color: #f7f7f7; }
     .btn.btn--ghost.btn--alpha:hover,
     .btn.btn--ghost.btn--light:hover {
-      color: #333333; }
+      color: #555555; }
   .btn-group--inline .btn {
     border-left: 1px solid white; }
   .btn-group--block .btn {
     border-top: 1px solid white; }
   .btn:hover {
-    color: #333333; }
+    color: #555555; }
   .btn:focus {
     outline: none;
     transition-duration: 0.05s; }
@@ -7678,10 +7719,9 @@ Add more colors in the settings file under "buttons" if you need to.
     border-color: transparent; }
     .btn--mask:hover {
       background-color: transparent; }
-    .btn--mask:active {
-      background-color: transparent; }
+    .btn--mask:active,
     .btn--mask:focus {
-      box-shadow: 0 0 10px black; }
+      background-color: transparent; }
     .btn--mask--divider:hover,
     .btn--mask:disabled,
     .btn--mask:disabled:hover {
@@ -7695,14 +7735,15 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: transparent; }
       .btn--mask.btn--ghost.btn--alpha:hover,
       .btn--mask.btn--ghost.btn--light:hover {
-        color: #333333; }
+        color: #555555; }
     .btn-group--inline .btn--mask {
       border-left: 1px solid rgba(8, 8, 8, 0); }
     .btn-group--block .btn--mask {
       border-top: 1px solid rgba(8, 8, 8, 0); }
     .btn--mask:hover {
       background-color: #f2f2f2; }
-    .btn--mask:active {
+    .btn--mask:active,
+    .btn--mask:focus {
       background-color: #e6e6e6; }
   .btn--block {
     min-width: 100%;
@@ -7714,10 +7755,9 @@ Add more colors in the settings file under "buttons" if you need to.
     border-color: #f2f2f2; }
     .btn--light:hover {
       background-color: #fafafa; }
-    .btn--light:active {
-      background-color: whitesmoke; }
+    .btn--light:active,
     .btn--light:focus {
-      box-shadow: 0 0 10px white; }
+      background-color: whitesmoke; }
     .btn--light--divider:hover,
     .btn--light:disabled,
     .btn--light:disabled:hover {
@@ -7731,7 +7771,7 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #ffffff; }
       .btn--light.btn--ghost.btn--alpha:hover,
       .btn--light.btn--ghost.btn--light:hover {
-        color: #333333; }
+        color: #555555; }
     .btn-group--inline .btn--light {
       border-left: 1px solid white; }
     .btn-group--block .btn--light {
@@ -7741,10 +7781,9 @@ Add more colors in the settings file under "buttons" if you need to.
     border-color: black; }
     .btn--dark:hover {
       background-color: black; }
-    .btn--dark:active {
-      background-color: black; }
+    .btn--dark:active,
     .btn--dark:focus {
-      box-shadow: 0 0 10px black; }
+      background-color: black; }
     .btn--dark--divider:hover,
     .btn--dark:disabled,
     .btn--dark:disabled:hover {
@@ -7758,7 +7797,7 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #000000; }
       .btn--dark.btn--ghost.btn--alpha:hover,
       .btn--dark.btn--ghost.btn--light:hover {
-        color: #333333; }
+        color: #555555; }
     .btn-group--inline .btn--dark {
       border-left: 1px solid #080808; }
     .btn-group--block .btn--dark {
@@ -7768,10 +7807,9 @@ Add more colors in the settings file under "buttons" if you need to.
     border-color: #eaeaea; }
     .btn--alpha:hover {
       background-color: #f2f2f2; }
-    .btn--alpha:active {
-      background-color: #ededed; }
+    .btn--alpha:active,
     .btn--alpha:focus {
-      box-shadow: 0 0 10px #f7f7f7; }
+      background-color: #ededed; }
     .btn--alpha--divider:hover,
     .btn--alpha:disabled,
     .btn--alpha:disabled:hover {
@@ -7785,7 +7823,7 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #f7f7f7; }
       .btn--alpha.btn--ghost.btn--alpha:hover,
       .btn--alpha.btn--ghost.btn--light:hover {
-        color: #333333; }
+        color: #555555; }
     .btn-group--inline .btn--alpha {
       border-left: 1px solid white; }
     .btn-group--block .btn--alpha {
@@ -7795,10 +7833,9 @@ Add more colors in the settings file under "buttons" if you need to.
     border-color: #217f9b; }
     .btn--beta:hover {
       background-color: #2489a8; }
-    .btn--beta:active {
-      background-color: #22829f; }
+    .btn--beta:active,
     .btn--beta:focus {
-      box-shadow: 0 0 10px #2690b0; }
+      background-color: #22829f; }
     .btn--beta--divider:hover,
     .btn--beta:disabled,
     .btn--beta:disabled:hover {
@@ -7812,7 +7849,7 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #2690b0; }
       .btn--beta.btn--ghost.btn--alpha:hover,
       .btn--beta.btn--ghost.btn--light:hover {
-        color: #333333; }
+        color: #555555; }
     .btn-group--inline .btn--beta {
       border-left: 1px solid #299abd; }
     .btn-group--block .btn--beta {
@@ -7822,10 +7859,9 @@ Add more colors in the settings file under "buttons" if you need to.
     border-color: #21949b; }
     .btn--gamma:hover {
       background-color: #24a0a8; }
-    .btn--gamma:active {
-      background-color: #22989f; }
+    .btn--gamma:active,
     .btn--gamma:focus {
-      box-shadow: 0 0 10px #26a8b0; }
+      background-color: #22989f; }
     .btn--gamma--divider:hover,
     .btn--gamma:disabled,
     .btn--gamma:disabled:hover {
@@ -7839,7 +7875,7 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #26a8b0; }
       .btn--gamma.btn--ghost.btn--alpha:hover,
       .btn--gamma.btn--ghost.btn--light:hover {
-        color: #333333; }
+        color: #555555; }
     .btn-group--inline .btn--gamma {
       border-left: 1px solid #29b4bd; }
     .btn-group--block .btn--gamma {
@@ -7849,10 +7885,9 @@ Add more colors in the settings file under "buttons" if you need to.
     border-color: #219b8e; }
     .btn--delta:hover {
       background-color: #24a899; }
-    .btn--delta:active {
-      background-color: #229f92; }
+    .btn--delta:active,
     .btn--delta:focus {
-      box-shadow: 0 0 10px #26b0a1; }
+      background-color: #229f92; }
     .btn--delta--divider:hover,
     .btn--delta:disabled,
     .btn--delta:disabled:hover {
@@ -7866,7 +7901,7 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #26b0a1; }
       .btn--delta.btn--ghost.btn--alpha:hover,
       .btn--delta.btn--ghost.btn--light:hover {
-        color: #333333; }
+        color: #555555; }
     .btn-group--inline .btn--delta {
       border-left: 1px solid #29bdad; }
     .btn-group--block .btn--delta {
@@ -7876,10 +7911,9 @@ Add more colors in the settings file under "buttons" if you need to.
     border-color: #262626; }
     .btn--epsilon:hover {
       background-color: #2e2e2e; }
-    .btn--epsilon:active {
-      background-color: #292929; }
+    .btn--epsilon:active,
     .btn--epsilon:focus {
-      box-shadow: 0 0 10px #333333; }
+      background-color: #292929; }
     .btn--epsilon--divider:hover,
     .btn--epsilon:disabled,
     .btn--epsilon:disabled:hover {
@@ -7893,7 +7927,7 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #333333; }
       .btn--epsilon.btn--ghost.btn--alpha:hover,
       .btn--epsilon.btn--ghost.btn--light:hover {
-        color: #333333; }
+        color: #555555; }
     .btn-group--inline .btn--epsilon {
       border-left: 1px solid #3b3b3b; }
     .btn-group--block .btn--epsilon {
@@ -7902,14 +7936,14 @@ Add more colors in the settings file under "buttons" if you need to.
     background: transparent;
     border-width: 1px;
     border-radius: 5px;
-    color: #333333;
+    color: #555555;
     text-shadow: none;
     opacity: 1; }
     .btn--ghost:hover,
     .btn--ghost:active,
     .btn--ghost:focus {
       background: transparent;
-      color: #333333; }
+      color: #555555; }
 
 /*doc
 ---
@@ -8063,7 +8097,7 @@ category: Buttons
   .btn-dropdown__link {
     background-color: transparent;
     display: block;
-    color: #333333;
+    color: #555555;
     padding: 0.625rem 0.9375rem;
     /* =10px 15px */
     font-size: 0.875rem;

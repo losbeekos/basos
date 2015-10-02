@@ -25,12 +25,9 @@ Add more colors in the settings file under "buttons" if you need to.
         background-color: darken($bg-color, 2%);
     }
 
-    &:active {
-        background-color: darken($bg-color, 4%);
-    }
-
+    &:active,
     &:focus {
-        box-shadow: map-get($btn, box-shadow-focus) rgba($bg-color, 1);
+        background-color: darken($bg-color, 4%);
     }
 
     &--divider:hover,
@@ -146,7 +143,8 @@ category: Buttons
             background-color: darken(map-get($color, white), 5%);
         }
 
-        &:active {
+        &:active,
+        &:focus {
             background-color: darken(map-get($color, white), 10%);
         }
     }

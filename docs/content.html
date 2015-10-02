@@ -272,14 +272,70 @@
 </div>
 
 <h1 id="cards" class="styleguide">Cards</h1>
+<p class="styleguide">Cards borrow the button color settings. Basic styling of the cards are heavily inspired by the MDL cards. 
+You could always remove some elements you won&#39;t be using such as action.</p>
+<h2>Color</h2>
 <div class="codeExample">
   <div class="exampleOutput">
-    <div class="block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima eos aperiam nesciunt veniam ex ipsa rem delectus accusamus eligendi saepe. Dolorum, distinctio aspernatur doloremque, obcaecati necessitatibus accusamus laborum! Odit, tempore!</div>
+    <div class="card">
+    <div class="card__header card__header--gamma">
+        <div class="card__title">Some title</div>
+    </div>
+    <div class="card__content">
+        Some content
+    </div>
+    <div class="card__action">
+        <button class="btn btn--beta btn--medium">action</a>
+    </div>
+</div>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"block"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima eos aperiam nesciunt veniam ex ipsa rem delectus accusamus eligendi saepe. Dolorum, distinctio aspernatur doloremque, obcaecati necessitatibus accusamus laborum! Odit, tempore!<span class="nt">&lt;/div&gt;</span></pre>
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__header card__header--gamma"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__title"</span><span class="nt">&gt;</span>Some title<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>
+        Some content
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__action"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span><span class="nt">&gt;</span>action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Image</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="card">
+    <div class="card__header card__header--gamma" style="background-image: url(http://lorempixel.com/output/nightlife-q-c-640-480-5.jpg)">
+        <div class="card__title">Some title</div>
+    </div>
+    <div class="card__content">
+        Some content
+    </div>
+    <div class="card__action">
+        <button class="btn btn--beta btn--medium">action</a>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__header card__header--gamma"</span> <span class="na">style=</span><span class="s">"background-image: url(http://lorempixel.com/output/nightlife-q-c-640-480-5.jpg)"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__title"</span><span class="nt">&gt;</span>Some title<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>
+        Some content
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__action"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span><span class="nt">&gt;</span>action<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>
 </div>

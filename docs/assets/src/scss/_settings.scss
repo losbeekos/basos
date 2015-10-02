@@ -39,7 +39,7 @@ $color: (
     white      : #ffffff,
     black      : #000000,
     body       : #ffffff,
-    text       : #333333,
+    text       : #555555,
     placeholder: #94adc4,
     selection  : #d1e4fe,
     alpha      : #f7f7f7,
@@ -116,18 +116,6 @@ $susy: (
 );
 
 
-/* Block
-==========
-*/
-
-$block: (
-    bg            : map-get($color, alpha),
-    padding-alpha : 10px,
-    padding-beta  : 20px,
-    padding-gamma : 30px
-);
-
-
 /* Buttons
 ==========
 */
@@ -147,7 +135,6 @@ $btn: (
     font-size-large         : 16px,
     line-height             : 16px,
     text-shadow             : 1px 0 1px rgba(0, 0, 0, 0.2),
-    box-shadow-focus        : 0 0 10px,
     border-color-darken     : 5%,
     container-margin        : 0 0 30px 0,
     container-btn-padding   : 10px 18px,
@@ -438,8 +425,8 @@ $accordion: (
     trigger-color              : map-get($color, text),
     trigger-color-show         : map-get($color, white),
     trigger-gradient-bg        : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
-    trigger-icon-content       : '\e807',
-    trigger-icon-content-after : '\e804',
+    trigger-icon-content       : '\e80a',
+    trigger-icon-content-after : '\e80d',
     trigger-icon-color         : map-get($color, text),
     trigger-icon-color-show    : map-get($color, white),
     content-padding            : 0 20px,
