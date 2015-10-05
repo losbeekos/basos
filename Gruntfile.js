@@ -233,13 +233,13 @@ module.exports = function(grunt) {
         watch: {
             js: {
                 files: ['<%= jshint.files %>'],
-                tasks: ['clean:js', 'jshint', 'concat', 'copy:js', 'hologram'],
+                tasks: ['clean:js', 'jshint', 'concat', 'copy:js'],
             },
 
             // Basos
             sass: {
                 files: ['<%= basos.src %>/scss/**/*'],
-                tasks: ['sass:dev', 'postcss', 'hologram'],
+                tasks: ['sass:dev', 'postcss'],
             },
 
             // Peanuts
@@ -250,12 +250,12 @@ module.exports = function(grunt) {
 
             fonts: {
                 files: ['<%= basos.src %>/fonts/**/*'],
-                tasks: ['clean:fonts', 'copy:fonts', 'hologram']
+                tasks: ['clean:fonts', 'copy:fonts']
             },
 
             images: {
                 files: ['<%= basos.src %>/img/**/*'],
-                tasks: ['clean:images', 'copy:images', 'hologram']
+                tasks: ['clean:images', 'copy:images']
             }
         },
 
