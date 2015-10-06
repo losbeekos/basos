@@ -4077,6 +4077,11 @@ p {
       /* =40px */
       padding-right: 2.5rem;
       /* =40px */ } }
+  .container .container,
+  .container .container-beta,
+  .container-beta .container,
+  .container-beta .container-beta {
+    min-width: auto; }
 
 .container {
   max-width: 80rem;
