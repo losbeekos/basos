@@ -21,13 +21,8 @@ html {
 body {
     font-family: 'helvetica neue', 'arial', 'verdana', sans-serif;
     color: map-get($color, text);
-    opacity: 0;
     font-weight: 300;
     transition: opacity map-get($base, transition-speed)/4 ease-in;
-
-    .app-active & {
-        opacity: 1;
-    }
 }
 
 .background {

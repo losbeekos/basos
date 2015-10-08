@@ -3992,11 +3992,8 @@ html {
 body {
   font-family: 'helvetica neue', 'arial', 'verdana', sans-serif;
   color: #555555;
-  opacity: 0;
   font-weight: 300;
   transition: opacity 0.05s ease-in; }
-  .app-active body {
-    opacity: 1; }
 
 .background {
   min-height: 100%; }
