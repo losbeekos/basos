@@ -408,18 +408,42 @@ You could always remove some elements you won&#39;t be using such as action.</p>
 <p class="styleguide">Equalize targets in just a snap. It can be everything not just columns or blocks.</p><div class="codeExample">
   <div class="exampleOutput">
     <div class="grid" data-equalize>
-    <div data-equalize-target class="column-4 block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
-    <div data-equalize-target class="column-4 block">column-4</div>
-    <div data-equalize-target class="column-4 block">column-4</div>
+    <div class="column-4">
+        <div data-equalize-target class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
+        </div>
+    </div>
+    <div class="column-4">
+        <div data-equalize-target class="card">
+            <div class="card__content">Lorem ipsum.</div>
+        </div>
+    </div>
+    <div class="column-4">
+        <div data-equalize-target class="card">
+            <div class="card__content">Lorem ipsum.</div>
+        </div>
+    </div>
 </div>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span> <span class="na">data-equalize</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"column-4 block"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"column-4 block"</span><span class="nt">&gt;</span>column-4<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"column-4 block"</span><span class="nt">&gt;</span>column-4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Lorem ipsum.<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Lorem ipsum.<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>
@@ -427,18 +451,42 @@ You could always remove some elements you won&#39;t be using such as action.</p>
 <p class="styleguide">You can also set a media query from where the equalizer has to kick in, like this.</p><div class="codeExample">
   <div class="exampleOutput">
     <div class="grid" data-equalize="beta-and-up">
-    <div data-equalize-target class="column-4 block">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
-    <div data-equalize-target class="column-4 block">column-4</div>
-    <div data-equalize-target class="column-4 block">column-4</div>
+    <div class="column-4">
+        <div data-equalize-target class="card">
+            <div class="card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
+        </div>
+    </div>
+    <div class="column-4">
+        <div data-equalize-target class="card">
+            <div class="card__content">Lorem ipsum.</div>
+        </div>
+    </div>
+    <div class="column-4">
+        <div data-equalize-target class="card">
+            <div class="card__content">Lorem ipsum.</div>
+        </div>
+    </div>
 </div>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
       <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"grid"</span> <span class="na">data-equalize=</span><span class="s">"beta-and-up"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"column-4 block"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"column-4 block"</span><span class="nt">&gt;</span>column-4<span class="nt">&lt;/div&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"column-4 block"</span><span class="nt">&gt;</span>column-4<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Lorem ipsum.<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-4"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">data-equalize-target</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Lorem ipsum.<span class="nt">&lt;/div&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>
   </div>
