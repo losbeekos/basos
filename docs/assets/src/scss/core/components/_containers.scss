@@ -24,6 +24,12 @@
         @include rem(padding-left, map-get($container, padding)*4);
         @include rem(padding-right, map-get($container, padding)*4);
     }
+    
+    // No min-width if nested
+    .container,
+    .container-beta {
+        min-width: auto;
+    }
 }
 
 .container {

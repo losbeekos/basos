@@ -3,8 +3,6 @@
 */
 
 input[type=radio] {
-    @extend %form-checkbox-radio;
-
     + label {
         &:before {
             border-radius: map-get($form, checkbox-radio-size);

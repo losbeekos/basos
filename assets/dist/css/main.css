@@ -1645,13 +1645,37 @@ category: Typography
 ==========
 */
 .font-style-normal {
-  font-style: normal; }
+  font-style: normal !important; }
 
 .font-style-italic {
-  font-style: italic; }
+  font-style: italic !important; }
 
-.font-style-bold {
-  font-style: bold; }
+/* Font style
+==========
+*/
+.font-weight-100 {
+  font-weight: 100 !important; }
+
+.font-weight-200 {
+  font-weight: 200 !important; }
+
+.font-weight-300 {
+  font-weight: 300 !important; }
+
+.font-weight-400 {
+  font-weight: 400 !important; }
+
+.font-weight-500 {
+  font-weight: 500 !important; }
+
+.font-weight-600 {
+  font-weight: 600 !important; }
+
+.font-weight-700 {
+  font-weight: 700 !important; }
+
+.font-weight-800 {
+  font-weight: 800 !important; }
 
 /* Position
 ==========
@@ -4252,7 +4276,8 @@ There are five colors defined for you as modifiers (section--alpha, section--bet
   src: url("../fonts/icons/icons.eot#iefix") format("embedded-opentype"), url("../fonts/icons/icons.svg#icons") format("svg"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"); }
 
 .icon:before, .modal__close:before, .btn-dropdown__toggle:before, .icon-after:after, .nav-bar__trigger, .accordion__trigger:after, .spinner:after, .off-canvas-toggle-left,
-.off-canvas-toggle-right, .btn-dropdown__action:after, .form__select:after, input[type=checkbox] + label:after, input[type=radio] + label:after, .form__password-toggle:after, .notification:before, .notification__close {
+.off-canvas-toggle-right, .btn-dropdown__action:after, .form__select:after, input[type=checkbox] + label:after,
+input[type=radio] + label:after, .form__password-toggle:after, .notification:before, .notification__close {
   font-family: 'icons', 'arial', 'verdana';
   font-weight: normal; }
 
@@ -8655,27 +8680,35 @@ category: Forms
 /* Form checkbox
 ==========
 */
-input[type=checkbox], input[type=radio] {
+input[type=checkbox],
+input[type=radio] {
   position: absolute;
   outline: none;
   opacity: 0; }
-  input[disabled][type=checkbox], input[disabled][type=radio] {
+  input[type=checkbox][disabled],
+  input[type=radio][disabled] {
     cursor: not-allowed; }
-    input[disabled][type=checkbox] + label, input[disabled][type=radio] + label {
+    input[type=checkbox][disabled] + label,
+    input[type=radio][disabled] + label {
       cursor: not-allowed; }
-      input[disabled][type=checkbox] + label:before, input[disabled][type=radio] + label:before {
+      input[type=checkbox][disabled] + label:before,
+      input[type=radio][disabled] + label:before {
         opacity: 0.4; }
-  input[type=checkbox]:focus + label:before, input[type=radio]:focus + label:before {
+  input[type=checkbox]:focus + label:before,
+  input[type=radio]:focus + label:before {
     background: #f1f1f1;
     border-color: #cbcbcb;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
-  input[type=checkbox]:checked + label:after, input[type=radio]:checked + label:after {
+  input[type=checkbox]:checked + label:after,
+  input[type=radio]:checked + label:after {
     opacity: 1; }
-  .no-borderradius input[type=checkbox], .no-borderradius input[type=radio] {
+  .no-borderradius input[type=checkbox],
+  .no-borderradius input[type=radio] {
     background: transparent;
     position: relative;
     opacity: 1; }
-  input[type=checkbox] + label, input[type=radio] + label {
+  input[type=checkbox] + label,
+  input[type=radio] + label {
     position: relative;
     cursor: pointer;
     padding-left: 30px;
@@ -8683,9 +8716,11 @@ input[type=checkbox], input[type=radio] {
        -moz-user-select: none;
         -ms-user-select: none;
             user-select: none; }
-    .no-borderradius input[type=checkbox] + label, .no-borderradius input[type=radio] + label {
+    .no-borderradius input[type=checkbox] + label,
+    .no-borderradius input[type=radio] + label {
       padding: 0 0 0 5px; }
-    input[type=checkbox] + label:before, input[type=radio] + label:before {
+    input[type=checkbox] + label:before,
+    input[type=radio] + label:before {
       position: absolute;
       left: 0;
       top: -1px;
@@ -8697,9 +8732,11 @@ input[type=checkbox], input[type=radio] {
       border-radius: 0;
       border: 1px solid #e0e0e0;
       transition: all 0.4s; }
-      .no-borderradius input[type=checkbox] + label:before, .no-borderradius input[type=radio] + label:before {
+      .no-borderradius input[type=checkbox] + label:before,
+      .no-borderradius input[type=radio] + label:before {
         display: none; }
-    input[type=checkbox] + label:after, input[type=radio] + label:after {
+    input[type=checkbox] + label:after,
+    input[type=radio] + label:after {
       content: "";
       position: absolute;
       top: -1px;
@@ -8711,7 +8748,8 @@ input[type=checkbox], input[type=radio] {
       color: #2690b0;
       opacity: 0;
       transition: all 0.2s; }
-      .no-borderradius input[type=checkbox] + label:after, .no-borderradius input[type=radio] + label:after {
+      .no-borderradius input[type=checkbox] + label:after,
+      .no-borderradius input[type=radio] + label:after {
         display: none; }
 
 /*doc

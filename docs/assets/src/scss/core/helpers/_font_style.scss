@@ -3,13 +3,9 @@
 */
 
 .font-style-normal {
-    font-style: normal;
+    font-style: normal !important;
 }
 
 .font-style-italic {
-    font-style: italic;
-}
-
-.font-style-bold {
-    font-style: bold;
+    font-style: italic !important;
 }

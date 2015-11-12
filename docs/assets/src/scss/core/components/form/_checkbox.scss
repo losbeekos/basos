@@ -2,7 +2,8 @@
 ==========
 */
 
-%form-checkbox-radio {
+input[type=checkbox],
+input[type=radio] {
     position: absolute;
     outline: none;
     opacity: 0;
@@ -87,10 +88,6 @@
             }
         }
     }
-}
-
-input[type=checkbox] {
-    @extend %form-checkbox-radio;
 }
 
 /*doc
