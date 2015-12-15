@@ -14,21 +14,21 @@
     }
 
     .#{$class} {
-        &.icon--spinner:before       { content: '\e800'; }
-        &.icon--ok:before            { content: '\e801'; }
-        &.icon--cancel:before        { content: '\e802'; }
-        &.icon--cancel-circle:before { content: '\e803'; }
-        &.icon--info:before          { content: '\e804'; }
-        &.icon--attention:before     { content: '\e805'; }
-        &.icon--question:before      { content: '\e806'; }
-        &.icon--eye:before           { content: '\e807'; }
-        &.icon--eye-off:before       { content: '\e808'; }
-        &.icon--menu:before          { content: '\e809'; }
-        &.icon--down:before          { content: '\e80a'; }
-        &.icon--left:before          { content: '\e80b'; }
-        &.icon--right:before         { content: '\e80c'; }
-        &.icon--up:before            { content: '\e80d'; }
-        &.icon--cog:before           { content: '\e80e'; }
+        &.icon--spinner:#{$pseudo}       { content: '\e800'; }
+        &.icon--ok:#{$pseudo}            { content: '\e801'; }
+        &.icon--cancel:#{$pseudo}        { content: '\e802'; }
+        &.icon--cancel-circle:#{$pseudo} { content: '\e803'; }
+        &.icon--info:#{$pseudo}          { content: '\e804'; }
+        &.icon--attention:#{$pseudo}     { content: '\e805'; }
+        &.icon--question:#{$pseudo}      { content: '\e806'; }
+        &.icon--eye:#{$pseudo}           { content: '\e807'; }
+        &.icon--eye-off:#{$pseudo}       { content: '\e808'; }
+        &.icon--menu:#{$pseudo}          { content: '\e809'; }
+        &.icon--down:#{$pseudo}          { content: '\e80a'; }
+        &.icon--left:#{$pseudo}          { content: '\e80b'; }
+        &.icon--right:#{$pseudo}         { content: '\e80c'; }
+        &.icon--up:#{$pseudo}            { content: '\e80d'; }
+        &.icon--cog:#{$pseudo}           { content: '\e80e'; }
 
         &:#{$pseudo} {
             @extend %font-icons;

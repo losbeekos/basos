@@ -4538,49 +4538,49 @@ category: Typography
   font-style: normal;
   font-weight: normal; }
 
-.icon-after.icon--spinner:before {
+.icon-after.icon--spinner:after {
   content: '\e800'; }
 
-.icon-after.icon--ok:before {
+.icon-after.icon--ok:after {
   content: '\e801'; }
 
-.icon-after.icon--cancel:before, .icon-after.modal__close:before {
+.icon-after.icon--cancel:after, .icon-after.modal__close:after {
   content: '\e802'; }
 
-.icon-after.icon--cancel-circle:before {
+.icon-after.icon--cancel-circle:after {
   content: '\e803'; }
 
-.icon-after.icon--info:before {
+.icon-after.icon--info:after {
   content: '\e804'; }
 
-.icon-after.icon--attention:before {
+.icon-after.icon--attention:after {
   content: '\e805'; }
 
-.icon-after.icon--question:before {
+.icon-after.icon--question:after {
   content: '\e806'; }
 
-.icon-after.icon--eye:before {
+.icon-after.icon--eye:after {
   content: '\e807'; }
 
-.icon-after.icon--eye-off:before {
+.icon-after.icon--eye-off:after {
   content: '\e808'; }
 
-.icon-after.icon--menu:before {
+.icon-after.icon--menu:after {
   content: '\e809'; }
 
-.icon-after.icon--down:before, .icon-after.btn-dropdown__toggle:before {
+.icon-after.icon--down:after, .icon-after.btn-dropdown__toggle:after {
   content: '\e80a'; }
 
-.icon-after.icon--left:before {
+.icon-after.icon--left:after {
   content: '\e80b'; }
 
-.icon-after.icon--right:before {
+.icon-after.icon--right:after {
   content: '\e80c'; }
 
-.icon-after.icon--up:before {
+.icon-after.icon--up:after {
   content: '\e80d'; }
 
-.icon-after.icon--cog:before {
+.icon-after.icon--cog:after {
   content: '\e80e'; }
 
 .icon-after:after {
