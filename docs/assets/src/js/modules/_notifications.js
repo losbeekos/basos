@@ -14,7 +14,7 @@ app.notifications = {
         var self = this;
 
         self.close();
-        self.cookieLaw.init();
+        // self.cookieLaw.init(); // Uncomment if you need the notification
     },
 
     add: function (_target, _message, _size, _type) {

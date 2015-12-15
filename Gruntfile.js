@@ -22,17 +22,6 @@ module.exports = function(grunt) {
         },
 
         copy: {
-            js: {
-                files: [{
-                    expand: true,
-                    cwd: '<%= basos.src %>/',
-                    src: [
-                        'js/vendor/**/*',
-                    ],
-                    dest: '<%= basos.dist %>/'
-                }]
-            },
-
             fonts: {
                 files: [{
                     expand: true,
@@ -68,7 +57,6 @@ module.exports = function(grunt) {
                     'bower_components/fastclick/lib/fastclick.js',
                     'bower_components/fitvids/jquery.fitvids.js',
                     'bower_components/jquery-placeholder/jquery.placeholder.js',
-                    'bower_components/packery/dist/packery.pkgd.js',
                     'bower_components/parsleyjs/src/i18n/nl.js',
                     'bower_components/parsleyjs/dist/parsley.js',
                     'bower_components/rangeslider.js/dist/rangeslider.js',
@@ -183,26 +171,13 @@ module.exports = function(grunt) {
                     {
                         expand: true,
                         cwd: '<%= basos.dist %>/js/',
-                        src: ['app.js'],
+                        src: ['app.js', 'modernizr.js'],
                         dest: '<%= basos.dist %>/js/',
                         ext: '.'+todayTimestamp+'.min.js',
                         extDot: 'first'
                     },
                 ]
-            },
-
-            vendor: {
-                files: [
-                    {
-                        expand: true,
-                        cwd: '<%= basos.dist %>/js/vendor/',
-                        src: ['modernizr/modernizr.js',],
-                        dest: '<%= basos.dist %>/js/vendor',
-                        ext: '.'+todayTimestamp+'.min.js',
-                        extDot: 'first'
-                    },
-                ]
-            },
+            }
         },
 
         imagemin: {
@@ -233,7 +208,7 @@ module.exports = function(grunt) {
         watch: {
             js: {
                 files: ['<%= jshint.files %>'],
-                tasks: ['clean:js', 'jshint', 'concat', 'copy:js'],
+                tasks: ['clean:js', 'jshint', 'concat'],
             },
 
             // Basos
@@ -335,6 +310,44 @@ module.exports = function(grunt) {
             }
         },
 
+        modernizr: {
+            dev:  {
+                'dest' : '<%= basos.dist %>/js/modernizr.js',
+                'parseFiles': true,
+                'devFile': 'modernizr.js',
+                'outputFile' : '<%= basos.dist %>/js/modernizr.js',
+                'files': {
+                    'src': [
+                        '<%= basos.dist %>/css/main.css',
+                        '<%= basos.dist %>/js/app.js'
+                    ]
+                },
+                'options' : [
+                    'setClasses',
+                    'html5shiv',
+                    'addTest',
+                    'html5printshiv',
+                    'testProp',
+                    'fnBind',
+                    'mq'
+                ],
+                'excludeTests': [
+                    'ellipsis',
+                    'json',
+                    'svg',
+                    'supports',
+                    'csstransitions',
+                    'cookies',
+                    'target',
+                    'borderradius',
+                    'placeholder',
+                    'notification'
+                ],
+                'customTests': [],
+                'uglify': false
+            }
+        }
+
     });
 
     // Basos tasks
@@ -345,7 +358,8 @@ module.exports = function(grunt) {
         'concat',
         'copy',
         'sass:dev',
-        'postcss'
+        'postcss',
+        'modernizr'
     ]);
 
     grunt.registerTask('dist', [
@@ -356,6 +370,7 @@ module.exports = function(grunt) {
         'sass:dev',
         'postcss',
         'cssmin',
+        'modernizr',
         'uglify',
         'imagemin',
         'imageoptim',

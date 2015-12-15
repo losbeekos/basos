@@ -865,7 +865,9 @@ Pure CSS ellipsis class
 .clearfix:before,
 .grid:before,
 [class|=column]:before,
-.flexible-grid:before,
+.flexible-grid-col-2:before,
+.flexible-grid-col-3:before,
+.flexible-grid-col-4:before,
 .container:before,
 .container-beta:before,
 .card__content:before,
@@ -884,7 +886,9 @@ Pure CSS ellipsis class
 .btn-dropdown__list:before,
 form:before,
 .form__row:before,
-.clearfix:after, .grid:after, [class|=column]:after, .flexible-grid:after, .container:after,
+.clearfix:after, .grid:after, [class|=column]:after, .flexible-grid-col-2:after,
+.flexible-grid-col-3:after,
+.flexible-grid-col-4:after, .container:after,
 .container-beta:after, .card__content:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
@@ -893,7 +897,9 @@ form:before,
   content: '';
   display: table; }
 
-.clearfix:after, .grid:after, [class|=column]:after, .flexible-grid:after, .container:after,
+.clearfix:after, .grid:after, [class|=column]:after, .flexible-grid-col-2:after,
+.flexible-grid-col-3:after,
+.flexible-grid-col-4:after, .container:after,
 .container-beta:after, .card__content:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
 .off-canvas-nar-bar__container:after,
 .off-canvas-nar-bar__nav:after,
@@ -3797,7 +3803,7 @@ The default grid is a 12 columns grid which you can change in the settings, even
 /* Flexible grid
 ==========
 */
-.flexible-grid--col-2 {
+.flexible-grid-col-2 {
   /**
     *
     * Usage:
@@ -3815,19 +3821,19 @@ The default grid is a 12 columns grid which you can change in the settings, even
     *
     **/ }
   @media (min-width: 700px) {
-    .flexible-grid--col-2 {
+    .flexible-grid-col-2 {
       margin-left: -2%;
       margin-right: -2%; } }
-  .flexible-grid--col-2 .card {
+  .flexible-grid-col-2 > * {
     margin-bottom: 4%; }
   @media (min-width: 700px) {
-    .flexible-grid--col-2 .card {
+    .flexible-grid-col-2 > * {
       width: 46%;
       margin-left: 2%;
       margin-right: 2%;
       float: left; } }
 
-.flexible-grid--col-3 {
+.flexible-grid-col-3 {
   /**
     *
     * Usage:
@@ -3852,26 +3858,26 @@ The default grid is a 12 columns grid which you can change in the settings, even
     * }
     *
     **/ }
-  @media (min-width: 700px) {
-    .flexible-grid--col-3 {
+  @media (min-width: 600px) {
+    .flexible-grid-col-3 {
       margin-left: -1%;
       margin-right: -1%; } }
-  .flexible-grid--col-3 .card {
+  .flexible-grid-col-3 > * {
     margin-bottom: 4%; }
   @media (min-width: 600px) {
-    .flexible-grid--col-3 .card {
+    .flexible-grid-col-3 > * {
       width: 48%;
       margin-left: 1%;
       margin-right: 1%;
       float: left; } }
   @media (min-width: 1000px) {
-    .flexible-grid--col-3 .card {
+    .flexible-grid-col-3 > * {
       width: 31.333339%;
       margin-left: 1%;
       margin-right: 1%;
       float: left; } }
 
-.flexible-grid--col-4 {
+.flexible-grid-col-4 {
   /**
     *
     * Usage:
@@ -3896,20 +3902,20 @@ The default grid is a 12 columns grid which you can change in the settings, even
     * }
     *
     **/ }
-  @media (min-width: 700px) {
-    .flexible-grid--col-4 {
+  @media (min-width: 600px) {
+    .flexible-grid-col-4 {
       margin-left: -1%;
       margin-right: -1%; } }
-  .flexible-grid--col-4 .card {
+  .flexible-grid-col-4 > * {
     margin-bottom: 4%; }
   @media (min-width: 600px) {
-    .flexible-grid--col-4 .card {
+    .flexible-grid-col-4 > * {
       width: 48%;
       margin-left: 1%;
       margin-right: 1%;
       float: left; } }
   @media (min-width: 1000px) {
-    .flexible-grid--col-4 .card {
+    .flexible-grid-col-4 > * {
       width: 23%;
       margin-left: 1%;
       margin-right: 1%;
@@ -3926,7 +3932,7 @@ This module can be used to fancy yourself a flexible grid with evenly height ele
 It's important to note twice that these elements need the same height, or you'll get in trouble. You could use the equalize module if you have variable content.
 
 ```html_example
-<div class="flexible-grid flexible-grid--col-3">
+<div class="flexible-grid-col-3">
     <div class="card">
         <div class="card__header card__header--beta">
             <div class="card__title">Some title</div>
@@ -5923,7 +5929,7 @@ category: Content
   .dropdown.dropdown--show .dropdown__content {
     visibility: visible;
     opacity: 1;
-    transition: all 0.2s 0;
+    transition: all 0.2s 0s;
     -webkit-transform: translate3d(0, 0, 0);
             transform: translate3d(0, 0, 0); }
   .dropdown li {
@@ -5946,7 +5952,7 @@ category: Content
     max-width: 18.75rem;
     /* =300px */ }
     [data-dropdown-trigger=click] .dropdown__content {
-      transition-delay: 0; }
+      transition-delay: 0s; }
     .dropdown__content a {
       background-color: transparent;
       display: block;
@@ -7026,6 +7032,29 @@ category: Navigation
 .off-canvas-nav__link:hover {
     background: #fafafa; }
 
+/*doc
+---
+title: Off canvas
+name: off_canvas
+category: Navigation
+---
+
+The hamburger trigger on this page toggles an off canvas element.
+
+```html_example
+<div id="off-canvas-left" class="off-canvas off-canvas--left">
+    <button id="off-canvas-toggle-left" class="off-canvas-toggle-left"></button>
+    <nav class="off-canvas-nav">
+        <ul class="list-unstyled">
+            <li class="off-canvas-nav__item"><a class="off-canvas-nav__link off-canvas-nav__link--active" href="#">Lorem ipsum</a></li>
+            <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
+            <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
+        </ul>
+    </nav>
+</div>
+```
+
+*/
 /* Off canvas
 ==========
 */
@@ -9511,6 +9540,7 @@ app.notifications.add(target, message, size, type);
   border: none;
   color: #ffffff;
   transition: all 0.4s;
+  border-radius: 0;
   padding: 1.25rem 0;
   /* =20px 0 */ }
   .notification-cookie-show[notification-cookie-position] .notification--cookie.notification--close {
@@ -9547,11 +9577,9 @@ You can add your own custom modules here which you'll need for the thing you're 
 ==========
 */
 .header {
-  background-image: url("../img/header.jpg");
   background-position: top center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
   width: 100%;
   height: 100%; }
 

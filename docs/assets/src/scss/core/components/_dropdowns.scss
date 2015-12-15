@@ -10,7 +10,7 @@
         .dropdown__content {
             visibility: visible;
             opacity: 1;
-            transition: all map-get($dropdown, transition-duration) 0;
+            transition: all map-get($dropdown, transition-duration) 0s;
             transform: map-get($dropdown, transform-hover);
         }
     }
@@ -40,7 +40,7 @@
         @include rem(max-width, map-get($dropdown, max-width));
 
         [data-dropdown-trigger=click] & {
-            transition-delay: 0;
+            transition-delay: 0s;
         }
 
         a {

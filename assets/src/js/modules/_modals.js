@@ -50,19 +50,22 @@ app.modals = {
                 html += '<p>' + _triggerData.modalText + '</p>';
             }
 
+            html += '<ul class="list-inline">';
+
             if (_triggerData.modalCloseBtn !== undefined) {
                 if (_triggerData.modal === 'confirm') {
                     if ( typeof _triggerData.modalConfirmAction === "function") {
-                        html += '<a class="btn btn--beta btn--medium confirm-ok" href="javascript:void(0)" data-modal-close>' + _triggerData.modalConfirmBtn + '</a>';
+                        html += '<li><a class="btn btn--beta btn--medium confirm-ok" href="javascript:void(0)" data-modal-close>' + _triggerData.modalConfirmBtn + '</a></li>';
                     } else {
-                        html += '<a class="btn btn--beta btn--medium" href="' + _triggerData.modalConfirmAction + '">' + _triggerData.modalConfirmBtn + '</a>';
+                        html += '<li><a class="btn btn--beta btn--medium" href="' + _triggerData.modalConfirmAction + '">' + _triggerData.modalConfirmBtn + '</a></li>';
                     }
-                    html += '<button class="btn btn--alpha btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button>';
+                    html += '<li><button class="btn btn--alpha btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button></li>';
                 } else {
-                    html += '<button class="btn btn--beta btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button>';
-                    html += '<a class="modal__close" data-modal-close></a>';
+                    html += '<li><button class="btn btn--beta btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button></li>';
                 }
             }
+
+            html += '</ul>';
         }
 
         html += '</div></div>';

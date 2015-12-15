@@ -157,3 +157,27 @@
         background: lighten(map-get($off-canvas, bg-color), 3%);
     }
 }
+
+/*doc
+---
+title: Off canvas
+name: off_canvas
+category: Navigation
+---
+
+The hamburger trigger on this page toggles an off canvas element.
+
+```html_example
+<div id="off-canvas-left" class="off-canvas off-canvas--left">
+    <button id="off-canvas-toggle-left" class="off-canvas-toggle-left"></button>
+    <nav class="off-canvas-nav">
+        <ul class="list-unstyled">
+            <li class="off-canvas-nav__item"><a class="off-canvas-nav__link off-canvas-nav__link--active" href="#">Lorem ipsum</a></li>
+            <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
+            <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
+        </ul>
+    </nav>
+</div>
+```
+
+*/
