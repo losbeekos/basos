@@ -4,13 +4,13 @@
 
 
 .flexible-grid {
-    &-col-2,
-    &-col-3,
-    &-col-4 {
+    &-2,
+    &-3,
+    &-4 {
         @extend .clearfix;
     }
 
-    &-col-2 {
+    &-2 {
         @include mq(gamma-and-up) {
             margin-left: -2%;
             margin-right: -2%;
@@ -30,7 +30,7 @@
         }
     }
 
-    &-col-3 {
+    &-3 {
         @include mq(beta-and-up) {
             margin-left: -1%;
             margin-right: -1%;
@@ -59,7 +59,7 @@
         }
     }
 
-    &-col-4 {
+    &-4 {
         @include mq(beta-and-up) {
             margin-left: -1%;
             margin-right: -1%;
@@ -100,7 +100,7 @@ This module can be used to fancy yourself a flexible grid with evenly height ele
 It's important to note twice that these elements need the same height, or you'll get in trouble. You could use the equalize module if you have variable content.
 
 ```html_example
-<div class="flexible-grid-col-3">
+<div class="flexible-grid-3">
     <div class="card">
         <div class="card__header card__header--beta">
             <div class="card__title">Some title</div>

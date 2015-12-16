@@ -16,7 +16,7 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         clean: {
-            js: ['<%= basos.dist %>/js'],
+            // js: ['<%= basos.dist %>/js'],
             fonts: ['<%= basos.dist %>/fonts'],
             images: ['<%= basos.dist %>/img']
         },
@@ -314,7 +314,7 @@ module.exports = function(grunt) {
             dev:  {
                 'dest' : '<%= basos.dist %>/js/modernizr.js',
                 'parseFiles': true,
-                'devFile': 'modernizr.js',
+                'devFile': 'assets/src/js/modernizr/dev.js',
                 'outputFile' : '<%= basos.dist %>/js/modernizr.js',
                 'files': {
                     'src': [

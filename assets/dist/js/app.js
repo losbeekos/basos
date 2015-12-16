@@ -5251,7 +5251,6 @@ app.settings.$document.ready(function () {
     var $this = $(this),
         scrollTop = $this.scrollTop();
 
-    app.equalize.init();
     app.scrollSpyNav.init(scrollTop);
     app.fastClick.init();
     app.fitVids.init();
@@ -5284,6 +5283,7 @@ app.settings.$window.ready(function () {
 
     app.scrollSpy.init(scrollTop, windowHeight, true);
     app.affix.init(scrollTop);
+    app.equalize.init();
 });
 
 app.settings.$window.on('scroll', function () {
