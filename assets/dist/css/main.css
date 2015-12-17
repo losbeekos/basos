@@ -1515,13 +1515,13 @@ category: Typography
 ==========
 */
 .float-left {
-  float: left; }
+  float: left !important; }
 
 .float-right {
-  float: right; }
+  float: right !important; }
 
 .float-none {
-  float: none; }
+  float: none !important; }
 
 /* Round
 ==========
@@ -1647,6 +1647,9 @@ category: Typography
 .text-transform-small {
   text-transform: small; }
 
+.text-transform-uppercase {
+  text-transform: uppercase; }
+
 /* Font style
 ==========
 */
@@ -1687,35 +1690,35 @@ category: Typography
 ==========
 */
 .position-relative {
-  position: relative; }
+  position: relative !important; }
 
 .position-absolute {
-  position: absolute; }
+  position: absolute !important; }
 
 /* Display
 ==========
 */
 .display-inline {
-  display: inline; }
+  display: inline !important; }
 
 .display-inline-block {
-  display: inline-block; }
+  display: inline-block !important; }
 
 .display-block {
-  display: block; }
+  display: block !important; }
 
 .display-none {
-  display: none; }
+  display: none !important; }
 
 .display-table {
-  display: table; }
+  display: table !important; }
   .display-table__middle,
   .display-table__bottom {
-    display: table-cell; }
+    display: table-cell !important; }
   .display-table__middle {
-    vertical-align: middle; }
+    vertical-align: middle !important; }
   .display-table__bottom {
-    vertical-align: bottom; }
+    vertical-align: bottom !important; }
 
 /* Ellipsis
 ==========
@@ -5924,14 +5927,15 @@ category: Content
 ==========
 */
 .dropdown {
+  display: inline-block;
   position: relative; }
   .dropdown:not([data-dropdown-trigger=click]):hover .dropdown__content,
   .dropdown.dropdown--show .dropdown__content {
     visibility: visible;
     opacity: 1;
     transition: all 0.2s 0s;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0); }
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1); }
   .dropdown li {
     display: block;
     margin: 0; }
@@ -5945,14 +5949,17 @@ category: Content
     opacity: 0;
     z-index: 999;
     transition: all 0.2s 0.5s;
-    -webkit-transform: translate3d(0, 10%, 0);
-            transform: translate3d(0, 10%, 0);
+    -webkit-transform: translate3d(0, 10%, 0) scale(0.8);
+            transform: translate3d(0, 10%, 0) scale(0.8);
     min-width: 12.5rem;
     /* =200px */
     max-width: 18.75rem;
     /* =300px */ }
     [data-dropdown-trigger=click] .dropdown__content {
       transition-delay: 0s; }
+    .dropdown--right .dropdown__content {
+      left: auto;
+      right: 0; }
     .dropdown__content a {
       background-color: transparent;
       display: block;
@@ -6002,6 +6009,22 @@ category: Content
 </div>
 ```
 
+## Right aligned
+
+```html_example
+<div class="dropdown dropdown--right">
+    <a class="btn btn--alpha btn--small">dropdown</a>
+    <div class="dropdown__content">
+        <ul>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+        </ul>
+    </div>
+</div>
+```
+
 */
 /* Tooltips
 ==========
@@ -6020,14 +6043,14 @@ category: Content
     transition: all 0.2s; }
   .tooltip.tooltip--active[data-tooltip-position=top] .tooltip__content,
   .tooltip.tooltip--active[data-tooltip-position=bottom] .tooltip__content {
-    -webkit-transform: translate(-50%, 0);
-            transform: translate(-50%, 0); }
+    -webkit-transform: translate(-50%, 0) scale(1);
+            transform: translate(-50%, 0) scale(1); }
   .tooltip.tooltip--active[data-tooltip-position=right] .tooltip__content {
-    -webkit-transform: translate(100%, 0);
-            transform: translate(100%, 0); }
+    -webkit-transform: translate(100%, 0) scale(1);
+            transform: translate(100%, 0) scale(1); }
   .tooltip.tooltip--active[data-tooltip-position=left] .tooltip__content {
-    -webkit-transform: translate(-100%, 0);
-            transform: translate(-100%, 0); }
+    -webkit-transform: translate(-100%, 0) scale(1);
+            transform: translate(-100%, 0) scale(1); }
   .tooltip.tooltip--active .tooltip__content {
     visibility: visible;
     opacity: 1; }
@@ -6049,9 +6072,7 @@ category: Content
 
 [data-tooltip-position=top] .tooltip__content,
 [data-tooltip-position=bottom] .tooltip__content {
-  left: 50%;
-  -webkit-transform: translate(-50%, 0);
-          transform: translate(-50%, 0); }
+  left: 50%; }
   [data-tooltip-position=top] .tooltip__content:after,
   [data-tooltip-position=bottom] .tooltip__content:after {
     left: 50%;
@@ -6061,15 +6082,15 @@ category: Content
     margin-left: -110px; }
 
 [data-tooltip-position=top] .tooltip__content {
-  -webkit-transform: translate(-50%, 10%);
-          transform: translate(-50%, 10%); }
+  -webkit-transform: translate(-50%, 10%) scale(0.5);
+          transform: translate(-50%, 10%) scale(0.5); }
   [data-tooltip-position=top] .tooltip__content:after {
     border-top-color: #2690b0;
     bottom: -10px; }
 
 [data-tooltip-position=bottom] .tooltip__content {
-  -webkit-transform: translate(-50%, -10%);
-          transform: translate(-50%, -10%); }
+  -webkit-transform: translate(-50%, -10%) scale(0.5);
+          transform: translate(-50%, -10%) scale(0.5); }
   [data-tooltip-position=bottom] .tooltip__content:after {
     border-bottom-color: #2690b0;
     top: -10px; }
@@ -6084,8 +6105,8 @@ category: Content
 
 [data-tooltip-position=right] .tooltip__content {
   right: -10px;
-  -webkit-transform: translate(90%, 0);
-          transform: translate(90%, 0); }
+  -webkit-transform: translate(90%, 0) scale(0.5);
+          transform: translate(90%, 0) scale(0.5); }
   [data-tooltip-position=right] .tooltip__content:after {
     border-right-color: #2690b0;
     left: -10px; }
@@ -6094,8 +6115,8 @@ category: Content
 
 [data-tooltip-position=left] .tooltip__content {
   left: -10px;
-  -webkit-transform: translate(-90%, 0);
-          transform: translate(-90%, 0); }
+  -webkit-transform: translate(-90%, 0) scale(0.5);
+          transform: translate(-90%, 0) scale(0.5); }
   [data-tooltip-position=left] .tooltip__content:after {
     border-left-color: #2690b0;
     right: -10px; }
@@ -6740,89 +6761,6 @@ category: Content
     <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateAlpha" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
     <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateGamma" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
     <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateBeta" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-</div>
-```
-
-*/
-/* Parallax scrolling
-==========
-*/
-.parallax {
-  position: relative;
-  overflow: hidden;
-  display: none;
-  /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-  /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/ }
-  @media (min-width: 600px) and (max-width: 700px) {
-    .parallax {
-      height: 21.875rem;
-      /* =350px */ } }
-  @media (min-width: 700px) {
-    .parallax {
-      height: 28.125rem;
-      /* =450px */ } }
-  .parallax__img {
-    min-width: 100%;
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/ }
-    @media (min-width: 600px) and (max-width: 700px) {
-      .parallax__img {
-        left: -25%;
-        min-width: 150%; } }
-    @media (min-width: 600px) {
-      .parallax__img {
-        position: absolute;
-        top: -25%; } }
-    @media (min-width: 700px) {
-      .parallax__img {
-        left: 0; } }
-
-/*doc
----
-title: Parallax
-name: parallax
-category: Content
----
-
-```html_example
-<div class="parallax">
-    <img src="http://www.lorempixel.com/1280/1000/business/1" class="parallax__img">
 </div>
 ```
 
@@ -8203,8 +8141,8 @@ category: Buttons
     opacity: 0;
     z-index: 9999;
     transition: all 0.2s;
-    -webkit-transform: translate3d(0, 10%, 0);
-            transform: translate3d(0, 10%, 0);
+    -webkit-transform: translate3d(0, 10%, 0) scale(0.8);
+            transform: translate3d(0, 10%, 0) scale(0.8);
     min-width: 12.5rem;
     /* =200px */
     max-width: 18.75rem;
@@ -8218,8 +8156,8 @@ category: Buttons
       visibility: visible;
       opacity: 1;
       transition: all 0.2s;
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0); }
+      -webkit-transform: translate3d(0, 0, 0) scale(1);
+              transform: translate3d(0, 0, 0) scale(1); }
   .btn-dropdown__list--border-bottom {
     border-bottom: 1px solid #e0e0e0; }
   .btn-dropdown__list--padding {

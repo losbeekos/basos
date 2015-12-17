@@ -1,8 +1,6 @@
 app.fastClick = {
     init: function(){
-        if (app.settings.$html.hasClass('touch')) {
-            FastClick.attach(document.body);
-        }
+        FastClick.attach(document.body);
     }
 };
 

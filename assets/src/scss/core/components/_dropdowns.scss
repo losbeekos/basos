@@ -3,6 +3,7 @@
 */
 
 .dropdown {
+    display: inline-block;
     position: relative;
 
     &:not([data-dropdown-trigger=click]):hover,
@@ -41,6 +42,11 @@
 
         [data-dropdown-trigger=click] & {
             transition-delay: 0s;
+        }
+
+        .dropdown--right & {
+            left: auto;
+            right: 0;
         }
 
         a {
@@ -85,6 +91,22 @@ category: Content
 
 ```html_example
 <div class="dropdown" data-dropdown-trigger="click">
+    <a class="btn btn--alpha btn--small">dropdown</a>
+    <div class="dropdown__content">
+        <ul>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+        </ul>
+    </div>
+</div>
+```
+
+## Right aligned
+
+```html_example
+<div class="dropdown dropdown--right">
     <a class="btn btn--alpha btn--small">dropdown</a>
     <div class="dropdown__content">
         <ul>

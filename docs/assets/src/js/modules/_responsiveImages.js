@@ -26,7 +26,7 @@ category: Responsive images
 
 If you're new to responsive images check out [this article](https://dev.opera.com/articles/native-responsive-images/).
 
-Picturefill is used for wider browser support. There is an Picturefill [JavaScript API](https://scottjehl.github.io/picturefill/#api) available.
+Picturefill is used for wider browser support. There is a Picturefill [JavaScript API](https://scottjehl.github.io/picturefill/#api) available.
 
 */
 

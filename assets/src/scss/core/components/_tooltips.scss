@@ -23,19 +23,19 @@
         &[data-tooltip-position=top],
         &[data-tooltip-position=bottom] {
             .tooltip__content{
-                transform: translate(-50%, 0);
+                transform: translate(-50%, 0) scale(1);
             }
         }
 
         &[data-tooltip-position=right] {
             .tooltip__content{
-                transform: translate(100%, 0);
+                transform: translate(100%, 0) scale(1);
             }
         }
 
         &[data-tooltip-position=left] {
             .tooltip__content{
-                transform: translate(-100%, 0);
+                transform: translate(-100%, 0) scale(1);
             }
         }
 
@@ -72,7 +72,6 @@
 [data-tooltip-position=bottom] {
     .tooltip__content {
         left: 50%;
-        transform: translate(-50%, 0);
 
         &:after {
             left: 50%;
@@ -87,7 +86,7 @@
 
 [data-tooltip-position=top] {
     .tooltip__content {
-        transform: translate(-50%, 10%);
+        transform: translate(-50%, 10%) scale(0.5);
 
         &:after {
             border-top-color: map-get($tooltip, bg-color);
@@ -98,7 +97,7 @@
 
 [data-tooltip-position=bottom] {
     .tooltip__content {
-        transform: translate(-50%, -10%);
+        transform: translate(-50%, -10%) scale(0.5);
 
         &:after {
             border-bottom-color: map-get($tooltip, bg-color);
@@ -122,7 +121,7 @@
 [data-tooltip-position=right] {
     .tooltip__content {
         right: -(map-get($tooltip, arrow-width)*2);
-        transform: translate(90%, 0);
+        transform: translate(90%, 0) scale(0.5);
 
         &:after {
             border-right-color: map-get($tooltip, bg-color);
@@ -138,7 +137,7 @@
 [data-tooltip-position=left] {
     .tooltip__content {
         left: -(map-get($tooltip, arrow-width)*2);
-        transform: translate(-90%, 0);
+        transform: translate(-90%, 0) scale(0.5);
 
         &:after {
             border-left-color: map-get($tooltip, bg-color);

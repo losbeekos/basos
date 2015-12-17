@@ -330,6 +330,9 @@ module.exports = function(grunt) {
                     'fnBind',
                     'mq'
                 ],
+                'tests': [
+                  'touchevents'
+                ],
                 'excludeTests': [
                     'ellipsis',
                     'json',

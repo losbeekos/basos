@@ -4082,39 +4082,39 @@ app.affix = {
     }
 };
 app.btnDropdown = {
-	init: function() {
-		app.settings.$body.on('click', '[data-btn-dropdown-toggle]', function (event) {
-			event.preventDefault();
-			event.stopPropagation();
+    init: function() {
+        app.settings.$body.on('click', '[data-btn-dropdown-toggle]', function (event) {
+            event.preventDefault();
+            event.stopPropagation();
 
-			var $this = $(this),
-				$btnDropdown = $this.closest('.btn-dropdown');
+            var $this = $(this),
+                $btnDropdown = $this.closest('.btn-dropdown');
 
-			if ($btnDropdown.hasClass('btn-dropdown--open')) {
-				$btnDropdown.removeClass('btn-dropdown--open');
-			} else {
-				$('.btn-dropdown--open').removeClass('btn-dropdown--open');
-				$btnDropdown.addClass('btn-dropdown--open');
-			}
-		});
+            if ($btnDropdown.hasClass('btn-dropdown--open')) {
+                $btnDropdown.removeClass('btn-dropdown--open');
+            } else {
+                $('.btn-dropdown--open').removeClass('btn-dropdown--open');
+                $btnDropdown.addClass('btn-dropdown--open');
+            }
+        });
 
-		app.settings.$body.on('keydown', function(event){
-		    if (event.keyCode === 27) {
-		        $('.btn-dropdown--open').removeClass('btn-dropdown--open');
-		    }
-		});
+        app.settings.$body.on('keydown', function(event){
+            if (event.keyCode === 27) {
+                $('.btn-dropdown--open').removeClass('btn-dropdown--open');
+            }
+        });
 
-		app.settings.$body.on('click', '.btn-dropdown__dropdown, .btn-dropdown__list', function (event) {
-			var allowProp = $(this).attr("data-btn-dropdown");
-			if (allowProp !== "allowPropagation") {
-				event.stopPropagation();
-			}
-		});
+        app.settings.$body.on('click', '.btn-dropdown__dropdown, .btn-dropdown__list', function (event) {
+            var allowProp = $(this).attr("data-btn-dropdown");
+            if (allowProp !== "allowPropagation") {
+                event.stopPropagation();
+            }
+        });
 
-		app.settings.$body.on('click', function () {
-		    $('.btn-dropdown--open').removeClass('btn-dropdown--open');
-		});
-	}
+        app.settings.$body.on('click', function () {
+            $('.btn-dropdown--open').removeClass('btn-dropdown--open');
+        });
+    }
 
 };
 app.cycle = {
@@ -4304,9 +4304,7 @@ You can also set a media query from where the equalizer has to kick in, like thi
 */
 app.fastClick = {
     init: function(){
-        if (app.settings.$html.hasClass('touch')) {
-            FastClick.attach(document.body);
-        }
+        FastClick.attach(document.body);
     }
 };
 
@@ -5007,49 +5005,6 @@ app.offCanvas = {
         app.settings.$html.toggleClass('off-canvas-show-right').toggleClass('off-canvas-nav-bar-show-right');
     }
 };
-app.parallax = {
-    settings: {
-        $el: $('.parallax'),
-    },
-
-    init: function (_scrollTop) {
-        var self = this;
-
-        if (app.parallax.settings.$el.length > 0) {
-            app.parallax.settings.$el.each(function () {
-                var $parallax = $(this),
-                    parallaxData = $parallax.data(),
-                    parallaxSpeed = parallaxData.parallaxSpeed,
-                    parallaxOffset = $parallax.offset(),
-                    parallaxOffsetTop = parallaxOffset.top,
-                    $img = $parallax.find('.parallax__img');
-
-                if (parallaxSpeed === undefined) {
-                    parallaxSpeed = 10;
-                }
-
-                if (Modernizr.mq(app.mediaQueries.alpha)) {
-                    $img.removeAttr('style');
-                }
-
-                if (!helper.outView($parallax) && Modernizr.mq(app.mediaQueries.betaAndUp) && app.settings.$html.hasClass('no-touch')) {
-                    var yPos = (_scrollTop / parallaxSpeed);
-
-                    if (parallaxOffsetTop > app.settings.windowHeight) {
-                        yPos = (_scrollTop - Math.round(parallaxOffsetTop - app.settings.windowHeight)) / parallaxSpeed;
-                    }
-
-                    $img.css({
-                        'transform': 'translateY(' + yPos +  'px)',
-                        'transition': 'none'
-                    });
-                }
-
-                $parallax.show();
-            });
-        }
-    }
-};
 app.responsiveImages = {
     settings: {
     },
@@ -5078,7 +5033,7 @@ category: Responsive images
 
 If you're new to responsive images check out [this article](https://dev.opera.com/articles/native-responsive-images/).
 
-Picturefill is used for wider browser support. There is an Picturefill [JavaScript API](https://scottjehl.github.io/picturefill/#api) available.
+Picturefill is used for wider browser support. There is a Picturefill [JavaScript API](https://scottjehl.github.io/picturefill/#api) available.
 
 */
 
@@ -5398,7 +5353,6 @@ app.settings.$document.ready(function () {
     app.notifications.init();
     app.offCanvas.init();
     app.toggle.init();
-    app.parallax.init(scrollTop);
     app.groupCheckable.init();
     app.leave.init();
     app.btnDropdown.init();
@@ -5430,7 +5384,6 @@ app.settings.$window.on('scroll', function () {
 
     app.scrollSpy.init(scrollTop, windowHeight, false);
     app.scrollSpyNav.init(scrollTop);
-    app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
     app.disableHover.init();
 
@@ -5465,7 +5418,6 @@ app.settings.$window.on('resize', function () {
         app.equalize.init();
         app.scrollSpy.init(scrollTop, windowHeight, true);
         app.scrollSpyNav.init(scrollTop);
-        app.parallax.init(scrollTop);
         app.navBar.resize(scrollTop);
         app.navBar.scroller(scrollTop);
         app.affix.init(scrollTop);

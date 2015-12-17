@@ -16,7 +16,6 @@ app.settings.$document.ready(function () {
     app.notifications.init();
     app.offCanvas.init();
     app.toggle.init();
-    app.parallax.init(scrollTop);
     app.groupCheckable.init();
     app.leave.init();
     app.btnDropdown.init();
@@ -48,7 +47,6 @@ app.settings.$window.on('scroll', function () {
 
     app.scrollSpy.init(scrollTop, windowHeight, false);
     app.scrollSpyNav.init(scrollTop);
-    app.parallax.init(scrollTop);
     app.navBar.scroller(scrollTop);
     app.disableHover.init();
 
@@ -83,7 +81,6 @@ app.settings.$window.on('resize', function () {
         app.equalize.init();
         app.scrollSpy.init(scrollTop, windowHeight, true);
         app.scrollSpyNav.init(scrollTop);
-        app.parallax.init(scrollTop);
         app.navBar.resize(scrollTop);
         app.navBar.scroller(scrollTop);
         app.affix.init(scrollTop);

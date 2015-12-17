@@ -3,34 +3,34 @@
 */
 
 .display-inline {
-    display: inline;
+    display: inline !important;
 }
 
 .display-inline-block {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 .display-block {
-    display: block;
+    display: block !important;
 }
 
 .display-none {
-    display: none;
+    display: none !important;
 }
 
 .display-table {
-    display: table;
+    display: table !important;
 
     &__middle,
     &__bottom {
-        display: table-cell;
+        display: table-cell !important;
     }
 
     &__middle {
-        vertical-align: middle;
+        vertical-align: middle !important;
     }
 
     &__bottom {
-        vertical-align: bottom;
+        vertical-align: bottom !important;
     }
  }
