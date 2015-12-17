@@ -3,7 +3,18 @@ app.responsiveImages = {
     },
 
     init: function () {
+        app.responsiveImages.setBackgroundImage();
     },
+
+    setBackgroundImage: function () {
+        $('[data-responsive-bg-img]').each(function () {
+            app.responsiveImages.setBackgroundImageStyle($(this));
+        });
+    },
+
+    setBackgroundImageStyle: function (element) {
+        element.css({'background-image': 'url(' + element.find('img')[0].currentSrc + ')'});
+    }
 };
 
 /*doc
@@ -93,6 +104,30 @@ This is used when you need to explicity set an image for a certian media querie,
     <!--[if IE 9]></video><![endif]-->
     <img srcset="http://placehold.it/600x400" alt="" />
 </picture>
+```
+
+*/
+
+/*doc
+---
+title: Set background image
+name: set_background_image
+category: Responsive images
+---
+Background image is set with the data-responsive-bg-img attribute, it reads the image tag for the current source. So all you have to do is add the attribute and place an image (with srcset) or a picture (like below).
+
+*Note: the header class is added to add some demo styling, you could and probably should remove it in your code.*
+
+```html_example
+<div class="header" data-responsive-bg-img>
+    <picture class="display-none">
+        <!--[if IE 9]><video style="display: none;"><![endif]-->
+        <source srcset="responsive-bg-img/1200.png" media="(min-width: 800px)" />
+        <source srcset="responsive-bg-img/800.png" media="(min-width: 400px)" />
+        <!--[if IE 9]></video><![endif]-->
+        <img srcset="responsive-bg-img/400.png" />
+    </picture>
+</div>
 ```
 
 */

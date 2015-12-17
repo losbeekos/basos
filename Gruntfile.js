@@ -16,7 +16,6 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         clean: {
-            // js: ['<%= basos.dist %>/js'],
             fonts: ['<%= basos.dist %>/fonts'],
             images: ['<%= basos.dist %>/img']
         },
@@ -208,7 +207,7 @@ module.exports = function(grunt) {
         watch: {
             js: {
                 files: ['<%= jshint.files %>'],
-                tasks: ['clean:js', 'jshint', 'concat'],
+                tasks: ['jshint', 'concat'],
             },
 
             // Basos

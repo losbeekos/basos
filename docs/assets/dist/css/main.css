@@ -9577,11 +9577,36 @@ You can add your own custom modules here which you'll need for the thing you're 
 ==========
 */
 .header {
-  background-position: top center;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
-  height: 100%; }
+  height: 12.5rem;
+  /* =200px */
+  /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/
+  /**
+    *
+    * Usage:
+    * @include mq('gamma-and-up') {
+    *     CSS properties here..
+    * }
+    *
+    **/ }
+  @media (min-width: 600px) {
+    .header {
+      height: 25rem;
+      /* =400px */ } }
+  @media (min-width: 1000px) {
+    .header {
+      height: 37.5rem;
+      /* =600px */ } }
 
 /* Footer
 ==========

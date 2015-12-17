@@ -35,6 +35,10 @@ app.settings.$window.ready(function () {
     app.scrollSpy.init(scrollTop, windowHeight, true);
     app.affix.init(scrollTop);
     app.equalize.init();
+
+    setTimeout(function () {
+        app.responsiveImages.setBackgroundImage();
+    }, 10);
 });
 
 app.settings.$window.on('scroll', function () {
@@ -83,6 +87,7 @@ app.settings.$window.on('resize', function () {
         app.navBar.resize(scrollTop);
         app.navBar.scroller(scrollTop);
         app.affix.init(scrollTop);
+        app.responsiveImages.setBackgroundImage();
 
         app.settings.$html.removeClass('disable-transitions');
     }, 500);
