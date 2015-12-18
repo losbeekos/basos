@@ -1,9 +1,8 @@
 {
   "name": "susy",
-  "version": "2.2.5",
   "description": "Sass power-tools for web layout.",
   "authors": [
-    "Eric Suzanne <eric@oddbird.net>"
+    "Miriam Eric Suzanne <miriam@oddbird.net>"
   ],
   "main": "sass/_susy.scss",
   "homepage": "http://susy.oddbird.net",
@@ -23,8 +22,5 @@
     "Rakefile",
     "*.json",
     "*.gemspec"
-  ],
-  "devDependencies": {
-    "true": "2.0.0.alpha.3"
-  }
+  ]
 }
