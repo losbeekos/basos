@@ -331,12 +331,12 @@ $navBar: (
 
 $off-canvas: (
     width                    : 260px,
-    bg-color                 : darken(white, 5%),
-    item-border-top-color    : map-get($color, white),
-    item-border-bottom-color : darken(white, 10%),
-    link-padding             : 20px,
-    link-color               : map-get($color, black),
-    toggle-bg-color          : map-get($color, beta),
+    bg-color                 : #333333,
+    item-border-top-color    : #333333,
+    item-border-bottom-color : #333333,
+    link-padding             : 10px 20px,
+    link-color               : white,
+    toggle-bg-color          : #333333,
     toggle-color             : map-get($color, white),
     toggle-font-size         : 30px,
     toggle-width             : 50px,

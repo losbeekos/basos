@@ -6851,7 +6851,7 @@ category: Navigation
 */
 .off-canvas-toggle-left,
 .off-canvas-toggle-right {
-  background: #2690b0;
+  background: #333333;
   position: absolute;
   top: 0;
   z-index: 10000;
@@ -6866,7 +6866,7 @@ category: Navigation
   /* =50px */ }
   .off-canvas-toggle-left:hover,
   .off-canvas-toggle-right:hover {
-    background: #2ba1c5;
+    background: #404040;
     color: #ffffff;
     text-decoration: none; }
   .off-canvas-toggle-left:active,
@@ -6892,13 +6892,17 @@ category: Navigation
       content: ""; }
 
 .off-canvas {
-  background: #f2f2f2;
+  background: #333333;
   position: fixed;
   z-index: 9999;
   top: 0;
   height: 100%;
   width: 16.25rem;
-  /* =260px */ }
+  /* =260px */
+  padding-top: 0.625rem;
+  /* =10px */
+  padding-bottom: 0.625rem;
+  /* =10px */ }
   .off-canvas--left {
     left: 0;
     -webkit-transform: translate3d(-260px, 0, 0);
@@ -6925,6 +6929,10 @@ category: Navigation
       right: -260px; }
     .no-csstransforms3d.off-canvas-show-left .off-canvas--right {
       right: 0; }
+  .off-canvas a {
+    color: white; }
+    .off-canvas a:hover {
+      color: #26b0a1; }
 
 .off-canvas-push {
   transition: -webkit-transform 0.2s;
@@ -6952,9 +6960,14 @@ category: Navigation
     .lt-ie10 .off-canvas-push:after {
       display: none; }
 
+.off-canvas-nav {
+  overflow-y: auto;
+  height: 100%;
+  max-height: 100%; }
+
 .off-canvas-nav__item {
-  border-top: 1px solid #ffffff;
-  border-bottom: 1px solid #e6e6e6; }
+  border-top: 1px solid #333333;
+  border-bottom: 1px solid #333333; }
   .off-canvas-nav__item:first-child {
     border-top: 0; }
   .off-canvas-nav__item:last-child {
@@ -6962,13 +6975,13 @@ category: Navigation
 
 .off-canvas-nav__link {
   display: block;
-  color: #000000;
-  padding: 1.25rem;
-  /* =20px */ }
+  color: white;
+  padding: 0.625rem 1.25rem;
+  /* =10px 20px */ }
   .off-canvas-nav__link.active,
   .off-canvas-nav__link.scrollspy-nav--active
 .off-canvas-nav__link:hover {
-    background: #fafafa; }
+    background: #3b3b3b; }
 
 /*doc
 ---
@@ -6977,20 +6990,7 @@ name: off_canvas
 category: Navigation
 ---
 
-The hamburger trigger on this page toggles an off canvas element.
-
-```html_example
-<div id="off-canvas-left" class="off-canvas off-canvas--left">
-    <button id="off-canvas-toggle-left" class="off-canvas-toggle-left"></button>
-    <nav class="off-canvas-nav">
-        <ul class="list-unstyled">
-            <li class="off-canvas-nav__item"><a class="off-canvas-nav__link off-canvas-nav__link--active" href="#">Lorem ipsum</a></li>
-            <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
-            <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="#">Lorem ipsum</a></li>
-        </ul>
-    </nav>
-</div>
-```
+This demo site has an off canvas for its menu.
 
 */
 /* Off canvas
@@ -7015,7 +7015,7 @@ The hamburger trigger on this page toggles an off canvas element.
     **/ }
   @media (max-width: 700px) {
     .off-canvas-nav-bar {
-      background: #f2f2f2;
+      background: #333333;
       position: fixed;
       z-index: 9999;
       top: 0;
@@ -7261,8 +7261,8 @@ The hamburger trigger on this page toggles an off canvas element.
     **/ }
   @media (max-width: 700px) {
     .off-canvas-nav-bar__item {
-      border-top: 1px solid #ffffff;
-      border-bottom: 1px solid #e6e6e6; }
+      border-top: 1px solid #333333;
+      border-bottom: 1px solid #333333; }
       .off-canvas-nav-bar__item:first-child {
         border-top: 0; }
       .off-canvas-nav-bar__item:last-child {
@@ -7280,13 +7280,13 @@ The hamburger trigger on this page toggles an off canvas element.
   @media (max-width: 700px) {
     .off-canvas-nav-bar__link {
       display: block;
-      color: #000000;
-      padding: 1.25rem;
-      /* =20px */ }
+      color: white;
+      padding: 0.625rem 1.25rem;
+      /* =10px 20px */ }
       .off-canvas-nav-bar__link.active,
       .off-canvas-nav-bar__link:hover,
       .off-canvas-nav-bar__link.scrollspy-nav--active {
-        background: #fafafa; } }
+        background: #3b3b3b; } }
 
 /*doc
 ---

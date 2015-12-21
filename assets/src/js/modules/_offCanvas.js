@@ -35,6 +35,13 @@ app.offCanvas = {
         app.settings.$container.on('click', function () {
             app.offCanvas.hideLeftAndRight();
         });
+
+        app.settings.$body
+            .on('keydown', function(event){
+                if (event.keyCode === 27) {
+                    app.offCanvas.hideLeftAndRight();
+                }
+            });
     },
 
     hideLeftAndRight: function () {
