@@ -13,7 +13,7 @@
         background-size: cover;
         background-position: center center;
         position: relative;
-        color: map-get($color, white);
+        color: white;
 
         @include rem(padding, 20px);
         @include rem(height, 220px);

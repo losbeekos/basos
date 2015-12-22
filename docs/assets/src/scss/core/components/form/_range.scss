@@ -11,7 +11,7 @@
 }
 
 @mixin range-thumb() {
-    background: map-get($color, white);
+    background: white;
     content: '';
     width: map-get($form, switch-width);
     height: map-get($form, switch-height);

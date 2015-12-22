@@ -42,7 +42,7 @@ Add more colors in the settings file under "buttons" if you need to.
 
         &:hover {
             background: $bg-color;
-            color: map-get($color, white);
+            color: white;
             border-color: $bg-color;
         }
 
@@ -98,7 +98,7 @@ Add more colors in the settings file under "buttons" if you need to.
     &:disabled,
     &:disabled:hover {
         cursor: not-allowed;
-        color: darken(map-get($color, white), 20%);
+        color: darken(white, 20%);
         opacity: 0.5;
 
         &:focus {
@@ -110,16 +110,16 @@ Add more colors in the settings file under "buttons" if you need to.
     &--gamma,
     &--delta,
     &--epsilon {
-        color: map-get($color, white);
+        color: white;
         text-shadow: map-get($btn, text-shadow);
 
         &:hover {
-            color: map-get($color, white);
+            color: white;
         }
 
         &:disabled,
         &:disabled:hover {
-            color: darken(map-get($color, white), 20%);
+            color: darken(white, 20%);
         }
     }
 
@@ -140,12 +140,12 @@ category: Buttons
         @include btn-style(transparent);
 
         &:hover {
-            background-color: darken(map-get($color, white), 5%);
+            background-color: darken(white, 5%);
         }
 
         &:active,
         &:focus {
-            background-color: darken(map-get($color, white), 10%);
+            background-color: darken(white, 10%);
         }
     }
 
@@ -365,7 +365,7 @@ category: Buttons
         left: 0;
         margin-top: 1px;
         visibility: hidden;
-        background-color: map-get($color, white);
+        background-color: white;
         border: map-get($dropdown, border);
         opacity: 0;
         z-index: 9999;

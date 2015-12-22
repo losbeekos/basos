@@ -12,7 +12,7 @@
 
     &__header {
         background: map-get($pricing-table, header-bg-color);
-        color: map-get($color, white);
+        color: white;
 
         @include rem(padding, map-get($pricing-table, header-padding));
     }

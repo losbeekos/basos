@@ -63,7 +63,7 @@ category: Forms
 
 .form__select {
     user-select: none;
-    background: map-get($color, white);
+    background: white;
     border: map-get($form, input-border);
     border-radius: map-get($base, border-radius);
 
@@ -139,7 +139,7 @@ category: Forms
             }
 
             &:after {
-                background: map-get($color, white);
+                background: white;
                 content: '';
                 top: -1px;
                 left: -1px;

@@ -72,7 +72,7 @@
                 background: transparent;
 
                 .nav-bar__link {
-                    color: map-get($color, black);
+                    color: black;
 
                     &.nav-bar__link--active,
                     &.scrollspy-nav--active,
@@ -176,7 +176,7 @@
 
         &:before {
             content: map-get($icon, nav-bar-trigger);
-            color: map-get($color, white);
+            color: white;
 
             @include rem(font-size, map-get($navBar, trigger-font-size));
 

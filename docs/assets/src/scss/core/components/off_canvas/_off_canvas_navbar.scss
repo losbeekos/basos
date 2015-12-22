@@ -112,7 +112,7 @@
                     background: transparent;
 
                     .nav-bar__link {
-                        color: map-get($color, black);
+                        color: black;
 
                         &.nav-bar__link--active,
                         &.scrollspy-nav--active,

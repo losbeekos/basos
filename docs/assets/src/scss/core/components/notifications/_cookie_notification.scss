@@ -7,13 +7,13 @@
     left: 0;
     width: 100%;
     min-width: map-get($container, min-width);
-    background: map-get($color, black);
+    background: black;
     background: map-get($notifications, cookie-bg);
     text-align: center;
     z-index: 999;
     margin-bottom: 0;
     border: none;
-    color: map-get($color, white);
+    color: white;
     transition: all map-get($base, transition-speed)*2;
     border-radius: 0;
 
@@ -44,7 +44,7 @@
     }
 
     .notification__more-info {
-        color: map-get($color, white);
+        color: white;
         text-decoration: underline;
     }
 
@@ -55,6 +55,6 @@
     }
 
     .notification__close {
-        color: map-get($color, white);
+        color: white;
     }
 }

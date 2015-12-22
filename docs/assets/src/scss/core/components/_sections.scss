@@ -3,7 +3,7 @@
 */
 
 .section {
-    color: map-get($color, white);
+    color: white;
 
     @include rem(padding-top, map-get($section, padding-vertical));
     @include rem(padding-bottom, map-get($section, padding-vertical));

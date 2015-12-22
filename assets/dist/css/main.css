@@ -4139,7 +4139,7 @@ There are two containers available, 'container' and 'container-beta'. These cont
 ==========
 */
 .section {
-  color: #ffffff;
+  color: white;
   padding-top: 1.875rem;
   /* =30px */
   padding-bottom: 1.875rem;
@@ -4173,7 +4173,7 @@ There are two containers available, 'container' and 'container-beta'. These cont
       padding-bottom: 3.75rem;
       /* =60px */ } }
   .section--alpha {
-    background: #ffffff; }
+    background: white; }
   .section--beta {
     background: #2690b0; }
   .section--gamma {
@@ -4420,12 +4420,6 @@ category: Typography
 /*==============================
 =            Colors            =
 ==============================*/
-.color-white {
-  color: #ffffff; }
-
-.color-black {
-  color: #000000; }
-
 .color-body {
   color: #ffffff; }
 
@@ -4452,12 +4446,6 @@ category: Typography
 
 .color-epsilon, .modal__close {
   color: #333333; }
-
-.bg-color-white {
-  background: #ffffff; }
-
-.bg-color-black {
-  background: #000000; }
 
 .bg-color-body {
   background: #ffffff; }
@@ -5038,7 +5026,7 @@ hll {
     top: 0;
     margin-left: -315px; }
   .modal__content {
-    background: #ffffff;
+    background: white;
     border-radius: 0;
     position: relative;
     margin: 0 auto;
@@ -5054,7 +5042,7 @@ hll {
       -webkit-transform: scale(1);
               transform: scale(1); }
   .modal__overlay {
-    background: #000000;
+    background: black;
     position: fixed;
     visibility: hidden;
     top: 0;
@@ -5168,15 +5156,15 @@ app.modals.closeModal();
     background-size: cover;
     background-position: center center;
     position: relative;
-    color: #ffffff;
+    color: white;
     padding: 1.25rem;
     /* =20px */
     height: 13.75rem;
     /* =220px */ }
     .card__header--light {
-      background-color: #ffffff; }
+      background-color: white; }
     .card__header--dark {
-      background-color: #000000; }
+      background-color: black; }
     .card__header--alpha {
       background-color: #f7f7f7; }
     .card__header--beta {
@@ -5275,8 +5263,8 @@ You could always remove some elements you won't be using such as action.
     color: #555555;
     background: #dedede; }
   .tab.tab--active {
-    background: #ffffff;
-    border-bottom-color: #ffffff;
+    background: white;
+    border-bottom-color: white;
     color: #555555; }
 
 .tab-content {
@@ -5424,14 +5412,14 @@ category: Content
       .nav-bar--transparent:not(.nav-bar--fixed) {
         background: transparent; }
         .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
-          color: #000000; }
+          color: black; }
           .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active,
           .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active,
           .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
             background: transparent;
             color: #2690b0; }
         .nav-bar--transparent .nav-bar--transparent:not(.nav-bar--fixed) {
-          color: #ffffff; } }
+          color: white; } }
   .no-csspositionsticky .nav-bar--fixed {
     position: fixed;
     top: 0;
@@ -5525,7 +5513,7 @@ category: Content
       background: #3c3c3c; }
     .nav-bar__trigger:before {
       content: "";
-      color: #ffffff;
+      color: white;
       font-size: 1.875rem;
       /* =30px */ }
       .nav-bar--mobile-show .nav-bar__trigger:before {
@@ -5575,7 +5563,7 @@ category: Content
           margin-right: -4px; } }
   .nav-bar__link {
     display: block;
-    color: #ffffff;
+    color: white;
     text-align: center;
     padding: 1.25rem 1.875rem;
     /* =20px 30px */
@@ -5594,11 +5582,11 @@ category: Content
       transition: none; }
     .nav-bar__link:hover {
       background: #3c3c3c;
-      color: #ffffff; }
+      color: white; }
     .nav-bar__link.nav-bar__link--active,
     .nav-bar__link.scrollspy-nav--active {
       background: #2690b0;
-      color: #ffffff; }
+      color: white; }
 
 /*doc
 ---
@@ -6057,7 +6045,7 @@ category: Content
   .tooltip .tooltip__content {
     text-align: center;
     background: #2690b0;
-    color: #ffffff;
+    color: white;
     min-width: 150px;
     padding: 10px;
     border-radius: 0;
@@ -6184,7 +6172,7 @@ Tooltips are used as fancy title attributes to display some info about a certain
       color: #484848; }
     .accordion-content-show .accordion__trigger {
       background-color: #2690b0;
-      color: #ffffff; }
+      color: white; }
     .accordion__trigger:after {
       content: "";
       position: absolute;
@@ -6198,7 +6186,7 @@ Tooltips are used as fancy title attributes to display some info about a certain
         margin-top: -10px; }
       .accordion-content-show .accordion__trigger:after {
         content: "";
-        color: #ffffff; }
+        color: white; }
   .accordion__content {
     overflow: hidden;
     padding: 0 20px;
@@ -6321,7 +6309,7 @@ category: Navigation
   overflow: hidden; }
   .pricing-table__header {
     background: #333333;
-    color: #ffffff;
+    color: white;
     padding: 0.9375rem 1.25rem;
     /* =15px 20px */ }
   .pricing-table__content {
@@ -6855,7 +6843,7 @@ category: Navigation
   position: absolute;
   top: 0;
   z-index: 10000;
-  color: #ffffff;
+  color: white;
   text-align: center;
   border: none;
   font-size: 1.875rem;
@@ -6867,7 +6855,7 @@ category: Navigation
   .off-canvas-toggle-left:hover,
   .off-canvas-toggle-right:hover {
     background: #404040;
-    color: #ffffff;
+    color: white;
     text-decoration: none; }
   .off-canvas-toggle-left:active,
   .off-canvas-toggle-left:focus,
@@ -7116,14 +7104,14 @@ This demo site has an off canvas for its menu.
       .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
         background: transparent; }
         .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
-          color: #000000; }
+          color: black; }
           .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active,
           .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active,
           .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
             background: transparent;
             color: #2690b0; }
         .nav-bar--transparent .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
-          color: #ffffff; } }
+          color: white; } }
   @media (min-width: 700px) {
       .no-csspositionsticky .off-canvas-nav-bar--fixed {
         position: fixed;
@@ -7207,7 +7195,7 @@ This demo site has an off canvas for its menu.
   @media (min-width: 700px) {
       .off-canvas-nav-bar__link {
         display: block;
-        color: #ffffff;
+        color: white;
         text-align: center;
         padding: 1.25rem 1.875rem;
         /* =20px 30px */
@@ -7225,11 +7213,11 @@ This demo site has an off canvas for its menu.
   @media (min-width: 700px) {
         .off-canvas-nav-bar__link:hover {
           background: #3c3c3c;
-          color: #ffffff; }
+          color: white; }
         .off-canvas-nav-bar__link.nav-bar__link--active,
         .off-canvas-nav-bar__link.scrollspy-nav--active {
           background: #2690b0;
-          color: #ffffff; } }
+          color: white; } }
 
 .off-canvas-nav-bar__item {
   /**
@@ -7737,7 +7725,7 @@ Add more colors in the settings file under "buttons" if you need to.
     border-color: #f7f7f7; }
     .btn.btn--ghost:hover {
       background: #f7f7f7;
-      color: #ffffff;
+      color: white;
       border-color: #f7f7f7; }
     .btn.btn--ghost.btn--alpha:hover,
     .btn.btn--ghost.btn--light:hover {
@@ -7763,13 +7751,13 @@ Add more colors in the settings file under "buttons" if you need to.
   .btn--gamma,
   .btn--delta,
   .btn--epsilon {
-    color: #ffffff;
+    color: white;
     text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2); }
     .btn--beta:hover,
     .btn--gamma:hover,
     .btn--delta:hover,
     .btn--epsilon:hover {
-      color: #ffffff; }
+      color: white; }
     .btn--beta:disabled,
     .btn--beta:disabled:hover,
     .btn--gamma:disabled,
@@ -7796,7 +7784,7 @@ Add more colors in the settings file under "buttons" if you need to.
       border-color: transparent; }
       .btn--mask.btn--ghost:hover {
         background: transparent;
-        color: #ffffff;
+        color: white;
         border-color: transparent; }
       .btn--mask.btn--ghost.btn--alpha:hover,
       .btn--mask.btn--ghost.btn--light:hover {
@@ -7816,7 +7804,7 @@ Add more colors in the settings file under "buttons" if you need to.
   .btn--divider {
     cursor: default; }
   .btn--light {
-    background-color: #ffffff;
+    background-color: white;
     border-color: #f2f2f2; }
     .btn--light:hover {
       background-color: #fafafa; }
@@ -7826,14 +7814,14 @@ Add more colors in the settings file under "buttons" if you need to.
     .btn--light--divider:hover,
     .btn--light:disabled,
     .btn--light:disabled:hover {
-      background-color: #ffffff; }
+      background-color: white; }
     .btn--light.btn--ghost {
-      color: #ffffff;
-      border-color: #ffffff; }
+      color: white;
+      border-color: white; }
       .btn--light.btn--ghost:hover {
-        background: #ffffff;
-        color: #ffffff;
-        border-color: #ffffff; }
+        background: white;
+        color: white;
+        border-color: white; }
       .btn--light.btn--ghost.btn--alpha:hover,
       .btn--light.btn--ghost.btn--light:hover {
         color: #555555; }
@@ -7842,7 +7830,7 @@ Add more colors in the settings file under "buttons" if you need to.
     .btn-group--block .btn--light {
       border-top: 1px solid white; }
   .btn--dark {
-    background-color: #000000;
+    background-color: black;
     border-color: black; }
     .btn--dark:hover {
       background-color: black; }
@@ -7852,14 +7840,14 @@ Add more colors in the settings file under "buttons" if you need to.
     .btn--dark--divider:hover,
     .btn--dark:disabled,
     .btn--dark:disabled:hover {
-      background-color: #000000; }
+      background-color: black; }
     .btn--dark.btn--ghost {
-      color: #000000;
-      border-color: #000000; }
+      color: black;
+      border-color: black; }
       .btn--dark.btn--ghost:hover {
-        background: #000000;
-        color: #ffffff;
-        border-color: #000000; }
+        background: black;
+        color: white;
+        border-color: black; }
       .btn--dark.btn--ghost.btn--alpha:hover,
       .btn--dark.btn--ghost.btn--light:hover {
         color: #555555; }
@@ -7884,7 +7872,7 @@ Add more colors in the settings file under "buttons" if you need to.
       border-color: #f7f7f7; }
       .btn--alpha.btn--ghost:hover {
         background: #f7f7f7;
-        color: #ffffff;
+        color: white;
         border-color: #f7f7f7; }
       .btn--alpha.btn--ghost.btn--alpha:hover,
       .btn--alpha.btn--ghost.btn--light:hover {
@@ -7910,7 +7898,7 @@ Add more colors in the settings file under "buttons" if you need to.
       border-color: #2690b0; }
       .btn--beta.btn--ghost:hover {
         background: #2690b0;
-        color: #ffffff;
+        color: white;
         border-color: #2690b0; }
       .btn--beta.btn--ghost.btn--alpha:hover,
       .btn--beta.btn--ghost.btn--light:hover {
@@ -7936,7 +7924,7 @@ Add more colors in the settings file under "buttons" if you need to.
       border-color: #26a8b0; }
       .btn--gamma.btn--ghost:hover {
         background: #26a8b0;
-        color: #ffffff;
+        color: white;
         border-color: #26a8b0; }
       .btn--gamma.btn--ghost.btn--alpha:hover,
       .btn--gamma.btn--ghost.btn--light:hover {
@@ -7962,7 +7950,7 @@ Add more colors in the settings file under "buttons" if you need to.
       border-color: #26b0a1; }
       .btn--delta.btn--ghost:hover {
         background: #26b0a1;
-        color: #ffffff;
+        color: white;
         border-color: #26b0a1; }
       .btn--delta.btn--ghost.btn--alpha:hover,
       .btn--delta.btn--ghost.btn--light:hover {
@@ -7988,7 +7976,7 @@ Add more colors in the settings file under "buttons" if you need to.
       border-color: #333333; }
       .btn--epsilon.btn--ghost:hover {
         background: #333333;
-        color: #ffffff;
+        color: white;
         border-color: #333333; }
       .btn--epsilon.btn--ghost.btn--alpha:hover,
       .btn--epsilon.btn--ghost.btn--light:hover {
@@ -8117,7 +8105,7 @@ category: Buttons
     left: 0;
     margin-top: 1px;
     visibility: hidden;
-    background-color: #ffffff;
+    background-color: white;
     border: 1px solid #eaeaea;
     opacity: 0;
     z-index: 9999;
@@ -8455,7 +8443,7 @@ category: Forms
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background: #ffffff;
+  background: white;
   border: 1px solid #e0e0e0;
   border-radius: 0; }
   .form__select:after {
@@ -8512,7 +8500,7 @@ category: Forms
       height: 25px;
       border-radius: 0; }
     .form__switch input[type=checkbox] + label:after {
-      background: #ffffff;
+      background: white;
       content: '';
       top: -1px;
       left: -1px;
@@ -8796,7 +8784,7 @@ input[type=range] {
     transition: all 0.4s;
     color: transparent; }
   input[type=range]::-webkit-slider-thumb {
-    background: #ffffff;
+    background: white;
     content: '';
     width: 30px;
     height: 25px;
@@ -8808,7 +8796,7 @@ input[type=range] {
     input[type=range]::-webkit-slider-thumb:focus {
       background: red; }
   input[type=range]::-moz-range-thumb {
-    background: #ffffff;
+    background: white;
     content: '';
     width: 30px;
     height: 25px;
@@ -8818,7 +8806,7 @@ input[type=range] {
     input[type=range]::-moz-range-thumb:focus {
       background: red; }
   input[type=range]::-ms-thumb {
-    background: #ffffff;
+    background: white;
     content: '';
     width: 30px;
     height: 25px;
@@ -8864,7 +8852,7 @@ input[type=range] {
   transition: none; }
 
 .rangeslider__handle {
-  background: #ffffff;
+  background: white;
   content: '';
   width: 30px;
   height: 25px;
@@ -8987,7 +8975,7 @@ category: Forms
   max-width: 100%;
   position: relative;
   background: #444444;
-  color: #ffffff;
+  color: white;
   border-radius: 0 0 0 0;
   /* =0 0 0 0 */
   padding: 0.625rem;
@@ -9426,7 +9414,7 @@ app.notifications.add(target, message, size, type);
 
 .notification__close {
   position: absolute;
-  color: #000000;
+  color: black;
   padding: 0;
   background: none;
   border: none;
@@ -9451,13 +9439,13 @@ app.notifications.add(target, message, size, type);
   left: 0;
   width: 100%;
   min-width: 320px;
-  background: #000000;
+  background: black;
   background: rgba(0, 0, 0, 0.85);
   text-align: center;
   z-index: 999;
   margin-bottom: 0;
   border: none;
-  color: #ffffff;
+  color: white;
   transition: all 0.4s;
   border-radius: 0;
   padding: 1.25rem 0;
@@ -9479,14 +9467,14 @@ app.notifications.add(target, message, size, type);
     -webkit-transform: translate3d(0, 100%, 0);
             transform: translate3d(0, 100%, 0); }
   .notification--cookie .notification__more-info {
-    color: #ffffff;
+    color: white;
     text-decoration: underline; }
   .notification--cookie .notification__text {
     margin-left: 0;
     margin-bottom: 0.625rem;
     /* =10px */ }
   .notification--cookie .notification__close {
-    color: #ffffff; }
+    color: white; }
 
 /*
 Imports the app specific SCSS modules, there are a few already made for you.

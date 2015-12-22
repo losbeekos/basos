@@ -36,8 +36,6 @@ $mq: (
 */
 
 $color: (
-    white      : #ffffff,
-    black      : #000000,
     body       : #ffffff,
     text       : #555555,
     placeholder: #94adc4,
@@ -72,7 +70,7 @@ $section: (
 );
 
 $section-bg: (
-    alpha   : map-get($color, white),
+    alpha   : white,
     beta    : map-get($color, beta),
     gamma   : map-get($color, gamma),
     delta   : map-get($color, delta),
@@ -149,8 +147,8 @@ $btn: (
 );
 
 $btn-bg: (
-    light   : map-get($color, white),
-    dark    : map-get($color, black),
+    light   : white,
+    dark    : black,
     alpha   : map-get($color, alpha),
     beta    : map-get($color, beta),
     gamma   : map-get($color, gamma),
@@ -296,7 +294,7 @@ $notifications: (
     icon-color-info     : #2690b0,
     icon-color-success  : #26b036,
     icon-color-error    : #b02626,
-    close-color         : map-get($color, black),
+    close-color         : black,
     close-opacity       : 0.2,
     close-opacity-hover : 0.5,
     close-top           : 10px,
@@ -321,7 +319,7 @@ $navBar: (
     nav-margin-left   : 0,
     link-text-align   : center,
     link-padding      : 20px 30px,
-    link-color        : map-get($color, white)
+    link-color        : white
 );
 
 
@@ -337,7 +335,7 @@ $off-canvas: (
     link-padding             : 10px 20px,
     link-color               : white,
     toggle-bg-color          : #333333,
-    toggle-color             : map-get($color, white),
+    toggle-color             : white,
     toggle-font-size         : 30px,
     toggle-width             : 50px,
     toggle-height            : 50px,
@@ -356,7 +354,7 @@ $tabs: (
     color                    : lighten(map-get($color, text), 20%),
     padding                  : 15px 20px,
     margin-left              : 0,
-    bg-color-active          : map-get($color, white),
+    bg-color-active          : white,
     content-border-top-color : darken(map-get($btn-bg, alpha), 5%),
     content-padding          : 20px 0,
     item-transition-speed    : 0.5s
@@ -390,7 +388,7 @@ $tooltip: (
     padding          : map-get($base, padding),
     border-radius    : map-get($base, border-radius),
     font-size        : 12px,
-    color            : map-get($color, white)
+    color            : white
 );
 
 
@@ -402,10 +400,10 @@ $modal: (
     min-width                   : 320px,
     max-width                   : 630px,
     transition-duration         : 0.5s,
-    content-bg-color            : map-get($color, white),
+    content-bg-color            : white,
     content-padding             : 40px,
     content-border-radius       : map-get($base, border-radius),
-    overlay-bg-color            : map-get($color, black),
+    overlay-bg-color            : black,
     overlay-opacity             : 0.4,
 );
 
@@ -426,12 +424,12 @@ $accordion: (
     trigger-bg-color-show      : map-get($color, beta),
     trigger-hover-darken       : 5%,
     trigger-color              : map-get($color, text),
-    trigger-color-show         : map-get($color, white),
+    trigger-color-show         : white,
     trigger-gradient-bg        : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
     trigger-icon-content       : '\e80a',
     trigger-icon-content-after : '\e80d',
     trigger-icon-color         : map-get($color, text),
-    trigger-icon-color-show    : map-get($color, white),
+    trigger-icon-color-show    : white,
     content-padding            : 0 20px,
     content-margin-top-first   : 20px
 );
@@ -458,7 +456,7 @@ $breadcrumbs: (
 
 $pricing-table: (
     border-color          : darken(map-get($btn-bg, alpha), 5%),
-    header-bg-color       : lighten(map-get($color, black), 20%),
+    header-bg-color       : lighten(black, 20%),
     header-padding        : 15px 20px,
     content-padding       : 10px 20px,
     price-font-size       : 30px,

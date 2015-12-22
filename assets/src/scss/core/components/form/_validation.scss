@@ -87,7 +87,7 @@
     max-width: 100%;
     position: relative;
     background: map-get($form, validation-color);
-    color: map-get($color, white);
+    color: white;
 
     @include rem(border-radius, 0 0 map-get($base, border-radius) map-get($base, border-radius));
     @include rem(padding, map-get($form, input-padding));

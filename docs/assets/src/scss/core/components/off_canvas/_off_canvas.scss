@@ -20,7 +20,7 @@
 
     &:hover {
         background: lighten(map-get($off-canvas, toggle-bg-color), map-get($off-canvas, toggle-hover-darken));
-        color: map-get($color, white);
+        color: white;
         text-decoration: none;
     }
 
@@ -119,7 +119,7 @@
 
     // &:after {
     //     content: '';
-    //     background: map-get($color, black);
+    //     background: black;
     //     width: 100%;
     //     height: 100%;
     //     position: fixed;
