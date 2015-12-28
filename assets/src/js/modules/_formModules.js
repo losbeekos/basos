@@ -126,10 +126,14 @@ app.formModules = {
     },
 
     floatingLabel: function () {
-        app.settings.$body.on('change', '.form__input--floating-label input', function () {
-            var $input = $(this);
+        app.formModules.floatingLabelSetClass($('.form__input--floating-label input'));
 
-            $input.val().length > 0 ? $input.addClass('is-filled') : $input.removeClass('is-filled');
+        app.settings.$body.on('change', '.form__input--floating-label input', function () {
+            app.formModules.floatingLabelSetClass($(this));
         });
+    },
+
+    floatingLabelSetClass: function ($input) {
+        $input.val().length > 0 ? $input.addClass('is-filled') : $input.removeClass('is-filled');
     }
 };

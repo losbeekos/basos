@@ -13,7 +13,11 @@ app.responsiveImages = {
     },
 
     setBackgroundImageStyle: function (element) {
-        element.css({'background-image': 'url(' + element.find('img')[0].currentSrc + ')'});
+        var domNode = element.find('img')[0],
+            source = null;
+
+        domNode.currentSrc === undefined ? source = domNode.src : source = domNode.currentSrc;
+        element.css({'background-image': 'url(' + source + ')'});
     }
 };
 
