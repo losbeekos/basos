@@ -3887,8 +3887,6 @@ name: 9_javascript
 category: Javascript
 ---
 
-Javascript
-
 */
 
 var app = app || {},
