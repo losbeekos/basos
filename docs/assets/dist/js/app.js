@@ -4181,6 +4181,44 @@ app.btnDropdown = {
     }
 
 };
+app.btnRipple = {
+    settings: {
+        ripple: true
+    },
+
+    init: function() {
+        var $el, $btn, $ripple, x, y;
+
+        app.btnRipple.settings.ripple === true ? $el = $('.btn') : $el = $('.btn--ripple');
+
+        $el
+            .each(function () {
+                $(this).append('<span class="btn__ripple"></span>');
+            })
+            .on('click', function (event) {
+                $btn = $(this);
+                $ripple = $btn.find('.btn__ripple');
+                
+                if($ripple.length === 0) {
+                    $btn.append('<span class="btn__ripple"></span>');
+                }
+
+                $btn.removeClass('btn--ripple-animate');
+                
+                if(!$ripple.height() && !$ripple.width()) {
+                    d = Math.max($btn.outerWidth(), $btn.outerHeight());
+                    $ripple.css({height: d, width: d});
+                }
+
+                x = event.pageX - $btn.offset().left - $ripple.width()/2;
+                y = event.pageY - $btn.offset().top - $ripple.height()/2;
+                
+                $ripple.css({top: y+'px', left: x+'px'});
+                $btn.addClass('btn--ripple-animate');
+            });
+    }
+
+};
 app.cycle = {
     settings: {
         $el: $('.cycle__wrap', '.cycle'),
@@ -4533,20 +4571,27 @@ app.formModules = {
     },
 
     floatingLabel: function () {
-        app.settings.$body.on('change', '.form__input--floating-label input', function () {
-            var $input = $(this);
+        app.formModules.floatingLabelSetClass($('.form__input--floating-label input'));
 
-            $input.val().length > 0 ? $input.addClass('is-filled') : $input.removeClass('is-filled');
+        app.settings.$body.on('change', '.form__input--floating-label input', function () {
+            app.formModules.floatingLabelSetClass($(this));
         });
+    },
+
+    floatingLabelSetClass: function ($input) {
+        if ($input.length > 0) {
+            $input.val().length > 0 ? $input.addClass('is-filled') : $input.removeClass('is-filled');
+        }
     }
 };
 app.groupCheckable = {
     init: function () {
-        $('[data-group-checkable]').on('change', function () {
-            var $this = $(this),
-                $group = $('[data-group-checkable-target=' + $this.attr('data-group-checkable') + ']');
+        $('[data-group-checkable]').each(function () {
+            app.groupCheckable.toggleGroup($(this));
+        });
 
-            $this.is(':checked') ? $group.prop('checked', true) : $group.prop('checked', false);
+        $('[data-group-checkable]').on('change', function () {
+            app.groupCheckable.toggleGroup($(this));
         });
 
         $('[data-group-checkable-target]').on('change', function () {
@@ -4558,6 +4603,12 @@ app.groupCheckable = {
 
             $group.length === $groupChecked.length ? $trigger.prop('checked', true) : $trigger.prop('checked', false);
         });
+    },
+
+    toggleGroup: function ($this) {
+        var $group = $('[data-group-checkable-target=' + $this.attr('data-group-checkable') + ']');
+
+        $this.is(':checked') ? $group.prop('checked', true) : $group.prop('checked', false);
     }
 };
 
@@ -4568,7 +4619,14 @@ name: group_checkable
 category: Javascript
 ---
 
-Todo
+```html_example
+<input name="checkbox" type="checkbox" id="checkbox" data-group-checkable="checkable-example" /><label for="checkbox">Check all</label>
+<ul class="form__input-list list-unstyled">
+    <li><input name="checkbox" type="checkbox" id="checkbox1" data-group-checkable-target="checkable-example" /><label for="checkbox1">Checkbox</label></li>
+    <li><input name="checkbox" type="checkbox" id="checkbox2" data-group-checkable-target="checkable-example" /><label for="checkbox2">Checkbox</label></li>
+    <li><input name="checkbox" type="checkbox" id="checkbox3" data-group-checkable-target="checkable-example" /><label for="checkbox3">Checkbox</label></li>
+</ul>
+```
 
 */
 app.jump = {
@@ -5091,7 +5149,11 @@ app.responsiveImages = {
     },
 
     setBackgroundImageStyle: function (element) {
-        element.css({'background-image': 'url(' + element.find('img')[0].currentSrc + ')'});
+        var domNode = element.find('img')[0],
+            source = null;
+
+        domNode.currentSrc === undefined ? source = domNode.src : source = domNode.currentSrc;
+        element.css({'background-image': 'url(' + source + ')'});
     }
 };
 
@@ -5427,6 +5489,7 @@ app.settings.$document.ready(function () {
     app.groupCheckable.init();
     app.leave.init();
     app.btnDropdown.init();
+    app.btnRipple.init();
 
     //app.cycle.init();
     //app.fancybox.init();

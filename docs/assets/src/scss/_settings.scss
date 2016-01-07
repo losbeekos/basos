@@ -36,8 +36,6 @@ $mq: (
 */
 
 $color: (
-    white      : #ffffff,
-    black      : #000000,
     body       : #ffffff,
     text       : #555555,
     placeholder: #94adc4,
@@ -50,10 +48,12 @@ $color: (
 );
 
 $color-networks: (
-    twitter    : #00aced,
-    facebook   : #3b5999,
+    twitter    : #55acee,
+    facebook   : #3b5998,
+    linkedin   : #0077b5,
     googleplus : #d73D32,
     youtube    : #cd201f,
+    vimeo      : #1ab7ea,
     pinterest  : #cb2027,
     github     : #333333,
     dribbble   : #ea4c88,
@@ -310,7 +310,7 @@ $notifications: (
 ==========
 */
 
-$navBar: (
+$nav-bar: (
     mq                : gamma-and-up,
     bg-color          : #222222,
     trigger-bg-color  : #222222,

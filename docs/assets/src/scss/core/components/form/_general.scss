@@ -196,7 +196,7 @@ category: Forms
 
 ```html_example
 <div class="form__actions">
-    <input class="btn btn--beta btn--medium" type="submit" value="send" />
+    <button class="btn btn--beta btn--medium" type="submit">send</button>
 </div>
 ```
 
@@ -224,7 +224,7 @@ category: Forms
 ```html_example
 <div class="form__actions">
     <p class="form__required-field"><i>* = Required field</i></p>
-    <input class="btn btn--beta btn--medium" type="submit" value="send" />
+    <button class="btn btn--beta btn--medium" type="submit">send</button>
 </div>
 ```
 

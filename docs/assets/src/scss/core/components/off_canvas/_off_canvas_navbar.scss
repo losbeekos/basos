@@ -50,7 +50,7 @@
     }
 
     @include mq(gamma-and-up) {
-        background: map-get($navBar, bg-color);
+        background: map-get($nav-bar, bg-color);
         width: 100%;
         max-height: 100%;
         overflow-y: auto;
@@ -80,7 +80,7 @@
             margin-bottom: -6px;
 
             @include rem(padding-top, 12px);
-            @include rem(min-height, map-get($navBar, trigger-height));
+            @include rem(min-height, map-get($nav-bar, trigger-height));
 
             @include mq(gamma-and-up) {
                 float: left;
@@ -123,7 +123,7 @@
                     }
 
                     .nav-bar--transparent & {
-                        color: map-get($navBar, link-color);
+                        color: map-get($nav-bar, link-color);
                     }
                 }
             }
@@ -152,19 +152,19 @@
 
         &__nav {
             @include mq(gamma-and-up) {
-                @if map-get($navBar, nav-position) == left {
+                @if map-get($nav-bar, nav-position) == left {
                     float: left;
                 } @else {
                     float: right;
                 }
 
-                @include rem(margin-left, map-get($navBar, nav-margin-left));
+                @include rem(margin-left, map-get($nav-bar, nav-margin-left));
             }
         }
 
         &__list {
             clear: both;
-            border-top: 1px solid lighten(map-get($navBar, bg-color), 10%);
+            border-top: 1px solid lighten(map-get($nav-bar, bg-color), 10%);
             max-height: 0;
             overflow: hidden;
             transition: all map-get($base, transition-speed);
@@ -193,24 +193,24 @@
 
         &__link {
             display: block;
-            color: map-get($navBar, link-color);
-            text-align: map-get($navBar, link-text-align);
+            color: map-get($nav-bar, link-color);
+            text-align: map-get($nav-bar, link-text-align);
 
-            @include rem(padding, map-get($navBar, link-padding));
+            @include rem(padding, map-get($nav-bar, link-padding));
 
             @include mq(gamma-and-up) {
                 display: inline-block;
             }
 
             &:hover {
-                background: lighten(map-get($navBar, bg-color), 10%);
-                color: map-get($navBar, link-color);
+                background: lighten(map-get($nav-bar, bg-color), 10%);
+                color: map-get($nav-bar, link-color);
             }
 
             &.nav-bar__link--active,
             &.scrollspy-nav--active {
                 background: map-get($color, beta);
-                color: map-get($navBar, link-color);
+                color: map-get($nav-bar, link-color);
             }
 
         }

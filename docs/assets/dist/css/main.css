@@ -6,13 +6,31 @@ name: 1_getting_started
 category: Getting started
 ---
 
-## Normalize
+Make sure you have GruntJS and Bower.
 
-## H5BP
+#### Bower dependencies
+Install the Bower dependencies, see bower.json.
 
-## Animate
+    $ bower install
 
-## 
+#### Node dependencies
+Install the Node dependencies, see package.json.
+
+    $ npm install
+
+#### Start server
+Start the web server which is used by BrowserSync.
+
+    $ grunt connect
+
+#### Run browserSync
+Run BrowserSync to auto reload when dist files change.
+
+    $ grunt browserSync
+
+#### Watch for changes
+
+    $ grunt watch
 
 */
 /*
@@ -97,23 +115,19 @@ category: Getting started
 /* Media
 ==========
 */
-/**
- * Imports all the core components.
- */
 /*doc
  ---
  title: Vendor
- name: vendor
- category: Getting started
+ name: 1_vendor
+ category: Vendor
  ---
 
 ## Normalize
-
-something about normalize
+A modern, HTML5-ready alternative to CSS resets [https://necolas.github.io/normalize.css](https://necolas.github.io/normalize.css).
 
 ## H5BP
+Some HTML tag CSS enhancements are used from H5BP [https://html5boilerplate.com](https://html5boilerplate.com).
 
-Something about h5bp
  */
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 /**
@@ -938,7 +952,7 @@ form:before,
     * }
     *
     **/
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 601px) and (max-width: 700px) {
   .hide-beta,
   .hide-alpha-and-beta {
     border: 0;
@@ -958,7 +972,7 @@ form:before,
     * }
     *
     **/
-@media (min-width: 600px) {
+@media (min-width: 601px) {
   .hide-beta-and-up {
     border: 0;
     clip: rect(0 0 0 0);
@@ -977,7 +991,7 @@ form:before,
     * }
     *
     **/
-@media (min-width: 700px) {
+@media (min-width: 701px) {
   .hide-gamma-and-up {
     border: 0;
     clip: rect(0 0 0 0);
@@ -1068,7 +1082,7 @@ category: Typography
 
 */
 .list-inline li, .tabs li, .nav-bar__list li, .off-canvas-nar-bar__list li, .btn-group--inline li {
-  display: inline;
+  display: inline-block;
   margin-right: 0.625rem;
   /* =10px */ }
 
@@ -1565,7 +1579,7 @@ category: Typography
     * }
     *
     **/ }
-    @media (min-width: 600px) {
+    @media (min-width: 601px) {
       .text-align-right-beta-and-up {
         text-align: right; } }
   .text-align-right-gamma-and-up {
@@ -1577,7 +1591,7 @@ category: Typography
     * }
     *
     **/ }
-    @media (min-width: 700px) {
+    @media (min-width: 701px) {
       .text-align-right-gamma-and-up {
         text-align: right; } }
 
@@ -1592,7 +1606,7 @@ category: Typography
     * }
     *
     **/ }
-    @media (min-width: 600px) {
+    @media (min-width: 601px) {
       .text-align-left-beta-and-up {
         text-align: left; } }
   .text-align-left-gamma-and-up {
@@ -1604,7 +1618,7 @@ category: Typography
     * }
     *
     **/ }
-    @media (min-width: 700px) {
+    @media (min-width: 701px) {
       .text-align-left-gamma-and-up {
         text-align: left; } }
 
@@ -1619,7 +1633,7 @@ category: Typography
     * }
     *
     **/ }
-    @media (min-width: 600px) {
+    @media (min-width: 601px) {
       .text-align-center-beta-and-up {
         text-align: center; } }
   .text-align-center-gamma-and-up {
@@ -1631,7 +1645,7 @@ category: Typography
     * }
     *
     **/ }
-    @media (min-width: 700px) {
+    @media (min-width: 701px) {
       .text-align-center-gamma-and-up {
         text-align: center; } }
 
@@ -1698,6 +1712,11 @@ category: Typography
 /* Display
 ==========
 */
+.display-flex {
+  display: -webkit-flex !important;
+  display: -ms-flexbox !important;
+  display: flex !important; }
+
 .display-inline {
   display: inline !important; }
 
@@ -1746,7 +1765,7 @@ category: Typography
     * }
     *
     **/ }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .css-columns-2,
     .css-columns-3,
     .css-columns-4 {
@@ -1764,7 +1783,7 @@ category: Typography
     * }
     *
     **/ }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .css-columns-2 {
       -webkit-column-count: 2;
          -moz-column-count: 2;
@@ -1779,7 +1798,7 @@ category: Typography
     * }
     *
     **/ }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .css-columns-3 {
       -webkit-column-count: 3;
          -moz-column-count: 3;
@@ -1794,7 +1813,7 @@ category: Typography
     * }
     *
     **/ }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .css-columns-4 {
       -webkit-column-count: 4;
          -moz-column-count: 4;
@@ -2466,6 +2485,26 @@ Add this class to an element to fire an animation.
   -webkit-animation-duration: 0.5s;
           animation-duration: 0.5s; }
 
+@-webkit-keyframes fadeOutUp {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); } }
+
+@keyframes fadeOutUp {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+            transform: translate3d(0, -100%, 0); } }
+
+.animation-fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+          animation-name: fadeOutUp; }
+
 /* ZoomIn animation
 ==========
 */
@@ -2751,7 +2790,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/ }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     [class|=column] {
       float: left;
       margin-left: 2.8571428571%; } }
@@ -2789,7 +2828,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/
-@media (min-width: 600px) {
+@media (min-width: 601px) {
   .column-beta-and-up--first {
     margin-left: 0 !important; }
   .column-1,
@@ -3069,7 +3108,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/
-@media (min-width: 600px) and (max-width: 700px) {
+@media (min-width: 601px) and (max-width: 700px) {
   .column-beta--first {
     margin-left: 0 !important; }
   .column-beta-1 {
@@ -3129,7 +3168,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/
-@media (min-width: 700px) and (max-width: 800px) {
+@media (min-width: 701px) and (max-width: 800px) {
   .column-gamma--first {
     margin-left: 0 !important; }
   .column-gamma-1 {
@@ -3189,7 +3228,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/
-@media (min-width: 700px) {
+@media (min-width: 701px) {
   .column-gamma-and-up--first {
     margin-left: 0 !important; }
   .column-gamma-and-up-1 {
@@ -3249,7 +3288,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/
-@media (min-width: 800px) and (max-width: 1000px) {
+@media (min-width: 801px) and (max-width: 1000px) {
   .column-delta--first {
     margin-left: 0 !important; }
   .column-delta-1 {
@@ -3309,7 +3348,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/
-@media (min-width: 800px) {
+@media (min-width: 801px) {
   .column-delta-and-up--first {
     margin-left: 0 !important; }
   .column-delta-and-up-1 {
@@ -3369,7 +3408,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/
-@media (min-width: 1000px) and (max-width: 1200px) {
+@media (min-width: 1001px) and (max-width: 1200px) {
   .column-epsilon--first {
     margin-left: 0 !important; }
   .column-epsilon-1 {
@@ -3429,7 +3468,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/
-@media (min-width: 1000px) {
+@media (min-width: 1001px) {
   .column-epsilon-and-up--first {
     margin-left: 0 !important; }
   .column-epsilon-and-up-1 {
@@ -3489,7 +3528,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/
-@media (min-width: 1200px) and (max-width: 1400px) {
+@media (min-width: 1201px) and (max-width: 1400px) {
   .column-zeta--first {
     margin-left: 0 !important; }
   .column-zeta-1 {
@@ -3549,7 +3588,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/
-@media (min-width: 1200px) {
+@media (min-width: 1201px) {
   .column-zeta-and-up--first {
     margin-left: 0 !important; }
   .column-zeta-and-up-1 {
@@ -3617,7 +3656,7 @@ Add this class to an element to fire an animation.
     * }
     *
     **/
-@media (min-width: 1400px) {
+@media (min-width: 1401px) {
   .column-eta-and-up--first {
     margin-left: 0 !important; }
   .column-eta-and-up-1 {
@@ -3823,13 +3862,13 @@ The default grid is a 12 columns grid which you can change in the settings, even
     * }
     *
     **/ }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .flexible-grid-2 {
       margin-left: -2%;
       margin-right: -2%; } }
   .flexible-grid-2 > * {
     margin-bottom: 4%; }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .flexible-grid-2 > * {
       width: 46%;
       margin-left: 2%;
@@ -3861,19 +3900,19 @@ The default grid is a 12 columns grid which you can change in the settings, even
     * }
     *
     **/ }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .flexible-grid-3 {
       margin-left: -1%;
       margin-right: -1%; } }
   .flexible-grid-3 > * {
     margin-bottom: 4%; }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .flexible-grid-3 > * {
       width: 48%;
       margin-left: 1%;
       margin-right: 1%;
       float: left; } }
-  @media (min-width: 1000px) {
+  @media (min-width: 1001px) {
     .flexible-grid-3 > * {
       width: 31.333339%;
       margin-left: 1%;
@@ -3905,19 +3944,19 @@ The default grid is a 12 columns grid which you can change in the settings, even
     * }
     *
     **/ }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .flexible-grid-4 {
       margin-left: -1%;
       margin-right: -1%; } }
   .flexible-grid-4 > * {
     margin-bottom: 4%; }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .flexible-grid-4 > * {
       width: 48%;
       margin-left: 1%;
       margin-right: 1%;
       float: left; } }
-  @media (min-width: 1000px) {
+  @media (min-width: 1001px) {
     .flexible-grid-4 > * {
       width: 23%;
       margin-left: 1%;
@@ -4093,14 +4132,14 @@ p {
     * }
     *
     **/ }
-  @media (min-width: 600px) and (max-width: 700px) {
+  @media (min-width: 601px) and (max-width: 700px) {
     .container,
     .container-beta {
       padding-left: 1.25rem;
       /* =20px */
       padding-right: 1.25rem;
       /* =20px */ } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .container,
     .container-beta {
       padding-left: 2.5rem;
@@ -4160,13 +4199,13 @@ There are two containers available, 'container' and 'container-beta'. These cont
     * }
     *
     **/ }
-  @media (min-width: 600px) and (max-width: 700px) {
+  @media (min-width: 601px) and (max-width: 700px) {
     .section {
       padding-top: 2.8125rem;
       /* =45px */
       padding-bottom: 2.8125rem;
       /* =45px */ } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .section {
       padding-top: 3.75rem;
       /* =60px */
@@ -4208,11 +4247,11 @@ There are two containers available, 'container' and 'container-beta'. These cont
     * }
     *
     **/ }
-  @media (min-width: 600px) and (max-width: 700px) {
+  @media (min-width: 601px) and (max-width: 700px) {
     .section-img {
       height: 25rem;
       /* =400px */ } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .section-img {
       height: 31.25rem;
       /* =500px */ } }
@@ -4330,13 +4369,13 @@ h1, .h1 {
     * }
     *
     **/ }
-  @media (min-width: 600px) and (max-width: 700px) {
+  @media (min-width: 601px) and (max-width: 700px) {
     h1, .h1 {
       font-size: 1.875rem;
       /* =30px */
       margin-bottom: 1.25rem;
       /* =20px */ } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     h1, .h1 {
       font-size: 2.125rem;
       /* =34px */
@@ -4356,7 +4395,7 @@ h2, .h2 {
     * }
     *
     **/ }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     h2, .h2 {
       font-size: 1.625rem;
       /* =26px */ } }
@@ -4420,12 +4459,6 @@ category: Typography
 /*==============================
 =            Colors            =
 ==============================*/
-.color-white {
-  color: #ffffff; }
-
-.color-black {
-  color: #000000; }
-
 .color-body {
   color: #ffffff; }
 
@@ -4452,12 +4485,6 @@ category: Typography
 
 .color-epsilon, .modal__close {
   color: #333333; }
-
-.bg-color-white {
-  background: #ffffff; }
-
-.bg-color-black {
-  background: #000000; }
 
 .bg-color-body {
   background: #ffffff; }
@@ -5018,11 +5045,11 @@ hll {
     * }
     *
     **/ }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .modal {
       min-width: 31.25rem;
       /* =500px */ } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .modal {
       height: auto;
       top: 50%;
@@ -5362,7 +5389,7 @@ category: Content
     left: 0; }
   .no-csspositionsticky .nav-bar {
     position: relative; }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .nav-bar {
       max-height: inherit;
       text-align: left;
@@ -5384,7 +5411,7 @@ category: Content
     * }
     *
     **/ }
-    @media (min-width: 700px) {
+    @media (min-width: 701px) {
       .nav-bar .logo {
         float: left;
         padding-top: 0;
@@ -5420,7 +5447,7 @@ category: Content
     * }
     *
     **/ }
-    @media (min-width: 700px) {
+    @media (min-width: 701px) {
       .nav-bar--transparent:not(.nav-bar--fixed) {
         background: transparent; }
         .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
@@ -5451,7 +5478,7 @@ category: Content
     * }
     *
     **/ }
-    @media (min-width: 700px) {
+    @media (min-width: 701px) {
       .nav-bar__container {
         padding-left: 2.5rem;
         /* =40px */
@@ -5474,7 +5501,7 @@ category: Content
     * }
     *
     **/ }
-      @media (min-width: 700px) {
+      @media (min-width: 701px) {
         .nav-bar__container:before {
           display: none; } }
   .nav-bar__nav {
@@ -5487,7 +5514,7 @@ category: Content
     * }
     *
     **/ }
-    @media (min-width: 700px) {
+    @media (min-width: 701px) {
       .nav-bar__nav {
         float: right;
         height: auto;
@@ -5517,7 +5544,7 @@ category: Content
     * }
     *
     **/ }
-    @media (min-width: 700px) {
+    @media (min-width: 701px) {
       .nav-bar__trigger {
         display: none; } }
     .nav-bar__trigger:active,
@@ -5547,7 +5574,7 @@ category: Content
     * }
     *
     **/ }
-    @media (min-width: 700px) {
+    @media (min-width: 701px) {
       .nav-bar__list {
         background: transparent;
         -webkit-transform: translate3d(0, 0, 0);
@@ -5569,7 +5596,7 @@ category: Content
     * }
     *
     **/ }
-      @media (min-width: 700px) {
+      @media (min-width: 701px) {
         .nav-bar__list li {
           display: inline-block;
           margin-right: -4px; } }
@@ -5587,7 +5614,7 @@ category: Content
     * }
     *
     **/ }
-    @media (min-width: 700px) {
+    @media (min-width: 701px) {
       .nav-bar__link {
         display: inline-block; } }
     .touch .nav-bar__link {
@@ -6407,7 +6434,7 @@ category: Content
     * }
     *
     **/ }
-    @media (min-width: 600px) {
+    @media (min-width: 601px) {
       .media__alpha {
         margin-bottom: 0; } }
     .media--right .media__alpha {
@@ -7029,7 +7056,7 @@ This demo site has an off canvas for its menu.
           right: -260px; }
         .no-csstransforms3d.off-canvas-show-left .off-canvas-nav-bar--right {
           right: 0; } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
     .off-canvas-nav-bar {
       background: #222222;
       width: 100%;
@@ -7055,11 +7082,11 @@ This demo site has an off canvas for its menu.
         left: 0; }
       .no-csspositionsticky .off-canvas-nav-bar {
         position: relative; } }
-  @media (min-width: 700px) and (min-width: 700px) {
+  @media (min-width: 701px) and (min-width: 701px) {
     .off-canvas-nav-bar {
       max-height: inherit;
       text-align: left; } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
       .off-canvas-nav-bar .logo {
         display: inline-block;
         margin-bottom: -6px;
@@ -7075,7 +7102,7 @@ This demo site has an off canvas for its menu.
     * }
     *
     **/ } }
-    @media (min-width: 700px) and (min-width: 700px) {
+    @media (min-width: 701px) and (min-width: 701px) {
       .off-canvas-nav-bar .logo {
         float: left;
         padding-top: 0;
@@ -7083,7 +7110,7 @@ This demo site has an off canvas for its menu.
         margin-bottom: 0;
         margin-top: 1.125rem;
         /* =18px */ } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
       .off-canvas-nav-bar--transform {
         -webkit-transform: translate3d(0, -100%, 0);
                 transform: translate3d(0, -100%, 0); }
@@ -7099,7 +7126,7 @@ This demo site has an off canvas for its menu.
     * }
     *
     **/ } }
-      @media (min-width: 700px) and (max-width: 600px) {
+      @media (min-width: 701px) and (max-width: 600px) {
         .off-canvas-nav-bar--transform.nav-bar--always-show-on-mobile {
           -webkit-transform: translate3d(0, 0, 0);
                   transform: translate3d(0, 0, 0); } }
@@ -7112,7 +7139,7 @@ This demo site has an off canvas for its menu.
     * }
     *
     **/ }
-    @media (min-width: 700px) and (min-width: 700px) {
+    @media (min-width: 701px) and (min-width: 701px) {
       .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
         background: transparent; }
         .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
@@ -7124,7 +7151,7 @@ This demo site has an off canvas for its menu.
             color: #2690b0; }
         .nav-bar--transparent .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
           color: white; } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
       .no-csspositionsticky .off-canvas-nav-bar--fixed {
         position: fixed;
         top: 0;
@@ -7144,7 +7171,7 @@ This demo site has an off canvas for its menu.
     * }
     *
     **/ } }
-    @media (min-width: 700px) and (min-width: 700px) {
+    @media (min-width: 701px) and (min-width: 701px) {
       .off-canvas-nav-bar__container {
         padding-left: 2.5rem;
         /* =40px */
@@ -7159,12 +7186,12 @@ This demo site has an off canvas for its menu.
     * }
     *
     **/ }
-    @media (min-width: 700px) and (min-width: 700px) {
+    @media (min-width: 701px) and (min-width: 701px) {
       .off-canvas-nav-bar__nav {
         float: right;
         margin-left: 0;
         /* =0 */ } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
       .off-canvas-nav-bar__list {
         clear: both;
         border-top: 1px solid #3c3c3c;
@@ -7179,13 +7206,13 @@ This demo site has an off canvas for its menu.
     * }
     *
     **/ } }
-    @media (min-width: 700px) and (min-width: 700px) {
+    @media (min-width: 701px) and (min-width: 701px) {
       .off-canvas-nav-bar__list {
         overflow: inherit;
         max-height: inherit;
         float: right;
         border-top: 0; } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
         .nav-bar--mobile-show .off-canvas-nav-bar__list {
           max-height: 50rem;
           /* =800px */ }
@@ -7200,11 +7227,11 @@ This demo site has an off canvas for its menu.
     * }
     *
     **/ } }
-      @media (min-width: 700px) and (min-width: 700px) {
+      @media (min-width: 701px) and (min-width: 701px) {
         .off-canvas-nav-bar__list li {
           display: inline-block;
           margin-right: -4px; } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
       .off-canvas-nav-bar__link {
         display: block;
         color: white;
@@ -7219,10 +7246,10 @@ This demo site has an off canvas for its menu.
     * }
     *
     **/ } }
-    @media (min-width: 700px) and (min-width: 700px) {
+    @media (min-width: 701px) and (min-width: 701px) {
       .off-canvas-nav-bar__link {
         display: inline-block; } }
-  @media (min-width: 700px) {
+  @media (min-width: 701px) {
         .off-canvas-nav-bar__link:hover {
           background: #3c3c3c;
           color: white; }
@@ -7464,6 +7491,17 @@ These work with the button classes so you can use those to change color, size is
 </div>
 ```
 
+## Block button group
+
+```html_example
+<ul class="btn-group btn-group--block">
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+</ul>
+```
+
 */
 /*doc
 ---
@@ -7597,7 +7635,7 @@ These work with the button classes so you can use those to change color, size is
     * }
     *
     **/ }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .btn--medium {
       padding: 0.6875rem 1.25rem;
       /* =11px 20px */
@@ -7615,7 +7653,7 @@ These work with the button classes so you can use those to change color, size is
     * }
     *
     **/ }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .btn--large {
       padding: 1rem 1.875rem;
       /* =16px 30px */
@@ -7657,6 +7695,8 @@ Add more colors in the settings file under "buttons" if you need to.
 
 */
 .btn {
+  overflow: hidden;
+  vertical-align: middle;
   background-image: none;
   position: relative;
   display: inline-block;
@@ -7746,6 +7786,8 @@ Add more colors in the settings file under "buttons" if you need to.
     border-left: 1px solid white; }
   .btn-group--block .btn {
     border-top: 1px solid white; }
+  .btn.tooltip {
+    overflow: visible; }
   .btn:hover {
     color: #555555; }
   .btn:focus {
@@ -8009,6 +8051,38 @@ Add more colors in the settings file under "buttons" if you need to.
     .btn--ghost:focus {
       background: transparent;
       color: #555555; }
+  .btn--ripple {
+    overflow: hidden;
+    position: relative; }
+    .btn--ripple.tooltip {
+      overflow: visible; }
+  .btn__ripple {
+    display: block;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.25);
+    border-radius: 100%;
+    -webkit-transform: scale(0);
+            transform: scale(0); }
+    .btn--light .btn__ripple,
+    .btn--alpha .btn__ripple {
+      background: rgba(0, 0, 0, 0.2); }
+    .btn--ripple-animate .btn__ripple {
+      -webkit-animation: btn-ripple 0.4s linear;
+              animation: btn-ripple 0.4s linear; }
+    .tooltip .btn__ripple {
+      display: none; }
+
+@-webkit-keyframes btn-ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5); } }
+
+@keyframes btn-ripple {
+  100% {
+    opacity: 0;
+    -webkit-transform: scale(2.5);
+            transform: scale(2.5); } }
 
 /*doc
 ---
@@ -8366,7 +8440,7 @@ category: Forms
 
         <div class="form__actions">
             <p class="form__required-field"><i>* = Verplicht veld</i></p>
-            <input class="btn btn--beta btn--medium" type="submit" value="verzenden" />
+            <button class="btn btn--beta btn--medium" type="submit">send</button>
         </div>
     </div>
 </form>
@@ -8386,7 +8460,7 @@ Use the grid to your advantage.
 <form class="form form--horizontal" data-form-validate novalidate="novalidate">
     <div class="grid grid--no-gutters column-beta-6 column-gamma-and-up-5 column-centered">
         <div class="column-8"><input type="text" placeholder="E-mailadres" /></div>
-        <div class="column-4"><input class="btn btn--beta btn--block btn--medium" type="submit" value="verzenden" /></div>
+        <div class="column-4"><button class="btn btn--beta btn--block btn--medium" type="submit">send</button></div>
     </div>
 </form>
 ```
@@ -8411,7 +8485,7 @@ Use the grid to your advantage.
   .form__label label {
     line-height: 2.5rem;
     /* =40px */ }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .form__label {
       text-align: left; } }
   .form--vertical .form__label {
@@ -8531,7 +8605,7 @@ category: Forms
     * }
     *
     **/ }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .form__input-list {
       margin-top: 0.5rem;
       /* =8px */ } }
@@ -8569,7 +8643,7 @@ category: Forms
 
 ```html_example
 <div class="form__actions">
-    <input class="btn btn--beta btn--medium" type="submit" value="send" />
+    <button class="btn btn--beta btn--medium" type="submit">send</button>
 </div>
 ```
 
@@ -8585,7 +8659,7 @@ category: Forms
     * }
     *
     **/ }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .form__actions {
       margin-left: 42.8571428571%; } }
   .form--vertical .form__actions {
@@ -8601,7 +8675,7 @@ category: Forms
 ```html_example
 <div class="form__actions">
     <p class="form__required-field"><i>* = Required field</i></p>
-    <input class="btn btn--beta btn--medium" type="submit" value="send" />
+    <button class="btn btn--beta btn--medium" type="submit">send</button>
 </div>
 ```
 
@@ -9149,7 +9223,7 @@ We use the jQuery plugin [parsleyjs](http://parsleyjs.org) for our validation en
 
     <div class="form__actions">
         <p class="form__required-field"><i>* = Required field</i></p>
-        <input class="btn btn--beta btn--medium" type="submit" value="send" />
+        <button class="btn btn--beta btn--medium" type="submit">send</button>
     </div>
 
 </form>
@@ -9381,7 +9455,7 @@ app.notifications.add(target, message, size, type);
     * }
     *
     **/ }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .notification--beta {
       padding: 1.875rem 3.75rem 1.875rem 1.875rem;
       /* =30px 60px 30px 30px */
@@ -9419,7 +9493,7 @@ app.notifications.add(target, message, size, type);
     * }
     *
     **/ }
-    @media (min-width: 600px) {
+    @media (min-width: 601px) {
       .notification--beta .notification__text {
         margin-left: 4.375rem;
         /* =70px */ } }
@@ -9518,11 +9592,11 @@ You can add your own custom modules here which you'll need for the thing you're 
     * }
     *
     **/ }
-  @media (min-width: 600px) {
+  @media (min-width: 601px) {
     .header {
       height: 25rem;
       /* =400px */ } }
-  @media (min-width: 1000px) {
+  @media (min-width: 1001px) {
     .header {
       height: 37.5rem;
       /* =600px */ } }

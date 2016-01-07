@@ -191,7 +191,7 @@ category: Forms
 
         <div class="form__actions">
             <p class="form__required-field"><i>* = Verplicht veld</i></p>
-            <input class="btn btn--beta btn--medium" type="submit" value="verzenden" />
+            <button class="btn btn--beta btn--medium" type="submit">send</button>
         </div>
     </div>
 </form>
@@ -213,7 +213,7 @@ Use the grid to your advantage.
 <form class="form form--horizontal" data-form-validate novalidate="novalidate">
     <div class="grid grid--no-gutters column-beta-6 column-gamma-and-up-5 column-centered">
         <div class="column-8"><input type="text" placeholder="E-mailadres" /></div>
-        <div class="column-4"><input class="btn btn--beta btn--block btn--medium" type="submit" value="verzenden" /></div>
+        <div class="column-4"><button class="btn btn--beta btn--block btn--medium" type="submit">send</button></div>
     </div>
 </form>
 ```

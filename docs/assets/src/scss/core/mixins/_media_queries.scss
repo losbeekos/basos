@@ -40,39 +40,39 @@
     **/
 
     @if $query == eta-and-up {
-        @media (min-width: map-get($mq, eta)) { @content; }
+        @media (min-width: map-get($mq, eta)+1) { @content; }
     }
 
     @if $query == zeta {
-       @media (min-width: map-get($mq, zeta)) and (max-width: map-get($mq, eta)) { @content; }
+       @media (min-width: map-get($mq, zeta)+1) and (max-width: map-get($mq, eta)) { @content; }
     }
 
     @if $query == zeta-and-up {
-        @media (min-width: map-get($mq, zeta)) { @content; }
+        @media (min-width: map-get($mq, zeta)+1) { @content; }
     }
 
     @if $query == epsilon {
-       @media (min-width: map-get($mq, epsilon)) and (max-width: map-get($mq, zeta)) { @content; }
+       @media (min-width: map-get($mq, epsilon)+1) and (max-width: map-get($mq, zeta)) { @content; }
     }
 
     @if $query == epsilon-and-up {
-        @media (min-width: map-get($mq, epsilon)) { @content; }
+        @media (min-width: map-get($mq, epsilon)+1) { @content; }
     }
 
     @if $query == delta-and-up {
-        @media (min-width: map-get($mq, delta)) { @content; }
+        @media (min-width: map-get($mq, delta)+1) { @content; }
     }
 
     @if $query == delta {
-        @media (min-width: map-get($mq, delta)) and (max-width: map-get($mq, epsilon)) { @content; }
+        @media (min-width: map-get($mq, delta)+1) and (max-width: map-get($mq, epsilon)) { @content; }
     }
 
     @if $query == gamma-and-up {
-        @media (min-width: map-get($mq, gamma)) { @content; }
+        @media (min-width: map-get($mq, gamma)+1) { @content; }
     }
 
     @if $query == gamma {
-        @media (min-width: map-get($mq, gamma)) and (max-width: map-get($mq, delta)) { @content; }
+        @media (min-width: map-get($mq, gamma)+1) and (max-width: map-get($mq, delta)) { @content; }
     }
 
     @if $query == alpha-and-beta {
@@ -80,11 +80,11 @@
     }
 
     @if $query == beta {
-        @media (min-width: map-get($mq, beta)) and (max-width: map-get($mq, gamma)) { @content; }
+        @media (min-width: map-get($mq, beta)+1) and (max-width: map-get($mq, gamma)) { @content; }
     }
 
     @if $query == beta-and-up {
-        @media (min-width: map-get($mq, beta)) { @content; }
+        @media (min-width: map-get($mq, beta)+1) { @content; }
     }
 
     @if $query == alpha {

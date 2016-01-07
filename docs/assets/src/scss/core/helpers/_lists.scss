@@ -85,7 +85,7 @@ category: Typography
     @extend .list-unstyled;
 
     li {
-        display: inline;
+        display: inline-block;
 
         @include rem(margin-right, 10px);
     }

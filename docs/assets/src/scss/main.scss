@@ -5,13 +5,31 @@ name: 1_getting_started
 category: Getting started
 ---
 
-## Normalize
+Make sure you have GruntJS and Bower.
 
-## H5BP
+#### Bower dependencies
+Install the Bower dependencies, see bower.json.
 
-## Animate
+    $ bower install
 
-## 
+#### Node dependencies
+Install the Node dependencies, see package.json.
+
+    $ npm install
+
+#### Start server
+Start the web server which is used by BrowserSync.
+
+    $ grunt connect
+
+#### Run browserSync
+Run BrowserSync to auto reload when dist files change.
+
+    $ grunt browserSync
+
+#### Watch for changes
+
+    $ grunt watch
 
 */
 

@@ -1,10 +1,11 @@
 app.groupCheckable = {
     init: function () {
-        $('[data-group-checkable]').on('change', function () {
-            var $this = $(this),
-                $group = $('[data-group-checkable-target=' + $this.attr('data-group-checkable') + ']');
+        $('[data-group-checkable]').each(function () {
+            app.groupCheckable.toggleGroup($(this));
+        });
 
-            $this.is(':checked') ? $group.prop('checked', true) : $group.prop('checked', false);
+        $('[data-group-checkable]').on('change', function () {
+            app.groupCheckable.toggleGroup($(this));
         });
 
         $('[data-group-checkable-target]').on('change', function () {
@@ -16,6 +17,12 @@ app.groupCheckable = {
 
             $group.length === $groupChecked.length ? $trigger.prop('checked', true) : $trigger.prop('checked', false);
         });
+    },
+
+    toggleGroup: function ($this) {
+        var $group = $('[data-group-checkable-target=' + $this.attr('data-group-checkable') + ']');
+
+        $this.is(':checked') ? $group.prop('checked', true) : $group.prop('checked', false);
     }
 };
 
@@ -26,6 +33,13 @@ name: group_checkable
 category: Javascript
 ---
 
-Todo
+```html_example
+<input name="checkbox" type="checkbox" id="checkbox" data-group-checkable="checkable-example" /><label for="checkbox">Check all</label>
+<ul class="form__input-list list-unstyled">
+    <li><input name="checkbox" type="checkbox" id="checkbox1" data-group-checkable-target="checkable-example" /><label for="checkbox1">Checkbox</label></li>
+    <li><input name="checkbox" type="checkbox" id="checkbox2" data-group-checkable-target="checkable-example" /><label for="checkbox2">Checkbox</label></li>
+    <li><input name="checkbox" type="checkbox" id="checkbox3" data-group-checkable-target="checkable-example" /><label for="checkbox3">Checkbox</label></li>
+</ul>
+```
 
 */

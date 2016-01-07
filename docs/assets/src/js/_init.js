@@ -19,6 +19,7 @@ app.settings.$document.ready(function () {
     app.groupCheckable.init();
     app.leave.init();
     app.btnDropdown.init();
+    app.btnRipple.init();
 
     //app.cycle.init();
     //app.fancybox.init();

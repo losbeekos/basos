@@ -64,16 +64,10 @@
                     <li class="off-canvas-nav__item"><a class="off-canvas-nav__link off-canvas-nav__link--active" href="index.html">Getting started</a>
                     
                         
-                        <ul class="list-unstyled margin-gamma-bottom margin-gamma-left">
-                            
-                                
-                            
-                                
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#vendor" data-jumpto>Vendor</a></li>
-                                
-                            
-                        </ul>
-                        
+                    
+                    </li>
+                
+                    <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="vendor.html">Vendor</a>
                     
                     </li>
                 
@@ -130,19 +124,37 @@
               <section class="section section--alpha">
 
 <h1 id="1_getting_started" class="styleguide">Getting started</h1>
-
-<h2>Normalize</h2>
-
-<h2>H5BP</h2>
-
-<h2>Animate</h2>
-
-<h1 id="vendor" class="styleguide">Vendor</h1>
-
-<h2>Normalize</h2>
-<p class="styleguide">something about normalize</p>
-<h2>H5BP</h2>
-<p class="styleguide">Something about h5bp</p>            </section>
+<p class="styleguide">Make sure you have GruntJS and Bower.</p>
+<h4>Bower dependencies</h4>
+<p class="styleguide">Install the Bower dependencies, see bower.json.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>$ bower install</pre>
+  </div>
+</div>
+<h4>Node dependencies</h4>
+<p class="styleguide">Install the Node dependencies, see package.json.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>$ npm install</pre>
+  </div>
+</div>
+<h4>Start server</h4>
+<p class="styleguide">Start the web server which is used by BrowserSync.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>$ grunt connect</pre>
+  </div>
+</div>
+<h4>Run browserSync</h4>
+<p class="styleguide">Run BrowserSync to auto reload when dist files change.</p><div class="codeBlock">
+  <div class="highlight">
+    <pre>$ grunt browserSync</pre>
+  </div>
+</div>
+<h4>Watch for changes</h4>
+<div class="codeBlock">
+  <div class="highlight">
+    <pre>$ grunt watch</pre>
+  </div>
+</div>            </section>
           </main>
 
         </div>

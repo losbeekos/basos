@@ -214,6 +214,17 @@ These work with the button classes so you can use those to change color, size is
 </div>
 ```
 
+## Block button group
+
+```html_example
+<ul class="btn-group btn-group--block">
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+</ul>
+```
+
 */
 
 

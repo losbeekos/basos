@@ -1,21 +1,16 @@
-/**
- * Imports all the core components.
- */
-
- /*doc
+/*doc
  ---
  title: Vendor
- name: vendor
- category: Getting started
+ name: 1_vendor
+ category: Vendor
  ---
 
 ## Normalize
-
-something about normalize
+A modern, HTML5-ready alternative to CSS resets [https://necolas.github.io/normalize.css](https://necolas.github.io/normalize.css).
 
 ## H5BP
+Some HTML tag CSS enhancements are used from H5BP [https://html5boilerplate.com](https://html5boilerplate.com).
 
-Something about h5bp
  */
 
 @import "core/vendor/normalize";
@@ -366,6 +361,7 @@ Pure CSS ellipsis class
 @import "core/animations/fadeInUp";
 @import "core/animations/fadeInUpBig";
 @import "core/animations/fadeInRotate";
+@import "core/animations/fadeOutUp";
 @import "core/animations/zoomIn";
 @import "core/animations/zoomInDown";
 @import "core/animations/zoomInLeft";

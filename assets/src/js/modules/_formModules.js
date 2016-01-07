@@ -134,6 +134,8 @@ app.formModules = {
     },
 
     floatingLabelSetClass: function ($input) {
-        $input.val().length > 0 ? $input.addClass('is-filled') : $input.removeClass('is-filled');
+        if ($input.length > 0) {
+            $input.val().length > 0 ? $input.addClass('is-filled') : $input.removeClass('is-filled');
+        }
     }
 };
