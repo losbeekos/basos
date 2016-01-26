@@ -15,7 +15,7 @@
     width: 100%;
     margin-bottom: gutter(map-get($susy, columns));
 
-    @include mq(beta-and-up){
+    @include mq(beta-and-up) {
         float: left;
         margin-left: gutter(map-get($susy, columns));
     }
@@ -27,39 +27,18 @@
     .grid--no-vertical-gutters &   { margin-bottom: 0; }
 }
 
-[class|=column-alpha],
-[class|=column-alpha-and-up],
-[class|=column-beta],
-[class|=column-beta-and-up],
-[class|=column-gamma],
-[class|=column-gamma-and-up],
-[class|=column-delta],
-[class|=column-delta-and-up],
-[class|=column-epsilon],
-[class|=column-epsilon-and-up],
-[class|=column-zeta],
-[class|=column-zeta-and-up],
-[class|=column-eta],
-[class|=column-eta-and-up] {
-    float: left;
-    margin-left: gutter(map-get($susy, columns));
+@each $key, $value in $mq {
+    @if $key == beta-and-up {
+        @include defaultGridColumn(beta-and-up);
+    } @else {
+        [class|=column-#{$key}] {
+            float: left;
+            margin-left: gutter(map-get($susy, columns));
+        }
+
+        @include gridColumn($key);
+    }
 }
-
-@include defaultGridColumn(beta-and-up);
-
-@include gridColumn(alpha);
-@include gridColumn(alpha-and-up);
-@include gridColumn(beta);
-@include gridColumn(gamma);
-@include gridColumn(gamma-and-up);
-@include gridColumn(delta);
-@include gridColumn(delta-and-up);
-@include gridColumn(epsilon);
-@include gridColumn(epsilon-and-up);
-@include gridColumn(zeta);
-@include gridColumn(zeta-and-up);
-@include gridColumn(eta);
-@include gridColumn(eta-and-up);
 
 .column-centered,
 .column-centered:first-child {
@@ -194,5 +173,4 @@ The default grid is a 12 columns grid which you can change in the settings, even
     </div>
 </div>
 ```
-
 */

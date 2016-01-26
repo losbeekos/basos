@@ -3907,18 +3907,18 @@ app.settings = {
 app.mediaQueries = {
     alphaAndUp:   '(min-width: 0px)',
     alpha:        '(max-width: 600px)',
-    betaAndUp:    '(min-width: 600px)',
+    betaAndUp:    '(min-width: 601px)',
     beta:         '(min-width: 600px) and (max-width: 700px)',
     alphaAndBeta: '(max-width: 700px)',
-    gammaAndUp:   '(min-width: 700px)',
+    gammaAndUp:   '(min-width: 701px)',
     gamma:        '(min-width: 700px) and (max-width: 800px)',
-    deltaAndUp:   '(min-width: 800px)',
+    deltaAndUp:   '(min-width: 801px)',
     delta:        '(min-width: 800px) and (max-width: 900px)',
-    epsilonAndUp: '(min-width: 1000px)',
+    epsilonAndUp: '(min-width: 1001px)',
     epsilon:      '(min-width: 1000px) and (max-width: 1200px)',
-    zetaAndUp:    '(min-width: 1200px)',
+    zetaAndUp:    '(min-width: 1201px)',
     zeta:         '(min-width: 1200px) and (max-width: 1400px)',
-    etaAndUp:     '(min-width: 1400px)'
+    etaAndUp:     '(min-width: 1401px)'
 };
 helper.cookies = {
     create: function(name,value,days) {
@@ -5400,8 +5400,6 @@ app.tooltips = {
     },
 
     init: function () {
-        var self = this;
-
         if (app.tooltips.settings.$el.length > 0) {
             app.tooltips.settings.$el.each(function () {
                 var $tooltipTrigger = $(this);
@@ -5412,25 +5410,21 @@ app.tooltips = {
                     app.tooltips.settings.tooltipTrigger = 'hover';
                 }
 
-                self.triggers($tooltipTrigger);
-                self.appendContent($tooltipTrigger);
+                app.tooltips.triggers($tooltipTrigger);
+                app.tooltips.appendContent($tooltipTrigger);
             });
         }
     },
 
     appendContent: function ($tooltipTrigger) {
-        var self = this;
-
         $tooltipTrigger
             .append('<div class="' + app.tooltips.settings.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
             .removeAttr('title');
 
-        self.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip__content'));
+        app.tooltips.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip__content'));
     },
 
     triggers: function ($tooltipTrigger) {
-        var self = this;
-
         if (app.tooltips.settings.tooltipTrigger === 'hover') {
             $tooltipTrigger.on({
                 mouseenter: function () {
@@ -5448,8 +5442,7 @@ app.tooltips = {
     },
 
     calculatePosition: function ($tooltipTrigger, $tooltipContent) {
-        var self = this,
-            tooltipTriggerHeight = $tooltipTrigger.outerHeight(),
+        var tooltipTriggerHeight = $tooltipTrigger.outerHeight(),
             tooltipContentHeight = $tooltipContent.outerHeight();
 
         switch ($tooltipTrigger.data('tooltipPosition')) {

@@ -8,8 +8,6 @@ app.tooltips = {
     },
 
     init: function () {
-        var self = this;
-
         if (app.tooltips.settings.$el.length > 0) {
             app.tooltips.settings.$el.each(function () {
                 var $tooltipTrigger = $(this);
@@ -20,25 +18,21 @@ app.tooltips = {
                     app.tooltips.settings.tooltipTrigger = 'hover';
                 }
 
-                self.triggers($tooltipTrigger);
-                self.appendContent($tooltipTrigger);
+                app.tooltips.triggers($tooltipTrigger);
+                app.tooltips.appendContent($tooltipTrigger);
             });
         }
     },
 
     appendContent: function ($tooltipTrigger) {
-        var self = this;
-
         $tooltipTrigger
             .append('<div class="' + app.tooltips.settings.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
             .removeAttr('title');
 
-        self.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip__content'));
+        app.tooltips.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip__content'));
     },
 
     triggers: function ($tooltipTrigger) {
-        var self = this;
-
         if (app.tooltips.settings.tooltipTrigger === 'hover') {
             $tooltipTrigger.on({
                 mouseenter: function () {
@@ -56,8 +50,7 @@ app.tooltips = {
     },
 
     calculatePosition: function ($tooltipTrigger, $tooltipContent) {
-        var self = this,
-            tooltipTriggerHeight = $tooltipTrigger.outerHeight(),
+        var tooltipTriggerHeight = $tooltipTrigger.outerHeight(),
             tooltipContentHeight = $tooltipContent.outerHeight();
 
         switch ($tooltipTrigger.data('tooltipPosition')) {

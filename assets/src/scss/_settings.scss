@@ -9,6 +9,7 @@
 
 $base: (
     gradient         : false,
+    font-size-num    : 16,
     font-size        : 16px,
     padding          : 10px,
     border-radius    : 0,
@@ -21,13 +22,19 @@ $base: (
 */
 
 $mq: (
-    alpha   : 0px,
-    beta    : 600px,
-    gamma   : 700px,
-    delta   : 800px,
-    epsilon : 1000px,
-    zeta    : 1200px,
-    eta     : 1400px
+    alpha          : '(max-width: 37.5em)', // 600px
+    alpha-and-beta : '(max-width: 43.75em)', // 700px
+    beta-and-up    : '(min-width: 37.5em)', // 600px
+    beta           : '(min-width: 37.5em) and (max-width: 43.75em)', // 600px and 700px
+    gamma-and-up   : '(min-width: 43.75em)', // 700px
+    gamma          : '(min-width: 43.75em) and (max-width: 50em)', // 700px and 800px
+    delta-and-up   : '(min-width: 50em)', // 800px
+    delta          : '(min-width: 50em) and (max-width: 62.5em)', // 800px and 1000px
+    epsilon-and-up : '(min-width: 62.5em)', // 1000px
+    epsilon        : '(min-width: 62.5em) and (max-width: 75em)',  // 1000px and 1200px
+    zeta-and-up    : '(min-width: 75em)', // 1200px
+    zeta           : '(min-width: 75em) and (max-width: 87.5em)', //  1200px and 1400px
+    eta-and-up     : '(min-width: 87.5em)' // 1400px
 );
 
 

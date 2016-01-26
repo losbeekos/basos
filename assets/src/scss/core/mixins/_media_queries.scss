@@ -2,114 +2,15 @@
 ==========
 */
 
-// Breakpoint
-// Usage: @include breakpoint(size) { }
-// Example: @include breakpoint(lg) { }
-// --------------------------------------------------
-
-// TODO!!
-
-// $breakpoints: (
-//   'xs': ( max-width: $screen-xs ),
-//   'sm': ( min-width: $screen-sm ),
-//   'md': ( min-width: $screen-md ),
-//   'lg': ( min-width: $screen-lg )
-// );
-
-// @mixin breakpoint($name) {
-//   @if map-has-key($breakpoints, $name) {
-//     @media #{inspect(map-get($breakpoints, $name))} {
-//       @content;
-//     }
-//   }
-//   @else {
-//     @warn "Cannot find breakpoint size `#{$name}`.";
-//   }
-// }
-
-
-
-@mixin mq($query) {
-    /**
-    *
-    * Usage:
-    * @include mq('gamma-and-up') {
-    *     CSS properties here..
-    * }
-    *
-    **/
-
-    @if $query == eta-and-up {
-        @media (min-width: map-get($mq, eta)+1) { @content; }
+@mixin mq($name) {
+    @if map-has-key($mq, $name) {
+        @media #{inspect(map-get($mq, $name))} {
+            @content;
+        }
     }
-
-    @if $query == zeta {
-       @media (min-width: map-get($mq, zeta)+1) and (max-width: map-get($mq, eta)) { @content; }
+    @else {
+        @warn "Cannot find breakpoint size `#{$name}`.";
     }
-
-    @if $query == zeta-and-up {
-        @media (min-width: map-get($mq, zeta)+1) { @content; }
-    }
-
-    @if $query == epsilon {
-       @media (min-width: map-get($mq, epsilon)+1) and (max-width: map-get($mq, zeta)) { @content; }
-    }
-
-    @if $query == epsilon-and-up {
-        @media (min-width: map-get($mq, epsilon)+1) { @content; }
-    }
-
-    @if $query == delta-and-up {
-        @media (min-width: map-get($mq, delta)+1) { @content; }
-    }
-
-    @if $query == delta {
-        @media (min-width: map-get($mq, delta)+1) and (max-width: map-get($mq, epsilon)) { @content; }
-    }
-
-    @if $query == gamma-and-up {
-        @media (min-width: map-get($mq, gamma)+1) { @content; }
-    }
-
-    @if $query == gamma {
-        @media (min-width: map-get($mq, gamma)+1) and (max-width: map-get($mq, delta)) { @content; }
-    }
-
-    @if $query == alpha-and-beta {
-       @media (max-width: map-get($mq, gamma))  { @content; }
-    }
-
-    @if $query == beta {
-        @media (min-width: map-get($mq, beta)+1) and (max-width: map-get($mq, gamma)) { @content; }
-    }
-
-    @if $query == beta-and-up {
-        @media (min-width: map-get($mq, beta)+1) { @content; }
-    }
-
-    @if $query == alpha {
-       @media (max-width: map-get($mq, beta))  { @content; }
-    }
-
-    @if $query == alpha-and-up {
-       @media (min-width: map-get($mq, alpha))  { @content; }
-    }
-}
-
-@mixin mq-img($path) {
-    /**
-    *
-    * Usage:
-    * @include mq-img('directory');
-    *
-    **/
-
-    @media (min-width: map-get($mq, alpha)) and (orientation: landscape) { background-image: url('../img/#{$path}/480x320.jpg');   }
-    @media (min-width: map-get($mq, alpha)) and (orientation: portrait)  { background-image: url('../img/#{$path}/320x480.jpg');   }
-    @media (min-width: map-get($mq, beta)) and (orientation: landscape) { background-image: url('../img/#{$path}/1024x768.jpg');   }
-    @media (min-width: map-get($mq, beta)) and (orientation: portrait)  { background-image: url('../img/#{$path}/1024x768.jpg');   }
-    @media (min-width: map-get($mq, gamma)) and (orientation: landscape) { background-image: url('../img/#{$path}/1280x1024.jpg'); }
-    @media (min-width: map-get($mq, gamma)) and (orientation: portrait)  { background-image: url('../img/#{$path}/1024x1280.jpg'); }
 }
 
 

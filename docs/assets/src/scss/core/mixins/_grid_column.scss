@@ -2,7 +2,6 @@
 ==========
 */
 
-
 @mixin defaultGridColumn($key) {
     @include mq(#{$key}) {
         .column-#{$key}--first {
@@ -31,7 +30,6 @@
         }
     }
 }
-
 
 @mixin gridColumn($key) {
     @include mq(#{$key}) {
