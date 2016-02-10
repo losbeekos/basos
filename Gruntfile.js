@@ -58,6 +58,7 @@ module.exports = function(grunt) {
                     'bower_components/jquery-placeholder/jquery.placeholder.js',
                     'bower_components/parsleyjs/src/i18n/nl.js',
                     'bower_components/parsleyjs/dist/parsley.js',
+                    'bower_components/svg4everybody/dist/svg4everybody.js',
                     'bower_components/rangeslider.js/dist/rangeslider.js',
 
                     // Basos
@@ -272,22 +273,6 @@ module.exports = function(grunt) {
             }
         },
 
-        // @TODO
-        // https://github.com/FWeinb/grunt-svgstore
-        // Check this screencast: https://css-tricks.com/video-screencasts/screencast-134-tour-site-progress-built-jekyll-grunt-sass-svg-system/
-        svgstore: {
-            options: {
-                prefix : 'shape-', // This will prefix each ID
-                // svg: { // will add and overide the the default xmlns="http://www.w3.org/2000/svg" attribute to the resulting SVG
-                //     viewBox : '0 0 100 100',
-                //     xmlns: 'http://www.w3.org/2000/svg'
-                // }
-            },
-            your_target: {
-                // Target-specific file lists and/or options go here.
-            },
-        },
-
         hologram: {
             generate: {
                 options: {
@@ -348,7 +333,32 @@ module.exports = function(grunt) {
                 'customTests': [],
                 'uglify': false
             }
-        }
+        },
+
+        //@TODO: Needs work
+        svg_sprite: {
+            dev: {
+                expand: true, // Doesn't work
+                prefix: "svg-%s",
+                cwd: '<%= basos.src %>/img/svg/',
+                src: ['*.svg'],
+                dest: '<%= basos.dist %>/img/',
+                shape: {
+                    id: {
+                        separator: '__',
+                        pseudo: '~'
+                    }
+                },
+                options: {
+                    mode: {
+                        symbol: {
+                            dest: "",
+                            sprite: "sprite.svg"
+                        }
+                    }
+                }
+            }
+        },
 
     });
 
@@ -361,7 +371,8 @@ module.exports = function(grunt) {
         'copy',
         'sass:dev',
         'postcss',
-        'modernizr'
+        'modernizr',
+        'svg_sprite'
     ]);
 
     grunt.registerTask('dist', [
@@ -376,6 +387,7 @@ module.exports = function(grunt) {
         'uglify',
         'imagemin',
         'imageoptim',
+        'svg_sprite'
     ]);
 
     // Peanuts tasks
@@ -388,6 +400,7 @@ module.exports = function(grunt) {
     //     'sass:dev',
     //     'postcss',
     //     'css_wrap',
+    //     'svg_sprite'
     // ]);
 
     // grunt.registerTask('dist', [
@@ -402,6 +415,7 @@ module.exports = function(grunt) {
     //     'imagemin',
     //     'imageoptim',
     //     'css_wrap',
+    //     'svg_sprite'
     // ]);
 
     grunt.registerTask('default', ['dev', 'watch']);

@@ -8,13 +8,14 @@
 ## Normalize
 A modern, HTML5-ready alternative to CSS resets [https://necolas.github.io/normalize.css](https://necolas.github.io/normalize.css).
 
-## H5BP
+## Basos
 Some HTML tag CSS enhancements are used from H5BP [https://html5boilerplate.com](https://html5boilerplate.com).
+And some things are borrowed from Twitter's bootstrap [Reboot](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss)
 
  */
 
 @import "core/vendor/normalize";
-@import "core/vendor/h5bp";
+@import "core/vendor/basos";
 
 /*doc
 ---

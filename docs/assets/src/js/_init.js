@@ -2,6 +2,7 @@ app.settings.$document.ready(function () {
     var $this = $(this),
         scrollTop = $this.scrollTop();
 
+    app.svg.init();
     app.scrollSpyNav.init(scrollTop);
     app.fastClick.init();
     app.fitVids.init();
