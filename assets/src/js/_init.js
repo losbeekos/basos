@@ -21,6 +21,7 @@ app.settings.$document.ready(function () {
     app.leave.init();
     app.btnDropdown.init();
     app.btnRipple.init();
+    app.googleMaps.init();
 
     //app.cycle.init();
     //app.fancybox.init();

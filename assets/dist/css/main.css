@@ -943,48 +943,48 @@ Pure CSS ellipsis class
 @media (max-width: 37.5em) {
   .hide-alpha,
   .hide-alpha-and-beta {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px; } }
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; } }
 
-@media (max-width: 43.75em) {
+@media (min-width: 37.5em) and (max-width: 43.75em) {
   .hide-beta,
   .hide-alpha-and-beta {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px; } }
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; } }
 
 @media (min-width: 37.5625em) {
   .hide-beta-and-up {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px; } }
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; } }
 
 @media (min-width: 43.8125em) {
   .hide-gamma-and-up {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px; } }
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: 1px !important;
+    margin: -1px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: 1px !important; } }
 
 /*doc
 ---
@@ -1075,14 +1075,14 @@ category: Typography
 */
 .visuallyhidden,
 .show-screenreaders {
-  border: 0;
-  clip: rect(0 0 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px; }
+  border: 0 !important;
+  clip: rect(0 0 0 0) !important;
+  height: 1px !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  padding: 0 !important;
+  position: absolute !important;
+  width: 1px !important; }
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
@@ -2103,7 +2103,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (max-width: 43.75em) {
+@media (min-width: 37.5em) and (max-width: 43.75em) {
   .column-beta--first {
     margin-left: 0 !important; }
   .column-beta-1 {
@@ -2215,7 +2215,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (max-width: 50em) {
+@media (min-width: 43.75em) and (max-width: 50em) {
   .column-gamma--first {
     margin-left: 0 !important; }
   .column-gamma-1 {
@@ -2327,7 +2327,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (max-width: 62.5em) {
+@media (min-width: 50em) and (max-width: 62.5em) {
   .column-delta--first {
     margin-left: 0 !important; }
   .column-delta-1 {
@@ -2439,7 +2439,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (max-width: 75em) {
+@media (min-width: 62.5em) and (max-width: 75em) {
   .column-epsilon--first {
     margin-left: 0 !important; }
   .column-epsilon-1 {
@@ -2551,7 +2551,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (max-width: 87.5em) {
+@media (min-width: 75em) and (max-width: 87.5em) {
   .column-zeta--first {
     margin-left: 0 !important; }
   .column-zeta-1 {
@@ -2997,8 +2997,8 @@ p {
 .container-beta {
   margin-left: auto;
   margin-right: auto;
-  min-width: 20rem;
-  /* =320px */
+  min-width: 16.25rem;
+  /* =260px */
   padding-left: 0.625rem;
   /* =10px */
   padding-right: 0.625rem;
@@ -3007,7 +3007,7 @@ p {
   /* =0 */
   margin-bottom: 0;
   /* =0 */ }
-  @media (max-width: 43.75em) {
+  @media (min-width: 37.5em) and (max-width: 43.75em) {
     .container,
     .container-beta {
       padding-left: 1.25rem;
@@ -3058,7 +3058,7 @@ There are two containers available, 'container' and 'container-beta'. These cont
   /* =30px */
   padding-bottom: 1.875rem;
   /* =30px */ }
-  @media (max-width: 43.75em) {
+  @media (min-width: 37.5em) and (max-width: 43.75em) {
     .section {
       padding-top: 2.8125rem;
       /* =45px */
@@ -3090,7 +3090,7 @@ There are two containers available, 'container' and 'container-beta'. These cont
   background-size: cover;
   height: 18.75rem;
   /* =300px */ }
-  @media (max-width: 43.75em) {
+  @media (min-width: 37.5em) and (max-width: 43.75em) {
     .section-img {
       height: 25rem;
       /* =400px */ } }
@@ -3194,7 +3194,7 @@ h1, .h1 {
   /* =26px */
   margin-bottom: 0.625rem;
   /* =10px */ }
-  @media (max-width: 43.75em) {
+  @media (min-width: 37.5em) and (max-width: 43.75em) {
     h1, .h1 {
       font-size: 1.875rem;
       /* =30px */
@@ -4173,8 +4173,8 @@ category: Content
           transform: translate3d(0, 0, 0);
   height: 3.125rem;
   /* =50px */
-  min-width: 20rem;
-  /* =320px */ }
+  min-width: 16.25rem;
+  /* =260px */ }
   .csspositionsticky .nav-bar {
     position: -webkit-sticky;
     position: sticky;
@@ -4233,8 +4233,8 @@ category: Content
     margin-right: auto;
     max-width: 80rem;
     /* =1280px */
-    min-width: 20rem;
-    /* =320px */ }
+    min-width: 16.25rem;
+    /* =260px */ }
     @media (min-width: 43.8125em) {
       .nav-bar__container {
         padding-left: 2.5rem;
@@ -5567,6 +5567,37 @@ category: Navigation
 ```
 
 */
+/* Google maps
+==========
+*/
+.google-maps {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 40%; }
+  .google-maps__map {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%; }
+
+/*doc
+---
+title: Google maps
+name: google_maps
+category: Content
+---
+
+The map is styled with the styles options, the style used for these docs is borrowed from [snazzymaps](https://snazzymaps.com).
+
+```html_example
+<div class="google-maps">
+    <div id="google-maps" class="google-maps__map"></div>
+</div>
+```
+
+*/
 /* Off canvas
 ==========
 */
@@ -5749,8 +5780,8 @@ This demo site has an off canvas for its menu.
     z-index: 999;
     transition: all 0.2s;
     text-align: center;
-    min-width: 20rem;
-    /* =320px */ }
+    min-width: 16.25rem;
+    /* =260px */ }
     .csspositionsticky .off-canvas-nav-bar {
       position: -webkit-sticky;
       position: sticky;
@@ -5812,8 +5843,8 @@ This demo site has an off canvas for its menu.
       margin-right: auto;
       max-width: 80rem;
       /* =1280px */
-      min-width: 20rem;
-      /* =320px */ } }
+      min-width: 16.25rem;
+      /* =260px */ } }
     @media (min-width: 43.8125em) and (min-width: 43.8125em) {
       .off-canvas-nav-bar__container {
         padding-left: 2.5rem;
@@ -7996,7 +8027,7 @@ app.notifications.add(target, message, size, type);
   position: fixed;
   left: 0;
   width: 100%;
-  min-width: 320px;
+  min-width: 260px;
   background: black;
   background: rgba(0, 0, 0, 0.85);
   text-align: center;
