@@ -8,11 +8,18 @@ app.googleMaps = {
         centerLon: 5.784693
     },
 
-    markerData: [{
-        'lat': '53.199027',
-        'lng': '5.784693',
-        'content': '<b>Company HQ</b><br />Some address 23<br />1234 AB Leeuwarden'
-    }],
+    markerData: [
+        {
+            'lat': '53.199027',
+            'lng': '5.784693',
+            'content': '<b>Company HQ</b><br />Some address 23<br />1234 AB Leeuwarden'
+        },
+        {
+            'lat': '53.199810',
+            'lng': '5.774750',
+            'content': '<b>Company</b><br />Some address 1<br />1234 AB Leeuwarden'
+        }
+    ],
 
     init: function() {
         if(app.googleMaps.settings.$el.length > 0){
