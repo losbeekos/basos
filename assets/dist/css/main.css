@@ -762,6 +762,12 @@ Hide only visually, but have it available for screenreaders.
     .show-screenreaders
 
 
+### Grid margin
+
+```html_example
+<div class="grid-margin-top">Percentual grid margins</div>
+```
+
 ## Margin
 These classes will give margin to any element. It will overrule the specified margin of the element.
 
@@ -794,8 +800,6 @@ Keys available:
 - no-right-margin
 - no-vertical-margin
 - no-horizontal-margin
-
-
 
 ## Padding
 These classes will give padding to any element. It will overrule the specified padding of the element.
@@ -1508,6 +1512,26 @@ category: Typography
 .no-horizontal-padding {
   padding-left: 0 !important;
   padding-right: 0 !important; }
+
+/* Grid margin
+==========
+*/
+.grid-margin {
+  margin: 3.3112582781%; }
+  .grid-margin-vertical {
+    margin-top: 3.3112582781%;
+    margin-bottom: 3.3112582781%; }
+  .grid-margin-horizontal {
+    margin-left: 3.3112582781%;
+    margin-right: 3.3112582781%; }
+  .grid-margin-right {
+    margin-right: 3.3112582781%; }
+  .grid-margin-left {
+    margin-left: 3.3112582781%; }
+  .grid-margin-top {
+    margin-top: 3.3112582781%; }
+  .grid-margin-bottom {
+    margin-bottom: 3.3112582781%; }
 
 /* Float
 ==========
@@ -2975,6 +2999,10 @@ button {
 
 img {
   max-width: 100%; }
+
+svg {
+  max-width: 100% !important;
+  height: initial !important; }
 
 address {
   font-style: normal; }

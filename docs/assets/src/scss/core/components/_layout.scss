@@ -50,6 +50,12 @@ img {
     max-width: 100%;
 }
 
+// Responsive SVGs
+svg {
+    max-width: 100% !important;
+    height: initial !important; // Do not change this!
+}
+
 address {
     font-style: normal;
 }

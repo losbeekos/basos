@@ -171,6 +171,12 @@ Hide only visually, but have it available for screenreaders.
     .show-screenreaders
 
 
+### Grid margin
+
+```html_example
+<div class="grid-margin-top">Percentual grid margins</div>
+```
+
 ## Margin
 These classes will give margin to any element. It will overrule the specified margin of the element.
 
@@ -203,8 +209,6 @@ Keys available:
 - no-right-margin
 - no-vertical-margin
 - no-horizontal-margin
-
-
 
 ## Padding
 These classes will give padding to any element. It will overrule the specified padding of the element.
@@ -328,6 +332,7 @@ Pure CSS ellipsis class
 @import "core/helpers/visually_hidden";
 @import "core/helpers/margin";
 @import "core/helpers/padding";
+@import "core/helpers/grid_margin";
 @import "core/helpers/float";
 @import "core/helpers/round";
 @import "core/helpers/vertical_align";
