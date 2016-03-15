@@ -4,18 +4,14 @@
 
 .form__input--floating-label {
     position: relative;
-
-    @include rem(padding-top, 20px);
+    padding-top: rem(20px);
 
     input {
         border: none;
         border-bottom: map-get($form, input-border);
         text-align: left;
         box-shadow: none;
-        padding: 0;
-
-        @include rem(padding-top, 6px);
-        @include rem(padding-bottom, 6px);
+        padding: rem(6px) 0;
 
         &:focus,
         &:active {
@@ -25,9 +21,8 @@
 
             + label {
                 color: map-get($color, beta);
-
-                @include rem(top, 4px);
-                @include rem(font-size, 12px);
+                top: rem(4px);
+                font-size: rem(12px);
             }
         }
 
@@ -36,9 +31,8 @@
         &.is-filled {
             + label {
                 color: map-get($color, beta);
-
-                @include rem(top, 4px);
-                @include rem(font-size, 12px);
+                top: rem(4px);
+                font-size: rem(12px);
             }
         }
     }

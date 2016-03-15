@@ -36,9 +36,8 @@
         z-index: 999;
         transition: all map-get($dropdown, transition-duration) map-get($dropdown, transition-delay);
         transform: map-get($dropdown, transform);
-
-        @include rem(min-width, map-get($dropdown, min-width));
-        @include rem(max-width, map-get($dropdown, max-width));
+        min-width: rem(map-get($dropdown, min-width));
+        max-width: rem(map-get($dropdown, max-width));
 
         [data-dropdown-trigger=click] & {
             transition-delay: 0s;
@@ -54,8 +53,7 @@
             display: block;
             border-top: map-get($dropdown, link-border-top);
             color: map-get($color, text);
-
-            @include rem(padding, map-get($dropdown, link-padding));
+            padding: rem(map-get($dropdown, link-padding-vertical)) rem(map-get($dropdown, link-padding-horizontal));
 
             &:hover {
                 background-color: map-get($dropdown, link-bg-color-hover);

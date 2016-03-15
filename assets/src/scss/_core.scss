@@ -39,8 +39,10 @@ Shade is a better way to make a color darker instead of the standard Sass functi
     }
 */
 
+@import "core/functions/rem";
 @import "core/functions/tint";
 @import "core/functions/shade";
+@import "core/functions/strip_units";
 
 
 /*doc
@@ -83,7 +85,6 @@ Includes a font-face rule for a custom local font.
 @import "core/mixins/media_queries";
 @import "core/mixins/grid_column";
 @import "core/mixins/arrow";
-@import "core/mixins/rem";
 @import "core/mixins/font_face";
 
 

@@ -5,22 +5,22 @@
 .padding {
     @each $key, $value in $padding {
         &-#{$key} {
-            @include rem(padding, map-get($padding, $key), true);
+            padding: rem(map-get($padding, $key)) !important;
 
             &-vertical {
-                @include rem(padding-top, map-get($padding, $key), true);
-                @include rem(padding-bottom, map-get($padding, $key), true);
+                padding-top: rem(map-get($padding, $key)) !important;
+                padding-bottom: rem(map-get($padding, $key)) !important;
             }
 
             &-horizontal {
-                @include rem(padding-left, map-get($padding, $key), true);
-                @include rem(padding-right, map-get($padding, $key), true);
+                padding-left: rem(map-get($padding, $key)) !important;
+                padding-right: rem(map-get($padding, $key)) !important;
             }
 
-            &-right   { @include rem(padding-right, map-get($padding, $key), true); }
-            &-left    { @include rem(padding-left, map-get($padding, $key), true); }
-            &-top     { @include rem(padding-top, map-get($padding, $key), true); }
-            &-bottom  { @include rem(padding-bottom, map-get($padding, $key), true); }
+            &-right   { padding-right: rem(map-get($padding, $key)) !important; }
+            &-left    { padding-left: rem(map-get($padding, $key)) !important; }
+            &-top     { padding-top: rem(map-get($padding, $key)) !important; }
+            &-bottom  { padding-bottom: rem(map-get($padding, $key)) !important; }
         }
     }
 }

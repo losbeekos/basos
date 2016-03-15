@@ -16,18 +16,17 @@
     transition: all map-get($base, transition-speed);
     transform-style: preserve-3d;
     backface-visibility: hidden;
+    margin-bottom: rem(map-get($notifications, margin-bottom));
 
     @include notification(map-get($icon, notification-info), map-get($notifications, icon-color-info));
-    @include rem(margin-bottom, map-get($notifications, margin-bottom));
 
     &:before {
         @extend %font-icons;
 
         position: absolute;
+        left: rem(10px);
         top: 0;
-
-        @include rem(left, 10px);
-        @include rem(font-size, 40px);
+        font-size: rem(40px);
     }
 
 

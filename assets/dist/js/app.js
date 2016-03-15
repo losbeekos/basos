@@ -5006,6 +5006,7 @@ app.modals = {
         _targetModal.addClass('modal-show');
 
         //app.settings.$background.scrollTop(_scrollTopPosition);
+        app.modals.setSize(_targetModal);
 
         if (_modalOpenCallback && typeof _modalOpenCallback === 'function') {
             _modalOpenCallback();
@@ -5050,6 +5051,19 @@ app.modals = {
                     modalAjaxContent: data
                 });
             }
+        });
+    },
+
+    setSize: function (_targetModal) {
+        // Adding even width and height
+        // Because of subpixel rendering in Webkit
+        // http://martinkool.com/post/27618832225/beware-of-half-pixels-in-css
+
+        _targetModal.removeAttr('style');
+
+        _targetModal.css({
+            width: (2 * Math.ceil(_targetModal.width() / 2)),
+            height: (2 * Math.ceil(_targetModal.height() / 2))
         });
     }
 };

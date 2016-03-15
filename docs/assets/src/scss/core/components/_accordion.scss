@@ -41,8 +41,7 @@
             top: 50%;
             color: map-get($accordion, trigger-icon-color);
             transform: translate(0, -50%);
-
-            @include rem(right, map-get($accordion, trigger-icon-right));
+            right: rem(map-get($accordion, trigger-icon-right));
 
             .no-csstransforms & {
                 margin-top: -10px;

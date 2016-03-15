@@ -5,9 +5,8 @@
 .breadcrumbs {
     background: map-get($breadcrumbs, bg-color);
     border-radius: map-get($base, border-radius);
-
-    @include rem(padding, map-get($breadcrumbs, padding));
-    @include rem(margin, map-get($breadcrumbs, margin));
+    padding: rem(map-get($breadcrumbs, padding-vertical)) rem(map-get($breadcrumbs, padding-horizontal));
+    margin-bottom: rem(map-get($breadcrumbs, margin-bottom));
 
     a,
     span {
@@ -15,13 +14,12 @@
     }
 
     a {
-        @include rem(margin-right, map-get($breadcrumbs, link-margin));
+        margin-right: rem(map-get($breadcrumbs, link-margin));
 
         &:after {
             content: map-get($breadcrumbs, divider);
             color: map-get($breadcrumbs, divider-color);
-
-            @include rem(margin-left, map-get($breadcrumbs, link-margin));
+            margin-left: rem(map-get($breadcrumbs, link-margin));
         }
     }
 

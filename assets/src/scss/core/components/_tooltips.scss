@@ -53,8 +53,7 @@
         max-width: map-get($tooltip, width);
         padding: map-get($tooltip, padding);
         border-radius: map-get($tooltip, border-radius);
-
-        @include rem(font-size, map-get($tooltip, font-size));
+        font-size: rem(map-get($tooltip, font-size));
 
         &:after {
             position: absolute;

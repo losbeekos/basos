@@ -13,12 +13,11 @@
     &__header {
         background: map-get($pricing-table, header-bg-color);
         color: white;
-
-        @include rem(padding, map-get($pricing-table, header-padding));
+        padding: rem(map-get($pricing-table, header-padding-vertical)) rem(map-get($pricing-table, header-padding-horizontal));
     }
 
     &__content {
-        @include rem(padding, map-get($pricing-table, header-padding));
+        padding: rem(map-get($pricing-table, content-padding-vertical)) rem(map-get($pricing-table, content-padding-horizontal));
 
         &--alpha {
             background: map-get($color, alpha);
@@ -30,18 +29,17 @@
     }
 
     &__price {
-        @include rem(font-size, map-get($pricing-table, price-font-size));
+        font-size: rem(map-get($pricing-table, price-font-size));
     }
 
     &__description {
         color: #999999;
-
-        @include rem(font-size, map-get($pricing-table, description-font-size));
+        font-size: rem(map-get($pricing-table, description-font-size));
     }
 
     &__content--action {
-        @include rem(padding-top, map-get($pricing-table, action-padding-top));
-        @include rem(padding-bottom, map-get($pricing-table, action-padding-bottom));
+        padding-top: rem(map-get($pricing-table, action-padding-top));
+        padding-bottom: rem(map-get($pricing-table, action-padding-bottom));
     }
 }
 

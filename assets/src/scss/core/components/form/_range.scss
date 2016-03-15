@@ -26,9 +26,8 @@
 
 input[type=range] {
     -webkit-appearance: none;
-
-    @include rem(margin-top, 7px);
-    @include rem(width, 300px);
+    margin-top: rem(7px);
+    width: rem(300px);
 
     &:focus {
         outline: none;
@@ -66,8 +65,7 @@ input[type=range] {
 .range-output {
     display: inline-block;
     color: map-get($color, beta);
-
-    @include rem(margin-top, 8px);
+    margin-top: rem(8px);
 }
 
 .rangeslider,
@@ -77,9 +75,8 @@ input[type=range] {
 
 .rangeslider {
     position: relative;
-
-    @include rem(margin-top, 7px);
-    @include rem(width, 300px);
+    margin-top: rem(7px);
+    width: rem(300px);
 }
 
 .rangeslider--disabled {

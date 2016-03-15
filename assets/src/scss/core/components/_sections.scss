@@ -4,18 +4,17 @@
 
 .section {
     color: white;
-
-    @include rem(padding-top, map-get($section, padding-vertical));
-    @include rem(padding-bottom, map-get($section, padding-vertical));
+    padding-top: rem(map-get($section, padding-vertical));
+    padding-bottom: rem(map-get($section, padding-vertical));
 
     @include mq(beta) {
-        @include rem(padding-top, map-get($section, padding-vertical)*1.5);
-        @include rem(padding-bottom, map-get($section, padding-vertical)*1.5);
+        padding-top: rem(map-get($section, padding-vertical)*1.5);
+        padding-bottom: rem(map-get($section, padding-vertical)*1.5);
     }
 
     @include mq(gamma-and-up) {
-        @include rem(padding-top, map-get($section, padding-vertical)*2);
-        @include rem(padding-bottom, map-get($section, padding-vertical)*2);
+        padding-top: rem(map-get($section, padding-vertical)*2);
+        padding-bottom: rem(map-get($section, padding-vertical)*2);
     }
 
     @each $key, $value in $section-bg {
@@ -36,24 +35,23 @@
 .section-img {
     background: url('../dist/img/someimage.jpg') center center fixed;
     background-size: cover;
-
-    @include rem(height, 300px);
+    height: rem(300px);
 
     @include mq(beta) {
-        @include rem(height, 400px);
+        height: rem(400px);
     }
 
     @include mq(gamma-and-up) {
-        @include rem(height, 500px);
+        height: rem(500px);
     }
 }
 
 .section__list {
-    @include rem(margin-bottom, map-get($section, list-margin-bottom));
+    margin-bottom: rem(map-get($section, list-margin-bottom));
 }
 
 .section__paragraph {
-    @include rem(margin-bottom, map-get($section, paragraph-margin-bottom));
+    margin-bottom: rem(map-get($section, paragraph-margin-bottom));
 }
 
 /*doc

@@ -30,11 +30,11 @@ category: Typography
 */
 
 ul {
-    @include rem(padding-left, 18px);
+    padding-left: rem(18px);
 }
 
 ol {
-    @include rem(padding-left, 24px);
+    padding-left: rem(24px);
 }
 
 /*doc
@@ -86,7 +86,6 @@ category: Typography
 
     li {
         display: inline-block;
-
-        @include rem(margin-right, 10px);
+        margin-right: rem(10px);
     }
 }

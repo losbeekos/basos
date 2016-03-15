@@ -10,8 +10,7 @@
 
 .table {
     width: 100%;
-
-    @include rem(margin-bottom, map-get($table, margin-bottom));
+    margin-bottom: rem(map-get($table, margin-bottom));
 
     td,
     th {

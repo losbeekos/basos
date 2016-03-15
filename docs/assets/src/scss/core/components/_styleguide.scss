@@ -35,9 +35,9 @@ h2.styleguide {
     }
 
     &__item {
-        @include rem(font-size, 14px);
-        @include rem(margin-left, 10px);
-        @include rem(margin-top, 5px);
+        font-size: rem(14px);
+        margin-left: rem(10px);
+        margin-top: rem(5px);
     }
 
     &__link {
@@ -50,7 +50,7 @@ h2.styleguide {
 }
 
 .codeBlock {
-    @include rem(margin-bottom, 20px);
+    margin-bottom: rem(20px);
 }
 
 .codeBlock pre {

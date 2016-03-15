@@ -5,8 +5,7 @@
 .toggle {
     overflow: hidden;
     transition: all map-get($base, transition-speed);
-
-    @include rem(max-height, 500px);
+    max-height: rem(500px);
 
     &--no-animation {
         transition: none;

@@ -15,7 +15,7 @@
     overflow-y: auto;
 
     @include mq(beta-and-up) {
-        @include rem(min-width, 500px);
+        min-width: rem(500px);
     }
 
     @include mq(gamma-and-up) {
@@ -46,8 +46,7 @@
         height: 100%;
         transform: scale(0.7);
         transition: all 0.3s;
-
-        @include rem(padding, map-get($modal, content-padding));
+        padding: rem(map-get($modal, content-padding));
 
         .modal-show & {
             opacity: 1;
@@ -82,12 +81,11 @@
         @extend .color-epsilon;
 
         position: absolute;
-
-        @include rem(top, 10px);
-        @include rem(right, 10px);
-        @include rem(padding, 10px);
-        @include rem(font-size, 30px);
-        @include rem(line-height, 30px);
+        top: rem(10px);
+        right: rem(10px);
+        padding: rem(10px);
+        font-size: rem(30px);
+        line-height: rem(30px);
     }
 }
 

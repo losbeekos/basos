@@ -30,7 +30,7 @@
         input[type="time"],
         input[type="url"],
         textarea {
-            @include rem(border-radius, map-get($base, border-radius) map-get($base, border-radius));
+            border-radius: rem(map-get($base, border-radius));
         }
     }
 
@@ -51,8 +51,7 @@
         box-shadow: none;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
-
-        @include rem(padding-right, 30px);
+        padding-right: rem(30px);
 
         &:focus {
             box-shadow: map-get($form, input-focus-box-shadow);
@@ -88,10 +87,9 @@
     position: relative;
     background: map-get($form, validation-color);
     color: white;
-
-    @include rem(border-radius, 0 0 map-get($base, border-radius) map-get($base, border-radius));
-    @include rem(padding, map-get($form, input-padding));
-    @include rem(font-size, map-get($form, validation-font-size));
+    border-radius: 0 0 rem(map-get($base, border-radius)) rem(map-get($base, border-radius));
+    padding: rem(map-get($form, input-padding));
+    font-size: rem(map-get($form, validation-font-size));
 
     .form__input--error & {
         display: block;
@@ -101,13 +99,11 @@
         @extend %arrow;
 
         position: absolute;
-        bottom: 0;
+        bottom: rem(-(map-get($form, validation-arrow-size)*1.5));
         left: 0;
         z-index: 100;
         transform: translateY(100%);
-
-        @include rem(border-radius, 0 map-get($base, border-radius) map-get($base, border-radius) map-get($base, border-radius));
-        @include rem(bottom, -(map-get($form, validation-arrow-size)*1.5));
+        border-radius: 0 rem(map-get($base, border-radius)) rem(map-get($base, border-radius)) rem(map-get($base, border-radius));
     }
 }
 
@@ -116,9 +112,8 @@
         @extend %arrow;
 
         display: inline-block;
-
-        @include rem(border-radius, 0 map-get($base, border-radius) map-get($base, border-radius) map-get($base, border-radius));
-        @include rem(margin-top, map-get($form, validation-arrow-size)*2);
+        margin-top: rem(map-get($form, validation-arrow-size)*2);
+        border-radius: 0 rem(map-get($base, border-radius)) rem(map-get($base, border-radius)) rem(map-get($base, border-radius));
     }
 }
 

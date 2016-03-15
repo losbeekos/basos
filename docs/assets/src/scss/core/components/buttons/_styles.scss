@@ -80,9 +80,9 @@ Add more colors in the settings file under "buttons" if you need to.
     -webkit-appearance: none;
     -moz-appearance: none;
     user-select: none;
+    line-height: rem(map-get($btn, line-height));
 
     @include btn-style(map-get($btn-bg, alpha));
-    @include rem(line-height, map-get($btn, line-height));
 
     @if map-get($btn, gradient) {
         background-image: map-get($btn, gradient-bg);
@@ -344,14 +344,12 @@ category: Buttons
 
     &__action {
         float: left;
-
-        @include rem(border-top-left-radius, 4px);
-        @include rem(border-bottom-left-radius, 4px);
+        border-top-left-radius: rem(4px);
+        border-bottom-left-radius: rem(4px);
 
         .btn-dropdown--action & {
             float: none;
-
-            @include rem(border-radius, 4px);
+            border-radius: rem(4px);
         }
 
         &:before {
@@ -365,8 +363,7 @@ category: Buttons
 
             .btn-dropdown--action & {
                 content: '\e80a';
-
-                @include rem(margin-left, 10px);
+                margin-left: rem(10px);
 
                 // transition: transform map-get($dropdown, transition-duration); // Creates a renderbug in chrome when rotating...
             }
@@ -386,9 +383,8 @@ category: Buttons
         @extend .icon--down;
 
         margin-left: -1px;
-        
-        @include rem(border-top-right-radius, 4px);
-        @include rem(border-bottom-right-radius, 4px);
+        border-top-left-radius: rem(4px);
+        border-bottom-left-radius: rem(4px);
 
         &:before {
             // transition: transform map-get($dropdown, transition-duration); // Creates a renderbug in chrome when rotating...
@@ -413,10 +409,9 @@ category: Buttons
         z-index: 9999;
         transition: all map-get($dropdown, transition-duration);
         transform: map-get($dropdown, transform);
-
-        @include rem(min-width, map-get($dropdown, min-width));
-        @include rem(max-width, map-get($dropdown, max-width));
-        @include rem(border-radius, 4px);
+        min-width: rem(map-get($dropdown, min-width));
+        max-width: rem(map-get($dropdown, max-width));
+        border-radius: rem(4px);
 
         &--right {
             left: inherit;
@@ -436,31 +431,31 @@ category: Buttons
         @extend .list-unstyled;
 
         &--border-bottom {
-            border-bottom: 1px solid #e0e0e0;
+            border-bottom: rem(1px) solid #e0e0e0;
         }
 
         &--padding {
-            @include rem(padding, 14px 16px);
+            padding: rem(14px) rem(16px);
         }
     }
 
     &__item {
-        @include rem(font-size, 14px);
+        font-size: rem(14px);
 
         .btn--small & {
-            @include rem(font-size, map-get($btn, font-size-small));
+            font-size: rem(map-get($btn, font-size-small));
         }
 
         .btn--medium & {
-            @include rem(font-size, map-get($btn, font-size-medium));
+            font-size: rem(map-get($btn, font-size-medium));
         }
 
         .btn--large & {
-            @include rem(font-size, map-get($btn, font-size-large));
+            font-size: rem(map-get($btn, font-size-large));
         }
 
         + .btn-dropdown__item {
-            @include rem(margin-top, 10px);
+            margin-top: rem(10px);
         }
     }
 
@@ -468,9 +463,8 @@ category: Buttons
         background-color: map-get($dropdown, link-bg-color);
         display: block;
         color: map-get($color, text);
-
-        @include rem(padding, map-get($dropdown, link-padding));
-        @include rem(font-size, 14px);
+        font-size: rem(14px);
+        padding: rem(map-get($dropdown, link-padding-vertical)) rem(map-get($dropdown, link-padding-horizontal));
 
         &:hover {
             background-color: map-get($dropdown, link-bg-color-hover);

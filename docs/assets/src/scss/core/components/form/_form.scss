@@ -4,7 +4,8 @@
 
 form {
     @extend .clearfix;
-    @include rem(margin, map-get($form, margin));
+
+    margin: 0 0 rem(map-get($form, margin-bottom)) 0;
 
     &.form--no-margin {
         margin: 0;
@@ -17,10 +18,9 @@ legend {
     padding: 0;
     border: 0;
     border-bottom: map-get($form, legend-border-bottom);
-
-    @include rem(margin-bottom, map-get($form, legend-margin-bottom));
-    @include rem(font-size, map-get($form, legend-font-size));
-    @include rem(line-height, map-get($form, legend-line-height));
+    margin-bottom: rem(map-get($form, legend-margin-bottom));
+    font-size: rem(map-get($form, legend-font-size));
+    line-height: rem(map-get($form, legend-line-height));
 }
 
 input[type="text"],
@@ -42,12 +42,11 @@ textarea {
     border: map-get($form, input-border);
     outline: 0;
     width: 100%;
+    padding: rem(map-get($form, input-padding));
     box-shadow: map-get($form, input-box-shadow);
     transition: all map-get($base, transition-speed);
     -webkit-appearance: none;
     -moz-appearance: none;
-
-    @include rem(padding, map-get($form, input-padding));
 
     &:focus {
         border: map-get($form, input-border);
@@ -84,8 +83,7 @@ category: Forms
 
 textarea {
     display: block;
-
-    @include rem(height, map-get($form, textarea-height));
+    height: rem(map-get($form, textarea-height));
 }
 
 select {
@@ -94,6 +92,7 @@ select {
     background-image: none;
     display: block;
     width: 100%;
+    padding: rem(map-get($form, select-padding-top)) rem(map-get($form, select-padding-right)) rem(map-get($form, select-padding-bottom)) rem(map-get($form, select-padding-left));
     outline: none;
     color: map-get($form, select-color);
     cursor: pointer;
@@ -108,8 +107,6 @@ select {
     text-overflow: '';
     text-indent: 1px;
     // End of brutal hack
-
-    @include rem(padding, map-get($form, select-padding));
 
     &:focus,
     &:hover {

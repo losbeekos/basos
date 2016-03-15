@@ -8,21 +8,20 @@
 
     margin-left: map-get($container, margin-left);
     margin-right: map-get($container, margin-right);
-
-    @include rem(min-width, map-get($container, min-width));
-    @include rem(padding-left, map-get($container, padding));
-    @include rem(padding-right, map-get($container, padding));
-    @include rem(margin-top, map-get($container, margin-top));
-    @include rem(margin-bottom, map-get($container, margin-bottom));
+    min-width: rem(map-get($container, min-width));
+    padding-left: rem(map-get($container, padding));
+    padding-right: rem(map-get($container, padding));
+    margin-top: rem(map-get($container, margin-top));
+    margin-bottom: rem(map-get($container, margin-bottom));
 
     @include mq(beta) {
-        @include rem(padding-left, map-get($container, padding)*2);
-        @include rem(padding-right, map-get($container, padding)*2);
+        padding-left: rem(map-get($container, padding)*2);
+        padding-right: rem(map-get($container, padding)*2);
     }
 
     @include mq(gamma-and-up) {
-        @include rem(padding-left, map-get($container, padding)*4);
-        @include rem(padding-right, map-get($container, padding)*4);
+        padding-left: rem(map-get($container, padding)*4);
+        padding-right: rem(map-get($container, padding)*4);
     }
     
     // No min-width if nested
@@ -33,11 +32,11 @@
 }
 
 .container {
-    @include rem(max-width, map-get($container, max-width));
+    max-width: rem(map-get($container, max-width));
 }
 
 .container-beta {
-    @include rem(max-width, map-get($container, max-width-beta));
+    max-width: rem(map-get($container, max-width-beta));
 }
 
 /*doc

@@ -3,11 +3,11 @@
 */
 
 .notification__text {
-    @include rem(margin-left, 40px);
+    margin-left: rem(40px);
 
     .notification--beta & {
         @include mq(beta-and-up) {
-            @include rem(margin-left, 70px);
+            margin-left: rem(70px);
         }
     }
 }
@@ -20,9 +20,8 @@
     padding: 0;
     background: none;
     border: none;
-
-    @include rem(top, map-get($notifications, close-top));
-    @include rem(right, map-get($notifications, close-right));
+    top: rem(map-get($notifications, close-top));
+    right: rem(map-get($notifications, close-right));
 
     &:before {
         content: map-get($icon, notification-close);

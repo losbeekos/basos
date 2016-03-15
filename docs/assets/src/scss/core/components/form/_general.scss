@@ -14,7 +14,7 @@
     margin-bottom: 0;
 
     label {
-        @include rem(line-height, map-get($form, label-line-height));
+        line-height: rem(map-get($form, label-line-height));
     }
 
     @include mq(beta-and-up) {
@@ -77,9 +77,8 @@ category: Forms
         z-index: 1;
         color: map-get($form, select-icon-color);
         line-height: map-get($form, select-icon-height); // IE10 REM bug
-
-        @include rem(font-size, map-get($form, select-icon-font-size));
-        @include rem(height, map-get($form, select-icon-height));
+        font-size: rem(map-get($form, select-icon-font-size));
+        height: rem(map-get($form, select-icon-height));
 
         .lt-ie10 &,
         .parsley-error &,
@@ -112,7 +111,7 @@ category: Forms
 */
 
 .form__switch {
-    @include rem(margin-top, 5px);
+    margin-top: rem(5px);
 
     input[type=checkbox] {
         &:checked {
@@ -155,12 +154,12 @@ category: Forms
 
 .form__input-list {
     @include mq(beta-and-up) {
-        @include rem(margin-top, map-get($form, input-list-margin-top));
+        margin-top: rem(map-get($form, input-list-margin-top));
     }
 
     li {
         + li {
-            @include rem(margin-top, map-get($form, input-list-item-margin-top));
+            margin-top: rem(map-get($form, input-list-item-margin-top));
         }
     }
 }
@@ -184,7 +183,7 @@ category: Forms
 */
 
 .form__data {
-    @include rem(line-height, map-get($form, label-line-height));
+    line-height: rem(map-get($form, label-line-height));
 }
 
 /*doc
@@ -203,7 +202,7 @@ category: Forms
 */
 
 .form__actions {
-    @include rem(margin-top, map-get($form, actions-margin-top));
+    margin-top: rem(map-get($form, actions-margin-top));
 
     @include mq(beta-and-up) {
         @include pre(map-get($form, actions-pre));
@@ -231,5 +230,5 @@ category: Forms
 */
 
 .form__required-field {
-    @include rem(font-size, map-get($form, required-field-font-size));
+    font-size: rem(map-get($form, required-field-font-size));
 }

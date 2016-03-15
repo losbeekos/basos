@@ -11,7 +11,7 @@
         float: left;
 
         + li {
-            @include rem(margin-left, map-get($tabs, margin-left));
+            margin-left: rem(map-get($tabs, margin-left));
         }
     }
 }
@@ -24,8 +24,7 @@
     border-top-left-radius: map-get($base, border-radius);
     border-top-right-radius: map-get($base, border-radius);
     user-select: none;
-
-    @include rem(padding, map-get($tabs, padding));
+    padding: rem(map-get($tabs, padding-vertical)) rem(map-get($tabs, padding-horizontal));
 
     &:hover {
         background: darken(map-get($tabs, bg-color), 5%);
@@ -45,7 +44,8 @@
 }
 
 .tab-content {
-    @include rem(padding, map-get($tabs, content-padding));
+    padding-top: rem(map-get($tabs, content-padding));
+    padding-bottom: rem(map-get($tabs, content-padding));
 }
 
 .tab-item {

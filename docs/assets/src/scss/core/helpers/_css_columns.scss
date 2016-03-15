@@ -5,10 +5,10 @@
 .css-columns-2,
 .css-columns-3,
 .css-columns-4 {
-    @include rem(column-gap, 20px);
+    column-gap: rem(20px);
 
     @include mq(gamma-and-up) {
-        @include rem(column-gap, 40px);
+        column-gap: rem(40px);
     }
 }
 

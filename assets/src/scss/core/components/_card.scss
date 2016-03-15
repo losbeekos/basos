@@ -14,9 +14,8 @@
         background-position: center center;
         position: relative;
         color: white;
-
-        @include rem(padding, 20px);
-        @include rem(height, 220px);
+        padding: rem(20px);
+        height: rem(220px);
 
         @each $key, $value in $btn-bg {
             &--#{$key} {
@@ -28,20 +27,19 @@
     &__content {
         @extend .clearfix;
 
-        @include rem(padding, 20px);
+        padding: rem(20px);
     }
 
     &__action {
         border: 1px solid darken(map-get($btn-bg, alpha), 5%);
-        @include rem(padding, 20px);
+        padding: rem(20px);
     }
 
     &__title {
         position: absolute;
-        
-        @include rem(bottom, 20px);
-        @include rem(left, 20px);
-        @include rem(font-size, 24px);
+        bottom: rem(20px);
+        left: rem(20px);
+        font-size: rem(24px);
     }
 }
 

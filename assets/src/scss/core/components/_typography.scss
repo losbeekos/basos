@@ -19,47 +19,47 @@ category: Typography
 }
 
 h1, .h1 {
-    @include rem(font-size, 26px);
-    @include rem(margin-bottom, 10px);
+    font-size: rem(26px);
+    margin-bottom: rem(10px);
 
     @include mq(beta) {
-        @include rem(font-size, 30px);
-        @include rem(margin-bottom, 20px);
+        font-size: rem(30px);
+        margin-bottom: rem(20px);
     }
 
     @include mq(gamma-and-up) {
-        @include rem(font-size, 34px);
-        @include rem(margin-bottom, 34px);
+        font-size: rem(34px);
+        margin-bottom: rem(34px);
     }
 }
 
 h2, .h2 {
-    @include rem(font-size, 22px);
-    @include rem(margin-bottom, 10px);
+    font-size: rem(22px);
+    margin-bottom: rem(10px);
 
     @include mq(gamma-and-up) {
-        @include rem(font-size, 26px);
+        font-size: rem(26px);
     }
 }
 
 h3, .h3 {
-    @include rem(font-size, 22px);
-    @include rem(margin-bottom, 10px);
+    font-size: rem(22px);
+    margin-bottom: rem(10px);
 }
 
 h4, .h4 {
-    @include rem(font-size, 18px);
-    @include rem(margin-bottom, 8px);
+    font-size: rem(18px);
+    margin-bottom: rem(8px);
 }
 
 h5, .h5 {
-    @include rem(font-size, 16px);
-    @include rem(margin-bottom, 8px);
+    font-size: rem(16px);
+    margin-bottom: rem(8px);
 }
 
 h6, .h6 {
-    @include rem(font-size, 14px);
-    @include rem(margin-bottom, 5px);
+    font-size: rem(14px);
+    margin-bottom: rem(5px);
 }
 
 /*doc

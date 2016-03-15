@@ -13,10 +13,9 @@
     color: map-get($off-canvas, toggle-color);
     text-align: center;
     border: none;
-
-    @include rem(font-size, map-get($off-canvas, toggle-font-size));
-    @include rem(width, map-get($off-canvas, toggle-width));
-    @include rem(height, map-get($off-canvas, toggle-height));
+    font-size: rem(map-get($off-canvas, toggle-font-size));
+    width: rem(map-get($off-canvas, toggle-width));
+    height: rem(map-get($off-canvas, toggle-height));
 
     &:hover {
         background: lighten(map-get($off-canvas, toggle-bg-color), map-get($off-canvas, toggle-hover-darken));
@@ -31,7 +30,7 @@
 }
 
 .off-canvas-toggle-left {
-    @include rem(right, -(map-get($off-canvas, toggle-width)));
+    right: rem(-(map-get($off-canvas, toggle-width)));
 
     &:before {
         content: map-get($icon, off-canvas-toggle-left);
@@ -43,7 +42,7 @@
 }
 
 .off-canvas-toggle-right {
-    @include rem(left, -(map-get($off-canvas, toggle-width)));
+    left: rem(-(map-get($off-canvas, toggle-width)));
 
     &:before {
         content: map-get($icon, off-canvas-toggle-right);
@@ -59,11 +58,10 @@
     position: fixed;
     z-index: 9999;
     top: 0;
+    width: rem(map-get($off-canvas, width));
     height: 100%;
-
-    @include rem(width, map-get($off-canvas, width));
-    @include rem(padding-top, 10px);
-    @include rem(padding-bottom, 10px);
+    padding-top: rem(10px);
+    padding-bottom: rem(10px);
 
     &--left {
         left: 0;
@@ -164,8 +162,7 @@
 .off-canvas-nav__link {
     display: block;
     color: map-get($off-canvas, link-color);
-
-    @include rem(padding, map-get($off-canvas, link-padding));
+    padding: rem(map-get($off-canvas, link-padding-vertical)) rem(map-get($off-canvas, link-padding-horizontal));
 
     &.active,
     &.scrollspy-nav--active
