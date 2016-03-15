@@ -5,7 +5,7 @@
 .pricing-table {
     @extend .list-unstyled;
 
-    border: 1px solid map-get($pricing-table, border-color);
+    border: rem(1px) solid map-get($pricing-table, border-color);
     text-align: center;
     border-radius:map-get($base, border-radius);
     overflow: hidden;
@@ -24,7 +24,7 @@
         }
 
         + .pricing-table__content {
-            border-top: 1px solid map-get($pricing-table, border-color);
+            border-top: rem(1px) solid map-get($pricing-table, border-color);
         }
     }
 

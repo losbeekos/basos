@@ -17,7 +17,7 @@
         background-color: map-get($accordion, trigger-bg-color);
         color: map-get($accordion, trigger-color);
         padding: map-get($accordion, padding);
-        border-bottom: 1px solid lighten(map-get($accordion, trigger-bg-color), 3%);
+        border-bottom: rem(1px) solid lighten(map-get($accordion, trigger-bg-color), 3%);
 
         @if map-get($accordion, gradient) {
             background-image: map-get($accordion, trigger-gradient-bg);

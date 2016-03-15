@@ -20,7 +20,7 @@
     }
 
     td {
-        border-top: 1px solid map-get($table, border-color);
+        border-top: rem(1px) solid map-get($table, border-color);
     }
 
     &--hover {
@@ -38,11 +38,11 @@
     }
 
     &--bordered {
-        border: 1px solid map-get($table, border-color);
+        border: rem(1px) solid map-get($table, border-color);
 
         td,
         th {
-            border-left: 1px solid map-get($table, border-color);
+            border-left: rem(1px) solid map-get($table, border-color);
 
             &:first-child {
                 border-left: none;

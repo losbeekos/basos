@@ -55,11 +55,11 @@ Add more colors in the settings file under "buttons" if you need to.
     }
 
     .btn-group--inline & {
-        border-left: 1px solid lighten($bg-color, 3%);
+        border-left: rem(1px) solid lighten($bg-color, 3%);
     }
 
     .btn-group--block & {
-        border-top: 1px solid lighten($bg-color, 3%);
+        border-top: rem(1px) solid lighten($bg-color, 3%);
     }
 }
 
@@ -382,7 +382,7 @@ category: Buttons
         @extend .icon;
         @extend .icon--down;
 
-        margin-left: -1px;
+        margin-left: rem(-1px);
         border-top-left-radius: rem(4px);
         border-bottom-left-radius: rem(4px);
 
@@ -401,7 +401,7 @@ category: Buttons
         overflow: hidden;
         position: absolute;
         left: 0;
-        margin-top: 1px;
+        margin-top: rem(1px);
         visibility: hidden;
         background-color: white;
         border: map-get($dropdown, border);

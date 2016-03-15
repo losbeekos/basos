@@ -510,9 +510,9 @@ body {
 
 hr {
   display: block;
-  height: 1px;
+  height: rem(1px);
   border: 0;
-  border-top: 1px solid #ccc;
+  border-top: rem(1px) solid #ccc;
   margin: 1em 0;
   padding: 0; }
 
@@ -949,46 +949,46 @@ Pure CSS ellipsis class
   .hide-alpha-and-beta {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
+    height: 0.0625rem !important;
+    margin: -0.0625rem !important;
     overflow: hidden !important;
     padding: 0 !important;
     position: absolute !important;
-    width: 1px !important; } }
+    width: 0.0625rem !important; } }
 
 @media (min-width: 37.5em) and (max-width: 43.75em) {
   .hide-beta,
   .hide-alpha-and-beta {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
+    height: 0.0625rem !important;
+    margin: -0.0625rem !important;
     overflow: hidden !important;
     padding: 0 !important;
     position: absolute !important;
-    width: 1px !important; } }
+    width: 0.0625rem !important; } }
 
 @media (min-width: 37.5625em) {
   .hide-beta-and-up {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
+    height: 0.0625rem !important;
+    margin: -0.0625rem !important;
     overflow: hidden !important;
     padding: 0 !important;
     position: absolute !important;
-    width: 1px !important; } }
+    width: 0.0625rem !important; } }
 
 @media (min-width: 43.8125em) {
   .hide-gamma-and-up {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
-    height: 1px !important;
-    margin: -1px !important;
+    height: 0.0625rem !important;
+    margin: -0.0625rem !important;
     overflow: hidden !important;
     padding: 0 !important;
     position: absolute !important;
-    width: 1px !important; } }
+    width: 0.0625rem !important; } }
 
 /*doc
 ---
@@ -1078,12 +1078,12 @@ category: Typography
 .show-screenreaders {
   border: 0 !important;
   clip: rect(0 0 0 0) !important;
-  height: 1px !important;
-  margin: -1px !important;
+  height: 0.0625rem !important;
+  margin: -0.0625rem !important;
   overflow: hidden !important;
   padding: 0 !important;
   position: absolute !important;
-  width: 1px !important; }
+  width: 0.0625rem !important; }
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
@@ -3863,7 +3863,7 @@ app.modals.closeModal();
   .card__content {
     padding: 1.25rem; }
   .card__action {
-    border: 1px solid #eaeaea;
+    border: 0.0625rem solid #eaeaea;
     padding: 1.25rem; }
   .card__title {
     position: absolute;
@@ -4199,16 +4199,16 @@ category: Navigation
     text-align: left;
     vertical-align: top; }
   .table td {
-    border-top: 1px solid #eaeaea; }
+    border-top: 0.0625rem solid #eaeaea; }
   .table--hover tr:hover td {
     background: #f6f6f6; }
   .table--zebra tr:nth-child(odd) td {
     background: #f8f8f8; }
   .table--bordered {
-    border: 1px solid #eaeaea; }
+    border: 0.0625rem solid #eaeaea; }
     .table--bordered td,
     .table--bordered th {
-      border-left: 1px solid #eaeaea; }
+      border-left: 0.0625rem solid #eaeaea; }
       .table--bordered td:first-child,
       .table--bordered th:first-child {
         border-left: none; }
@@ -4729,7 +4729,7 @@ Tooltips are used as fancy title attributes to display some info about a certain
     background-color: #f7f7f7;
     color: #555555;
     padding: 15px 20px;
-    border-bottom: 1px solid white; }
+    border-bottom: 0.0625rem solid white; }
     .accordion__trigger:hover {
       background-color: #eaeaea;
       color: #484848; }
@@ -4861,7 +4861,7 @@ category: Navigation
 ==========
 */
 .pricing-table {
-  border: 1px solid #eaeaea;
+  border: 0.0625rem solid #eaeaea;
   text-align: center;
   border-radius: 0;
   overflow: hidden; }
@@ -4874,7 +4874,7 @@ category: Navigation
     .pricing-table__content--alpha {
       background: #f7f7f7; }
     .pricing-table__content + .pricing-table__content {
-      border-top: 1px solid #eaeaea; }
+      border-top: 0.0625rem solid #eaeaea; }
   .pricing-table__price {
     font-size: 1.875rem; }
   .pricing-table__description {
@@ -5490,8 +5490,8 @@ The map is styled with the styles options, the style used for these docs is borr
   max-height: 100%; }
 
 .off-canvas-nav__item {
-  border-top: 1px solid #333333;
-  border-bottom: 1px solid #333333; }
+  border-top: 0.0625rem solid #333333;
+  border-bottom: 0.0625rem solid #333333; }
   .off-canvas-nav__item:first-child {
     border-top: 0; }
   .off-canvas-nav__item:last-child {
@@ -5635,7 +5635,7 @@ This demo site has an off canvas for its menu.
 @media (min-width: 43.8125em) {
     .off-canvas-nav-bar__list {
       clear: both;
-      border-top: 1px solid #3c3c3c;
+      border-top: 0.0625rem solid #3c3c3c;
       max-height: 0;
       overflow: hidden;
       transition: all 0.2s; } }
@@ -5677,8 +5677,8 @@ This demo site has an off canvas for its menu.
 
 @media (max-width: 43.75em) {
   .off-canvas-nav-bar__item {
-    border-top: 1px solid #333333;
-    border-bottom: 1px solid #333333; }
+    border-top: 0.0625rem solid #333333;
+    border-bottom: 0.0625rem solid #333333; }
     .off-canvas-nav-bar__item:first-child {
       border-top: 0; }
     .off-canvas-nav-bar__item:last-child {
@@ -6145,9 +6145,9 @@ Add more colors in the settings file under "buttons" if you need to.
     .btn.btn--ghost.btn--alpha:hover, .btn.btn--ghost.btn--light:hover {
       color: #555555; }
   .btn-group--inline .btn {
-    border-left: 1px solid white; }
+    border-left: 0.0625rem solid white; }
   .btn-group--block .btn {
-    border-top: 1px solid white; }
+    border-top: 0.0625rem solid white; }
   .btn.tooltip {
     overflow: visible; }
   .btn:hover {
@@ -6186,9 +6186,9 @@ Add more colors in the settings file under "buttons" if you need to.
       .btn--mask.btn--ghost.btn--alpha:hover, .btn--mask.btn--ghost.btn--light:hover {
         color: #555555; }
     .btn-group--inline .btn--mask {
-      border-left: 1px solid rgba(8, 8, 8, 0); }
+      border-left: 0.0625rem solid rgba(8, 8, 8, 0); }
     .btn-group--block .btn--mask {
-      border-top: 1px solid rgba(8, 8, 8, 0); }
+      border-top: 0.0625rem solid rgba(8, 8, 8, 0); }
     .btn--mask:hover {
       background-color: #f2f2f2; }
     .btn--mask:active, .btn--mask:focus {
@@ -6217,9 +6217,9 @@ Add more colors in the settings file under "buttons" if you need to.
       .btn--light.btn--ghost.btn--alpha:hover, .btn--light.btn--ghost.btn--light:hover {
         color: #555555; }
     .btn-group--inline .btn--light {
-      border-left: 1px solid white; }
+      border-left: 0.0625rem solid white; }
     .btn-group--block .btn--light {
-      border-top: 1px solid white; }
+      border-top: 0.0625rem solid white; }
   .btn--dark {
     background-color: black;
     border-color: black; }
@@ -6239,9 +6239,9 @@ Add more colors in the settings file under "buttons" if you need to.
       .btn--dark.btn--ghost.btn--alpha:hover, .btn--dark.btn--ghost.btn--light:hover {
         color: #555555; }
     .btn-group--inline .btn--dark {
-      border-left: 1px solid #080808; }
+      border-left: 0.0625rem solid #080808; }
     .btn-group--block .btn--dark {
-      border-top: 1px solid #080808; }
+      border-top: 0.0625rem solid #080808; }
   .btn--alpha {
     background-color: #f7f7f7;
     border-color: #eaeaea; }
@@ -6261,9 +6261,9 @@ Add more colors in the settings file under "buttons" if you need to.
       .btn--alpha.btn--ghost.btn--alpha:hover, .btn--alpha.btn--ghost.btn--light:hover {
         color: #555555; }
     .btn-group--inline .btn--alpha {
-      border-left: 1px solid white; }
+      border-left: 0.0625rem solid white; }
     .btn-group--block .btn--alpha {
-      border-top: 1px solid white; }
+      border-top: 0.0625rem solid white; }
   .btn--beta {
     background-color: #2690b0;
     border-color: #217f9b; }
@@ -6283,9 +6283,9 @@ Add more colors in the settings file under "buttons" if you need to.
       .btn--beta.btn--ghost.btn--alpha:hover, .btn--beta.btn--ghost.btn--light:hover {
         color: #555555; }
     .btn-group--inline .btn--beta {
-      border-left: 1px solid #299abd; }
+      border-left: 0.0625rem solid #299abd; }
     .btn-group--block .btn--beta {
-      border-top: 1px solid #299abd; }
+      border-top: 0.0625rem solid #299abd; }
   .btn--gamma {
     background-color: #26a8b0;
     border-color: #21949b; }
@@ -6305,9 +6305,9 @@ Add more colors in the settings file under "buttons" if you need to.
       .btn--gamma.btn--ghost.btn--alpha:hover, .btn--gamma.btn--ghost.btn--light:hover {
         color: #555555; }
     .btn-group--inline .btn--gamma {
-      border-left: 1px solid #29b4bd; }
+      border-left: 0.0625rem solid #29b4bd; }
     .btn-group--block .btn--gamma {
-      border-top: 1px solid #29b4bd; }
+      border-top: 0.0625rem solid #29b4bd; }
   .btn--delta {
     background-color: #26b0a1;
     border-color: #219b8e; }
@@ -6327,9 +6327,9 @@ Add more colors in the settings file under "buttons" if you need to.
       .btn--delta.btn--ghost.btn--alpha:hover, .btn--delta.btn--ghost.btn--light:hover {
         color: #555555; }
     .btn-group--inline .btn--delta {
-      border-left: 1px solid #29bdad; }
+      border-left: 0.0625rem solid #29bdad; }
     .btn-group--block .btn--delta {
-      border-top: 1px solid #29bdad; }
+      border-top: 0.0625rem solid #29bdad; }
   .btn--epsilon {
     background-color: #333333;
     border-color: #262626; }
@@ -6349,9 +6349,9 @@ Add more colors in the settings file under "buttons" if you need to.
       .btn--epsilon.btn--ghost.btn--alpha:hover, .btn--epsilon.btn--ghost.btn--light:hover {
         color: #555555; }
     .btn-group--inline .btn--epsilon {
-      border-left: 1px solid #3b3b3b; }
+      border-left: 0.0625rem solid #3b3b3b; }
     .btn-group--block .btn--epsilon {
-      border-top: 1px solid #3b3b3b; }
+      border-top: 0.0625rem solid #3b3b3b; }
   .btn--ghost {
     background: transparent;
     border-width: 1px;
@@ -6483,7 +6483,7 @@ category: Buttons
     .btn-dropdown--no-arrow .btn-dropdown__action:after {
       display: none; }
   .btn-dropdown__toggle {
-    margin-left: -1px;
+    margin-left: -0.0625rem;
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem; }
     .btn-dropdown--open .btn-dropdown__toggle:before {
@@ -6493,7 +6493,7 @@ category: Buttons
     overflow: hidden;
     position: absolute;
     left: 0;
-    margin-top: 1px;
+    margin-top: 0.0625rem;
     visibility: hidden;
     background-color: white;
     border: 1px solid #eaeaea;
@@ -6991,12 +6991,12 @@ input[type=radio] {
             user-select: none; }
     .no-borderradius input[type=checkbox] + label, .no-borderradius
     input[type=radio] + label {
-      padding: 0 0 0 5px; }
+      padding: 0 0 0 0.3125rem; }
     input[type=checkbox] + label:before,
     input[type=radio] + label:before {
       position: absolute;
       left: 0;
-      top: -1px;
+      top: -0.0625rem;
       content: '';
       background: #f1f1f1;
       width: 20px;
@@ -7012,7 +7012,7 @@ input[type=radio] {
     input[type=radio] + label:after {
       content: "";
       position: absolute;
-      top: -1px;
+      top: -0.0625rem;
       left: 0;
       width: 20px;
       height: 20px;
@@ -7521,7 +7521,7 @@ category: Forms
     .form__input--floating-label input:focus, .form__input--floating-label input:active {
       border: none;
       box-shadow: none;
-      border-bottom: 1px solid #2690b0; }
+      border-bottom: 0.0625rem solid #2690b0; }
       .form__input--floating-label input:focus + label, .form__input--floating-label input:active + label {
         color: #2690b0;
         top: 0.25rem;
@@ -7538,7 +7538,7 @@ category: Forms
     pointer-events: none;
     position: absolute;
     display: block;
-    top: 24px;
+    top: 1.5rem;
     width: 100%;
     overflow: hidden;
     white-space: nowrap;
@@ -7801,7 +7801,7 @@ You can add your own custom modules here which you'll need for the thing you're 
     content: ""; }
   pre,
   blockquote {
-    border: 1px solid #999;
+    border: 0.0625rem solid #999;
     page-break-inside: avoid; }
   thead {
     display: table-header-group;

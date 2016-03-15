@@ -47,13 +47,13 @@ input[type=radio] {
         user-select: none;
 
         .no-borderradius & {
-            padding: 0 0 0 5px;
+            padding: 0 0 0 rem(5px);
         }
 
         &:before {
             position: absolute;
             left: 0;
-            top: -1px;
+            top: rem(-1px);
             content: '';
             background: map-get($form, checkbox-radio-bg-color);
             width: map-get($form, checkbox-radio-size);
@@ -73,7 +73,7 @@ input[type=radio] {
 
             content: map-get($icon, form-checkbox);
             position: absolute;
-            top: -1px;
+            top: rem(-1px);
             left: 0;
             width: map-get($form, checkbox-radio-size);
             height: map-get($form, checkbox-radio-size);

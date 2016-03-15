@@ -159,7 +159,7 @@
 
         &__list {
             clear: both;
-            border-top: 1px solid lighten(map-get($nav-bar, bg-color), 10%);
+            border-top: rem(1px) solid lighten(map-get($nav-bar, bg-color), 10%);
             max-height: 0;
             overflow: hidden;
             transition: all map-get($base, transition-speed);
@@ -225,8 +225,8 @@
 
 .off-canvas-nav-bar__item {
     @include mq(alpha-and-beta) {
-        border-top: 1px solid map-get($off-canvas, item-border-top-color);
-        border-bottom: 1px solid map-get($off-canvas, item-border-bottom-color);
+        border-top: rem(1px) solid map-get($off-canvas, item-border-top-color);
+        border-bottom: rem(1px) solid map-get($off-canvas, item-border-bottom-color);
 
         &:first-child {
             border-top: 0;
