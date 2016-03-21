@@ -43,6 +43,9 @@ Run BrowserSync to auto reload when dist files change.
 /* Base
 ==========
 */
+/* Vertical rhythm
+==========
+*/
 /* Media queries
 ==========
 */
@@ -493,12 +496,12 @@ button,
 input,
 select,
 textarea {
-  color: #555555; }
+  color: #333333; }
 
 body {
   background: #ffffff;
   font-size: 1em;
-  line-height: 1.4; }
+  line-height: 1.618; }
 
 ::-moz-selection {
   background: #d1e4fe;
@@ -600,6 +603,12 @@ Shade is a better way to make a color darker instead of the standard Sass functi
 /* Rem
 ==========
 */
+/* Modular scale
+==========
+
+You can use this for margins and padding. Standard this is used for typography margin for example.
+
+*/
 /*doc
 ---
 title: Mixins
@@ -634,6 +643,12 @@ Includes a font-face rule for a custom local font.
 @return {Value} - returns compiled font-face rule.
 ````
 
+
+*/
+/* Vertical rhythm
+==========
+
+The ratio is available to break from the standard golden ratio (eg. for headings).
 
 */
 /* Media queries
@@ -914,6 +929,15 @@ Pure CSS ellipsis class
 </div>
 ```
 
+## Break word
+Break a word with a hyphen (hyphen not supported in Blink as of writing).
+
+```html_example
+<div class="break-word" style="width: 200px">
+    Loremipsumdolorsitametconsecteturessenumquamvoluptatumculpa
+</div>
+```
+
 
 */
 /* Clearfix
@@ -944,7 +968,7 @@ Pure CSS ellipsis class
 /* Hide classes
 ==========
 */
-@media (max-width: 37.5em) {
+@media (max-width: 37.4375em) {
   .hide-alpha,
   .hide-alpha-and-beta {
     border: 0 !important;
@@ -956,7 +980,7 @@ Pure CSS ellipsis class
     position: absolute !important;
     width: 0.0625rem !important; } }
 
-@media (min-width: 37.5em) and (max-width: 43.75em) {
+@media (min-width: 37.5em) and (max-width: 43.6875em) {
   .hide-beta,
   .hide-alpha-and-beta {
     border: 0 !important;
@@ -968,7 +992,7 @@ Pure CSS ellipsis class
     position: absolute !important;
     width: 0.0625rem !important; } }
 
-@media (min-width: 37.5625em) {
+@media (min-width: 37.5em) {
   .hide-beta-and-up {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
@@ -979,7 +1003,7 @@ Pure CSS ellipsis class
     position: absolute !important;
     width: 0.0625rem !important; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
   .hide-gamma-and-up {
     border: 0 !important;
     clip: rect(0 0 0 0) !important;
@@ -1449,28 +1473,28 @@ category: Typography
 */
 .text-align-right {
   text-align: right; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     .text-align-right-beta-and-up {
       text-align: right; } }
-  @media (min-width: 43.8125em) {
+  @media (min-width: 43.75em) {
     .text-align-right-gamma-and-up {
       text-align: right; } }
 
 .text-align-left {
   text-align: left; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     .text-align-left-beta-and-up {
       text-align: left; } }
-  @media (min-width: 43.8125em) {
+  @media (min-width: 43.75em) {
     .text-align-left-gamma-and-up {
       text-align: left; } }
 
 .text-align-center {
   text-align: center; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     .text-align-center-beta-and-up {
       text-align: center; } }
-  @media (min-width: 43.8125em) {
+  @media (min-width: 43.75em) {
     .text-align-center-gamma-and-up {
       text-align: center; } }
 
@@ -1571,6 +1595,17 @@ category: Typography
   overflow: hidden;
   text-overflow: ellipsis; }
 
+/* Break word
+==========
+*/
+.break-word {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  word-break: break-word;
+  -ms-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto; }
+
 /* CSS columns
 ==========
 */
@@ -1580,7 +1615,7 @@ category: Typography
   -webkit-column-gap: 1.25rem;
      -moz-column-gap: 1.25rem;
           column-gap: 1.25rem; }
-  @media (min-width: 43.8125em) {
+  @media (min-width: 43.75em) {
     .css-columns-2,
     .css-columns-3,
     .css-columns-4 {
@@ -1588,19 +1623,19 @@ category: Typography
          -moz-column-gap: 2.5rem;
               column-gap: 2.5rem; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
   .css-columns-2 {
     -webkit-column-count: 2;
        -moz-column-count: 2;
             column-count: 2; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
   .css-columns-3 {
     -webkit-column-count: 3;
        -moz-column-count: 3;
             column-count: 3; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
   .css-columns-4 {
     -webkit-column-count: 4;
        -moz-column-count: 4;
@@ -1719,7 +1754,7 @@ Add this class to an element to fire an animation.
 [class|=column] {
   width: 100%;
   margin-bottom: 3.3112582781%; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     [class|=column] {
       float: left;
       margin-left: 3.3112582781%; } }
@@ -1736,7 +1771,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (max-width: 37.5em) {
+@media (max-width: 37.4375em) {
   .column-alpha--first {
     margin-left: 0 !important; }
   .column-alpha-1 {
@@ -1792,7 +1827,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (max-width: 43.75em) {
+@media (max-width: 43.6875em) {
   .column-alpha-and-beta--first {
     margin-left: 0 !important; }
   .column-alpha-and-beta-1 {
@@ -1844,7 +1879,7 @@ Add this class to an element to fire an animation.
     .grid--no-gutters .column-alpha-and-beta-12 {
       width: 100%; } }
 
-@media (min-width: 37.5625em) {
+@media (min-width: 37.5em) {
   .column-beta-and-up--first {
     margin-left: 0 !important; }
   .column-1,
@@ -1996,7 +2031,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (min-width: 37.5em) and (max-width: 43.75em) {
+@media (min-width: 37.5em) and (max-width: 43.6875em) {
   .column-beta--first {
     margin-left: 0 !important; }
   .column-beta-1 {
@@ -2052,7 +2087,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
   .column-gamma-and-up--first {
     margin-left: 0 !important; }
   .column-gamma-and-up-1 {
@@ -2108,7 +2143,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (min-width: 43.75em) and (max-width: 50em) {
+@media (min-width: 43.75em) and (max-width: 49.9375em) {
   .column-gamma--first {
     margin-left: 0 !important; }
   .column-gamma-1 {
@@ -2164,7 +2199,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (min-width: 50.0625em) {
+@media (min-width: 50em) {
   .column-delta-and-up--first {
     margin-left: 0 !important; }
   .column-delta-and-up-1 {
@@ -2220,7 +2255,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (min-width: 50em) and (max-width: 62.5em) {
+@media (min-width: 50em) and (max-width: 62.4375em) {
   .column-delta--first {
     margin-left: 0 !important; }
   .column-delta-1 {
@@ -2276,7 +2311,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (min-width: 62.5625em) {
+@media (min-width: 62.5em) {
   .column-epsilon-and-up--first {
     margin-left: 0 !important; }
   .column-epsilon-and-up-1 {
@@ -2332,7 +2367,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (min-width: 62.5em) and (max-width: 75em) {
+@media (min-width: 62.5em) and (max-width: 74.9375em) {
   .column-epsilon--first {
     margin-left: 0 !important; }
   .column-epsilon-1 {
@@ -2388,7 +2423,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (min-width: 75.0625em) {
+@media (min-width: 75em) {
   .column-zeta-and-up--first {
     margin-left: 0 !important; }
   .column-zeta-and-up-1 {
@@ -2444,7 +2479,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (min-width: 75em) and (max-width: 87.5em) {
+@media (min-width: 75em) and (max-width: 87.4375em) {
   .column-zeta--first {
     margin-left: 0 !important; }
   .column-zeta-1 {
@@ -2500,7 +2535,7 @@ Add this class to an element to fire an animation.
   float: left;
   margin-left: 3.3112582781%; }
 
-@media (min-width: 87.5625em) {
+@media (min-width: 87.5em) {
   .column-eta-and-up--first {
     margin-left: 0 !important; }
   .column-eta-and-up-1 {
@@ -2688,7 +2723,7 @@ The default grid is a 12 columns grid which you can change in the settings, even
 /* Flexible grid
 ==========
 */
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
   .flexible-grid-2 {
     margin-left: -2%;
     margin-right: -2%; } }
@@ -2696,14 +2731,14 @@ The default grid is a 12 columns grid which you can change in the settings, even
 .flexible-grid-2 > * {
   margin-bottom: 4%; }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
   .flexible-grid-2 > * {
     width: 46%;
     margin-left: 2%;
     margin-right: 2%;
     float: left; } }
 
-@media (min-width: 37.5625em) {
+@media (min-width: 37.5em) {
   .flexible-grid-3 {
     margin-left: -1%;
     margin-right: -1%; } }
@@ -2711,21 +2746,21 @@ The default grid is a 12 columns grid which you can change in the settings, even
 .flexible-grid-3 > * {
   margin-bottom: 4%; }
 
-@media (min-width: 37.5625em) {
+@media (min-width: 37.5em) {
   .flexible-grid-3 > * {
     width: 48%;
     margin-left: 1%;
     margin-right: 1%;
     float: left; } }
 
-@media (min-width: 62.5625em) {
+@media (min-width: 62.5em) {
   .flexible-grid-3 > * {
     width: 31.333339%;
     margin-left: 1%;
     margin-right: 1%;
     float: left; } }
 
-@media (min-width: 37.5625em) {
+@media (min-width: 37.5em) {
   .flexible-grid-4 {
     margin-left: -1%;
     margin-right: -1%; } }
@@ -2733,14 +2768,14 @@ The default grid is a 12 columns grid which you can change in the settings, even
 .flexible-grid-4 > * {
   margin-bottom: 4%; }
 
-@media (min-width: 37.5625em) {
+@media (min-width: 37.5em) {
   .flexible-grid-4 > * {
     width: 48%;
     margin-left: 1%;
     margin-right: 1%;
     float: left; } }
 
-@media (min-width: 62.5625em) {
+@media (min-width: 62.5em) {
   .flexible-grid-4 > * {
     width: 23%;
     margin-left: 1%;
@@ -2847,7 +2882,7 @@ html {
 
 body {
   font-family: 'helvetica neue', 'arial', 'verdana', sans-serif;
-  color: #555555;
+  color: #333333;
   font-weight: 300;
   transition: opacity 0.05s ease-in; }
 
@@ -2861,7 +2896,7 @@ a {
   cursor: pointer;
   transition: all 0.2s; }
   a:hover {
-    color: #555555; }
+    color: #333333; }
 
 button {
   transition: all 0.2s; }
@@ -2875,6 +2910,22 @@ svg {
 
 address {
   font-style: normal; }
+
+p,
+ul,
+ol,
+table,
+blockquote {
+  font-size: 0.875rem;
+  line-height: 1.41575rem; }
+  @media (min-width: 37.5em) {
+    p,
+    ul,
+    ol,
+    table,
+    blockquote {
+      font-size: 1rem;
+      line-height: 1.618rem; } }
 
 p {
   margin-top: 0; }
@@ -2899,12 +2950,12 @@ p {
   padding-right: 0.625rem;
   margin-top: 0rem;
   margin-bottom: 0rem; }
-  @media (min-width: 37.5em) and (max-width: 43.75em) {
+  @media (min-width: 37.5em) and (max-width: 43.6875em) {
     .container,
     .container-beta {
       padding-left: 1.25rem;
       padding-right: 1.25rem; } }
-  @media (min-width: 43.8125em) {
+  @media (min-width: 43.75em) {
     .container,
     .container-beta {
       padding-left: 2.5rem;
@@ -2942,11 +2993,11 @@ There are two containers available, 'container' and 'container-beta'. These cont
   color: white;
   padding-top: 1.875rem;
   padding-bottom: 1.875rem; }
-  @media (min-width: 37.5em) and (max-width: 43.75em) {
+  @media (min-width: 37.5em) and (max-width: 43.6875em) {
     .section {
       padding-top: 2.8125rem;
       padding-bottom: 2.8125rem; } }
-  @media (min-width: 43.8125em) {
+  @media (min-width: 43.75em) {
     .section {
       padding-top: 3.75rem;
       padding-bottom: 3.75rem; } }
@@ -2963,16 +3014,16 @@ There are two containers available, 'container' and 'container-beta'. These cont
   .section > .container > *:last-child {
     margin-bottom: 0; }
   .section--alpha {
-    color: #555555; }
+    color: #333333; }
 
 .section-img {
   background: url("../dist/img/someimage.jpg") center center fixed;
   background-size: cover;
   height: 18.75rem; }
-  @media (min-width: 37.5em) and (max-width: 43.75em) {
+  @media (min-width: 37.5em) and (max-width: 43.6875em) {
     .section-img {
       height: 25rem; } }
-  @media (min-width: 43.8125em) {
+  @media (min-width: 43.75em) {
     .section-img {
       height: 31.25rem; } }
 
@@ -3055,49 +3106,51 @@ category: Typography
 ---
 
 */
-.h1,
-h1, .h2,
-h2, .h3,
-h3, .h4,
-h4, .h5,
-h5, .h6,
-h6 {
-  margin-top: 0; }
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin: 0.809rem 0; }
 
 h1, .h1 {
-  font-size: 1.625rem;
-  margin-bottom: 0.625rem; }
-  @media (min-width: 37.5em) and (max-width: 43.75em) {
+  margin: 1.618rem 0;
+  font-size: 1.875rem;
+  line-height: 2.499375rem; }
+  @media (min-width: 37.5em) and (max-width: 43.6875em) {
     h1, .h1 {
-      font-size: 1.875rem;
-      margin-bottom: 1.25rem; } }
-  @media (min-width: 43.8125em) {
+      font-size: 2.1875rem;
+      line-height: 2.9159375rem; } }
+  @media (min-width: 43.75em) {
     h1, .h1 {
-      font-size: 2.125rem;
-      margin-bottom: 2.125rem; } }
+      font-size: 2.5rem;
+      line-height: 3.3325rem; } }
 
 h2, .h2 {
-  font-size: 1.375rem;
-  margin-bottom: 0.625rem; }
-  @media (min-width: 43.8125em) {
+  font-size: 1.5rem;
+  line-height: 2.121rem; }
+  @media (min-width: 37.5em) and (max-width: 43.6875em) {
     h2, .h2 {
-      font-size: 1.625rem; } }
+      font-size: 1.625rem;
+      line-height: 2.29775rem; } }
 
 h3, .h3 {
   font-size: 1.375rem;
-  margin-bottom: 0.625rem; }
+  line-height: 2.22475rem; }
 
 h4, .h4 {
-  font-size: 1.125rem;
-  margin-bottom: 0.5rem; }
+  font-size: 1.25rem;
+  line-height: 2.0225rem; }
 
 h5, .h5 {
-  font-size: 1rem;
-  margin-bottom: 0.5rem; }
+  font-size: 1.125rem;
+  line-height: 1.82025rem; }
 
 h6, .h6 {
-  font-size: 0.875rem;
-  margin-bottom: 0.3125rem; }
+  margin: 0.5393333333rem 0;
+  font-size: 1rem;
+  line-height: 1.618rem; }
 
 /*doc
 ---
@@ -3138,7 +3191,7 @@ category: Typography
   color: #ffffff; }
 
 .color-text {
-  color: #555555; }
+  color: #333333; }
 
 .color-placeholder {
   color: #94adc4; }
@@ -3165,7 +3218,7 @@ category: Typography
   background: #ffffff; }
 
 .bg-color-text {
-  background: #555555; }
+  background: #333333; }
 
 .bg-color-placeholder {
   background: #94adc4; }
@@ -3375,7 +3428,7 @@ h2.styleguide {
 .styleguide-nav__link {
   display: block; }
   .styleguide-nav__link.scrollspy-nav--active {
-    color: #555555; }
+    color: #333333; }
 
 .codeBlock {
   margin-bottom: 1.25rem; }
@@ -3700,10 +3753,10 @@ hll {
   z-index: 2000;
   visibility: hidden;
   overflow-y: auto; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     .modal {
       min-width: 31.25rem; } }
-  @media (min-width: 43.8125em) {
+  @media (min-width: 43.75em) {
     .modal {
       height: auto;
       top: 50%;
@@ -3926,7 +3979,7 @@ You could always remove some elements you won't be using such as action.
   position: relative;
   display: inline-block;
   background: #f7f7f7;
-  color: #888888;
+  color: #666666;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
   -webkit-user-select: none;
@@ -3938,12 +3991,12 @@ You could always remove some elements you won't be using such as action.
     background: #eaeaea; }
   .tab:focus {
     outline: none;
-    color: #555555;
+    color: #333333;
     background: #dedede; }
   .tab.tab--active {
     background: white;
     border-bottom-color: white;
-    color: #555555; }
+    color: #333333; }
 
 .tab-content {
   padding-top: 1.25rem;
@@ -4018,7 +4071,7 @@ category: Content
     left: 0; }
   .no-csspositionsticky .nav-bar {
     position: relative; }
-  @media (min-width: 43.8125em) {
+  @media (min-width: 43.75em) {
     .nav-bar {
       max-height: inherit;
       text-align: left;
@@ -4030,7 +4083,7 @@ category: Content
     margin-bottom: -6px;
     padding-top: 0.75rem;
     min-height: 3.125rem; }
-    @media (min-width: 43.8125em) {
+    @media (min-width: 43.75em) {
       .nav-bar .logo {
         float: left;
         padding-top: 0;
@@ -4043,11 +4096,11 @@ category: Content
     .nav-bar--transform.nav-bar--show {
       -webkit-transform: translate3d(0, 0, 0);
               transform: translate3d(0, 0, 0); }
-    @media (max-width: 37.5em) {
+    @media (max-width: 37.4375em) {
       .nav-bar--transform.nav-bar--always-show-on-mobile {
         -webkit-transform: translate3d(0, 0, 0);
                 transform: translate3d(0, 0, 0); } }
-  @media (min-width: 43.8125em) {
+  @media (min-width: 43.75em) {
     .nav-bar--transparent:not(.nav-bar--fixed) {
       background: transparent; }
       .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
@@ -4066,7 +4119,7 @@ category: Content
     margin-right: auto;
     max-width: 80rem;
     min-width: 16.25rem; }
-    @media (min-width: 43.8125em) {
+    @media (min-width: 43.75em) {
       .nav-bar__container {
         padding-left: 2.5rem;
         padding-right: 2.5rem; } }
@@ -4079,12 +4132,12 @@ category: Content
       z-index: 1;
       width: 100%;
       height: 100%; }
-      @media (min-width: 43.8125em) {
+      @media (min-width: 43.75em) {
         .nav-bar__container:before {
           display: none; } }
   .nav-bar__nav {
     height: 0; }
-    @media (min-width: 43.8125em) {
+    @media (min-width: 43.75em) {
       .nav-bar__nav {
         float: right;
         height: auto;
@@ -4103,7 +4156,7 @@ category: Content
     z-index: 2;
     width: 3.125rem;
     height: 3.125rem; }
-    @media (min-width: 43.8125em) {
+    @media (min-width: 43.75em) {
       .nav-bar__trigger {
         display: none; } }
     .nav-bar__trigger:active, .nav-bar__trigger:hover {
@@ -4123,7 +4176,7 @@ category: Content
     transition: all 0.2s;
     -webkit-transform: translate3d(0, -100%, 0);
             transform: translate3d(0, -100%, 0); }
-    @media (min-width: 43.8125em) {
+    @media (min-width: 43.75em) {
       .nav-bar__list {
         background: transparent;
         -webkit-transform: translate3d(0, 0, 0);
@@ -4137,7 +4190,7 @@ category: Content
     .nav-bar__list li {
       display: block;
       margin: 0; }
-      @media (min-width: 43.8125em) {
+      @media (min-width: 43.75em) {
         .nav-bar__list li {
           display: inline-block;
           margin-right: -4px; } }
@@ -4146,7 +4199,7 @@ category: Content
     color: white;
     text-align: center;
     padding: 1.25rem 1.875rem; }
-    @media (min-width: 43.8125em) {
+    @media (min-width: 43.75em) {
       .nav-bar__link {
         display: inline-block; } }
     .touch .nav-bar__link {
@@ -4518,7 +4571,7 @@ category: Content
       background-color: transparent;
       display: block;
       border-top: 0 solid #f4f4f4;
-      color: #555555;
+      color: #333333;
       padding: 0.625rem 0.9375rem; }
       .dropdown__content a:hover {
         background-color: #f2f2f2; }
@@ -4727,12 +4780,12 @@ Tooltips are used as fancy title attributes to display some info about a certain
     display: block;
     position: relative;
     background-color: #f7f7f7;
-    color: #555555;
+    color: #333333;
     padding: 15px 20px;
     border-bottom: 0.0625rem solid white; }
     .accordion__trigger:hover {
       background-color: #eaeaea;
-      color: #484848; }
+      color: #262626; }
     .accordion-content-show .accordion__trigger {
       background-color: #2690b0;
       color: white; }
@@ -4740,7 +4793,7 @@ Tooltips are used as fancy title attributes to display some info about a certain
       content: "";
       position: absolute;
       top: 50%;
-      color: #555555;
+      color: #333333;
       -webkit-transform: translate(0, -50%);
               transform: translate(0, -50%);
       right: 1.25rem; }
@@ -4936,7 +4989,7 @@ category: Content
   .media__alpha {
     float: left;
     margin-bottom: 1.25rem; }
-    @media (min-width: 37.5625em) {
+    @media (min-width: 37.5em) {
       .media__alpha {
         margin-bottom: 0; } }
     .media--right .media__alpha {
@@ -5518,7 +5571,7 @@ This demo site has an off canvas for its menu.
 /* Off canvas
 ==========
 */
-@media (max-width: 43.75em) {
+@media (max-width: 43.6875em) {
   .off-canvas-nav-bar {
     background: #333333;
     position: fixed;
@@ -5555,7 +5608,7 @@ This demo site has an off canvas for its menu.
       .no-csstransforms3d.off-canvas-show-left .off-canvas-nav-bar--right {
         right: 0; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
   .off-canvas-nav-bar {
     background: #222222;
     width: 100%;
@@ -5572,18 +5625,18 @@ This demo site has an off canvas for its menu.
       left: 0; }
     .no-csspositionsticky .off-canvas-nav-bar {
       position: relative; } }
-  @media (min-width: 43.8125em) and (min-width: 43.8125em) {
+  @media (min-width: 43.75em) and (min-width: 43.75em) {
     .off-canvas-nav-bar {
       max-height: inherit;
       text-align: left; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
     .off-canvas-nav-bar .logo {
       display: inline-block;
       margin-bottom: -6px;
       padding-top: 0.75rem;
       min-height: 3.125rem; } }
-    @media (min-width: 43.8125em) and (min-width: 43.8125em) {
+    @media (min-width: 43.75em) and (min-width: 43.75em) {
       .off-canvas-nav-bar .logo {
         float: left;
         padding-top: 0;
@@ -5591,18 +5644,18 @@ This demo site has an off canvas for its menu.
         margin-top: 1.125rem;
         margin-bottom: 0; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
     .off-canvas-nav-bar--transform {
       -webkit-transform: translate3d(0, -100%, 0);
               transform: translate3d(0, -100%, 0); }
       .off-canvas-nav-bar--transform.nav-bar--show {
         -webkit-transform: translate3d(0, 0, 0);
                 transform: translate3d(0, 0, 0); } }
-    @media (min-width: 43.8125em) and (max-width: 37.5em) {
+    @media (min-width: 43.75em) and (max-width: 37.4375em) {
       .off-canvas-nav-bar--transform.nav-bar--always-show-on-mobile {
         -webkit-transform: translate3d(0, 0, 0);
                 transform: translate3d(0, 0, 0); } }
-  @media (min-width: 43.8125em) and (min-width: 43.8125em) {
+  @media (min-width: 43.75em) and (min-width: 43.75em) {
     .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
       background: transparent; }
       .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
@@ -5613,7 +5666,7 @@ This demo site has an off canvas for its menu.
       .nav-bar--transparent .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
         color: white; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
     .no-csspositionsticky .off-canvas-nav-bar--fixed {
       position: fixed;
       top: 0;
@@ -5623,51 +5676,51 @@ This demo site has an off canvas for its menu.
       margin-right: auto;
       min-width: 16.25rem;
       max-width: 80rem; } }
-    @media (min-width: 43.8125em) and (min-width: 43.8125em) {
+    @media (min-width: 43.75em) and (min-width: 43.75em) {
       .off-canvas-nav-bar__container {
         padding-left: 2.5rem;
         padding-right: 2.5rem; } }
-  @media (min-width: 43.8125em) and (min-width: 43.8125em) {
+  @media (min-width: 43.75em) and (min-width: 43.75em) {
     .off-canvas-nav-bar__nav {
       float: right;
       margin-left: 0rem; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
     .off-canvas-nav-bar__list {
       clear: both;
       border-top: 0.0625rem solid #3c3c3c;
       max-height: 0;
       overflow: hidden;
       transition: all 0.2s; } }
-    @media (min-width: 43.8125em) and (min-width: 43.8125em) {
+    @media (min-width: 43.75em) and (min-width: 43.75em) {
       .off-canvas-nav-bar__list {
         overflow: inherit;
         max-height: inherit;
         float: right;
         border-top: 0; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
       .nav-bar--mobile-show .off-canvas-nav-bar__list {
         max-height: 50rem; }
       .off-canvas-nav-bar__list li {
         display: block;
         margin: 0; } }
-      @media (min-width: 43.8125em) and (min-width: 43.8125em) {
+      @media (min-width: 43.75em) and (min-width: 43.75em) {
         .off-canvas-nav-bar__list li {
           display: inline-block;
           margin-right: -4px; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
     .off-canvas-nav-bar__link {
       display: block;
       color: white;
       text-align: center;
       padding: 1.25rem 1.875rem; } }
-    @media (min-width: 43.8125em) and (min-width: 43.8125em) {
+    @media (min-width: 43.75em) and (min-width: 43.75em) {
       .off-canvas-nav-bar__link {
         display: inline-block; } }
 
-@media (min-width: 43.8125em) {
+@media (min-width: 43.75em) {
       .off-canvas-nav-bar__link:hover {
         background: #3c3c3c;
         color: white; }
@@ -5675,7 +5728,7 @@ This demo site has an off canvas for its menu.
         background: #2690b0;
         color: white; } }
 
-@media (max-width: 43.75em) {
+@media (max-width: 43.6875em) {
   .off-canvas-nav-bar__item {
     border-top: 0.0625rem solid #333333;
     border-bottom: 0.0625rem solid #333333; }
@@ -5684,7 +5737,7 @@ This demo site has an off canvas for its menu.
     .off-canvas-nav-bar__item:last-child {
       border-bottom: 0; } }
 
-@media (max-width: 43.75em) {
+@media (max-width: 43.6875em) {
   .off-canvas-nav-bar__link {
     display: block;
     color: white;
@@ -6015,14 +6068,14 @@ These work with the button classes so you can use those to change color, size is
 
 .btn--medium {
   padding: 0.6875rem 1.25rem; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     .btn--medium {
       padding: 0.6875rem 1.25rem;
       font-size: 0.875rem; } }
 
 .btn--large {
   padding: 0.875rem 1.5625rem; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     .btn--large {
       padding: 1rem 1.875rem;
       font-size: 1rem; } }
@@ -6067,7 +6120,7 @@ Add more colors in the settings file under "buttons" if you need to.
   background-image: none;
   position: relative;
   display: inline-block;
-  color: #555555;
+  color: #333333;
   border-radius: 0;
   border: 0;
   outline: 0;
@@ -6143,7 +6196,7 @@ Add more colors in the settings file under "buttons" if you need to.
       color: white;
       border-color: #f7f7f7; }
     .btn.btn--ghost.btn--alpha:hover, .btn.btn--ghost.btn--light:hover {
-      color: #555555; }
+      color: #333333; }
   .btn-group--inline .btn {
     border-left: 0.0625rem solid white; }
   .btn-group--block .btn {
@@ -6151,7 +6204,7 @@ Add more colors in the settings file under "buttons" if you need to.
   .btn.tooltip {
     overflow: visible; }
   .btn:hover {
-    color: #555555; }
+    color: #333333; }
   .btn:focus {
     outline: none; }
   .btn:disabled, .btn:disabled:hover {
@@ -6184,7 +6237,7 @@ Add more colors in the settings file under "buttons" if you need to.
         color: white;
         border-color: transparent; }
       .btn--mask.btn--ghost.btn--alpha:hover, .btn--mask.btn--ghost.btn--light:hover {
-        color: #555555; }
+        color: #333333; }
     .btn-group--inline .btn--mask {
       border-left: 0.0625rem solid rgba(8, 8, 8, 0); }
     .btn-group--block .btn--mask {
@@ -6215,7 +6268,7 @@ Add more colors in the settings file under "buttons" if you need to.
         color: white;
         border-color: white; }
       .btn--light.btn--ghost.btn--alpha:hover, .btn--light.btn--ghost.btn--light:hover {
-        color: #555555; }
+        color: #333333; }
     .btn-group--inline .btn--light {
       border-left: 0.0625rem solid white; }
     .btn-group--block .btn--light {
@@ -6237,7 +6290,7 @@ Add more colors in the settings file under "buttons" if you need to.
         color: white;
         border-color: black; }
       .btn--dark.btn--ghost.btn--alpha:hover, .btn--dark.btn--ghost.btn--light:hover {
-        color: #555555; }
+        color: #333333; }
     .btn-group--inline .btn--dark {
       border-left: 0.0625rem solid #080808; }
     .btn-group--block .btn--dark {
@@ -6259,7 +6312,7 @@ Add more colors in the settings file under "buttons" if you need to.
         color: white;
         border-color: #f7f7f7; }
       .btn--alpha.btn--ghost.btn--alpha:hover, .btn--alpha.btn--ghost.btn--light:hover {
-        color: #555555; }
+        color: #333333; }
     .btn-group--inline .btn--alpha {
       border-left: 0.0625rem solid white; }
     .btn-group--block .btn--alpha {
@@ -6281,7 +6334,7 @@ Add more colors in the settings file under "buttons" if you need to.
         color: white;
         border-color: #2690b0; }
       .btn--beta.btn--ghost.btn--alpha:hover, .btn--beta.btn--ghost.btn--light:hover {
-        color: #555555; }
+        color: #333333; }
     .btn-group--inline .btn--beta {
       border-left: 0.0625rem solid #299abd; }
     .btn-group--block .btn--beta {
@@ -6303,7 +6356,7 @@ Add more colors in the settings file under "buttons" if you need to.
         color: white;
         border-color: #26a8b0; }
       .btn--gamma.btn--ghost.btn--alpha:hover, .btn--gamma.btn--ghost.btn--light:hover {
-        color: #555555; }
+        color: #333333; }
     .btn-group--inline .btn--gamma {
       border-left: 0.0625rem solid #29b4bd; }
     .btn-group--block .btn--gamma {
@@ -6325,7 +6378,7 @@ Add more colors in the settings file under "buttons" if you need to.
         color: white;
         border-color: #26b0a1; }
       .btn--delta.btn--ghost.btn--alpha:hover, .btn--delta.btn--ghost.btn--light:hover {
-        color: #555555; }
+        color: #333333; }
     .btn-group--inline .btn--delta {
       border-left: 0.0625rem solid #29bdad; }
     .btn-group--block .btn--delta {
@@ -6347,7 +6400,7 @@ Add more colors in the settings file under "buttons" if you need to.
         color: white;
         border-color: #333333; }
       .btn--epsilon.btn--ghost.btn--alpha:hover, .btn--epsilon.btn--ghost.btn--light:hover {
-        color: #555555; }
+        color: #333333; }
     .btn-group--inline .btn--epsilon {
       border-left: 0.0625rem solid #3b3b3b; }
     .btn-group--block .btn--epsilon {
@@ -6356,12 +6409,12 @@ Add more colors in the settings file under "buttons" if you need to.
     background: transparent;
     border-width: 1px;
     border-radius: 5px;
-    color: #555555;
+    color: #333333;
     text-shadow: none;
     opacity: 1; }
     .btn--ghost:hover, .btn--ghost:active, .btn--ghost:focus {
       background: transparent;
-      color: #555555; }
+      color: #333333; }
   .btn--ripple {
     overflow: hidden;
     position: relative; }
@@ -6531,7 +6584,7 @@ category: Buttons
   .btn-dropdown__link {
     background-color: transparent;
     display: block;
-    color: #555555;
+    color: #333333;
     font-size: 0.875rem;
     padding: 0.625rem 0.9375rem; }
     .btn-dropdown__link:hover {
@@ -6646,7 +6699,7 @@ select {
   background-image: none;
   display: block;
   width: 100%;
-  padding: 0.625rem 0.625rem 0.625rem 0.3125rem;
+  padding: 0.625rem 1.875rem 0.625rem 0.625rem;
   outline: none;
   color: #888888;
   cursor: pointer;
@@ -6760,7 +6813,7 @@ Use the grid to your advantage.
   margin-bottom: 0; }
   .form__label label {
     line-height: 2.5rem; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     .form__label {
       text-align: left; } }
   .form--vertical .form__label {
@@ -6810,13 +6863,13 @@ category: Forms
   .form__select:after {
     content: "";
     position: absolute;
-    top: 0;
+    top: 50%;
     right: 10px;
     z-index: 1;
     color: #bbbbbb;
-    line-height: 42px;
     font-size: 0.875rem;
-    height: 2.625rem; }
+    -webkit-transform: translateY(-50%);
+            transform: translateY(-50%); }
     .lt-ie10 .form__select:after,
     .parsley-error .form__select:after,
     .parsley-success .form__select:after {
@@ -6868,7 +6921,7 @@ category: Forms
       border: 1px solid #e0e0e0;
       opacity: 1; }
 
-@media (min-width: 37.5625em) {
+@media (min-width: 37.5em) {
   .form__input-list {
     margin-top: 0.5rem; } }
 
@@ -6911,7 +6964,7 @@ category: Forms
 */
 .form__actions {
   margin-top: 1.25rem; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     .form__actions {
       margin-left: 43.0463576159%; } }
   .form--vertical .form__actions {
@@ -7332,7 +7385,7 @@ name: validation
 category: Forms
 ---
 
-We use the jQuery plugin [parsleyjs](http://parsleyjs.org) for our validation engine.
+We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
 
 ```html_example
 <form class="form" action="?action=ajax" data-form-ajax data-form-ajax-method="GET" data-form-ajax-datatype="json" data-form-ajax-url="form-ajax.json" data-form-ajax-msg-container="#form-message" data-form-validate novalidate="novalidate">
@@ -7661,7 +7714,7 @@ app.notifications.add(target, message, size, type);
 
 .notification--beta {
   padding: 1.25rem 1.25rem 1.25rem 3.75rem; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     .notification--beta {
       padding: 1.875rem 1.875rem 1.875rem 3.75rem;
       min-height: 5.3125rem; }
@@ -7685,7 +7738,7 @@ app.notifications.add(target, message, size, type);
 */
 .notification__text {
   margin-left: 2.5rem; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     .notification--beta .notification__text {
       margin-left: 4.375rem; } }
 
@@ -7762,10 +7815,10 @@ You can add your own custom modules here which you'll need for the thing you're 
   background-size: cover;
   width: 100%;
   height: 12.5rem; }
-  @media (min-width: 37.5625em) {
+  @media (min-width: 37.5em) {
     .header {
       height: 25rem; } }
-  @media (min-width: 62.5625em) {
+  @media (min-width: 62.5em) {
     .header {
       height: 37.5rem; } }
 

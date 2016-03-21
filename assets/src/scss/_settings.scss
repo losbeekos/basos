@@ -3,17 +3,85 @@
     Some properties don't have settings, if you need to change those properties you can change it in the modules themselves.
 */
 
+$ratio : (
+    phi              : 1.618, // Golden
+    double-octave    : 4,
+    major-twelfth    : 3,
+    major-eleventh   : 2.667,
+    major-tenth      : 2.5,
+    octave           : 2,
+    major-seventh    : 1.875,
+    minor-seventh    : 1.778,
+    major-sixth      : 1.667,
+    minor-sixth      : 1.6,
+    fifth            : 1.5,
+    augmented-fourth : 1.414,
+    fourth           : 1.333,
+    major-third      : 1.25,
+    minor-third      : 1.2,
+    major-second     : 1.125,
+    minor-second     : 1.067
+);
+
 /* Base
 ==========
 */
 
 $base: (
-    gradient         : false,
-    font-size-num    : 16,
     font-size        : 16px,
+    line-height      : 16px * map-get($ratio, phi),
+    vr-scale         : map-get($ratio, phi),
     padding          : 10px,
     border-radius    : 0,
-    transition-speed : 0.2s
+    transition-speed : 0.2s,
+    gradient         : false
+);
+
+
+/* Vertical rhythm
+==========
+*/
+
+$p-font-size: (
+    null        : 14px,
+    beta-and-up : 16px
+);
+
+$h1-font-size: (
+    null         : 30px,
+    beta         : 35px,
+    gamma-and-up : 40px
+);
+
+$h2-font-size: (
+    null         : 24px,
+    beta         : 26px
+);
+
+$h3-font-size: (
+    null         : 22px,
+);
+
+$h4-font-size: (
+    null         : 20px
+);
+
+$h5-font-size: (
+    null         : 18px
+);
+
+$h6-font-size: (
+    null         : 16px
+);
+
+$modular-scale: (
+    -2 : map-get($base, line-height) / 3,
+    -1 : map-get($base, line-height) / 2,
+    0  : map-get($base, line-height),
+    1  : map-get($base, line-height) * 2,
+    2  : map-get($base, line-height) * 3,
+    3  : map-get($base, line-height) * 4,
+    4  : map-get($base, line-height) * 5
 );
 
 
@@ -22,19 +90,19 @@ $base: (
 */
 
 $mq: (
-    alpha          : "(max-width: 37.5em)", // 600px
-    alpha-and-beta : "(max-width: 43.75em)", // 700px
-    beta-and-up    : "(min-width: 37.5625em)", // 601px
-    beta           : "(min-width: 37.5em) and (max-width: 43.75em)", // 600px and 700px
-    gamma-and-up   : "(min-width: 43.8125em)", // 701px
-    gamma          : "(min-width: 43.75em) and (max-width: 50em)", // 700px and 800px
-    delta-and-up   : "(min-width: 50.0625em)", // 801px
-    delta          : "(min-width: 50em) and (max-width: 62.5em)", // 800px and 1000px
-    epsilon-and-up : "(min-width: 62.5625em)", // 1001px
-    epsilon        : "(min-width: 62.5em) and (max-width: 75em)",  // 1000px and 1200px
-    zeta-and-up    : "(min-width: 75.0625em)", // 1201px
-    zeta           : "(min-width: 75em) and (max-width: 87.5em)", //  1200px and 1400px
-    eta-and-up     : "(min-width: 87.5625em)" // 1401px
+    alpha          : "(max-width: 37.4375em)", // 599px
+    alpha-and-beta : "(max-width: 43.6875em)", // 699px
+    beta-and-up    : "(min-width: 37.5em)", // 600px
+    beta           : "(min-width: 37.5em) and (max-width: 43.6875em)", // 600px and 599px
+    gamma-and-up   : "(min-width: 43.75em)", // 768px
+    gamma          : "(min-width: 43.75em) and (max-width: 49.9375em)", // 700px and 799px
+    delta-and-up   : "(min-width: 50em)", // 800px
+    delta          : "(min-width: 50em) and (max-width: 62.4375em)", // 800px and 999px
+    epsilon-and-up : "(min-width: 62.5em)", // 1000px
+    epsilon        : "(min-width: 62.5em) and (max-width: 74.9375em)",  // 1000px and 1199px
+    zeta-and-up    : "(min-width: 75em)", // 1200px
+    zeta           : "(min-width: 75em) and (max-width: 87.4375em)", //  1200px and 1399px
+    eta-and-up     : "(min-width: 87.5em)" // 1400px
 );
 
 
@@ -44,7 +112,7 @@ $mq: (
 
 $color: (
     body       : #ffffff,
-    text       : #555555,
+    text       : #333333,
     placeholder: #94adc4,
     selection  : #d1e4fe,
     alpha      : #f7f7f7,
@@ -239,7 +307,7 @@ $icon: (
 */
 
 $form: (
-    margin-bottom                            : 40px,
+    margin-bottom                     : 40px,
 
     legend-border-bottom              : 1px solid #e5e5e5,
     legend-margin-bottom              : 20px,
@@ -260,15 +328,14 @@ $form: (
 
     select-color                      : #888888,
     select-padding-top                : 10px,
-    select-padding-right              : 10px,
+    select-padding-right              : 30px,
     select-padding-bottom             : 10px,
-    select-padding-left               : 5px,
+    select-padding-left               : 10px,
     select-hover-box-shadow           : 0 0 15px rgba(0, 0, 0, 0.2),
     select-multiple-box-shadow        : 0 0 1px rgba(0, 0, 0, 0.1),
     select-icon-color                 : #bbbbbb,
     select-icon-height                : 42px,
     select-icon-font-size             : 14px,
-    select-icon-top                   : 0,
     select-icon-right                 : 10px,
 
     switch-width                      : 30px,

@@ -124,7 +124,7 @@ name: validation
 category: Forms
 ---
 
-We use the jQuery plugin [parsleyjs](http://parsleyjs.org) for our validation engine.
+We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
 
 ```html_example
 <form class="form" action="?action=ajax" data-form-ajax data-form-ajax-method="GET" data-form-ajax-datatype="json" data-form-ajax-url="form-ajax.json" data-form-ajax-msg-container="#form-message" data-form-validate novalidate="novalidate">

@@ -7,59 +7,41 @@ category: Typography
 
 */
 
-%heading {
-    margin-top: 0;
-}
-
-@for $i from 1 through 6 {
-    .h#{$i},
-    h#{$i} {
-        @extend %heading;
-    }
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+    margin: ms(-1) 0;
 }
 
 h1, .h1 {
-    font-size: rem(26px);
-    margin-bottom: rem(10px);
+    margin: ms(0) 0;
 
-    @include mq(beta) {
-        font-size: rem(30px);
-        margin-bottom: rem(20px);
-    }
-
-    @include mq(gamma-and-up) {
-        font-size: rem(34px);
-        margin-bottom: rem(34px);
-    }
+    @include vr($h1-font-size, map-get($ratio, fourth));
 }
 
 h2, .h2 {
-    font-size: rem(22px);
-    margin-bottom: rem(10px);
-
-    @include mq(gamma-and-up) {
-        font-size: rem(26px);
-    }
+    @include vr($h2-font-size, map-get($ratio, augmented-fourth));
 }
 
 h3, .h3 {
-    font-size: rem(22px);
-    margin-bottom: rem(10px);
+    @include vr($h3-font-size);
 }
 
 h4, .h4 {
-    font-size: rem(18px);
-    margin-bottom: rem(8px);
+    @include vr($h4-font-size);
 }
 
 h5, .h5 {
-    font-size: rem(16px);
-    margin-bottom: rem(8px);
+    @include vr($h5-font-size);
 }
 
 h6, .h6 {
-    font-size: rem(14px);
-    margin-bottom: rem(5px);
+    margin: ms(-2) 0;
+
+    @include vr($h6-font-size);
 }
 
 /*doc

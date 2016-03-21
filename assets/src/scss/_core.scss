@@ -43,6 +43,7 @@ Shade is a better way to make a color darker instead of the standard Sass functi
 @import "core/functions/tint";
 @import "core/functions/shade";
 @import "core/functions/strip_units";
+@import "core/functions/modular_scale";
 
 
 /*doc
@@ -82,6 +83,7 @@ Includes a font-face rule for a custom local font.
 
 */
 
+@import "core/mixins/vertical_rhythm";
 @import "core/mixins/media_queries";
 @import "core/mixins/grid_column";
 @import "core/mixins/arrow";
@@ -324,6 +326,15 @@ Pure CSS ellipsis class
 </div>
 ```
 
+## Break word
+Break a word with a hyphen (hyphen not supported in Blink as of writing).
+
+```html_example
+<div class="break-word" style="width: 200px">
+    Loremipsumdolorsitametconsecteturessenumquamvoluptatumculpa
+</div>
+```
+
 
 */
 
@@ -344,6 +355,7 @@ Pure CSS ellipsis class
 @import "core/helpers/position";
 @import "core/helpers/display";
 @import "core/helpers/ellipsis";
+@import "core/helpers/break_word";
 @import "core/helpers/css_columns";
 
 

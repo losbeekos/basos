@@ -1,0 +1,38 @@
+/* Vertical rhythm
+==========
+
+The ratio is available to break from the standard golden ratio (eg. for headings).
+
+*/
+
+@mixin vr($map, $ratio: undefined) {
+    @each $mq in map-keys($map) {
+        $fs: map-get($map, $mq);
+
+        @if $mq == null {
+            @include vertical-rhythm($fs, $ratio);
+        }
+        @else {
+            @include mq($mq) {
+                @include vertical-rhythm($fs, $ratio);
+            }
+        }
+    }
+}
+
+// Utility function for mixin vertical-rhythm
+@mixin vertical-rhythm($font-size, $ratio) {
+    @if $ratio == undefined {
+        $lineHeight: map-get($base, vr-scale) * $font-size;
+    }
+    @else {
+        $lineHeight: $ratio * $font-size;
+    }
+
+    @while $lineHeight < 1 {
+        $lineHeight: $lineHeight + $lineHeight;
+    }
+
+    font-size: rem($font-size);
+    line-height: rem($lineHeight);
+}

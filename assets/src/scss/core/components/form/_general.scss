@@ -72,13 +72,12 @@ category: Forms
 
         content: map-get($icon, form-select);
         position: absolute;
-        top: map-get($form, select-icon-top);
+        top: 50%;
         right: map-get($form, select-icon-right);
         z-index: 1;
         color: map-get($form, select-icon-color);
-        line-height: map-get($form, select-icon-height); // IE10 REM bug
         font-size: rem(map-get($form, select-icon-font-size));
-        height: rem(map-get($form, select-icon-height));
+        transform: translateY(-50%);
 
         .lt-ie10 &,
         .parsley-error &,
