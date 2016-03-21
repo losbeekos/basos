@@ -3425,8 +3425,8 @@ a.styleguide {
 
 .styleguide-nav__sub {
   background: #282a2c;
-  padding-top: 0.3125rem;
-  padding-bottom: 0.3125rem; }
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem; }
 
 .styleguide-nav__category {
   display: block; }

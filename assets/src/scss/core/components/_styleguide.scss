@@ -36,8 +36,8 @@ a.styleguide {
 
     &__sub {
         background: tint(map-get($color, epsilon), 5%);
-        padding-top: rem(5px);
-        padding-bottom: rem(5px);
+        padding-top: rem(10px);
+        padding-bottom: rem(10px);
     }
 
     &__category {
