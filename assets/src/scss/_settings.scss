@@ -48,9 +48,9 @@ $p-font-size: (
 );
 
 $h1-font-size: (
-    null         : 30px,
-    beta         : 35px,
-    gamma-and-up : 40px
+    null         : 26px,
+    beta         : 30px,
+    gamma-and-up : 34px
 );
 
 $h2-font-size: (
@@ -116,10 +116,10 @@ $color: (
     placeholder: #94adc4,
     selection  : #d1e4fe,
     alpha      : #f7f7f7,
-    beta       : #2690b0,
-    gamma      : #26a8b0,
-    delta      : #26b0a1,
-    epsilon    : #333333
+    beta       : #363d50,
+    gamma      : #6c5B66,
+    delta      : #78757a,
+    epsilon    : #1d1f21
 );
 
 $color-networks: (
@@ -318,7 +318,7 @@ $form: (
 
     input-color                       : #333333,
     input-border                      : 1px solid #e0e0e0,
-    input-box-shadow                  : 0 -1px 0 rgba(0, 0, 0, 0.1),
+    input-box-shadow                  : 0,
     input-padding                     : 10px,
     input-focus-border                : 1px solid #cccccc,
     input-focus-box-shadow            : 0 0 10px rgba(0, 0, 0, 0.2),
@@ -399,8 +399,8 @@ $notifications: (
 
 $nav-bar: (
     mq                      : gamma-and-up,
-    bg-color                : #222222,
-    trigger-bg-color        : #222222,
+    bg-color                : map-get($color, epsilon),
+    trigger-bg-color        : map-get($color, epsilon),
     trigger-float           : right,
     trigger-height          : 50px,
     trigger-font-size       : 30px,
@@ -419,13 +419,13 @@ $nav-bar: (
 
 $off-canvas: (
     width                    : 260px,
-    bg-color                 : #333333,
-    item-border-top-color    : #333333,
-    item-border-bottom-color : #333333,
+    bg-color                 : map-get($color, epsilon),
+    item-border-top-color    : map-get($color, epsilon),
+    item-border-bottom-color : map-get($color, epsilon),
     link-padding-vertical    : 10px,
     link-padding-horizontal  : 20px,
     link-color               : white,
-    toggle-bg-color          : #333333,
+    toggle-bg-color          : map-get($color, epsilon),
     toggle-color             : white,
     toggle-font-size         : 30px,
     toggle-width             : 50px,

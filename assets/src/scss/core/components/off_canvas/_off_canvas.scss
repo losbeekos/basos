@@ -2,6 +2,12 @@
 ==========
 */
 
+.off-canvas-body {
+    @include mq(epsilon-and-up) {
+        padding-left: rem(map-get($off-canvas, width));
+    }
+}
+
 .off-canvas-toggle-left,
 .off-canvas-toggle-right {
     @extend %font-icons;
@@ -16,6 +22,10 @@
     font-size: rem(map-get($off-canvas, toggle-font-size));
     width: rem(map-get($off-canvas, toggle-width));
     height: rem(map-get($off-canvas, toggle-height));
+
+    @include mq(epsilon-and-up) {
+        display: none;
+    }
 
     &:hover {
         background: lighten(map-get($off-canvas, toggle-bg-color), map-get($off-canvas, toggle-hover-darken));
@@ -68,6 +78,10 @@
         transform: translate3d(-#{map-get($off-canvas, width)}, 0, 0);
         transition: transform map-get($base, transition-speed);
 
+        @include mq(epsilon-and-up) {
+            transform: translateX(0);
+        }
+
         .off-canvas-show-left & {
             transform: translate3d(0, 0, 0);
         }
@@ -103,7 +117,7 @@
         color: white;
 
         &:hover {
-            color: map-get($color, delta);
+            color: tint(map-get($off-canvas, bg-color), 70%);
         }
     }
 }
@@ -159,15 +173,24 @@
     }
 }
 
+.off-canvas-nav__header {
+    color: white;
+    padding: rem(20px) rem(20px) rem(10px) rem(20px);
+    font-weight: bold;
+    font-size: rem(18px);
+    text-transform: uppercase;
+}
+
 .off-canvas-nav__link {
     display: block;
     color: map-get($off-canvas, link-color);
     padding: rem(map-get($off-canvas, link-padding-vertical)) rem(map-get($off-canvas, link-padding-horizontal));
 
+    &--active,
     &.active,
-    &.scrollspy-nav--active
-    &:hover {
-        background: lighten(map-get($off-canvas, bg-color), 3%);
+    &.scrollspy-nav--active {
+        background: tint(map-get($off-canvas, bg-color), 10%);
+        font-weight: 400;
     }
 }
 

@@ -52,13 +52,14 @@
     <script src="bower_components/picturefill/dist/picturefill.js" async></script>
 </head>
 
-  <body class="cortana-body"  ng-controller="MainController">
+  <body class="off-canvas-body cortana-body"  ng-controller="MainController">
 
       <div id="background" class="background">
 
         <div id="off-canvas-left" class="off-canvas off-canvas--left">
             <button id="off-canvas-toggle-left" class="off-canvas-toggle-left"></button>
             <nav class="off-canvas-nav">
+                <div class="off-canvas-nav__header">Basos docs</div>
                 <ul class="list-unstyled">
                 
                     <li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="index.html">Getting started</a>
@@ -92,7 +93,7 @@
                     <li class="off-canvas-nav__item"><a class="off-canvas-nav__link off-canvas-nav__link--active" href="typography.html">Typography</a>
                     
                         
-                        <ul class="list-unstyled margin-gamma-bottom margin-gamma-left">
+                        <ul class="styleguide-nav__sub list-unstyled">
                             
                                 
                             
@@ -132,12 +133,6 @@
                 </ul>
             </nav>
         </div>
-
-        <header class="section section--delta off-canvas-push">
-            <div class="container text-align-center">
-                <h1>Basos documentation</h1>
-            </div>
-        </header>
 
         <div id="container" class="container off-canvas-push">
 

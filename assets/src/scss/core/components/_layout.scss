@@ -39,8 +39,12 @@ a {
     transition: all map-get($base, transition-speed);
 
     &:hover {
-        color: map-get($color, text);
+        color: tint(map-get($color, beta), 40%);
     }
+}
+
+a:not([class]) {
+    text-decoration: underline;
 }
 
 button {
