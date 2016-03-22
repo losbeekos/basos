@@ -37,8 +37,8 @@ category: Navigation
 
 ```html_example
 <div class="breadcrumbs">
-    <a href="#">Home</a>
-    <a href="#">Lorem</a>
+    <a class="breadcrubs__link" href="#">Home</a>
+    <a class="breadcrubs__link" href="#">Lorem</a>
     <span>Ipsum dolir asmit emet</span>
 </div>
 ```

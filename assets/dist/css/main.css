@@ -3445,9 +3445,24 @@ a.styleguide {
   .styleguide-nav__link.scrollspy-nav--active {
     color: #333333; }
 
+.exampleOutput {
+  position: relative;
+  padding: 3.375rem 1.25rem 1.25rem 1.25rem;
+  border-top: 1px solid #dedede; }
+  .exampleOutput:after {
+    content: 'Example';
+    background: #f7f7f7;
+    border: 1px solid #dedede;
+    border-top: 0;
+    padding: 0.3125rem 0.625rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    font-size: 0.875rem;
+    color: #888888; }
+
 .codeBlock {
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem; }
+  margin-bottom: 3.75rem; }
 
 .codeBlock pre {
   margin-top: 0;
@@ -4976,8 +4991,8 @@ category: Navigation
 
 ```html_example
 <div class="breadcrumbs">
-    <a href="#">Home</a>
-    <a href="#">Lorem</a>
+    <a class="breadcrubs__link" href="#">Home</a>
+    <a class="breadcrubs__link" href="#">Lorem</a>
     <span>Ipsum dolir asmit emet</span>
 </div>
 ```

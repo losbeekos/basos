@@ -54,9 +54,27 @@ a.styleguide {
     }
 }
 
+.exampleOutput {
+    position: relative;
+    padding: rem(54px) rem(20px) rem(20px) rem(20px);
+    border-top: 1px solid shade(map-get($color, alpha), 10%);
+
+    &:after {
+        content: 'Example';
+        background: map-get($color, alpha);
+        border: 1px solid shade(map-get($color, alpha), 10%);
+        border-top: 0;
+        padding: rem(5px) rem(10px);
+        position: absolute;
+        top: 0;
+        left: 0;
+        font-size: rem(14px);
+        color: shade(map-get($color, alpha), 45%);
+    }
+}
+
 .codeBlock {
-    margin-top: rem(20px);
-    margin-bottom: rem(20px);
+    margin-bottom: rem(60px);
 }
 
 .codeBlock pre {
