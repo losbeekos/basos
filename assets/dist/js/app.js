@@ -4196,13 +4196,15 @@ app.affix = {
             affixOffsetTop = _el.attr('data-affix-offset'),
             bottomTrigger = (($container.offset().top + $container.height()) - _el.height());
 
-        if (app.navBar.settings.$el.length > 0) {
+        if (app.navBar.settings.$el.length > 0 && app.navBar.settings.$el.hasClass('app nav-bar--fixed')) {
             bottomTrigger = (bottomTrigger - app.navBar.settings.navBarHeight);
         }
 
         if (_scrollTop >= affixOffsetTop && _scrollTop < bottomTrigger && _el.height() < $container.height()) {
             _el.addClass('affix--fixed').removeClass('affix--absolute');
-            _el.css({top: app.affix.settings.$navBar.height()});
+
+             app.navBar.settings.$el.hasClass('app nav-bar--fixed') ? _el.css({top: app.affix.settings.$navBar.height()}) : _el.css({top: 0});
+
         } else if (_scrollTop >= bottomTrigger && _el.height() < $container.height()) {
             _el.removeClass('affix--fixed').addClass('affix--absolute');
         } else {
@@ -4218,7 +4220,7 @@ app.affix = {
                 offsetTop = $this.closest('.affix-container').offset().top;
 
             if (affixHeight < app.settings.windowHeight) {
-                if (app.navBar.settings.$el.length > 0) {
+                if (app.navBar.settings.$el.length > 0 && app.navBar.settings.$el.hasClass('app nav-bar--fixed')) {
                     offsetTop = (offsetTop - app.affix.settings.$navBar.height());
                 }
 

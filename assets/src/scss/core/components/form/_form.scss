@@ -42,8 +42,8 @@ textarea {
     border: map-get($form, input-border);
     outline: 0;
     width: 100%;
-    padding: rem(map-get($form, input-padding));
-    box-shadow: map-get($form, input-box-shadow);
+    padding: rem(map-get($form, input-padding-vertical)) rem(map-get($form, input-padding-horizontal));
+    font-size: rem(14px);
     transition: all map-get($base, transition-speed);
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -98,6 +98,7 @@ select {
     cursor: pointer;
     z-index: 2;
     border: none;
+    font-size: rem(14px);
     transition: box-shadow map-get($base, transition-speed);
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -108,8 +109,7 @@ select {
     text-indent: 1px;
     // End of brutal hack
 
-    &:focus,
-    &:hover {
+    &:focus {
         box-shadow: map-get($form, select-hover-box-shadow);
     }
 

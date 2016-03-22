@@ -202,12 +202,12 @@ $btn: (
     padding-small-vertical           : 8px,
     padding-small-horizontal         : 20px,
 
-    padding-medium-vertical          : 11px,
+    padding-medium-vertical          : 13px,
     padding-medium-horizontal        : 20px,
-    padding-medium-beta-vertical     : 11px,
+    padding-medium-beta-vertical     : 13px,
     padding-medium-beta-horizontal   : 20px,
 
-    padding-large-vertical           : 14px,
+    padding-large-vertical           : 15px,
     padding-large-horizontal         : 25px,
     padding-large-beta-vertical      : 16px,
     padding-large-beta-horizontal    : 30px,
@@ -318,8 +318,8 @@ $form: (
 
     input-color                       : #333333,
     input-border                      : 1px solid #e0e0e0,
-    input-box-shadow                  : 0,
-    input-padding                     : 10px,
+    input-padding-vertical            : 10px,
+    input-padding-horizontal          : 10px,
     input-focus-border                : 1px solid #cccccc,
     input-focus-box-shadow            : 0 0 10px rgba(0, 0, 0, 0.2),
     input-disabled-bg-color           : #f1f1f1,

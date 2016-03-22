@@ -3,9 +3,7 @@
 */
 
 [data-scrollspy] {
-    .csstransitions & {
-        opacity: 0;
-    }
+    opacity: 0;
 
     &.scrollspy--in-view {
         opacity: 1;

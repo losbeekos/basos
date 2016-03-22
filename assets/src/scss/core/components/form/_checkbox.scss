@@ -31,6 +31,7 @@ input[type=radio] {
     &:checked {
         + label:after {
             opacity: 1;
+            transform: scale(1);
         }
     }
 
@@ -45,6 +46,7 @@ input[type=radio] {
         cursor: pointer;
         padding-left: map-get($form, checkbox-radio-size)+10;
         user-select: none;
+        font-size: rem(14px);
 
         .no-borderradius & {
             padding: 0 0 0 rem(5px);
@@ -81,7 +83,8 @@ input[type=radio] {
             text-align: center;
             color: map-get($color, beta);
             opacity: 0;
-            transition: all map-get($base, transition-speed);
+            transform: scale(0);
+            transition: all map-get($base, transition-speed) ease-out;
 
             .no-borderradius & {
                 display: none;

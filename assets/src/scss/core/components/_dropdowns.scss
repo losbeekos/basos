@@ -91,11 +91,11 @@ category: Content
 <div class="dropdown" data-dropdown-trigger="click">
     <a class="btn btn--alpha btn--small">dropdown</a>
     <div class="dropdown__content">
-        <ul>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
+        <ul class="dropdown__list">
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
         </ul>
     </div>
 </div>
@@ -107,11 +107,11 @@ category: Content
 <div class="dropdown dropdown--right">
     <a class="btn btn--alpha btn--small">dropdown</a>
     <div class="dropdown__content">
-        <ul>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
+        <ul class="dropdown__list">
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
         </ul>
     </div>
 </div>

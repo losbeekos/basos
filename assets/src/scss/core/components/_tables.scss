@@ -9,6 +9,7 @@
 // }
 
 .table {
+    border-collapse: collapse;
     margin-bottom: rem(map-get($table, margin-bottom));
 
     td,

@@ -88,7 +88,7 @@
     background: map-get($form, validation-color);
     color: white;
     border-radius: 0 0 rem(map-get($base, border-radius)) rem(map-get($base, border-radius));
-    padding: rem(map-get($form, input-padding));
+    padding: rem(map-get($form, input-padding-vertical)) rem(map-get($form, input-padding-horizontal));
     font-size: rem(map-get($form, validation-font-size));
 
     .form__input--error & {

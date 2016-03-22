@@ -13,16 +13,6 @@ h6.styleguide {
     margin-bottom: 16px;
 }
 
-h1.styleguide {
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid #EEE;
-}
-
-h2.styleguide {
-    padding-bottom: 0.3em;
-    border-bottom: 1px solid #EEE;
-}
-
 a.styleguide {
     text-decoration: underline;
 }
@@ -57,12 +47,12 @@ a.styleguide {
 .exampleOutput {
     position: relative;
     padding: rem(54px) rem(20px) rem(20px) rem(20px);
-    border-top: 1px solid shade(map-get($color, alpha), 10%);
+    border-top: 1px solid shade(map-get($color, alpha), 5%);
 
     &:after {
         content: 'Example';
         background: map-get($color, alpha);
-        border: 1px solid shade(map-get($color, alpha), 10%);
+        border: 1px solid shade(map-get($color, alpha), 5%);
         border-top: 0;
         padding: rem(5px) rem(10px);
         position: absolute;
@@ -70,6 +60,10 @@ a.styleguide {
         left: 0;
         font-size: rem(14px);
         color: shade(map-get($color, alpha), 45%);
+    }
+
+    .card {
+        max-width: rem(300px);
     }
 }
 
@@ -97,6 +91,8 @@ a.styleguide {
 .codeBlock  pre {
     word-wrap: normal;
 }
+
+
 
 
 /**

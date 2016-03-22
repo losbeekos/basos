@@ -146,6 +146,7 @@ category: Forms
                 border-radius: map-get($base, border-radius);
                 border: map-get($form, input-border);
                 opacity: 1;
+                transform: scale(1);
             }
         }
     }
