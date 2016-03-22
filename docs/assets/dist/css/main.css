@@ -3413,8 +3413,6 @@ h6.styleguide {
 h1.styleguide {
   padding-bottom: 0.3em;
   border-bottom: 1px solid #EEE; }
-  h1.styleguide:first-child {
-    margin-top: 0; }
 
 h2.styleguide {
   padding-bottom: 0.3em;
@@ -4180,33 +4178,108 @@ category: Navigation
 /* Tables
 ==========
 */
-.table-responsive {
-  width: 100%;
-  overflow: auto;
-  -webkit-overflow-scrolling: touch; }
-
 .table {
-  width: 100%;
   margin-bottom: 1.875rem; }
   .table td,
   .table th {
     padding: 10px;
     text-align: left;
-    vertical-align: top; }
-  .table td {
-    border-top: 0.0625rem solid #eaeaea; }
+    vertical-align: top;
+    border: 0.0625rem solid #dedede; }
+  .table th {
+    font-size: 0.6875rem;
+    text-transform: uppercase;
+    background: #f2f0e6; }
   .table--hover tr:hover td {
     background: #f6f6f6; }
   .table--zebra tr:nth-child(odd) td {
     background: #f8f8f8; }
   .table--bordered {
-    border: 0.0625rem solid #eaeaea; }
+    border: 0.0625rem solid #dedede; }
     .table--bordered td,
     .table--bordered th {
-      border-left: 0.0625rem solid #eaeaea; }
+      border-left: 0.0625rem solid #dedede; }
       .table--bordered td:first-child,
       .table--bordered th:first-child {
         border-left: none; }
+
+.responsive-table {
+  display: inline-block;
+  vertical-align: top;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+.responsive-table,
+.responsive-table--flip tbody {
+  background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 100% center;
+  -webkit-overflow-scrolling: touch;
+  background-size: 10px 100%, 10px 100%;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+  -webkit-overflow-scrolling: touch; }
+
+.responsive-table td:first-child,
+.responsive-table--flip tbody tr:first-child {
+  background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: 20px 100%; }
+
+.responsive-table td:last-child,
+.responsive-table--flip tbody tr:last-child {
+  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 20px 100%; }
+
+.responsive-table--flip {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  background: none; }
+  .responsive-table--flip thead {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content; }
+  .responsive-table--flip tbody {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden; }
+  .responsive-table--flip tr {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
+  .responsive-table--flip td,
+  .responsive-table--flip th {
+    display: block; }
+    .responsive-table--flip td:not(:last-child), .responsive-table--flip td:not(:last-child),
+    .responsive-table--flip th:not(:last-child),
+    .responsive-table--flip th:not(:last-child) {
+      border-bottom: 0; }
+  .responsive-table--flip td {
+    background-image: none !important;
+    border-left: 0; }
 
 /*doc
 ---
@@ -4422,55 +4495,106 @@ category: Content
 
 ## Responsive table
 
+### Normal
+
 ```html_example
-<div class="table-responsive">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Show</th>
-                <th>Yada</th>
-                <th>Yada</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Bender</td>
-                <td>Rodrigues</td>
-                <td>Futurama</td>
-                <td>Yada</td>
-                <td>Yada</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Philip</td>
-                <td>Fry</td>
-                <td>Futurama</td>
-                <td>Yada</td>
-                <td>Yada</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Jerry</td>
-                <td>Seinfeld</td>
-                <td>Seinfeld</td>
-                <td>Yada</td>
-                <td>Yada</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Larry</td>
-                <td>David</td>
-                <td>Seinfeld</td>
-                <td>Yada</td>
-                <td>Yada</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+<table class="table responsive-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Show</th>
+            <th>Yada</th>
+            <th>Yada</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Bender</td>
+            <td>Rodrigues</td>
+            <td>Futurama</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Philip</td>
+            <td>Fry</td>
+            <td>Futurama</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jerry</td>
+            <td>Seinfeld</td>
+            <td>Seinfeld</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Larry</td>
+            <td>David</td>
+            <td>Seinfeld</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+    </tbody>
+</table>
+```
+
+### Flipped
+
+```html_example
+<table class="table responsive-table responsive-table--flip">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Show</th>
+            <th>Yada</th>
+            <th>Yada</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Bender</td>
+            <td>Rodrigues</td>
+            <td>Futurama</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Philip</td>
+            <td>Fry</td>
+            <td>Futurama</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jerry</td>
+            <td>Seinfeld</td>
+            <td>Seinfeld</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Larry</td>
+            <td>David</td>
+            <td>Seinfeld</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+    </tbody>
+</table>
 ```
 
 
@@ -4917,7 +5041,7 @@ category: Content
 ==========
 */
 .media-list--bordered .media {
-  border-top: 1px solid #eaeaea;
+  border-top: 1px solid #dedede;
   margin-bottom: 0;
   padding-top: 1.25rem;
   padding-bottom: 1.25rem; }

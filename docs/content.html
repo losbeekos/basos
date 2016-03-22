@@ -1411,108 +1411,209 @@ You could always remove some elements you won&#39;t be using such as action.</p>
 </div>
 
 <h2>Responsive table</h2>
+
+<h3>Normal</h3>
 <div class="codeExample">
   <div class="exampleOutput">
-    <div class="table-responsive">
-    <table class="table">
-        <thead>
-            <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Show</th>
-                <th>Yada</th>
-                <th>Yada</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>1</td>
-                <td>Bender</td>
-                <td>Rodrigues</td>
-                <td>Futurama</td>
-                <td>Yada</td>
-                <td>Yada</td>
-            </tr>
-            <tr>
-                <td>2</td>
-                <td>Philip</td>
-                <td>Fry</td>
-                <td>Futurama</td>
-                <td>Yada</td>
-                <td>Yada</td>
-            </tr>
-            <tr>
-                <td>3</td>
-                <td>Jerry</td>
-                <td>Seinfeld</td>
-                <td>Seinfeld</td>
-                <td>Yada</td>
-                <td>Yada</td>
-            </tr>
-            <tr>
-                <td>4</td>
-                <td>Larry</td>
-                <td>David</td>
-                <td>Seinfeld</td>
-                <td>Yada</td>
-                <td>Yada</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+    <table class="table responsive-table">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Show</th>
+            <th>Yada</th>
+            <th>Yada</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Bender</td>
+            <td>Rodrigues</td>
+            <td>Futurama</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Philip</td>
+            <td>Fry</td>
+            <td>Futurama</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jerry</td>
+            <td>Seinfeld</td>
+            <td>Seinfeld</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Larry</td>
+            <td>David</td>
+            <td>Seinfeld</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+    </tbody>
+</table>
 
   </div>
   <div class="codeBlock">
     <div class="highlight">
-      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"table-responsive"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;thead&gt;</span>
-            <span class="nt">&lt;tr&gt;</span>
-                <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
-                <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
-                <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
-                <span class="nt">&lt;th&gt;</span>Show<span class="nt">&lt;/th&gt;</span>
-                <span class="nt">&lt;th&gt;</span>Yada<span class="nt">&lt;/th&gt;</span>
-                <span class="nt">&lt;th&gt;</span>Yada<span class="nt">&lt;/th&gt;</span>
-            <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;/thead&gt;</span>
-        <span class="nt">&lt;tbody&gt;</span>
-            <span class="nt">&lt;tr&gt;</span>
-                <span class="nt">&lt;td&gt;</span>1<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Bender<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Rodrigues<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Futurama<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;/tr&gt;</span>
-            <span class="nt">&lt;tr&gt;</span>
-                <span class="nt">&lt;td&gt;</span>2<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Philip<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Fry<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Futurama<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;/tr&gt;</span>
-            <span class="nt">&lt;tr&gt;</span>
-                <span class="nt">&lt;td&gt;</span>3<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Jerry<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Seinfeld<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Seinfeld<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;/tr&gt;</span>
-            <span class="nt">&lt;tr&gt;</span>
-                <span class="nt">&lt;td&gt;</span>4<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>David<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Seinfeld<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
-                <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
-            <span class="nt">&lt;/tr&gt;</span>
-        <span class="nt">&lt;/tbody&gt;</span>
-    <span class="nt">&lt;/table&gt;</span>
-<span class="nt">&lt;/div&gt;</span></pre>
+      <pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table responsive-table"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;thead&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>Show<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>Yada<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>Yada<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/thead&gt;</span>
+    <span class="nt">&lt;tbody&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>1<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Bender<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Rodrigues<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Futurama<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>2<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Philip<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Fry<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Futurama<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>3<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Jerry<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Seinfeld<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Seinfeld<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>4<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>David<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Seinfeld<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h3>Flipped</h3>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <table class="table responsive-table responsive-table--flip">
+    <thead>
+        <tr>
+            <th>#</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Show</th>
+            <th>Yada</th>
+            <th>Yada</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>1</td>
+            <td>Bender</td>
+            <td>Rodrigues</td>
+            <td>Futurama</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>Philip</td>
+            <td>Fry</td>
+            <td>Futurama</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>3</td>
+            <td>Jerry</td>
+            <td>Seinfeld</td>
+            <td>Seinfeld</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+        <tr>
+            <td>4</td>
+            <td>Larry</td>
+            <td>David</td>
+            <td>Seinfeld</td>
+            <td>Yada</td>
+            <td>Yada</td>
+        </tr>
+    </tbody>
+</table>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;table</span> <span class="na">class=</span><span class="s">"table responsive-table responsive-table--flip"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;thead&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;th&gt;</span>#<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>First Name<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>Last Name<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>Show<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>Yada<span class="nt">&lt;/th&gt;</span>
+            <span class="nt">&lt;th&gt;</span>Yada<span class="nt">&lt;/th&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/thead&gt;</span>
+    <span class="nt">&lt;tbody&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>1<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Bender<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Rodrigues<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Futurama<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>2<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Philip<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Fry<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Futurama<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>3<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Jerry<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Seinfeld<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Seinfeld<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+        <span class="nt">&lt;tr&gt;</span>
+            <span class="nt">&lt;td&gt;</span>4<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Larry<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>David<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Seinfeld<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+            <span class="nt">&lt;td&gt;</span>Yada<span class="nt">&lt;/td&gt;</span>
+        <span class="nt">&lt;/tr&gt;</span>
+    <span class="nt">&lt;/tbody&gt;</span>
+<span class="nt">&lt;/table&gt;</span></pre>
     </div>
   </div>
 </div>

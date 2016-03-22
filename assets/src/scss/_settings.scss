@@ -460,7 +460,7 @@ $tabs: (
 $table: (
     margin-bottom  : 30px,
     padding        : map-get($base, padding),
-    border-color   : darken(map-get($btn-bg, alpha), 5%),
+    border-color   : darken(map-get($btn-bg, alpha), 10%),
     border-radius  : map-get($base, border-radius),
     bg-color-zebra : #f8f8f8,
     bg-color-hover : #f6f6f6
