@@ -5567,7 +5567,6 @@ app.scrollSpyNav = {
                 var $item = $(this);
 
                 if (_scrollTop === (app.settings.$document.height()-windowHeight)) {
-                    console.log($item.eq(app.scrollSpyNav.settings.navLength));
                     $('.scrollspy-nav--active').removeClass('scrollspy-nav--active');
                     app.scrollSpyNav.settings.$el.parent().eq(app.scrollSpyNav.settings.navLength).find('[data-scrollspy-nav]').addClass('scrollspy-nav--active');
                 }
