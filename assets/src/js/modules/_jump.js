@@ -15,11 +15,15 @@ app.jump = {
                 extraOffset = data.jumptoExtraOffset;
             }
 
-            app.jump.to($(this).attr('href'), extraOffset);
+            if (data.jumptoSpeed !== undefined) {
+                app.jump.settings.speed = data.jumptoSpeed;
+            }
+
+            app.jump.to($(this).attr('href'), extraOffset, app.jump.settings.speed);
         });
     },
 
-    to: function (_target, _extraOffset) {
+    to: function (_target, _extraOffset, _speed) {
         var offsetTop = Math.round($(_target).offset().top);
 
         _extraOffset === undefined ? 0 : '';
@@ -30,7 +34,7 @@ app.jump = {
             offsetTop = offsetTop + _extraOffset;
         }
 
-        app.settings.$htmlAndBody.animate({scrollTop: offsetTop}, app.jump.settings.speed);
+        app.settings.$htmlAndBody.animate({scrollTop: offsetTop}, _speed);
 
         window.location.hash = _target;
     }

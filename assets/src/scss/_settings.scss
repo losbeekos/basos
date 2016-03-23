@@ -225,7 +225,7 @@ $btn: (
     group-border-radius              : map-get($base, border-radius),
     holder-margin                    : 40px 0 0 0,
     ghost-border-width               : 1px,
-    ghost-border-radius              : 5px,
+    ghost-border-radius              : 0px,
     ghost-opacity                    : 1,
     ghost-opacty-hover               : 1,
     ghost-bg-hover                   : false

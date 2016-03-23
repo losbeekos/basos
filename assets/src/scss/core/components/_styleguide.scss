@@ -30,16 +30,15 @@ a.styleguide {
         display: block;
     }
 
-    &__item {
-        font-size: rem(14px);
-        padding: rem(5px) rem(20px);
-    }
-
     &__link {
         display: block;
+        font-size: rem(14px);
+        padding: rem(5px) rem(20px);
+        transition-delay: 0.05s;
 
-        &.scrollspy-nav--active {
-            color: map-get($color, text);
+        &.scrollspy-nav--active,
+        &.scrollspy-nav--active:hover {
+            background: tint(map-get($color, epsilon), 10%);
         }
     }
 }

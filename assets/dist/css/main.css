@@ -4520,14 +4520,13 @@ a.styleguide {
 .styleguide-nav__category {
   display: block; }
 
-.styleguide-nav__item {
-  font-size: 0.875rem;
-  padding: 0.3125rem 1.25rem; }
-
 .styleguide-nav__link {
-  display: block; }
-  .styleguide-nav__link.scrollspy-nav--active {
-    color: #333333; }
+  display: block;
+  font-size: 0.875rem;
+  padding: 0.3125rem 1.25rem;
+  transition-delay: 0.05s; }
+  .styleguide-nav__link.scrollspy-nav--active, .styleguide-nav__link.scrollspy-nav--active:hover {
+    background: #343537; }
 
 .exampleOutput {
   position: relative;
@@ -7614,7 +7613,7 @@ Add more colors in the settings file under "buttons" if you need to.
   .btn--ghost {
     background: transparent;
     border-width: 1px;
-    border-radius: 5px;
+    border-radius: 0px;
     color: #333333;
     text-shadow: none;
     opacity: 1; }

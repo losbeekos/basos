@@ -70,7 +70,7 @@
                         <ul class="styleguide-nav__sub list-unstyled">
                             <% @blocks.each do |b| %>
                                 <% if title != b[:title] %>
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#<%= b[:name] %>" data-jumpto data-jumpto-extra-offset="-30"><%= b[:title] %></a></li>
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#<%= b[:name] %>" data-jumpto data-jumpto-extra-offset="-30" data-scrollspy-nav><%= b[:title] %></a></li>
                                 <% end %>
                             <% end %>
                         </ul>
