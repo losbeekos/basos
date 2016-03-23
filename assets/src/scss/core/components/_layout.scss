@@ -20,9 +20,10 @@ html {
 }
 
 body {
-    font-family: 'helvetica neue', 'arial', 'verdana', sans-serif;
+    @extend %font-open-sans;
+
     color: map-get($color, text);
-    font-weight: 300;
+    font-weight: 400;
     transition: opacity map-get($base, transition-speed)/4 ease-in;
 }
 

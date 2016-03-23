@@ -63,7 +63,7 @@ a.styleguide {
     }
 
     .card {
-        max-width: rem(300px);
+        max-width: rem(400px);
     }
 }
 
@@ -85,7 +85,7 @@ a.styleguide {
     line-height: 1.45;
     background-color: #1d1f21;
     border-radius: 3px;
-    color: #fff
+    color: #eee;
 }
 
 .codeBlock  pre {
@@ -122,7 +122,7 @@ a.styleguide {
 
 .hll { background-color: #373b41 }
 .c {  color: #969896 }
-.err { olor: #c66 }
+.err { color: #c66 }
 .k {  color: #b294bb }
 .l {  color: #de935f }
 .n {  color: #fff }

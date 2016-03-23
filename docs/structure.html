@@ -1,14 +1,16 @@
 <!DOCTYPE html>
-<!--[if IE 9]>         <html class="no-js lt-ie10" lang="nl"> <![endif]-->
-<!--[if gt IE 9]><!--> <html class="no-js" lang="nl"> <!--<![endif]-->
+<html class="no-js" lang="nl">
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
+
     <title>Structure - Basos documentation</title>
     <meta name="theme-color" content="#2690b0" />
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+    <link rel="dns-prefetch" href="https://www.google-analytics.com" />
     <link rel="stylesheet" href="assets/dist/css/main.css" />
 
     <meta name="apple-mobile-web-app-capable" content="yes" />
@@ -78,43 +80,47 @@
                                 
                             
                                 
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#container" data-jumpto>Container</a></li>
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#container" data-jumpto data-jumpto-extra-offset="-30">Container</a></li>
                                 
                             
                                 
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#css_columns" data-jumpto>CSS columns</a></li>
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#css_columns" data-jumpto data-jumpto-extra-offset="-30">CSS columns</a></li>
                                 
                             
                                 
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#flexible_grid" data-jumpto>Flexible grid</a></li>
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#flexible_grid" data-jumpto data-jumpto-extra-offset="-30">Flexible grid</a></li>
                                 
                             
                                 
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#functions" data-jumpto>Functions</a></li>
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#functions" data-jumpto data-jumpto-extra-offset="-30">Functions</a></li>
                                 
                             
                                 
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#grid" data-jumpto>Grid</a></li>
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#grid" data-jumpto data-jumpto-extra-offset="-30">Grid</a></li>
                                 
                             
                                 
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#helpers_classes" data-jumpto>Helper classes</a></li>
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#grid_flexbox" data-jumpto data-jumpto-extra-offset="-30">Grid (flexbox)</a></li>
                                 
                             
                                 
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#Icons" data-jumpto>Icons</a></li>
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#helpers_classes" data-jumpto data-jumpto-extra-offset="-30">Helper classes</a></li>
                                 
                             
                                 
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#media_queries" data-jumpto>Media queries</a></li>
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#Icons" data-jumpto data-jumpto-extra-offset="-30">Icons</a></li>
                                 
                             
                                 
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#mixins" data-jumpto>Mixins</a></li>
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#media_queries" data-jumpto data-jumpto-extra-offset="-30">Media queries</a></li>
                                 
                             
                                 
-                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#sections" data-jumpto>Sections</a></li>
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#mixins" data-jumpto data-jumpto-extra-offset="-30">Mixins</a></li>
+                                
+                            
+                                
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#sections" data-jumpto data-jumpto-extra-offset="-30">Sections</a></li>
                                 
                             
                         </ul>
@@ -603,6 +609,269 @@ It&#39;s important to note twice that these elements need the same height, or yo
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>column-4<span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h1 id="grid_flexbox" class="styleguide">Grid (flexbox)</h1>
+<p class="styleguide">You shouldn&#39;t use this grid for overall page layout, use the standard grid module in that case. In the future we can use the <a class="styleguide" href="http://caniuse.com/#feat=css-grid" title="http://caniuse.com/#feat=css-grid">CSS grids module</a> for overall layout, but it&#39;s not ready as of writing.</p><p class="styleguide">This is perfect for things as <a class="styleguide" href="http://codepen.io/chriscoyier/pen/FAbpm" title="http://codepen.io/chriscoyier/pen/FAbpm">nav bars</a>.</p>
+<h2>Simple</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexbox-grid">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-grid"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Top</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexbox-grid flexbox-grid--top" style="height: 200px;">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-grid flexbox-grid--top"</span> <span class="na">style=</span><span class="s">"height: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Middle</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexbox-grid flexbox-grid--middle" style="height: 200px;">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-grid flexbox-grid--middle"</span> <span class="na">style=</span><span class="s">"height: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Buttom</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexbox-grid flexbox-grid--bottom" style="height: 200px;">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-grid flexbox-grid--bottom"</span> <span class="na">style=</span><span class="s">"height: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Stretch</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexbox-grid flexbox-grid--stretch" style="height: 200px;">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-grid flexbox-grid--stretch"</span> <span class="na">style=</span><span class="s">"height: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Baseline</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexbox-grid flexbox-grid--baseline" style="height: 200px;">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-grid flexbox-grid--baseline"</span> <span class="na">style=</span><span class="s">"height: 200px;"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Left</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexbox-grid flexbox-grid--left">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-grid flexbox-grid--left"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Center</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexbox-grid flexbox-grid--center">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-grid flexbox-grid--center"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Right</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexbox-grid flexbox-grid--right">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-grid flexbox-grid--right"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Space between</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexbox-grid flexbox-grid--between">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-grid flexbox-grid--between"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+    </div>
+  </div>
+</div>
+
+<h2>Space around</h2>
+<div class="codeExample">
+  <div class="exampleOutput">
+    <div class="flexbox-grid flexbox-grid--around">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-grid flexbox-grid--around"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"flexbox-column-3 card"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"card__content"</span><span class="nt">&gt;</span>Flexy<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
     </div>

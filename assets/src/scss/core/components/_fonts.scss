@@ -2,11 +2,17 @@
 ==========
 */
 
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300,600);
+
 @include font-face('icons', 'fonts/icons');
 
 %font-icons {
     font-family: 'icons', 'arial', 'verdana';
     font-weight: normal;
+}
+
+%font-open-sans {
+    font-family: 'Open Sans', sans-serif;
 }
 
 //@include font-face('somefont', 'fonts/somefont');

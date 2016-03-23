@@ -31,7 +31,7 @@ input[type=radio] {
     &:checked {
         + label:after {
             opacity: 1;
-            transform: scale(1);
+            transform: scale(1) rotate(0deg);
         }
     }
 
@@ -83,7 +83,7 @@ input[type=radio] {
             text-align: center;
             color: map-get($color, beta);
             opacity: 0;
-            transform: scale(0);
+            transform: scale(0) rotate(-45deg);
             transition: all map-get($base, transition-speed) ease-out;
 
             .no-borderradius & {

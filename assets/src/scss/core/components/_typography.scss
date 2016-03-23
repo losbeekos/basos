@@ -13,11 +13,15 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
+    @extend %font-vollkorn;
+
     margin: ms(-1) 0;
+    font-weight: 600;
 }
 
 h1, .h1 {
     margin: ms(0) 0;
+    font-weight: 800;
 
     @include vr($h1-font-size, map-get($ratio, fourth));
 }

@@ -4853,9 +4853,13 @@ app.jump = {
 
         if (app.navBar.settings.$el.length > 0) {
             offsetTop = offsetTop - (app.navBar.settings.$el.height() + _extraOffset);
+        } else {
+            offsetTop = offsetTop + _extraOffset;
         }
 
         app.settings.$htmlAndBody.animate({scrollTop: offsetTop}, app.jump.settings.speed);
+
+        window.location.hash = _target;
     }
 };
 

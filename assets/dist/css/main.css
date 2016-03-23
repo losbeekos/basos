@@ -138,6 +138,7 @@ And some things are borrowed from Twitter's bootstrap [Reboot](https://github.co
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300,600);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -1568,11 +1569,6 @@ category: Typography
 /* Display
 ==========
 */
-.display-flex {
-  display: -webkit-flex !important;
-  display: -ms-flexbox !important;
-  display: flex !important; }
-
 .display-inline {
   display: inline !important; }
 
@@ -1610,6 +1606,7 @@ category: Typography
   word-wrap: break-word;
   word-break: break-word;
   -ms-hyphens: auto;
+  -moz-hyphens: auto;
   -webkit-hyphens: auto;
   hyphens: auto; }
 
@@ -3577,6 +3574,247 @@ The default grid is a 12 columns grid which you can change in the settings, even
 </div>
 ```
 */
+/* Grid (flexbox)
+==========
+*/
+.flexbox-grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+  .flexbox-grid--top {
+    -webkit-align-items: flex-start;
+        -ms-flex-align: start;
+                -ms-grid-row-align: flex-start;
+            align-items: flex-start; }
+  .flexbox-grid--middle {
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+                -ms-grid-row-align: center;
+            align-items: center; }
+  .flexbox-grid--bottom {
+    -webkit-align-items: flex-end;
+        -ms-flex-align: end;
+                -ms-grid-row-align: flex-end;
+            align-items: flex-end; }
+  .flexbox-grid--stretch {
+    -webkit-align-items: stretch;
+        -ms-flex-align: stretch;
+                -ms-grid-row-align: stretch;
+            align-items: stretch; }
+  .flexbox-grid--baseline {
+    -webkit-align-items: baseline;
+        -ms-flex-align: baseline;
+                -ms-grid-row-align: baseline;
+            align-items: baseline; }
+  .flexbox-grid--left {
+    -webkit-justify-content: flex-start;
+        -ms-flex-pack: start;
+            justify-content: flex-start; }
+  .flexbox-grid--center {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .flexbox-grid--right {
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+  .flexbox-grid--between {
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
+  .flexbox-grid--around {
+    -webkit-justify-content: space-around;
+        -ms-flex-pack: distribute;
+            justify-content: space-around; }
+
+[class|=flexbox-column] {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+
+.flexbox-column-fill {
+  width: 0;
+  min-width: 0;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.flexbox-column-1 {
+  width: calc(100% * 1 / 12); }
+
+.flexbox-column-2 {
+  width: calc(100% * 2 / 12); }
+
+.flexbox-column-3 {
+  width: calc(100% * 3 / 12); }
+
+.flexbox-column-4 {
+  width: calc(100% * 4 / 12); }
+
+.flexbox-column-5 {
+  width: calc(100% * 5 / 12); }
+
+.flexbox-column-6 {
+  width: calc(100% * 6 / 12); }
+
+.flexbox-column-7 {
+  width: calc(100% * 7 / 12); }
+
+.flexbox-column-8 {
+  width: calc(100% * 8 / 12); }
+
+.flexbox-column-9 {
+  width: calc(100% * 9 / 12); }
+
+.flexbox-column-10 {
+  width: calc(100% * 10 / 12); }
+
+.flexbox-column-11 {
+  width: calc(100% * 11 / 12); }
+
+.flexbox-column-12 {
+  width: 100%; }
+
+/*doc
+---
+title: Grid (flexbox)
+name: grid_flexbox
+category: Structure
+---
+
+You shouldn't use this grid for overall page layout, use the standard grid module in that case. In the future we can use the [CSS grids module](http://caniuse.com/#feat=css-grid) for overall layout, but it's not ready as of writing.
+
+This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm).
+
+## Simple
+
+```html_example
+<div class="flexbox-grid">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+```
+
+## Top
+
+```html_example
+<div class="flexbox-grid flexbox-grid--top" style="height: 200px;">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+```
+
+## Middle
+
+```html_example
+<div class="flexbox-grid flexbox-grid--middle" style="height: 200px;">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+```
+
+## Buttom
+
+```html_example
+<div class="flexbox-grid flexbox-grid--bottom" style="height: 200px;">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+```
+
+## Stretch
+
+```html_example
+<div class="flexbox-grid flexbox-grid--stretch" style="height: 200px;">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+```
+
+## Baseline
+
+```html_example
+<div class="flexbox-grid flexbox-grid--baseline" style="height: 200px;">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+```
+
+## Left
+
+```html_example
+<div class="flexbox-grid flexbox-grid--left">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+```
+
+## Center
+
+```html_example
+<div class="flexbox-grid flexbox-grid--center">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+```
+
+## Right
+
+```html_example
+<div class="flexbox-grid flexbox-grid--right">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+```
+
+## Space between
+
+```html_example
+<div class="flexbox-grid flexbox-grid--between">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+```
+
+## Space around
+
+```html_example
+<div class="flexbox-grid flexbox-grid--around">
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+    <div class="flexbox-column-3 card">
+        <div class="card__content">Flexy</div>
+    </div>
+</div>
+```
+
+*/
 /* Flexible grid
 ==========
 */
@@ -3738,9 +3976,8 @@ html {
   overflow-x: hidden; }
 
 body {
-  font-family: 'helvetica neue', 'arial', 'verdana', sans-serif;
   color: #333333;
-  font-weight: 300;
+  font-weight: 400;
   transition: opacity 0.05s ease-in; }
 
 .background {
@@ -3958,6 +4195,9 @@ input[type=radio] + label:after, .form__password-toggle:after, .notification:bef
   font-family: 'icons', 'arial', 'verdana';
   font-weight: normal; }
 
+body {
+  font-family: 'Open Sans', sans-serif; }
+
 /*doc
 ---
 title: Typography
@@ -3972,10 +4212,12 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  margin: 0.809rem 0; }
+  margin: 0.809rem 0;
+  font-weight: 600; }
 
 h1, .h1 {
   margin: 1.618rem 0;
+  font-weight: 800;
   font-size: 1.625rem;
   line-height: 2.166125rem; }
   @media (min-width: 37.5em) and (max-width: 43.6875em) {
@@ -4303,7 +4545,7 @@ a.styleguide {
     font-size: 0.875rem;
     color: #888888; }
   .exampleOutput .card {
-    max-width: 18.75rem; }
+    max-width: 25rem; }
 
 .codeBlock {
   margin-bottom: 3.75rem; }
@@ -4321,7 +4563,7 @@ a.styleguide {
   line-height: 1.45;
   background-color: #1d1f21;
   border-radius: 3px;
-  color: #fff; }
+  color: #eee; }
 
 .codeBlock pre {
   word-wrap: normal; }
@@ -4357,7 +4599,7 @@ a.styleguide {
   color: #969896; }
 
 .err {
-  olor: #c66; }
+  color: #c66; }
 
 .k {
   color: #b294bb; }
@@ -4570,6 +4812,7 @@ a.styleguide {
       width: 50%;
       max-height: 100%;
       -webkit-transform: translate(-50%, -50%);
+          -ms-transform: translate(-50%, -50%);
               transform: translate(-50%, -50%);
       max-width: 630px; } }
   .modal.modal-show {
@@ -4585,12 +4828,14 @@ a.styleguide {
     opacity: 0;
     height: 100%;
     -webkit-transform: scale(0.7);
+        -ms-transform: scale(0.7);
             transform: scale(0.7);
     transition: all 0.3s;
     padding: 2.5rem; }
     .modal-show .modal__content {
       opacity: 1;
       -webkit-transform: scale(1);
+          -ms-transform: scale(1);
               transform: scale(1); }
   .modal__overlay {
     background: black;
@@ -5582,12 +5827,15 @@ category: Content
     transition: all 0.2s; }
   .tooltip.tooltip--active[data-tooltip-position=top] .tooltip__content, .tooltip.tooltip--active[data-tooltip-position=bottom] .tooltip__content {
     -webkit-transform: translate(-50%, 0) scale(1);
+        -ms-transform: translate(-50%, 0) scale(1);
             transform: translate(-50%, 0) scale(1); }
   .tooltip.tooltip--active[data-tooltip-position=right] .tooltip__content {
     -webkit-transform: translate(100%, 0) scale(1);
+        -ms-transform: translate(100%, 0) scale(1);
             transform: translate(100%, 0) scale(1); }
   .tooltip.tooltip--active[data-tooltip-position=left] .tooltip__content {
     -webkit-transform: translate(-100%, 0) scale(1);
+        -ms-transform: translate(-100%, 0) scale(1);
             transform: translate(-100%, 0) scale(1); }
   .tooltip.tooltip--active .tooltip__content {
     visibility: visible;
@@ -5620,6 +5868,7 @@ category: Content
 
 [data-tooltip-position=top] .tooltip__content {
   -webkit-transform: translate(-50%, 10%) scale(0.5);
+      -ms-transform: translate(-50%, 10%) scale(0.5);
           transform: translate(-50%, 10%) scale(0.5); }
   [data-tooltip-position=top] .tooltip__content:after {
     border-top-color: #363d50;
@@ -5627,6 +5876,7 @@ category: Content
 
 [data-tooltip-position=bottom] .tooltip__content {
   -webkit-transform: translate(-50%, -10%) scale(0.5);
+      -ms-transform: translate(-50%, -10%) scale(0.5);
           transform: translate(-50%, -10%) scale(0.5); }
   [data-tooltip-position=bottom] .tooltip__content:after {
     border-bottom-color: #363d50;
@@ -5643,6 +5893,7 @@ category: Content
 [data-tooltip-position=right] .tooltip__content {
   right: -10px;
   -webkit-transform: translate(90%, 0) scale(0.5);
+      -ms-transform: translate(90%, 0) scale(0.5);
           transform: translate(90%, 0) scale(0.5); }
   [data-tooltip-position=right] .tooltip__content:after {
     border-right-color: #363d50;
@@ -5653,6 +5904,7 @@ category: Content
 [data-tooltip-position=left] .tooltip__content {
   left: -10px;
   -webkit-transform: translate(-90%, 0) scale(0.5);
+      -ms-transform: translate(-90%, 0) scale(0.5);
           transform: translate(-90%, 0) scale(0.5); }
   [data-tooltip-position=left] .tooltip__content:after {
     border-left-color: #363d50;
@@ -5728,6 +5980,7 @@ Tooltips are used as fancy title attributes to display some info about a certain
       top: 50%;
       color: #333333;
       -webkit-transform: translate(0, -50%);
+          -ms-transform: translate(0, -50%);
               transform: translate(0, -50%);
       right: 1.25rem; }
       .no-csstransforms .accordion__trigger:after {
@@ -6446,6 +6699,7 @@ The map is styled with the styles options, the style used for these docs is borr
     @media (min-width: 62.5em) {
       .off-canvas--left {
         -webkit-transform: translateX(0);
+            -ms-transform: translateX(0);
                 transform: translateX(0); } }
     .off-canvas-show-left .off-canvas--left {
       -webkit-transform: translate3d(0, 0, 0);
@@ -6479,6 +6733,7 @@ The map is styled with the styles options, the style used for these docs is borr
   transition: transform 0.2s, -webkit-transform 0.2s; }
   .off-canvas-show-left .off-canvas-push {
     -webkit-transform: translateX(260px);
+        -ms-transform: translateX(260px);
             transform: translateX(260px); }
 
 .off-canvas-nav {
@@ -6497,9 +6752,9 @@ The map is styled with the styles options, the style used for these docs is borr
 .off-canvas-nav__header {
   color: white;
   padding: 1.25rem 1.25rem 0.625rem 1.25rem;
-  font-weight: bold;
   font-size: 1.125rem;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  font-weight: 600; }
 
 .off-canvas-nav__link {
   display: block;
@@ -6901,7 +7156,7 @@ These work with the button classes so you can use those to change color, size is
 /*doc
 ---
 title: Pagination
-name: Pagination
+name: pagination
 category: Navigation
 ---
 
@@ -7377,6 +7632,7 @@ Add more colors in the settings file under "buttons" if you need to.
     background: rgba(255, 255, 255, 0.25);
     border-radius: 100%;
     -webkit-transform: scale(0);
+        -ms-transform: scale(0);
             transform: scale(0); }
     .btn--light .btn__ripple,
     .btn--alpha .btn__ripple {
@@ -7483,6 +7739,7 @@ category: Buttons
       margin-left: 0.625rem; }
     .btn-dropdown--action.btn-dropdown--open .btn-dropdown__action:after {
       -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
               transform: rotate(180deg); }
     .btn-dropdown--no-arrow .btn-dropdown__action:after {
       display: none; }
@@ -7492,6 +7749,7 @@ category: Buttons
     border-bottom-left-radius: 0.25rem; }
     .btn-dropdown--open .btn-dropdown__toggle:before {
       -webkit-transform: rotate(180deg);
+          -ms-transform: rotate(180deg);
               transform: rotate(180deg); }
   .btn-dropdown__dropdown {
     overflow: hidden;
@@ -7652,7 +7910,7 @@ select {
   width: 100%;
   padding: 0.625rem 1.875rem 0.625rem 0.625rem;
   outline: none;
-  color: #888888;
+  color: #333333;
   cursor: pointer;
   z-index: 2;
   border: none;
@@ -7821,6 +8079,7 @@ category: Forms
     color: #bbbbbb;
     font-size: 0.875rem;
     -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
     .lt-ie10 .form__select:after,
     .parsley-error .form__select:after,
@@ -7873,6 +8132,7 @@ category: Forms
       border: 1px solid #e0e0e0;
       opacity: 1;
       -webkit-transform: scale(1);
+          -ms-transform: scale(1);
               transform: scale(1); }
 
 @media (min-width: 37.5em) {
@@ -7982,8 +8242,9 @@ input[type=radio] {
   input[type=checkbox]:checked + label:after,
   input[type=radio]:checked + label:after {
     opacity: 1;
-    -webkit-transform: scale(1);
-            transform: scale(1); }
+    -webkit-transform: scale(1) rotate(0deg);
+        -ms-transform: scale(1) rotate(0deg);
+            transform: scale(1) rotate(0deg); }
   .no-borderradius input[type=checkbox], .no-borderradius
   input[type=radio] {
     background: transparent;
@@ -8030,8 +8291,9 @@ input[type=radio] {
       text-align: center;
       color: #363d50;
       opacity: 0;
-      -webkit-transform: scale(0);
-              transform: scale(0);
+      -webkit-transform: scale(0) rotate(-45deg);
+          -ms-transform: scale(0) rotate(-45deg);
+              transform: scale(0) rotate(-45deg);
       transition: all 0.2s ease-out; }
       .no-borderradius input[type=checkbox] + label:after, .no-borderradius
       input[type=radio] + label:after {
@@ -8329,6 +8591,7 @@ category: Forms
     left: 0;
     z-index: 100;
     -webkit-transform: translateY(100%);
+        -ms-transform: translateY(100%);
             transform: translateY(100%);
     border-radius: 0 0rem 0rem 0rem; }
 
