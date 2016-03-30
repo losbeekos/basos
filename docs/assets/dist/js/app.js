@@ -4356,9 +4356,13 @@ app.cycle = {
     }
 };
 app.delayedImageLoading = {
+    settings: {
+        el: '[data-delay-image-loading]'
+    },
+
     init: function() {
-        if (app.settings.$html.hasClass('modernizr_template')) {
-            var template = document.querySelector('[data-delay-image-loading]'),
+        if (app.settings.$html.hasClass('modernizr_template') && document.querySelector(app.delayedImageLoading.settings.el) !== null) {
+            var template = document.querySelector(app.delayedImageLoading.settings.el),
                 parent = template.parentNode,
                 contents = template.innerHTML;
 
@@ -4381,12 +4385,12 @@ Idea is kindly borrowed from [Christian Heilmann](https://www.christianheilmann.
 
 ```html_example
 <ul class="list-unstyled">
-  <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf" /></li>
-  <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf" /></li>
-  <template data-delay-image-loading>
-    <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed" /></li>
-    <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed" /></li>
-  </template>
+    <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf" /></li>
+    <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf" /></li>
+    <template data-delay-image-loading>
+        <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed" /></li>
+        <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed" /></li>
+    </template>
 </ul>
 ```
 
