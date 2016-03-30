@@ -4369,7 +4369,7 @@ app.delayedImageLoading = {
             parent.removeChild(template);
             parent.innerHTML += contents;
         }
-    },
+    }
 };
 
 /*doc

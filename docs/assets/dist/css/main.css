@@ -5831,7 +5831,8 @@ category: Content
     min-width: 150px;
     padding: 10px;
     border-radius: 0;
-    font-size: 0.75rem; }
+    font-size: 0.75rem;
+    line-height: 1.2135rem; }
     .tooltip .tooltip__content:after {
       position: absolute;
       content: '';

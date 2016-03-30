@@ -74,6 +74,10 @@ $h6-font-size: (
     null         : 16px
 );
 
+$tooltip-font-size: (
+    null        : 12px
+);
+
 $modular-scale: (
     -2 : map-get($base, line-height) / 3,
     -1 : map-get($base, line-height) / 2,
