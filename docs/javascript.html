@@ -112,6 +112,10 @@
                                 
                             
                                 
+                                    <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#delay_image_loading" data-jumpto data-jumpto-extra-offset="-30" data-scrollspy-nav>Delay image loading</a></li>
+                                
+                            
+                                
                                     <li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#disable_hover" data-jumpto data-jumpto-extra-offset="-30" data-scrollspy-nav>Disable hover</a></li>
                                 
                             
@@ -151,6 +155,33 @@
               <section class="section section--alpha">
 
 <h1 id="9_javascript" class="styleguide">Javascript</h1>
+
+<h1 id="delay_image_loading" class="styleguide">Delay image loading</h1>
+<p class="styleguide">JavaScript method to delay the load of images and make the page respond faster especially on slow connections. </p><p class="styleguide">Idea is kindly borrowed from <a class="styleguide" href="https://www.christianheilmann.com/2015/09/08/quick-trick-using-template-to-delay-loading-of-images/" title="https://www.christianheilmann.com/2015/09/08/quick-trick-using-template-to-delay-loading-of-images/">Christian Heilmann</a>.</p><div class="codeExample">
+  <div class="exampleOutput">
+    <ul class="list-unstyled">
+  <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf" /></li>
+  <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf" /></li>
+  <template data-delay-image-loading>
+    <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed" /></li>
+    <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed" /></li>
+  </template>
+</ul>
+
+  </div>
+  <div class="codeBlock">
+    <div class="highlight">
+      <pre><span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"list-unstyled"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/400x100/f1f1f1/cfcfcf"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/400x100/f1f1f1/cfcfcf"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;template</span> <span class="na">data-delay-image-loading</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+    <span class="nt">&lt;li&gt;&lt;img</span> <span class="na">src=</span><span class="s">"http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed"</span> <span class="nt">/&gt;&lt;/li&gt;</span>
+  <span class="nt">&lt;/template&gt;</span>
+<span class="nt">&lt;/ul&gt;</span></pre>
+    </div>
+  </div>
+</div>
 
 <h1 id="disable_hover" class="styleguide">Disable hover</h1>
 <p class="styleguide">A disable hover (.disable-hover) class is added to the body. 

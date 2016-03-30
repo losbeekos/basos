@@ -297,6 +297,7 @@ module.exports = function(grunt) {
 
         modernizr: {
             dev:  {
+                'classPrefix': 'modernizr_',
                 'dest' : '<%= basos.dist %>/js/modernizr.js',
                 'parseFiles': true,
                 'devFile': 'assets/src/js/modernizr/dev.js',
@@ -317,13 +318,14 @@ module.exports = function(grunt) {
                     'mq'
                 ],
                 'tests': [
-                  'touchevents'
+                    'touchevents',
+                    'ellipsis',
+                    'supports',
+                    'template'
                 ],
                 'excludeTests': [
-                    'ellipsis',
                     'json',
                     'svg',
-                    'supports',
                     'csstransitions',
                     'cookies',
                     'target',

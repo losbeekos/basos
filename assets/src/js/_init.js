@@ -37,6 +37,7 @@ app.settings.$window.ready(function () {
     app.scrollSpy.init(scrollTop, windowHeight, true);
     app.affix.init(scrollTop);
     app.equalize.init();
+    app.delayedImageLoading.init();
 
     setTimeout(function () {
         app.responsiveImages.setBackgroundImage();
@@ -53,7 +54,7 @@ app.settings.$window.on('scroll', function () {
     app.navBar.scroller(scrollTop);
     app.disableHover.init();
 
-    if (app.settings.$html.hasClass('no-touch')) {
+    if (app.settings.$html.hasClass('modernizr_no-touchevents')) {
         // app.affix.scroller(scrollTop);
     }
 });
