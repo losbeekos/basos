@@ -6546,7 +6546,8 @@ You can add a no animation modifier to the target (toggle--no-animation).
   position: relative; }
   .affix--fixed {
     position: fixed;
-    top: 0; }
+    top: 0;
+    z-index: 1; }
   .affix--absolute {
     position: absolute;
     top: inherit !important;
@@ -6630,7 +6631,7 @@ The map is styled with the styles options, the style used for these docs is borr
   background: #1d1f21;
   position: absolute;
   top: 0;
-  z-index: 10000;
+  z-index: 999;
   color: white;
   text-align: center;
   border: none;
@@ -6668,7 +6669,7 @@ The map is styled with the styles options, the style used for these docs is borr
 .off-canvas {
   background: #1d1f21;
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   top: 0;
   width: 16.25rem;
   height: 100%;

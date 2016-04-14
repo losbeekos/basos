@@ -37,6 +37,7 @@ input[type="tel"],
 input[type="time"],
 input[type="url"],
 textarea {
+    background-color: map-get($form, input-bg-color);
     color: #333333;
     border-radius: map-get($base, border-radius);
     border: map-get($form, input-border);
@@ -57,6 +58,10 @@ textarea {
         background-color: map-get($form, input-disabled-bg-color);
         cursor: not-allowed;
     }
+}
+
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px map-get($form, input-bg-color) inset;
 }
 
 /*doc

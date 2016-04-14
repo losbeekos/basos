@@ -1,11 +1,24 @@
+
+var peanuts = false,
+    minCSSFilename,
+    minJsFilename,
+    todayTimestamp = '<%= grunt.template.today("ddmmyyyyhhMMss") %>';
+
+if (peanuts === true) {
+    minCSSFilename = '.css';
+    minJsFilename = '.js';
+} else {
+    minCSSFilename = '.'+todayTimestamp+'.min.css';
+    minJsFilename = '.'+todayTimestamp+'.min.js';
+}
+
 module.exports = function(grunt) {
 
      //load all grunt tasks matching the `grunt-*` pattern
     require('jit-grunt')(grunt);
     require('time-grunt')(grunt);
 
-    var todayTimestamp = '<%= grunt.template.today("ddmmyyyyhhMMss") %>',
-        basosConfig = {
+    var basosConfig = {
             src: 'assets/src',
             dist: 'assets/dist'
         },
@@ -156,7 +169,7 @@ module.exports = function(grunt) {
                 cwd: '<%= basos.dist %>/css/',
                 src: ['main.css', '!*.min.css'],
                 dest: '<%= basos.dist %>/css/',
-                ext: '.'+todayTimestamp+'.min.css'
+                ext: minCSSFilename,
             }
         },
 
@@ -174,7 +187,7 @@ module.exports = function(grunt) {
                         cwd: '<%= basos.dist %>/js/',
                         src: ['app.js', 'modernizr.js'],
                         dest: '<%= basos.dist %>/js/',
-                        ext: '.'+todayTimestamp+'.min.js',
+                        ext: minJsFilename,
                         extDot: 'first'
                     },
                 ]
@@ -365,66 +378,62 @@ module.exports = function(grunt) {
 
     });
 
-    // Basos tasks
+    if (peanuts === true) {
+        grunt.registerTask('dev', [
+            'jshint',
+            'clean',
+            'concat',
+            'copy',
+            'sass:dev',
+            'postcss',
+            'css_wrap',
+            'svg_sprite'
+        ]);
 
-    grunt.registerTask('dev', [
-        'jshint',
-        'clean',
-        'concat',
-        'copy',
-        'sass:dev',
-        'postcss',
-        'modernizr',
-        'svg_sprite'
-    ]);
+        grunt.registerTask('dist', [
+            'jshint',
+            'clean',
+            'concat',
+            'copy',
+            'sass:dev',
+            'postcss',
+            'cssmin',
+            'uglify',
+            'css_wrap',
+            'svg_sprite'
+        ]);
+    } else {
+        grunt.registerTask('dev', [
+            'jshint',
+            'clean',
+            'concat',
+            'copy',
+            'sass:dev',
+            'postcss',
+            'modernizr',
+            'svg_sprite'
+        ]);
 
-    grunt.registerTask('dist', [
-        'jshint',
-        'clean',
-        'concat',
-        'copy',
-        'sass:dev',
-        'postcss',
-        'cssmin',
-        'modernizr',
-        'uglify',
-        'imagemin',
-        'imageoptim',
-        'svg_sprite'
-    ]);
+        grunt.registerTask('dist', [
+            'jshint',
+            'clean',
+            'concat',
+            'copy',
+            'sass:dev',
+            'postcss',
+            'cssmin',
+            'modernizr',
+            'uglify',
+            'imagemin',
+            'imageoptim',
+            'svg_sprite'
+        ]);
+    }
 
     grunt.registerTask('docs', [
         'hologram',
         'clean:docs',
     ]);
-
-    // Peanuts tasks
-    
-    // grunt.registerTask('dev', [
-    //     'jshint',
-    //     'clean',
-    //     'concat',
-    //     'copy',
-    //     'sass:dev',
-    //     'postcss',
-    //     'css_wrap',
-    //     'svg_sprite'
-    // ]);
-
-    // grunt.registerTask('dist', [
-    //     'jshint',
-    //     'clean',
-    //     'concat',
-    //     'copy',
-    //     'sass:dev',
-    //     'postcss',
-    //     'cssmin',
-    //     'uglify',
-    //     'imagemin',
-    //     'imageoptim',
-    //     'css_wrap',
-    //     'svg_sprite'
-    // ]);
 
     grunt.registerTask('default', ['dev', 'watch']);
 
