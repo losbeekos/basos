@@ -16,7 +16,7 @@
     a {
         margin-right: rem(map-get($breadcrumbs, link-margin));
 
-        &:after {
+        &::after {
             content: map-get($breadcrumbs, divider);
             color: map-get($breadcrumbs, divider-color);
             margin-left: rem(map-get($breadcrumbs, link-margin));

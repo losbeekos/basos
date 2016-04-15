@@ -106,7 +106,7 @@
             padding-right: rem(map-get($container, padding)*4px);
         }
 
-        &:before {
+        &::before {
             content: '';
             background: map-get($nav-bar, bg-color);
             position: absolute;
@@ -167,7 +167,7 @@
             background: lighten(map-get($nav-bar, trigger-bg-color), 10%);
         }
 
-        &:before {
+        &::before {
             content: map-get($icon, nav-bar-trigger);
             color: white;
             font-size: rem(map-get($nav-bar, trigger-font-size));
@@ -251,7 +251,7 @@ category: Navigation
 ```html_example
 <header id="nav-bar" class="nav-bar">
     <div class="nav-bar__container">
-        <a class="logo" href="/"><img src="assets/dist/img/logo.png" alt="" /></a>
+        <a class="logo" href="/"><img src="assets/dist/img/logo.png" alt=""></a>
         <nav class="nav-bar__nav">
             <a id="nav-bar-trigger" class="nav-bar__trigger hide-gamma-and-up"></a>
             <ul class="nav-bar__list">

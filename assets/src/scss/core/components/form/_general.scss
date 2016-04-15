@@ -67,7 +67,7 @@ category: Forms
     border: map-get($form, input-border);
     border-radius: map-get($base, border-radius);
 
-    &:after {
+    &::after {
         @extend %font-icons;
 
         content: map-get($icon, form-select);
@@ -101,7 +101,7 @@ category: Forms
     </div>
     <div class="column-7">
         <div class="form__switch">
-            <input name="switch1" type="checkbox" id="switch1" /><label for="switch1">Switch</label>
+            <input name="switch1" type="checkbox" id="switch1"><label for="switch1">Switch</label>
         </div>
     </div>
 </div>
@@ -115,12 +115,12 @@ category: Forms
     input[type=checkbox] {
         &:checked {
             + label {
-                &:before {
+                &::before {
                     background: map-get($color, beta);
                     border-color: map-get($color, beta);
                 }
 
-                &:after {
+                &::after {
                     left: map-get($form, switch-width);
                 }
             }
@@ -130,13 +130,13 @@ category: Forms
             padding: 0;
             color: rgba(0, 0, 0, 0);
 
-            &:before {
+            &::before {
                 width: map-get($form, switch-width)*2;
                 height: map-get($form, switch-height);
                 border-radius: map-get($base, border-radius);
             }
 
-            &:after {
+            &::after {
                 background: white;
                 content: '';
                 top: -1px;

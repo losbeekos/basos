@@ -120,7 +120,7 @@ category: Forms
                 <output data-range="range-test" class="range-output">50s</output>
             </div>
             <div class="column-10">
-                <input type="range" min="0" max="100" step="1" value="50" id="range-test" data-range-measurement="s" />
+                <input type="range" min="0" max="100" step="1" value="50" id="range-test" data-range-measurement="s">
             </div>
         </div>
     </div>

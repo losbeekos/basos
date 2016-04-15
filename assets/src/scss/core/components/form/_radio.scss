@@ -4,11 +4,11 @@
 
 input[type=radio] {
     + label {
-        &:before {
+        &::before {
             border-radius: map-get($form, checkbox-radio-size);
         }
 
-        &:after {
+        &::after {
             background: map-get($color, beta);
             content: '';
             top: (map-get($form, checkbox-radio-size)/4)-1;
@@ -35,9 +35,9 @@ category: Forms
     <div class="column-7">
         <div class="column-6 form__input">
             <ul class="form__input-list list-unstyled">
-                <li><input name="radio" type="radio" name="radio" id="radio1" /><label for="radio1">Radio</label></li>
-                <li><input name="radio" type="radio" name="radio" id="radio2" /><label for="radio2">Radio</label></li>
-                <li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio6" /><label for="radio6">Radio disabled</label></li>
+                <li><input name="radio" type="radio" name="radio" id="radio1"><label for="radio1">Radio</label></li>
+                <li><input name="radio" type="radio" name="radio" id="radio2"><label for="radio2">Radio</label></li>
+                <li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio6"><label for="radio6">Radio disabled</label></li>
             </ul>
         </div>
     </div>

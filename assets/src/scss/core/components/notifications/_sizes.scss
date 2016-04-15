@@ -5,7 +5,7 @@
 .notification--alpha {
     padding: rem(map-get($notifications, padding-alpha)) rem(map-get($notifications, padding-alpha)) rem(map-get($notifications, padding-alpha)) rem(map-get($notifications, padding-alpha-left));
 
-    &:before {
+    &::before {
         top: rem(2px);
     }
 }
@@ -17,7 +17,7 @@
         padding: rem(map-get($notifications, padding-beta)) rem(map-get($notifications, padding-beta)) rem(map-get($notifications, padding-beta)) rem(map-get($notifications, padding-beta-left));
         min-height: rem(85px);
 
-        &:before {
+        &::before {
             font-size: rem(60px);
             left: rem(20px);
         }

@@ -12,7 +12,7 @@
     display: inline-block;
     animation: spinner map-get($spinner, animation-speed) infinite linear;
 
-    &:after {
+    &::after {
         @extend %font-icons;
 
         content: map-get($icon, spinner-alpha);

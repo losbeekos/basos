@@ -3,7 +3,7 @@
 */
 
 @mixin notification($before-content, $before-color) {
-    &:before {
+    &::before {
         content: $before-content;
         color: $before-color;
     }
@@ -20,7 +20,7 @@
 
     @include notification(map-get($icon, notification-info), map-get($notifications, icon-color-info));
 
-    &:before {
+    &::before {
         @extend %font-icons;
 
         position: absolute;

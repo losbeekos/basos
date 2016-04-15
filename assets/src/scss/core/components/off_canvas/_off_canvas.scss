@@ -42,7 +42,7 @@
 .off-canvas-toggle-left {
     right: rem(-(map-get($off-canvas, toggle-width)));
 
-    &:before {
+    &::before {
         content: map-get($icon, off-canvas-toggle-left);
 
         .off-canvas-show-left & {
@@ -54,7 +54,7 @@
 .off-canvas-toggle-right {
     left: rem(-(map-get($off-canvas, toggle-width)));
 
-    &:before {
+    &::before {
         content: map-get($icon, off-canvas-toggle-right);
 
         .off-canvas-show-right & {
@@ -129,7 +129,7 @@
         transform: translateX(map-get($off-canvas, width));
     }
 
-    // &:after {
+    // &::after {
     //     content: '';
     //     background: black;
     //     width: 100%;

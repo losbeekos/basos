@@ -14,7 +14,7 @@ input[type=radio] {
         + label {
             cursor: not-allowed;
 
-            &:before {
+            &::before {
                 opacity: 0.4;
             }
         }
@@ -52,7 +52,7 @@ input[type=radio] {
             padding: 0 0 0 rem(5px);
         }
 
-        &:before {
+        &::before {
             position: absolute;
             left: 0;
             top: rem(-1px);
@@ -70,7 +70,7 @@ input[type=radio] {
             }
         }
 
-        &:after {
+        &::after {
             @extend %font-icons;
 
             content: map-get($icon, form-checkbox);
@@ -108,9 +108,9 @@ category: Forms
     <div class="column-7">
         <div class="column-6 form__input">
             <ul class="form__input-list list-unstyled">
-                <li><input name="checkbox" type="checkbox" checked="checked" id="checkbox1" /><label for="checkbox1">Checkbox</label></li>
-                <li><input name="checkbox" type="checkbox" id="checkbox2" /><label for="checkbox2">Checkbox</label></li>
-                <li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox6" /><label for="checkbox6">Checkbox disabled</label></li>
+                <li><input name="checkbox" type="checkbox" checked="checked" id="checkbox1"><label for="checkbox1">Checkbox</label></li>
+                <li><input name="checkbox" type="checkbox" id="checkbox2"><label for="checkbox2">Checkbox</label></li>
+                <li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox6"><label for="checkbox6">Checkbox disabled</label></li>
             </ul>
         </div>
     </div>

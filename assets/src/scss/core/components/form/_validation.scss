@@ -4,7 +4,7 @@
 
 .form__input--error,
 .form__input--success {
-    &:after {
+    &::after {
         position: absolute;
         right: 10px;
         top: 9px;
@@ -59,14 +59,14 @@
     }
 
     .form__select {
-        &:after {
+        &::after {
             color: map-get($form, validation-color);
         }
     }
 }
 
 %arrow {
-    &:after {
+    &::after {
         content: '';
         width: 0;
         height: 0;
@@ -151,7 +151,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-3 form__input">
-                    <input type="text" placeholder="0123AB" data-parsley-pattern="^\d{4}[a-zA-Z]{2}$" data-parsley-error-message="Dit is geen geldige postcode." data-parsley-maxlength="6" maxlength="6" />
+                    <input type="text" placeholder="0123AB" data-parsley-pattern="^\d{4}[a-zA-Z]{2}$" data-parsley-error-message="Dit is geen geldige postcode." data-parsley-maxlength="6" maxlength="6">
                 </div>
             </div>
         </div>
@@ -161,7 +161,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-4 form__input">
-                    <input type="tel" placeholder="0123456789" data-parsley-type="digits" data-parsley-minlength="10" data-parsley-error-message="Dit is geen geldig telefoonnummer." />
+                    <input type="tel" placeholder="0123456789" data-parsley-type="digits" data-parsley-minlength="10" data-parsley-error-message="Dit is geen geldig telefoonnummer.">
                 </div>
             </div>
         </div>
@@ -171,7 +171,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-4 form__input">
-                    <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-parsley-error-message="Dit is geen gelding IBAN nummer." />
+                    <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-parsley-error-message="Dit is geen gelding IBAN nummer.">
                 </div>
             </div>
         </div>
@@ -181,7 +181,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-6 form__input">
-                    <input type="email" placeholder="jouwnaam@adres.nl" />
+                    <input type="email" placeholder="jouwnaam@adres.nl">
                 </div>
             </div>
         </div>
@@ -191,7 +191,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-6 form__input">
-                    <input id="password" type="password" />
+                    <input id="password" type="password">
                 </div>
             </div>
         </div>
@@ -201,7 +201,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-6 form__input">
-                    <input type="password" data-parsley-equalto="#password" data-parsley-error-message="Wachtwoorden zijn niet identiek." />
+                    <input type="password" data-parsley-equalto="#password" data-parsley-error-message="Wachtwoorden zijn niet identiek.">
                 </div>
             </div>
         </div>
@@ -211,7 +211,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-6 form__input">
-                    <input type="url" />
+                    <input type="url">
                 </div>
             </div>
         </div>
@@ -222,11 +222,11 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             <div class="column-7">
                 <div class="column-6 form__input">
                     <ul class="form__input-list list-unstyled">
-                        <li><input name="checkbox2" type="checkbox" checked="checked" id="checkbox10" data-parsley-mincheck="2" /><label for="checkbox10">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox11" /><label for="checkbox11">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox12" /><label for="checkbox12">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox13" /><label for="checkbox13">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox14" /><label for="checkbox14">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" checked="checked" id="checkbox10" data-parsley-mincheck="2"><label for="checkbox10">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox11"><label for="checkbox11">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox12"><label for="checkbox12">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox13"><label for="checkbox13">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox14"><label for="checkbox14">Checkbox</label></li>
                     </ul>
                 </div>
             </div>
@@ -238,11 +238,11 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             <div class="column-7">
                 <div class="column-6 form__input">
                     <ul class="form__input-list list-unstyled">
-                        <li><input required="required" name="radio2" type="radio" id="radio13" /><label for="radio13">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio14" /><label for="radio14">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio10" /><label for="radio10">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio11" /><label for="radio11">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio12" /><label for="radio12">Radio</label></li>
+                        <li><input required="required" name="radio2" type="radio" id="radio13"><label for="radio13">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio14"><label for="radio14">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio10"><label for="radio10">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio11"><label for="radio11">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio12"><label for="radio12">Radio</label></li>
                     </ul>
                 </div>
             </div>

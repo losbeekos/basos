@@ -352,11 +352,11 @@ category: Buttons
             border-radius: rem(4px);
         }
 
-        &:before {
+        &::before {
             color: map-get($color, kappa);
         }
 
-        &:after {
+        &::after {
             @extend %font-icons;
 
             color: map-get($color, kappa);
@@ -386,7 +386,7 @@ category: Buttons
         border-top-left-radius: rem(4px);
         border-bottom-left-radius: rem(4px);
 
-        &:before {
+        &::before {
             // transition: transform map-get($dropdown, transition-duration); // Creates a renderbug in chrome when rotating...
 
             .btn-dropdown--open & {

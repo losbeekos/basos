@@ -56,7 +56,7 @@
 
         @include vr($tooltip-font-size);
 
-        &:after {
+        &::after {
             position: absolute;
             content: '';
             border: map-get($tooltip, arrow-width) solid transparent;
@@ -73,7 +73,7 @@
     .tooltip__content {
         left: 50%;
 
-        &:after {
+        &::after {
             left: 50%;
             margin-left: -#{map-get($tooltip, arrow-width)};
         }
@@ -88,7 +88,7 @@
     .tooltip__content {
         transform: translate(-50%, 10%) scale(0.5);
 
-        &:after {
+        &::after {
             border-top-color: map-get($tooltip, bg-color);
             bottom: -#{map-get($tooltip, arrow-width)*2};
         }
@@ -99,7 +99,7 @@
     .tooltip__content {
         transform: translate(-50%, -10%) scale(0.5);
 
-        &:after {
+        &::after {
             border-bottom-color: map-get($tooltip, bg-color);
             top: -#{map-get($tooltip, arrow-width)*2};
         }
@@ -111,7 +111,7 @@
     .tooltip__content {
         top: 50%;
 
-        &:after {
+        &::after {
             top: 50%;
             margin-top: -#{map-get($tooltip, arrow-width)};
         }
@@ -123,7 +123,7 @@
         right: -(map-get($tooltip, arrow-width)*2);
         transform: translate(90%, 0) scale(0.5);
 
-        &:after {
+        &::after {
             border-right-color: map-get($tooltip, bg-color);
             left: -#{map-get($tooltip, arrow-width)*2};
         }
@@ -139,7 +139,7 @@
         left: -(map-get($tooltip, arrow-width)*2);
         transform: translate(-90%, 0) scale(0.5);
 
-        &:after {
+        &::after {
             border-left-color: map-get($tooltip, bg-color);
             right: -#{map-get($tooltip, arrow-width)*2};
         }

@@ -23,14 +23,14 @@
     top: rem(map-get($notifications, close-top));
     right: rem(map-get($notifications, close-right));
 
-    &:before {
+    &::before {
         content: map-get($icon, notification-close);
         opacity: map-get($notifications, close-opacity);
         transition: opacity map-get($base, transition-speed);
     }
 
     &:hover {
-        &:before {
+        &::before {
             opacity: map-get($notifications, close-opacity-hover);
         }
     }

@@ -951,26 +951,26 @@ Break a word with a hyphen (hyphen not supported in Blink as of writing).
 /* Clearfix
 ==========
 */
-.clearfix:before, .grid:before, [class|=column]:before, .flexible-grid-2:before, .flexible-grid-3:before, .flexible-grid-4:before, .container:before,
-.container-beta:before, .card__content:before, .tabs:before, .nav-bar:before, .nav-bar__container:before, .nav-bar__nav:before, .media:before, .off-canvas-nar-bar:before,
-.off-canvas-nar-bar__container:before,
-.off-canvas-nar-bar__nav:before,
-.off-canvas-nar-bar__list:before,
-.off-canvas-nar-bar__link:before, .btn-container:before, .btn-group:before, .btn-dropdown__list:before, form:before, .form__row:before, .clearfix:after, .grid:after, [class|=column]:after, .flexible-grid-2:after, .flexible-grid-3:after, .flexible-grid-4:after, .container:after,
-.container-beta:after, .card__content:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
-.off-canvas-nar-bar__container:after,
-.off-canvas-nar-bar__nav:after,
-.off-canvas-nar-bar__list:after,
-.off-canvas-nar-bar__link:after, .btn-container:after, .btn-group:after, .btn-dropdown__list:after, form:after, .form__row:after {
+.clearfix::before, .grid::before, [class|=column]::before, .flexible-grid-2::before, .flexible-grid-3::before, .flexible-grid-4::before, .container::before,
+.container-beta::before, .card__content::before, .tabs::before, .nav-bar::before, .nav-bar__container::before, .nav-bar__nav::before, .media::before, .off-canvas-nar-bar::before,
+.off-canvas-nar-bar__container::before,
+.off-canvas-nar-bar__nav::before,
+.off-canvas-nar-bar__list::before,
+.off-canvas-nar-bar__link::before, .btn-container::before, .btn-group::before, .btn-dropdown__list::before, form::before, .form__row::before, .clearfix::after, .grid::after, [class|=column]::after, .flexible-grid-2::after, .flexible-grid-3::after, .flexible-grid-4::after, .container::after,
+.container-beta::after, .card__content::after, .tabs::after, .nav-bar::after, .nav-bar__container::after, .nav-bar__nav::after, .media::after, .off-canvas-nar-bar::after,
+.off-canvas-nar-bar__container::after,
+.off-canvas-nar-bar__nav::after,
+.off-canvas-nar-bar__list::after,
+.off-canvas-nar-bar__link::after, .btn-container::after, .btn-group::after, .btn-dropdown__list::after, form::after, .form__row::after {
   content: '';
   display: table; }
 
-.clearfix:after, .grid:after, [class|=column]:after, .flexible-grid-2:after, .flexible-grid-3:after, .flexible-grid-4:after, .container:after,
-.container-beta:after, .card__content:after, .tabs:after, .nav-bar:after, .nav-bar__container:after, .nav-bar__nav:after, .media:after, .off-canvas-nar-bar:after,
-.off-canvas-nar-bar__container:after,
-.off-canvas-nar-bar__nav:after,
-.off-canvas-nar-bar__list:after,
-.off-canvas-nar-bar__link:after, .btn-container:after, .btn-group:after, .btn-dropdown__list:after, form:after, .form__row:after {
+.clearfix::after, .grid::after, [class|=column]::after, .flexible-grid-2::after, .flexible-grid-3::after, .flexible-grid-4::after, .container::after,
+.container-beta::after, .card__content::after, .tabs::after, .nav-bar::after, .nav-bar__container::after, .nav-bar__nav::after, .media::after, .off-canvas-nar-bar::after,
+.off-canvas-nar-bar__container::after,
+.off-canvas-nar-bar__nav::after,
+.off-canvas-nar-bar__list::after,
+.off-canvas-nar-bar__link::after, .btn-container::after, .btn-group::after, .btn-dropdown__list::after, form::after, .form__row::after {
   clear: both; }
 
 /* Hide classes
@@ -4189,9 +4189,9 @@ There are five colors defined for you as modifiers (section--alpha, section--bet
   src: url("../fonts/icons/icons.eot");
   src: url("../fonts/icons/icons.eot#iefix") format("embedded-opentype"), url("../fonts/icons/icons.svg#icons") format("svg"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"); }
 
-.icon:before, .modal__close:before, .btn-dropdown__toggle:before, .icon-after:after, .nav-bar__trigger, .accordion__trigger:after, .spinner:after, .off-canvas-toggle-left,
-.off-canvas-toggle-right, .btn-dropdown__action:after, .form__select:after, input[type=checkbox] + label:after,
-input[type=radio] + label:after, .form__password-toggle:after, .notification:before, .notification__close {
+.icon:before, .modal__close:before, .btn-dropdown__toggle:before, .icon-after:after, .nav-bar__trigger, .accordion__trigger::after, .spinner::after, .off-canvas-toggle-left,
+.off-canvas-toggle-right, .btn-dropdown__action::after, .form__select::after, input[type=checkbox] + label::after,
+input[type=radio] + label::after, .form__password-toggle::after, .notification::before, .notification__close {
   font-family: 'icons', 'arial', 'verdana';
   font-weight: normal; }
 
@@ -4517,7 +4517,7 @@ a.styleguide {
   position: relative;
   padding: 3.375rem 1.25rem 1.25rem 1.25rem;
   border-top: 1px solid #ebebeb; }
-  .exampleOutput:after {
+  .exampleOutput::after {
     content: 'Example';
     background: #f7f7f7;
     border: 1px solid #ebebeb;
@@ -5158,7 +5158,7 @@ category: Content
       .nav-bar__container {
         padding-left: 2.5rem;
         padding-right: 2.5rem; } }
-    .nav-bar__container:before {
+    .nav-bar__container::before {
       content: '';
       background: #1d1f21;
       position: absolute;
@@ -5168,7 +5168,7 @@ category: Content
       width: 100%;
       height: 100%; }
       @media (min-width: 43.75em) {
-        .nav-bar__container:before {
+        .nav-bar__container::before {
           display: none; } }
   .nav-bar__nav {
     height: 0; }
@@ -5196,11 +5196,11 @@ category: Content
         display: none; } }
     .nav-bar__trigger:active, .nav-bar__trigger:hover {
       background: #35393c; }
-    .nav-bar__trigger:before {
+    .nav-bar__trigger::before {
       content: "";
       color: white;
       font-size: 1.875rem; }
-      .nav-bar--mobile-show .nav-bar__trigger:before {
+      .nav-bar--mobile-show .nav-bar__trigger::before {
         content: ""; }
   .nav-bar__list {
     background: #1d1f21;
@@ -5256,7 +5256,7 @@ category: Navigation
 ```html_example
 <header id="nav-bar" class="nav-bar">
     <div class="nav-bar__container">
-        <a class="logo" href="/"><img src="assets/dist/img/logo.png" alt="" /></a>
+        <a class="logo" href="/"><img src="assets/dist/img/logo.png" alt=""></a>
         <nav class="nav-bar__nav">
             <a id="nav-bar-trigger" class="nav-bar__trigger hide-gamma-and-up"></a>
             <ul class="nav-bar__list">
@@ -5833,7 +5833,7 @@ category: Content
     border-radius: 0;
     font-size: 0.75rem;
     line-height: 1.2135rem; }
-    .tooltip .tooltip__content:after {
+    .tooltip .tooltip__content::after {
       position: absolute;
       content: '';
       border: 5px solid transparent; }
@@ -5843,8 +5843,8 @@ category: Content
 [data-tooltip-position=top] .tooltip__content,
 [data-tooltip-position=bottom] .tooltip__content {
   left: 50%; }
-  [data-tooltip-position=top] .tooltip__content:after,
-  [data-tooltip-position=bottom] .tooltip__content:after {
+  [data-tooltip-position=top] .tooltip__content::after,
+  [data-tooltip-position=bottom] .tooltip__content::after {
     left: 50%;
     margin-left: -5px; }
   .no-csstransforms [data-tooltip-position=top] .tooltip__content, .no-csstransforms
@@ -5855,7 +5855,7 @@ category: Content
   -webkit-transform: translate(-50%, 10%) scale(0.5);
       -ms-transform: translate(-50%, 10%) scale(0.5);
           transform: translate(-50%, 10%) scale(0.5); }
-  [data-tooltip-position=top] .tooltip__content:after {
+  [data-tooltip-position=top] .tooltip__content::after {
     border-top-color: #363d50;
     bottom: -10px; }
 
@@ -5863,15 +5863,15 @@ category: Content
   -webkit-transform: translate(-50%, -10%) scale(0.5);
       -ms-transform: translate(-50%, -10%) scale(0.5);
           transform: translate(-50%, -10%) scale(0.5); }
-  [data-tooltip-position=bottom] .tooltip__content:after {
+  [data-tooltip-position=bottom] .tooltip__content::after {
     border-bottom-color: #363d50;
     top: -10px; }
 
 [data-tooltip-position=left] .tooltip__content,
 [data-tooltip-position=right] .tooltip__content {
   top: 50%; }
-  [data-tooltip-position=left] .tooltip__content:after,
-  [data-tooltip-position=right] .tooltip__content:after {
+  [data-tooltip-position=left] .tooltip__content::after,
+  [data-tooltip-position=right] .tooltip__content::after {
     top: 50%;
     margin-top: -5px; }
 
@@ -5880,7 +5880,7 @@ category: Content
   -webkit-transform: translate(90%, 0) scale(0.5);
       -ms-transform: translate(90%, 0) scale(0.5);
           transform: translate(90%, 0) scale(0.5); }
-  [data-tooltip-position=right] .tooltip__content:after {
+  [data-tooltip-position=right] .tooltip__content::after {
     border-right-color: #363d50;
     left: -10px; }
   .no-csstransforms [data-tooltip-position=right] .tooltip__content {
@@ -5891,7 +5891,7 @@ category: Content
   -webkit-transform: translate(-90%, 0) scale(0.5);
       -ms-transform: translate(-90%, 0) scale(0.5);
           transform: translate(-90%, 0) scale(0.5); }
-  [data-tooltip-position=left] .tooltip__content:after {
+  [data-tooltip-position=left] .tooltip__content::after {
     border-left-color: #363d50;
     right: -10px; }
   .no-csstransforms [data-tooltip-position=left] .tooltip__content {
@@ -5959,7 +5959,7 @@ Tooltips are used as fancy title attributes to display some info about a certain
     .accordion-content-show .accordion__trigger {
       background-color: #363d50;
       color: white; }
-    .accordion__trigger:after {
+    .accordion__trigger::after {
       content: "";
       position: absolute;
       top: 50%;
@@ -5968,9 +5968,9 @@ Tooltips are used as fancy title attributes to display some info about a certain
           -ms-transform: translate(0, -50%);
               transform: translate(0, -50%);
       right: 1.25rem; }
-      .no-csstransforms .accordion__trigger:after {
+      .no-csstransforms .accordion__trigger::after {
         margin-top: -10px; }
-      .accordion-content-show .accordion__trigger:after {
+      .accordion-content-show .accordion__trigger::after {
         content: "";
         color: white; }
   .accordion__content {
@@ -6058,7 +6058,7 @@ category: Content
     display: inline-block; }
   .breadcrumbs a {
     margin-right: 0.625rem; }
-    .breadcrumbs a:after {
+    .breadcrumbs a::after {
       content: "/";
       color: #cccccc;
       margin-left: 0.625rem; }
@@ -6182,7 +6182,7 @@ category: Content
 
 ```html_example
 <div class="media media--left">
-    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
     <div class="media__beta">
         <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
         <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
@@ -6194,7 +6194,7 @@ category: Content
 
 ```html_example
 <div class="media media--right">
-    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
     <div class="media__beta">
         <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
         <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
@@ -6206,19 +6206,19 @@ category: Content
 
 ```html_example
 <div class="media media--left">
-    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
     <div class="media__beta">
         <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
         <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
         <div class="media media--left">
-            <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+            <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
             <div class="media__beta">
                 <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                 <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
             </div>
         </div>
         <div class="media media--left">
-            <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+            <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
             <div class="media__beta">
                 <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                 <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
@@ -6233,14 +6233,14 @@ category: Content
 ```html_example
 <ul class="media-list">
     <li class="media media--left">
-        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
         <div class="media__beta">
             <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
             <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
         </div>
     </li>
     <li class="media media--left">
-        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
         <div class="media__beta">
             <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
             <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
@@ -6254,26 +6254,26 @@ category: Content
 ```html_example
 <ul class="media-list media-list--bordered">
     <li class="media media--left">
-        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
         <div class="media__beta">
             <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
             <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
         </div>
     </li>
     <li class="media media--left">
-        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
         <div class="media__beta">
             <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
             <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
             <div class="media media--left">
-                <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+                <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
                 <div class="media__beta">
                     <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                     <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
                 </div>
             </div>
             <div class="media media--left">
-                <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt="" /></div>
+                <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
                 <div class="media__beta">
                     <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
                     <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
@@ -6449,7 +6449,7 @@ category: Content
   display: inline-block;
   -webkit-animation: spinner 1s infinite linear;
           animation: spinner 1s infinite linear; }
-  .spinner:after {
+  .spinner::after {
     font-size: 1.875rem; }
   .spinner--alpha:after {
     content: ""; }
@@ -6654,16 +6654,16 @@ The map is styled with the styles options, the style used for these docs is borr
 
 .off-canvas-toggle-left {
   right: -3.125rem; }
-  .off-canvas-toggle-left:before {
+  .off-canvas-toggle-left::before {
     content: ""; }
-    .off-canvas-show-left .off-canvas-toggle-left:before {
+    .off-canvas-show-left .off-canvas-toggle-left::before {
       content: ""; }
 
 .off-canvas-toggle-right {
   left: -3.125rem; }
-  .off-canvas-toggle-right:before {
+  .off-canvas-toggle-right::before {
     content: ""; }
-    .off-canvas-show-right .off-canvas-toggle-right:before {
+    .off-canvas-show-right .off-canvas-toggle-right::before {
       content: ""; }
 
 .off-canvas {
@@ -7720,20 +7720,20 @@ category: Buttons
     .btn-dropdown--action .btn-dropdown__action {
       float: none;
       border-radius: 0.25rem; }
-    .btn-dropdown--action .btn-dropdown__action:after {
+    .btn-dropdown--action .btn-dropdown__action::after {
       content: '\e80a';
       margin-left: 0.625rem; }
-    .btn-dropdown--action.btn-dropdown--open .btn-dropdown__action:after {
+    .btn-dropdown--action.btn-dropdown--open .btn-dropdown__action::after {
       -webkit-transform: rotate(180deg);
           -ms-transform: rotate(180deg);
               transform: rotate(180deg); }
-    .btn-dropdown--no-arrow .btn-dropdown__action:after {
+    .btn-dropdown--no-arrow .btn-dropdown__action::after {
       display: none; }
   .btn-dropdown__toggle {
     margin-left: -0.0625rem;
     border-top-left-radius: 0.25rem;
     border-bottom-left-radius: 0.25rem; }
-    .btn-dropdown--open .btn-dropdown__toggle:before {
+    .btn-dropdown--open .btn-dropdown__toggle::before {
       -webkit-transform: rotate(180deg);
           -ms-transform: rotate(180deg);
               transform: rotate(180deg); }
@@ -7971,7 +7971,7 @@ category: Forms
                 <label>Website *</label>
             </div>
             <div class="form__input">
-                <input type="url" />
+                <input type="url">
             </div>
         </div>
 
@@ -7996,7 +7996,7 @@ Use the grid to your advantage.
 ```html_example
 <form class="form form--horizontal" data-form-validate novalidate="novalidate">
     <div class="grid grid--no-gutters column-beta-6 column-gamma-and-up-5 column-centered">
-        <div class="column-8"><input type="text" placeholder="E-mailadres" /></div>
+        <div class="column-8"><input type="text" placeholder="E-mailadres"></div>
         <div class="column-4"><button class="btn btn--beta btn--block btn--medium" type="submit">send</button></div>
     </div>
 </form>
@@ -8060,7 +8060,7 @@ category: Forms
   background: white;
   border: 1px solid #e0e0e0;
   border-radius: 0; }
-  .form__select:after {
+  .form__select::after {
     content: "";
     position: absolute;
     top: 50%;
@@ -8071,9 +8071,9 @@ category: Forms
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
-    .lt-ie10 .form__select:after,
-    .parsley-error .form__select:after,
-    .parsley-success .form__select:after {
+    .lt-ie10 .form__select::after,
+    .parsley-error .form__select::after,
+    .parsley-success .form__select::after {
       display: none; }
 
 /*doc
@@ -8090,7 +8090,7 @@ category: Forms
     </div>
     <div class="column-7">
         <div class="form__switch">
-            <input name="switch1" type="checkbox" id="switch1" /><label for="switch1">Switch</label>
+            <input name="switch1" type="checkbox" id="switch1"><label for="switch1">Switch</label>
         </div>
     </div>
 </div>
@@ -8099,19 +8099,19 @@ category: Forms
 */
 .form__switch {
   margin-top: 0.3125rem; }
-  .form__switch input[type=checkbox]:checked + label:before {
+  .form__switch input[type=checkbox]:checked + label::before {
     background: #363d50;
     border-color: #363d50; }
-  .form__switch input[type=checkbox]:checked + label:after {
+  .form__switch input[type=checkbox]:checked + label::after {
     left: 30px; }
   .form__switch input[type=checkbox] + label {
     padding: 0;
     color: transparent; }
-    .form__switch input[type=checkbox] + label:before {
+    .form__switch input[type=checkbox] + label::before {
       width: 60px;
       height: 25px;
       border-radius: 0; }
-    .form__switch input[type=checkbox] + label:after {
+    .form__switch input[type=checkbox] + label::after {
       background: white;
       content: '';
       top: -1px;
@@ -8204,9 +8204,6 @@ category: Forms
 ::placeholder {
   color: #94adc4; }
 
-.placeholder {
-  color: #94adc4; }
-
 /* Form checkbox
 ==========
 */
@@ -8221,8 +8218,8 @@ input[type=radio] {
     input[type=checkbox][disabled] + label,
     input[type=radio][disabled] + label {
       cursor: not-allowed; }
-      input[type=checkbox][disabled] + label:before,
-      input[type=radio][disabled] + label:before {
+      input[type=checkbox][disabled] + label::before,
+      input[type=radio][disabled] + label::before {
         opacity: 0.4; }
   input[type=checkbox]:focus + label:before,
   input[type=radio]:focus + label:before {
@@ -8253,8 +8250,8 @@ input[type=radio] {
     .no-borderradius input[type=checkbox] + label, .no-borderradius
     input[type=radio] + label {
       padding: 0 0 0 0.3125rem; }
-    input[type=checkbox] + label:before,
-    input[type=radio] + label:before {
+    input[type=checkbox] + label::before,
+    input[type=radio] + label::before {
       position: absolute;
       left: 0;
       top: -0.0625rem;
@@ -8266,11 +8263,11 @@ input[type=radio] {
       border-radius: 0;
       border: 1px solid #e0e0e0;
       transition: all 0.4s; }
-      .no-borderradius input[type=checkbox] + label:before, .no-borderradius
-      input[type=radio] + label:before {
+      .no-borderradius input[type=checkbox] + label::before, .no-borderradius
+      input[type=radio] + label::before {
         display: none; }
-    input[type=checkbox] + label:after,
-    input[type=radio] + label:after {
+    input[type=checkbox] + label::after,
+    input[type=radio] + label::after {
       content: "";
       position: absolute;
       top: -0.0625rem;
@@ -8285,8 +8282,8 @@ input[type=radio] {
           -ms-transform: scale(0) rotate(-45deg);
               transform: scale(0) rotate(-45deg);
       transition: all 0.2s ease-out; }
-      .no-borderradius input[type=checkbox] + label:after, .no-borderradius
-      input[type=radio] + label:after {
+      .no-borderradius input[type=checkbox] + label::after, .no-borderradius
+      input[type=radio] + label::after {
         display: none; }
 
 /*doc
@@ -8304,9 +8301,9 @@ category: Forms
     <div class="column-7">
         <div class="column-6 form__input">
             <ul class="form__input-list list-unstyled">
-                <li><input name="checkbox" type="checkbox" checked="checked" id="checkbox1" /><label for="checkbox1">Checkbox</label></li>
-                <li><input name="checkbox" type="checkbox" id="checkbox2" /><label for="checkbox2">Checkbox</label></li>
-                <li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox6" /><label for="checkbox6">Checkbox disabled</label></li>
+                <li><input name="checkbox" type="checkbox" checked="checked" id="checkbox1"><label for="checkbox1">Checkbox</label></li>
+                <li><input name="checkbox" type="checkbox" id="checkbox2"><label for="checkbox2">Checkbox</label></li>
+                <li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox6"><label for="checkbox6">Checkbox disabled</label></li>
             </ul>
         </div>
     </div>
@@ -8317,10 +8314,10 @@ category: Forms
 /* Form radio button
 ==========
 */
-input[type=radio] + label:before {
+input[type=radio] + label::before {
   border-radius: 20px; }
 
-input[type=radio] + label:after {
+input[type=radio] + label::after {
   background: #363d50;
   content: '';
   top: 4px;
@@ -8344,9 +8341,9 @@ category: Forms
     <div class="column-7">
         <div class="column-6 form__input">
             <ul class="form__input-list list-unstyled">
-                <li><input name="radio" type="radio" name="radio" id="radio1" /><label for="radio1">Radio</label></li>
-                <li><input name="radio" type="radio" name="radio" id="radio2" /><label for="radio2">Radio</label></li>
-                <li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio6" /><label for="radio6">Radio disabled</label></li>
+                <li><input name="radio" type="radio" name="radio" id="radio1"><label for="radio1">Radio</label></li>
+                <li><input name="radio" type="radio" name="radio" id="radio2"><label for="radio2">Radio</label></li>
+                <li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio6"><label for="radio6">Radio disabled</label></li>
             </ul>
         </div>
     </div>
@@ -8480,7 +8477,7 @@ category: Forms
                 <output data-range="range-test" class="range-output">50s</output>
             </div>
             <div class="column-10">
-                <input type="range" min="0" max="100" step="1" value="50" id="range-test" data-range-measurement="s" />
+                <input type="range" min="0" max="100" step="1" value="50" id="range-test" data-range-measurement="s">
             </div>
         </div>
     </div>
@@ -8491,8 +8488,8 @@ category: Forms
 /* Form validation
 ==========
 */
-.form__input--error:after,
-.form__input--success:after {
+.form__input--error::after,
+.form__input--success::after {
   position: absolute;
   right: 10px;
   top: 9px; }
@@ -8550,10 +8547,10 @@ category: Forms
     .form__input--error input[type="url"]:focus,
     .form__input--error textarea:focus {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); }
-  .form__input--error .form__select:after {
+  .form__input--error .form__select::after {
     color: #444444; }
 
-.form__input--validation-absolute .parsley-container:after, .form__input--error + .parsley-container:after {
+.form__input--validation-absolute .parsley-container::after, .form__input--error + .parsley-container::after {
   content: '';
   width: 0;
   height: 0;
@@ -8624,7 +8621,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-3 form__input">
-                    <input type="text" placeholder="0123AB" data-parsley-pattern="^\d{4}[a-zA-Z]{2}$" data-parsley-error-message="Dit is geen geldige postcode." data-parsley-maxlength="6" maxlength="6" />
+                    <input type="text" placeholder="0123AB" data-parsley-pattern="^\d{4}[a-zA-Z]{2}$" data-parsley-error-message="Dit is geen geldige postcode." data-parsley-maxlength="6" maxlength="6">
                 </div>
             </div>
         </div>
@@ -8634,7 +8631,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-4 form__input">
-                    <input type="tel" placeholder="0123456789" data-parsley-type="digits" data-parsley-minlength="10" data-parsley-error-message="Dit is geen geldig telefoonnummer." />
+                    <input type="tel" placeholder="0123456789" data-parsley-type="digits" data-parsley-minlength="10" data-parsley-error-message="Dit is geen geldig telefoonnummer.">
                 </div>
             </div>
         </div>
@@ -8644,7 +8641,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-4 form__input">
-                    <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-parsley-error-message="Dit is geen gelding IBAN nummer." />
+                    <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-parsley-error-message="Dit is geen gelding IBAN nummer.">
                 </div>
             </div>
         </div>
@@ -8654,7 +8651,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-6 form__input">
-                    <input type="email" placeholder="jouwnaam@adres.nl" />
+                    <input type="email" placeholder="jouwnaam@adres.nl">
                 </div>
             </div>
         </div>
@@ -8664,7 +8661,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-6 form__input">
-                    <input id="password" type="password" />
+                    <input id="password" type="password">
                 </div>
             </div>
         </div>
@@ -8674,7 +8671,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-6 form__input">
-                    <input type="password" data-parsley-equalto="#password" data-parsley-error-message="Wachtwoorden zijn niet identiek." />
+                    <input type="password" data-parsley-equalto="#password" data-parsley-error-message="Wachtwoorden zijn niet identiek.">
                 </div>
             </div>
         </div>
@@ -8684,7 +8681,7 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             </div>
             <div class="column-7">
                 <div class="column-6 form__input">
-                    <input type="url" />
+                    <input type="url">
                 </div>
             </div>
         </div>
@@ -8695,11 +8692,11 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             <div class="column-7">
                 <div class="column-6 form__input">
                     <ul class="form__input-list list-unstyled">
-                        <li><input name="checkbox2" type="checkbox" checked="checked" id="checkbox10" data-parsley-mincheck="2" /><label for="checkbox10">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox11" /><label for="checkbox11">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox12" /><label for="checkbox12">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox13" /><label for="checkbox13">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox14" /><label for="checkbox14">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" checked="checked" id="checkbox10" data-parsley-mincheck="2"><label for="checkbox10">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox11"><label for="checkbox11">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox12"><label for="checkbox12">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox13"><label for="checkbox13">Checkbox</label></li>
+                        <li><input name="checkbox2" type="checkbox" id="checkbox14"><label for="checkbox14">Checkbox</label></li>
                     </ul>
                 </div>
             </div>
@@ -8711,11 +8708,11 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
             <div class="column-7">
                 <div class="column-6 form__input">
                     <ul class="form__input-list list-unstyled">
-                        <li><input required="required" name="radio2" type="radio" id="radio13" /><label for="radio13">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio14" /><label for="radio14">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio10" /><label for="radio10">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio11" /><label for="radio11">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio12" /><label for="radio12">Radio</label></li>
+                        <li><input required="required" name="radio2" type="radio" id="radio13"><label for="radio13">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio14"><label for="radio14">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio10"><label for="radio10">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio11"><label for="radio11">Radio</label></li>
+                        <li><input name="radio2" type="radio" id="radio12"><label for="radio12">Radio</label></li>
                     </ul>
                 </div>
             </div>
@@ -8739,11 +8736,11 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
   top: 0.5rem;
   right: 0.625rem;
   text-decoration: none; }
-  .form__password-toggle:after {
+  .form__password-toggle::after {
     display: inline-block;
     font-size: 1.125rem;
     content: ""; }
-    .form__input--show-password .form__password-toggle:after {
+    .form__input--show-password .form__password-toggle::after {
       content: ""; }
   .form__input--error .form__password-toggle,
   .form__input--success .form__password-toggle {
@@ -8763,7 +8760,7 @@ category: Forms
     </div>
     <div class="column-7">
         <div class="column-6 form__input">
-            <input type="password" placeholder="password" />
+            <input type="password" placeholder="password">
             <a class="form__password-toggle tooltip" data-tooltip-position="top" title="Show/hide password"></a>
         </div>
     </div>
@@ -8819,7 +8816,7 @@ category: Forms
 
 ```html_example
 <div class="form__input form__input--floating-label">
-    <input id="floating-label" type="url" />
+    <input id="floating-label" type="url">
     <label for="floating-label">Website</label>
 </div>
 ```
@@ -8841,10 +8838,10 @@ category: Forms
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
   margin-bottom: 1.875rem; }
-  .notification:before {
+  .notification::before {
     content: "";
     color: #2690b0; }
-  .notification:before {
+  .notification::before {
     position: absolute;
     left: 0.625rem;
     top: 0;
@@ -8921,7 +8918,7 @@ app.notifications.add(target, message, size, type);
 */
 .notification--alpha {
   padding: 1.25rem 1.25rem 1.25rem 3.75rem; }
-  .notification--alpha:before {
+  .notification--alpha::before {
     top: 0.125rem; }
 
 .notification--beta {
@@ -8930,18 +8927,18 @@ app.notifications.add(target, message, size, type);
     .notification--beta {
       padding: 1.875rem 1.875rem 1.875rem 3.75rem;
       min-height: 5.3125rem; }
-      .notification--beta:before {
+      .notification--beta::before {
         font-size: 3.75rem;
         left: 1.25rem; } }
 
 /* Notification styles
 ==========
 */
-.notification--error:before {
+.notification--error::before {
   content: "";
   color: #b02626; }
 
-.notification--success:before {
+.notification--success::before {
   content: "";
   color: #26b036; }
 
@@ -8962,11 +8959,11 @@ app.notifications.add(target, message, size, type);
   border: none;
   top: 0.625rem;
   right: 0.875rem; }
-  .notification__close:before {
+  .notification__close::before {
     content: "";
     opacity: 0.2;
     transition: opacity 0.2s; }
-  .notification__close:hover:before {
+  .notification__close:hover::before {
     opacity: 0.5; }
   .notification__close:focus {
     outline: none; }
@@ -8992,7 +8989,7 @@ app.notifications.add(target, message, size, type);
   .notification-cookie-show[notification-cookie-position] .notification--cookie.notification--close {
     -webkit-transform: translate3d(0, 100%, 0);
             transform: translate3d(0, 100%, 0); }
-  .notification--cookie:before {
+  .notification--cookie::before {
     display: none; }
   .notification-cookie-show[notification-cookie-position] .notification--cookie {
     -webkit-transform: translate3d(0, 0, 0);

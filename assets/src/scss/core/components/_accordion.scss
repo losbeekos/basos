@@ -33,7 +33,7 @@
             color: map-get($accordion, trigger-color-show);
         }
 
-        &:after {
+        &::after {
             @extend %font-icons;
 
             content: map-get($accordion, trigger-icon-content);

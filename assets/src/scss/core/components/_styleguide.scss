@@ -48,7 +48,7 @@ a.styleguide {
     padding: rem(54px) rem(20px) rem(20px) rem(20px);
     border-top: 1px solid shade(map-get($color, alpha), 5%);
 
-    &:after {
+    &::after {
         content: 'Example';
         background: map-get($color, alpha);
         border: 1px solid shade(map-get($color, alpha), 5%);
