@@ -79,7 +79,7 @@ app.formModules = {
                 $(this).parsley(parsleyOptions);
             });
 
-            window.ParsleyValidator.setLocale(app.formModules.settings.validationLanguage);
+            window.Parsley.setLocale(app.formModules.settings.validationLanguage);
         }
     },
 

@@ -9,13 +9,13 @@ function config(name) {
 
 if (peanuts === true) {
     minifyExt = {
-        css: '.css',
-        js: '.js'
+        css : '.css',
+        js  : '.js'
     };
 } else {
     minifyExt = {
-        css: '.'+todayTimestamp+'.min.css',
-        js: '.'+todayTimestamp+'.min.js'
+        css : '.' + todayTimestamp + '.min.css',
+        js  : '.' + todayTimestamp + '.min.js'
     };
 }
 
