@@ -1,0 +1,46 @@
+/* Media queries
+==========
+*/
+
+@mixin mq($name) {
+    @if map-has-key($mq, $name) {
+        @media #{inspect(map-get($mq, $name))} {
+            @content;
+        }
+    }
+    @else {
+        @warn "Cannot find breakpoint size `#{$name}`.";
+    }
+}
+
+
+/*doc
+---
+title: Media queries
+name: media_queries
+category: Structure
+---
+
+Basos uses the mobile first principle so you will never write a mobile media query. There are several breakpoints defined in the settings.scss file which will get you covered in most cases, if you need an even bigger media query (eg. TV), you could simply add a rule in the settings file.
+
+How to add a media query to your SCSS file:
+
+    @include mq(gamma-and-up) {
+        ...
+    }
+
+You can nest the above code in your CSS selector like this.
+
+    .your-selector {
+        @include mq(gamma) {
+            ...
+        }
+
+        @include mq(epsilon-and-up) {
+            ...
+        }
+
+        etc..
+    }
+
+*/

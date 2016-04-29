@@ -1,0 +1,42 @@
+/* Padding classes
+==========
+*/
+
+.padding {
+    @each $key, $value in $padding {
+        &-#{$key} {
+            padding: rem(map-get($padding, $key)) !important;
+
+            &-vertical {
+                padding-top: rem(map-get($padding, $key)) !important;
+                padding-bottom: rem(map-get($padding, $key)) !important;
+            }
+
+            &-horizontal {
+                padding-left: rem(map-get($padding, $key)) !important;
+                padding-right: rem(map-get($padding, $key)) !important;
+            }
+
+            &-right   { padding-right: rem(map-get($padding, $key)) !important; }
+            &-left    { padding-left: rem(map-get($padding, $key)) !important; }
+            &-top     { padding-top: rem(map-get($padding, $key)) !important; }
+            &-bottom  { padding-bottom: rem(map-get($padding, $key)) !important; }
+        }
+    }
+}
+
+.no-padding        { padding: 0 !important; }
+.no-bottom-padding { padding-bottom: 0 !important; }
+.no-top-padding    { padding-top: 0 !important; }
+.no-left-padding   { padding-left: 0 !important; }
+.no-right-padding  { padding-right: 0 !important; }
+
+.no-vertical-padding {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.no-horizontal-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}

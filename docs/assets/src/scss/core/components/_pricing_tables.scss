@@ -1,0 +1,79 @@
+/* Pricing tables
+==========
+*/
+
+.pricing-table {
+    @extend .list-unstyled;
+
+    border: rem(1px) solid map-get($pricing-table, border-color);
+    text-align: center;
+    border-radius:map-get($base, border-radius);
+    overflow: hidden;
+
+    &__header {
+        background: map-get($pricing-table, header-bg-color);
+        color: white;
+        padding: rem(map-get($pricing-table, header-padding-vertical)) rem(map-get($pricing-table, header-padding-horizontal));
+    }
+
+    &__content {
+        padding: rem(map-get($pricing-table, content-padding-vertical)) rem(map-get($pricing-table, content-padding-horizontal));
+
+        &--alpha {
+            background: map-get($color, alpha);
+        }
+
+        + .pricing-table__content {
+            border-top: rem(1px) solid map-get($pricing-table, border-color);
+        }
+    }
+
+    &__price {
+        font-size: rem(map-get($pricing-table, price-font-size));
+    }
+
+    &__description {
+        color: #999999;
+        font-size: rem(map-get($pricing-table, description-font-size));
+    }
+
+    &__content--action {
+        padding-top: rem(map-get($pricing-table, action-padding-top));
+        padding-bottom: rem(map-get($pricing-table, action-padding-bottom));
+    }
+}
+
+/*doc
+---
+title: Pricing tables
+name: pricing_tables
+category: Content
+---
+
+```html_example
+<ul class="pricing-table">
+    <li class="pricing-table__header">
+        Basos package
+    </li>
+    <li class="pricing-table__content pricing-table__content--alpha">
+        <div class="pricing-table__price">&euro; 500,-</div>
+    </li>
+    <li class="pricing-table__content pricing-table__content--beta">
+        <div class="pricing-table__description">Lorem ipsum dolor sit amet.</div>
+    </li>
+    <li class="pricing-table__content pricing-table__content--beta">
+        <div class="pricing-table__item">50 components</div>
+    </li>
+    <li class="pricing-table__content pricing-table__content--beta">
+        <div class="pricing-table__item">100 lorems</div>
+    </li>
+    <li class="pricing-table__content pricing-table__content--beta">
+        <div class="pricing-table__item">5 dolirs</div>
+    </li>
+    <li class="pricing-table__content pricing-table__content--beta price-table__content--action">
+        <a class="btn btn--beta btn--medium" href="">buy now</a>
+    </li>
+</ul>
+```
+
+*/

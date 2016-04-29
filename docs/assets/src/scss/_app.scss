@@ -1,0 +1,9 @@
+/*
+Imports the app specific SCSS modules, there are a few already made for you.
+You can add your own custom modules here which you'll need for the thing you're building.
+*/
+
+@import "app/layout/header";
+@import "app/layout/footer";
+
+@import "app/components/navigation";

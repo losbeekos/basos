@@ -1,0 +1,120 @@
+/* Form checkbox
+==========
+*/
+
+input[type=checkbox],
+input[type=radio] {
+    position: absolute;
+    outline: none;
+    opacity: 0;
+
+    &[disabled] {
+        cursor: not-allowed;
+
+        + label {
+            cursor: not-allowed;
+
+            &::before {
+                opacity: 0.4;
+            }
+        }
+    }
+
+    &:focus {
+        + label:before {
+            background: map-get($form, checkbox-radio-focus-bg-color);
+            border-color: map-get($form, checkbox-radio-focus-border-color);
+            box-shadow: map-get($form, checkbox-radio-focus-box-shadow);
+        }
+    }
+
+    &:checked {
+        + label:after {
+            opacity: 1;
+            transform: scale(1) rotate(0deg);
+        }
+    }
+
+    .no-borderradius & {
+        background: transparent;
+        position: relative;
+        opacity: 1;
+    }
+
+    + label {
+        position: relative;
+        cursor: pointer;
+        padding-left: map-get($form, checkbox-radio-size)+10;
+        user-select: none;
+        font-size: rem(14px);
+
+        .no-borderradius & {
+            padding: 0 0 0 rem(5px);
+        }
+
+        &::before {
+            position: absolute;
+            left: 0;
+            top: rem(-1px);
+            content: '';
+            background: map-get($form, checkbox-radio-bg-color);
+            width: map-get($form, checkbox-radio-size);
+            height: map-get($form, checkbox-radio-size);
+            display: block;
+            border-radius: map-get($base, border-radius);
+            border: map-get($form, input-border);
+            transition: all map-get($base, transition-speed)*2;
+
+            .no-borderradius & {
+                display: none;
+            }
+        }
+
+        &::after {
+            @extend %font-icons;
+
+            content: map-get($icon, form-checkbox);
+            position: absolute;
+            top: rem(-1px);
+            left: 0;
+            width: map-get($form, checkbox-radio-size);
+            height: map-get($form, checkbox-radio-size);
+            line-height: map-get($form, checkbox-radio-size);
+            text-align: center;
+            color: map-get($color, beta);
+            opacity: 0;
+            transform: scale(0) rotate(-45deg);
+            transition: all map-get($base, transition-speed) ease-out;
+
+            .no-borderradius & {
+                display: none;
+            }
+        }
+    }
+}
+
+/*doc
+---
+title: Checkboxes
+name: checkboxes
+category: Forms
+---
+
+```html_example
+<div class="form__row">
+    <div class="column-5 form__label">
+        <label>Some checkboxes</label>
+    </div>
+    <div class="column-7">
+        <div class="column-6 form__input">
+            <ul class="form__input-list list-unstyled">
+                <li><input name="checkbox" type="checkbox" checked="checked" id="checkbox1"><label for="checkbox1">Checkbox</label></li>
+                <li><input name="checkbox" type="checkbox" id="checkbox2"><label for="checkbox2">Checkbox</label></li>
+                <li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox6"><label for="checkbox6">Checkbox disabled</label></li>
+            </ul>
+        </div>
+    </div>
+</div>
+```
+
+*/

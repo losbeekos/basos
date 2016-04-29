@@ -1,0 +1,35 @@
+/* Toggle
+==========
+*/
+
+.toggle {
+    overflow: hidden;
+    transition: all map-get($base, transition-speed);
+    max-height: rem(500px);
+
+    &--no-animation {
+        transition: none;
+    }
+
+    &--hide {
+        max-height: 0;
+    }
+}
+
+/*doc
+---
+title: Toggle
+name: toggle
+category: Content
+---
+
+You can add a no animation modifier to the target (toggle--no-animation).
+
+```html_example
+<button class="btn btn--alpha btn--small" data-toggle="#toggle-target">toggle</button>
+<div id="toggle-target" class="toggle toggle--hide">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nemo nisi, pariatur doloremque itaque exercitationem odio libero odit dolores voluptate voluptas nulla voluptates nam nobis illo veritatis aperiam cupiditate dolor.</div>
+</div>
+```
+
+*/

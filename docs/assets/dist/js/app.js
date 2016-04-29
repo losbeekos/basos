@@ -4392,7 +4392,7 @@ app.formModules = {
                 $(this).parsley(parsleyOptions);
             });
 
-            window.ParsleyValidator.setLocale(app.formModules.settings.validationLanguage);
+            window.Parsley.setLocale(app.formModules.settings.validationLanguage);
         }
     },
 
@@ -4636,9 +4636,9 @@ app.jump = {
             offsetTop = offsetTop + _extraOffset;
         }
 
-        app.settings.$htmlAndBody.animate({scrollTop: offsetTop}, _speed);
-
-        window.location.hash = _target;
+        app.settings.$htmlAndBody.animate({scrollTop: offsetTop}, _speed, function () {
+            window.location.hash = _target;
+        });
     }
 };
 

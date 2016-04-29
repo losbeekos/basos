@@ -1,0 +1,26 @@
+/* Font-face
+==========
+*/
+
+@mixin font-face($name, $directory, $woff2: false) {
+    @if $woff2 == true {
+        @font-face{
+            font-family: quote($name);
+            src: url('../#{$directory}/#{$name}.eot');
+            src: url('../#{$directory}/#{$name}.eot#iefix') format('embedded-opentype'),
+                 url('../#{$directory}/#{$name}.svg#icons') format('svg'),
+                 url('../#{$directory}/#{$name}.woff2') format('woff2'),
+                 url('../#{$directory}/#{$name}.woff') format('woff'),
+                 url('../#{$directory}/#{$name}.ttf') format('truetype');
+        }
+    } @else {
+        @font-face{
+            font-family: quote($name);
+            src: url('../#{$directory}/#{$name}.eot');
+            src: url('../#{$directory}/#{$name}.eot#iefix') format('embedded-opentype'),
+                 url('../#{$directory}/#{$name}.svg#icons') format('svg'),
+                 url('../#{$directory}/#{$name}.woff') format('woff'),
+                 url('../#{$directory}/#{$name}.ttf') format('truetype');
+        }
+    }
+}

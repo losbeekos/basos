@@ -1,0 +1,18 @@
+/* FadeInUp animation
+==========
+*/
+
+@keyframes fadeInUp {
+    0% {
+        transform: translate3d(0, 100%, 0);
+    }
+
+    100% {
+        transform: none;
+    }
+}
+
+.fadeInUp,
+.animation-fadeInUp {
+    animation-name: fadeInUp;
+}

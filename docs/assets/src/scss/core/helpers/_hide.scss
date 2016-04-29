@@ -1,0 +1,40 @@
+/* Hide classes
+==========
+*/
+
+@mixin hide() {
+    border: 0 !important;
+    clip: rect(0 0 0 0) !important;
+    height: rem(1px) !important;
+    margin: rem(-1px) !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    position: absolute !important;
+    width: rem(1px) !important;
+}
+
+@include mq(alpha) {
+    .hide-alpha,
+    .hide-alpha-and-beta {
+        @include hide();
+    }
+}
+
+@include mq(beta) {
+    .hide-beta,
+    .hide-alpha-and-beta {
+        @include hide();
+    }
+}
+
+@include mq(beta-and-up) {
+    .hide-beta-and-up {
+        @include hide();
+    }
+}
+
+@include mq(gamma-and-up) {
+    .hide-gamma-and-up {
+        @include hide();
+    }
+}

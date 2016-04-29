@@ -1,0 +1,234 @@
+/* Form general classes
+==========
+*/
+
+.form__row {
+    @extend .clearfix;
+
+    .form--vertical & {
+        margin-bottom: gutter(map-get($susy, columns));
+    }
+}
+
+.form__label {
+    margin-bottom: 0;
+
+    label {
+        line-height: rem(map-get($form, label-line-height));
+    }
+
+    @include mq(beta-and-up) {
+        text-align: map-get($form, label-text-align);
+    }
+
+    .form--vertical & {
+        text-align: left;
+    }
+}
+
+.form__input,
+.form__select,
+.form__switch {
+    position: relative;
+    margin-bottom: 0;
+}
+
+/*doc
+---
+title: Select
+name: select
+category: Forms
+---
+
+```html_example
+<div class="form__row">
+    <div class="column-5 form__label">
+        <label>Aanhef</label>
+    </div>
+    <div class="column-7">
+        <div class="column-6 form__input">
+            <div class="form__select">
+                <select name="select" id="" required="required">
+                    <option value="" disabled="disabled" selected="selected">Choose option</option>
+                    <option value="Dhr.">Some option</option>
+                    <option value="Mevr.">Another option</option>
+                </select>
+            </div>
+        </div>
+    </div>
+</div>
+```
+
+*/
+
+.form__select {
+    user-select: none;
+    background: white;
+    border: map-get($form, input-border);
+    border-radius: map-get($base, border-radius);
+
+    &::after {
+        @extend %font-icons;
+
+        content: map-get($icon, form-select);
+        position: absolute;
+        top: 50%;
+        right: map-get($form, select-icon-right);
+        z-index: 1;
+        color: map-get($form, select-icon-color);
+        font-size: rem(map-get($form, select-icon-font-size));
+        transform: translateY(-50%);
+
+        .lt-ie10 &,
+        .parsley-error &,
+        .parsley-success & {
+            display: none;
+        }
+    }
+}
+
+/*doc
+---
+title: Switch
+name: switch
+category: Forms
+---
+
+```html_example
+<div class="form__row">
+    <div class="column-5 form__label">
+        <label>Switch</label>
+    </div>
+    <div class="column-7">
+        <div class="form__switch">
+            <input name="switch1" type="checkbox" id="switch1"><label for="switch1">Switch</label>
+        </div>
+    </div>
+</div>
+```
+
+*/
+
+.form__switch {
+    margin-top: rem(5px);
+
+    input[type=checkbox] {
+        &:checked {
+            + label {
+                &::before {
+                    background: map-get($color, beta);
+                    border-color: map-get($color, beta);
+                }
+
+                &::after {
+                    left: map-get($form, switch-width);
+                }
+            }
+        }
+
+        + label {
+            padding: 0;
+            color: rgba(0, 0, 0, 0);
+
+            &::before {
+                width: map-get($form, switch-width)*2;
+                height: map-get($form, switch-height);
+                border-radius: map-get($base, border-radius);
+            }
+
+            &::after {
+                background: white;
+                content: '';
+                top: -1px;
+                left: -1px;
+                width: map-get($form, switch-width);
+                height: map-get($form, switch-height);
+                border-radius: map-get($base, border-radius);
+                border: map-get($form, input-border);
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+}
+
+.form__input-list {
+    @include mq(beta-and-up) {
+        margin-top: rem(map-get($form, input-list-margin-top));
+    }
+
+    li {
+        + li {
+            margin-top: rem(map-get($form, input-list-item-margin-top));
+        }
+    }
+}
+
+/*doc
+---
+title: Data
+name: data
+category: Forms
+---
+
+```html_example
+<div class="form__row">
+    <div class="column-5 form__label">
+        <label>Form data</label>
+    </div>
+    <div class="column-7 form__data">Some data</div>
+</div>
+```
+
+*/
+
+.form__data {
+    line-height: rem(map-get($form, label-line-height));
+}
+
+/*doc
+---
+title: Actions
+name: actions
+category: Forms
+---
+
+```html_example
+<div class="form__actions">
+    <button class="btn btn--beta btn--medium" type="submit">send</button>
+</div>
+```
+
+*/
+
+.form__actions {
+    margin-top: rem(map-get($form, actions-margin-top));
+
+    @include mq(beta-and-up) {
+        @include pre(map-get($form, actions-pre));
+    }
+
+    .form--vertical & {
+        margin-left: 0;
+    }
+}
+
+/*doc
+---
+title: Required field
+name: required_field
+category: Forms
+---
+
+```html_example
+<div class="form__actions">
+    <p class="form__required-field"><i>* = Required field</i></p>
+    <button class="btn btn--beta btn--medium" type="submit">send</button>
+</div>
+```
+
+*/
+
+.form__required-field {
+    font-size: rem(map-get($form, required-field-font-size));
+}

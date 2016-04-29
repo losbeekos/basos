@@ -1,0 +1,617 @@
+/*
+    Control all settings which control the SCSS modules found in core/*.scss.  
+    Some properties don't have settings, if you need to change those properties you can change it in the modules themselves.
+*/
+
+$ratio : (
+    phi              : 1.618, // Golden
+    double-octave    : 4,
+    major-twelfth    : 3,
+    major-eleventh   : 2.667,
+    major-tenth      : 2.5,
+    octave           : 2,
+    major-seventh    : 1.875,
+    minor-seventh    : 1.778,
+    major-sixth      : 1.667,
+    minor-sixth      : 1.6,
+    fifth            : 1.5,
+    augmented-fourth : 1.414,
+    fourth           : 1.333,
+    major-third      : 1.25,
+    minor-third      : 1.2,
+    major-second     : 1.125,
+    minor-second     : 1.067
+);
+
+/* Base
+==========
+*/
+
+$base: (
+    font-size        : 16px,
+    line-height      : 16px * map-get($ratio, phi),
+    vr-scale         : map-get($ratio, phi),
+    padding          : 10px,
+    border-radius    : 0,
+    transition-speed : 0.2s,
+    gradient         : false
+);
+
+
+/* Vertical rhythm
+==========
+*/
+
+$p-font-size: (
+    null        : 14px,
+    beta-and-up : 16px
+);
+
+$h1-font-size: (
+    null         : 26px,
+    beta         : 30px,
+    gamma-and-up : 34px
+);
+
+$h2-font-size: (
+    null         : 24px,
+    beta         : 26px
+);
+
+$h3-font-size: (
+    null         : 22px,
+);
+
+$h4-font-size: (
+    null         : 20px
+);
+
+$h5-font-size: (
+    null         : 18px
+);
+
+$h6-font-size: (
+    null         : 16px
+);
+
+$tooltip-font-size: (
+    null        : 12px
+);
+
+$modular-scale: (
+    -2 : map-get($base, line-height) / 3,
+    -1 : map-get($base, line-height) / 2,
+    0  : map-get($base, line-height),
+    1  : map-get($base, line-height) * 2,
+    2  : map-get($base, line-height) * 3,
+    3  : map-get($base, line-height) * 4,
+    4  : map-get($base, line-height) * 5
+);
+
+
+/* Media queries
+==========
+*/
+
+$mq: (
+    alpha          : "(max-width: 37.4375em)", // 599px
+    alpha-and-beta : "(max-width: 43.6875em)", // 699px
+    beta-and-up    : "(min-width: 37.5em)", // 600px
+    beta           : "(min-width: 37.5em) and (max-width: 43.6875em)", // 600px and 599px
+    gamma-and-up   : "(min-width: 43.75em)", // 768px
+    gamma          : "(min-width: 43.75em) and (max-width: 49.9375em)", // 700px and 799px
+    delta-and-up   : "(min-width: 50em)", // 800px
+    delta          : "(min-width: 50em) and (max-width: 62.4375em)", // 800px and 999px
+    epsilon-and-up : "(min-width: 62.5em)", // 1000px
+    epsilon        : "(min-width: 62.5em) and (max-width: 74.9375em)",  // 1000px and 1199px
+    zeta-and-up    : "(min-width: 75em)", // 1200px
+    zeta           : "(min-width: 75em) and (max-width: 87.4375em)", //  1200px and 1399px
+    eta-and-up     : "(min-width: 87.5em)" // 1400px
+);
+
+
+/* Colors
+==========
+*/
+
+$color: (
+    body       : #ffffff,
+    text       : #333333,
+    placeholder: #94adc4,
+    selection  : #d1e4fe,
+    alpha      : #f7f7f7,
+    beta       : #363d50,
+    gamma      : #6c5B66,
+    delta      : #78757a,
+    epsilon    : #1d1f21
+);
+
+$color-networks: (
+    twitter    : #55acee,
+    facebook   : #3b5998,
+    linkedin   : #0077b5,
+    googleplus : #d73D32,
+    youtube    : #cd201f,
+    vimeo      : #1ab7ea,
+    pinterest  : #cb2027,
+    github     : #333333,
+    dribbble   : #ea4c88,
+    instagram  : #517fA4
+);
+
+
+/* Sections
+==========
+*/
+
+$section: (
+    padding-vertical        : 30px,
+    paragraph-margin-bottom : 30px,
+    list-margin-bottom      : 30px
+);
+
+$section-bg: (
+    alpha   : white,
+    beta    : map-get($color, beta),
+    gamma   : map-get($color, gamma),
+    delta   : map-get($color, delta),
+    epsilon : map-get($color, epsilon)
+
+    // Just add a color to make another button
+    // Ex. zeta: map-get($color, zeta)
+    // Ex. zeta: #123456
+);
+
+
+/* Container
+==========
+*/
+
+$container: (
+    min-width      : 260px,
+    max-width      : 1280px,
+    max-width-beta : 800px,
+    margin-top     : 0,
+    margin-bottom  : 0,
+    margin-left    : auto,
+    margin-right   : auto,
+    padding        : 10px
+);
+
+
+/* Susy grid
+==========
+*/
+
+$susy: (
+    columns           : 12,
+    gutters           : 2.5em/4em,
+    global-box-sizing : border-box,
+
+    // More settings:
+    // http://susydocs.oddbird.net/en/latest
+);
+
+
+/* Buttons
+==========
+*/
+
+$btn: (
+    gradient                         : map-get($base, gradient),
+    gradient-bg                      : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+    border-width                     : 1px,
+    border-radius                    : map-get($base, border-radius),
+
+    padding-small-vertical           : 8px,
+    padding-small-horizontal         : 20px,
+
+    padding-medium-vertical          : 13px,
+    padding-medium-horizontal        : 20px,
+    padding-medium-beta-vertical     : 13px,
+    padding-medium-beta-horizontal   : 20px,
+
+    padding-large-vertical           : 15px,
+    padding-large-horizontal         : 25px,
+    padding-large-beta-vertical      : 16px,
+    padding-large-beta-horizontal    : 30px,
+
+    font-size-small                  : 12px,
+    font-size-medium                 : 14px,
+    font-size-large                  : 16px,
+    line-height                      : 16px,
+    text-shadow                      : 1px 0 1px rgba(0, 0, 0, 0.2),
+    border-color-darken              : 5%,
+    container-margin-bottom          : 30px,
+    container-btn-padding-vertical   : 10px,
+    container-btn-padding-horizontal : 18px,
+    group-margin-bottom              : 30px,
+    group-border-radius              : map-get($base, border-radius),
+    holder-margin                    : 40px 0 0 0,
+    ghost-border-width               : 1px,
+    ghost-border-radius              : 0px,
+    ghost-opacity                    : 1,
+    ghost-opacty-hover               : 1,
+    ghost-bg-hover                   : false
+);
+
+$btn-bg: (
+    light   : white,
+    dark    : black,
+    alpha   : map-get($color, alpha),
+    beta    : map-get($color, beta),
+    gamma   : map-get($color, gamma),
+    delta   : map-get($color, delta),
+    epsilon : map-get($color, epsilon)
+
+    // Just add a color to make another button
+    // Ex. zeta: map-get($color, zeta)
+    // Ex. zeta: #123456
+);
+
+
+/* Margin
+==========
+*/
+
+$margin: (
+    alpha   : 10px,
+    beta    : 20px,
+    gamma   : 30px,
+    delta   : 40px,
+    epsilon : 50px,
+    zeta    : 80px,
+    eta     : 100px
+);
+
+
+/* Padding
+==========
+*/
+
+$padding: (
+    alpha   : 10px,
+    beta    : 20px,
+    gamma   : 30px,
+    delta   : 40px,
+    epsilon : 50px,
+    zeta    : 80px,
+    eta     : 100px
+);
+
+
+/* Icons
+==========
+*/
+
+$icon: (
+    notification-info         : '\e804',
+    notification-success      : '\e801',
+    notification-error        : '\e803',
+    notification-close        : '\e802',
+
+    form-checkbox             : '\e801',
+    form-select               : '\e80a',
+    form-password-toggle      : '\e807',
+    form-password-toggle-show : '\e808',
+
+    nav-bar-trigger           : '\e809',
+    nav-bar-trigger-close     : '\e802',
+
+    off-canvas-toggle-left    : '\e809',
+    off-canvas-toggle-right   : '\e809',
+    off-canvas-toggle-close   : '\e802',
+
+    spinner                   : '\e800'
+);
+
+
+/* Form
+==========
+*/
+
+$form: (
+    margin-bottom                     : 40px,
+
+    legend-border-bottom              : 1px solid #e5e5e5,
+    legend-margin-bottom              : 20px,
+    legend-font-size                  : 20px,
+    legend-line-height                : 32px,
+    label-line-height                 : 40px,
+    label-text-align                  : left,
+    
+    input-bg-color                    : white,
+    input-color                       : #333333,
+    input-border                      : 1px solid #e0e0e0,
+    input-padding-vertical            : 10px,
+    input-padding-horizontal          : 10px,
+    input-focus-border                : 1px solid #cccccc,
+    input-focus-box-shadow            : 0 0 10px rgba(0, 0, 0, 0.2),
+    input-disabled-bg-color           : #f1f1f1,
+
+    textarea-height                   : 160px,
+
+    select-color                      : #333333,
+    select-padding-top                : 10px,
+    select-padding-right              : 30px,
+    select-padding-bottom             : 10px,
+    select-padding-left               : 10px,
+    select-hover-box-shadow           : 0 0 15px rgba(0, 0, 0, 0.2),
+    select-multiple-box-shadow        : 0 0 1px rgba(0, 0, 0, 0.1),
+    select-icon-color                 : #bbbbbb,
+    select-icon-height                : 42px,
+    select-icon-font-size             : 14px,
+    select-icon-right                 : 10px,
+
+    switch-width                      : 30px,
+    switch-height                     : 25px,
+    switch-label-box-shadow           : 1px 1px 2px rgba(0, 0, 0, 0.1),
+
+    input-list-margin-top             : 8px,
+    input-list-item-margin-top        : 5px,
+
+    checkbox-radio-size               : 20px,
+    checkbox-radio-bg-color           : #f1f1f1,
+    checkbox-radio-border-color       : #cbcbcb,
+    checkbox-radio-box-shadow         : 0 0 10px rgba(0, 0, 0, 0.2),
+    checkbox-radio-focus-bg-color     : #f1f1f1,
+    checkbox-radio-focus-border-color : #cbcbcb,
+    checkbox-radio-focus-box-shadow   : 0 0 10px rgba(0, 0, 0, 0.2),
+
+    actions-margin-top                : 20px,
+    actions-pre                       : 5,
+
+    required-field-font-size          : 14px,
+    
+    validation-color                  : #444444,
+    validation-icon-right             : 10px,
+    validation-icon-top               : 9px,
+    validation-font-size              : 12px,
+    validation-arrow-size             : 8px
+
+);
+
+
+/* Notifications
+==========
+*/
+
+$notifications: (
+    bg-color            : map-get($color, alpha),
+    padding-alpha       : 20px,
+    padding-alpha-left  : 60px,
+    padding-beta        : 30px,
+    padding-beta-left   : 60px,
+    margin-bottom       : 30px,
+    border-width        : 1px,
+    border-color        : darken(map-get($color, alpha), 5%),
+    icon-color-info     : #2690b0,
+    icon-color-success  : #26b036,
+    icon-color-error    : #b02626,
+    close-color         : black,
+    close-opacity       : 0.2,
+    close-opacity-hover : 0.5,
+    close-top           : 10px,
+    close-right         : 14px,
+    cookie-bg           : rgba(0, 0, 0, 0.85),
+    cookie-padding      : 20px
+);
+
+
+/* Navigation bar
+==========
+*/
+
+$nav-bar: (
+    mq                      : gamma-and-up,
+    bg-color                : map-get($color, epsilon),
+    trigger-bg-color        : map-get($color, epsilon),
+    trigger-float           : right,
+    trigger-height          : 50px,
+    trigger-font-size       : 30px,
+    nav-position            : right,
+    nav-margin-left         : 0,
+    link-text-align         : center,
+    link-padding-vertical   : 20px,
+    link-padding-horizontal : 30px,
+    link-color              : white
+);
+
+
+/* Off canvas
+==========
+*/
+
+$off-canvas: (
+    width                    : 260px,
+    bg-color                 : map-get($color, epsilon),
+    item-border-top-color    : map-get($color, epsilon),
+    item-border-bottom-color : map-get($color, epsilon),
+    link-padding-vertical    : 10px,
+    link-padding-horizontal  : 20px,
+    link-color               : white,
+    toggle-bg-color          : map-get($color, epsilon),
+    toggle-color             : white,
+    toggle-font-size         : 30px,
+    toggle-width             : 50px,
+    toggle-height            : 50px,
+    toggle-hover-darken      : 5%,
+    overlay-opacity          : 0.3
+);
+
+
+/* Tabs
+==========
+*/
+
+$tabs: (
+    bg-color                 : map-get($btn-bg, alpha),
+    border-color             : darken(map-get($btn-bg, alpha), 5%),
+    color                    : lighten(map-get($color, text), 20%),
+    padding-vertical         : 15px,
+    padding-horizontal       : 20px,
+    margin-left              : 0,
+    bg-color-active          : white,
+    content-border-top-color : darken(map-get($btn-bg, alpha), 5%),
+    content-padding          : 20px,
+    item-transition-speed    : 0.5s
+);
+
+
+/* Table
+==========
+*/
+
+$table: (
+    margin-bottom  : 30px,
+    padding        : map-get($base, padding),
+    border-color   : darken(map-get($btn-bg, alpha), 10%),
+    border-radius  : map-get($base, border-radius),
+    bg-color-zebra : #f8f8f8,
+    bg-color-hover : #f6f6f6
+);
+
+
+/* Tooltip
+==========
+*/
+
+$tooltip: (
+    min-width        : 150px,
+    max-width        : 220px,
+    arrow-width      : 5px,
+    transition-speed : map-get($base, transition-speed),
+    bg-color         : map-get($color, beta),
+    padding          : map-get($base, padding),
+    border-radius    : map-get($base, border-radius),
+    font-size        : 12px,
+    color            : white
+);
+
+
+/* Modal window
+==========
+*/
+
+$modal: (
+    min-width                   : 320px,
+    max-width                   : 630px,
+    transition-duration         : 0.5s,
+    content-bg-color            : white,
+    content-padding             : 40px,
+    content-border-radius       : map-get($base, border-radius),
+    overlay-bg-color            : black,
+    overlay-opacity             : 0.4,
+);
+
+
+/* Accordion
+==========
+*/
+
+$accordion: (
+    transition-speed           : map-get($base, transition-speed),
+    padding                    : 15px 20px,
+    border-color               : darken(map-get($btn-bg, alpha), 5%),
+    gradient                   : map-get($base, gradient),
+    border-radius              : map-get($base, border-radius),
+    group-margin-bottom        : 0,
+    trigger-icon-right         : 20px,
+    trigger-bg-color           : map-get($btn-bg, alpha),
+    trigger-bg-color-show      : map-get($color, beta),
+    trigger-hover-darken       : 5%,
+    trigger-color              : map-get($color, text),
+    trigger-color-show         : white,
+    trigger-gradient-bg        : linear-gradient(rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0)),
+    trigger-icon-content       : '\e80a',
+    trigger-icon-content-after : '\e80d',
+    trigger-icon-color         : map-get($color, text),
+    trigger-icon-color-show    : white,
+    content-padding            : 0 20px,
+    content-margin-top-first   : 20px
+);
+
+
+/* Breadcrumb
+==========
+*/
+
+$breadcrumbs: (
+    bg-color           : #f5f5f5,
+    margin-bottom      : 40px,
+    padding-vertical   : 15px,
+    padding-horizontal : 20px,
+    link-margin        : 10px,
+    divider            : '/',
+    divider-color      : #cccccc,
+    current-color      : #aaaaaa
+);
+
+
+/* Pricing tables
+==========
+*/
+
+$pricing-table: (
+    border-color               : darken(map-get($btn-bg, alpha), 5%),
+    header-bg-color            : lighten(black, 20%),
+    header-padding-vertical    : 15px,
+    header-padding-horizontal  : 20px,
+    content-padding-vertical   : 10px,
+    content-padding-horizontal : 20px,
+    price-font-size            : 30px,
+    description-font-size      : 20px,
+    action-padding-top         : 20px,
+    action-padding-bottom      : 20px
+);
+
+
+/* Progress bar
+==========
+*/
+
+$progress-bar: (
+    bg-color       : map-get($color, alpha),
+    value-bg-color : map-get($color, beta)
+);
+
+
+/* Spinners
+==========
+*/
+
+$spinner: (
+    animation-speed : 1s,
+    font-size       : 30px
+);
+
+
+/* Dropdown
+==========
+*/
+
+$dropdown: (
+    min-width               : 200px,
+    max-width               : 300px,
+    bg-color                : lighten(map-get($btn-bg, alpha), 5%),
+    border                  : 1px solid darken(map-get($btn-bg, alpha), 5%),
+    transition-duration     : 0.2s,
+    transition-delay        : 0.5s,
+    transform               : translate3d(0, 10%, 0) scale(0.8),
+    transform-hover         : translate3d(0, 0, 0) scale(1),
+    link-padding-vertical   : 10px,
+    link-padding-horizontal : 15px,
+    link-bg-color           : transparent,
+    link-bg-color-hover     : darken(map-get($color, alpha), 2%),
+    link-border-top         : 0 solid darken(map-get($btn-bg, alpha), 1%)
+);
+
+/* Media
+==========
+*/
+
+$media: (
+    margin-bottom       : 40px,
+    bordered-border-top : 1px solid map-get($table, border-color),
+);
+

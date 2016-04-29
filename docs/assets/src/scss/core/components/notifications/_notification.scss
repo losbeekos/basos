@@ -1,0 +1,102 @@
+/* Notification
+==========
+*/
+
+@mixin notification($before-content, $before-color) {
+    &::before {
+        content: $before-content;
+        color: $before-color;
+    }
+}
+
+.notification {
+    background: #f5f5f5;
+    border-radius: map-get($base, border-radius);
+    position: relative;
+    transition: all map-get($base, transition-speed);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    margin-bottom: rem(map-get($notifications, margin-bottom));
+
+    @include notification(map-get($icon, notification-info), map-get($notifications, icon-color-info));
+
+    &::before {
+        @extend %font-icons;
+
+        position: absolute;
+        left: rem(10px);
+        top: 0;
+        font-size: rem(40px);
+    }
+
+
+    &.notification--close {
+        opacity: 0;
+
+        &:not(.notification--cookie) {
+            height: 0;
+            overflow: hidden;
+            padding: 0;
+            min-height: 0;
+            margin: 0;
+            border: 0;
+            transform: scale3d(0.5);
+        }
+    }
+}
+
+/*doc
+---
+title: Notifications
+name: notifications
+category: Callouts and prompts
+---
+
+## Alpha
+
+```html_example
+<div class="notification notification--alpha">
+    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--alpha notification--error">
+    <div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--alpha notification--success">
+    <div class="notification__text">Je bent nu geregistreerd op onze website.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+```
+
+## Beta
+
+```html_example
+<div class="notification notification--beta">
+    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--beta notification--error">
+    <div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+<div class="notification notification--beta notification--success">
+    <div class="notification__text">Je bent nu geregistreerd op onze website.</div>
+    <button class="notification__close" data-notification-close></button>
+</div>
+```
+
+## Add
+
+You can call this function to insert a notification in the DOM.
+
+```
+app.notifications.add(target, message, size, type);
+```
+
+- target: notification container {string selector}
+- message: message to be shown {string}
+- size: alpha, beta {string}
+- type: success, error, info {string}
+
+*/

@@ -1,0 +1,480 @@
+/*doc
+ ---
+ title: Vendor
+ name: 1_vendor
+ category: Vendor
+ ---
+
+## Normalize
+A modern, HTML5-ready alternative to CSS resets [https://necolas.github.io/normalize.css](https://necolas.github.io/normalize.css).
+
+## Basos
+Some HTML tag CSS enhancements are used from H5BP [https://html5boilerplate.com](https://html5boilerplate.com).
+And some things are borrowed from Twitter's bootstrap [Reboot](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss)
+
+ */
+
+@import "core/vendor/normalize";
+@import "core/vendor/basos";
+
+/*doc
+---
+title: Functions
+name: functions
+category: Structure
+---
+
+## Tint
+Tint is a better way to make a color lighter instead of the standard Sass function "lighten".
+
+    .some-class {
+        color: tint( $color, $percentage );
+    }
+
+## Shade
+Shade is a better way to make a color darker instead of the standard Sass function "darken".
+
+    .some-class {
+        color: shade( $color, $percentage );
+    }
+*/
+
+@import "core/functions/rem";
+@import "core/functions/tint";
+@import "core/functions/shade";
+@import "core/functions/strip_units";
+@import "core/functions/modular_scale";
+
+
+/*doc
+---
+title: Mixins
+name: mixins
+category: Structure
+---
+
+## Arrow
+This mixin will create a CSS triangle.
+Direction values: up, right, bottom, left.
+
+    @include arrow($width, $height, $direction, $color);
+
+```
+@access public
+@param {Color} $color - color to shade
+@param {Number} $percentage - percentage of `$color` in returned color
+@return {Color}
+````
+
+
+## Font face
+Includes a font-face rule for a custom local font.
+
+    @include font-face($fontname, $directory, $woff2: false);
+
+```
+@access public
+@param {Value} $fontname - name used in the filename, this should be the same for every font type.
+@param {Value} $directory - directory relative from the assets/dist, (eg. fonts/somefont).
+@param {Boolean} $woff2 - adds woff2 support if you need to. Defaults to false.
+@return {Value} - returns compiled font-face rule.
+````
+
+
+*/
+
+@import "core/mixins/vertical_rhythm";
+@import "core/mixins/media_queries";
+@import "core/mixins/grid_column";
+@import "core/mixins/arrow";
+@import "core/mixins/font_face";
+
+
+/*doc
+---
+title: Helper classes
+name: helpers_classes
+category: Structure
+---
+
+## Clearfix
+Clearfix container class, add this class to a wrapping element which contains floating elements.
+
+```html_example
+<div class="clearfix">
+    <div class="float-left"></div>
+    <div class="float-left"></div>
+</div>
+````
+
+You can also extend it in your SCSS files like this;
+
+```
+.your-class {
+    @extend .clearfix;
+}
+```
+
+## Hide
+Hide classes are used for responsive design, for some breakpoints you can hide content if you need to.
+
+```html_example
+<div class="hide-alpha">This will show on medium to large screens</div>
+<div class="hide-alpha-and-beta">This will show on larger screens</div>
+<div class="hide-beta-and-up">This will show on small screens</div>
+<div class="hide-gamma-and-up">This will show on even larger screens</div>
+```
+
+## Lists
+
+### Unordened list
+
+```html_example
+<ul>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+</ul>
+```
+
+### Ordened list
+
+```html_example
+<ol>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+</ol>
+```
+
+### Unstyled list
+
+```html_example
+<ul class="list-unstyled">
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+</ul>
+```
+
+### Inline list
+
+```html_example
+<ul class="list-inline">
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+    <li>Lorem ipsum</li>
+</ul>
+```
+
+## Visually hidden
+Hide only visually, but have it available for screenreaders.
+
+    .visuallyhidden
+    .show-screenreaders
+
+
+### Grid margin
+
+```html_example
+<div class="grid-margin-top">Percentual grid margins</div>
+```
+
+## Margin
+These classes will give margin to any element. It will overrule the specified margin of the element.
+
+Keys available:
+
+- alpha (default: 10)
+- beta (default: 20)
+- gamma (default: 30)
+- delta (default: 40)
+- epsilon (default: 50)
+- zeta (default: 80)
+- eta (default: 100)
+
+### Default margin
+```html_example
+<div class="margin-alpha">Margin alpha all around</div>
+```
+
+### Left margin
+```html_example
+<div class="margin-beta-left">Margin beta left</div>
+```
+
+### Reset margin classes
+
+- no-margin
+- no-bottom-margin
+- no-top-margin
+- no-left-margin
+- no-right-margin
+- no-vertical-margin
+- no-horizontal-margin
+
+## Padding
+These classes will give padding to any element. It will overrule the specified padding of the element.
+
+Keys available:
+
+- alpha (default: 10)
+- beta (default: 20)
+- gamma (default: 30)
+- delta (default: 40)
+- epsilon (default: 50)
+- zeta (default: 80)
+- eta (default: 100)
+
+### Default padding
+```html_example
+<div class="padding-alpha">padding alpha all around</div>
+```
+
+### Left padding
+```html_example
+<div class="padding-beta-left">padding beta left</div>
+```
+
+### Reset padding classes
+
+- no-padding
+- no-bottom-padding
+- no-top-padding
+- no-left-padding
+- no-right-padding
+- no-vertical-padding
+- no-horizontal-padding
+
+
+## Float
+Give a float or disable float for an element.
+
+- float-left
+- float-right
+- float-none
+
+
+## Round
+Make something round, for an avatar for example.
+
+- round
+
+## Text align
+Align text. Available classes are;
+
+- text-align-left
+- text-align-center
+- text-align-right
+
+You can also use these classes with a media query appendix.
+
+- text-align-left-beta-and-up
+- text-align-left-gamma-and-up
+
+
+## Text transform
+
+- text-transform-caps
+- text-transform-thin
+- text-transform-small
+
+
+## Font style
+
+- font-style-normal
+- font-style-italic
+- font-style-bold
+
+## Position
+
+- position-relative
+- position-absolute
+
+## Display
+
+- display-inline
+- display-inline-block
+- display-block
+- display-none
+
+### Display table
+Display table class needs some an extra child if you need to vertically center content.
+
+```html_example
+<div class="display-table block" style="height: 100px;">
+    <div class="display-table__middle">
+        This text will center align
+    </div>
+</div>
+```
+
+```html_example
+<div class="display-table block" style="height: 100px;">
+    <div class="display-table__bottom">
+        This text will bottom align
+    </div>
+</div>
+```
+
+## Ellipsis
+Pure CSS ellipsis class
+
+```html_example
+<div class="ellipsis">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem, ullam magnam, esse numquam voluptatum culpa neque laboriosam officiis, sint animi beatae qui vero molestias aliquam dolore ea autem. Ipsam!
+</div>
+```
+
+## Break word
+Break a word with a hyphen (hyphen not supported in Blink as of writing).
+
+```html_example
+<div class="break-word" style="width: 200px">
+    Loremipsumdolorsitametconsecteturessenumquamvoluptatumculpa
+</div>
+```
+
+
+*/
+
+@import "core/helpers/clearfix";
+@import "core/helpers/hide";
+@import "core/helpers/lists";
+@import "core/helpers/visually_hidden";
+@import "core/helpers/margin";
+@import "core/helpers/padding";
+@import "core/helpers/grid_margin";
+@import "core/helpers/float";
+@import "core/helpers/round";
+@import "core/helpers/vertical_align";
+@import "core/helpers/text_align";
+@import "core/helpers/text_transform";
+@import "core/helpers/font_style";
+@import "core/helpers/font_weight";
+@import "core/helpers/position";
+@import "core/helpers/display";
+@import "core/helpers/ellipsis";
+@import "core/helpers/break_word";
+@import "core/helpers/css_columns";
+
+
+/* Animations
+==========
+*/
+
+@import "core/animations/animated";
+@import "core/animations/shake";
+@import "core/animations/bounceIn";
+@import "core/animations/bounceInDown";
+@import "core/animations/bounceInLeft";
+@import "core/animations/bounceInRight";
+@import "core/animations/bounceInUp";
+@import "core/animations/fadeIn";
+@import "core/animations/fadeInDown";
+@import "core/animations/fadeInDownBig";
+@import "core/animations/fadeInLeft";
+@import "core/animations/fadeInLeftBig";
+@import "core/animations/fadeInRight";
+@import "core/animations/fadeInRightBig";
+@import "core/animations/fadeInUp";
+@import "core/animations/fadeInUpBig";
+@import "core/animations/fadeInRotate";
+@import "core/animations/fadeOutUp";
+@import "core/animations/zoomIn";
+@import "core/animations/zoomInDown";
+@import "core/animations/zoomInLeft";
+@import "core/animations/zoomInRight";
+@import "core/animations/zoomInUp";
+@import "core/animations/flipInX";
+@import "core/animations/flipInY";
+
+
+/* Mandatory components
+==========
+*/
+
+@import "core/components/grid";
+@import "core/components/flexbox_grid";
+@import "core/components/flexible_grid";
+@import "core/components/layout";
+@import "core/components/containers";
+@import "core/components/sections";
+@import "core/components/fonts";
+@import "core/components/typography";
+@import "core/components/colors";
+@import "core/components/icons";
+
+
+/* Optional components
+==========
+You can comment some of these out
+for a smaller generated CSS file.
+*/
+
+@import "core/components/styleguide";
+@import "core/components/modal";
+@import "core/components/card";
+@import "core/components/tabs";
+@import "core/components/nav_bar";
+@import "core/components/tables";
+@import "core/components/dropdowns";
+@import "core/components/tooltips";
+@import "core/components/accordion";
+@import "core/components/breadcrumbs";
+@import "core/components/pricing_tables";
+@import "core/components/media";
+@import "core/components/progress";
+@import "core/components/spinners";
+@import "core/components/scrollspy";
+@import "core/components/toggle";
+@import "core/components/affix";
+@import "core/components/google_maps";
+
+/* Off canvas
+==========
+*/
+@import "core/components/off_canvas/off_canvas";
+@import "core/components/off_canvas/off_canvas_navbar";
+
+    
+/*doc
+---
+title: Buttons
+name: 5_buttons
+category: Buttons
+---
+
+*/
+
+@import "core/components/buttons/container";
+@import "core/components/buttons/group";
+@import "core/components/buttons/sizes";
+@import "core/components/buttons/styles";
+
+
+/* Forms
+==========
+*/
+
+@import "core/components/form/form";
+@import "core/components/form/general";
+@import "core/components/form/placeholder";
+@import "core/components/form/checkbox";
+@import "core/components/form/radio";
+@import "core/components/form/range";
+@import "core/components/form/validation";
+@import "core/components/form/password";
+@import "core/components/form/floating_label";
+
+
+/* Notifications
+==========
+*/
+
+@import "core/components/notifications/notification";
+@import "core/components/notifications/sizes";
+@import "core/components/notifications/styles";
+@import "core/components/notifications/identifiers";
+@import "core/components/notifications/cookie_notification";
+

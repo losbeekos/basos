@@ -1,0 +1,120 @@
+/* Dropdowns
+==========
+*/
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+
+    &:not([data-dropdown-trigger=click]):hover,
+    &.dropdown--show {
+        .dropdown__content {
+            visibility: visible;
+            opacity: 1;
+            transition: all map-get($dropdown, transition-duration) 0s;
+            transform: map-get($dropdown, transform-hover);
+        }
+    }
+
+    ul {
+        @extend .list-unstyled;
+    }
+
+    li {
+        display: block;
+        margin: 0;
+    }
+
+    &__content {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        visibility: hidden;
+        background-color: map-get($btn-bg, alpha);
+        border: map-get($dropdown, border);
+        opacity: 0;
+        z-index: 999;
+        transition: all map-get($dropdown, transition-duration) map-get($dropdown, transition-delay);
+        transform: map-get($dropdown, transform);
+        min-width: rem(map-get($dropdown, min-width));
+        max-width: rem(map-get($dropdown, max-width));
+
+        [data-dropdown-trigger=click] & {
+            transition-delay: 0s;
+        }
+
+        .dropdown--right & {
+            left: auto;
+            right: 0;
+        }
+
+        a {
+            background-color: map-get($dropdown, link-bg-color);
+            display: block;
+            border-top: map-get($dropdown, link-border-top);
+            color: map-get($color, text);
+            padding: rem(map-get($dropdown, link-padding-vertical)) rem(map-get($dropdown, link-padding-horizontal));
+
+            &:hover {
+                background-color: map-get($dropdown, link-bg-color-hover);
+            }
+        }
+    }
+}
+
+/*doc
+---
+title: Dropdowns
+name: dropdowns
+category: Content
+---
+
+## Hover
+
+```html_example
+<div class="dropdown">
+    <a class="btn btn--alpha btn--small">dropdown</a>
+    <div class="dropdown__content">
+        <ul>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+            <li><a href="#">link</a></li>
+        </ul>
+    </div>
+</div>
+```
+
+## Click trigger
+
+```html_example
+<div class="dropdown" data-dropdown-trigger="click">
+    <a class="btn btn--alpha btn--small">dropdown</a>
+    <div class="dropdown__content">
+        <ul class="dropdown__list">
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+        </ul>
+    </div>
+</div>
+```
+
+## Right aligned
+
+```html_example
+<div class="dropdown dropdown--right">
+    <a class="btn btn--alpha btn--small">dropdown</a>
+    <div class="dropdown__content">
+        <ul class="dropdown__list">
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+        </ul>
+    </div>
+</div>
+```
+
+*/
