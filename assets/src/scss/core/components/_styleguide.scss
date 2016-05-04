@@ -18,8 +18,6 @@ a.styleguide {
 }
 
 .styleguide-nav {
-    @extend .block;
-
     &__sub {
         background: tint(map-get($color, epsilon), 5%);
         padding-top: rem(10px);

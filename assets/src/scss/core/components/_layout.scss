@@ -20,7 +20,7 @@ html {
 }
 
 body {
-    @extend %font-open-sans;
+    @extend %font-custom;
 
     color: map-get($color, text);
     font-weight: 400;
