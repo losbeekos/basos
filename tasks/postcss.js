@@ -9,9 +9,8 @@ module.exports = {
         // },
 
         processors: [
-            require('autoprefixer')({
-                browsers: 'last 4 versions'
-            })
+            require('autoprefixer')({ browsers: 'last 4 versions' }),
+            require('postcss-flexbugs-fixes'),
         ]
     },
     dist: {
