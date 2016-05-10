@@ -27,16 +27,16 @@ category: Structure
 ## Tint
 Tint is a better way to make a color lighter instead of the standard Sass function "lighten".
 
-    .some-class {
-        color: tint( $color, $percentage );
-    }
+	.some-class {
+		color: tint( $color, $percentage );
+	}
 
 ## Shade
 Shade is a better way to make a color darker instead of the standard Sass function "darken".
 
-    .some-class {
-        color: shade( $color, $percentage );
-    }
+	.some-class {
+		color: shade( $color, $percentage );
+	}
 */
 
 @import "core/functions/rem";
@@ -57,7 +57,7 @@ category: Structure
 This mixin will create a CSS triangle.
 Direction values: up, right, bottom, left.
 
-    @include arrow($width, $height, $direction, $color);
+	@include arrow($width, $height, $direction, $color);
 
 ```
 @access public
@@ -70,7 +70,7 @@ Direction values: up, right, bottom, left.
 ## Font face
 Includes a font-face rule for a custom local font.
 
-    @include font-face($fontname, $directory, $woff2: false);
+	@include font-face($fontname, $directory, $woff2: false);
 
 ```
 @access public
@@ -102,8 +102,8 @@ Clearfix container class, add this class to a wrapping element which contains fl
 
 ```html_example
 <div class="clearfix">
-    <div class="float-left"></div>
-    <div class="float-left"></div>
+	<div class="float-left"></div>
+	<div class="float-left"></div>
 </div>
 ````
 
@@ -111,7 +111,7 @@ You can also extend it in your SCSS files like this;
 
 ```
 .your-class {
-    @extend .clearfix;
+	@extend .clearfix;
 }
 ```
 
@@ -131,9 +131,9 @@ Hide classes are used for responsive design, for some breakpoints you can hide c
 
 ```html_example
 <ul>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
 </ul>
 ```
 
@@ -141,9 +141,9 @@ Hide classes are used for responsive design, for some breakpoints you can hide c
 
 ```html_example
 <ol>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
 </ol>
 ```
 
@@ -151,9 +151,9 @@ Hide classes are used for responsive design, for some breakpoints you can hide c
 
 ```html_example
 <ul class="list-unstyled">
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
 </ul>
 ```
 
@@ -161,17 +161,17 @@ Hide classes are used for responsive design, for some breakpoints you can hide c
 
 ```html_example
 <ul class="list-inline">
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
 </ul>
 ```
 
 ## Visually hidden
 Hide only visually, but have it available for screenreaders.
 
-    .visuallyhidden
-    .show-screenreaders
+	.visuallyhidden
+	.show-screenreaders
 
 
 ### Grid margin
@@ -303,17 +303,17 @@ Display table class needs some an extra child if you need to vertically center c
 
 ```html_example
 <div class="display-table block" style="height: 100px;">
-    <div class="display-table__middle">
-        This text will center align
-    </div>
+	<div class="display-table__middle">
+		This text will center align
+	</div>
 </div>
 ```
 
 ```html_example
 <div class="display-table block" style="height: 100px;">
-    <div class="display-table__bottom">
-        This text will bottom align
-    </div>
+	<div class="display-table__bottom">
+		This text will bottom align
+	</div>
 </div>
 ```
 
@@ -322,7 +322,7 @@ Pure CSS ellipsis class
 
 ```html_example
 <div class="ellipsis">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem, ullam magnam, esse numquam voluptatum culpa neque laboriosam officiis, sint animi beatae qui vero molestias aliquam dolore ea autem. Ipsam!
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem, ullam magnam, esse numquam voluptatum culpa neque laboriosam officiis, sint animi beatae qui vero molestias aliquam dolore ea autem. Ipsam!
 </div>
 ```
 
@@ -331,7 +331,7 @@ Break a word with a hyphen (hyphen not supported in Blink as of writing).
 
 ```html_example
 <div class="break-word" style="width: 200px">
-    Loremipsumdolorsitametconsecteturessenumquamvoluptatumculpa
+	Loremipsumdolorsitametconsecteturessenumquamvoluptatumculpa
 </div>
 ```
 
@@ -437,7 +437,7 @@ for a smaller generated CSS file.
 @import "core/components/off_canvas/off_canvas";
 @import "core/components/off_canvas/off_canvas_navbar";
 
-    
+	
 /*doc
 ---
 title: Buttons

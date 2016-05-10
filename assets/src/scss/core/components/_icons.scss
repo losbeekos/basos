@@ -3,59 +3,59 @@
 */
 
 @mixin icons ($direction) {
-    $class: icon;
-    $pseudo: before;
-    $margin: right;
+	$class: icon;
+	$pseudo: before;
+	$margin: right;
 
-    @if $direction == right {
-        $class: icon-after;
-        $pseudo: after;
-        $margin: left;
-    }
+	@if $direction == right {
+		$class: icon-after;
+		$pseudo: after;
+		$margin: left;
+	}
 
-    .#{$class} {
-        &.icon--spinner:#{$pseudo}       { content: '\e800'; }
-        &.icon--ok:#{$pseudo}            { content: '\e801'; }
-        &.icon--cancel:#{$pseudo}        { content: '\e802'; }
-        &.icon--cancel-circle:#{$pseudo} { content: '\e803'; }
-        &.icon--info:#{$pseudo}          { content: '\e804'; }
-        &.icon--attention:#{$pseudo}     { content: '\e805'; }
-        &.icon--question:#{$pseudo}      { content: '\e806'; }
-        &.icon--eye:#{$pseudo}           { content: '\e807'; }
-        &.icon--eye-off:#{$pseudo}       { content: '\e808'; }
-        &.icon--menu:#{$pseudo}          { content: '\e809'; }
-        &.icon--down:#{$pseudo}          { content: '\e80a'; }
-        &.icon--left:#{$pseudo}          { content: '\e80b'; }
-        &.icon--right:#{$pseudo}         { content: '\e80c'; }
-        &.icon--up:#{$pseudo}            { content: '\e80d'; }
-        &.icon--cog:#{$pseudo}           { content: '\e80e'; }
+	.#{$class} {
+		&.icon--spinner:#{$pseudo} { content: '\e800'; }
+		&.icon--ok:#{$pseudo} { content: '\e801'; }
+		&.icon--cancel:#{$pseudo} { content: '\e802'; }
+		&.icon--cancel-circle:#{$pseudo} { content: '\e803'; }
+		&.icon--info:#{$pseudo} { content: '\e804'; }
+		&.icon--attention:#{$pseudo} { content: '\e805'; }
+		&.icon--question:#{$pseudo} { content: '\e806'; }
+		&.icon--eye:#{$pseudo} { content: '\e807'; }
+		&.icon--eye-off:#{$pseudo} { content: '\e808'; }
+		&.icon--menu:#{$pseudo} { content: '\e809'; }
+		&.icon--down:#{$pseudo} { content: '\e80a'; }
+		&.icon--left:#{$pseudo} { content: '\e80b'; }
+		&.icon--right:#{$pseudo} { content: '\e80c'; }
+		&.icon--up:#{$pseudo} { content: '\e80d'; }
+		&.icon--cog:#{$pseudo} { content: '\e80e'; }
 
-        &:#{$pseudo} {
-            @extend %font-icons;
+		&:#{$pseudo} {
+			@extend %font-icons;
 
-            font-style: normal;
-            font-weight: normal;
-            speak: none;
-            display: inline-block;
-            text-decoration: inherit;
-            width: 1em;
-            text-align: center;
+			font-style: normal;
+			font-weight: normal;
+			speak: none;
+			display: inline-block;
+			text-decoration: inherit;
+			width: 1em;
+			text-align: center;
 
-            /* For safety - reset parent styles, that can break glyph codes*/
-            font-variant: normal;
-            text-transform: none;
+			/* For safety - reset parent styles, that can break glyph codes*/
+			font-variant: normal;
+			text-transform: none;
 
-            /* fix buttons height, for twitter bootstrap */
-            line-height: 1em;
+			/* fix buttons height, for twitter bootstrap */
+			line-height: 1em;
 
-            /* Font smoothing. That was taken from TWBS */
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
+			/* Font smoothing. That was taken from TWBS */
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
 
-        &.icon--margin-alpha:#{$pseudo} { @extend .margin-alpha-#{$margin}; }
-        &.icon--margin-beta:#{$pseudo}  { @extend .margin-beta-#{$margin};  }
-    }
+		&.icon--margin-alpha:#{$pseudo} { @extend .margin-alpha-#{$margin}; }
+		&.icon--margin-beta:#{$pseudo}  { @extend .margin-beta-#{$margin};  }
+	}
 }
 
 @include icons(left);

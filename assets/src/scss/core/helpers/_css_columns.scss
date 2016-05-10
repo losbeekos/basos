@@ -5,29 +5,29 @@
 .css-columns-2,
 .css-columns-3,
 .css-columns-4 {
-    column-gap: rem(20px);
+	column-gap: rem(20px);
 
-    @include mq(gamma-and-up) {
-        column-gap: rem(40px);
-    }
+	@include mq(gamma-and-up) {
+		column-gap: rem(40px);
+	}
 }
 
 .css-columns-2 {
-    @include mq(gamma-and-up) {
-        column-count: 2;
-    }
+	@include mq(gamma-and-up) {
+		column-count: 2;
+	}
 }
 
 .css-columns-3 {
-    @include mq(gamma-and-up) {
-        column-count: 3;
-    }
+	@include mq(gamma-and-up) {
+		column-count: 3;
+	}
 }
 
 .css-columns-4 {
-    @include mq(gamma-and-up) {
-        column-count: 4;
-    }
+	@include mq(gamma-and-up) {
+		column-count: 4;
+	}
 }
 
 /*doc
@@ -41,7 +41,7 @@ Pure CSS columns. Classes available for 2, 3 and 4 columns.
 
 ```html_example
 <p class="css-columns-4">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique animi cupiditate inventore repellendus placeat voluptate at nobis assumenda! Accusantium aspernatur id voluptatum itaque autem at dolore eligendi quisquam vitae dolor?
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique animi cupiditate inventore repellendus placeat voluptate at nobis assumenda! Accusantium aspernatur id voluptatum itaque autem at dolore eligendi quisquam vitae dolor?
 </p>
 ```
 

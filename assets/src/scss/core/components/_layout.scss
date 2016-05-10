@@ -6,64 +6,64 @@
 *,
 :before,
 :after {
-    box-sizing: border-box;
+	box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
+	height: 100%;
 }
 
 html {
-    background-color: map-get($color, body);
-    overflow-x: hidden;
+	background-color: map-get($color, body);
+	overflow-x: hidden;
 }
 
 body {
-    @extend %font-custom;
+	@extend %font-custom;
 
-    color: map-get($color, text);
-    font-weight: 400;
-    transition: opacity map-get($base, transition-speed)/4 ease-in;
+	color: map-get($color, text);
+	font-weight: 400;
+	transition: opacity map-get($base, transition-speed)/4 ease-in;
 }
 
 .background {
-    background: map-get($color, background);
-    min-height: 100%;
+	background: map-get($color, background);
+	min-height: 100%;
 }
 
 a {
-    color: map-get($color, beta);
-    text-decoration: none;
-    display: inline;
-    cursor: pointer;
-    transition: all map-get($base, transition-speed);
+	color: map-get($color, beta);
+	text-decoration: none;
+	display: inline;
+	cursor: pointer;
+	transition: all map-get($base, transition-speed);
 
-    &:hover {
-        color: tint(map-get($color, beta), 40%);
-    }
+	&:hover {
+		color: tint(map-get($color, beta), 40%);
+	}
 }
 
 a:not([class]) {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 button {
-    transition: all map-get($base, transition-speed);
+	transition: all map-get($base, transition-speed);
 }
 
 img {
-    max-width: 100%;
+	max-width: 100%;
 }
 
 // Responsive SVGs
 svg {
-    max-width: 100% !important;
-    height: initial !important; // Do not change this!
+	max-width: 100% !important;
+	height: initial !important; // Do not change this!
 }
 
 address {
-    font-style: normal;
+	font-style: normal;
 }
 
 p,
@@ -71,19 +71,19 @@ ul,
 ol,
 table,
 blockquote {
-    @include vr($p-font-size);
+	@include vr($p-font-size);
 }
 
 p {
-    margin-top: 0;
+	margin-top: 0;
 }
 
 .disable-hover,
 .disable-hover * {
-    pointer-events: none !important;
+	pointer-events: none !important;
 }
 
 .disable-transitions,
 .disable-transitions * {
-    transition: none !important;
+	transition: none !important;
 }

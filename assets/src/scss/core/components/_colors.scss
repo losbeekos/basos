@@ -3,18 +3,18 @@
 ==============================*/
 
 .color {
-    @each $key, $value in $color {
-        &-#{"" + $key} {
-            color: map-get($color, $key) !important;
-        }
-    }
+	@each $key, $value in $color {
+		&-#{"" + $key} {
+			color: map-get($color, $key) !important;
+		}
+	}
 }
 
 .bg-color {
-    @each $key, $value in $color {
-        &-#{"" + $key} {
-            background: map-get($color, $key) !important;
-        }
-    }
+	@each $key, $value in $color {
+		&-#{"" + $key} {
+			background: map-get($color, $key) !important;
+		}
+	}
 }
 

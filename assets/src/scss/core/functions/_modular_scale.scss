@@ -6,5 +6,5 @@ You can use this for margins and padding. Standard this is used for typography m
 */
 
 @function ms($level) {
-    @return rem(map-get($modular-scale, $level));
+	@return rem(map-get($modular-scale, $level));
 }

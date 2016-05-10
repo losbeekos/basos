@@ -13,39 +13,39 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-    @extend %font-custom;
+	@extend %font-custom;
 
-    margin: ms(-1) 0;
-    font-weight: 600;
+	margin: ms(-1) 0;
+	font-weight: 600;
 }
 
 h1, .h1 {
-    margin: ms(0) 0;
-    font-weight: 800;
+	margin: ms(0) 0;
+	font-weight: 800;
 
-    @include vr($h1-font-size, map-get($ratio, fourth));
+	@include vr($h1-font-size, map-get($ratio, fourth));
 }
 
 h2, .h2 {
-    @include vr($h2-font-size, map-get($ratio, augmented-fourth));
+	@include vr($h2-font-size, map-get($ratio, augmented-fourth));
 }
 
 h3, .h3 {
-    @include vr($h3-font-size);
+	@include vr($h3-font-size);
 }
 
 h4, .h4 {
-    @include vr($h4-font-size);
+	@include vr($h4-font-size);
 }
 
 h5, .h5 {
-    @include vr($h5-font-size);
+	@include vr($h5-font-size);
 }
 
 h6, .h6 {
-    margin: ms(-2) 0;
+	margin: ms(-2) 0;
 
-    @include vr($h6-font-size);
+	@include vr($h6-font-size);
 }
 
 /*doc

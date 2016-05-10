@@ -1,8 +1,8 @@
 module.exports = {
-    options: {
-        jpegMini: false,
-        imageAlpha: true,
-    },
+	options: {
+		jpegMini: false,
+		imageAlpha: true,
+	},
 
-    src: ['<%= basos.dist %>/img', '<%= basos.dist %>/img']
+	src: ['<%= basos.dist %>/img', '<%= basos.dist %>/img']
 }

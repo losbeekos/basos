@@ -3,48 +3,48 @@
 */
 
 @mixin defaultGridColumn($key) {
-    @include mq(#{$key}) {
-        .column-#{$key}--first {
-            margin-left: 0 !important;
-        }
+	@include mq(#{$key}) {
+		.column-#{$key}--first {
+			margin-left: 0 !important;
+		}
 
-        @for $i from 1 through map-get($susy, columns) {
-            .column-#{$i},
-            .column-#{$key}-#{$i} {
-                width: span($i of map-get($susy, columns));
+		@for $i from 1 through map-get($susy, columns) {
+			.column-#{$i},
+			.column-#{$key}-#{$i} {
+				width: span($i of map-get($susy, columns));
 
-                .grid--no-gutters & {
-                    width: 100%/map-get($susy, columns)*$i;
-                }
-            }
+				.grid--no-gutters & {
+					width: 100%/map-get($susy, columns)*$i;
+				}
+			}
 
-            .pre-#{$i},
-            .pre-#{$i}:first-child {
-                @include push($i of map-get($susy, columns));
-            }
+			.pre-#{$i},
+			.pre-#{$i}:first-child {
+				@include push($i of map-get($susy, columns));
+			}
 
-            .post-#{$i},
-            .post-#{$i}:first-child {
-                @include post($i of map-get($susy, columns));
-            }
-        }
-    }
+			.post-#{$i},
+			.post-#{$i}:first-child {
+				@include post($i of map-get($susy, columns));
+			}
+		}
+	}
 }
 
 @mixin gridColumn($key) {
-    @include mq(#{$key}) {
-        .column-#{$key}--first {
-            margin-left: 0 !important;
-        }
+	@include mq(#{$key}) {
+		.column-#{$key}--first {
+			margin-left: 0 !important;
+		}
 
-        @for $i from 1 through map-get($susy, columns) {
-            .column-#{$key}-#{$i} {
-                width: span($i of map-get($susy, columns));
+		@for $i from 1 through map-get($susy, columns) {
+			.column-#{$key}-#{$i} {
+				width: span($i of map-get($susy, columns));
 
-                .grid--no-gutters & {
-                    width: 100%/map-get($susy, columns)*$i;
-                }
-            }
-        }
-    }
+				.grid--no-gutters & {
+					width: 100%/map-get($susy, columns)*$i;
+				}
+			}
+		}
+	}
 }

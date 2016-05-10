@@ -3,29 +3,29 @@
 */
 
 .breadcrumbs {
-    background: map-get($breadcrumbs, bg-color);
-    border-radius: map-get($base, border-radius);
-    padding: rem(map-get($breadcrumbs, padding-vertical)) rem(map-get($breadcrumbs, padding-horizontal));
-    margin-bottom: rem(map-get($breadcrumbs, margin-bottom));
+	background: map-get($breadcrumbs, bg-color);
+	border-radius: map-get($base, border-radius);
+	padding: rem(map-get($breadcrumbs, padding-vertical)) rem(map-get($breadcrumbs, padding-horizontal));
+	margin-bottom: rem(map-get($breadcrumbs, margin-bottom));
 
-    a,
-    span {
-        display: inline-block;
-    }
+	a,
+	span {
+		display: inline-block;
+	}
 
-    a {
-        margin-right: rem(map-get($breadcrumbs, link-margin));
+	a {
+		margin-right: rem(map-get($breadcrumbs, link-margin));
 
-        &::after {
-            content: map-get($breadcrumbs, divider);
-            color: map-get($breadcrumbs, divider-color);
-            margin-left: rem(map-get($breadcrumbs, link-margin));
-        }
-    }
+		&::after {
+			content: map-get($breadcrumbs, divider);
+			color: map-get($breadcrumbs, divider-color);
+			margin-left: rem(map-get($breadcrumbs, link-margin));
+		}
+	}
 
-    span {
-        color: map-get($breadcrumbs, current-color);
-    }
+	span {
+		color: map-get($breadcrumbs, current-color);
+	}
 }
 
 /*doc
@@ -37,9 +37,9 @@ category: Navigation
 
 ```html_example
 <div class="breadcrumbs">
-    <a class="breadcrubs__link" href="#">Home</a>
-    <a class="breadcrubs__link" href="#">Lorem</a>
-    <span>Ipsum dolir asmit emet</span>
+	<a class="breadcrubs__link" href="#">Home</a>
+	<a class="breadcrubs__link" href="#">Lorem</a>
+	<span>Ipsum dolir asmit emet</span>
 </div>
 ```
 

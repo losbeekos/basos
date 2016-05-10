@@ -3,21 +3,21 @@
 */
 
 @keyframes spinner {
-    100% {
-        transform: rotate(360deg);
-    }
+	100% {
+		transform: rotate(360deg);
+	}
 }
 
 .spinner {
-    display: inline-block;
-    animation: spinner map-get($spinner, animation-speed) infinite linear;
+	display: inline-block;
+	animation: spinner map-get($spinner, animation-speed) infinite linear;
 
-    &::after {
-        @extend %font-icons;
+	&::after {
+		@extend %font-icons;
 
-        content: map-get($icon, spinner-alpha);
-        font-size: rem(map-get($spinner, font-size));
-    }
+		content: map-get($icon, spinner-alpha);
+		font-size: rem(map-get($spinner, font-size));
+	}
 
-    &--alpha:after { content: map-get($icon, spinner); }
+	&--alpha:after { content: map-get($icon, spinner); }
 }

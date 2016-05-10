@@ -3,63 +3,63 @@
 */
 
 .tabs {
-    @extend .list-inline;
-    @extend .clearfix;
+	@extend .list-inline;
+	@extend .clearfix;
 
-    li {
-        margin: 0;
-        float: left;
+	li {
+		margin: 0;
+		float: left;
 
-        + li {
-            margin-left: rem(map-get($tabs, margin-left));
-        }
-    }
+		+ li {
+			margin-left: rem(map-get($tabs, margin-left));
+		}
+	}
 }
 
 .tab {
-    position: relative;
-    display: inline-block;
-    background: map-get($tabs, bg-color);
-    color: map-get($tabs, color);
-    border-top-left-radius: map-get($base, border-radius);
-    border-top-right-radius: map-get($base, border-radius);
-    user-select: none;
-    padding: rem(map-get($tabs, padding-vertical)) rem(map-get($tabs, padding-horizontal));
+	position: relative;
+	display: inline-block;
+	background: map-get($tabs, bg-color);
+	color: map-get($tabs, color);
+	border-top-left-radius: map-get($base, border-radius);
+	border-top-right-radius: map-get($base, border-radius);
+	user-select: none;
+	padding: rem(map-get($tabs, padding-vertical)) rem(map-get($tabs, padding-horizontal));
 
-    &:hover {
-        background: darken(map-get($tabs, bg-color), 5%);
-    }
+	&:hover {
+		background: darken(map-get($tabs, bg-color), 5%);
+	}
 
-    &:focus {
-        outline: none;
-        color: map-get($color, text);
-        background: darken(map-get($tabs, bg-color), 10%);
-    }
+	&:focus {
+		outline: none;
+		color: map-get($color, text);
+		background: darken(map-get($tabs, bg-color), 10%);
+	}
 
-    &.tab--active {
-        background: map-get($tabs, bg-color-active);
-        border-bottom-color: map-get($tabs, bg-color-active);
-        color: map-get($color, text);
-    }
+	&.tab--active {
+		background: map-get($tabs, bg-color-active);
+		border-bottom-color: map-get($tabs, bg-color-active);
+		color: map-get($color, text);
+	}
 }
 
 .tab-content {
-    padding-top: rem(map-get($tabs, content-padding));
-    padding-bottom: rem(map-get($tabs, content-padding));
+	padding-top: rem(map-get($tabs, content-padding));
+	padding-bottom: rem(map-get($tabs, content-padding));
 }
 
 .tab-item {
-    overflow: hidden;
-    height: 0;
-    width: 0;
-    opacity: 0;
-    transition: opacity map-get($tabs, item-transition-speed);
+	overflow: hidden;
+	height: 0;
+	width: 0;
+	opacity: 0;
+	transition: opacity map-get($tabs, item-transition-speed);
 
-    &.tab-item--active {
-        height: auto;
-        width: 100%;
-        opacity: 1;
-    }
+	&.tab-item--active {
+		height: auto;
+		width: 100%;
+		opacity: 1;
+	}
 }
 
 /*doc
@@ -71,30 +71,30 @@ category: Content
 
 ```html_example
 <ul class="tabs">
-    <li><a class="tab tab--active" href="#tab-home">Home</a></li>
-    <li><a class="tab" href="#tab-lorem">Lorem</a></li>
-    <li><a class="tab" href="#tab-ipsum">Ipsum</a></li>
+	<li><a class="tab tab--active" href="#tab-home">Home</a></li>
+	<li><a class="tab" href="#tab-lorem">Lorem</a></li>
+	<li><a class="tab" href="#tab-ipsum">Ipsum</a></li>
 </ul>
 <div class="tab-content">
-    <div class="tab-item tab-item--active" id="tab-home">
-        <div class="grid">
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-        </div>
-    </div>
-    <div class="tab-item" id="tab-lorem">
-        <p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
-    </div>
-    <div class="tab-item" id="tab-ipsum">
-        <div class="grid">
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-        </div>
-        <div class="grid">
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-        </div>
-    </div>
+	<div class="tab-item tab-item--active" id="tab-home">
+		<div class="grid">
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+		</div>
+	</div>
+	<div class="tab-item" id="tab-lorem">
+		<p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
+	</div>
+	<div class="tab-item" id="tab-ipsum">
+		<div class="grid">
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+		</div>
+		<div class="grid">
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+		</div>
+	</div>
 </div>
 ```
 

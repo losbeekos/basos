@@ -3,55 +3,55 @@
 */
 
 .form__input--floating-label {
-    position: relative;
-    padding-top: rem(20px);
+	position: relative;
+	padding-top: rem(20px);
 
-    input {
-        border: none;
-        border-bottom: map-get($form, input-border);
-        text-align: left;
-        box-shadow: none;
-        padding: rem(6px) 0;
+	input {
+		border: none;
+		border-bottom: map-get($form, input-border);
+		text-align: left;
+		box-shadow: none;
+		padding: rem(6px) 0;
 
-        &:focus,
-        &:active {
-            border: none;
-            box-shadow: none;
-            border-bottom: rem(1px) solid map-get($color, beta);
+		&:focus,
+		&:active {
+			border: none;
+			box-shadow: none;
+			border-bottom: rem(1px) solid map-get($color, beta);
 
-            + label {
-                color: map-get($color, beta);
-                top: rem(4px);
-                font-size: rem(12px);
-            }
-        }
+			+ label {
+				color: map-get($color, beta);
+				top: rem(4px);
+				font-size: rem(12px);
+			}
+		}
 
-        &:focus,
-        &:active,
-        &.is-filled {
-            + label {
-                color: map-get($color, beta);
-                top: rem(4px);
-                font-size: rem(12px);
-            }
-        }
-    }
+		&:focus,
+		&:active,
+		&.is-filled {
+			+ label {
+				color: map-get($color, beta);
+				top: rem(4px);
+				font-size: rem(12px);
+			}
+		}
+	}
 
-    label {
-        bottom: 0;
-        color: rgba(0,0,0,.26);
-        left: 0;
-        right: 0;
-        pointer-events: none;
-        position: absolute;
-        display: block;
-        top: rem(24px);
-        width: 100%;
-        overflow: hidden;
-        white-space: nowrap;
-        text-align: left;
-        transition: all map-get($base, transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
-    }
+	label {
+		bottom: 0;
+		color: rgba(0,0,0,.26);
+		left: 0;
+		right: 0;
+		pointer-events: none;
+		position: absolute;
+		display: block;
+		top: rem(24px);
+		width: 100%;
+		overflow: hidden;
+		white-space: nowrap;
+		text-align: left;
+		transition: all map-get($base, transition-speed) cubic-bezier(0.4, 0, 0.2, 1);
+	}
 
 }
 /*doc
@@ -63,8 +63,8 @@ category: Forms
 
 ```html_example
 <div class="form__input form__input--floating-label">
-    <input id="floating-label" type="url">
-    <label for="floating-label">Website</label>
+	<input id="floating-label" type="url">
+	<label for="floating-label">Website</label>
 </div>
 ```
 

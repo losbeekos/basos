@@ -3718,107 +3718,107 @@ category: Javascript
 */
 
 var app = app || {},
-    helper = helper || {};
+	helper = helper || {};
 
 app.settings = {
-    $document: $(document),
-    $window: $(window),
-    windowHeight: $(window).height(),
-    windowWidth: $(window).width(),
-    $html: $('html'),
-    $body: $('body'),
-    $htmlAndBody: $('html, body'),
-    $background: $('#background'),
-    $container: $('#container'),
-    $main: $('#main')
+	$document: $(document),
+	$window: $(window),
+	windowHeight: $(window).height(),
+	windowWidth: $(window).width(),
+	$html: $('html'),
+	$body: $('body'),
+	$htmlAndBody: $('html, body'),
+	$background: $('#background'),
+	$container: $('#container'),
+	$main: $('#main')
 };
 app.mediaQueries = {
-    alphaAndUp:   '(min-width: 0px)',
-    alpha:        '(max-width: 600px)',
-    betaAndUp:    '(min-width: 601px)',
-    beta:         '(min-width: 600px) and (max-width: 700px)',
-    alphaAndBeta: '(max-width: 700px)',
-    gammaAndUp:   '(min-width: 701px)',
-    gamma:        '(min-width: 700px) and (max-width: 800px)',
-    deltaAndUp:   '(min-width: 801px)',
-    delta:        '(min-width: 800px) and (max-width: 900px)',
-    epsilonAndUp: '(min-width: 1001px)',
-    epsilon:      '(min-width: 1000px) and (max-width: 1200px)',
-    zetaAndUp:    '(min-width: 1201px)',
-    zeta:         '(min-width: 1200px) and (max-width: 1400px)',
-    etaAndUp:     '(min-width: 1401px)'
+	alphaAndUp: '(min-width: 0px)',
+	alpha: '(max-width: 600px)',
+	betaAndUp: '(min-width: 601px)',
+	beta: '(min-width: 600px) and (max-width: 700px)',
+	alphaAndBeta: '(max-width: 700px)',
+	gammaAndUp: '(min-width: 701px)',
+	gamma: '(min-width: 700px) and (max-width: 800px)',
+	deltaAndUp: '(min-width: 801px)',
+	delta: '(min-width: 800px) and (max-width: 900px)',
+	epsilonAndUp: '(min-width: 1001px)',
+	epsilon: '(min-width: 1000px) and (max-width: 1200px)',
+	zetaAndUp: '(min-width: 1201px)',
+	zeta: '(min-width: 1200px) and (max-width: 1400px)',
+	etaAndUp: '(min-width: 1401px)'
 };
 helper.cookies = {
-    create: function(name,value,days) {
-        var expires = "";
+	create: function(name,value,days) {
+		var expires = "";
 
-        if (days) {
-            var date = new Date();
+		if (days) {
+			var date = new Date();
 
-            date.setTime(date.getTime()+(days*24*60*60*1000));
-            expires = "; expires="+date.toGMTString();
-        }
+			date.setTime(date.getTime()+(days*24*60*60*1000));
+			expires = "; expires="+date.toGMTString();
+		}
 
-        document.cookie = name + "=" + value + expires + "; path=/";
-    },
+		document.cookie = name + "=" + value + expires + "; path=/";
+	},
 
-    read: function(name) {
-        var nameEQ = name + "=",
-            ca = document.cookie.split(';');
+	read: function(name) {
+		var nameEQ = name + "=",
+			ca = document.cookie.split(';');
 
-        for(var i=0;i < ca.length;i++) {
-            var c = ca[i];
+		for(var i=0;i < ca.length;i++) {
+			var c = ca[i];
 
-            while (c.charAt(0) === ' ') {
-                c = c.substring(1,c.length);
-            }
+			while (c.charAt(0) === ' ') {
+				c = c.substring(1,c.length);
+			}
 
-            if (c.indexOf(nameEQ) === 0) {
-                return c.substring(nameEQ.length,c.length);
-            }
-        }
+			if (c.indexOf(nameEQ) === 0) {
+				return c.substring(nameEQ.length,c.length);
+			}
+		}
 
-        return null;
-    },
+		return null;
+	},
 
-    erase: function(name) {
-        helper.cookies.create(name,"",-1);
-    }
+	erase: function(name) {
+		helper.cookies.create(name,"",-1);
+	}
 };
 helper.inView = function(el) {
-    if (el instanceof jQuery) {
-        el = el[0];
-    }
+	if (el instanceof jQuery) {
+		el = el[0];
+	}
 
-    var rect = el.getBoundingClientRect();
+	var rect = el.getBoundingClientRect();
 
-    return (
-        rect.top >= 0 &&
-        rect.bottom <= app.settings.$window.height()
-    );
+	return (
+		rect.top >= 0 &&
+		rect.bottom <= app.settings.$window.height()
+	);
 };
 helper.outView = function(el) {
-    if (el instanceof jQuery) {
-        el = el[0];
-    }
+	if (el instanceof jQuery) {
+		el = el[0];
+	}
 
-    var rect = el.getBoundingClientRect();
+	var rect = el.getBoundingClientRect();
 
-    return (
-        rect.bottom < 0 ||
-        rect.top > app.settings.$window.height()
-    );
+	return (
+		rect.bottom < 0 ||
+		rect.top > app.settings.$window.height()
+	);
 };
 helper.partiallyInView = function(el) {
-    if (el instanceof jQuery) {
-        el = el[0];
-    }
+	if (el instanceof jQuery) {
+		el = el[0];
+	}
 
-    var rect = el.getBoundingClientRect();
+	var rect = el.getBoundingClientRect();
 
-    return (
-        rect.bottom - (rect.height/2) <= app.settings.$window.height()
-    );
+	return (
+		rect.bottom - (rect.height/2) <= app.settings.$window.height()
+	);
 };
 app.accordion = {
     settings: {
@@ -5497,98 +5497,98 @@ app.tooltips = {
     }
 };
 app.settings.$document.ready(function () {
-    var $this = $(this),
-        scrollTop = $this.scrollTop();
+	var $this = $(this),
+		scrollTop = $this.scrollTop();
 
-    app.svg.init();
-    app.scrollSpyNav.init(scrollTop);
-    app.fastClick.init();
-    app.fitVids.init();
-    app.navBar.init(scrollTop);
-    app.dropdowns.init();
-    app.formModules.init();
-    app.jump.init();
-    app.modals.init();
-    app.tooltips.init();
-    app.accordion.init();
-    app.tabs.init();
-    app.notifications.init();
-    app.offCanvas.init();
-    app.toggle.init();
-    app.groupCheckable.init();
-    app.leave.init();
-    app.btnDropdown.init();
-    app.btnRipple.init();
-    app.googleMaps.init();
+	app.svg.init();
+	app.scrollSpyNav.init(scrollTop);
+	app.fastClick.init();
+	app.fitVids.init();
+	app.navBar.init(scrollTop);
+	app.dropdowns.init();
+	app.formModules.init();
+	app.jump.init();
+	app.modals.init();
+	app.tooltips.init();
+	app.accordion.init();
+	app.tabs.init();
+	app.notifications.init();
+	app.offCanvas.init();
+	app.toggle.init();
+	app.groupCheckable.init();
+	app.leave.init();
+	app.btnDropdown.init();
+	app.btnRipple.init();
+	app.googleMaps.init();
 
-    //app.cycle.init();
-    //app.fancybox.init();
-    //app.navPrimary.init();
+	//app.cycle.init();
+	//app.fancybox.init();
+	//app.navPrimary.init();
 
 });
 
 app.settings.$window.ready(function () {
-    var $this = $(this),
-        scrollTop = $this.scrollTop(),
-        windowHeight = $this.height();
+	var $this = $(this),
+		scrollTop = $this.scrollTop(),
+		windowHeight = $this.height();
 
-    app.scrollSpy.init(scrollTop, windowHeight, true);
-    app.affix.init(scrollTop);
-    app.equalize.init();
-    app.delayedImageLoading.init();
+	app.scrollSpy.init(scrollTop, windowHeight, true);
+	app.affix.init(scrollTop);
+	app.equalize.init();
+	app.delayedImageLoading.init();
 
-    setTimeout(function () {
-        app.responsiveImages.setBackgroundImage();
-    }, 10);
+	setTimeout(function () {
+		app.responsiveImages.setBackgroundImage();
+	}, 10);
 });
 
 app.settings.$window.on('scroll', function () {
-    var $this = $(this),
-        scrollTop = $this.scrollTop(),
-        windowHeight = $this.height();
+	var $this = $(this),
+		scrollTop = $this.scrollTop(),
+		windowHeight = $this.height();
 
-    app.scrollSpy.init(scrollTop, windowHeight, false);
-    app.scrollSpyNav.init(scrollTop);
-    app.navBar.scroller(scrollTop);
-    app.disableHover.init();
+	app.scrollSpy.init(scrollTop, windowHeight, false);
+	app.scrollSpyNav.init(scrollTop);
+	app.navBar.scroller(scrollTop);
+	app.disableHover.init();
 
-    if (app.settings.$html.hasClass('modernizr_no-touchevents')) {
-        // app.affix.scroller(scrollTop);
-    }
+	if (app.settings.$html.hasClass('modernizr_no-touchevents')) {
+		// app.affix.scroller(scrollTop);
+	}
 });
 
 app.settings.$window.on('touchmove', function(){
-    var $this = $(this),
-        scrollTop = $this.scrollTop(),
-        windowHeight = $this.height();
+	var $this = $(this),
+		scrollTop = $this.scrollTop(),
+		windowHeight = $this.height();
 
-    app.affix.scroller(scrollTop);
-    app.scrollSpy.init(scrollTop, windowHeight, false);
-    app.scrollSpyNav.init(scrollTop);
+	app.affix.scroller(scrollTop);
+	app.scrollSpy.init(scrollTop, windowHeight, false);
+	app.scrollSpyNav.init(scrollTop);
 });
 
 app.settings.$window.on('resize', function () {
 
-    app.settings.$html.addClass('disable-transitions');
+	app.settings.$html.addClass('disable-transitions');
 
-    if(this.resizeTo) {
-        clearTimeout(this.resizeTo);
-    }
+	if(this.resizeTo) {
+		clearTimeout(this.resizeTo);
+	}
 
-    this.resizeTo = setTimeout(function() {
-        var $this = $(this),
-            scrollTop = $this.scrollTop(),
-            windowHeight = $this.height();
+	this.resizeTo = setTimeout(function() {
+		var $this = $(this),
+			scrollTop = $this.scrollTop(),
+			windowHeight = $this.height();
 
-        app.equalize.init();
-        app.scrollSpy.init(scrollTop, windowHeight, true);
-        app.scrollSpyNav.init(scrollTop);
-        app.navBar.resize(scrollTop);
-        app.navBar.scroller(scrollTop);
-        app.affix.init(scrollTop);
-        app.responsiveImages.setBackgroundImage();
+		app.equalize.init();
+		app.scrollSpy.init(scrollTop, windowHeight, true);
+		app.scrollSpyNav.init(scrollTop);
+		app.navBar.resize(scrollTop);
+		app.navBar.scroller(scrollTop);
+		app.affix.init(scrollTop);
+		app.responsiveImages.setBackgroundImage();
 
-        app.settings.$html.removeClass('disable-transitions');
-    }, 500);
+		app.settings.$html.removeClass('disable-transitions');
+	}, 500);
 });
 //# sourceMappingURL=app.js.map

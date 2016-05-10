@@ -1,15 +1,15 @@
 {
-  "name": "basos",
-  "version": "1.0.2",
-  "dependencies": {
-    "fastclick": "~1.0.6",
-    "fitvids": "~1.1.0",
-    "jquery": "~2.*",
-    "parsleyjs": "~2.1.2",
-    "picturefill": "~3.0.1",
-    "rangeslider.js": "~1.3.3",
-    "susy": "~2.2.7",
-    "svg4everybody": "~2.0.0"
-  },
-  "private": true
+	"name": "basos",
+	"version": "1.0.2",
+	"dependencies": {
+		"fastclick": "~1.0.6",
+		"fitvids": "~1.1.0",
+		"jquery": "~2.*",
+		"parsleyjs": "~2.1.2",
+		"picturefill": "~3.0.1",
+		"rangeslider.js": "~1.3.3",
+		"susy": "~2.2.7",
+		"svg4everybody": "~2.0.0"
+	},
+	"private": true
 }

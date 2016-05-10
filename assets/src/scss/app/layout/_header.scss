@@ -3,17 +3,17 @@
 */
 
 .header {
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 100%;
-    height: rem(200px);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: rem(200px);
 
-    @include mq(beta-and-up) {
-        height: rem(400px);
-    }
+	@include mq(beta-and-up) {
+		height: rem(400px);
+	}
 
-    @include mq(epsilon-and-up) {
-        height: rem(600px);
-    }
+	@include mq(epsilon-and-up) {
+		height: rem(600px);
+	}
 }

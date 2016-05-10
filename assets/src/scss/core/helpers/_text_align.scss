@@ -3,49 +3,49 @@
 */
 
 .text-align-right {
-    text-align: right;
+	text-align: right;
 
-    &-beta-and-up {
-        @include mq(beta-and-up) {
-            text-align: right;
-        }
-    }
+	&-beta-and-up {
+		@include mq(beta-and-up) {
+			text-align: right;
+		}
+	}
 
-    &-gamma-and-up {
-        @include mq(gamma-and-up) {
-            text-align: right;
-        }
-    }
+	&-gamma-and-up {
+		@include mq(gamma-and-up) {
+			text-align: right;
+		}
+	}
 }
 
 .text-align-left {
-    text-align: left;
+	text-align: left;
 
-    &-beta-and-up {
-        @include mq(beta-and-up) {
-            text-align: left;
-        }
-    }
+	&-beta-and-up {
+		@include mq(beta-and-up) {
+			text-align: left;
+		}
+	}
 
-    &-gamma-and-up {
-        @include mq(gamma-and-up) {
-            text-align: left;
-        }
-    }
+	&-gamma-and-up {
+		@include mq(gamma-and-up) {
+			text-align: left;
+		}
+	}
 }
 
 .text-align-center {
-    text-align: center;
+	text-align: center;
 
-    &-beta-and-up {
-        @include mq(beta-and-up) {
-            text-align: center;
-        }
-    }
+	&-beta-and-up {
+		@include mq(beta-and-up) {
+			text-align: center;
+		}
+	}
 
-    &-gamma-and-up {
-        @include mq(gamma-and-up) {
-            text-align: center;
-        }
-    }
+	&-gamma-and-up {
+		@include mq(gamma-and-up) {
+			text-align: center;
+		}
+	}
 }

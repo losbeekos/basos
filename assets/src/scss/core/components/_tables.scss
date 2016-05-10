@@ -9,68 +9,68 @@
 // }
 
 .table {
-    border-collapse: collapse;
-    margin-bottom: rem(map-get($table, margin-bottom));
+	border-collapse: collapse;
+	margin-bottom: rem(map-get($table, margin-bottom));
 
-    td,
-    th {
-        padding: map-get($table, padding);
-        text-align: left;
-        vertical-align: top;
-        border: rem(1px) solid map-get($table, border-color);
-    }
+	td,
+	th {
+		padding: map-get($table, padding);
+		text-align: left;
+		vertical-align: top;
+		border: rem(1px) solid map-get($table, border-color);
+	}
 
-    th {
-        font-size: rem(11px);
-        text-transform: uppercase;
-        background: #f2f0e6;
-    }
+	th {
+		font-size: rem(11px);
+		text-transform: uppercase;
+		background: #f2f0e6;
+	}
 
-    &--hover {
-        tr:hover {
-            td {
-                background: map-get($table, bg-color-hover);
-            }
-        }
-    }
+	&--hover {
+		tr:hover {
+			td {
+				background: map-get($table, bg-color-hover);
+			}
+		}
+	}
 
-    &--zebra {
-        tr:nth-child(odd) td {
-            background: map-get($table, bg-color-zebra);
-        }
-    }
+	&--zebra {
+		tr:nth-child(odd) td {
+			background: map-get($table, bg-color-zebra);
+		}
+	}
 
-    &--bordered {
-        border: rem(1px) solid map-get($table, border-color);
+	&--bordered {
+		border: rem(1px) solid map-get($table, border-color);
 
-        td,
-        th {
-            border-left: rem(1px) solid map-get($table, border-color);
+		td,
+		th {
+			border-left: rem(1px) solid map-get($table, border-color);
 
-            &:first-child {
-                border-left: none;
-            }
-        }
-    }
+			&:first-child {
+				border-left: none;
+			}
+		}
+	}
 }
 
 .responsive-table {
-    display: inline-block;
-    vertical-align: top;
-    max-width: 100%;
-    overflow-x: auto;
-    white-space: nowrap; // optional - looks better for small cell values
-    border-collapse: collapse;
-    border-spacing: 0;
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+	overflow-x: auto;
+	white-space: nowrap; // optional - looks better for small cell values
+	border-collapse: collapse;
+	border-spacing: 0;
 }
 
 .responsive-table,
 .responsive-table--flip tbody {
-    background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center; -webkit-overflow-scrolling: touch;
-    background-size: 10px 100%, 10px 100%;
-    background-attachment: scroll, scroll;
-    background-repeat: no-repeat;
-    -webkit-overflow-scrolling: touch;
+	background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center; -webkit-overflow-scrolling: touch;
+	background-size: 10px 100%, 10px 100%;
+	background-attachment: scroll, scroll;
+	background-repeat: no-repeat;
+	-webkit-overflow-scrolling: touch;
 }
 
 // change these gradients from white to your background colour if it differs
@@ -92,45 +92,45 @@
 }
 
 .responsive-table--flip {
-    display: flex;
-    overflow: hidden;
-    background: none;
+	display: flex;
+	overflow: hidden;
+	background: none;
 
-    thead {
-        display: flex;
-        flex-shrink: 0;
-        min-width: min-content;
-    }
+	thead {
+		display: flex;
+		flex-shrink: 0;
+		min-width: min-content;
+	}
 
-    tbody {
-        display: flex;
-        position: relative;
-        overflow-x: auto;
-        overflow-y: hidden;
-    }
+	tbody {
+		display: flex;
+		position: relative;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
 
-    tr {
-        display: flex;
-        flex-direction: column;
-        min-width: min-content;
-        flex-shrink: 0;
-    }
+	tr {
+		display: flex;
+		flex-direction: column;
+		min-width: min-content;
+		flex-shrink: 0;
+	}
 
-    td,
-    th {
-        display: block;
+	td,
+	th {
+		display: block;
 
-        &:not(:last-child),
-        &:not(:last-child) {
-            border-bottom: 0;
-        }
-    }
+		&:not(:last-child),
+		&:not(:last-child) {
+			border-bottom: 0;
+		}
+	}
 
-    td {
-        background-image: none !important;
-        // border-collapse is no longer active
-        border-left: 0;
-    }
+	td {
+		background-image: none !important;
+		// border-collapse is no longer active
+		border-left: 0;
+	}
 }
 
 /*doc
@@ -144,40 +144,40 @@ category: Content
 
 ```html_example
 <table class="table">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -185,40 +185,40 @@ category: Content
 
 ```html_example
 <table class="table table--hover">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -226,40 +226,40 @@ category: Content
 
 ```html_example
 <table class="table table--zebra">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -267,40 +267,40 @@ category: Content
 
 ```html_example
 <table class="table table--bordered">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -308,40 +308,40 @@ category: Content
 
 ```html_example
 <table class="table table--zebra table--bordered">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -351,50 +351,50 @@ category: Content
 
 ```html_example
 <table class="table responsive-table">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-            <th>Yada</th>
-            <th>Yada</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+			<th>Yada</th>
+			<th>Yada</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -402,50 +402,50 @@ category: Content
 
 ```html_example
 <table class="table responsive-table responsive-table--flip">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-            <th>Yada</th>
-            <th>Yada</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+			<th>Yada</th>
+			<th>Yada</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+	</tbody>
 </table>
 ```
 

@@ -3,18 +3,18 @@
 */
 
 @keyframes fadeInLeft {
-    0% {
-        opacity: 0;
-        transform: translate3d(-100%, 0, 0);
-    }
+	0% {
+		opacity: 0;
+		transform: translate3d(-100%, 0, 0);
+	}
 
-    100% {
-        opacity: 1;
-        transform: none;
-    }
+	100% {
+		opacity: 1;
+		transform: none;
+	}
 }
 
 .fadeInLeft,
 .animation-fadeInLeft {
-    animation-name: fadeInLeft;
+	animation-name: fadeInLeft;
 }

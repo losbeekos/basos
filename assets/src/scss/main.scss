@@ -10,26 +10,26 @@ Make sure you have GruntJS and Bower.
 #### Bower dependencies
 Install the Bower dependencies, see bower.json.
 
-    $ bower install
+	$ bower install
 
 #### Node dependencies
 Install the Node dependencies, see package.json.
 
-    $ npm install
+	$ npm install
 
 #### Start server
 Start the web server which is used by BrowserSync.
 
-    $ grunt connect
+	$ grunt connect
 
 #### Run browserSync
 Run BrowserSync to auto reload when dist files change.
 
-    $ grunt browserSync
+	$ grunt browserSync
 
 #### Watch for changes
 
-    $ grunt watch
+	$ grunt watch
 
 */
 

@@ -4,89 +4,89 @@
 
 
 .flexible-grid {
-    &-2,
-    &-3,
-    &-4 {
-        @extend .clearfix;
-    }
+	&-2,
+	&-3,
+	&-4 {
+		@extend .clearfix;
+	}
 
-    &-2 {
-        @include mq(gamma-and-up) {
-            margin-left: -2%;
-            margin-right: -2%;
-        }
+	&-2 {
+		@include mq(gamma-and-up) {
+			margin-left: -2%;
+			margin-right: -2%;
+		}
 
-        > * {
-            margin-bottom: 4%;
-        }
+		> * {
+			margin-bottom: 4%;
+		}
 
-        @include mq(gamma-and-up) {
-            > * {
-                width: 46%;
-                margin-left: 2%;
-                margin-right: 2%;
-                float: left;
-            }
-        }
-    }
+		@include mq(gamma-and-up) {
+			> * {
+				width: 46%;
+				margin-left: 2%;
+				margin-right: 2%;
+				float: left;
+			}
+		}
+	}
 
-    &-3 {
-        @include mq(beta-and-up) {
-            margin-left: -1%;
-            margin-right: -1%;
-        }
+	&-3 {
+		@include mq(beta-and-up) {
+			margin-left: -1%;
+			margin-right: -1%;
+		}
 
-        > * {
-            margin-bottom: 4%;
-        }
+		> * {
+			margin-bottom: 4%;
+		}
 
-        @include mq(beta-and-up) {
-            > * {
-                width: 48%;
-                margin-left: 1%;
-                margin-right: 1%;
-                float: left;
-            }
-        }
+		@include mq(beta-and-up) {
+			> * {
+				width: 48%;
+				margin-left: 1%;
+				margin-right: 1%;
+				float: left;
+			}
+		}
 
-        @include mq(epsilon-and-up) {
-            > * {
-                width: 31.333339%;
-                margin-left: 1%;
-                margin-right: 1%;
-                float: left;
-            }
-        }
-    }
+		@include mq(epsilon-and-up) {
+			> * {
+				width: 31.333339%;
+				margin-left: 1%;
+				margin-right: 1%;
+				float: left;
+			}
+		}
+	}
 
-    &-4 {
-        @include mq(beta-and-up) {
-            margin-left: -1%;
-            margin-right: -1%;
-        }
+	&-4 {
+		@include mq(beta-and-up) {
+			margin-left: -1%;
+			margin-right: -1%;
+		}
 
-        > * {
-            margin-bottom: 4%;
-        }
+		> * {
+			margin-bottom: 4%;
+		}
 
-        @include mq(beta-and-up) {
-            > * {
-                width: 48%;
-                margin-left: 1%;
-                margin-right: 1%;
-                float: left;
-            }
-        }
+		@include mq(beta-and-up) {
+			> * {
+				width: 48%;
+				margin-left: 1%;
+				margin-right: 1%;
+				float: left;
+			}
+		}
 
-        @include mq(epsilon-and-up) {
-            > * {
-                width: 23%;
-                margin-left: 1%;
-                margin-right: 1%;
-                float: left;
-            }
-        }
-    }
+		@include mq(epsilon-and-up) {
+			> * {
+				width: 23%;
+				margin-left: 1%;
+				margin-right: 1%;
+				float: left;
+			}
+		}
+	}
 }
 
 /*doc
@@ -101,72 +101,72 @@ It's important to note twice that these elements need the same height, or you'll
 
 ```html_example
 <div class="flexible-grid-3">
-    <div class="card">
-        <div class="card__header card__header--beta">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card__header card__header--gamma">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card__header card__header--delta">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card__header card__header--beta">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card__header card__header--gamma">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card__header card__header--delta">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
+	<div class="card">
+		<div class="card__header card__header--beta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--gamma">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--delta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--beta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--gamma">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--delta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
 </div>
 ```
 

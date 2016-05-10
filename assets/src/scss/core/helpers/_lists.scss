@@ -9,10 +9,10 @@ category: Typography
 
 ```html_example
 <ul>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
 </ul>
 ```
 
@@ -20,21 +20,21 @@ category: Typography
 
 ```html_example
 <ol>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
 </ol>
 ```
 
 */
 
 ul {
-    padding-left: rem(18px);
+	padding-left: rem(18px);
 }
 
 ol {
-    padding-left: rem(24px);
+	padding-left: rem(24px);
 }
 
 /*doc
@@ -48,19 +48,19 @@ category: Typography
 
 ```html_example
 <ul class="list-unstyled">
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
 </ul>
 ```
 
 */
 
 .list-unstyled {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
 }
 
 /*doc
@@ -72,20 +72,20 @@ category: Typography
 
 ```html_example
 <ul class="list-inline">
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
 </ul>
 ```
 
 */
 
 .list-inline {
-    @extend .list-unstyled;
+	@extend .list-unstyled;
 
-    li {
-        display: inline-block;
-        margin-right: rem(10px);
-    }
+	li {
+		display: inline-block;
+		margin-right: rem(10px);
+	}
 }

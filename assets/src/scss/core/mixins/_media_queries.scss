@@ -3,14 +3,14 @@
 */
 
 @mixin mq($name) {
-    @if map-has-key($mq, $name) {
-        @media #{inspect(map-get($mq, $name))} {
-            @content;
-        }
-    }
-    @else {
-        @warn "Cannot find breakpoint size `#{$name}`.";
-    }
+	@if map-has-key($mq, $name) {
+		@media #{inspect(map-get($mq, $name))} {
+			@content;
+		}
+	}
+	@else {
+		@warn "Cannot find breakpoint size `#{$name}`.";
+	}
 }
 
 
@@ -25,22 +25,22 @@ Basos uses the mobile first principle so you will never write a mobile media que
 
 How to add a media query to your SCSS file:
 
-    @include mq(gamma-and-up) {
-        ...
-    }
+	@include mq(gamma-and-up) {
+		...
+	}
 
 You can nest the above code in your CSS selector like this.
 
-    .your-selector {
-        @include mq(gamma) {
-            ...
-        }
+	.your-selector {
+		@include mq(gamma) {
+			...
+		}
 
-        @include mq(epsilon-and-up) {
-            ...
-        }
+		@include mq(epsilon-and-up) {
+			...
+		}
 
-        etc..
-    }
+		etc..
+	}
 
 */

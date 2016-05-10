@@ -3,20 +3,20 @@
 */
 
 .grid-margin {
-    margin: gutter(map-get($susy, columns));
+	margin: gutter(map-get($susy, columns));
 
-    &-vertical {
-        margin-top: gutter(map-get($susy, columns));
-        margin-bottom: gutter(map-get($susy, columns));
-    }
+	&-vertical {
+		margin-top: gutter(map-get($susy, columns));
+		margin-bottom: gutter(map-get($susy, columns));
+	}
 
-    &-horizontal {
-        margin-left: gutter(map-get($susy, columns));
-        margin-right: gutter(map-get($susy, columns));
-    }
+	&-horizontal {
+		margin-left: gutter(map-get($susy, columns));
+		margin-right: gutter(map-get($susy, columns));
+	}
 
-    &-right   { margin-right: gutter(map-get($susy, columns)); }
-    &-left    { margin-left: gutter(map-get($susy, columns)); }
-    &-top     { margin-top: gutter(map-get($susy, columns)); }
-    &-bottom  { margin-bottom: gutter(map-get($susy, columns)); }
+	&-right { margin-right: gutter(map-get($susy, columns)); }
+	&-left { margin-left: gutter(map-get($susy, columns)); }
+	&-top { margin-top: gutter(map-get($susy, columns)); }
+	&-bottom { margin-bottom: gutter(map-get($susy, columns)); }
 }

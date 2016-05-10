@@ -1,12 +1,12 @@
 module.exports = {
-    dev: {
-        options: {
-            sourceMap: true,
-            style: 'expanded'
-        },
+	dev: {
+		options: {
+			sourceMap: true,
+			style: 'expanded'
+		},
 
-        files: {
-            '<%= basos.dist %>/css/main.css': '<%= basos.src %>/scss/main.scss'
-        }
-    }
+		files: {
+			'<%= basos.dist %>/css/main.css': '<%= basos.src %>/scss/main.scss'
+		}
+	}
 }

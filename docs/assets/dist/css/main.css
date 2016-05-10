@@ -3630,8 +3630,8 @@ The default grid is a 12 columns grid which you can change in the settings, even
             justify-content: space-around; }
 
 [class|=flexbox-column] {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
+  -ms-flex-negative: 0;
+          -webkit-flex-shrink: 0;
           flex-shrink: 0; }
 
 .flexbox-column-fill {
@@ -5364,8 +5364,8 @@ category: Navigation
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
+    -ms-flex-negative: 0;
+            -webkit-flex-shrink: 0;
             flex-shrink: 0;
     min-width: -webkit-min-content;
     min-width: -moz-min-content;
@@ -5387,8 +5387,8 @@ category: Navigation
     min-width: -webkit-min-content;
     min-width: -moz-min-content;
     min-width: min-content;
-    -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
+    -ms-flex-negative: 0;
+            -webkit-flex-shrink: 0;
             flex-shrink: 0; }
   .responsive-table--flip td,
   .responsive-table--flip th {

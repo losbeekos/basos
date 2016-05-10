@@ -3,55 +3,55 @@
 */
 
 .section {
-    color: white;
-    padding-top: rem(map-get($section, padding-vertical));
-    padding-bottom: rem(map-get($section, padding-vertical));
+	color: white;
+	padding-top: rem(map-get($section, padding-vertical));
+	padding-bottom: rem(map-get($section, padding-vertical));
 
-    @include mq(beta) {
-        padding-top: rem(map-get($section, padding-vertical)*1.5);
-        padding-bottom: rem(map-get($section, padding-vertical)*1.5);
-    }
+	@include mq(beta) {
+		padding-top: rem(map-get($section, padding-vertical)*1.5);
+		padding-bottom: rem(map-get($section, padding-vertical)*1.5);
+	}
 
-    @include mq(gamma-and-up) {
-        padding-top: rem(map-get($section, padding-vertical)*2);
-        padding-bottom: rem(map-get($section, padding-vertical)*2);
-    }
+	@include mq(gamma-and-up) {
+		padding-top: rem(map-get($section, padding-vertical)*2);
+		padding-bottom: rem(map-get($section, padding-vertical)*2);
+	}
 
-    @each $key, $value in $section-bg {
-        &--#{$key} {
-            background: map-get($section-bg, $key);
-        }
-    }
+	@each $key, $value in $section-bg {
+		&--#{$key} {
+			background: map-get($section-bg, $key);
+		}
+	}
 
-    > .container > *:last-child {
-        margin-bottom: 0;
-    }
+	> .container > *:last-child {
+		margin-bottom: 0;
+	}
 
-    &--alpha {
-        color: map-get($color, text);
-    }
+	&--alpha {
+		color: map-get($color, text);
+	}
 }
 
 .section-img {
-    background: url('../dist/img/someimage.jpg') center center fixed;
-    background-size: cover;
-    height: rem(300px);
+	background: url('../dist/img/someimage.jpg') center center fixed;
+	background-size: cover;
+	height: rem(300px);
 
-    @include mq(beta) {
-        height: rem(400px);
-    }
+	@include mq(beta) {
+		height: rem(400px);
+	}
 
-    @include mq(gamma-and-up) {
-        height: rem(500px);
-    }
+	@include mq(gamma-and-up) {
+		height: rem(500px);
+	}
 }
 
 .section__list {
-    margin-bottom: rem(map-get($section, list-margin-bottom));
+	margin-bottom: rem(map-get($section, list-margin-bottom));
 }
 
 .section__paragraph {
-    margin-bottom: rem(map-get($section, paragraph-margin-bottom));
+	margin-bottom: rem(map-get($section, paragraph-margin-bottom));
 }
 
 /*doc
@@ -66,41 +66,41 @@ There are five colors defined for you as modifiers (section--alpha, section--bet
 
 ```html_example
 <div class="section section--alpha">
-    <div class="container">
-        Some content..
-    </div>
+	<div class="container">
+		Some content..
+	</div>
 </div>
 ```
 
 ```html_example
 <div class="section section--beta">
-    <div class="container">
-        Some content..
-    </div>
+	<div class="container">
+		Some content..
+	</div>
 </div>
 ```
 
 ```html_example
 <div class="section section--gamma">
-    <div class="container">
-        Some content..
-    </div>
+	<div class="container">
+		Some content..
+	</div>
 </div>
 ```
 
 ```html_example
 <div class="section section--delta">
-    <div class="container">
-        Some content..
-    </div>
+	<div class="container">
+		Some content..
+	</div>
 </div>
 ```
 
 ```html_example
 <div class="section section--epsilon">
-    <div class="container">
-        Some content..
-    </div>
+	<div class="container">
+		Some content..
+	</div>
 </div>
 ```
 

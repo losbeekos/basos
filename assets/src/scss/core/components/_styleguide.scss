@@ -8,85 +8,85 @@ h3.styleguide,
 h4.styleguide,
 h5.styleguide,
 h6.styleguide {
-    position: relative;
-    margin-top: 1em;
-    margin-bottom: 16px;
+	position: relative;
+	margin-top: 1em;
+	margin-bottom: 16px;
 }
 
 a.styleguide {
-    text-decoration: underline;
+	text-decoration: underline;
 }
 
 .styleguide-nav {
-    &__sub {
-        background: tint(map-get($color, epsilon), 5%);
-        padding-top: rem(10px);
-        padding-bottom: rem(10px);
-    }
+	&__sub {
+		background: tint(map-get($color, epsilon), 5%);
+		padding-top: rem(10px);
+		padding-bottom: rem(10px);
+	}
 
-    &__category {
-        display: block;
-    }
+	&__category {
+		display: block;
+	}
 
-    &__link {
-        display: block;
-        font-size: rem(14px);
-        padding: rem(5px) rem(20px);
-        transition-delay: 0.05s;
+	&__link {
+		display: block;
+		font-size: rem(14px);
+		padding: rem(5px) rem(20px);
+		transition-delay: 0.05s;
 
-        &.scrollspy-nav--active,
-        &.scrollspy-nav--active:hover {
-            background: tint(map-get($color, epsilon), 10%);
-        }
-    }
+		&.scrollspy-nav--active,
+		&.scrollspy-nav--active:hover {
+			background: tint(map-get($color, epsilon), 10%);
+		}
+	}
 }
 
 .exampleOutput {
-    position: relative;
-    padding: rem(54px) rem(20px) rem(20px) rem(20px);
-    border-top: 1px solid shade(map-get($color, alpha), 5%);
+	position: relative;
+	padding: rem(54px) rem(20px) rem(20px) rem(20px);
+	border-top: 1px solid shade(map-get($color, alpha), 5%);
 
-    &::after {
-        content: 'Example';
-        background: map-get($color, alpha);
-        border: 1px solid shade(map-get($color, alpha), 5%);
-        border-top: 0;
-        padding: rem(5px) rem(10px);
-        position: absolute;
-        top: 0;
-        left: 0;
-        font-size: rem(14px);
-        color: shade(map-get($color, alpha), 45%);
-    }
+	&::after {
+		content: 'Example';
+		background: map-get($color, alpha);
+		border: 1px solid shade(map-get($color, alpha), 5%);
+		border-top: 0;
+		padding: rem(5px) rem(10px);
+		position: absolute;
+		top: 0;
+		left: 0;
+		font-size: rem(14px);
+		color: shade(map-get($color, alpha), 45%);
+	}
 
-    .card {
-        max-width: rem(400px);
-    }
+	.card {
+		max-width: rem(400px);
+	}
 }
 
 .codeBlock {
-    margin-bottom: rem(60px);
+	margin-bottom: rem(60px);
 }
 
 .codeBlock pre {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 16px;
+	margin-top: 0;
+	margin-bottom: 0;
+	font-size: 16px;
 }
 
 .codeBlock .highlight pre,
 .codeBlock pre {
-    padding: 16px;
-    overflow: auto;
-    font-size: 14px;
-    line-height: 1.45;
-    background-color: #1d1f21;
-    border-radius: 3px;
-    color: #eee;
+	padding: 16px;
+	overflow: auto;
+	font-size: 14px;
+	line-height: 1.45;
+	background-color: #1d1f21;
+	border-radius: 3px;
+	color: #eee;
 }
 
 .codeBlock  pre {
-    word-wrap: normal;
+	word-wrap: normal;
 }
 
 

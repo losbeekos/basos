@@ -7,12 +7,12 @@
 @include font-face('icons', 'fonts/icons');
 
 %font-icons {
-    font-family: 'icons', 'arial', 'verdana';
-    font-weight: normal;
+	font-family: 'icons', 'arial', 'verdana';
+	font-weight: normal;
 }
 
 %font-custom {
-    font-family: 'Open Sans', sans-serif;
+	font-family: 'Open Sans', sans-serif;
 }
 
 //@include font-face('somefont', 'fonts/somefont');

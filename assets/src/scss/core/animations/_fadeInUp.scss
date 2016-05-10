@@ -3,16 +3,16 @@
 */
 
 @keyframes fadeInUp {
-    0% {
-        transform: translate3d(0, 100%, 0);
-    }
+	0% {
+		transform: translate3d(0, 100%, 0);
+	}
 
-    100% {
-        transform: none;
-    }
+	100% {
+		transform: none;
+	}
 }
 
 .fadeInUp,
 .animation-fadeInUp {
-    animation-name: fadeInUp;
+	animation-name: fadeInUp;
 }

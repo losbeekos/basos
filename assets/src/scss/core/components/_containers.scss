@@ -4,39 +4,39 @@
 
 .container,
 .container-beta {
-    @extend .clearfix;
+	@extend .clearfix;
 
-    margin-left: map-get($container, margin-left);
-    margin-right: map-get($container, margin-right);
-    min-width: rem(map-get($container, min-width));
-    padding-left: rem(map-get($container, padding));
-    padding-right: rem(map-get($container, padding));
-    margin-top: rem(map-get($container, margin-top));
-    margin-bottom: rem(map-get($container, margin-bottom));
+	margin-left: map-get($container, margin-left);
+	margin-right: map-get($container, margin-right);
+	min-width: rem(map-get($container, min-width));
+	padding-left: rem(map-get($container, padding));
+	padding-right: rem(map-get($container, padding));
+	margin-top: rem(map-get($container, margin-top));
+	margin-bottom: rem(map-get($container, margin-bottom));
 
-    @include mq(beta) {
-        padding-left: rem(map-get($container, padding)*2);
-        padding-right: rem(map-get($container, padding)*2);
-    }
+	@include mq(beta) {
+		padding-left: rem(map-get($container, padding)*2);
+		padding-right: rem(map-get($container, padding)*2);
+	}
 
-    @include mq(gamma-and-up) {
-        padding-left: rem(map-get($container, padding)*4);
-        padding-right: rem(map-get($container, padding)*4);
-    }
-    
-    // No min-width if nested
-    .container,
-    .container-beta {
-        min-width: auto;
-    }
+	@include mq(gamma-and-up) {
+		padding-left: rem(map-get($container, padding)*4);
+		padding-right: rem(map-get($container, padding)*4);
+	}
+	
+	// No min-width if nested
+	.container,
+	.container-beta {
+		min-width: auto;
+	}
 }
 
 .container {
-    max-width: rem(map-get($container, max-width));
+	max-width: rem(map-get($container, max-width));
 }
 
 .container-beta {
-    max-width: rem(map-get($container, max-width-beta));
+	max-width: rem(map-get($container, max-width-beta));
 }
 
 /*doc
@@ -48,8 +48,8 @@ category: Structure
 
 There are two containers available, 'container' and 'container-beta'. These containers will horizontally center the block with a specific min and max-width. Widths can be specified in the settings.scss file.
 
-    <div class="container">
-        your content
-    </div>
+	<div class="container">
+		your content
+	</div>
 
 */

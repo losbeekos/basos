@@ -7,38 +7,38 @@ button,
 input,
 select,
 textarea {
-    color: map-get($color, text);
+	color: map-get($color, text);
 }
 
 body {
-    background: map-get($color, body);
-    font-size: 1em;
-    line-height: 1.618; // Golden ratio
+	background: map-get($color, body);
+	font-size: 1em;
+	line-height: 1.618; // Golden ratio
 }
 
 ::selection {
-    background: map-get($color, selection);
-    text-shadow: none;
+	background: map-get($color, selection);
+	text-shadow: none;
 }
 
 hr {
-    display: block;
-    height: rem(1px);
-    border: 0;
-    border-top: rem(1px) solid #ccc;
-    margin: 1em 0;
-    padding: 0;
+	display: block;
+	height: rem(1px);
+	border: 0;
+	border-top: rem(1px) solid #ccc;
+	margin: 1em 0;
+	padding: 0;
 }
 
 img {
-    vertical-align: middle;
-    display: block;
+	vertical-align: middle;
+	display: block;
 }
 
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
 }
 
 audio,
@@ -47,15 +47,15 @@ iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
+	vertical-align: middle;
 }
 
 textarea {
-    resize: vertical;
+	resize: vertical;
 }
 
 .no-resize {
-    resize: none;
+	resize: none;
 }
 
 // Reboot
@@ -83,23 +83,23 @@ textarea {
 //
 // Includes future-proofed vendor prefixes as well.
 @at-root {
-    @-moz-viewport      { width: device-width; }
-    @-ms-viewport       { width: device-width; }
-    @-o-viewport        { width: device-width; }
-    @-webkit-viewport   { width: device-width; }
-    @viewport           { width: device-width; }
+	@-moz-viewport      { width: device-width; }
+	@-ms-viewport       { width: device-width; }
+	@-o-viewport        { width: device-width; }
+	@-webkit-viewport   { width: device-width; }
+	@viewport           { width: device-width; }
 }
 
 html {
-    // As a side-effect of setting the @viewport above,
-    // IE11 & Edge make the scrollbar overlap the content and automatically hide itself when not in use.
-    // Unfortunately, the auto-showing of the scrollbar is sometimes too sensitive,
-    // thus making it hard to click on stuff near the right edge of the page.
-    // So we add this style to force IE11 & Edge to use a "normal", non-overlapping, non-auto-hiding scrollbar.
-    // See https://github.com/twbs/bootstrap/issues/18543
-    -ms-overflow-style: scrollbar;
-    // Changes the default tap highlight to be completely transparent in iOS.
-    -webkit-tap-highlight-color: rgba(0,0,0,0);
+	// As a side-effect of setting the @viewport above,
+	// IE11 & Edge make the scrollbar overlap the content and automatically hide itself when not in use.
+	// Unfortunately, the auto-showing of the scrollbar is sometimes too sensitive,
+	// thus making it hard to click on stuff near the right edge of the page.
+	// So we add this style to force IE11 & Edge to use a "normal", non-overlapping, non-auto-hiding scrollbar.
+	// See https://github.com/twbs/bootstrap/issues/18543
+	-ms-overflow-style: scrollbar;
+	// Changes the default tap highlight to be completely transparent in iOS.
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
 }
 
 // Suppress the focus outline on elements that cannot be accessed via keyboard.
@@ -108,7 +108,7 @@ html {
 //
 // Credit: https://github.com/suitcss/base
 [tabindex="-1"]:focus {
-    outline: none !important;
+	outline: none !important;
 }
 
 // iOS "clickable elements" fix for role="button"
@@ -118,7 +118,7 @@ html {
 // see https://developer.mozilla.org/en-US/docs/Web/Events/click#Safari_Mobile
 
 [role="button"] {
-    cursor: pointer;
+	cursor: pointer;
 }
 
 // Avoid 300ms click delay on touch devices that support the `touch-action` CSS property.
@@ -140,10 +140,10 @@ label,
 select,
 summary,
 textarea {
-    touch-action: manipulation;
+	touch-action: manipulation;
 }
 
 // Always hide an element with the `hidden` HTML attribute (from PureCSS).
 [hidden] {
-    display: none !important;
+	display: none !important;
 }

@@ -3,21 +3,21 @@
 */
 
 input[type=radio] {
-    + label {
-        &::before {
-            border-radius: map-get($form, checkbox-radio-size);
-        }
+	+ label {
+		&::before {
+			border-radius: map-get($form, checkbox-radio-size);
+		}
 
-        &::after {
-            background: map-get($color, beta);
-            content: '';
-            top: (map-get($form, checkbox-radio-size)/4)-1;
-            left: map-get($form, checkbox-radio-size)/4;
-            width: map-get($form, checkbox-radio-size)/2;
-            height: map-get($form, checkbox-radio-size)/2;
-            border-radius: map-get($form, checkbox-radio-size)/2;
-        }
-    }
+		&::after {
+			background: map-get($color, beta);
+			content: '';
+			top: (map-get($form, checkbox-radio-size)/4)-1;
+			left: map-get($form, checkbox-radio-size)/4;
+			width: map-get($form, checkbox-radio-size)/2;
+			height: map-get($form, checkbox-radio-size)/2;
+			border-radius: map-get($form, checkbox-radio-size)/2;
+		}
+	}
 }
 
 /*doc
@@ -29,18 +29,18 @@ category: Forms
 
 ```html_example
 <div class="form__row">
-    <div class="column-5 form__label">
-        <label>Some radio buttons</label>
-    </div>
-    <div class="column-7">
-        <div class="column-6 form__input">
-            <ul class="form__input-list list-unstyled">
-                <li><input name="radio" type="radio" name="radio" id="radio1"><label for="radio1">Radio</label></li>
-                <li><input name="radio" type="radio" name="radio" id="radio2"><label for="radio2">Radio</label></li>
-                <li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio6"><label for="radio6">Radio disabled</label></li>
-            </ul>
-        </div>
-    </div>
+	<div class="column-5 form__label">
+		<label>Some radio buttons</label>
+	</div>
+	<div class="column-7">
+		<div class="column-6 form__input">
+			<ul class="form__input-list list-unstyled">
+				<li><input name="radio" type="radio" name="radio" id="radio1"><label for="radio1">Radio</label></li>
+				<li><input name="radio" type="radio" name="radio" id="radio2"><label for="radio2">Radio</label></li>
+				<li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio6"><label for="radio6">Radio disabled</label></li>
+			</ul>
+		</div>
+	</div>
 </div>
 ```
 

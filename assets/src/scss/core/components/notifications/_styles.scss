@@ -3,9 +3,9 @@
 */
 
 .notification--error {
-    @include notification(map-get($icon, notification-error), map-get($notifications, icon-color-error));
+	@include notification(map-get($icon, notification-error), map-get($notifications, icon-color-error));
 }
 
 .notification--success {
-    @include notification(map-get($icon, notification-success), map-get($notifications, icon-color-success));
+	@include notification(map-get($icon, notification-success), map-get($notifications, icon-color-success));
 }
