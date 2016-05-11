@@ -11,34 +11,34 @@ Make sure you have GruntJS and Bower.
 #### Bower dependencies
 Install the Bower dependencies, see bower.json.
 
-    $ bower install
+	$ bower install
 
 #### Node dependencies
 Install the Node dependencies, see package.json.
 
-    $ npm install
+	$ npm install
 
 #### Start server
 Start the web server which is used by BrowserSync.
 
-    $ grunt connect
+	$ grunt connect
 
 #### Run browserSync
 Run BrowserSync to auto reload when dist files change.
 
-    $ grunt browserSync
+	$ grunt browserSync
 
 #### Watch for changes
 
-    $ grunt watch
+	$ grunt watch
 
 */
 /*
     Imports settings.scss and the grid dependency [Susy](http://susy.oddbird.net)
 */
 /*
-    Control all settings which control the SCSS modules found in core/*.scss.  
-    Some properties don't have settings, if you need to change those properties you can change it in the modules themselves.
+	Control all settings which control the SCSS modules found in core/*.scss.  
+	Some properties don't have settings, if you need to change those properties you can change it in the modules themselves.
 */
 /* Base
 ==========
@@ -154,7 +154,7 @@ body {
   margin: 0; }
 
 /* HTML5 display definitions
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * Add the correct display in IE 9-.
  * 1. Add the correct display in Edge, IE, and Firefox.
@@ -206,7 +206,7 @@ template,
   display: none; }
 
 /* Links
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * Remove the gray background on active links in IE 10.
  */
@@ -222,7 +222,7 @@ a:hover {
   outline-width: 0; }
 
 /* Text-level semantics
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * 1. Remove the bottom border in Firefox 39-.
  * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
@@ -294,7 +294,7 @@ sup {
   top: -0.5em; }
 
 /* Embedded content
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * Remove the border on images inside links in IE 10-.
  */
@@ -308,7 +308,7 @@ svg:not(:root) {
   overflow: hidden; }
 
 /* Grouping content
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -341,7 +341,7 @@ hr {
   /* 2 */ }
 
 /* Forms
-   ========================================================================== */
+	 ========================================================================== */
 /**
  * Change font properties to `inherit` in all browsers (opinionated).
  */
@@ -597,16 +597,16 @@ category: Structure
 ## Tint
 Tint is a better way to make a color lighter instead of the standard Sass function "lighten".
 
-    .some-class {
-        color: tint( $color, $percentage );
-    }
+	.some-class {
+		color: tint( $color, $percentage );
+	}
 
 ## Shade
 Shade is a better way to make a color darker instead of the standard Sass function "darken".
 
-    .some-class {
-        color: shade( $color, $percentage );
-    }
+	.some-class {
+		color: shade( $color, $percentage );
+	}
 */
 /* Rem
 ==========
@@ -628,7 +628,7 @@ category: Structure
 This mixin will create a CSS triangle.
 Direction values: up, right, bottom, left.
 
-    @include arrow($width, $height, $direction, $color);
+	@include arrow($width, $height, $direction, $color);
 
 ```
 @access public
@@ -641,7 +641,7 @@ Direction values: up, right, bottom, left.
 ## Font face
 Includes a font-face rule for a custom local font.
 
-    @include font-face($fontname, $directory, $woff2: false);
+	@include font-face($fontname, $directory, $woff2: false);
 
 ```
 @access public
@@ -673,23 +673,23 @@ Basos uses the mobile first principle so you will never write a mobile media que
 
 How to add a media query to your SCSS file:
 
-    @include mq(gamma-and-up) {
-        ...
-    }
+	@include mq(gamma-and-up) {
+		...
+	}
 
 You can nest the above code in your CSS selector like this.
 
-    .your-selector {
-        @include mq(gamma) {
-            ...
-        }
+	.your-selector {
+		@include mq(gamma) {
+			...
+		}
 
-        @include mq(epsilon-and-up) {
-            ...
-        }
+		@include mq(epsilon-and-up) {
+			...
+		}
 
-        etc..
-    }
+		etc..
+	}
 
 */
 /* Grid mq
@@ -713,8 +713,8 @@ Clearfix container class, add this class to a wrapping element which contains fl
 
 ```html_example
 <div class="clearfix">
-    <div class="float-left"></div>
-    <div class="float-left"></div>
+	<div class="float-left"></div>
+	<div class="float-left"></div>
 </div>
 ````
 
@@ -722,7 +722,7 @@ You can also extend it in your SCSS files like this;
 
 ```
 .your-class {
-    @extend .clearfix;
+	@extend .clearfix;
 }
 ```
 
@@ -742,9 +742,9 @@ Hide classes are used for responsive design, for some breakpoints you can hide c
 
 ```html_example
 <ul>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
 </ul>
 ```
 
@@ -752,9 +752,9 @@ Hide classes are used for responsive design, for some breakpoints you can hide c
 
 ```html_example
 <ol>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
 </ol>
 ```
 
@@ -762,9 +762,9 @@ Hide classes are used for responsive design, for some breakpoints you can hide c
 
 ```html_example
 <ul class="list-unstyled">
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
 </ul>
 ```
 
@@ -772,17 +772,17 @@ Hide classes are used for responsive design, for some breakpoints you can hide c
 
 ```html_example
 <ul class="list-inline">
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
-    <li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
 </ul>
 ```
 
 ## Visually hidden
 Hide only visually, but have it available for screenreaders.
 
-    .visuallyhidden
-    .show-screenreaders
+	.visuallyhidden
+	.show-screenreaders
 
 
 ### Grid margin
@@ -914,17 +914,17 @@ Display table class needs some an extra child if you need to vertically center c
 
 ```html_example
 <div class="display-table block" style="height: 100px;">
-    <div class="display-table__middle">
-        This text will center align
-    </div>
+	<div class="display-table__middle">
+		This text will center align
+	</div>
 </div>
 ```
 
 ```html_example
 <div class="display-table block" style="height: 100px;">
-    <div class="display-table__bottom">
-        This text will bottom align
-    </div>
+	<div class="display-table__bottom">
+		This text will bottom align
+	</div>
 </div>
 ```
 
@@ -933,7 +933,7 @@ Pure CSS ellipsis class
 
 ```html_example
 <div class="ellipsis">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem, ullam magnam, esse numquam voluptatum culpa neque laboriosam officiis, sint animi beatae qui vero molestias aliquam dolore ea autem. Ipsam!
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem, ullam magnam, esse numquam voluptatum culpa neque laboriosam officiis, sint animi beatae qui vero molestias aliquam dolore ea autem. Ipsam!
 </div>
 ```
 
@@ -942,7 +942,7 @@ Break a word with a hyphen (hyphen not supported in Blink as of writing).
 
 ```html_example
 <div class="break-word" style="width: 200px">
-    Loremipsumdolorsitametconsecteturessenumquamvoluptatumculpa
+	Loremipsumdolorsitametconsecteturessenumquamvoluptatumculpa
 </div>
 ```
 
@@ -1033,10 +1033,10 @@ category: Typography
 
 ```html_example
 <ul>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
 </ul>
 ```
 
@@ -1044,10 +1044,10 @@ category: Typography
 
 ```html_example
 <ol>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
 </ol>
 ```
 
@@ -1069,10 +1069,10 @@ category: Typography
 
 ```html_example
 <ul class="list-unstyled">
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
 </ul>
 ```
 
@@ -1091,10 +1091,10 @@ category: Typography
 
 ```html_example
 <ul class="list-inline">
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
-    <li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
+	<li>list item</li>
 </ul>
 ```
 
@@ -1119,12 +1119,12 @@ category: Typography
 
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-  clip: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  position: static;
-  width: auto; }
+  clip: auto !important;
+  height: auto !important;
+  margin: 0 !important;
+  overflow: visible !important;
+  position: static !important;
+  width: auto !important; }
 
 /* Margin classes
 ==========
@@ -1655,7 +1655,7 @@ Pure CSS columns. Classes available for 2, 3 and 4 columns.
 
 ```html_example
 <p class="css-columns-4">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique animi cupiditate inventore repellendus placeat voluptate at nobis assumenda! Accusantium aspernatur id voluptatum itaque autem at dolore eligendi quisquam vitae dolor?
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique animi cupiditate inventore repellendus placeat voluptate at nobis assumenda! Accusantium aspernatur id voluptatum itaque autem at dolore eligendi quisquam vitae dolor?
 </p>
 ```
 
@@ -3459,26 +3459,26 @@ The default grid is a 12 columns grid which you can change in the settings, even
 
 ```html_example
 <div class="grid">
-    <div class="column-3">
-        <div class="card">
-            <div class="card__content">column-3</div>
-        </div>
-    </div>
-    <div class="column-3">
-        <div class="card">
-            <div class="card__content">column-3</div>
-        </div>
-    </div>
-    <div class="column-3">
-        <div class="card">
-            <div class="card__content">column-3</div>
-        </div>
-    </div>
-    <div class="column-3">
-        <div class="card">
-            <div class="card__content">column-3</div>
-        </div>
-    </div>
+	<div class="column-3">
+		<div class="card">
+			<div class="card__content">column-3</div>
+		</div>
+	</div>
+	<div class="column-3">
+		<div class="card">
+			<div class="card__content">column-3</div>
+		</div>
+	</div>
+	<div class="column-3">
+		<div class="card">
+			<div class="card__content">column-3</div>
+		</div>
+	</div>
+	<div class="column-3">
+		<div class="card">
+			<div class="card__content">column-3</div>
+		</div>
+	</div>
 </div>
 ```
 
@@ -3486,90 +3486,90 @@ The default grid is a 12 columns grid which you can change in the settings, even
 
 ```html_example
 <div class="grid grid--no-gutters">
-    <div class="column-3">
-        <div class="card">
-            <div class="card__content">column-3</div>
-        </div>
-    </div>
-    <div class="column-3">
-        <div class="card">
-            <div class="card__content">column-3</div>
-        </div>
-    </div>
-    <div class="column-3">
-        <div class="card">
-            <div class="card__content">column-3</div>
-        </div>
-    </div>
-    <div class="column-3">
-        <div class="card">
-            <div class="card__content">column-3</div>
-        </div>
-    </div>
+	<div class="column-3">
+		<div class="card">
+			<div class="card__content">column-3</div>
+		</div>
+	</div>
+	<div class="column-3">
+		<div class="card">
+			<div class="card__content">column-3</div>
+		</div>
+	</div>
+	<div class="column-3">
+		<div class="card">
+			<div class="card__content">column-3</div>
+		</div>
+	</div>
+	<div class="column-3">
+		<div class="card">
+			<div class="card__content">column-3</div>
+		</div>
+	</div>
 </div>
 ```
 
 ## Breakpoint specific
 ```html_example
 <div class="grid">
-    <div class="column-alpha-6 column-beta-12 column-gamma-and-up-3">
-        <div class="card">
-            <div class="card__content">Lorem ipsum dolor sit amet</div>
-        </div>
-    </div>
-    <div class="column-alpha-6 column-beta-4 column-beta--first column-gamma-and-up-3">
-        <div class="card">
-            <div class="card__content">Lorem ipsum dolor sit amet</div>
-        </div>
-    </div>
-    <div class="column-alpha-6 column-alpha--first column-beta-4 column-gamma-and-up-3">
-        <div class="card">
-            <div class="card__content">Lorem ipsum dolor sit amet</div>
-        </div>
-    </div>
-    <div class="column-alpha-6 column-beta-4 column-gamma-and-up-3">
-        <div class="card">
-            <div class="card__content">Lorem ipsum dolor sit amet</div>
-        </div>
-    </div>
+	<div class="column-alpha-6 column-beta-12 column-gamma-and-up-3">
+		<div class="card">
+			<div class="card__content">Lorem ipsum dolor sit amet</div>
+		</div>
+	</div>
+	<div class="column-alpha-6 column-beta-4 column-beta--first column-gamma-and-up-3">
+		<div class="card">
+			<div class="card__content">Lorem ipsum dolor sit amet</div>
+		</div>
+	</div>
+	<div class="column-alpha-6 column-alpha--first column-beta-4 column-gamma-and-up-3">
+		<div class="card">
+			<div class="card__content">Lorem ipsum dolor sit amet</div>
+		</div>
+	</div>
+	<div class="column-alpha-6 column-beta-4 column-gamma-and-up-3">
+		<div class="card">
+			<div class="card__content">Lorem ipsum dolor sit amet</div>
+		</div>
+	</div>
 </div>
 ```
 
 ## Centered
 ```html_example
 <div class="grid">
-    <div class="column-6 column-centered">
-        <div class="card">
-            <div class="card__content">column-6</div>
-        </div>
-    </div>
+	<div class="column-6 column-centered">
+		<div class="card">
+			<div class="card__content">column-6</div>
+		</div>
+	</div>
 </div>
 ```
 
 ## Pre class
 ```html_example
 <div class="grid">
-    <div class="column-6 pre-2">
-        <div class="card">
-            <div class="card__content">column-6 pre-2</div>
-        </div>
-    </div>
+	<div class="column-6 pre-2">
+		<div class="card">
+			<div class="card__content">column-6 pre-2</div>
+		</div>
+	</div>
 </div>
 ```
 
 ## Post class
 ```html_example
 <div class="grid">
-    <div class="column-6 post-2">
-        <div class="card">
-            <div class="card__content">column-7 post-1</div>
-        </div>
-    </div>
-    <div class="column-4">
-        <div class="card">
-            <div class="card__content">column-4</div>
-        </div>
-    </div>
+	<div class="column-6 post-2">
+		<div class="card">
+			<div class="card__content">column-7 post-1</div>
+		</div>
+	</div>
+	<div class="column-4">
+		<div class="card">
+			<div class="card__content">column-4</div>
+		</div>
+	</div>
 </div>
 ```
 */
@@ -3631,7 +3631,7 @@ The default grid is a 12 columns grid which you can change in the settings, even
 
 [class|=flexbox-column] {
   -ms-flex-negative: 0;
-          -webkit-flex-shrink: 0;
+      -webkit-flex-shrink: 0;
           flex-shrink: 0; }
 
 .flexbox-column-fill {
@@ -3692,18 +3692,18 @@ This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm
 
 ```html_example
 <div class="flexbox-grid">
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
 </div>
 ```
 
@@ -3711,9 +3711,9 @@ This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm
 
 ```html_example
 <div class="flexbox-grid flexbox-grid--top" style="height: 200px;">
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
 </div>
 ```
 
@@ -3721,9 +3721,9 @@ This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm
 
 ```html_example
 <div class="flexbox-grid flexbox-grid--middle" style="height: 200px;">
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
 </div>
 ```
 
@@ -3731,9 +3731,9 @@ This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm
 
 ```html_example
 <div class="flexbox-grid flexbox-grid--bottom" style="height: 200px;">
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
 </div>
 ```
 
@@ -3741,9 +3741,9 @@ This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm
 
 ```html_example
 <div class="flexbox-grid flexbox-grid--stretch" style="height: 200px;">
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
 </div>
 ```
 
@@ -3751,9 +3751,9 @@ This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm
 
 ```html_example
 <div class="flexbox-grid flexbox-grid--baseline" style="height: 200px;">
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
 </div>
 ```
 
@@ -3761,9 +3761,9 @@ This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm
 
 ```html_example
 <div class="flexbox-grid flexbox-grid--left">
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
 </div>
 ```
 
@@ -3771,9 +3771,9 @@ This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm
 
 ```html_example
 <div class="flexbox-grid flexbox-grid--center">
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
 </div>
 ```
 
@@ -3781,9 +3781,9 @@ This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm
 
 ```html_example
 <div class="flexbox-grid flexbox-grid--right">
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
 </div>
 ```
 
@@ -3791,12 +3791,12 @@ This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm
 
 ```html_example
 <div class="flexbox-grid flexbox-grid--between">
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
 </div>
 ```
 
@@ -3804,12 +3804,12 @@ This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm
 
 ```html_example
 <div class="flexbox-grid flexbox-grid--around">
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
-    <div class="flexbox-column-3 card">
-        <div class="card__content">Flexy</div>
-    </div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
 </div>
 ```
 
@@ -3888,72 +3888,72 @@ It's important to note twice that these elements need the same height, or you'll
 
 ```html_example
 <div class="flexible-grid-3">
-    <div class="card">
-        <div class="card__header card__header--beta">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card__header card__header--gamma">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card__header card__header--delta">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card__header card__header--beta">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card__header card__header--gamma">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
-    <div class="card">
-        <div class="card__header card__header--delta">
-            <div class="card__title">A title</div>
-        </div>
-        <div class="card__content">
-            Some content
-        </div>
-        <div class="card__action">
-            <button class="btn btn--beta btn--medium">action</a>
-        </div>
-    </div>
+	<div class="card">
+		<div class="card__header card__header--beta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--gamma">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--delta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--beta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--gamma">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--delta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
 </div>
 ```
 
@@ -4077,9 +4077,9 @@ category: Structure
 
 There are two containers available, 'container' and 'container-beta'. These containers will horizontally center the block with a specific min and max-width. Widths can be specified in the settings.scss file.
 
-    <div class="container">
-        your content
-    </div>
+	<div class="container">
+		your content
+	</div>
 
 */
 /* Sections
@@ -4141,41 +4141,41 @@ There are five colors defined for you as modifiers (section--alpha, section--bet
 
 ```html_example
 <div class="section section--alpha">
-    <div class="container">
-        Some content..
-    </div>
+	<div class="container">
+		Some content..
+	</div>
 </div>
 ```
 
 ```html_example
 <div class="section section--beta">
-    <div class="container">
-        Some content..
-    </div>
+	<div class="container">
+		Some content..
+	</div>
 </div>
 ```
 
 ```html_example
 <div class="section section--gamma">
-    <div class="container">
-        Some content..
-    </div>
+	<div class="container">
+		Some content..
+	</div>
 </div>
 ```
 
 ```html_example
 <div class="section section--delta">
-    <div class="container">
-        Some content..
-    </div>
+	<div class="container">
+		Some content..
+	</div>
 </div>
 ```
 
 ```html_example
 <div class="section section--epsilon">
-    <div class="container">
-        Some content..
-    </div>
+	<div class="container">
+		Some content..
+	</div>
 </div>
 ```
 
@@ -4896,15 +4896,15 @@ You can go both ways with the confirm modal. You could call it from your HTML wi
 ### Javascript call
 ```
 app.modals.confirm({
-    modalTitle: 'title', // Title printed in the modal (optional)
-    modalText: 'text', // Text to explain the action (optional)
-    modalConfirmAction: 'http://google.nl', // URL for the confirm button
-    modalConfirmBtn: 'bevestigen', // Confirm button text (optional, default: bevestigen)
-    modalCloseBtn: 'annuleren', // Cancel button text (optional, default: annuleren)
+	modalTitle: 'title', // Title printed in the modal (optional)
+	modalText: 'text', // Text to explain the action (optional)
+	modalConfirmAction: 'http://google.nl', // URL for the confirm button
+	modalConfirmBtn: 'bevestigen', // Confirm button text (optional, default: bevestigen)
+	modalCloseBtn: 'annuleren', // Cancel button text (optional, default: annuleren)
 
-    modalOpenCallback: function () {
-        // Do magic here..
-    }
+	modalOpenCallback: function () {
+		// Do magic here..
+	}
 });
 ```
 
@@ -4914,12 +4914,12 @@ app.modals.confirm({
 ```html_example
 <a class="btn btn--alpha btn--small modal__trigger" data-modal-id="modal-static">Static</a>
 <div id="modal-static" class="modal">
-    <div class="modal__content">
-        <a class="modal__close" data-modal-close></a>
-        <h2>Dit is een titel</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-        <a href="#" class="btn btn--beta btn--medium" data-modal-close>Akkoord</a>
-    </div>
+	<div class="modal__content">
+		<a class="modal__close" data-modal-close></a>
+		<h2>Dit is een titel</h2>
+		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
+		<a href="#" class="btn btn--beta btn--medium" data-modal-close>Akkoord</a>
+	</div>
 </div>
 ```
 
@@ -4997,30 +4997,30 @@ You could always remove some elements you won't be using such as action.
 
 ```html_example
 <div class="card">
-    <div class="card__header card__header--gamma">
-        <div class="card__title">A title</div>
-    </div>
-    <div class="card__content">
-        Some content
-    </div>
-    <div class="card__action">
-        <button class="btn btn--beta btn--medium">action</a>
-    </div>
+	<div class="card__header card__header--gamma">
+		<div class="card__title">A title</div>
+	</div>
+	<div class="card__content">
+		Some content
+	</div>
+	<div class="card__action">
+		<button class="btn btn--beta btn--medium">action</a>
+	</div>
 </div>
 ```
 
 ## Image
 ```html_example
 <div class="card">
-    <div class="card__header card__header--gamma" style="background-image: url(http://www.lorempixel.com/city/640/480)">
-        <div class="card__title">A title</div>
-    </div>
-    <div class="card__content">
-        Some content
-    </div>
-    <div class="card__action">
-        <button class="btn btn--beta btn--medium">action</a>
-    </div>
+	<div class="card__header card__header--gamma" style="background-image: url(http://www.lorempixel.com/city/640/480)">
+		<div class="card__title">A title</div>
+	</div>
+	<div class="card__content">
+		Some content
+	</div>
+	<div class="card__action">
+		<button class="btn btn--beta btn--medium">action</a>
+	</div>
 </div>
 ```
 
@@ -5081,30 +5081,30 @@ category: Content
 
 ```html_example
 <ul class="tabs">
-    <li><a class="tab tab--active" href="#tab-home">Home</a></li>
-    <li><a class="tab" href="#tab-lorem">Lorem</a></li>
-    <li><a class="tab" href="#tab-ipsum">Ipsum</a></li>
+	<li><a class="tab tab--active" href="#tab-home">Home</a></li>
+	<li><a class="tab" href="#tab-lorem">Lorem</a></li>
+	<li><a class="tab" href="#tab-ipsum">Ipsum</a></li>
 </ul>
 <div class="tab-content">
-    <div class="tab-item tab-item--active" id="tab-home">
-        <div class="grid">
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-        </div>
-    </div>
-    <div class="tab-item" id="tab-lorem">
-        <p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
-    </div>
-    <div class="tab-item" id="tab-ipsum">
-        <div class="grid">
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-        </div>
-        <div class="grid">
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-            <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-        </div>
-    </div>
+	<div class="tab-item tab-item--active" id="tab-home">
+		<div class="grid">
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+		</div>
+	</div>
+	<div class="tab-item" id="tab-lorem">
+		<p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
+	</div>
+	<div class="tab-item" id="tab-ipsum">
+		<div class="grid">
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+		</div>
+		<div class="grid">
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+		</div>
+	</div>
 </div>
 ```
 
@@ -5279,17 +5279,17 @@ category: Navigation
 
 ```html_example
 <header id="nav-bar" class="nav-bar">
-    <div class="nav-bar__container">
-        <a class="logo" href="/"><img src="assets/dist/img/logo.png" alt=""></a>
-        <nav class="nav-bar__nav">
-            <a id="nav-bar-trigger" class="nav-bar__trigger hide-gamma-and-up"></a>
-            <ul class="nav-bar__list">
-                <li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
-                <li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
-                <li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
-            </ul>
-        </nav>
-    </div>
+	<div class="nav-bar__container">
+		<a class="logo" href="/"><img src="assets/dist/img/logo.png" alt=""></a>
+		<nav class="nav-bar__nav">
+			<a id="nav-bar-trigger" class="nav-bar__trigger hide-gamma-and-up"></a>
+			<ul class="nav-bar__list">
+				<li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
+				<li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
+				<li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
+			</ul>
+		</nav>
+	</div>
 </header>
 ```
 
@@ -5365,7 +5365,7 @@ category: Navigation
     display: -ms-flexbox;
     display: flex;
     -ms-flex-negative: 0;
-            -webkit-flex-shrink: 0;
+        -webkit-flex-shrink: 0;
             flex-shrink: 0;
     min-width: -webkit-min-content;
     min-width: -moz-min-content;
@@ -5388,7 +5388,7 @@ category: Navigation
     min-width: -moz-min-content;
     min-width: min-content;
     -ms-flex-negative: 0;
-            -webkit-flex-shrink: 0;
+        -webkit-flex-shrink: 0;
             flex-shrink: 0; }
   .responsive-table--flip td,
   .responsive-table--flip th {
@@ -5412,40 +5412,40 @@ category: Content
 
 ```html_example
 <table class="table">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -5453,40 +5453,40 @@ category: Content
 
 ```html_example
 <table class="table table--hover">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -5494,40 +5494,40 @@ category: Content
 
 ```html_example
 <table class="table table--zebra">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -5535,40 +5535,40 @@ category: Content
 
 ```html_example
 <table class="table table--bordered">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -5576,40 +5576,40 @@ category: Content
 
 ```html_example
 <table class="table table--zebra table--bordered">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -5619,50 +5619,50 @@ category: Content
 
 ```html_example
 <table class="table responsive-table">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-            <th>Yada</th>
-            <th>Yada</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+			<th>Yada</th>
+			<th>Yada</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -5670,50 +5670,50 @@ category: Content
 
 ```html_example
 <table class="table responsive-table responsive-table--flip">
-    <thead>
-        <tr>
-            <th>#</th>
-            <th>First Name</th>
-            <th>Last Name</th>
-            <th>Show</th>
-            <th>Yada</th>
-            <th>Yada</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>1</td>
-            <td>Bender</td>
-            <td>Rodrigues</td>
-            <td>Futurama</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Philip</td>
-            <td>Fry</td>
-            <td>Futurama</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>Jerry</td>
-            <td>Seinfeld</td>
-            <td>Seinfeld</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-        <tr>
-            <td>4</td>
-            <td>Larry</td>
-            <td>David</td>
-            <td>Seinfeld</td>
-            <td>Yada</td>
-            <td>Yada</td>
-        </tr>
-    </tbody>
+	<thead>
+		<tr>
+			<th>#</th>
+			<th>First Name</th>
+			<th>Last Name</th>
+			<th>Show</th>
+			<th>Yada</th>
+			<th>Yada</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>1</td>
+			<td>Bender</td>
+			<td>Rodrigues</td>
+			<td>Futurama</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>2</td>
+			<td>Philip</td>
+			<td>Fry</td>
+			<td>Futurama</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>3</td>
+			<td>Jerry</td>
+			<td>Seinfeld</td>
+			<td>Seinfeld</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+		<tr>
+			<td>4</td>
+			<td>Larry</td>
+			<td>David</td>
+			<td>Seinfeld</td>
+			<td>Yada</td>
+			<td>Yada</td>
+		</tr>
+	</tbody>
 </table>
 ```
 
@@ -5773,15 +5773,15 @@ category: Content
 
 ```html_example
 <div class="dropdown">
-    <a class="btn btn--alpha btn--small">dropdown</a>
-    <div class="dropdown__content">
-        <ul>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-            <li><a href="#">link</a></li>
-        </ul>
-    </div>
+	<a class="btn btn--alpha btn--small">dropdown</a>
+	<div class="dropdown__content">
+		<ul>
+			<li><a href="#">link</a></li>
+			<li><a href="#">link</a></li>
+			<li><a href="#">link</a></li>
+			<li><a href="#">link</a></li>
+		</ul>
+	</div>
 </div>
 ```
 
@@ -5789,15 +5789,15 @@ category: Content
 
 ```html_example
 <div class="dropdown" data-dropdown-trigger="click">
-    <a class="btn btn--alpha btn--small">dropdown</a>
-    <div class="dropdown__content">
-        <ul class="dropdown__list">
-            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-        </ul>
-    </div>
+	<a class="btn btn--alpha btn--small">dropdown</a>
+	<div class="dropdown__content">
+		<ul class="dropdown__list">
+			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+		</ul>
+	</div>
 </div>
 ```
 
@@ -5805,15 +5805,15 @@ category: Content
 
 ```html_example
 <div class="dropdown dropdown--right">
-    <a class="btn btn--alpha btn--small">dropdown</a>
-    <div class="dropdown__content">
-        <ul class="dropdown__list">
-            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-            <li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-        </ul>
-    </div>
+	<a class="btn btn--alpha btn--small">dropdown</a>
+	<div class="dropdown__content">
+		<ul class="dropdown__list">
+			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+		</ul>
+	</div>
 </div>
 ```
 
@@ -6018,53 +6018,53 @@ category: Content
 
 ```html_example
 <div class="accordion">
-    <div class="accordion__group accordion-content-show">
-        <a class="accordion__trigger">Accordion item #1</a>
-        <div class="accordion__content">
-            <div class="grid">
-                <div class="column-12">
-                    <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="accordion__group">
-        <a class="accordion__trigger">Accordion item #2</a>
-        <div class="accordion__content">
-            <div class="grid">
-                <div class="column-12">
-                    <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="accordion__group">
-        <a class="accordion__trigger">Accordion item #3</a>
-        <div class="accordion__content">
-            <div class="grid">
-                <div class="column-12">
-                    <p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-                    <p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="accordion__group">
-        <a class="accordion__trigger">Accordion item #4</a>
-        <div class="accordion__content">
-            <h2>With a grid inside</h2>
-            <div class="grid">
-                <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-            </div>
-            <div class="grid">
-                <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-                <div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-            </div>
-        </div>
-    </div>
+	<div class="accordion__group accordion-content-show">
+		<a class="accordion__trigger">Accordion item #1</a>
+		<div class="accordion__content">
+			<div class="grid">
+				<div class="column-12">
+					<p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+					<p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="accordion__group">
+		<a class="accordion__trigger">Accordion item #2</a>
+		<div class="accordion__content">
+			<div class="grid">
+				<div class="column-12">
+					<p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+					<p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="accordion__group">
+		<a class="accordion__trigger">Accordion item #3</a>
+		<div class="accordion__content">
+			<div class="grid">
+				<div class="column-12">
+					<p>You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+					<p>Okay, I like a challenge. Oh, I think we should just stay friends. And from now on you're all named Bender Jr. Why did you bring us here? Humans dating robots is sick. You people wonder why I'm still single? It's 'cause all the fine robot sisters are dating humans! Why would I want to know that?</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="accordion__group">
+		<a class="accordion__trigger">Accordion item #4</a>
+		<div class="accordion__content">
+			<h2>With a grid inside</h2>
+			<div class="grid">
+				<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+				<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+			</div>
+			<div class="grid">
+				<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+				<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+			</div>
+		</div>
+	</div>
 </div>
 ```
 
@@ -6098,9 +6098,9 @@ category: Navigation
 
 ```html_example
 <div class="breadcrumbs">
-    <a class="breadcrubs__link" href="#">Home</a>
-    <a class="breadcrubs__link" href="#">Lorem</a>
-    <span>Ipsum dolir asmit emet</span>
+	<a class="breadcrubs__link" href="#">Home</a>
+	<a class="breadcrubs__link" href="#">Lorem</a>
+	<span>Ipsum dolir asmit emet</span>
 </div>
 ```
 
@@ -6141,27 +6141,27 @@ category: Content
 
 ```html_example
 <ul class="pricing-table">
-    <li class="pricing-table__header">
-        Basos package
-    </li>
-    <li class="pricing-table__content pricing-table__content--alpha">
-        <div class="pricing-table__price">&euro; 500,-</div>
-    </li>
-    <li class="pricing-table__content pricing-table__content--beta">
-        <div class="pricing-table__description">Lorem ipsum dolor sit amet.</div>
-    </li>
-    <li class="pricing-table__content pricing-table__content--beta">
-        <div class="pricing-table__item">50 components</div>
-    </li>
-    <li class="pricing-table__content pricing-table__content--beta">
-        <div class="pricing-table__item">100 lorems</div>
-    </li>
-    <li class="pricing-table__content pricing-table__content--beta">
-        <div class="pricing-table__item">5 dolirs</div>
-    </li>
-    <li class="pricing-table__content pricing-table__content--beta price-table__content--action">
-        <a class="btn btn--beta btn--medium" href="">buy now</a>
-    </li>
+	<li class="pricing-table__header">
+		Basos package
+	</li>
+	<li class="pricing-table__content pricing-table__content--alpha">
+		<div class="pricing-table__price">&euro; 500,-</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__description">Lorem ipsum dolor sit amet.</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__item">50 components</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__item">100 lorems</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__item">5 dolirs</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta price-table__content--action">
+		<a class="btn btn--beta btn--medium" href="">buy now</a>
+	</li>
 </ul>
 ```
 
@@ -6206,11 +6206,11 @@ category: Content
 
 ```html_example
 <div class="media media--left">
-    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
-    <div class="media__beta">
-        <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
-        <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-    </div>
+	<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+	<div class="media__beta">
+		<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+		<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+	</div>
 </div>
 ```
 
@@ -6218,11 +6218,11 @@ category: Content
 
 ```html_example
 <div class="media media--right">
-    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
-    <div class="media__beta">
-        <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
-        <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-    </div>
+	<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+	<div class="media__beta">
+		<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+		<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+	</div>
 </div>
 ```
 
@@ -6230,25 +6230,25 @@ category: Content
 
 ```html_example
 <div class="media media--left">
-    <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
-    <div class="media__beta">
-        <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
-        <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-        <div class="media media--left">
-            <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
-            <div class="media__beta">
-                <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
-                <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-            </div>
-        </div>
-        <div class="media media--left">
-            <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
-            <div class="media__beta">
-                <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
-                <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-            </div>
-        </div>
-    </div>
+	<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+	<div class="media__beta">
+		<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+		<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+		<div class="media media--left">
+			<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+			<div class="media__beta">
+				<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+				<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+			</div>
+		</div>
+		<div class="media media--left">
+			<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+			<div class="media__beta">
+				<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+				<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+			</div>
+		</div>
+	</div>
 </div>
 ```
 
@@ -6256,20 +6256,20 @@ category: Content
 
 ```html_example
 <ul class="media-list">
-    <li class="media media--left">
-        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
-        <div class="media__beta">
-            <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
-            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-        </div>
-    </li>
-    <li class="media media--left">
-        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
-        <div class="media__beta">
-            <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
-            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-        </div>
-    </li>
+	<li class="media media--left">
+		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+		<div class="media__beta">
+			<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+		</div>
+	</li>
+	<li class="media media--left">
+		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+		<div class="media__beta">
+			<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+		</div>
+	</li>
 </ul>
 ```
 
@@ -6277,34 +6277,34 @@ category: Content
 
 ```html_example
 <ul class="media-list media-list--bordered">
-    <li class="media media--left">
-        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
-        <div class="media__beta">
-            <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
-            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-        </div>
-    </li>
-    <li class="media media--left">
-        <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
-        <div class="media__beta">
-            <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
-            <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-            <div class="media media--left">
-                <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
-                <div class="media__beta">
-                    <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
-                    <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-                </div>
-            </div>
-            <div class="media media--left">
-                <div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
-                <div class="media__beta">
-                    <h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
-                    <p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
-                </div>
-            </div>
-        </div>
-    </li>
+	<li class="media media--left">
+		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+		<div class="media__beta">
+			<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+		</div>
+	</li>
+	<li class="media media--left">
+		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+		<div class="media__beta">
+			<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+			<div class="media media--left">
+				<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+				<div class="media__beta">
+					<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+					<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+				</div>
+			</div>
+			<div class="media media--left">
+				<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+				<div class="media__beta">
+					<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+					<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+				</div>
+			</div>
+		</div>
+	</li>
 </ul>
 ```
 
@@ -6433,12 +6433,12 @@ category: Content
 
 ```html_example
 <progress>
-    <div class="progress-bar">
-        <div class="progress-bar__value"></div>
-    </div>
+	<div class="progress-bar">
+		<div class="progress-bar__value"></div>
+	</div>
 </progress>
 <div class="progress-bar">
-    <div class="progress-bar__value"></div>
+	<div class="progress-bar__value"></div>
 </div>
 ```
 
@@ -6447,12 +6447,12 @@ category: Content
 
 ```html_example
 <progress max="100" value="80">
-    <div class="progress-bar">
-        <div class="progress-bar__value" style="width: 80%;"></div>
-    </div>
+	<div class="progress-bar">
+		<div class="progress-bar__value" style="width: 80%;"></div>
+	</div>
 </progress>
 <div class="progress-bar">
-    <div class="progress-bar__value" style="width: 80%;"></div>
+	<div class="progress-bar__value" style="width: 80%;"></div>
 </div>
 ```
 
@@ -6495,38 +6495,38 @@ category: Content
 
 ```html_example
 <div class="grid">
-    <div data-scrollspy data-scrollspy-repeat data-scrollspy-class="animation-bounceIn" class="column-12 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-scrollspy data-scrollspy-repeat data-scrollspy-class="animation-bounceIn" class="column-12 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
 </div>
 <div class="grid" data-equalize>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
 </div>
 <div class="grid" data-equalize>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
 </div>
 <div class="grid" data-equalize>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there.</div>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-8 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-8 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
 </div>
 <div class="grid" data-equalize>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" class="column-7 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" data-scrollspy-delay="200" class="column-5 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" class="column-7 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" data-scrollspy-delay="200" class="column-5 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
 </div>
 <div class="grid" data-equalize>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-8 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-8 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
 </div>
 <div class="grid" data-equalize>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="100" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="100" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
 </div>
 <div class="grid" data-equalize>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateAlpha" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateGamma" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-    <div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateBeta" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateAlpha" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateGamma" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateBeta" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
 </div>
 ```
 
@@ -6555,7 +6555,7 @@ You can add a no animation modifier to the target (toggle--no-animation).
 ```html_example
 <button class="btn btn--alpha btn--small" data-toggle="#toggle-target">toggle</button>
 <div id="toggle-target" class="toggle toggle--hide">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nemo nisi, pariatur doloremque itaque exercitationem odio libero odit dolores voluptate voluptas nulla voluptates nam nobis illo veritatis aperiam cupiditate dolor.</div>
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nemo nisi, pariatur doloremque itaque exercitationem odio libero odit dolores voluptate voluptas nulla voluptates nam nobis illo veritatis aperiam cupiditate dolor.</div>
 </div>
 ```
 
@@ -6586,25 +6586,25 @@ category: Navigation
 
 ```html_example
 <div class="grid affix-container">
-    <div class="column-3">
-        <div class="affix" data-affix>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ducimus voluptates veniam a. Suscipit esse eaque nemo ratione voluptatibus amet maxime ipsam voluptas, reiciendis veniam, asperiores pariatur, dolorem at repellendus?
-        </div>
-    </div>
-    <div class="column-9">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-    </div>
+	<div class="column-3">
+		<div class="affix" data-affix>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ducimus voluptates veniam a. Suscipit esse eaque nemo ratione voluptatibus amet maxime ipsam voluptas, reiciendis veniam, asperiores pariatur, dolorem at repellendus?
+		</div>
+	</div>
+	<div class="column-9">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+	</div>
 </div>
 ```
 
@@ -6635,7 +6635,7 @@ The map is styled with the styles options, the style used for these docs is borr
 
 ```html_example
 <div class="google-maps">
-    <div id="google-maps" class="google-maps__map"></div>
+	<div id="google-maps" class="google-maps__map"></div>
 </div>
 ```
 
@@ -7001,10 +7001,10 @@ These work with the button classes so you can use those to change color and size
 
 ```html_example
 <ul class="btn-group btn-group--inline">
-    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
 </ul>
 ```
 
@@ -7053,15 +7053,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container">
-    <a class="btn btn--alpha" href="#">&lsaquo;</a>
-    <a class="btn btn--alpha" href="#">1</a>
-    <a class="btn btn--alpha" href="#">2</a>
-    <a class="btn btn--alpha" href="#">3</a>
-    <a class="btn btn--alpha" href="#">4</a>
-    <a class="btn btn--alpha" href="#">5</a>
-    <a class="btn btn--divider">...</a>
-    <a class="btn btn--alpha" href="#">23</a>
-    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#">1</a>
+	<a class="btn btn--alpha" href="#">2</a>
+	<a class="btn btn--alpha" href="#">3</a>
+	<a class="btn btn--alpha" href="#">4</a>
+	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--divider">...</a>
+	<a class="btn btn--alpha" href="#">23</a>
+	<a class="btn btn--alpha" href="#">&rsaquo;</a>
 </div>
 ```
 
@@ -7069,15 +7069,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--center">
-    <a class="btn btn--alpha" href="#">&lsaquo;</a>
-    <a class="btn btn--alpha" href="#">1</a>
-    <a class="btn btn--alpha" href="#">2</a>
-    <a class="btn btn--alpha" href="#">3</a>
-    <a class="btn btn--alpha" href="#">4</a>
-    <a class="btn btn--alpha" href="#">5</a>
-    <a class="btn btn--divider">...</a>
-    <a class="btn btn--alpha" href="#">23</a>
-    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#">1</a>
+	<a class="btn btn--alpha" href="#">2</a>
+	<a class="btn btn--alpha" href="#">3</a>
+	<a class="btn btn--alpha" href="#">4</a>
+	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--divider">...</a>
+	<a class="btn btn--alpha" href="#">23</a>
+	<a class="btn btn--alpha" href="#">&rsaquo;</a>
 </div>
 ```
 
@@ -7085,15 +7085,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--right">
-    <a class="btn btn--alpha" href="#">&lsaquo;</a>
-    <a class="btn btn--alpha" href="#">1</a>
-    <a class="btn btn--alpha" href="#">2</a>
-    <a class="btn btn--alpha" href="#">3</a>
-    <a class="btn btn--alpha" href="#">4</a>
-    <a class="btn btn--alpha" href="#">5</a>
-    <a class="btn btn--divider">...</a>
-    <a class="btn btn--alpha" href="#">23</a>
-    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#">1</a>
+	<a class="btn btn--alpha" href="#">2</a>
+	<a class="btn btn--alpha" href="#">3</a>
+	<a class="btn btn--alpha" href="#">4</a>
+	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--divider">...</a>
+	<a class="btn btn--alpha" href="#">23</a>
+	<a class="btn btn--alpha" href="#">&rsaquo;</a>
 </div>
 ```
 
@@ -7101,17 +7101,17 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container">
-    <ul class="btn-group btn-group--inline">
-        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-        <li><a class="btn btn--alpha" href="#">1</a></li>
-        <li><a class="btn btn--alpha" href="#">2</a></li>
-        <li><a class="btn btn--alpha" href="#">3</a></li>
-        <li><a class="btn btn--alpha" href="#">4</a></li>
-        <li><a class="btn btn--alpha" href="#">5</a></li>
-        <li><a class="btn btn--divider">...</a></li>
-        <li><a class="btn btn--alpha" href="#">23</a></li>
-        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
-    </ul>
+	<ul class="btn-group btn-group--inline">
+		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#">1</a></li>
+		<li><a class="btn btn--alpha" href="#">2</a></li>
+		<li><a class="btn btn--alpha" href="#">3</a></li>
+		<li><a class="btn btn--alpha" href="#">4</a></li>
+		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--divider">...</a></li>
+		<li><a class="btn btn--alpha" href="#">23</a></li>
+		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+	</ul>
 </div>
 ```
 
@@ -7119,17 +7119,17 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--center">
-    <ul class="btn-group btn-group--inline">
-        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-        <li><a class="btn btn--alpha" href="#">1</a></li>
-        <li><a class="btn btn--alpha" href="#">2</a></li>
-        <li><a class="btn btn--alpha" href="#">3</a></li>
-        <li><a class="btn btn--alpha" href="#">4</a></li>
-        <li><a class="btn btn--alpha" href="#">5</a></li>
-        <li><a class="btn btn--divider">...</a></li>
-        <li><a class="btn btn--alpha" href="#">23</a></li>
-        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
-    </ul>
+	<ul class="btn-group btn-group--inline">
+		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#">1</a></li>
+		<li><a class="btn btn--alpha" href="#">2</a></li>
+		<li><a class="btn btn--alpha" href="#">3</a></li>
+		<li><a class="btn btn--alpha" href="#">4</a></li>
+		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--divider">...</a></li>
+		<li><a class="btn btn--alpha" href="#">23</a></li>
+		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+	</ul>
 </div>
 ```
 
@@ -7137,17 +7137,17 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--right">
-    <ul class="btn-group btn-group--inline">
-        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-        <li><a class="btn btn--alpha" href="#">1</a></li>
-        <li><a class="btn btn--alpha" href="#">2</a></li>
-        <li><a class="btn btn--alpha" href="#">3</a></li>
-        <li><a class="btn btn--alpha" href="#">4</a></li>
-        <li><a class="btn btn--alpha" href="#">5</a></li>
-        <li><a class="btn btn--divider">...</a></li>
-        <li><a class="btn btn--alpha" href="#">23</a></li>
-        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
-    </ul>
+	<ul class="btn-group btn-group--inline">
+		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#">1</a></li>
+		<li><a class="btn btn--alpha" href="#">2</a></li>
+		<li><a class="btn btn--alpha" href="#">3</a></li>
+		<li><a class="btn btn--alpha" href="#">4</a></li>
+		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--divider">...</a></li>
+		<li><a class="btn btn--alpha" href="#">23</a></li>
+		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+	</ul>
 </div>
 ```
 
@@ -7155,10 +7155,10 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <ul class="btn-group btn-group--block">
-    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-    <li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
 </ul>
 ```
 
@@ -7176,15 +7176,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container">
-    <a class="btn btn--alpha" href="#">&lsaquo;</a>
-    <a class="btn btn--alpha" href="#">1</a>
-    <a class="btn btn--alpha" href="#">2</a>
-    <a class="btn btn--alpha" href="#">3</a>
-    <a class="btn btn--alpha" href="#">4</a>
-    <a class="btn btn--alpha" href="#">5</a>
-    <a class="btn btn--divider">...</a>
-    <a class="btn btn--alpha" href="#">23</a>
-    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#">1</a>
+	<a class="btn btn--alpha" href="#">2</a>
+	<a class="btn btn--alpha" href="#">3</a>
+	<a class="btn btn--alpha" href="#">4</a>
+	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--divider">...</a>
+	<a class="btn btn--alpha" href="#">23</a>
+	<a class="btn btn--alpha" href="#">&rsaquo;</a>
 </div>
 ```
 
@@ -7192,15 +7192,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--center">
-    <a class="btn btn--alpha" href="#">&lsaquo;</a>
-    <a class="btn btn--alpha" href="#">1</a>
-    <a class="btn btn--alpha" href="#">2</a>
-    <a class="btn btn--alpha" href="#">3</a>
-    <a class="btn btn--alpha" href="#">4</a>
-    <a class="btn btn--alpha" href="#">5</a>
-    <a class="btn btn--divider">...</a>
-    <a class="btn btn--alpha" href="#">23</a>
-    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#">1</a>
+	<a class="btn btn--alpha" href="#">2</a>
+	<a class="btn btn--alpha" href="#">3</a>
+	<a class="btn btn--alpha" href="#">4</a>
+	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--divider">...</a>
+	<a class="btn btn--alpha" href="#">23</a>
+	<a class="btn btn--alpha" href="#">&rsaquo;</a>
 </div>
 ```
 
@@ -7208,15 +7208,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--right">
-    <a class="btn btn--alpha" href="#">&lsaquo;</a>
-    <a class="btn btn--alpha" href="#">1</a>
-    <a class="btn btn--alpha" href="#">2</a>
-    <a class="btn btn--alpha" href="#">3</a>
-    <a class="btn btn--alpha" href="#">4</a>
-    <a class="btn btn--alpha" href="#">5</a>
-    <a class="btn btn--divider">...</a>
-    <a class="btn btn--alpha" href="#">23</a>
-    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#">1</a>
+	<a class="btn btn--alpha" href="#">2</a>
+	<a class="btn btn--alpha" href="#">3</a>
+	<a class="btn btn--alpha" href="#">4</a>
+	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--divider">...</a>
+	<a class="btn btn--alpha" href="#">23</a>
+	<a class="btn btn--alpha" href="#">&rsaquo;</a>
 </div>
 ```
 
@@ -7224,17 +7224,17 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container">
-    <ul class="btn-group btn-group--inline">
-        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-        <li><a class="btn btn--alpha" href="#">1</a></li>
-        <li><a class="btn btn--alpha" href="#">2</a></li>
-        <li><a class="btn btn--alpha" href="#">3</a></li>
-        <li><a class="btn btn--alpha" href="#">4</a></li>
-        <li><a class="btn btn--alpha" href="#">5</a></li>
-        <li><a class="btn btn--divider">...</a></li>
-        <li><a class="btn btn--alpha" href="#">23</a></li>
-        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
-    </ul>
+	<ul class="btn-group btn-group--inline">
+		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#">1</a></li>
+		<li><a class="btn btn--alpha" href="#">2</a></li>
+		<li><a class="btn btn--alpha" href="#">3</a></li>
+		<li><a class="btn btn--alpha" href="#">4</a></li>
+		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--divider">...</a></li>
+		<li><a class="btn btn--alpha" href="#">23</a></li>
+		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+	</ul>
 </div>
 ```
 
@@ -7242,17 +7242,17 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--center">
-    <ul class="btn-group btn-group--inline">
-        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-        <li><a class="btn btn--alpha" href="#">1</a></li>
-        <li><a class="btn btn--alpha" href="#">2</a></li>
-        <li><a class="btn btn--alpha" href="#">3</a></li>
-        <li><a class="btn btn--alpha" href="#">4</a></li>
-        <li><a class="btn btn--alpha" href="#">5</a></li>
-        <li><a class="btn btn--divider">...</a></li>
-        <li><a class="btn btn--alpha" href="#">23</a></li>
-        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
-    </ul>
+	<ul class="btn-group btn-group--inline">
+		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#">1</a></li>
+		<li><a class="btn btn--alpha" href="#">2</a></li>
+		<li><a class="btn btn--alpha" href="#">3</a></li>
+		<li><a class="btn btn--alpha" href="#">4</a></li>
+		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--divider">...</a></li>
+		<li><a class="btn btn--alpha" href="#">23</a></li>
+		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+	</ul>
 </div>
 ```
 
@@ -7260,20 +7260,19 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--right">
-    <ul class="btn-group btn-group--inline">
-        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-        <li><a class="btn btn--alpha" href="#">1</a></li>
-        <li><a class="btn btn--alpha" href="#">2</a></li>
-        <li><a class="btn btn--alpha" href="#">3</a></li>
-        <li><a class="btn btn--alpha" href="#">4</a></li>
-        <li><a class="btn btn--alpha" href="#">5</a></li>
-        <li><a class="btn btn--divider">...</a></li>
-        <li><a class="btn btn--alpha" href="#">23</a></li>
-        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
-    </ul>
+	<ul class="btn-group btn-group--inline">
+		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#">1</a></li>
+		<li><a class="btn btn--alpha" href="#">2</a></li>
+		<li><a class="btn btn--alpha" href="#">3</a></li>
+		<li><a class="btn btn--alpha" href="#">4</a></li>
+		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--divider">...</a></li>
+		<li><a class="btn btn--alpha" href="#">23</a></li>
+		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+	</ul>
 </div>
 ```
-
 */
 /* Button sizes
 ==========
@@ -7374,12 +7373,12 @@ category: Buttons
 
 ```html_example
 <div class="grid">
-    <div class="column-6">
-        <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
-    </div>
-    <div class="column-6">
-        <a class="btn btn--block btn--beta btn--large" href="#">block button</a>
-    </div>
+	<div class="column-6">
+		<a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+	</div>
+	<div class="column-6">
+		<a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+	</div>
 </div>
 ```
 
@@ -7697,15 +7696,15 @@ category: Buttons
 
 ```html_example
 <div class="btn-dropdown">
-    <button data-datatables-btn="action" type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--cog icon--margin-alpha">Activate</button>
-    <button data-datatables-btn="action" type="button" class="btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered" data-btn-dropdown-toggle aria-haspopup="true" aria-expanded="false"></button>
-    <div class="btn-dropdown__dropdown" data-btn-dropdown="allowPropagation">
-        <ul class="btn-dropdown__list btn-dropdown__list--border-bottom" data-btn-dropdown="allowPropagation">
-            <li><a class="btn-dropdown__link" href="#">Deactivate</a></li>
-            <li><a class="btn-dropdown__link" href="#">Concept</a></li>
-        </ul>
-        <a class="btn btn--mask btn--medium btn--block" href="#">Delete</a>
-    </div>
+	<button data-datatables-btn="action" type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--cog icon--margin-alpha">Activate</button>
+	<button data-datatables-btn="action" type="button" class="btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered" data-btn-dropdown-toggle aria-haspopup="true" aria-expanded="false"></button>
+	<div class="btn-dropdown__dropdown" data-btn-dropdown="allowPropagation">
+		<ul class="btn-dropdown__list btn-dropdown__list--border-bottom" data-btn-dropdown="allowPropagation">
+			<li><a class="btn-dropdown__link" href="#">Deactivate</a></li>
+			<li><a class="btn-dropdown__link" href="#">Concept</a></li>
+		</ul>
+		<a class="btn btn--mask btn--medium btn--block" href="#">Delete</a>
+	</div>
 </div>
 ```
 
@@ -7719,17 +7718,17 @@ category: Buttons
 
 ```html_example
 <div class="btn-dropdown btn-dropdown--action">
-    <button type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--filter icon--margin-beta-before" data-btn-dropdown-toggle>Filter</button>
-    <div class="btn-dropdown__dropdown">
-        <ul class="btn-dropdown__list btn-dropdown__list--border-bottom btn-dropdown__list--padding">
-            <li class="btn-dropdown__item"><input name="checkbox-active" type="checkbox" id="checkbox-active"><label for="checkbox-active">Active</label></li>
-            <li class="btn-dropdown__item"><input name="checkbox-inactive" type="checkbox" id="checkbox-inactive"><label for="checkbox-inactive">Inactive</label></li>
-            <li class="btn-dropdown__item"><input name="checkbox-concept" type="checkbox" id="checkbox-concept"><label for="checkbox-concept">Concept</label></li>
-            <li class="btn-dropdown__item"><input name="checkbox-published" type="checkbox" id="checkbox-published"><label for="checkbox-published">Published</label></li>
-            <li class="btn-dropdown__item"><input name="checkbox-notpublished" type="checkbox" id="checkbox-notpublished"><label for="checkbox-notpublished">Unpublished</label></li>
-        </ul>
-        <a class="btn btn--mask btn--medium btn--block" data-status-clear-checkboxes>Remove filters</a>
-    </div>
+	<button type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--filter icon--margin-beta-before" data-btn-dropdown-toggle>Filter</button>
+	<div class="btn-dropdown__dropdown">
+		<ul class="btn-dropdown__list btn-dropdown__list--border-bottom btn-dropdown__list--padding">
+			<li class="btn-dropdown__item"><input name="checkbox-active" type="checkbox" id="checkbox-active"><label for="checkbox-active">Active</label></li>
+			<li class="btn-dropdown__item"><input name="checkbox-inactive" type="checkbox" id="checkbox-inactive"><label for="checkbox-inactive">Inactive</label></li>
+			<li class="btn-dropdown__item"><input name="checkbox-concept" type="checkbox" id="checkbox-concept"><label for="checkbox-concept">Concept</label></li>
+			<li class="btn-dropdown__item"><input name="checkbox-published" type="checkbox" id="checkbox-published"><label for="checkbox-published">Published</label></li>
+			<li class="btn-dropdown__item"><input name="checkbox-notpublished" type="checkbox" id="checkbox-notpublished"><label for="checkbox-notpublished">Unpublished</label></li>
+		</ul>
+		<a class="btn btn--mask btn--medium btn--block" data-status-clear-checkboxes>Remove filters</a>
+	</div>
 </div>
 ```
 
@@ -7900,14 +7899,14 @@ category: Forms
 
 ```html_example
 <div class="form__row">
-    <div class="column-5 form__label">
-        <label>Vraag / opmerking</label>
-    </div>
-    <div class="column-7">
-        <div class="column-10 form__input">
-            <textarea cols="30" rows="10"></textarea>
-        </div>
-    </div>
+	<div class="column-5 form__label">
+		<label>Vraag / opmerking</label>
+	</div>
+	<div class="column-7">
+		<div class="column-10 form__input">
+			<textarea cols="30" rows="10"></textarea>
+		</div>
+	</div>
 </div>
 ```
 
@@ -7973,37 +7972,37 @@ category: Forms
 
 ```html_example
 <form class="form form--vertical" data-form-validate novalidate="novalidate">
-    <h2>Vertical form</h2>
-    <div class="grid column-4 column-centered">
-        <div class="form__row">
-            <div class="form__label">
-                <label>Aanhef</label>
-            </div>
-            <div class="form__input">
-                <div class="form__select">
-                    <select name="aanhef" id="" required="required">
-                        <option value="" disabled="disabled" selected="selected">Kies een optie</option>
-                        <option value="Dhr.">Dhr.</option>
-                        <option value="Mevr.">Mevr.</option>
-                    </select>
-                </div>
-            </div>
-        </div>
+	<h2>Vertical form</h2>
+	<div class="grid column-4 column-centered">
+		<div class="form__row">
+			<div class="form__label">
+				<label>Aanhef</label>
+			</div>
+			<div class="form__input">
+				<div class="form__select">
+					<select name="aanhef" id="" required="required">
+						<option value="" disabled="disabled" selected="selected">Kies een optie</option>
+						<option value="Dhr.">Dhr.</option>
+						<option value="Mevr.">Mevr.</option>
+					</select>
+				</div>
+			</div>
+		</div>
 
-        <div class="form__row">
-            <div class="form__label">
-                <label>Website *</label>
-            </div>
-            <div class="form__input">
-                <input type="url">
-            </div>
-        </div>
+		<div class="form__row">
+			<div class="form__label">
+				<label>Website *</label>
+			</div>
+			<div class="form__input">
+				<input type="url">
+			</div>
+		</div>
 
-        <div class="form__actions">
-            <p class="form__required-field"><i>* = Verplicht veld</i></p>
-            <button class="btn btn--beta btn--medium" type="submit">send</button>
-        </div>
-    </div>
+		<div class="form__actions">
+			<p class="form__required-field"><i>* = Verplicht veld</i></p>
+			<button class="btn btn--beta btn--medium" type="submit">send</button>
+		</div>
+	</div>
 </form>
 ```
 
@@ -8019,10 +8018,10 @@ Use the grid to your advantage.
 
 ```html_example
 <form class="form form--horizontal" data-form-validate novalidate="novalidate">
-    <div class="grid grid--no-gutters column-beta-6 column-gamma-and-up-5 column-centered">
-        <div class="column-8"><input type="text" placeholder="E-mailadres"></div>
-        <div class="column-4"><button class="btn btn--beta btn--block btn--medium" type="submit">send</button></div>
-    </div>
+	<div class="grid grid--no-gutters column-beta-6 column-gamma-and-up-5 column-centered">
+		<div class="column-8"><input type="text" placeholder="E-mailadres"></div>
+		<div class="column-4"><button class="btn btn--beta btn--block btn--medium" type="submit">send</button></div>
+	</div>
 </form>
 ```
 
@@ -8058,20 +8057,20 @@ category: Forms
 
 ```html_example
 <div class="form__row">
-    <div class="column-5 form__label">
-        <label>Aanhef</label>
-    </div>
-    <div class="column-7">
-        <div class="column-6 form__input">
-            <div class="form__select">
-                <select name="select" id="" required="required">
-                    <option value="" disabled="disabled" selected="selected">Choose option</option>
-                    <option value="Dhr.">Some option</option>
-                    <option value="Mevr.">Another option</option>
-                </select>
-            </div>
-        </div>
-    </div>
+	<div class="column-5 form__label">
+		<label>Aanhef</label>
+	</div>
+	<div class="column-7">
+		<div class="column-6 form__input">
+			<div class="form__select">
+				<select name="select" id="" required="required">
+					<option value="" disabled="disabled" selected="selected">Choose option</option>
+					<option value="Dhr.">Some option</option>
+					<option value="Mevr.">Another option</option>
+				</select>
+			</div>
+		</div>
+	</div>
 </div>
 ```
 
@@ -8109,14 +8108,14 @@ category: Forms
 
 ```html_example
 <div class="form__row">
-    <div class="column-5 form__label">
-        <label>Switch</label>
-    </div>
-    <div class="column-7">
-        <div class="form__switch">
-            <input name="switch1" type="checkbox" id="switch1"><label for="switch1">Switch</label>
-        </div>
-    </div>
+	<div class="column-5 form__label">
+		<label>Switch</label>
+	</div>
+	<div class="column-7">
+		<div class="form__switch">
+			<input name="switch1" type="checkbox" id="switch1"><label for="switch1">Switch</label>
+		</div>
+	</div>
 </div>
 ```
 
@@ -8165,10 +8164,10 @@ category: Forms
 
 ```html_example
 <div class="form__row">
-    <div class="column-5 form__label">
-        <label>Form data</label>
-    </div>
-    <div class="column-7 form__data">Some data</div>
+	<div class="column-5 form__label">
+		<label>Form data</label>
+	</div>
+	<div class="column-7 form__data">Some data</div>
 </div>
 ```
 
@@ -8185,7 +8184,7 @@ category: Forms
 
 ```html_example
 <div class="form__actions">
-    <button class="btn btn--beta btn--medium" type="submit">send</button>
+	<button class="btn btn--beta btn--medium" type="submit">send</button>
 </div>
 ```
 
@@ -8207,8 +8206,8 @@ category: Forms
 
 ```html_example
 <div class="form__actions">
-    <p class="form__required-field"><i>* = Required field</i></p>
-    <button class="btn btn--beta btn--medium" type="submit">send</button>
+	<p class="form__required-field"><i>* = Required field</i></p>
+	<button class="btn btn--beta btn--medium" type="submit">send</button>
 </div>
 ```
 
@@ -8263,6 +8262,7 @@ input[type=radio] {
     opacity: 1; }
   input[type=checkbox] + label,
   input[type=radio] + label {
+    display: inline-block;
     position: relative;
     cursor: pointer;
     padding-left: 30px;
@@ -8319,18 +8319,18 @@ category: Forms
 
 ```html_example
 <div class="form__row">
-    <div class="column-5 form__label">
-        <label>Some checkboxes</label>
-    </div>
-    <div class="column-7">
-        <div class="column-6 form__input">
-            <ul class="form__input-list list-unstyled">
-                <li><input name="checkbox" type="checkbox" checked="checked" id="checkbox1"><label for="checkbox1">Checkbox</label></li>
-                <li><input name="checkbox" type="checkbox" id="checkbox2"><label for="checkbox2">Checkbox</label></li>
-                <li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox6"><label for="checkbox6">Checkbox disabled</label></li>
-            </ul>
-        </div>
-    </div>
+	<div class="column-5 form__label">
+		<label>Some checkboxes</label>
+	</div>
+	<div class="column-7">
+		<div class="column-6 form__input">
+			<ul class="form__input-list list-unstyled">
+				<li><input name="checkbox" type="checkbox" checked="checked" id="checkbox1"><label for="checkbox1">Checkbox</label></li>
+				<li><input name="checkbox" type="checkbox" id="checkbox2"><label for="checkbox2">Checkbox</label></li>
+				<li><input name="checkbox" type="checkbox" disabled="disabled" id="checkbox6"><label for="checkbox6">Checkbox disabled</label></li>
+			</ul>
+		</div>
+	</div>
 </div>
 ```
 
@@ -8359,18 +8359,18 @@ category: Forms
 
 ```html_example
 <div class="form__row">
-    <div class="column-5 form__label">
-        <label>Some radio buttons</label>
-    </div>
-    <div class="column-7">
-        <div class="column-6 form__input">
-            <ul class="form__input-list list-unstyled">
-                <li><input name="radio" type="radio" name="radio" id="radio1"><label for="radio1">Radio</label></li>
-                <li><input name="radio" type="radio" name="radio" id="radio2"><label for="radio2">Radio</label></li>
-                <li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio6"><label for="radio6">Radio disabled</label></li>
-            </ul>
-        </div>
-    </div>
+	<div class="column-5 form__label">
+		<label>Some radio buttons</label>
+	</div>
+	<div class="column-7">
+		<div class="column-6 form__input">
+			<ul class="form__input-list list-unstyled">
+				<li><input name="radio" type="radio" name="radio" id="radio1"><label for="radio1">Radio</label></li>
+				<li><input name="radio" type="radio" name="radio" id="radio2"><label for="radio2">Radio</label></li>
+				<li><input name="radio" type="radio" name="radio" disabled="disabled" id="radio6"><label for="radio6">Radio disabled</label></li>
+			</ul>
+		</div>
+	</div>
 </div>
 ```
 
@@ -8492,19 +8492,19 @@ category: Forms
 
 ```html_example
 <div class="form__row">
-    <div class="column-5 form__label">
-        <label>Range</label>
-    </div>
-    <div class="column-7">
-        <div class="column-10 form__input">
-            <div class="column-2 text-align-center">
-                <output data-range="range-test" class="range-output">50s</output>
-            </div>
-            <div class="column-10">
-                <input type="range" min="0" max="100" step="1" value="50" id="range-test" data-range-measurement="s">
-            </div>
-        </div>
-    </div>
+	<div class="column-5 form__label">
+		<label>Range</label>
+	</div>
+	<div class="column-7">
+		<div class="column-10 form__input">
+			<div class="column-2 text-align-center">
+				<output data-range="range-test" class="range-output">50s</output>
+			</div>
+			<div class="column-10">
+				<input type="range" min="0" max="100" step="1" value="50" id="range-test" data-range-measurement="s">
+			</div>
+		</div>
+	</div>
 </div>
 ```
 
@@ -8622,131 +8622,131 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
 
 ```html_example
 <form class="form" action="?action=ajax" data-form-ajax data-form-ajax-method="GET" data-form-ajax-datatype="json" data-form-ajax-url="form-ajax.json" data-form-ajax-msg-container="#form-message" data-form-validate novalidate="novalidate">
-    <div id="form-message"></div>
-        <div class="form__row">
-            <div class="column-5 form__label">
-                <label>Aanhef</label>
-            </div>
-            <div class="column-7">
-                <div class="column-6 form__input">
-                    <div class="form__select">
-                        <select name="aanhef" id="" required="required">
-                            <option value="" disabled="disabled" selected="selected">Kies een optie</option>
-                            <option value="Dhr.">Dhr.</option>
-                            <option value="Mevr.">Mevr.</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="form__row">
-            <div class="column-5 form__label">
-                <label>Postcode</label>
-            </div>
-            <div class="column-7">
-                <div class="column-3 form__input">
-                    <input type="text" placeholder="0123AB" data-parsley-pattern="^\d{4}[a-zA-Z]{2}$" data-parsley-error-message="Dit is geen geldige postcode." data-parsley-maxlength="6" maxlength="6">
-                </div>
-            </div>
-        </div>
-        <div class="form__row">
-            <div class="column-5 form__label">
-                <label>Telefoonnummer</label>
-            </div>
-            <div class="column-7">
-                <div class="column-4 form__input">
-                    <input type="tel" placeholder="0123456789" data-parsley-type="digits" data-parsley-minlength="10" data-parsley-error-message="Dit is geen geldig telefoonnummer.">
-                </div>
-            </div>
-        </div>
-        <div class="form__row">
-            <div class="column-5 form__label">
-                <label>IBAN-nummer (NL)</label>
-            </div>
-            <div class="column-7">
-                <div class="column-4 form__input">
-                    <input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-parsley-error-message="Dit is geen gelding IBAN nummer.">
-                </div>
-            </div>
-        </div>
-        <div class="form__row">
-            <div class="column-5 form__label">
-                <label>E-mailadres *</label>
-            </div>
-            <div class="column-7">
-                <div class="column-6 form__input">
-                    <input type="email" placeholder="jouwnaam@adres.nl">
-                </div>
-            </div>
-        </div>
-        <div class="form__row">
-            <div class="column-5 form__label">
-                <label>Wachtwoord *</label>
-            </div>
-            <div class="column-7">
-                <div class="column-6 form__input">
-                    <input id="password" type="password">
-                </div>
-            </div>
-        </div>
-        <div class="form__row">
-            <div class="column-5 form__label">
-                <label>Herhaal wachtwoord *</label>
-            </div>
-            <div class="column-7">
-                <div class="column-6 form__input">
-                    <input type="password" data-parsley-equalto="#password" data-parsley-error-message="Wachtwoorden zijn niet identiek.">
-                </div>
-            </div>
-        </div>
-        <div class="form__row">
-            <div class="column-5 form__label">
-                <label>Website *</label>
-            </div>
-            <div class="column-7">
-                <div class="column-6 form__input">
-                    <input type="url">
-                </div>
-            </div>
-        </div>
-        <div class="form__row">
-            <div class="column-5 form__label">
-                <label>Some checkboxes</label>
-            </div>
-            <div class="column-7">
-                <div class="column-6 form__input">
-                    <ul class="form__input-list list-unstyled">
-                        <li><input name="checkbox2" type="checkbox" checked="checked" id="checkbox10" data-parsley-mincheck="2"><label for="checkbox10">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox11"><label for="checkbox11">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox12"><label for="checkbox12">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox13"><label for="checkbox13">Checkbox</label></li>
-                        <li><input name="checkbox2" type="checkbox" id="checkbox14"><label for="checkbox14">Checkbox</label></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="form__row">
-            <div class="column-5 form__label">
-                <label>Some radio buttons</label>
-            </div>
-            <div class="column-7">
-                <div class="column-6 form__input">
-                    <ul class="form__input-list list-unstyled">
-                        <li><input required="required" name="radio2" type="radio" id="radio13"><label for="radio13">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio14"><label for="radio14">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio10"><label for="radio10">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio11"><label for="radio11">Radio</label></li>
-                        <li><input name="radio2" type="radio" id="radio12"><label for="radio12">Radio</label></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </fieldset>
+	<div id="form-message"></div>
+		<div class="form__row">
+			<div class="column-5 form__label">
+				<label>Aanhef</label>
+			</div>
+			<div class="column-7">
+				<div class="column-6 form__input">
+					<div class="form__select">
+						<select name="aanhef" id="" required="required">
+							<option value="" disabled="disabled" selected="selected">Kies een optie</option>
+							<option value="Dhr.">Dhr.</option>
+							<option value="Mevr.">Mevr.</option>
+						</select>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="form__row">
+			<div class="column-5 form__label">
+				<label>Postcode</label>
+			</div>
+			<div class="column-7">
+				<div class="column-3 form__input">
+					<input type="text" placeholder="0123AB" data-parsley-pattern="^\d{4}[a-zA-Z]{2}$" data-parsley-error-message="Dit is geen geldige postcode." data-parsley-maxlength="6" maxlength="6">
+				</div>
+			</div>
+		</div>
+		<div class="form__row">
+			<div class="column-5 form__label">
+				<label>Telefoonnummer</label>
+			</div>
+			<div class="column-7">
+				<div class="column-4 form__input">
+					<input type="tel" placeholder="0123456789" data-parsley-type="digits" data-parsley-minlength="10" data-parsley-error-message="Dit is geen geldig telefoonnummer.">
+				</div>
+			</div>
+		</div>
+		<div class="form__row">
+			<div class="column-5 form__label">
+				<label>IBAN-nummer (NL)</label>
+			</div>
+			<div class="column-7">
+				<div class="column-4 form__input">
+					<input type="tel" placeholder="NL01INGB0123456789" pattern="^(([a-zA-Z]{2}\d{2})?([a-zA-Z]{4}\d{10})|(\d{7}|\d{9,10}))$" data-parsley-error-message="Dit is geen gelding IBAN nummer.">
+				</div>
+			</div>
+		</div>
+		<div class="form__row">
+			<div class="column-5 form__label">
+				<label>E-mailadres *</label>
+			</div>
+			<div class="column-7">
+				<div class="column-6 form__input">
+					<input type="email" placeholder="jouwnaam@adres.nl">
+				</div>
+			</div>
+		</div>
+		<div class="form__row">
+			<div class="column-5 form__label">
+				<label>Wachtwoord *</label>
+			</div>
+			<div class="column-7">
+				<div class="column-6 form__input">
+					<input id="password" type="password">
+				</div>
+			</div>
+		</div>
+		<div class="form__row">
+			<div class="column-5 form__label">
+				<label>Herhaal wachtwoord *</label>
+			</div>
+			<div class="column-7">
+				<div class="column-6 form__input">
+					<input type="password" data-parsley-equalto="#password" data-parsley-error-message="Wachtwoorden zijn niet identiek.">
+				</div>
+			</div>
+		</div>
+		<div class="form__row">
+			<div class="column-5 form__label">
+				<label>Website *</label>
+			</div>
+			<div class="column-7">
+				<div class="column-6 form__input">
+					<input type="url">
+				</div>
+			</div>
+		</div>
+		<div class="form__row">
+			<div class="column-5 form__label">
+				<label>Some checkboxes</label>
+			</div>
+			<div class="column-7">
+				<div class="column-6 form__input">
+					<ul class="form__input-list list-unstyled">
+						<li><input name="checkbox2" type="checkbox" checked="checked" id="checkbox10" data-parsley-mincheck="2"><label for="checkbox10">Checkbox</label></li>
+						<li><input name="checkbox2" type="checkbox" id="checkbox11"><label for="checkbox11">Checkbox</label></li>
+						<li><input name="checkbox2" type="checkbox" id="checkbox12"><label for="checkbox12">Checkbox</label></li>
+						<li><input name="checkbox2" type="checkbox" id="checkbox13"><label for="checkbox13">Checkbox</label></li>
+						<li><input name="checkbox2" type="checkbox" id="checkbox14"><label for="checkbox14">Checkbox</label></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="form__row">
+			<div class="column-5 form__label">
+				<label>Some radio buttons</label>
+			</div>
+			<div class="column-7">
+				<div class="column-6 form__input">
+					<ul class="form__input-list list-unstyled">
+						<li><input required="required" name="radio2" type="radio" id="radio13"><label for="radio13">Radio</label></li>
+						<li><input name="radio2" type="radio" id="radio14"><label for="radio14">Radio</label></li>
+						<li><input name="radio2" type="radio" id="radio10"><label for="radio10">Radio</label></li>
+						<li><input name="radio2" type="radio" id="radio11"><label for="radio11">Radio</label></li>
+						<li><input name="radio2" type="radio" id="radio12"><label for="radio12">Radio</label></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</fieldset>
 
-    <div class="form__actions">
-        <p class="form__required-field"><i>* = Required field</i></p>
-        <button class="btn btn--beta btn--medium" type="submit">send</button>
-    </div>
+	<div class="form__actions">
+		<p class="form__required-field"><i>* = Required field</i></p>
+		<button class="btn btn--beta btn--medium" type="submit">send</button>
+	</div>
 
 </form>
 ```
@@ -8779,15 +8779,15 @@ category: Forms
 
 ```html_example
 <div class="form__row">
-    <div class="column-5 form__label">
-        <label>Password toggle *</label>
-    </div>
-    <div class="column-7">
-        <div class="column-6 form__input">
-            <input type="password" placeholder="password">
-            <a class="form__password-toggle tooltip" data-tooltip-position="top" title="Show/hide password"></a>
-        </div>
-    </div>
+	<div class="column-5 form__label">
+		<label>Password toggle *</label>
+	</div>
+	<div class="column-7">
+		<div class="column-6 form__input">
+			<input type="password" placeholder="password">
+			<a class="form__password-toggle tooltip" data-tooltip-position="top" title="Show/hide password"></a>
+		</div>
+	</div>
 </div>
 ```
 
@@ -8840,8 +8840,8 @@ category: Forms
 
 ```html_example
 <div class="form__input form__input--floating-label">
-    <input id="floating-label" type="url">
-    <label for="floating-label">Website</label>
+	<input id="floating-label" type="url">
+	<label for="floating-label">Website</label>
 </div>
 ```
 
@@ -8893,16 +8893,16 @@ category: Callouts and prompts
 
 ```html_example
 <div class="notification notification--alpha">
-    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
-    <button class="notification__close" data-notification-close></button>
+	<div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+	<button class="notification__close" data-notification-close></button>
 </div>
 <div class="notification notification--alpha notification--error">
-    <div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
-    <button class="notification__close" data-notification-close></button>
+	<div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
+	<button class="notification__close" data-notification-close></button>
 </div>
 <div class="notification notification--alpha notification--success">
-    <div class="notification__text">Je bent nu geregistreerd op onze website.</div>
-    <button class="notification__close" data-notification-close></button>
+	<div class="notification__text">Je bent nu geregistreerd op onze website.</div>
+	<button class="notification__close" data-notification-close></button>
 </div>
 ```
 
@@ -8910,16 +8910,16 @@ category: Callouts and prompts
 
 ```html_example
 <div class="notification notification--beta">
-    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
-    <button class="notification__close" data-notification-close></button>
+	<div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+	<button class="notification__close" data-notification-close></button>
 </div>
 <div class="notification notification--beta notification--error">
-    <div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
-    <button class="notification__close" data-notification-close></button>
+	<div class="notification__text">Deze account gegevens zijn niet bij ons bekend.</div>
+	<button class="notification__close" data-notification-close></button>
 </div>
 <div class="notification notification--beta notification--success">
-    <div class="notification__text">Je bent nu geregistreerd op onze website.</div>
-    <button class="notification__close" data-notification-close></button>
+	<div class="notification__text">Je bent nu geregistreerd op onze website.</div>
+	<button class="notification__close" data-notification-close></button>
 </div>
 ```
 
@@ -9079,8 +9079,8 @@ You can add your own custom modules here which you'll need for the thing you're 
   abbr[title]:after {
     content: " (" attr(title) ")"; }
   /*
-     * Don't show links for images, or javascript/internal links
-     */
+	 * Don't show links for images, or javascript/internal links
+	 */
   .ir a:after,
   a[href^="javascript:"]:after,
   a[href^="#"]:after {
