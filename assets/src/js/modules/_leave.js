@@ -11,7 +11,7 @@ app.leave = {
 
     active: function (_message) {
         if (_message === undefined) {
-            _message = 'U heeft wijzigingen aangebracht en nog niet opgeslagen.';
+            _message = 'You didn\'t save your changes.';
         }
 
         window.onbeforeunload = function() {
@@ -32,5 +32,18 @@ category: Javascript
 ---
 
 Show a message when leaving the page and form elements are edited.
+
+## Seperate input
+```html_example
+<input type="text" data-leave-target />
+```
+
+## Entire form
+```html_example
+<form data-leave-target />
+    <input type="text" />
+    <input type="text" />
+</form>
+```
 
 */

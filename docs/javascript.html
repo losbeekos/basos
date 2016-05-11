@@ -178,7 +178,39 @@ Use the class fitvids as a container for your video and the plugin will take car
 </div>
 
 <h1 id="leave" class="styleguide">Leave</h1>
-<p class="styleguide">Show a message when leaving the page and form elements are edited.</p>						</section>
+<p class="styleguide">Show a message when leaving the page and form elements are edited.</p>
+<h2>Seperate input</h2>
+<div class="codeExample">
+	<div class="exampleOutput">
+		<input type="text" data-leave-target />
+
+	</div>
+	<div class="codeBlock">
+		<div class="highlight">
+			<pre><span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">data-leave-target</span> <span class="nt">/&gt;</span></pre>
+		</div>
+	</div>
+</div>
+
+<h2>Entire form</h2>
+<div class="codeExample">
+	<div class="exampleOutput">
+		<form data-leave-target />
+    <input type="text" />
+    <input type="text" />
+</form>
+
+	</div>
+	<div class="codeBlock">
+		<div class="highlight">
+			<pre><span class="nt">&lt;form</span> <span class="na">data-leave-target</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
+    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="nt">/&gt;</span>
+<span class="nt">&lt;/form&gt;</span></pre>
+		</div>
+	</div>
+</div>
+						</section>
 					</main>
 
 				</div>
