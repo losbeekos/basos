@@ -5155,7 +5155,7 @@ app.responsiveImages = {
     },
 
     setBackgroundImageStyle: function (element) {
-        var domNode = element.find('img')[0],
+        var domNode = element.find('picture img')[0],
             source = null;
 
         domNode.currentSrc === undefined ? source = domNode.src : source = domNode.currentSrc;
