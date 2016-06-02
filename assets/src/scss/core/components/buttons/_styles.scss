@@ -81,6 +81,7 @@ Add more colors in the settings file under "buttons" if you need to.
 	-moz-appearance: none;
 	user-select: none;
 	line-height: rem(map-get($btn, line-height));
+	z-index: 1; // Webkit bug, see: http://stackoverflow.com/questions/16687023/bug-with-transform-scale-and-overflow-hidden-in-chrome
 
 	@include btn-style(map-get($btn-bg, alpha));
 

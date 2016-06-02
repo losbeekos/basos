@@ -4711,11 +4711,8 @@ app.modals = {
     },
 
     init: function () {
-        if (app.modals.settings.$trigger.length > 0) {
-            app.settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
-
-            app.modals.triggers();
-        }
+        app.settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
+        app.modals.triggers();
     },
 
     triggers: function () {

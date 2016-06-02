@@ -7350,6 +7350,7 @@ Add more colors in the settings file under "buttons" if you need to.
       -ms-user-select: none;
           user-select: none;
   line-height: 1rem;
+  z-index: 1;
   background-color: #f7f7f7;
   border-color: #eaeaea;
   /*doc
