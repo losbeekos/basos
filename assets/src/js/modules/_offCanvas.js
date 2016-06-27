@@ -24,11 +24,11 @@ app.offCanvas = {
             }, 400);
         });
 
-        app.settings.$html.delegate(app.offCanvas.settings.toggleLeft, 'click', function(event) {
+        app.settings.$html.on('click', app.offCanvas.settings.toggleLeft, function(event) {
             app.offCanvas.toggleLeft();
         });
 
-        app.settings.$html.delegate(app.offCanvas.settings.toggleRight, 'click', function(event) {
+        app.settings.$html.on('click', app.offCanvas.settings.toggleRight, function(event) {
             app.offCanvas.toggleRight();
         });
 

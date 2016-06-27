@@ -8,8 +8,8 @@ module.exports = {
 			// Bower components
 			'bower_components/fastclick/lib/fastclick.js',
 			'bower_components/fitvids/jquery.fitvids.js',
-			'bower_components/parsleyjs/src/i18n/nl.js',
 			'bower_components/parsleyjs/dist/parsley.js',
+			'bower_components/parsleyjs/dist/i18n/nl.js',
 			'bower_components/svg4everybody/dist/svg4everybody.js',
 			'bower_components/rangeslider.js/dist/rangeslider.js',
 

@@ -1,6 +1,6 @@
 {
   "name": "rangeslider.js",
-  "version": "1.3.3",
+  "version": "2.1.1",
   "homepage": "https://github.com/andreruffert/rangeslider.js",
   "authors": [
     "André Ruffert <andre@andreruffert.com>"
@@ -32,13 +32,13 @@
   "dependencies": {
     "jquery": ">= 1.9.0"
   },
-  "_release": "1.3.3",
+  "_release": "2.1.1",
   "_resolution": {
     "type": "version",
-    "tag": "v1.3.3",
-    "commit": "508a1c537acb3693ff75d78f0e8804460f428d71"
+    "tag": "v2.1.1",
+    "commit": "694d51e296ead25a8b7dd56988b85915664e4ecf"
   },
-  "_source": "git://github.com/andreruffert/rangeslider.js.git",
-  "_target": "~1.3.3",
+  "_source": "https://github.com/andreruffert/rangeslider.js.git",
+  "_target": "~2.1.1",
   "_originalSource": "rangeslider.js"
 }
