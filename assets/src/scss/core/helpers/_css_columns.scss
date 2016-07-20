@@ -30,6 +30,13 @@
 	}
 }
 
+// Doesn't break up HTML tags
+.css-columns--avoid-column {
+	* {
+		break-inside: avoid-column;
+	}
+}
+
 /*doc
 ---
 title: CSS columns
@@ -43,6 +50,18 @@ Pure CSS columns. Classes available for 2, 3 and 4 columns.
 <p class="css-columns-4">
 	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique animi cupiditate inventore repellendus placeat voluptate at nobis assumenda! Accusantium aspernatur id voluptatum itaque autem at dolore eligendi quisquam vitae dolor?
 </p>
+```
+
+With the avoid column modifier HTML tabs don't flow over the columns, so for example a list item will not flow over multiple columns.
+
+```html_example
+<ul class="css-columns-2 css-columns--avoid-column">
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+</ul>
 ```
 
 */
