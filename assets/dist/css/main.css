@@ -4543,9 +4543,6 @@ h6.styleguide {
   margin-top: 1em;
   margin-bottom: 16px; }
 
-h1.styleguide:not(:first-child) {
-  font-size: 1.375rem; }
-
 a.styleguide {
   text-decoration: underline; }
 
