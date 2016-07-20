@@ -54,10 +54,6 @@ Add more colors in the settings file under "buttons" if you need to.
 		}
 	}
 
-	.btn-group--inline & {
-		border-left: rem(1px) solid lighten($bg-color, 3%);
-	}
-
 	.btn-group--block & {
 		border-top: rem(1px) solid lighten($bg-color, 3%);
 	}

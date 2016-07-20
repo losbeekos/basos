@@ -7120,8 +7120,10 @@ These work with the button classes so you can use those to change color and size
       margin: 0; }
       .btn-group--inline > li:first-child a,
       .btn-group--inline > li:first-child span {
-        border-left: 0;
         border-radius: 0 0 0 0; }
+    .btn-group--inline > li:not(:first-child) a,
+    .btn-group--inline > li:not(:first-child) span {
+      border-left: 0; }
     .btn-group--inline > li:last-child a,
     .btn-group--inline > li:last-child span {
       border-radius: 0 0 0 0; }
@@ -7513,8 +7515,6 @@ Add more colors in the settings file under "buttons" if you need to.
       border-color: #f7f7f7; }
     .btn.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--ghost:hover, .btn.btn--ghost.btn--light:hover, .form__file-input + label.btn--ghost.btn--light:hover {
       color: #333333; }
-  .btn-group--inline .btn, .btn-group--inline .form__file-input + label {
-    border-left: 0.0625rem solid white; }
   .btn-group--block .btn, .btn-group--block .form__file-input + label {
     border-top: 0.0625rem solid white; }
   .btn.tooltip, .form__file-input + label.tooltip {
@@ -7554,8 +7554,6 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: transparent; }
       .btn--mask.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--mask.btn--ghost:hover, .btn--mask.btn--ghost.btn--light:hover {
         color: #333333; }
-    .btn-group--inline .btn--mask {
-      border-left: 0.0625rem solid rgba(8, 8, 8, 0); }
     .btn-group--block .btn--mask {
       border-top: 0.0625rem solid rgba(8, 8, 8, 0); }
     .btn--mask:hover {
@@ -7585,8 +7583,6 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: white; }
       .btn--light.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--light.btn--ghost:hover, .btn--light.btn--ghost.btn--light:hover {
         color: #333333; }
-    .btn-group--inline .btn--light {
-      border-left: 0.0625rem solid white; }
     .btn-group--block .btn--light {
       border-top: 0.0625rem solid white; }
   .btn--dark {
@@ -7607,8 +7603,6 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: black; }
       .btn--dark.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--dark.btn--ghost:hover, .btn--dark.btn--ghost.btn--light:hover {
         color: #333333; }
-    .btn-group--inline .btn--dark {
-      border-left: 0.0625rem solid #080808; }
     .btn-group--block .btn--dark {
       border-top: 0.0625rem solid #080808; }
   .btn--alpha, .form__file-input + label {
@@ -7629,8 +7623,6 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #f7f7f7; }
       .btn--alpha.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--ghost:hover, .btn--alpha.btn--ghost.btn--light:hover, .form__file-input + label.btn--ghost.btn--light:hover {
         color: #333333; }
-    .btn-group--inline .btn--alpha, .btn-group--inline .form__file-input + label {
-      border-left: 0.0625rem solid white; }
     .btn-group--block .btn--alpha, .btn-group--block .form__file-input + label {
       border-top: 0.0625rem solid white; }
   .btn--beta {
@@ -7651,8 +7643,6 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #293e4f; }
       .btn--beta.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--beta.btn--ghost:hover, .btn--beta.btn--ghost.btn--light:hover {
         color: #333333; }
-    .btn-group--inline .btn--beta {
-      border-left: 0.0625rem solid #2e4659; }
     .btn-group--block .btn--beta {
       border-top: 0.0625rem solid #2e4659; }
   .btn--gamma {
@@ -7673,8 +7663,6 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #496d83; }
       .btn--gamma.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--gamma.btn--ghost:hover, .btn--gamma.btn--ghost.btn--light:hover {
         color: #333333; }
-    .btn-group--inline .btn--gamma {
-      border-left: 0.0625rem solid #4e758d; }
     .btn-group--block .btn--gamma {
       border-top: 0.0625rem solid #4e758d; }
   .btn--delta {
@@ -7695,8 +7683,6 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #4A3A59; }
       .btn--delta.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--delta.btn--ghost:hover, .btn--delta.btn--ghost.btn--light:hover {
         color: #333333; }
-    .btn-group--inline .btn--delta {
-      border-left: 0.0625rem solid #524062; }
     .btn-group--block .btn--delta {
       border-top: 0.0625rem solid #524062; }
   .btn--epsilon {
@@ -7717,8 +7703,6 @@ Add more colors in the settings file under "buttons" if you need to.
         border-color: #1C2228; }
       .btn--epsilon.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--epsilon.btn--ghost:hover, .btn--epsilon.btn--ghost.btn--light:hover {
         color: #333333; }
-    .btn-group--inline .btn--epsilon {
-      border-left: 0.0625rem solid #222a31; }
     .btn-group--block .btn--epsilon {
       border-top: 0.0625rem solid #222a31; }
   .btn--ghost {

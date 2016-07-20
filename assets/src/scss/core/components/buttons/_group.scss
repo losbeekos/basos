@@ -58,8 +58,14 @@ These work with the button classes so you can use those to change color and size
 
 				a,
 				span {
-					border-left: 0;
 					border-radius: map-get($btn, group-border-radius) 0 0 map-get($btn, group-border-radius);
+				}
+			}
+
+			&:not(:first-child) {
+				a,
+				span {
+					border-left: 0;
 				}
 			}
 
