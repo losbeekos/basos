@@ -24,8 +24,6 @@ module.exports = function(grunt) {
 	require('jit-grunt')(grunt); //load all grunt tasks matching the `grunt-*` pattern
 	require('time-grunt')(grunt);
 
-	var gateway = require('gateway');
-
 	grunt.initConfig({
 		basos: {
 			src : 'assets/src',
@@ -57,8 +55,7 @@ module.exports = function(grunt) {
 		grunt.registerTask('dist', [ 'jshint', 'clean', 'concat', 'copy', 'sass:dev', 'postcss', 'cssmin', 'uglify', 'css_wrap', 'svg_sprite' ]);
 	} else {
 		grunt.registerTask('dev',  [ 'jshint', 'clean', 'concat', 'copy', 'sass:dev', 'postcss', 'modernizr', 'svg_sprite' ]);
-		grunt.registerTask('dist', [ 'jshint', 'clean', 'concat', 'copy', 'sass:dev', 'postcss', 'cssmin', 'modernizr', 'uglify', 'imagemin', 'imageoptim', 'svg_sprite' ]);
-		// grunt.registerTask('dev', [ 'jshint', 'clean', 'concat', 'copy', 'postcss', 'modernizr', 'svg_sprite' ]);
+		grunt.registerTask('dist', [ 'jshint', 'clean', 'concat', 'copy', 'sass:dev', 'postcss', 'cssmin', 'modernizr', 'uglify', 'svg_sprite' ]);
 		// grunt.registerTask('dist', [ 'jshint', 'clean', 'concat', 'copy', 'sass:dev', 'postcss', 'cssmin', 'modernizr', 'uglify', 'imagemin', 'imageoptim', 'svg_sprite' ]);
 	}
 
