@@ -2,12 +2,12 @@
 	"name": "Basos",
 	"icons": [
 		{
-			"src": "\/android-chrome-192x192.png?v=KmbGdEywJQ",
+			"src": "\/android-chrome-192x192.png?v=dLBloAmBl6",
 			"sizes": "192x192",
 			"type": "image\/png"
 		},
 		{
-			"src": "\/android-chrome-512x512.png?v=KmbGdEywJQ",
+			"src": "\/android-chrome-512x512.png?v=dLBloAmBl6",
 			"sizes": "512x512",
 			"type": "image\/png"
 		}
