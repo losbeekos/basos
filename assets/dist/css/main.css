@@ -698,9 +698,6 @@ You can nest the above code in your CSS selector like this.
 /* Arrow
 ==========
 */
-/* Font-face
-==========
-*/
 /*doc
 ---
 title: Helper classes
@@ -4200,17 +4197,6 @@ There are five colors defined for you as modifiers (section--alpha, section--bet
 /* Fonts
 ==========
 */
-@font-face {
-  font-family: "icons";
-  src: url("../fonts/icons/icons.eot");
-  src: url("../fonts/icons/icons.eot#iefix") format("embedded-opentype"), url("../fonts/icons/icons.svg#icons") format("svg"), url("../fonts/icons/icons.woff") format("woff"), url("../fonts/icons/icons.ttf") format("truetype"); }
-
-.icon:before, .modal__close:before, .btn-dropdown__toggle:before, .icon-after:after, .nav-bar__trigger, .accordion__trigger::after, .spinner::after, .off-canvas-toggle-left,
-.off-canvas-toggle-right, .btn-dropdown__action::after, .form__select::after, input[type=checkbox] + label::after,
-input[type=radio] + label::after, .form__password-toggle::after, .notification::before, .notification__close {
-  font-family: 'icons', 'arial', 'verdana';
-  font-weight: normal; }
-
 body, h1, .h1,
 h2, .h2,
 h3, .h3,
@@ -4218,6 +4204,18 @@ h4, .h4,
 h5, .h5,
 h6, .h6 {
   font-family: 'Open Sans', sans-serif; }
+
+@font-face {
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/icons/icons.woff2") format("woff2"), url("../fonts/icons/icons.woff") format("woff"); }
+
+.icon:before, .modal__close:before, .btn-dropdown__toggle:before, .icon-after:after, .nav-bar__trigger, .accordion__trigger::after, .spinner::after, .off-canvas-toggle-left,
+.off-canvas-toggle-right, .btn-dropdown__action::after, .form__select::after, input[type=checkbox] + label::after,
+input[type=radio] + label::after, .form__password-toggle::after, .notification::before, .notification__close {
+  font-family: 'icons', 'arial', 'verdana';
+  font-weight: normal; }
 
 /*doc
 ---
@@ -4405,14 +4403,12 @@ category: Typography
   text-decoration: inherit;
   width: 1em;
   text-align: center;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
-  text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  text-transform: none; }
 
 .icon-after.icon--spinner:after {
   content: '\e800'; }
@@ -4467,14 +4463,12 @@ category: Typography
   text-decoration: inherit;
   width: 1em;
   text-align: center;
+  line-height: 1em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   /* For safety - reset parent styles, that can break glyph codes*/
   font-variant: normal;
-  text-transform: none;
-  /* fix buttons height, for twitter bootstrap */
-  line-height: 1em;
-  /* Font smoothing. That was taken from TWBS */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+  text-transform: none; }
 
 /*doc
 ---

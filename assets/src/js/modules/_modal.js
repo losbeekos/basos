@@ -1,4 +1,4 @@
-app.modals = {
+app.modal = {
     settings: {
         scrollTopPosition: null,
         $trigger: $('.modal__trigger'),
@@ -7,7 +7,7 @@ app.modals = {
 
     init: function () {
         app.settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
-        app.modals.triggers();
+        app.modal.triggers();
     },
 
     triggers: function () {
@@ -17,22 +17,22 @@ app.modals = {
             var $trigger = $(this),
                 data = $trigger.data();
 
-            data.modal === 'ajax' ? app.modals.ajax(data.modalAjaxActivity, data.modalAjaxSection) : app.modals.openModal($trigger, data);
+            data.modal === 'ajax' ? app.modal.ajax(data.modalAjaxActivity, data.modalAjaxSection) : app.modal.open($trigger, data);
         });
 
         app.settings.$body.on('keydown', function(event){
             if (event.keyCode === 27) {
-                app.modals.closeModal();
+                app.modal.close();
             }
         });
 
         app.settings.$body.on('click', '[data-modal-close]', function(event) {
             event.preventDefault();
-            app.modals.closeModal();
+            app.modal.close();
         });
     },
 
-    createModal: function (_triggerData, _targetModal) {
+    create: function (_triggerData, _targetModal) {
         var html = '<div id="' + _triggerData.modalId + '" class="modal"><div class="modal__content">';
 
         if (_triggerData.modal === 'ajax') {
@@ -74,39 +74,39 @@ app.modals = {
         }
     },
 
-    openModal: function (_trigger, _triggerData) {
+    open: function (_trigger, _triggerData) {
         var scrollTopPosition = app.settings.$window.scrollTop(),
             $targetModal = (typeof _triggerData === 'string') ? $('#' + _triggerData) : $('#' + _triggerData.modalId);
 
-        app.modals.settings.scrollTopPosition = scrollTopPosition;
+        app.modal.settings.scrollTopPosition = scrollTopPosition;
 
         if ($targetModal.length > 0) {
-            app.modals.showModal($targetModal, scrollTopPosition, _triggerData.modalOpenCallback);
+            app.modal.show($targetModal, scrollTopPosition, _triggerData.modalOpenCallback);
         } else {
-            app.modals.createModal(_triggerData, $targetModal);
+            app.modal.create(_triggerData, $targetModal);
 
             setTimeout(function () {
-                app.modals.showModal($('#' + _triggerData.modalId), scrollTopPosition, _triggerData.modalOpenCallback);
+                app.modal.show($('#' + _triggerData.modalId), scrollTopPosition, _triggerData.modalOpenCallback);
             }, 100);
         }
     },
 
-    showModal: function (_targetModal, _scrollTopPosition, _modalOpenCallback) {
+    show: function (_targetModal, _scrollTopPosition, _modalOpenCallback) {
         app.settings.$html.addClass('modal-show');
         _targetModal.addClass('modal-show');
 
         //app.settings.$background.scrollTop(_scrollTopPosition);
-        app.modals.setSize(_targetModal);
+        app.modal.setSize(_targetModal);
 
         if (_modalOpenCallback && typeof _modalOpenCallback === 'function') {
             _modalOpenCallback();
         }
     },
 
-    closeModal: function () {
+    close: function () {
         $('.modal-show').removeClass('modal-show');
 
-        //app.settings.$window.scrollTop(app.modals.settings.scrollTopPosition);
+        //app.settings.$window.scrollTop(app.modal.settings.scrollTopPosition);
     },
 
     confirm: function (_options) {
@@ -120,7 +120,7 @@ app.modals = {
 
         $('#' + modalId).remove();
 
-        app.modals.openModal(this, options);
+        app.modal.open(this, options);
     },
 
     /**
@@ -135,7 +135,7 @@ app.modals = {
             url: 'modal-ajax.html',
             method: 'GET',
             success: function (data) {
-                app.modals.openModal(this, {
+                app.modal.open(this, {
                     modal: 'ajax',
                     modalId: modalId,
                     modalAjaxContent: data

@@ -10,7 +10,7 @@ app.settings.$document.ready(function () {
 	app.dropdowns.init();
 	app.formModules.init();
 	app.jump.init();
-	app.modals.init();
+	app.modal.init();
 	app.tooltips.init();
 	app.accordion.init();
 	app.tabs.init();

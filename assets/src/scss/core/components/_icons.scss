@@ -40,17 +40,13 @@
 			text-decoration: inherit;
 			width: 1em;
 			text-align: center;
+			line-height: 1em;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
 
 			/* For safety - reset parent styles, that can break glyph codes*/
 			font-variant: normal;
 			text-transform: none;
-
-			/* fix buttons height, for twitter bootstrap */
-			line-height: 1em;
-
-			/* Font smoothing. That was taken from TWBS */
-			-webkit-font-smoothing: antialiased;
-			-moz-osx-font-smoothing: grayscale;
 		}
 
 		&.icon--margin-alpha:#{$pseudo} { @extend .margin-alpha-#{$margin}; }

@@ -2,21 +2,33 @@
 ==========
 */
 
+
+// Custom font
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300,600);
 
-@include font-face('icons', 'fonts/icons');
+%font-custom {
+	font-family: 'Open Sans', sans-serif;
+}
+
+
+// Icons
+@font-face {
+	font-family: 'icons';
+	font-style: normal;
+	font-weight: normal;
+	src: url('../fonts/icons/icons.woff2') format('woff2'),
+		 url('../fonts/icons/icons.woff') format('woff')
+}
 
 %font-icons {
 	font-family: 'icons', 'arial', 'verdana';
 	font-weight: normal;
 }
 
-%font-custom {
-	font-family: 'Open Sans', sans-serif;
-}
-
-//@include font-face('somefont', 'fonts/somefont');
-// %font-somefont {
-//     font-family: 'icons', 'arial', 'verdana';
-//     font-weight: normal;
+// @font-face{
+//     font-family: 'somefont';
+//     font-style: somestyle;
+//     font-weight: someweight;
+//     src: url('../fonts/somefont/somefont-weight.woff2') format('woff2'),
+//          url('../fonts/somefont/somefont-weight.woff') format('woff')
 // }

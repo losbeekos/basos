@@ -16,7 +16,8 @@ module.exports = {
 			expand: true,
 			cwd: '<%= basos.src %>/fonts/src/fontello/font/',
 			src: [
-				'**'
+				'*.woff2',
+				'*.woff'
 			],
 			dest: '<%= basos.src %>/fonts/icons/',
 			rename: function(dest, src) {
