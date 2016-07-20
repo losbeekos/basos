@@ -11,7 +11,7 @@ input[type=radio] {
 		&::after {
 			background: map-get($color, beta);
 			content: '';
-			top: (map-get($form, checkbox-radio-size)/4)-1;
+			top: (map-get($form, checkbox-radio-size)/4)+2;
 			left: map-get($form, checkbox-radio-size)/4;
 			width: map-get($form, checkbox-radio-size)/2;
 			height: map-get($form, checkbox-radio-size)/2;

@@ -139,7 +139,7 @@ category: Forms
 			&::after {
 				background: white;
 				content: '';
-				top: -1px;
+				top: rem(2px);
 				left: -1px;
 				width: map-get($form, switch-width);
 				height: map-get($form, switch-height);

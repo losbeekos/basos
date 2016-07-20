@@ -56,7 +56,7 @@ input[type=radio] {
 		&::before {
 			position: absolute;
 			left: 0;
-			top: rem(-1px);
+			top: rem(2px);
 			content: '';
 			background: map-get($form, checkbox-radio-bg-color);
 			width: map-get($form, checkbox-radio-size);
@@ -76,7 +76,7 @@ input[type=radio] {
 
 			content: map-get($icon, form-checkbox);
 			position: absolute;
-			top: rem(-1px);
+			top: rem(2px);
 			left: 0;
 			width: map-get($form, checkbox-radio-size);
 			height: map-get($form, checkbox-radio-size);

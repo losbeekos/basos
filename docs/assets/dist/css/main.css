@@ -3997,13 +3997,13 @@ body {
   min-height: 100%; }
 
 a {
-  color: #363d50;
+  color: #293e4f;
   text-decoration: none;
   display: inline;
   cursor: pointer;
   transition: all 0.2s; }
   a:hover {
-    color: #868b96; }
+    color: #7f8b95; }
 
 a:not([class]) {
   text-decoration: underline; }
@@ -4114,13 +4114,13 @@ There are two containers available, 'container' and 'container-beta'. These cont
   .section--alpha {
     background: white; }
   .section--beta {
-    background: #363d50; }
+    background: #293e4f; }
   .section--gamma {
-    background: #6c5B66; }
+    background: #496d83; }
   .section--delta {
-    background: #78757a; }
+    background: #4A3A59; }
   .section--epsilon {
-    background: #1d1f21; }
+    background: #1C2228; }
   .section > .container > *:last-child {
     margin-bottom: 0; }
   .section--alpha {
@@ -4309,16 +4309,16 @@ category: Typography
   color: #f7f7f7 !important; }
 
 .color-beta {
-  color: #363d50 !important; }
+  color: #293e4f !important; }
 
 .color-gamma {
-  color: #6c5B66 !important; }
+  color: #496d83 !important; }
 
 .color-delta {
-  color: #78757a !important; }
+  color: #4A3A59 !important; }
 
 .color-epsilon, .modal__close {
-  color: #1d1f21 !important; }
+  color: #1C2228 !important; }
 
 .bg-color-body {
   background: #ffffff !important; }
@@ -4336,16 +4336,16 @@ category: Typography
   background: #f7f7f7 !important; }
 
 .bg-color-beta {
-  background: #363d50 !important; }
+  background: #293e4f !important; }
 
 .bg-color-gamma {
-  background: #6c5B66 !important; }
+  background: #496d83 !important; }
 
 .bg-color-delta {
-  background: #78757a !important; }
+  background: #4A3A59 !important; }
 
 .bg-color-epsilon {
-  background: #1d1f21 !important; }
+  background: #1C2228 !important; }
 
 /* Icons
 ==========
@@ -4543,11 +4543,14 @@ h6.styleguide {
   margin-top: 1em;
   margin-bottom: 16px; }
 
+h1.styleguide:not(:first-child) {
+  font-size: 1.375rem; }
+
 a.styleguide {
   text-decoration: underline; }
 
 .styleguide-nav__sub {
-  background: #282a2c;
+  background: #272d33;
   padding-top: 0.625rem;
   padding-bottom: 0.625rem; }
 
@@ -4560,16 +4563,17 @@ a.styleguide {
   padding: 0.3125rem 1.25rem;
   transition-delay: 0.05s; }
   .styleguide-nav__link.scrollspy-nav--active, .styleguide-nav__link.scrollspy-nav--active:hover {
-    background: #343537; }
+    background: #33383e; }
 
 .exampleOutput {
   position: relative;
   padding: 3.375rem 1.25rem 1.25rem 1.25rem;
-  border-top: 1px solid #ebebeb; }
+  border-bottom: 1px solid #ebebeb; }
   .exampleOutput::after {
     content: 'Example';
     background: #f7f7f7;
     border: 1px solid #ebebeb;
+    border-left: 0;
     border-top: 0;
     padding: 0.3125rem 0.625rem;
     position: absolute;
@@ -4580,7 +4584,8 @@ a.styleguide {
   .exampleOutput .card {
     max-width: 25rem; }
 
-.codeBlock {
+.codeExample {
+  border: 1px solid #ebebeb;
   margin-bottom: 3.75rem; }
 
 .codeBlock pre {
@@ -4594,9 +4599,9 @@ a.styleguide {
   overflow: auto;
   font-size: 14px;
   line-height: 1.45;
-  background-color: #1d1f21;
+  background-color: #f7f7f7;
   border-radius: 3px;
-  color: #eee; }
+  color: #333333; }
 
 .codeBlock pre {
   word-wrap: normal; }
@@ -4625,201 +4630,274 @@ a.styleguide {
  * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
  * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 */
-.hll {
-  background-color: #373b41; }
+hll {
+  background-color: #ffffcc; }
 
 .c {
-  color: #969896; }
-
-.err {
-  color: #c66; }
-
-.k {
-  color: #b294bb; }
-
-.l {
-  color: #de935f; }
-
-.n {
-  color: #fff; }
-
-.o {
-  color: #8abeb7; }
-
-.p {
-  color: #fff; }
-
-.cm {
-  color: #969896; }
-
-.cp {
-  color: #969896; }
-
-.c1 {
-  color: #969896; }
-
-.cs {
-  color: #969896; }
-
-.gd {
-  color: #c66; }
-
-.ge {
+  color: #999988;
   font-style: italic; }
 
+/* Comment */
+.err {
+  color: #a61717;
+  background-color: #e3d2d2; }
+
+/* Error */
+.k {
+  color: #000000;
+  font-weight: bold; }
+
+/* Keyword */
+.o {
+  color: #000000;
+  font-weight: bold; }
+
+/* Operator */
+.cm {
+  color: #999988;
+  font-style: italic; }
+
+/* Comment.Multiline */
+.cp {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic; }
+
+/* Comment.Preproc */
+.c1 {
+  color: #999988;
+  font-style: italic; }
+
+/* Comment.Single */
+.cs {
+  color: #999999;
+  font-weight: bold;
+  font-style: italic; }
+
+/* Comment.Special */
+.gd {
+  color: #000000;
+  background-color: #ffdddd; }
+
+/* Generic.Deleted */
+.ge {
+  color: #000000;
+  font-style: italic; }
+
+/* Generic.Emph */
+.gr {
+  color: #aa0000; }
+
+/* Generic.Error */
 .gh {
-  color: #ffffff;
-  font-weight: bold; }
+  color: #999999; }
 
+/* Generic.Heading */
 .gi {
-  color: #b5bd68; }
+  color: #000000;
+  background-color: #ddffdd; }
 
+/* Generic.Inserted */
+.go {
+  color: #888888; }
+
+/* Generic.Output */
 .gp {
-  color: #969896;
-  font-weight: bold; }
+  color: #555555; }
 
+/* Generic.Prompt */
 .gs {
   font-weight: bold; }
 
+/* Generic.Strong */
 .gu {
-  color: #8abeb7;
+  color: #aaaaaa; }
+
+/* Generic.Subheading */
+.gt {
+  color: #aa0000; }
+
+/* Generic.Traceback */
+.kc {
+  color: #000000;
   font-weight: bold; }
 
-.kc {
-  color: #b294bb; }
-
+/* Keyword.Constant */
 .kd {
-  color: #b294bb; }
+  color: #000000;
+  font-weight: bold; }
 
+/* Keyword.Declaration */
 .kn {
-  color: #8abeb7; }
+  color: #000000;
+  font-weight: bold; }
 
+/* Keyword.Namespace */
 .kp {
-  color: #b294bb; }
+  color: #000000;
+  font-weight: bold; }
 
+/* Keyword.Pseudo */
 .kr {
-  color: #b294bb; }
+  color: #000000;
+  font-weight: bold; }
 
+/* Keyword.Reserved */
 .kt {
-  color: #f0c674; }
+  color: #445588;
+  font-weight: bold; }
 
-.ld {
-  color: #b5bd68; }
-
+/* Keyword.Type */
 .m {
-  color: #de935f; }
+  color: #009999; }
 
+/* Literal.Number */
 .s {
-  color: #b5bd68; }
+  color: #d01040; }
 
+/* Literal.String */
 .na {
-  color: #81a2be; }
+  color: #008080; }
 
+/* Name.Attribute */
 .nb {
-  color: #fff; }
+  color: #0086B3; }
 
+/* Name.Builtin */
 .nc {
-  color: #f0c674; }
+  color: #445588;
+  font-weight: bold; }
 
+/* Name.Class */
 .no {
-  color: #c66; }
+  color: #008080; }
 
+/* Name.Constant */
 .nd {
-  color: #8abeb7; }
+  color: #3c5d5d;
+  font-weight: bold; }
 
+/* Name.Decorator */
 .ni {
-  color: #fff; }
+  color: #800080; }
 
+/* Name.Entity */
 .ne {
-  color: #c66; }
+  color: #990000;
+  font-weight: bold; }
 
+/* Name.Exception */
 .nf {
-  color: #81a2be; }
+  color: #990000;
+  font-weight: bold; }
 
+/* Name.Function */
 .nl {
-  color: #fff; }
+  color: #990000;
+  font-weight: bold; }
 
+/* Name.Label */
 .nn {
-  color: #f0c674; }
+  color: #555555; }
 
-.nx {
-  color: #81a2be; }
-
-.py {
-  color: #fff; }
-
+/* Name.Namespace */
 .nt {
-  color: #8abeb7; }
+  color: #000080; }
 
+/* Name.Tag */
 .nv {
-  color: #c66; }
+  color: #008080; }
 
+/* Name.Variable */
 .ow {
-  color: #8abeb7; }
+  color: #000000;
+  font-weight: bold; }
 
+/* Operator.Word */
 .w {
-  color: #fff; }
+  color: #bbbbbb; }
 
+/* Text.Whitespace */
 .mf {
-  color: #de935f; }
+  color: #009999; }
 
+/* Literal.Number.Float */
 .mh {
-  color: #de935f; }
+  color: #009999; }
 
+/* Literal.Number.Hex */
 .mi {
-  color: #de935f; }
+  color: #009999; }
 
+/* Literal.Number.Integer */
 .mo {
-  color: #de935f; }
+  color: #009999; }
 
+/* Literal.Number.Oct */
 .sb {
-  color: #b5bd68; }
+  color: #d01040; }
 
+/* Literal.String.Backtick */
 .sc {
-  color: #fff; }
+  color: #d01040; }
 
+/* Literal.String.Char */
 .sd {
-  color: #969896; }
+  color: #d01040; }
 
+/* Literal.String.Doc */
 .s2 {
-  color: #b5bd68; }
+  color: #d01040; }
 
+/* Literal.String.Double */
 .se {
-  color: #de935f; }
+  color: #d01040; }
 
+/* Literal.String.Escape */
 .sh {
-  color: #b5bd68; }
+  color: #d01040; }
 
+/* Literal.String.Heredoc */
 .si {
-  color: #de935f; }
+  color: #d01040; }
 
+/* Literal.String.Interpol */
 .sx {
-  color: #b5bd68; }
+  color: #d01040; }
 
+/* Literal.String.Other */
 .sr {
-  color: #b5bd68; }
+  color: #009926; }
 
+/* Literal.String.Regex */
 .s1 {
-  color: #b5bd68; }
+  color: #d01040; }
 
+/* Literal.String.Single */
 .ss {
-  color: #b5bd68; }
+  color: #990073; }
 
+/* Literal.String.Symbol */
 .bp {
-  color: #fff; }
+  color: #999999; }
 
+/* Name.Builtin.Pseudo */
 .vc {
-  color: #c66; }
+  color: #008080; }
 
+/* Name.Variable.Class */
 .vg {
-  color: #c66; }
+  color: #008080; }
 
+/* Name.Variable.Global */
 .vi {
-  color: #c66; }
+  color: #008080; }
 
+/* Name.Variable.Instance */
 .il {
-  color: #de935f; }
+  color: #009999; }
 
+/* Literal.Number.Integer.Long */
 /* Modals
 ==========
 */
@@ -4990,13 +5068,13 @@ app.modals.closeModal();
     .card__header--alpha {
       background-color: #f7f7f7; }
     .card__header--beta {
-      background-color: #363d50; }
+      background-color: #293e4f; }
     .card__header--gamma {
-      background-color: #6c5B66; }
+      background-color: #496d83; }
     .card__header--delta {
-      background-color: #78757a; }
+      background-color: #4A3A59; }
     .card__header--epsilon {
-      background-color: #1d1f21; }
+      background-color: #1C2228; }
   .card__content {
     padding: 1.25rem; }
   .card__action {
@@ -5138,7 +5216,7 @@ category: Content
 ==========
 */
 .nav-bar {
-  background: #1d1f21;
+  background: #1C2228;
   width: 100%;
   max-height: 100%;
   z-index: 999;
@@ -5191,7 +5269,7 @@ category: Content
         color: black; }
         .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
           background: transparent;
-          color: #363d50; }
+          color: #293e4f; }
       .nav-bar--transparent .nav-bar--transparent:not(.nav-bar--fixed) {
         color: white; } }
   .no-csspositionsticky .nav-bar--fixed {
@@ -5209,7 +5287,7 @@ category: Content
         padding-right: 2.5rem; } }
     .nav-bar__container::before {
       content: '';
-      background: #1d1f21;
+      background: #1C2228;
       position: absolute;
       top: 0;
       left: 0;
@@ -5230,7 +5308,7 @@ category: Content
       height: auto; }
   .nav-bar__trigger {
     display: inline-block;
-    background: #1d1f21;
+    background: #1C2228;
     float: right;
     text-align: center;
     line-height: 50px;
@@ -5244,7 +5322,7 @@ category: Content
       .nav-bar__trigger {
         display: none; } }
     .nav-bar__trigger:active, .nav-bar__trigger:hover {
-      background: #35393c; }
+      background: #313c46; }
     .nav-bar__trigger::before {
       content: "";
       color: white;
@@ -5252,7 +5330,7 @@ category: Content
       .nav-bar--mobile-show .nav-bar__trigger::before {
         content: ""; }
   .nav-bar__list {
-    background: #1d1f21;
+    background: #1C2228;
     position: relative;
     z-index: 0;
     clear: both;
@@ -5289,10 +5367,10 @@ category: Content
     .touch .nav-bar__link {
       transition: none; }
     .nav-bar__link:hover {
-      background: #35393c;
+      background: #313c46;
       color: white; }
     .nav-bar__link.nav-bar__link--active, .nav-bar__link.scrollspy-nav--active {
-      background: #363d50;
+      background: #293e4f;
       color: white; }
 
 /*doc
@@ -5875,7 +5953,7 @@ category: Content
     opacity: 1; }
   .tooltip .tooltip__content {
     text-align: center;
-    background: #363d50;
+    background: #293e4f;
     color: white;
     min-width: 150px;
     padding: 10px;
@@ -5905,7 +5983,7 @@ category: Content
       -ms-transform: translate(-50%, 10%) scale(0.5);
           transform: translate(-50%, 10%) scale(0.5); }
   [data-tooltip-position=top] .tooltip__content::after {
-    border-top-color: #363d50;
+    border-top-color: #293e4f;
     bottom: -10px; }
 
 [data-tooltip-position=bottom] .tooltip__content {
@@ -5913,7 +5991,7 @@ category: Content
       -ms-transform: translate(-50%, -10%) scale(0.5);
           transform: translate(-50%, -10%) scale(0.5); }
   [data-tooltip-position=bottom] .tooltip__content::after {
-    border-bottom-color: #363d50;
+    border-bottom-color: #293e4f;
     top: -10px; }
 
 [data-tooltip-position=left] .tooltip__content,
@@ -5930,7 +6008,7 @@ category: Content
       -ms-transform: translate(90%, 0) scale(0.5);
           transform: translate(90%, 0) scale(0.5); }
   [data-tooltip-position=right] .tooltip__content::after {
-    border-right-color: #363d50;
+    border-right-color: #293e4f;
     left: -10px; }
   .no-csstransforms [data-tooltip-position=right] .tooltip__content {
     right: -230px; }
@@ -5941,7 +6019,7 @@ category: Content
       -ms-transform: translate(-90%, 0) scale(0.5);
           transform: translate(-90%, 0) scale(0.5); }
   [data-tooltip-position=left] .tooltip__content::after {
-    border-left-color: #363d50;
+    border-left-color: #293e4f;
     right: -10px; }
   .no-csstransforms [data-tooltip-position=left] .tooltip__content {
     left: -230px; }
@@ -6006,7 +6084,7 @@ Tooltips are used as fancy title attributes to display some info about a certain
       background-color: #eaeaea;
       color: #262626; }
     .accordion-content-show .accordion__trigger {
-      background-color: #363d50;
+      background-color: #293e4f;
       color: white; }
     .accordion__trigger::after {
       content: "";
@@ -6346,7 +6424,7 @@ progress,
   width: 100%;
   height: 0.9375rem;
   overflow: hidden;
-  color: #363d50;
+  color: #293e4f;
   border-radius: 0;
   -webkit-appearance: none;
   -moz-appearance: none; }
@@ -6371,7 +6449,7 @@ progress[value]::-webkit-progress-value {
   -webkit-animation: progress-bar 1s linear infinite;
           animation: progress-bar 1s linear infinite;
   background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-color: #363d50; }
+  background-color: #293e4f; }
 
 progress[value]::-moz-progress-bar {
   background-size: 25px 15px, 100% 100%, 100% 100%;
@@ -6381,7 +6459,7 @@ progress[value]::-moz-progress-bar {
   transition: width 0.2s;
   animation: progress-bar 1s linear infinite;
   background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-color: #363d50; }
+  background-color: #293e4f; }
 
 progress[value]::-ms-fill {
   background-size: 25px 15px, 100% 100%, 100% 100%;
@@ -6391,7 +6469,7 @@ progress[value]::-ms-fill {
   transition: width 0.2s;
   animation: progress-bar 1s linear infinite;
   background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-color: #363d50; }
+  background-color: #293e4f; }
 
 .progress-bar__value {
   background-size: 25px 15px, 100% 100%, 100% 100%;
@@ -6402,7 +6480,7 @@ progress[value]::-ms-fill {
   -webkit-animation: progress-bar 1s linear infinite;
           animation: progress-bar 1s linear infinite;
   background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
-  background-color: #363d50; }
+  background-color: #293e4f; }
 
 /*==========  Inderterminate progress  ==========*/
 progress:not([value]) {
@@ -6677,7 +6755,7 @@ The map is styled with the styles options, the style used for these docs is borr
 
 .off-canvas-toggle-left,
 .off-canvas-toggle-right {
-  background: #1d1f21;
+  background: #1C2228;
   position: absolute;
   top: 0;
   z-index: 999;
@@ -6693,7 +6771,7 @@ The map is styled with the styles options, the style used for these docs is borr
       display: none; } }
   .off-canvas-toggle-left:hover,
   .off-canvas-toggle-right:hover {
-    background: #292c2f;
+    background: #272f37;
     color: white;
     text-decoration: none; }
   .off-canvas-toggle-left:active, .off-canvas-toggle-left:focus,
@@ -6716,7 +6794,7 @@ The map is styled with the styles options, the style used for these docs is borr
       content: ""; }
 
 .off-canvas {
-  background: #1d1f21;
+  background: #1C2228;
   position: fixed;
   z-index: 999;
   top: 0;
@@ -6760,7 +6838,7 @@ The map is styled with the styles options, the style used for these docs is borr
   .off-canvas a {
     color: white; }
     .off-canvas a:hover {
-      color: #bbbcbc; }
+      color: #bbbdbf; }
 
 .off-canvas-push {
   transition: -webkit-transform 0.2s;
@@ -6777,8 +6855,8 @@ The map is styled with the styles options, the style used for these docs is borr
   max-height: 100%; }
 
 .off-canvas-nav__item {
-  border-top: 0.0625rem solid #1d1f21;
-  border-bottom: 0.0625rem solid #1d1f21; }
+  border-top: 0.0625rem solid #1C2228;
+  border-bottom: 0.0625rem solid #1C2228; }
   .off-canvas-nav__item:first-child {
     border-top: 0; }
   .off-canvas-nav__item:last-child {
@@ -6796,7 +6874,7 @@ The map is styled with the styles options, the style used for these docs is borr
   color: white;
   padding: 0.625rem 1.25rem; }
   .off-canvas-nav__link--active, .off-canvas-nav__link.active, .off-canvas-nav__link.scrollspy-nav--active {
-    background: #343537;
+    background: #33383e;
     font-weight: 400; }
 
 /*doc
@@ -6814,7 +6892,7 @@ This demo site has an off canvas for its menu.
 */
 @media (max-width: 43.6875em) {
   .off-canvas-nav-bar {
-    background: #1d1f21;
+    background: #1C2228;
     position: fixed;
     z-index: 9999;
     top: 0;
@@ -6851,7 +6929,7 @@ This demo site has an off canvas for its menu.
 
 @media (min-width: 43.75em) {
   .off-canvas-nav-bar {
-    background: #1d1f21;
+    background: #1C2228;
     width: 100%;
     min-width: 16.25rem;
     max-height: 100%;
@@ -6903,7 +6981,7 @@ This demo site has an off canvas for its menu.
         color: black; }
         .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active, .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
           background: transparent;
-          color: #363d50; }
+          color: #293e4f; }
       .nav-bar--transparent .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
         color: white; } }
 
@@ -6929,7 +7007,7 @@ This demo site has an off canvas for its menu.
 @media (min-width: 43.75em) {
     .off-canvas-nav-bar__list {
       clear: both;
-      border-top: 0.0625rem solid #35393c;
+      border-top: 0.0625rem solid #313c46;
       max-height: 0;
       overflow: hidden;
       transition: all 0.2s; } }
@@ -6963,16 +7041,16 @@ This demo site has an off canvas for its menu.
 
 @media (min-width: 43.75em) {
       .off-canvas-nav-bar__link:hover {
-        background: #35393c;
+        background: #313c46;
         color: white; }
       .off-canvas-nav-bar__link.nav-bar__link--active, .off-canvas-nav-bar__link.scrollspy-nav--active {
-        background: #363d50;
+        background: #293e4f;
         color: white; } }
 
 @media (max-width: 43.6875em) {
   .off-canvas-nav-bar__item {
-    border-top: 0.0625rem solid #1d1f21;
-    border-bottom: 0.0625rem solid #1d1f21; }
+    border-top: 0.0625rem solid #1C2228;
+    border-bottom: 0.0625rem solid #1C2228; }
     .off-canvas-nav-bar__item:first-child {
       border-top: 0; }
     .off-canvas-nav-bar__item:last-child {
@@ -6984,7 +7062,7 @@ This demo site has an off canvas for its menu.
     color: white;
     padding: 0.625rem 1.25rem; }
     .off-canvas-nav-bar__link.active, .off-canvas-nav-bar__link:hover, .off-canvas-nav-bar__link.scrollspy-nav--active {
-      background: #242729; } }
+      background: #222a31; } }
 
 /*doc
 ---
@@ -7559,93 +7637,93 @@ Add more colors in the settings file under "buttons" if you need to.
     .btn-group--block .btn--alpha, .btn-group--block .form__file-input + label {
       border-top: 0.0625rem solid white; }
   .btn--beta {
-    background-color: #363d50;
-    border-color: #2c3141; }
+    background-color: #293e4f;
+    border-color: #20313e; }
     .btn--beta:hover {
-      background-color: #32384a; }
+      background-color: #263948; }
     .btn--beta:active, .btn--beta:focus {
-      background-color: #2e3444; }
+      background-color: #223342; }
     .btn--beta--divider:hover, .btn--beta:disabled, .btn--beta:disabled:hover {
-      background-color: #363d50; }
+      background-color: #293e4f; }
     .btn--beta.btn--ghost {
-      color: #363d50;
-      border-color: #363d50; }
+      color: #293e4f;
+      border-color: #293e4f; }
       .btn--beta.btn--ghost:hover {
-        background: #363d50;
+        background: #293e4f;
         color: white;
-        border-color: #363d50; }
+        border-color: #293e4f; }
       .btn--beta.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--beta.btn--ghost:hover, .btn--beta.btn--ghost.btn--light:hover {
         color: #333333; }
     .btn-group--inline .btn--beta {
-      border-left: 0.0625rem solid #3c4459; }
+      border-left: 0.0625rem solid #2e4659; }
     .btn-group--block .btn--beta {
-      border-top: 0.0625rem solid #3c4459; }
+      border-top: 0.0625rem solid #2e4659; }
   .btn--gamma {
-    background-color: #6c5B66;
-    border-color: #5e4f59; }
+    background-color: #496d83;
+    border-color: #405f73; }
     .btn--gamma:hover {
-      background-color: #665661; }
+      background-color: #45687c; }
     .btn--gamma:active, .btn--gamma:focus {
-      background-color: #61525c; }
+      background-color: #426276; }
     .btn--gamma--divider:hover, .btn--gamma:disabled, .btn--gamma:disabled:hover {
-      background-color: #6c5B66; }
+      background-color: #496d83; }
     .btn--gamma.btn--ghost {
-      color: #6c5B66;
-      border-color: #6c5B66; }
+      color: #496d83;
+      border-color: #496d83; }
       .btn--gamma.btn--ghost:hover {
-        background: #6c5B66;
+        background: #496d83;
         color: white;
-        border-color: #6c5B66; }
+        border-color: #496d83; }
       .btn--gamma.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--gamma.btn--ghost:hover, .btn--gamma.btn--ghost.btn--light:hover {
         color: #333333; }
     .btn-group--inline .btn--gamma {
-      border-left: 0.0625rem solid #74626e; }
+      border-left: 0.0625rem solid #4e758d; }
     .btn-group--block .btn--gamma {
-      border-top: 0.0625rem solid #74626e; }
+      border-top: 0.0625rem solid #4e758d; }
   .btn--delta {
-    background-color: #78757a;
-    border-color: #6b696d; }
+    background-color: #4A3A59;
+    border-color: #3d304a; }
     .btn--delta:hover {
-      background-color: #737075; }
+      background-color: #453653; }
     .btn--delta:active, .btn--delta:focus {
-      background-color: #6e6b70; }
+      background-color: #40324d; }
     .btn--delta--divider:hover, .btn--delta:disabled, .btn--delta:disabled:hover {
-      background-color: #78757a; }
+      background-color: #4A3A59; }
     .btn--delta.btn--ghost {
-      color: #78757a;
-      border-color: #78757a; }
+      color: #4A3A59;
+      border-color: #4A3A59; }
       .btn--delta.btn--ghost:hover {
-        background: #78757a;
+        background: #4A3A59;
         color: white;
-        border-color: #78757a; }
+        border-color: #4A3A59; }
       .btn--delta.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--delta.btn--ghost:hover, .btn--delta.btn--ghost.btn--light:hover {
         color: #333333; }
     .btn-group--inline .btn--delta {
-      border-left: 0.0625rem solid #807c82; }
+      border-left: 0.0625rem solid #524062; }
     .btn-group--block .btn--delta {
-      border-top: 0.0625rem solid #807c82; }
+      border-top: 0.0625rem solid #524062; }
   .btn--epsilon {
-    background-color: #1d1f21;
-    border-color: #111213; }
+    background-color: #1C2228;
+    border-color: #121519; }
     .btn--epsilon:hover {
-      background-color: #181a1c; }
+      background-color: #181d22; }
     .btn--epsilon:active, .btn--epsilon:focus {
-      background-color: #131516; }
+      background-color: #14181c; }
     .btn--epsilon--divider:hover, .btn--epsilon:disabled, .btn--epsilon:disabled:hover {
-      background-color: #1d1f21; }
+      background-color: #1C2228; }
     .btn--epsilon.btn--ghost {
-      color: #1d1f21;
-      border-color: #1d1f21; }
+      color: #1C2228;
+      border-color: #1C2228; }
       .btn--epsilon.btn--ghost:hover {
-        background: #1d1f21;
+        background: #1C2228;
         color: white;
-        border-color: #1d1f21; }
+        border-color: #1C2228; }
       .btn--epsilon.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--epsilon.btn--ghost:hover, .btn--epsilon.btn--ghost.btn--light:hover {
         color: #333333; }
     .btn-group--inline .btn--epsilon {
-      border-left: 0.0625rem solid #242729; }
+      border-left: 0.0625rem solid #222a31; }
     .btn-group--block .btn--epsilon {
-      border-top: 0.0625rem solid #242729; }
+      border-top: 0.0625rem solid #222a31; }
   .btn--ghost {
     background: transparent;
     border-width: 1px;
@@ -8149,8 +8227,8 @@ category: Forms
 .form__switch {
   margin-top: 0.3125rem; }
   .form__switch input[type=checkbox]:checked + label::before {
-    background: #363d50;
-    border-color: #363d50; }
+    background: #293e4f;
+    border-color: #293e4f; }
   .form__switch input[type=checkbox]:checked + label::after {
     left: 30px; }
   .form__switch input[type=checkbox] + label {
@@ -8163,7 +8241,7 @@ category: Forms
     .form__switch input[type=checkbox] + label::after {
       background: white;
       content: '';
-      top: -1px;
+      top: 0.125rem;
       left: -1px;
       width: 30px;
       height: 25px;
@@ -8304,7 +8382,7 @@ input[type=radio] {
     input[type=radio] + label::before {
       position: absolute;
       left: 0;
-      top: -0.0625rem;
+      top: 0.125rem;
       content: '';
       background: #f1f1f1;
       width: 20px;
@@ -8320,13 +8398,13 @@ input[type=radio] {
     input[type=radio] + label::after {
       content: "";
       position: absolute;
-      top: -0.0625rem;
+      top: 0.125rem;
       left: 0;
       width: 20px;
       height: 20px;
       line-height: 20px;
       text-align: center;
-      color: #363d50;
+      color: #293e4f;
       opacity: 0;
       -webkit-transform: scale(0) rotate(-45deg);
           -ms-transform: scale(0) rotate(-45deg);
@@ -8368,9 +8446,9 @@ input[type=radio] + label::before {
   border-radius: 20px; }
 
 input[type=radio] + label::after {
-  background: #363d50;
+  background: #293e4f;
   content: '';
-  top: 4px;
+  top: 7px;
   left: 5px;
   width: 10px;
   height: 10px;
@@ -8515,11 +8593,11 @@ input[type=range] {
     input[type=range]::-ms-thumb:focus {
       background: red; }
   input[type=range]::-ms-fill-lower {
-    background: #363d50; }
+    background: #293e4f; }
 
 .range-output {
   display: inline-block;
-  color: #363d50;
+  color: #293e4f;
   margin-top: 0.5rem; }
 
 .rangeslider,
@@ -8540,7 +8618,7 @@ input[type=range] {
   opacity: 0.4; }
 
 .rangeslider__fill {
-  background: #363d50;
+  background: #293e4f;
   height: 23px;
   position: absolute;
   top: 0;
@@ -8780,16 +8858,6 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
 		</div>
 		<div class="form__row">
 			<div class="column-5 form__label">
-				<label>Custom file *</label>
-			</div>
-			<div class="column-7">
-				<div class="column-6 form__input">
-					<input type="file" required>
-				</div>
-			</div>
-		</div>
-		<div class="form__row">
-			<div class="column-5 form__label">
 				<label>Some checkboxes</label>
 			</div>
 			<div class="column-7">
@@ -8886,13 +8954,13 @@ category: Forms
     .form__input--floating-label input:focus, .form__input--floating-label input:active {
       border: none;
       box-shadow: none;
-      border-bottom: 0.0625rem solid #363d50; }
+      border-bottom: 0.0625rem solid #293e4f; }
       .form__input--floating-label input:focus + label, .form__input--floating-label input:active + label {
-        color: #363d50;
+        color: #293e4f;
         top: 0.25rem;
         font-size: 0.75rem; }
     .form__input--floating-label input:focus + label, .form__input--floating-label input:active + label, .form__input--floating-label input.is-filled + label {
-      color: #363d50;
+      color: #293e4f;
       top: 0.25rem;
       font-size: 0.75rem; }
   .form__input--floating-label label {
