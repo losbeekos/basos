@@ -29,6 +29,8 @@
 		&.icon--right:#{$pseudo} { content: '\e80c'; }
 		&.icon--up:#{$pseudo} { content: '\e80d'; }
 		&.icon--cog:#{$pseudo} { content: '\e80e'; }
+		&.icon--upload:#{$pseudo} { content: '\e82e'; }
+		&.icon--download:#{$pseudo} { content: '\e82d'; }
 
 		&:#{$pseudo} {
 			@extend %font-icons;
@@ -84,6 +86,8 @@ These icons are generated with [fontello.com](http://fontello.com), you can use 
 <div class="icon icon--right"></div>
 <div class="icon icon--up"></div>
 <div class="icon icon--cog"></div>
+<div class="icon icon--download"></div>
+<div class="icon icon--upload"></div>
 ```
 
 ## Icon margin

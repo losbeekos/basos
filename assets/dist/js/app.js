@@ -3903,16 +3903,23 @@ var app = app || {},
 	helper = helper || {};
 
 app.settings = {
+	// Nodes
+	html: document.getElementsByTagName('html')[0],
+	body: document.getElementsByTagName('body')[0],
+
+	// jQuery objects
 	$document: $(document),
 	$window: $(window),
-	windowHeight: $(window).height(),
-	windowWidth: $(window).width(),
 	$html: $('html'),
 	$body: $('body'),
 	$htmlAndBody: $('html, body'),
 	$background: $('#background'),
 	$container: $('#container'),
-	$main: $('#main')
+	$main: $('#main'),
+
+	// Misc.
+	windowHeight: $(window).height(),
+	windowWidth: $(window).width(),
 };
 app.mediaQueries = {
 	alphaAndUp: '(min-width: 0px)',
@@ -4504,6 +4511,7 @@ app.formModules = {
 
     init: function () {
         app.formModules.range();
+        app.formModules.customFileInput();
         app.formModules.validation();
         app.formModules.password();
         app.formModules.ajaxForm();
@@ -4525,6 +4533,39 @@ app.formModules = {
             if (id !== undefined) {
                 data.rangeMeasurement === undefined ? $range.html(val) : $range.html(val + data.rangeMeasurement);
             }
+        });
+    },
+
+    customFileInput: function () {
+        $('.form__file-input').each( function() {
+            var $input = $( this ),
+                $label = $input.next('label'),
+                labelVal = $label.html();
+
+            $input.on('change', function( e ) {
+                var fileName = '';
+
+                console.log('change');
+
+                if( this.files && this.files.length > 1 ) {
+                    fileName = ( this.getAttribute('data-multiple-caption' ) || '').replace('{count}', this.files.length );
+                }
+                else if( e.target.value ) {
+                    fileName = e.target.value.split( '\\' ).pop();
+                }
+
+                if( fileName ) {
+                    $label.find('span').html( fileName );
+                }
+                else {
+                    $label.html( labelVal );
+                }
+            });
+
+            // Firefox bug fix
+            $input
+                .on('focus', function(){ $input.addClass('has-focus'); })
+                .on('blur', function(){ $input.removeClass('has-focus'); });
         });
     },
 
@@ -5691,6 +5732,9 @@ app.tooltips = {
 app.settings.$document.ready(function () {
 	var $this = $(this),
 		scrollTop = $this.scrollTop();
+
+	app.settings.html.classList.remove('no-js');
+	app.settings.html.classList.add('js');
 
 	app.svg.init();
 	app.scrollSpyNav.init(scrollTop);

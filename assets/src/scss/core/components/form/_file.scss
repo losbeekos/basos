@@ -1,0 +1,72 @@
+/* File input
+==========
+	Credits to codrops: http://tympanus.net/Tutorials/CustomFileInputs/
+*/
+
+// The input
+.form__file-input {
+	.js & {
+		width: 0.1px;
+		height: 0.1px;
+		opacity: 0;
+		overflow: hidden;
+		position: absolute;
+		z-index: -1;
+	}
+
+	&:focus + label,
+	&.has-focus + label {
+		background-color: white;
+	}
+
+	+ label {
+		@extend .btn;
+		@extend .btn--medium;
+		@extend .btn--alpha;
+		@extend .icon;
+		@extend .icon--upload;
+
+		max-width: rem(160px);
+		width: 100%;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		cursor: pointer;
+		display: inline-block;
+		overflow: hidden;
+
+		.no-js & {
+			display: none;
+		}
+
+		&::before {
+			margin-right: rem(10px);
+		}
+
+		* {
+			pointer-events: none;
+		}
+	}
+}
+
+/*doc
+---
+title: Custom file
+name: file
+category: Forms
+---
+
+```html_example
+<div class="form__row">
+	<div class="column-5 form__label">
+		<label>File</label>
+	</div>
+	<div class="column-7">
+		<div class="column-6 form__input">
+			<input type="file" name="file-custom[]" id="file-custom" class="form__file-input" data-multiple-caption="{count} files selected" multiple />
+			<label for="file-custom"><span>kies bestand</span></label>
+		</div>
+	</div>
+</div>
+```
+
+*/

@@ -76,6 +76,7 @@
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#actions" data-jumpto data-jumpto-extra-offset="-30" data-scrollspy-nav>Actions</a></li>
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#checkboxes" data-jumpto data-jumpto-extra-offset="-30" data-scrollspy-nav>Checkboxes</a></li>
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#data" data-jumpto data-jumpto-extra-offset="-30" data-scrollspy-nav>Data</a></li>
+							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#file" data-jumpto data-jumpto-extra-offset="-30" data-scrollspy-nav>Custom file</a></li>
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#floating_label" data-jumpto data-jumpto-extra-offset="-30" data-scrollspy-nav>Floating label</a></li>
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#form_horizontal" data-jumpto data-jumpto-extra-offset="-30" data-scrollspy-nav>Form horizontal</a></li>
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#form_vertical" data-jumpto data-jumpto-extra-offset="-30" data-scrollspy-nav>Form vertical</a></li>
@@ -187,6 +188,39 @@
         <span class="nt">&lt;label&gt;</span>Form data<span class="nt">&lt;/label&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7 form__data"</span><span class="nt">&gt;</span>Some data<span class="nt">&lt;/div&gt;</span>
+<span class="nt">&lt;/div&gt;</span></pre>
+		</div>
+	</div>
+</div>
+
+<h1 id="file" class="styleguide">Custom file</h1>
+<div class="codeExample">
+	<div class="exampleOutput">
+		<div class="form__row">
+    <div class="column-5 form__label">
+        <label>File</label>
+    </div>
+    <div class="column-7">
+        <div class="column-6 form__input">
+            <input type="file" name="file-custom[]" id="file-custom" class="form__file-input" data-multiple-caption="{count} files selected" multiple />
+            <label for="file-custom"><span>kies bestand</span></label>
+        </div>
+    </div>
+</div>
+
+	</div>
+	<div class="codeBlock">
+		<div class="highlight">
+			<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;label&gt;</span>File<span class="nt">&lt;/label&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
+        <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">name=</span><span class="s">"file-custom[]"</span> <span class="na">id=</span><span class="s">"file-custom"</span> <span class="na">class=</span><span class="s">"form__file-input"</span> <span class="na">data-multiple-caption=</span><span class="s">"{count} files selected"</span> <span class="na">multiple</span> <span class="nt">/&gt;</span>
+            <span class="nt">&lt;label</span> <span class="na">for=</span><span class="s">"file-custom"</span><span class="nt">&gt;&lt;span&gt;</span>kies bestand<span class="nt">&lt;/span&gt;&lt;/label&gt;</span>
+        <span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
 		</div>
 	</div>
@@ -631,11 +665,11 @@
         </div>
         <div class="form__row">
             <div class="column-5 form__label">
-                <label>Website *</label>
+                <label>Custom file *</label>
             </div>
             <div class="column-7">
                 <div class="column-6 form__input">
-                    <input type="url">
+                    <input type="file" required>
                 </div>
             </div>
         </div>
@@ -763,11 +797,11 @@
         <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"form__row"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-5 form__label"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;label&gt;</span>Website *<span class="nt">&lt;/label&gt;</span>
+                <span class="nt">&lt;label&gt;</span>Custom file *<span class="nt">&lt;/label&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-7"</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"column-6 form__input"</span><span class="nt">&gt;</span>
-                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"url"</span><span class="nt">&gt;</span>
+                    <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"file"</span> <span class="na">required</span><span class="nt">&gt;</span>
                 <span class="nt">&lt;/div&gt;</span>
             <span class="nt">&lt;/div&gt;</span>
         <span class="nt">&lt;/div&gt;</span>

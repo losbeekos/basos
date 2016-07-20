@@ -1134,7 +1134,7 @@ category: Typography
   .margin-alpha-horizontal {
     margin-left: 0.625rem !important;
     margin-right: 0.625rem !important; }
-  .margin-alpha-right, .icon.icon--margin-alpha:before, .icon--margin-alpha.modal__close:before, .icon--margin-alpha.btn-dropdown__toggle:before {
+  .margin-alpha-right, .icon.icon--margin-alpha:before, .icon--margin-alpha.modal__close:before, .icon--margin-alpha.btn-dropdown__toggle:before, .form__file-input + label.icon--margin-alpha:before {
     margin-right: 0.625rem !important; }
   .margin-alpha-left, .icon-after.icon--margin-alpha:after {
     margin-left: 0.625rem !important; }
@@ -1151,7 +1151,7 @@ category: Typography
   .margin-beta-horizontal {
     margin-left: 1.25rem !important;
     margin-right: 1.25rem !important; }
-  .margin-beta-right, .icon.icon--margin-beta:before, .icon--margin-beta.modal__close:before, .icon--margin-beta.btn-dropdown__toggle:before {
+  .margin-beta-right, .icon.icon--margin-beta:before, .icon--margin-beta.modal__close:before, .icon--margin-beta.btn-dropdown__toggle:before, .form__file-input + label.icon--margin-beta:before {
     margin-right: 1.25rem !important; }
   .margin-beta-left, .icon-after.icon--margin-beta:after {
     margin-left: 1.25rem !important; }
@@ -4211,7 +4211,7 @@ h6, .h6 {
   font-weight: normal;
   src: url("../fonts/icons/icons.woff2") format("woff2"), url("../fonts/icons/icons.woff") format("woff"); }
 
-.icon:before, .modal__close:before, .btn-dropdown__toggle:before, .icon-after:after, .nav-bar__trigger, .accordion__trigger::after, .spinner::after, .off-canvas-toggle-left,
+.icon:before, .modal__close:before, .btn-dropdown__toggle:before, .form__file-input + label:before, .icon-after:after, .nav-bar__trigger, .accordion__trigger::after, .spinner::after, .off-canvas-toggle-left,
 .off-canvas-toggle-right, .btn-dropdown__action::after, .form__select::after, input[type=checkbox] + label::after,
 input[type=radio] + label::after, .form__password-toggle::after, .notification::before, .notification__close {
   font-family: 'icons', 'arial', 'verdana';
@@ -4350,52 +4350,58 @@ category: Typography
 /* Icons
 ==========
 */
-.icon.icon--spinner:before, .icon--spinner.modal__close:before, .icon--spinner.btn-dropdown__toggle:before {
+.icon.icon--spinner:before, .icon--spinner.modal__close:before, .icon--spinner.btn-dropdown__toggle:before, .form__file-input + label.icon--spinner:before {
   content: '\e800'; }
 
-.icon.icon--ok:before, .icon--ok.modal__close:before, .icon--ok.btn-dropdown__toggle:before {
+.icon.icon--ok:before, .icon--ok.modal__close:before, .icon--ok.btn-dropdown__toggle:before, .form__file-input + label.icon--ok:before {
   content: '\e801'; }
 
-.icon.icon--cancel:before, .modal__close:before, .icon--cancel.btn-dropdown__toggle:before {
+.icon.icon--cancel:before, .modal__close:before, .icon--cancel.btn-dropdown__toggle:before, .form__file-input + label.icon--cancel:before {
   content: '\e802'; }
 
-.icon.icon--cancel-circle:before, .icon--cancel-circle.modal__close:before, .icon--cancel-circle.btn-dropdown__toggle:before {
+.icon.icon--cancel-circle:before, .icon--cancel-circle.modal__close:before, .icon--cancel-circle.btn-dropdown__toggle:before, .form__file-input + label.icon--cancel-circle:before {
   content: '\e803'; }
 
-.icon.icon--info:before, .icon--info.modal__close:before, .icon--info.btn-dropdown__toggle:before {
+.icon.icon--info:before, .icon--info.modal__close:before, .icon--info.btn-dropdown__toggle:before, .form__file-input + label.icon--info:before {
   content: '\e804'; }
 
-.icon.icon--attention:before, .icon--attention.modal__close:before, .icon--attention.btn-dropdown__toggle:before {
+.icon.icon--attention:before, .icon--attention.modal__close:before, .icon--attention.btn-dropdown__toggle:before, .form__file-input + label.icon--attention:before {
   content: '\e805'; }
 
-.icon.icon--question:before, .icon--question.modal__close:before, .icon--question.btn-dropdown__toggle:before {
+.icon.icon--question:before, .icon--question.modal__close:before, .icon--question.btn-dropdown__toggle:before, .form__file-input + label.icon--question:before {
   content: '\e806'; }
 
-.icon.icon--eye:before, .icon--eye.modal__close:before, .icon--eye.btn-dropdown__toggle:before {
+.icon.icon--eye:before, .icon--eye.modal__close:before, .icon--eye.btn-dropdown__toggle:before, .form__file-input + label.icon--eye:before {
   content: '\e807'; }
 
-.icon.icon--eye-off:before, .icon--eye-off.modal__close:before, .icon--eye-off.btn-dropdown__toggle:before {
+.icon.icon--eye-off:before, .icon--eye-off.modal__close:before, .icon--eye-off.btn-dropdown__toggle:before, .form__file-input + label.icon--eye-off:before {
   content: '\e808'; }
 
-.icon.icon--menu:before, .icon--menu.modal__close:before, .icon--menu.btn-dropdown__toggle:before {
+.icon.icon--menu:before, .icon--menu.modal__close:before, .icon--menu.btn-dropdown__toggle:before, .form__file-input + label.icon--menu:before {
   content: '\e809'; }
 
-.icon.icon--down:before, .icon--down.modal__close:before, .btn-dropdown__toggle:before {
+.icon.icon--down:before, .icon--down.modal__close:before, .btn-dropdown__toggle:before, .form__file-input + label.icon--down:before {
   content: '\e80a'; }
 
-.icon.icon--left:before, .icon--left.modal__close:before, .icon--left.btn-dropdown__toggle:before {
+.icon.icon--left:before, .icon--left.modal__close:before, .icon--left.btn-dropdown__toggle:before, .form__file-input + label.icon--left:before {
   content: '\e80b'; }
 
-.icon.icon--right:before, .icon--right.modal__close:before, .icon--right.btn-dropdown__toggle:before {
+.icon.icon--right:before, .icon--right.modal__close:before, .icon--right.btn-dropdown__toggle:before, .form__file-input + label.icon--right:before {
   content: '\e80c'; }
 
-.icon.icon--up:before, .icon--up.modal__close:before, .icon--up.btn-dropdown__toggle:before {
+.icon.icon--up:before, .icon--up.modal__close:before, .icon--up.btn-dropdown__toggle:before, .form__file-input + label.icon--up:before {
   content: '\e80d'; }
 
-.icon.icon--cog:before, .icon--cog.modal__close:before, .icon--cog.btn-dropdown__toggle:before {
+.icon.icon--cog:before, .icon--cog.modal__close:before, .icon--cog.btn-dropdown__toggle:before, .form__file-input + label.icon--cog:before {
   content: '\e80e'; }
 
-.icon:before, .modal__close:before, .btn-dropdown__toggle:before {
+.icon.icon--upload:before, .icon--upload.modal__close:before, .icon--upload.btn-dropdown__toggle:before, .form__file-input + label:before {
+  content: '\e82e'; }
+
+.icon.icon--download:before, .icon--download.modal__close:before, .icon--download.btn-dropdown__toggle:before, .form__file-input + label.icon--download:before {
+  content: '\e82d'; }
+
+.icon:before, .modal__close:before, .btn-dropdown__toggle:before, .form__file-input + label:before {
   font-style: normal;
   font-weight: normal;
   speak: none;
@@ -4455,6 +4461,12 @@ category: Typography
 .icon-after.icon--cog:after {
   content: '\e80e'; }
 
+.icon-after.icon--upload:after, .form__file-input + label.icon-after:after {
+  content: '\e82e'; }
+
+.icon-after.icon--download:after {
+  content: '\e82d'; }
+
 .icon-after:after {
   font-style: normal;
   font-weight: normal;
@@ -4497,6 +4509,8 @@ These icons are generated with [fontello.com](http://fontello.com), you can use 
 <div class="icon icon--right"></div>
 <div class="icon icon--up"></div>
 <div class="icon icon--cog"></div>
+<div class="icon icon--download"></div>
+<div class="icon icon--upload"></div>
 ```
 
 ## Icon margin
@@ -7292,10 +7306,10 @@ These work with the button classes so you can use those to change color, size is
   padding: 0.5rem 1.25rem;
   font-size: 0.75rem; }
 
-.btn--medium {
+.btn--medium, .form__file-input + label {
   padding: 0.8125rem 1.25rem; }
   @media (min-width: 37.5em) {
-    .btn--medium {
+    .btn--medium, .form__file-input + label {
       padding: 0.8125rem 1.25rem;
       font-size: 0.875rem; } }
 
@@ -7340,7 +7354,7 @@ Add more colors in the settings file under "buttons" if you need to.
 ```
 
 */
-.btn {
+.btn, .form__file-input + label {
   overflow: hidden;
   vertical-align: middle;
   background-image: none;
@@ -7409,36 +7423,36 @@ Add more colors in the settings file under "buttons" if you need to.
 ```
 
 */ }
-  .btn:hover {
+  .btn:hover, .form__file-input + label:hover {
     background-color: #f2f2f2; }
-  .btn:active, .btn:focus {
+  .btn:active, .form__file-input + label:active, .btn:focus, .form__file-input + label:focus {
     background-color: #ededed; }
-  .btn--divider:hover, .btn:disabled, .btn:disabled:hover {
+  .btn--divider:hover, .btn:disabled, .form__file-input + label:disabled, .btn:disabled:hover, .form__file-input + label:disabled:hover {
     background-color: #f7f7f7; }
-  .btn.btn--ghost {
+  .btn.btn--ghost, .form__file-input + label.btn--ghost {
     color: #f7f7f7;
     border-color: #f7f7f7; }
-    .btn.btn--ghost:hover {
+    .btn.btn--ghost:hover, .form__file-input + label.btn--ghost:hover {
       background: #f7f7f7;
       color: white;
       border-color: #f7f7f7; }
-    .btn.btn--ghost.btn--alpha:hover, .btn.btn--ghost.btn--light:hover {
+    .btn.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--ghost:hover, .btn.btn--ghost.btn--light:hover, .form__file-input + label.btn--ghost.btn--light:hover {
       color: #333333; }
-  .btn-group--inline .btn {
+  .btn-group--inline .btn, .btn-group--inline .form__file-input + label {
     border-left: 0.0625rem solid white; }
-  .btn-group--block .btn {
+  .btn-group--block .btn, .btn-group--block .form__file-input + label {
     border-top: 0.0625rem solid white; }
-  .btn.tooltip {
+  .btn.tooltip, .form__file-input + label.tooltip {
     overflow: visible; }
-  .btn:hover {
+  .btn:hover, .form__file-input + label:hover {
     color: #333333; }
-  .btn:focus {
+  .btn:focus, .form__file-input + label:focus {
     outline: none; }
-  .btn:disabled, .btn:disabled:hover {
+  .btn:disabled, .form__file-input + label:disabled, .btn:disabled:hover, .form__file-input + label:disabled:hover {
     cursor: not-allowed;
     color: #cccccc;
     opacity: 0.5; }
-    .btn:disabled:focus, .btn:disabled:hover:focus {
+    .btn:disabled:focus, .form__file-input + label:disabled:focus, .btn:disabled:hover:focus, .form__file-input + label:disabled:hover:focus {
       box-shadow: none; }
   .btn--beta, .btn--gamma, .btn--delta, .btn--epsilon {
     color: white;
@@ -7463,7 +7477,7 @@ Add more colors in the settings file under "buttons" if you need to.
         background: transparent;
         color: white;
         border-color: transparent; }
-      .btn--mask.btn--ghost.btn--alpha:hover, .btn--mask.btn--ghost.btn--light:hover {
+      .btn--mask.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--mask.btn--ghost:hover, .btn--mask.btn--ghost.btn--light:hover {
         color: #333333; }
     .btn-group--inline .btn--mask {
       border-left: 0.0625rem solid rgba(8, 8, 8, 0); }
@@ -7494,7 +7508,7 @@ Add more colors in the settings file under "buttons" if you need to.
         background: white;
         color: white;
         border-color: white; }
-      .btn--light.btn--ghost.btn--alpha:hover, .btn--light.btn--ghost.btn--light:hover {
+      .btn--light.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--light.btn--ghost:hover, .btn--light.btn--ghost.btn--light:hover {
         color: #333333; }
     .btn-group--inline .btn--light {
       border-left: 0.0625rem solid white; }
@@ -7516,33 +7530,33 @@ Add more colors in the settings file under "buttons" if you need to.
         background: black;
         color: white;
         border-color: black; }
-      .btn--dark.btn--ghost.btn--alpha:hover, .btn--dark.btn--ghost.btn--light:hover {
+      .btn--dark.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--dark.btn--ghost:hover, .btn--dark.btn--ghost.btn--light:hover {
         color: #333333; }
     .btn-group--inline .btn--dark {
       border-left: 0.0625rem solid #080808; }
     .btn-group--block .btn--dark {
       border-top: 0.0625rem solid #080808; }
-  .btn--alpha {
+  .btn--alpha, .form__file-input + label {
     background-color: #f7f7f7;
     border-color: #eaeaea; }
-    .btn--alpha:hover {
+    .btn--alpha:hover, .form__file-input + label:hover {
       background-color: #f2f2f2; }
-    .btn--alpha:active, .btn--alpha:focus {
+    .btn--alpha:active, .form__file-input + label:active, .btn--alpha:focus, .form__file-input + label:focus {
       background-color: #ededed; }
-    .btn--alpha--divider:hover, .btn--alpha:disabled, .btn--alpha:disabled:hover {
+    .btn--alpha--divider:hover, .btn--alpha:disabled, .form__file-input + label:disabled, .btn--alpha:disabled:hover, .form__file-input + label:disabled:hover {
       background-color: #f7f7f7; }
-    .btn--alpha.btn--ghost {
+    .btn--alpha.btn--ghost, .form__file-input + label.btn--ghost {
       color: #f7f7f7;
       border-color: #f7f7f7; }
-      .btn--alpha.btn--ghost:hover {
+      .btn--alpha.btn--ghost:hover, .form__file-input + label.btn--ghost:hover {
         background: #f7f7f7;
         color: white;
         border-color: #f7f7f7; }
-      .btn--alpha.btn--ghost.btn--alpha:hover, .btn--alpha.btn--ghost.btn--light:hover {
+      .btn--alpha.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--ghost:hover, .btn--alpha.btn--ghost.btn--light:hover, .form__file-input + label.btn--ghost.btn--light:hover {
         color: #333333; }
-    .btn-group--inline .btn--alpha {
+    .btn-group--inline .btn--alpha, .btn-group--inline .form__file-input + label {
       border-left: 0.0625rem solid white; }
-    .btn-group--block .btn--alpha {
+    .btn-group--block .btn--alpha, .btn-group--block .form__file-input + label {
       border-top: 0.0625rem solid white; }
   .btn--beta {
     background-color: #363d50;
@@ -7560,7 +7574,7 @@ Add more colors in the settings file under "buttons" if you need to.
         background: #363d50;
         color: white;
         border-color: #363d50; }
-      .btn--beta.btn--ghost.btn--alpha:hover, .btn--beta.btn--ghost.btn--light:hover {
+      .btn--beta.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--beta.btn--ghost:hover, .btn--beta.btn--ghost.btn--light:hover {
         color: #333333; }
     .btn-group--inline .btn--beta {
       border-left: 0.0625rem solid #3c4459; }
@@ -7582,7 +7596,7 @@ Add more colors in the settings file under "buttons" if you need to.
         background: #6c5B66;
         color: white;
         border-color: #6c5B66; }
-      .btn--gamma.btn--ghost.btn--alpha:hover, .btn--gamma.btn--ghost.btn--light:hover {
+      .btn--gamma.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--gamma.btn--ghost:hover, .btn--gamma.btn--ghost.btn--light:hover {
         color: #333333; }
     .btn-group--inline .btn--gamma {
       border-left: 0.0625rem solid #74626e; }
@@ -7604,7 +7618,7 @@ Add more colors in the settings file under "buttons" if you need to.
         background: #78757a;
         color: white;
         border-color: #78757a; }
-      .btn--delta.btn--ghost.btn--alpha:hover, .btn--delta.btn--ghost.btn--light:hover {
+      .btn--delta.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--delta.btn--ghost:hover, .btn--delta.btn--ghost.btn--light:hover {
         color: #333333; }
     .btn-group--inline .btn--delta {
       border-left: 0.0625rem solid #807c82; }
@@ -7626,7 +7640,7 @@ Add more colors in the settings file under "buttons" if you need to.
         background: #1d1f21;
         color: white;
         border-color: #1d1f21; }
-      .btn--epsilon.btn--ghost.btn--alpha:hover, .btn--epsilon.btn--ghost.btn--light:hover {
+      .btn--epsilon.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--epsilon.btn--ghost:hover, .btn--epsilon.btn--ghost.btn--light:hover {
         color: #333333; }
     .btn-group--inline .btn--epsilon {
       border-left: 0.0625rem solid #242729; }
@@ -7656,7 +7670,7 @@ Add more colors in the settings file under "buttons" if you need to.
         -ms-transform: scale(0);
             transform: scale(0); }
     .btn--light .btn__ripple,
-    .btn--alpha .btn__ripple {
+    .btn--alpha .btn__ripple, .form__file-input + label .btn__ripple {
       background: rgba(0, 0, 0, 0.2); }
     .btn--ripple-animate .btn__ripple {
       -webkit-animation: btn-ripple 0.4s linear;
@@ -7805,7 +7819,7 @@ category: Buttons
     font-size: 0.875rem; }
     .btn--small .btn-dropdown__item {
       font-size: 0.75rem; }
-    .btn--medium .btn-dropdown__item {
+    .btn--medium .btn-dropdown__item, .form__file-input + label .btn-dropdown__item {
       font-size: 0.875rem; }
     .btn--large .btn-dropdown__item {
       font-size: 1rem; }
@@ -8387,6 +8401,59 @@ category: Forms
 ```
 
 */
+/* File input
+==========
+	Credits to codrops: http://tympanus.net/Tutorials/CustomFileInputs/
+*/
+.js .form__file-input {
+  width: 0.1px;
+  height: 0.1px;
+  opacity: 0;
+  overflow: hidden;
+  position: absolute;
+  z-index: -1; }
+
+.form__file-input:focus + label,
+.form__file-input.has-focus + label {
+  background-color: white; }
+
+.form__file-input + label {
+  max-width: 10rem;
+  width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  cursor: pointer;
+  display: inline-block;
+  overflow: hidden; }
+  .no-js .form__file-input + label {
+    display: none; }
+  .form__file-input + label::before {
+    margin-right: 0.625rem; }
+  .form__file-input + label * {
+    pointer-events: none; }
+
+/*doc
+---
+title: Custom file
+name: file
+category: Forms
+---
+
+```html_example
+<div class="form__row">
+	<div class="column-5 form__label">
+		<label>File</label>
+	</div>
+	<div class="column-7">
+		<div class="column-6 form__input">
+			<input type="file" name="file-custom[]" id="file-custom" class="form__file-input" data-multiple-caption="{count} files selected" multiple />
+			<label for="file-custom"><span>kies bestand</span></label>
+		</div>
+	</div>
+</div>
+```
+
+*/
 /* Range input
 ==========
 */
@@ -8713,11 +8780,11 @@ We use [parsleyjs](http://parsleyjs.org) for our form validation engine.
 		</div>
 		<div class="form__row">
 			<div class="column-5 form__label">
-				<label>Website *</label>
+				<label>Custom file *</label>
 			</div>
 			<div class="column-7">
 				<div class="column-6 form__input">
-					<input type="url">
+					<input type="file" required>
 				</div>
 			</div>
 		</div>

@@ -2,6 +2,9 @@ app.settings.$document.ready(function () {
 	var $this = $(this),
 		scrollTop = $this.scrollTop();
 
+	app.settings.html.classList.remove('no-js');
+	app.settings.html.classList.add('js');
+
 	app.svg.init();
 	app.scrollSpyNav.init(scrollTop);
 	app.fastClick.init();
