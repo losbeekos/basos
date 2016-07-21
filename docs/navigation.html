@@ -8,7 +8,7 @@
 	<meta name="theme-color" content="#2690b0">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 	<link rel="dns-prefetch" href="https://www.google-analytics.com">
 	<link rel="stylesheet" href="assets/dist/css/main.css">
@@ -36,7 +36,25 @@
 		<div id="off-canvas-left" class="off-canvas off-canvas--left">
 			<button id="off-canvas-toggle-left" class="off-canvas-toggle-left"></button>
 			<nav class="off-canvas-nav">
-				<div class="off-canvas-nav__header">Basos docs</div>
+				<div class="off-canvas-nav__header text-align-center margin-beta-bottom">
+					<div class="tooltip" data-tooltip-position="bottom" title="Basos documentation">
+						<svg width="50px" viewBox="0 0 499 722" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<defs>
+								<linearGradient x1="65.3410554%" y1="0%" x2="65.3410554%" y2="100%" id="linearGradient-1">
+									<stop stop-color="#293E4F" stop-opacity="0" offset="0%"></stop>
+									<stop stop-color="#000000" stop-opacity="0.272446784" offset="100%"></stop>
+								</linearGradient>
+							</defs>
+							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<g id="Group" transform="translate(-35.000000, 0.000000)">
+									<polygon id="Triangle-1" fill="#293E4F" points="398.017251 368.742744 35 167.846808 35 0.308323094 488.024311 277.685137"></polygon>
+									<polygon id="Rectangle-1" fill="url(#linearGradient-1)" transform="translate(227.821571, 228.546172) rotate(29.000000) translate(-227.821571, -228.546172) " points="-9.64260137 193.750507 465.285743 188.091986 444.827827 269.000357 30.3580967 269.000354"></polygon>
+									<polygon id="Triangle-1-Copy" fill="#7698AD" points="534.06549 444.111225 35 721.488038 35 166.734411"></polygon>
+								</g>
+							</g>
+						</svg>
+					</div>
+				</div>
 				<ul class="list-unstyled">
 					<li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="index.html">Getting started</a>
 					</li>
@@ -136,8 +154,8 @@
 <div class="codeExample">
 	<div class="exampleOutput">
 		<div class="breadcrumbs">
-    <a class="breadcrubs__link" href="#">Home</a>
-    <a class="breadcrubs__link" href="#">Lorem</a>
+    <a class="breadcrubs__link" href="#link">Home</a>
+    <a class="breadcrubs__link" href="#link">Lorem</a>
     <span>Ipsum dolir asmit emet</span>
 </div>
 
@@ -145,8 +163,8 @@
 	<div class="codeBlock">
 		<div class="highlight">
 			<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"breadcrumbs"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"breadcrubs__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"breadcrubs__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Lorem<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"breadcrubs__link"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>Home<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"breadcrubs__link"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>Lorem<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;span&gt;</span>Ipsum dolir asmit emet<span class="nt">&lt;/span&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
 		</div>
@@ -162,9 +180,9 @@
         <nav class="nav-bar__nav">
             <a id="nav-bar-trigger" class="nav-bar__trigger hide-gamma-and-up"></a>
             <ul class="nav-bar__list">
-                <li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
-                <li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
-                <li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
+                <li class="nav-bar__item"><a class="nav-bar__link" href="#link">link</a></li>
+                <li class="nav-bar__item"><a class="nav-bar__link" href="#link">link</a></li>
+                <li class="nav-bar__item"><a class="nav-bar__link" href="#link">link</a></li>
             </ul>
         </nav>
     </div>
@@ -179,9 +197,9 @@
         <span class="nt">&lt;nav</span> <span class="na">class=</span><span class="s">"nav-bar__nav"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;a</span> <span class="na">id=</span><span class="s">"nav-bar-trigger"</span> <span class="na">class=</span><span class="s">"nav-bar__trigger hide-gamma-and-up"</span><span class="nt">&gt;&lt;/a&gt;</span>
             <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"nav-bar__list"</span><span class="nt">&gt;</span>
-                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-bar__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-bar__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-bar__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-bar__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-bar__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-bar__link"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-bar__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-bar__link"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-bar__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-bar__link"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+                <span class="nt">&lt;li</span> <span class="na">class=</span><span class="s">"nav-bar__item"</span><span class="nt">&gt;&lt;a</span> <span class="na">class=</span><span class="s">"nav-bar__link"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>link<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
             <span class="nt">&lt;/ul&gt;</span>
         <span class="nt">&lt;/nav&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
@@ -198,30 +216,30 @@
 <div class="codeExample">
 	<div class="exampleOutput">
 		<div class="btn-container">
-    <a class="btn btn--alpha" href="#">&lsaquo;</a>
-    <a class="btn btn--alpha" href="#">1</a>
-    <a class="btn btn--alpha" href="#">2</a>
-    <a class="btn btn--alpha" href="#">3</a>
-    <a class="btn btn--alpha" href="#">4</a>
-    <a class="btn btn--alpha" href="#">5</a>
+    <a class="btn btn--alpha" href="#link">&lsaquo;</a>
+    <a class="btn btn--alpha" href="#link">1</a>
+    <a class="btn btn--alpha" href="#link">2</a>
+    <a class="btn btn--alpha" href="#link">3</a>
+    <a class="btn btn--alpha" href="#link">4</a>
+    <a class="btn btn--alpha" href="#link">5</a>
     <a class="btn btn--divider">...</a>
-    <a class="btn btn--alpha" href="#">23</a>
-    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+    <a class="btn btn--alpha" href="#link">23</a>
+    <a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 
 	</div>
 	<div class="codeBlock">
 		<div class="highlight">
 			<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-container"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--divider"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
 		</div>
 	</div>
@@ -231,30 +249,30 @@
 <div class="codeExample">
 	<div class="exampleOutput">
 		<div class="btn-container btn-container--center">
-    <a class="btn btn--alpha" href="#">&lsaquo;</a>
-    <a class="btn btn--alpha" href="#">1</a>
-    <a class="btn btn--alpha" href="#">2</a>
-    <a class="btn btn--alpha" href="#">3</a>
-    <a class="btn btn--alpha" href="#">4</a>
-    <a class="btn btn--alpha" href="#">5</a>
+    <a class="btn btn--alpha" href="#link">&lsaquo;</a>
+    <a class="btn btn--alpha" href="#link">1</a>
+    <a class="btn btn--alpha" href="#link">2</a>
+    <a class="btn btn--alpha" href="#link">3</a>
+    <a class="btn btn--alpha" href="#link">4</a>
+    <a class="btn btn--alpha" href="#link">5</a>
     <a class="btn btn--divider">...</a>
-    <a class="btn btn--alpha" href="#">23</a>
-    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+    <a class="btn btn--alpha" href="#link">23</a>
+    <a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 
 	</div>
 	<div class="codeBlock">
 		<div class="highlight">
 			<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-container btn-container--center"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--divider"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
 		</div>
 	</div>
@@ -264,30 +282,30 @@
 <div class="codeExample">
 	<div class="exampleOutput">
 		<div class="btn-container btn-container--right">
-    <a class="btn btn--alpha" href="#">&lsaquo;</a>
-    <a class="btn btn--alpha" href="#">1</a>
-    <a class="btn btn--alpha" href="#">2</a>
-    <a class="btn btn--alpha" href="#">3</a>
-    <a class="btn btn--alpha" href="#">4</a>
-    <a class="btn btn--alpha" href="#">5</a>
+    <a class="btn btn--alpha" href="#link">&lsaquo;</a>
+    <a class="btn btn--alpha" href="#link">1</a>
+    <a class="btn btn--alpha" href="#link">2</a>
+    <a class="btn btn--alpha" href="#link">3</a>
+    <a class="btn btn--alpha" href="#link">4</a>
+    <a class="btn btn--alpha" href="#link">5</a>
     <a class="btn btn--divider">...</a>
-    <a class="btn btn--alpha" href="#">23</a>
-    <a class="btn btn--alpha" href="#">&rsaquo;</a>
+    <a class="btn btn--alpha" href="#link">23</a>
+    <a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 
 	</div>
 	<div class="codeBlock">
 		<div class="highlight">
 			<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-container btn-container--right"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--divider"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;</span>
-    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;</span>
+    <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
 		</div>
 	</div>
@@ -298,15 +316,15 @@
 	<div class="exampleOutput">
 		<div class="btn-container">
     <ul class="btn-group btn-group--inline">
-        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-        <li><a class="btn btn--alpha" href="#">1</a></li>
-        <li><a class="btn btn--alpha" href="#">2</a></li>
-        <li><a class="btn btn--alpha" href="#">3</a></li>
-        <li><a class="btn btn--alpha" href="#">4</a></li>
-        <li><a class="btn btn--alpha" href="#">5</a></li>
+        <li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#link">1</a></li>
+        <li><a class="btn btn--alpha" href="#link">2</a></li>
+        <li><a class="btn btn--alpha" href="#link">3</a></li>
+        <li><a class="btn btn--alpha" href="#link">4</a></li>
+        <li><a class="btn btn--alpha" href="#link">5</a></li>
         <li><a class="btn btn--divider">...</a></li>
-        <li><a class="btn btn--alpha" href="#">23</a></li>
-        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#link">23</a></li>
+        <li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
     </ul>
 </div>
 
@@ -315,15 +333,15 @@
 		<div class="highlight">
 			<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-container"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"btn-group btn-group--inline"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--divider"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
 		</div>
@@ -335,15 +353,15 @@
 	<div class="exampleOutput">
 		<div class="btn-container btn-container--center">
     <ul class="btn-group btn-group--inline">
-        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-        <li><a class="btn btn--alpha" href="#">1</a></li>
-        <li><a class="btn btn--alpha" href="#">2</a></li>
-        <li><a class="btn btn--alpha" href="#">3</a></li>
-        <li><a class="btn btn--alpha" href="#">4</a></li>
-        <li><a class="btn btn--alpha" href="#">5</a></li>
+        <li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#link">1</a></li>
+        <li><a class="btn btn--alpha" href="#link">2</a></li>
+        <li><a class="btn btn--alpha" href="#link">3</a></li>
+        <li><a class="btn btn--alpha" href="#link">4</a></li>
+        <li><a class="btn btn--alpha" href="#link">5</a></li>
         <li><a class="btn btn--divider">...</a></li>
-        <li><a class="btn btn--alpha" href="#">23</a></li>
-        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#link">23</a></li>
+        <li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
     </ul>
 </div>
 
@@ -352,15 +370,15 @@
 		<div class="highlight">
 			<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-container btn-container--center"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"btn-group btn-group--inline"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--divider"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
 		</div>
@@ -372,15 +390,15 @@
 	<div class="exampleOutput">
 		<div class="btn-container btn-container--right">
     <ul class="btn-group btn-group--inline">
-        <li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-        <li><a class="btn btn--alpha" href="#">1</a></li>
-        <li><a class="btn btn--alpha" href="#">2</a></li>
-        <li><a class="btn btn--alpha" href="#">3</a></li>
-        <li><a class="btn btn--alpha" href="#">4</a></li>
-        <li><a class="btn btn--alpha" href="#">5</a></li>
+        <li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#link">1</a></li>
+        <li><a class="btn btn--alpha" href="#link">2</a></li>
+        <li><a class="btn btn--alpha" href="#link">3</a></li>
+        <li><a class="btn btn--alpha" href="#link">4</a></li>
+        <li><a class="btn btn--alpha" href="#link">5</a></li>
         <li><a class="btn btn--divider">...</a></li>
-        <li><a class="btn btn--alpha" href="#">23</a></li>
-        <li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+        <li><a class="btn btn--alpha" href="#link">23</a></li>
+        <li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
     </ul>
 </div>
 
@@ -389,15 +407,15 @@
 		<div class="highlight">
 			<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-container btn-container--right"</span><span class="nt">&gt;</span>
     <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"btn-group btn-group--inline"</span><span class="nt">&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;lsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>1<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>2<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>3<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>4<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>5<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
         <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--divider"</span><span class="nt">&gt;</span>...<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
-        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>23<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
+        <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn btn--alpha"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span><span class="ni">&amp;rsaquo;</span><span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
     <span class="nt">&lt;/ul&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
 		</div>

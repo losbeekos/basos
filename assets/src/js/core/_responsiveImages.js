@@ -96,16 +96,12 @@ title: Art direction
 name: art_direction
 category: Responsive images
 ---
-This is used when you need to explicity set an image for a certian media querie, this way you can create cropped images with totally different dimensions for example. Read more about [art direction](https://dev.opera.com/articles/native-responsive-images/#art-direction).
-
-*Note: the conditional comment is used to support IE9.*
+This is used when you need to explicity set an image for a certian media query, this way you can create cropped images with different ratios for example. Read more about [art direction](https://dev.opera.com/articles/native-responsive-images/#art-direction).
 
 ```html_example
 <picture>
-    <!--[if IE 9]><video style="display: none;"><![endif]-->
     <source srcset="http://placehold.it/1000x400" media="(min-width: 1000px)" />
     <source srcset="http://placehold.it/800x400" media="(min-width: 800px)" />
-    <!--[if IE 9]></video><![endif]-->
     <img srcset="http://placehold.it/600x400" alt="" />
 </picture>
 ```
@@ -120,15 +116,17 @@ category: Responsive images
 ---
 Background image is set with the data-responsive-bg-img attribute, it reads the image tag for the current source. So all you have to do is add the attribute and place an image (with srcset) or a picture (like below).
 
-*Note: the header class is added to add some demo styling, you could and probably should remove it in your code.*
+```parse_html_example
+<div class="notification notification--alpha">
+    <div class="notification__text">The header class is added to add some demo styling, you could and probably should remove it in your code.</div>
+</div>
+```
 
 ```html_example
 <div class="header" data-responsive-bg-img>
     <picture class="display-none">
-        <!--[if IE 9]><video style="display: none;"><![endif]-->
         <source srcset="responsive-bg-img/1200.png" media="(min-width: 800px)" />
         <source srcset="responsive-bg-img/800.png" media="(min-width: 400px)" />
-        <!--[if IE 9]></video><![endif]-->
         <img srcset="responsive-bg-img/400.png" />
     </picture>
 </div>

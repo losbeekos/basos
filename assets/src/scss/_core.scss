@@ -67,20 +67,6 @@ Direction values: up, right, bottom, left.
 ````
 
 
-## Font face
-Includes a font-face rule for a custom local font.
-
-	@include font-face($fontname, $directory, $woff2: false);
-
-```
-@access public
-@param {Value} $fontname - name used in the filename, this should be the same for every font type.
-@param {Value} $directory - directory relative from the assets/dist, (eg. fonts/somefont).
-@param {Boolean} $woff2 - adds woff2 support if you need to. Defaults to false.
-@return {Value} - returns compiled font-face rule.
-````
-
-
 */
 
 @import "core/mixins/vertical_rhythm";
@@ -301,16 +287,16 @@ You can also use these classes with a media query appendix.
 Display table class needs some an extra child if you need to vertically center content.
 
 ```html_example
-<div class="display-table block" style="height: 100px;">
-	<div class="display-table__middle">
+<div class="display-table card" style="height: 100px;">
+	<div class="card__content display-table__middle">
 		This text will center align
 	</div>
 </div>
 ```
 
 ```html_example
-<div class="display-table block" style="height: 100px;">
-	<div class="display-table__bottom">
+<div class="display-table card" style="height: 100px;">
+	<div class="card__content display-table__bottom">
 		This text will bottom align
 	</div>
 </div>

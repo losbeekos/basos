@@ -3,11 +3,11 @@
 */
 
 .notification__text {
-	margin-left: rem(40px);
+	margin-left: rem(20px);
 
 	.notification--beta & {
 		@include mq(beta-and-up) {
-			margin-left: rem(70px);
+			margin-left: rem(40px);
 		}
 	}
 }

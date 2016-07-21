@@ -638,20 +638,6 @@ Direction values: up, right, bottom, left.
 ````
 
 
-## Font face
-Includes a font-face rule for a custom local font.
-
-	@include font-face($fontname, $directory, $woff2: false);
-
-```
-@access public
-@param {Value} $fontname - name used in the filename, this should be the same for every font type.
-@param {Value} $directory - directory relative from the assets/dist, (eg. fonts/somefont).
-@param {Boolean} $woff2 - adds woff2 support if you need to. Defaults to false.
-@return {Value} - returns compiled font-face rule.
-````
-
-
 */
 /* Vertical rhythm
 ==========
@@ -910,16 +896,16 @@ You can also use these classes with a media query appendix.
 Display table class needs some an extra child if you need to vertically center content.
 
 ```html_example
-<div class="display-table block" style="height: 100px;">
-	<div class="display-table__middle">
+<div class="display-table card" style="height: 100px;">
+	<div class="card__content display-table__middle">
 		This text will center align
 	</div>
 </div>
 ```
 
 ```html_example
-<div class="display-table block" style="height: 100px;">
-	<div class="display-table__bottom">
+<div class="display-table card" style="height: 100px;">
+	<div class="card__content display-table__bottom">
 		This text will bottom align
 	</div>
 </div>
@@ -4494,23 +4480,25 @@ There are several icons predefined in basos, but you could ditch them all and ad
 These icons are generated with [fontello.com](http://fontello.com), you can use the fontello config.json in assets/src/fonts/src/fontello/ to preselect the icons already defined for basos on fontello.com.
 
 ```html_example
-<div class="icon icon--spinner"></div>
-<div class="icon icon--ok"></div>
-<div class="icon icon--cancel"></div>
-<div class="icon icon--cancel-circle"></div>
-<div class="icon icon--info"></div>
-<div class="icon icon--attention"></div>
-<div class="icon icon--question"></div>
-<div class="icon icon--eye"></div>
-<div class="icon icon--eye-off"></div>
-<div class="icon icon--menu"></div>
-<div class="icon icon--down"></div>
-<div class="icon icon--left"></div>
-<div class="icon icon--right"></div>
-<div class="icon icon--up"></div>
-<div class="icon icon--cog"></div>
-<div class="icon icon--download"></div>
-<div class="icon icon--upload"></div>
+<ul class="list-inline">
+	<li><div class="icon icon--spinner"></div></li>
+	<li><div class="icon icon--ok"></div></li>
+	<li><div class="icon icon--cancel"></div></li>
+	<li><div class="icon icon--cancel-circle"></div></li>
+	<li><div class="icon icon--info"></div></li>
+	<li><div class="icon icon--attention"></div></li>
+	<li><div class="icon icon--question"></div></li>
+	<li><div class="icon icon--eye"></div></li>
+	<li><div class="icon icon--eye-off"></div></li>
+	<li><div class="icon icon--menu"></div></li>
+	<li><div class="icon icon--down"></div></li>
+	<li><div class="icon icon--left"></div></li>
+	<li><div class="icon icon--right"></div></li>
+	<li><div class="icon icon--up"></div></li>
+	<li><div class="icon icon--cog"></div></li>
+	<li><div class="icon icon--download"></div></li>
+	<li><div class="icon icon--upload"></div></li>
+</ul>
 ```
 
 ## Icon margin
@@ -4584,6 +4572,10 @@ a.styleguide {
 .codeExample {
   border: 1px solid #ebebeb;
   margin-bottom: 3.75rem; }
+
+.codeBlock {
+  overflow-y: auto;
+  max-height: 25rem; }
 
 .codeBlock pre {
   margin-top: 0;
@@ -4935,10 +4927,10 @@ hll {
     margin: 0 auto;
     opacity: 0;
     height: 100%;
-    -webkit-transform: scale(0.7);
-        -ms-transform: scale(0.7);
-            transform: scale(0.7);
-    transition: all 0.3s;
+    -webkit-transform: scale(0.6);
+        -ms-transform: scale(0.6);
+            transform: scale(0.6);
+    transition: all 0.25s;
     padding: 2.5rem; }
     .modal-show .modal__content {
       opacity: 1;
@@ -5018,7 +5010,7 @@ app.modals.confirm({
 		<a class="modal__close" data-modal-close></a>
 		<h2>Dit is een titel</h2>
 		<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-		<a href="#" class="btn btn--beta btn--medium" data-modal-close>Akkoord</a>
+		<a href="#link" class="btn btn--beta btn--medium" data-modal-close>Akkoord</a>
 	</div>
 </div>
 ```
@@ -5384,9 +5376,9 @@ category: Navigation
 		<nav class="nav-bar__nav">
 			<a id="nav-bar-trigger" class="nav-bar__trigger hide-gamma-and-up"></a>
 			<ul class="nav-bar__list">
-				<li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
-				<li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
-				<li class="nav-bar__item"><a class="nav-bar__link" href="#">link</a></li>
+				<li class="nav-bar__item"><a class="nav-bar__link" href="#link">link</a></li>
+				<li class="nav-bar__item"><a class="nav-bar__link" href="#link">link</a></li>
+				<li class="nav-bar__item"><a class="nav-bar__link" href="#link">link</a></li>
 			</ul>
 		</nav>
 	</div>
@@ -5409,10 +5401,10 @@ category: Navigation
   .table th {
     font-size: 0.6875rem;
     text-transform: uppercase;
-    background: #f2f0e6; }
+    background: #f7f7f7; }
   .table--hover tr:hover td {
     background: #f6f6f6; }
-  .table--zebra tr:nth-child(odd) td {
+  .table--zebra tr:nth-child(even) td {
     background: #f8f8f8; }
   .table--bordered {
     border: 0.0625rem solid #dedede; }
@@ -5876,10 +5868,10 @@ category: Content
 	<a class="btn btn--alpha btn--small">dropdown</a>
 	<div class="dropdown__content">
 		<ul>
-			<li><a href="#">link</a></li>
-			<li><a href="#">link</a></li>
-			<li><a href="#">link</a></li>
-			<li><a href="#">link</a></li>
+			<li><a href="#link">link</a></li>
+			<li><a href="#link">link</a></li>
+			<li><a href="#link">link</a></li>
+			<li><a href="#link">link</a></li>
 		</ul>
 	</div>
 </div>
@@ -5892,10 +5884,10 @@ category: Content
 	<a class="btn btn--alpha btn--small">dropdown</a>
 	<div class="dropdown__content">
 		<ul class="dropdown__list">
-			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
 		</ul>
 	</div>
 </div>
@@ -5908,10 +5900,10 @@ category: Content
 	<a class="btn btn--alpha btn--small">dropdown</a>
 	<div class="dropdown__content">
 		<ul class="dropdown__list">
-			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
 		</ul>
 	</div>
 </div>
@@ -5923,8 +5915,7 @@ category: Content
 */
 .tooltip {
   display: inline-block;
-  position: relative;
-  cursor: help; }
+  position: relative; }
   .tooltip[data-tooltip-trigger=click] {
     cursor: pointer; }
   .tooltip .tooltip__content {
@@ -6198,8 +6189,8 @@ category: Navigation
 
 ```html_example
 <div class="breadcrumbs">
-	<a class="breadcrubs__link" href="#">Home</a>
-	<a class="breadcrubs__link" href="#">Lorem</a>
+	<a class="breadcrubs__link" href="#link">Home</a>
+	<a class="breadcrubs__link" href="#link">Lorem</a>
 	<span>Ipsum dolir asmit emet</span>
 </div>
 ```
@@ -6308,7 +6299,7 @@ category: Content
 <div class="media media--left">
 	<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
 	<div class="media__beta">
-		<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+		<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
 		<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
 	</div>
 </div>
@@ -6320,7 +6311,7 @@ category: Content
 <div class="media media--right">
 	<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
 	<div class="media__beta">
-		<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+		<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
 		<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
 	</div>
 </div>
@@ -6332,19 +6323,19 @@ category: Content
 <div class="media media--left">
 	<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
 	<div class="media__beta">
-		<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+		<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
 		<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
 		<div class="media media--left">
 			<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
 			<div class="media__beta">
-				<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+				<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
 				<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
 			</div>
 		</div>
 		<div class="media media--left">
 			<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
 			<div class="media__beta">
-				<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+				<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
 				<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
 			</div>
 		</div>
@@ -6359,14 +6350,14 @@ category: Content
 	<li class="media media--left">
 		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
 		<div class="media__beta">
-			<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+			<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
 			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
 		</div>
 	</li>
 	<li class="media media--left">
 		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
 		<div class="media__beta">
-			<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+			<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
 			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
 		</div>
 	</li>
@@ -6380,26 +6371,26 @@ category: Content
 	<li class="media media--left">
 		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
 		<div class="media__beta">
-			<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+			<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
 			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
 		</div>
 	</li>
 	<li class="media media--left">
 		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
 		<div class="media__beta">
-			<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+			<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
 			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
 			<div class="media media--left">
 				<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
 				<div class="media__beta">
-					<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+					<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
 					<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
 				</div>
 			</div>
 			<div class="media media--left">
 				<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
 				<div class="media__beta">
-					<h2><a href="#">You guys realize you live in a sewer, right?</a></h2>
+					<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
 					<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
 				</div>
 			</div>
@@ -6796,9 +6787,7 @@ The map is styled with the styles options, the style used for these docs is borr
   z-index: 999;
   top: 0;
   width: 16.25rem;
-  height: 100%;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem; }
+  height: 100%; }
   .off-canvas--left {
     left: 0;
     -webkit-transform: translate3d(-260px, 0, 0);
@@ -6835,7 +6824,7 @@ The map is styled with the styles options, the style used for these docs is borr
   .off-canvas a {
     color: white; }
     .off-canvas a:hover {
-      color: #bbbdbf; }
+      background: #33383e; }
 
 .off-canvas-push {
   transition: -webkit-transform 0.2s;
@@ -6849,7 +6838,9 @@ The map is styled with the styles options, the style used for these docs is borr
 .off-canvas-nav {
   overflow-y: auto;
   height: 100%;
-  max-height: 100%; }
+  max-height: 100%;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem; }
 
 .off-canvas-nav__item {
   border-top: 0.0625rem solid #1C2228;
@@ -6862,9 +6853,7 @@ The map is styled with the styles options, the style used for these docs is borr
 .off-canvas-nav__header {
   color: white;
   padding: 1.25rem 1.25rem 0.625rem 1.25rem;
-  font-size: 1.125rem;
-  text-transform: uppercase;
-  font-weight: 600; }
+  font-size: 1.125rem; }
 
 .off-canvas-nav__link {
   display: block;
@@ -7101,10 +7090,10 @@ These work with the button classes so you can use those to change color and size
 
 ```html_example
 <ul class="btn-group btn-group--inline">
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
 </ul>
 ```
 
@@ -7155,15 +7144,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -7171,15 +7160,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--center">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -7187,15 +7176,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--right">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -7204,15 +7193,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```
@@ -7222,15 +7211,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container btn-container--center">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```
@@ -7240,15 +7229,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container btn-container--right">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```
@@ -7257,10 +7246,10 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <ul class="btn-group btn-group--block">
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
 </ul>
 ```
 
@@ -7278,15 +7267,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -7294,15 +7283,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--center">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -7310,15 +7299,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--right">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -7327,15 +7316,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```
@@ -7345,15 +7334,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container btn-container--center">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```
@@ -7363,15 +7352,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container btn-container--right">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```
@@ -7407,9 +7396,9 @@ category: Buttons
 All size related stuff can be edited in the settings file.
 
 ```html_example
-<a class="btn btn--beta btn--small" href="#">button small</a>
-<a class="btn btn--beta btn--medium" href="#">button medium</a>
-<a class="btn btn--beta btn--large" href="#">button large</a>
+<a class="btn btn--beta btn--small" href="#link">button small</a>
+<a class="btn btn--beta btn--medium" href="#link">button medium</a>
+<a class="btn btn--beta btn--large" href="#link">button large</a>
 ```
 
 */
@@ -7423,11 +7412,11 @@ category: Buttons
 Add more colors in the settings file under "buttons" if you need to.
 
 ```html_example
-<a class="btn btn--alpha btn--small" href="#">alpha</a>
-<a class="btn btn--beta btn--small" href="#">beta</a>
-<a class="btn btn--gamma btn--small" href="#">gamma</a>
-<a class="btn btn--delta btn--small" href="#">delta</a>
-<a class="btn btn--epsilon btn--small" href="#">epsilon</a>
+<a class="btn btn--alpha btn--small" href="#link">alpha</a>
+<a class="btn btn--beta btn--small" href="#link">beta</a>
+<a class="btn btn--gamma btn--small" href="#link">gamma</a>
+<a class="btn btn--delta btn--small" href="#link">delta</a>
+<a class="btn btn--epsilon btn--small" href="#link">epsilon</a>
 ```
 
 */
@@ -7463,7 +7452,7 @@ category: Buttons
 ---
 
 ```html_example
-<a class="btn btn--mask btn--medium" href="#">button medium</a>
+<a class="btn btn--mask btn--medium" href="#link">button medium</a>
 ```
 
 */
@@ -7477,10 +7466,10 @@ category: Buttons
 ```html_example
 <div class="grid">
 	<div class="column-6">
-		<a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+		<a class="btn btn--block btn--beta btn--large" href="#link">block button</a>
 	</div>
 	<div class="column-6">
-		<a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+		<a class="btn btn--block btn--beta btn--large" href="#link">block button</a>
 	</div>
 </div>
 ```
@@ -7496,7 +7485,7 @@ category: Buttons
 Add more colors in the settings file under "buttons" if you need to.
 
 ```html_example
-<a class="btn btn--ghost btn--dark btn--small" href="#">black</a>
+<a class="btn btn--ghost btn--dark btn--small" href="#link">black</a>
 ```
 
 */ }
@@ -7785,10 +7774,10 @@ category: Buttons
 	<button data-datatables-btn="action" type="button" class="btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered" data-btn-dropdown-toggle aria-haspopup="true" aria-expanded="false"></button>
 	<div class="btn-dropdown__dropdown" data-btn-dropdown="allowPropagation">
 		<ul class="btn-dropdown__list btn-dropdown__list--border-bottom" data-btn-dropdown="allowPropagation">
-			<li><a class="btn-dropdown__link" href="#">Deactivate</a></li>
-			<li><a class="btn-dropdown__link" href="#">Concept</a></li>
+			<li><a class="btn-dropdown__link" href="#link">Deactivate</a></li>
+			<li><a class="btn-dropdown__link" href="#link">Concept</a></li>
 		</ul>
-		<a class="btn btn--mask btn--medium btn--block" href="#">Delete</a>
+		<a class="btn btn--mask btn--medium btn--block" href="#link">Delete</a>
 	</div>
 </div>
 ```
@@ -7823,11 +7812,11 @@ category: Buttons
   display: inline-block; }
   .btn-dropdown__action {
     float: left;
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem; }
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0; }
     .btn-dropdown--action .btn-dropdown__action {
       float: none;
-      border-radius: 0.25rem; }
+      border-radius: 0; }
     .btn-dropdown--action .btn-dropdown__action::after {
       content: '\e80a';
       margin-left: 0.625rem; }
@@ -7839,8 +7828,8 @@ category: Buttons
       display: none; }
   .btn-dropdown__toggle {
     margin-left: -0.0625rem;
-    border-top-left-radius: 0.25rem;
-    border-bottom-left-radius: 0.25rem; }
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0; }
     .btn-dropdown--open .btn-dropdown__toggle::before {
       -webkit-transform: rotate(180deg);
           -ms-transform: rotate(180deg);
@@ -8172,10 +8161,10 @@ category: Forms
     content: "";
     position: absolute;
     top: 50%;
-    right: 10px;
+    right: 12px;
     z-index: 1;
     color: #bbbbbb;
-    font-size: 0.875rem;
+    font-size: 1rem;
     -webkit-transform: translateY(-50%);
         -ms-transform: translateY(-50%);
             transform: translateY(-50%); }
@@ -8995,9 +8984,13 @@ category: Forms
     color: #2690b0; }
   .notification::before {
     position: absolute;
-    left: 0.625rem;
-    top: 0;
-    font-size: 2.5rem; }
+    left: 1.25rem;
+    top: 50%;
+    font-size: 2.5rem;
+    line-height: 100%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%); }
   .notification.notification--close {
     opacity: 0; }
     .notification.notification--close:not(.notification--cookie) {
@@ -9021,7 +9014,7 @@ category: Callouts and prompts
 
 ```html_example
 <div class="notification notification--alpha">
-	<div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+	<div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#link">Verleng je abonnment</a>.</div>
 	<button class="notification__close" data-notification-close></button>
 </div>
 <div class="notification notification--alpha notification--error">
@@ -9038,7 +9031,7 @@ category: Callouts and prompts
 
 ```html_example
 <div class="notification notification--beta">
-	<div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+	<div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#link">Verleng je abonnment</a>.</div>
 	<button class="notification__close" data-notification-close></button>
 </div>
 <div class="notification notification--beta notification--error">
@@ -9070,8 +9063,6 @@ app.notifications.add(target, message, size, type);
 */
 .notification--alpha {
   padding: 1.25rem 1.25rem 1.25rem 3.75rem; }
-  .notification--alpha::before {
-    top: 0.125rem; }
 
 .notification--beta {
   padding: 1.25rem 1.25rem 1.25rem 3.75rem; }
@@ -9080,8 +9071,7 @@ app.notifications.add(target, message, size, type);
       padding: 1.875rem 1.875rem 1.875rem 3.75rem;
       min-height: 5.3125rem; }
       .notification--beta::before {
-        font-size: 3.75rem;
-        left: 1.25rem; } }
+        font-size: 3.75rem; } }
 
 /* Notification styles
 ==========
@@ -9098,10 +9088,10 @@ app.notifications.add(target, message, size, type);
 ==========
 */
 .notification__text {
-  margin-left: 2.5rem; }
+  margin-left: 1.25rem; }
   @media (min-width: 37.5em) {
     .notification--beta .notification__text {
-      margin-left: 4.375rem; } }
+      margin-left: 2.5rem; } }
 
 .notification__close {
   position: absolute;

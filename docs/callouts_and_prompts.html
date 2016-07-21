@@ -8,7 +8,7 @@
 	<meta name="theme-color" content="#2690b0">
 	<meta name="description" content="">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+
 	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 	<link rel="dns-prefetch" href="https://www.google-analytics.com">
 	<link rel="stylesheet" href="assets/dist/css/main.css">
@@ -36,7 +36,25 @@
 		<div id="off-canvas-left" class="off-canvas off-canvas--left">
 			<button id="off-canvas-toggle-left" class="off-canvas-toggle-left"></button>
 			<nav class="off-canvas-nav">
-				<div class="off-canvas-nav__header">Basos docs</div>
+				<div class="off-canvas-nav__header text-align-center margin-beta-bottom">
+					<div class="tooltip" data-tooltip-position="bottom" title="Basos documentation">
+						<svg width="50px" viewBox="0 0 499 722" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+							<defs>
+								<linearGradient x1="65.3410554%" y1="0%" x2="65.3410554%" y2="100%" id="linearGradient-1">
+									<stop stop-color="#293E4F" stop-opacity="0" offset="0%"></stop>
+									<stop stop-color="#000000" stop-opacity="0.272446784" offset="100%"></stop>
+								</linearGradient>
+							</defs>
+							<g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+								<g id="Group" transform="translate(-35.000000, 0.000000)">
+									<polygon id="Triangle-1" fill="#293E4F" points="398.017251 368.742744 35 167.846808 35 0.308323094 488.024311 277.685137"></polygon>
+									<polygon id="Rectangle-1" fill="url(#linearGradient-1)" transform="translate(227.821571, 228.546172) rotate(29.000000) translate(-227.821571, -228.546172) " points="-9.64260137 193.750507 465.285743 188.091986 444.827827 269.000357 30.3580967 269.000354"></polygon>
+									<polygon id="Triangle-1-Copy" fill="#7698AD" points="534.06549 444.111225 35 721.488038 35 166.734411"></polygon>
+								</g>
+							</g>
+						</svg>
+					</div>
+				</div>
 				<ul class="list-unstyled">
 					<li class="off-canvas-nav__item"><a class="off-canvas-nav__link" href="index.html">Getting started</a>
 					</li>
@@ -132,7 +150,7 @@
         <a class="modal__close" data-modal-close></a>
         <h2>Dit is een titel</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.</p>
-        <a href="#" class="btn btn--beta btn--medium" data-modal-close>Akkoord</a>
+        <a href="#link" class="btn btn--beta btn--medium" data-modal-close>Akkoord</a>
     </div>
 </div>
 
@@ -145,7 +163,7 @@
         <span class="nt">&lt;a</span> <span class="na">class=</span><span class="s">"modal__close"</span> <span class="na">data-modal-close</span><span class="nt">&gt;&lt;/a&gt;</span>
         <span class="nt">&lt;h2&gt;</span>Dit is een titel<span class="nt">&lt;/h2&gt;</span>
         <span class="nt">&lt;p&gt;</span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce convallis consectetur ligula. Morbi dapibus tellus a ipsum sollicitudin aliquet. Phasellus id est lacus. Pellentesque a elementum velit, a tempor nulla. Mauris mauris lectus, tincidunt et purus rhoncus, eleifend convallis turpis. Nunc ullamcorper bibendum diam, vitae tempus dolor hendrerit iaculis. Phasellus tellus elit, feugiat vel mi et, euismod varius augue. Nulla a porttitor sapien. Donec vestibulum ac nisl sed bibendum. Praesent neque ipsum, commodo eget venenatis vel, tempus sit amet ante. Curabitur vel odio eget urna dapibus imperdiet sit amet eget felis. Vestibulum eros velit, posuere a metus eget, aliquam euismod purus. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos.<span class="nt">&lt;/p&gt;</span>
-        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span> <span class="na">data-modal-close</span><span class="nt">&gt;</span>Akkoord<span class="nt">&lt;/a&gt;</span>
+        <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#link"</span> <span class="na">class=</span><span class="s">"btn btn--beta btn--medium"</span> <span class="na">data-modal-close</span><span class="nt">&gt;</span>Akkoord<span class="nt">&lt;/a&gt;</span>
     <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;/div&gt;</span></pre>
 		</div>
@@ -170,7 +188,7 @@
 <div class="codeExample">
 	<div class="exampleOutput">
 		<div class="notification notification--alpha">
-    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#link">Verleng je abonnment</a>.</div>
     <button class="notification__close" data-notification-close></button>
 </div>
 <div class="notification notification--alpha notification--error">
@@ -186,7 +204,7 @@
 	<div class="codeBlock">
 		<div class="highlight">
 			<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notification notification--alpha"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notification__text"</span><span class="nt">&gt;</span>Je abonnement loopt af op 23-02-2014. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Verleng je abonnment<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notification__text"</span><span class="nt">&gt;</span>Je abonnement loopt af op 23-02-2014. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>Verleng je abonnment<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"notification__close"</span> <span class="na">data-notification-close</span><span class="nt">&gt;&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notification notification--alpha notification--error"</span><span class="nt">&gt;</span>
@@ -205,7 +223,7 @@
 <div class="codeExample">
 	<div class="exampleOutput">
 		<div class="notification notification--beta">
-    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#">Verleng je abonnment</a>.</div>
+    <div class="notification__text">Je abonnement loopt af op 23-02-2014. <a href="#link">Verleng je abonnment</a>.</div>
     <button class="notification__close" data-notification-close></button>
 </div>
 <div class="notification notification--beta notification--error">
@@ -221,7 +239,7 @@
 	<div class="codeBlock">
 		<div class="highlight">
 			<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notification notification--beta"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notification__text"</span><span class="nt">&gt;</span>Je abonnement loopt af op 23-02-2014. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#"</span><span class="nt">&gt;</span>Verleng je abonnment<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/div&gt;</span>
+    <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notification__text"</span><span class="nt">&gt;</span>Je abonnement loopt af op 23-02-2014. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>Verleng je abonnment<span class="nt">&lt;/a&gt;</span>.<span class="nt">&lt;/div&gt;</span>
     <span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"notification__close"</span> <span class="na">data-notification-close</span><span class="nt">&gt;&lt;/button&gt;</span>
 <span class="nt">&lt;/div&gt;</span>
 <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"notification notification--beta notification--error"</span><span class="nt">&gt;</span>

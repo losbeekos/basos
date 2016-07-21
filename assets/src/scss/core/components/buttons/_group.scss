@@ -25,10 +25,10 @@ These work with the button classes so you can use those to change color and size
 
 ```html_example
 <ul class="btn-group btn-group--inline">
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
 </ul>
 ```
 
@@ -122,15 +122,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -138,15 +138,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--center">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -154,15 +154,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--right">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -171,15 +171,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```
@@ -189,15 +189,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container btn-container--center">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```
@@ -207,15 +207,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container btn-container--right">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```
@@ -224,10 +224,10 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <ul class="btn-group btn-group--block">
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
-	<li><a class="btn btn--beta btn--medium" href="#">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
+	<li><a class="btn btn--beta btn--medium" href="#link">button</a></li>
 </ul>
 ```
 
@@ -247,15 +247,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -263,15 +263,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--center">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -279,15 +279,15 @@ These work with the button classes so you can use those to change color, size is
 
 ```html_example
 <div class="btn-container btn-container--right">
-	<a class="btn btn--alpha" href="#">&lsaquo;</a>
-	<a class="btn btn--alpha" href="#">1</a>
-	<a class="btn btn--alpha" href="#">2</a>
-	<a class="btn btn--alpha" href="#">3</a>
-	<a class="btn btn--alpha" href="#">4</a>
-	<a class="btn btn--alpha" href="#">5</a>
+	<a class="btn btn--alpha" href="#link">&lsaquo;</a>
+	<a class="btn btn--alpha" href="#link">1</a>
+	<a class="btn btn--alpha" href="#link">2</a>
+	<a class="btn btn--alpha" href="#link">3</a>
+	<a class="btn btn--alpha" href="#link">4</a>
+	<a class="btn btn--alpha" href="#link">5</a>
 	<a class="btn btn--divider">...</a>
-	<a class="btn btn--alpha" href="#">23</a>
-	<a class="btn btn--alpha" href="#">&rsaquo;</a>
+	<a class="btn btn--alpha" href="#link">23</a>
+	<a class="btn btn--alpha" href="#link">&rsaquo;</a>
 </div>
 ```
 
@@ -296,15 +296,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```
@@ -314,15 +314,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container btn-container--center">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```
@@ -332,15 +332,15 @@ These work with the button classes so you can use those to change color, size is
 ```html_example
 <div class="btn-container btn-container--right">
 	<ul class="btn-group btn-group--inline">
-		<li><a class="btn btn--alpha" href="#">&lsaquo;</a></li>
-		<li><a class="btn btn--alpha" href="#">1</a></li>
-		<li><a class="btn btn--alpha" href="#">2</a></li>
-		<li><a class="btn btn--alpha" href="#">3</a></li>
-		<li><a class="btn btn--alpha" href="#">4</a></li>
-		<li><a class="btn btn--alpha" href="#">5</a></li>
+		<li><a class="btn btn--alpha" href="#link">&lsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">1</a></li>
+		<li><a class="btn btn--alpha" href="#link">2</a></li>
+		<li><a class="btn btn--alpha" href="#link">3</a></li>
+		<li><a class="btn btn--alpha" href="#link">4</a></li>
+		<li><a class="btn btn--alpha" href="#link">5</a></li>
 		<li><a class="btn btn--divider">...</a></li>
-		<li><a class="btn btn--alpha" href="#">23</a></li>
-		<li><a class="btn btn--alpha" href="#">&rsaquo;</a></li>
+		<li><a class="btn btn--alpha" href="#link">23</a></li>
+		<li><a class="btn btn--alpha" href="#link">&rsaquo;</a></li>
 	</ul>
 </div>
 ```

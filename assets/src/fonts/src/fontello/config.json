@@ -67,12 +67,6 @@
       "src": "modernpics"
     },
     {
-      "uid": "rrhco7mfj6ro9yzhe4a1rbln9flw47re",
-      "css": "cancel",
-      "code": 59394,
-      "src": "modernpics"
-    },
-    {
       "uid": "wcb87qh0k9smu6zukdhbn5zip98zofkh",
       "css": "cancel-circle",
       "code": 59395,
@@ -107,6 +101,12 @@
       "css": "download-1",
       "code": 59437,
       "src": "entypo"
+    },
+    {
+      "uid": "rrhco7mfj6ro9yzhe4a1rbln9flw47re",
+      "css": "cancel",
+      "code": 59394,
+      "src": "modernpics"
     }
   ]
 }

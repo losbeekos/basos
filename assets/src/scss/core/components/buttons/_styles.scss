@@ -8,11 +8,11 @@ category: Buttons
 Add more colors in the settings file under "buttons" if you need to.
 
 ```html_example
-<a class="btn btn--alpha btn--small" href="#">alpha</a>
-<a class="btn btn--beta btn--small" href="#">beta</a>
-<a class="btn btn--gamma btn--small" href="#">gamma</a>
-<a class="btn btn--delta btn--small" href="#">delta</a>
-<a class="btn btn--epsilon btn--small" href="#">epsilon</a>
+<a class="btn btn--alpha btn--small" href="#link">alpha</a>
+<a class="btn btn--beta btn--small" href="#link">beta</a>
+<a class="btn btn--gamma btn--small" href="#link">gamma</a>
+<a class="btn btn--delta btn--small" href="#link">delta</a>
+<a class="btn btn--epsilon btn--small" href="#link">epsilon</a>
 ```
 
 */
@@ -133,7 +133,7 @@ category: Buttons
 ---
 
 ```html_example
-<a class="btn btn--mask btn--medium" href="#">button medium</a>
+<a class="btn btn--mask btn--medium" href="#link">button medium</a>
 ```
 
 */
@@ -161,10 +161,10 @@ category: Buttons
 ```html_example
 <div class="grid">
 	<div class="column-6">
-		<a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+		<a class="btn btn--block btn--beta btn--large" href="#link">block button</a>
 	</div>
 	<div class="column-6">
-		<a class="btn btn--block btn--beta btn--large" href="#">block button</a>
+		<a class="btn btn--block btn--beta btn--large" href="#link">block button</a>
 	</div>
 </div>
 ```
@@ -196,7 +196,7 @@ category: Buttons
 Add more colors in the settings file under "buttons" if you need to.
 
 ```html_example
-<a class="btn btn--ghost btn--dark btn--small" href="#">black</a>
+<a class="btn btn--ghost btn--dark btn--small" href="#link">black</a>
 ```
 
 */
@@ -300,10 +300,10 @@ category: Buttons
 	<button data-datatables-btn="action" type="button" class="btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered" data-btn-dropdown-toggle aria-haspopup="true" aria-expanded="false"></button>
 	<div class="btn-dropdown__dropdown" data-btn-dropdown="allowPropagation">
 		<ul class="btn-dropdown__list btn-dropdown__list--border-bottom" data-btn-dropdown="allowPropagation">
-			<li><a class="btn-dropdown__link" href="#">Deactivate</a></li>
-			<li><a class="btn-dropdown__link" href="#">Concept</a></li>
+			<li><a class="btn-dropdown__link" href="#link">Deactivate</a></li>
+			<li><a class="btn-dropdown__link" href="#link">Concept</a></li>
 		</ul>
-		<a class="btn btn--mask btn--medium btn--block" href="#">Delete</a>
+		<a class="btn btn--mask btn--medium btn--block" href="#link">Delete</a>
 	</div>
 </div>
 ```
@@ -341,12 +341,12 @@ category: Buttons
 
 	&__action {
 		float: left;
-		border-top-left-radius: rem(4px);
-		border-bottom-left-radius: rem(4px);
+		border-top-left-radius: map-get($btn, border-radius);
+		border-bottom-left-radius: map-get($btn, border-radius);
 
 		.btn-dropdown--action & {
 			float: none;
-			border-radius: rem(4px);
+			border-radius: map-get($btn, border-radius);
 		}
 
 		&::before {
@@ -380,8 +380,8 @@ category: Buttons
 		@extend .icon--down;
 
 		margin-left: rem(-1px);
-		border-top-left-radius: rem(4px);
-		border-bottom-left-radius: rem(4px);
+		border-top-right-radius: map-get($btn, border-radius);
+		border-bottom-right-radius: map-get($btn, border-radius);
 
 		&::before {
 			// transition: transform map-get($dropdown, transition-duration); // Creates a renderbug in chrome when rotating...

@@ -71,23 +71,25 @@ There are several icons predefined in basos, but you could ditch them all and ad
 These icons are generated with [fontello.com](http://fontello.com), you can use the fontello config.json in assets/src/fonts/src/fontello/ to preselect the icons already defined for basos on fontello.com.
 
 ```html_example
-<div class="icon icon--spinner"></div>
-<div class="icon icon--ok"></div>
-<div class="icon icon--cancel"></div>
-<div class="icon icon--cancel-circle"></div>
-<div class="icon icon--info"></div>
-<div class="icon icon--attention"></div>
-<div class="icon icon--question"></div>
-<div class="icon icon--eye"></div>
-<div class="icon icon--eye-off"></div>
-<div class="icon icon--menu"></div>
-<div class="icon icon--down"></div>
-<div class="icon icon--left"></div>
-<div class="icon icon--right"></div>
-<div class="icon icon--up"></div>
-<div class="icon icon--cog"></div>
-<div class="icon icon--download"></div>
-<div class="icon icon--upload"></div>
+<ul class="list-inline">
+	<li><div class="icon icon--spinner"></div></li>
+	<li><div class="icon icon--ok"></div></li>
+	<li><div class="icon icon--cancel"></div></li>
+	<li><div class="icon icon--cancel-circle"></div></li>
+	<li><div class="icon icon--info"></div></li>
+	<li><div class="icon icon--attention"></div></li>
+	<li><div class="icon icon--question"></div></li>
+	<li><div class="icon icon--eye"></div></li>
+	<li><div class="icon icon--eye-off"></div></li>
+	<li><div class="icon icon--menu"></div></li>
+	<li><div class="icon icon--down"></div></li>
+	<li><div class="icon icon--left"></div></li>
+	<li><div class="icon icon--right"></div></li>
+	<li><div class="icon icon--up"></div></li>
+	<li><div class="icon icon--cog"></div></li>
+	<li><div class="icon icon--download"></div></li>
+	<li><div class="icon icon--upload"></div></li>
+</ul>
 ```
 
 ## Icon margin

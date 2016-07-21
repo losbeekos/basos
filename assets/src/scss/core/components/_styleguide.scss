@@ -36,7 +36,7 @@ a.styleguide {
 
 		&.scrollspy-nav--active,
 		&.scrollspy-nav--active:hover {
-			background: tint(map-get($color, epsilon), 10%);
+			background: tint(map-get($off-canvas, bg-color), 10%);
 		}
 	}
 }
@@ -71,6 +71,8 @@ a.styleguide {
 }
 
 .codeBlock {
+	overflow-y: auto;
+	max-height: rem(400px);
 }
 
 .codeBlock pre {

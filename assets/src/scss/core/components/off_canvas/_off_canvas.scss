@@ -70,8 +70,6 @@
 	top: 0;
 	width: rem(map-get($off-canvas, width));
 	height: 100%;
-	padding-top: rem(10px);
-	padding-bottom: rem(10px);
 
 	&--left {
 		left: 0;
@@ -117,7 +115,7 @@
 		color: white;
 
 		&:hover {
-			color: tint(map-get($off-canvas, bg-color), 70%);
+			background: tint(map-get($off-canvas, bg-color), 10%);
 		}
 	}
 }
@@ -158,6 +156,8 @@
 	overflow-y: auto;
 	height: 100%;
 	max-height: 100%;
+	padding-top: rem(10px);
+	padding-bottom: rem(10px);
 }
 
 .off-canvas-nav__item {
@@ -177,8 +177,6 @@
 	color: white;
 	padding: rem(20px) rem(20px) rem(10px) rem(20px);
 	font-size: rem(18px);
-	text-transform: uppercase;
-	font-weight: 600;
 }
 
 .off-canvas-nav__link {

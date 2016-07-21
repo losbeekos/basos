@@ -20,7 +20,8 @@ module.exports = {
 			'<%= basos.src %>/js/_settings.js',
 			'<%= basos.src %>/js/_mediaQueries.js',
 			'<%= basos.src %>/js/helpers/*.js',
-			'<%= basos.src %>/js/modules/*.js',
+			'<%= basos.src %>/js/core/*.js',
+			'<%= basos.src %>/js/app/*.js',
 			'<%= basos.src %>/js/_init.js'
 		],
 		dest: '<%= basos.dist %>/js/app.js',

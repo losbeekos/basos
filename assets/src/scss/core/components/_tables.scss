@@ -23,7 +23,7 @@
 	th {
 		font-size: rem(11px);
 		text-transform: uppercase;
-		background: #f2f0e6;
+		background: #f7f7f7;
 	}
 
 	&--hover {
@@ -35,7 +35,7 @@
 	}
 
 	&--zebra {
-		tr:nth-child(odd) td {
+		tr:nth-child(even) td {
 			background: map-get($table, bg-color-zebra);
 		}
 	}
