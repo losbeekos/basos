@@ -4,9 +4,78 @@
 				</div>
 		</div>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
 		<script src="assets/dist/js/app.js"></script>
+
+		<script>
+			var substringMatcher = function(strs) {
+			  return function findMatches(q, cb) {
+				var matches, substringRegex;
+
+				// an array that will be populated with substring matches
+				matches = [];
+
+				// regex used to determine if a string contains the substring `q`
+				substrRegex = new RegExp(q, 'i');
+
+				// iterate through the pool of strings and for any string that
+				// contains the substring `q`, add it to the `matches` array
+				$.each(strs, function(i, str) {
+				  if (substrRegex.test(str)) {
+					matches.push(str);
+				  }
+				});
+
+				cb(matches);
+			  };
+			};
+
+			var searchData = 
+				<%= "[" %>
+					<% @pages.each do |file_name, page| %>
+						<% if not page[:blocks].empty? %>
+							<% page[:blocks].each do |block| %>
+								<% file_path = block[:categories][0].to_s.gsub(' ', '_').downcase + '.html' %>
+								<% file_id = "#"+block[:name].to_s %>
+								<%= "{" %>
+								<%= "\"title\": \""+block[:title].to_s+"\"," %>
+								<%= "\"breadcrumb\": \""+block[:categories][0].to_s+" > "+block[:title]+"\"," %>
+								<%= "\"path\": \""+file_path+file_id+"\"" %>
+								<%= "}," %>
+							<% end %>
+						<% end %>
+					<% end %>
+				<%= "]" %>;
+
+			$(document).ready(function(){
+				var categories = new Array();
+				var categoryIds = new Object();
+
+				$.each( searchData, function ( index, product ) {
+					categories.push( product.title );
+					categoryIds[product.title] = product.path;
+				});
+
+				$('#search').typeahead({
+					hint: true,
+					highlight: true,
+					minLength: 2
+				},
+				{
+					name: 'searchData',
+					source: substringMatcher(categories),
+					templates: {
+						suggestion: function (data) {
+							return '<a class="tt-suggestion" href="' + categoryIds[data] + '">' + data + '</a>';
+						}
+					}
+				})
+				.on('typeahead:selected', function(e, data) {
+					e.preventDefault();
+					window.location.href = categoryIds[data];
+				});;
+			});
+		</script>
+
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

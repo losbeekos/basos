@@ -12,10 +12,7 @@
 	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 	<link rel="dns-prefetch" href="https://www.google-analytics.com">
 	<link rel="stylesheet" href="assets/dist/css/main.css">
-
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="">
+	<link rel="stylesheet" href="typeahead.css">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=dLBloAmBl7">
 	<link rel="icon" type="image/png" href="favicon-32x32.png?v=dLBloAmBl7" sizes="32x32">
@@ -27,13 +24,15 @@
 
 	<script src="assets/dist/js/modernizr.js"></script>
 	<script src="bower_components/picturefill/dist/picturefill.js" async></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
 </head>
 
-  <body class="off-canvas-body cortana-body"  ng-controller="MainController">
+  <body class="off-canvas-body cortana-body">
 
 	  <div id="background" class="background">
 
-		<div id="off-canvas-left" class="off-canvas off-canvas--left">
+		<div id="off-canvas-left" class="off-canvas off-canvas--left off-canvas--styleguide">
 			<button id="off-canvas-toggle-left" class="off-canvas-toggle-left"></button>
 			<nav class="off-canvas-nav">
 				<div class="off-canvas-nav__header text-align-center margin-beta-bottom">
@@ -65,9 +64,13 @@
 			</nav>
 		</div>
 
-		<div id="container" class="container off-canvas-push">
+		<div id="container" class="styleguide-container container off-canvas-push">
 
 			<main id="main" role="main">
 
-			  <section class="section section--alpha">
+				<section class="section section--alpha position-relative">
+
+					<div class="styleguide-search-box">
+						<input class="styleguide-search-box__input" id="search" type="text" placeholder="Search" data-typeahead>
+					</div>
 

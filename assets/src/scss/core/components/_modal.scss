@@ -1,4 +1,4 @@
-/* Modals
+/* Modal
 ==========
 */
 
@@ -115,7 +115,7 @@ You can go both ways with the confirm modal. You could call it from your HTML wi
 
 ### Javascript call
 ```
-app.modals.confirm({
+app.modal.confirm({
 	modalTitle: 'title', // Title printed in the modal (optional)
 	modalText: 'text', // Text to explain the action (optional)
 	modalConfirmAction: 'http://google.nl', // URL for the confirm button
@@ -149,7 +149,7 @@ app.modals.confirm({
 Function to open a modal from Javascript.
 
 ```
-app.modals.openModal(this, options);
+app.modal.openModal(this, options);
 ```
 
 
@@ -158,7 +158,7 @@ app.modals.openModal(this, options);
 Function to close an open modal.
 
 ```
-app.modals.closeModal();
+app.modal.closeModal();
 ```
 
 */

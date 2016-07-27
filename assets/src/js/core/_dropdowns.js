@@ -10,7 +10,7 @@ app.dropdowns = {
 
             event.stopPropagation();
 
-            if (app.settings.$html.hasClass('touch') || $this.data('dropdownTrigger')) {
+            if (app.settings.$html.hasClass('modernizr_touchevents') || $this.data('dropdownTrigger')) {
                 app.dropdowns.settings.$el.not($this).removeClass(app.dropdowns.settings.showClass);
                 $this.toggleClass(app.dropdowns.settings.showClass);
             }

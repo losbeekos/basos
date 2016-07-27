@@ -12,10 +12,7 @@
 	<link rel="dns-prefetch" href="https://fonts.googleapis.com">
 	<link rel="dns-prefetch" href="https://www.google-analytics.com">
 	<link rel="stylesheet" href="assets/dist/css/main.css">
-
-	<meta name="apple-mobile-web-app-capable" content="yes">
-	<meta name="apple-mobile-web-app-status-bar-style" content="black">
-	<meta name="apple-mobile-web-app-title" content="">
+	<link rel="stylesheet" href="typeahead.css">
 
 	<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png?v=dLBloAmBl7">
 	<link rel="icon" type="image/png" href="favicon-32x32.png?v=dLBloAmBl7" sizes="32x32">
@@ -27,13 +24,15 @@
 
 	<script src="assets/dist/js/modernizr.js"></script>
 	<script src="bower_components/picturefill/dist/picturefill.js" async></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.jquery.min.js"></script>
 </head>
 
-  <body class="off-canvas-body cortana-body"  ng-controller="MainController">
+  <body class="off-canvas-body cortana-body">
 
 	  <div id="background" class="background">
 
-		<div id="off-canvas-left" class="off-canvas off-canvas--left">
+		<div id="off-canvas-left" class="off-canvas off-canvas--left off-canvas--styleguide">
 			<button id="off-canvas-toggle-left" class="off-canvas-toggle-left"></button>
 			<nav class="off-canvas-nav">
 				<div class="off-canvas-nav__header text-align-center margin-beta-bottom">
@@ -88,11 +87,15 @@
 			</nav>
 		</div>
 
-		<div id="container" class="container off-canvas-push">
+		<div id="container" class="styleguide-container container off-canvas-push">
 
 			<main id="main" role="main">
 
-			  <section class="section section--alpha">
+				<section class="section section--alpha position-relative">
+
+					<div class="styleguide-search-box">
+						<input class="styleguide-search-box__input" id="search" type="text" placeholder="Search" data-typeahead>
+					</div>
 
 <h1 id="8_responsive_images" class="styleguide">Responsive images</h1>
 <p class="styleguide">If you&#39;re new to responsive images check out <a class="styleguide" href="https://dev.opera.com/articles/native-responsive-images/" title="https://dev.opera.com/articles/native-responsive-images/">this article</a>.</p><p class="styleguide">Picturefill is used for wider browser support. There is a Picturefill <a class="styleguide" href="https://scottjehl.github.io/picturefill/#api" title="https://scottjehl.github.io/picturefill/#api">JavaScript API</a> available.</p>
@@ -221,9 +224,786 @@
 				</div>
 		</div>
 
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
-		<script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
 		<script src="assets/dist/js/app.js"></script>
+
+		<script>
+			var substringMatcher = function(strs) {
+			  return function findMatches(q, cb) {
+				var matches, substringRegex;
+
+				// an array that will be populated with substring matches
+				matches = [];
+
+				// regex used to determine if a string contains the substring `q`
+				substrRegex = new RegExp(q, 'i');
+
+				// iterate through the pool of strings and for any string that
+				// contains the substring `q`, add it to the `matches` array
+				$.each(strs, function(i, str) {
+				  if (substrRegex.test(str)) {
+					matches.push(str);
+				  }
+				});
+
+				cb(matches);
+			  };
+			};
+
+			var searchData = 
+				[
+					
+						
+							
+								
+								
+								{
+								"title": "Getting started",
+								"breadcrumb": "Getting started > Getting started",
+								"path": "getting_started.html#1_getting_started"
+								},
+							
+						
+					
+						
+							
+								
+								
+								{
+								"title": "Vendor",
+								"breadcrumb": "Vendor > Vendor",
+								"path": "vendor.html#1_vendor"
+								},
+							
+						
+					
+						
+							
+								
+								
+								{
+								"title": "Structure",
+								"breadcrumb": "Structure > Structure",
+								"path": "structure.html#2_structure"
+								},
+							
+								
+								
+								{
+								"title": "Container",
+								"breadcrumb": "Structure > Container",
+								"path": "structure.html#container"
+								},
+							
+								
+								
+								{
+								"title": "CSS columns",
+								"breadcrumb": "Structure > CSS columns",
+								"path": "structure.html#css_columns"
+								},
+							
+								
+								
+								{
+								"title": "Flexible grid",
+								"breadcrumb": "Structure > Flexible grid",
+								"path": "structure.html#flexible_grid"
+								},
+							
+								
+								
+								{
+								"title": "Functions",
+								"breadcrumb": "Structure > Functions",
+								"path": "structure.html#functions"
+								},
+							
+								
+								
+								{
+								"title": "Grid",
+								"breadcrumb": "Structure > Grid",
+								"path": "structure.html#grid"
+								},
+							
+								
+								
+								{
+								"title": "Grid (flexbox)",
+								"breadcrumb": "Structure > Grid (flexbox)",
+								"path": "structure.html#grid_flexbox"
+								},
+							
+								
+								
+								{
+								"title": "Helper classes",
+								"breadcrumb": "Structure > Helper classes",
+								"path": "structure.html#helpers_classes"
+								},
+							
+								
+								
+								{
+								"title": "Icons",
+								"breadcrumb": "Structure > Icons",
+								"path": "structure.html#Icons"
+								},
+							
+								
+								
+								{
+								"title": "Media queries",
+								"breadcrumb": "Structure > Media queries",
+								"path": "structure.html#media_queries"
+								},
+							
+								
+								
+								{
+								"title": "Mixins",
+								"breadcrumb": "Structure > Mixins",
+								"path": "structure.html#mixins"
+								},
+							
+								
+								
+								{
+								"title": "Sections",
+								"breadcrumb": "Structure > Sections",
+								"path": "structure.html#sections"
+								},
+							
+						
+					
+						
+							
+								
+								
+								{
+								"title": "Navigation",
+								"breadcrumb": "Navigation > Navigation",
+								"path": "navigation.html#3_navigation"
+								},
+							
+								
+								
+								{
+								"title": "Affix",
+								"breadcrumb": "Navigation > Affix",
+								"path": "navigation.html#affix"
+								},
+							
+								
+								
+								{
+								"title": "Breadcrumbs",
+								"breadcrumb": "Navigation > Breadcrumbs",
+								"path": "navigation.html#breadcrumbs"
+								},
+							
+								
+								
+								{
+								"title": "Nav bar",
+								"breadcrumb": "Navigation > Nav bar",
+								"path": "navigation.html#nav_bar"
+								},
+							
+								
+								
+								{
+								"title": "Off canvas",
+								"breadcrumb": "Navigation > Off canvas",
+								"path": "navigation.html#off_canvas"
+								},
+							
+								
+								
+								{
+								"title": "Pagination",
+								"breadcrumb": "Navigation > Pagination",
+								"path": "navigation.html#pagination"
+								},
+							
+						
+					
+						
+							
+								
+								
+								{
+								"title": "Forms",
+								"breadcrumb": "Forms > Forms",
+								"path": "forms.html#4_forms"
+								},
+							
+								
+								
+								{
+								"title": "Actions",
+								"breadcrumb": "Forms > Actions",
+								"path": "forms.html#actions"
+								},
+							
+								
+								
+								{
+								"title": "Checkboxes",
+								"breadcrumb": "Forms > Checkboxes",
+								"path": "forms.html#checkboxes"
+								},
+							
+								
+								
+								{
+								"title": "Data",
+								"breadcrumb": "Forms > Data",
+								"path": "forms.html#data"
+								},
+							
+								
+								
+								{
+								"title": "Custom file",
+								"breadcrumb": "Forms > Custom file",
+								"path": "forms.html#file"
+								},
+							
+								
+								
+								{
+								"title": "Floating label",
+								"breadcrumb": "Forms > Floating label",
+								"path": "forms.html#floating_label"
+								},
+							
+								
+								
+								{
+								"title": "Form horizontal",
+								"breadcrumb": "Forms > Form horizontal",
+								"path": "forms.html#form_horizontal"
+								},
+							
+								
+								
+								{
+								"title": "Form vertical",
+								"breadcrumb": "Forms > Form vertical",
+								"path": "forms.html#form_vertical"
+								},
+							
+								
+								
+								{
+								"title": "Password toggle",
+								"breadcrumb": "Forms > Password toggle",
+								"path": "forms.html#password_toggle"
+								},
+							
+								
+								
+								{
+								"title": "Radio buttons",
+								"breadcrumb": "Forms > Radio buttons",
+								"path": "forms.html#radio_buttons"
+								},
+							
+								
+								
+								{
+								"title": "Range",
+								"breadcrumb": "Forms > Range",
+								"path": "forms.html#range"
+								},
+							
+								
+								
+								{
+								"title": "Required field",
+								"breadcrumb": "Forms > Required field",
+								"path": "forms.html#required_field"
+								},
+							
+								
+								
+								{
+								"title": "Select",
+								"breadcrumb": "Forms > Select",
+								"path": "forms.html#select"
+								},
+							
+								
+								
+								{
+								"title": "Switch",
+								"breadcrumb": "Forms > Switch",
+								"path": "forms.html#switch"
+								},
+							
+								
+								
+								{
+								"title": "Textarea",
+								"breadcrumb": "Forms > Textarea",
+								"path": "forms.html#textarea"
+								},
+							
+								
+								
+								{
+								"title": "Validation",
+								"breadcrumb": "Forms > Validation",
+								"path": "forms.html#validation"
+								},
+							
+						
+					
+						
+							
+								
+								
+								{
+								"title": "Buttons",
+								"breadcrumb": "Buttons > Buttons",
+								"path": "buttons.html#5_buttons"
+								},
+							
+								
+								
+								{
+								"title": "Block",
+								"breadcrumb": "Buttons > Block",
+								"path": "buttons.html#block"
+								},
+							
+								
+								
+								{
+								"title": "Dropdown",
+								"breadcrumb": "Buttons > Dropdown",
+								"path": "buttons.html#dropdown_button"
+								},
+							
+								
+								
+								{
+								"title": "Ghost",
+								"breadcrumb": "Buttons > Ghost",
+								"path": "buttons.html#ghost"
+								},
+							
+								
+								
+								{
+								"title": "Group",
+								"breadcrumb": "Buttons > Group",
+								"path": "buttons.html#group"
+								},
+							
+								
+								
+								{
+								"title": "Inline",
+								"breadcrumb": "Buttons > Inline",
+								"path": "buttons.html#inline"
+								},
+							
+								
+								
+								{
+								"title": "Mask",
+								"breadcrumb": "Buttons > Mask",
+								"path": "buttons.html#mask"
+								},
+							
+								
+								
+								{
+								"title": "No button style",
+								"breadcrumb": "Buttons > No button style",
+								"path": "buttons.html#no_btn_style"
+								},
+							
+								
+								
+								{
+								"title": "Sizes",
+								"breadcrumb": "Buttons > Sizes",
+								"path": "buttons.html#sizes"
+								},
+							
+								
+								
+								{
+								"title": "Split",
+								"breadcrumb": "Buttons > Split",
+								"path": "buttons.html#split_button"
+								},
+							
+								
+								
+								{
+								"title": "Styles",
+								"breadcrumb": "Buttons > Styles",
+								"path": "buttons.html#styles"
+								},
+							
+						
+					
+						
+							
+								
+								
+								{
+								"title": "Content",
+								"breadcrumb": "Content > Content",
+								"path": "content.html#7_content"
+								},
+							
+								
+								
+								{
+								"title": "Accordion",
+								"breadcrumb": "Content > Accordion",
+								"path": "content.html#accordion"
+								},
+							
+								
+								
+								{
+								"title": "Cards",
+								"breadcrumb": "Content > Cards",
+								"path": "content.html#cards"
+								},
+							
+								
+								
+								{
+								"title": "Dropdowns",
+								"breadcrumb": "Content > Dropdowns",
+								"path": "content.html#dropdowns"
+								},
+							
+								
+								
+								{
+								"title": "Equalize",
+								"breadcrumb": "Content > Equalize",
+								"path": "content.html#equalize"
+								},
+							
+								
+								
+								{
+								"title": "Google maps",
+								"breadcrumb": "Content > Google maps",
+								"path": "content.html#google_maps"
+								},
+							
+								
+								
+								{
+								"title": "Media",
+								"breadcrumb": "Content > Media",
+								"path": "content.html#media"
+								},
+							
+								
+								
+								{
+								"title": "Pricing tables",
+								"breadcrumb": "Content > Pricing tables",
+								"path": "content.html#pricing_tables"
+								},
+							
+								
+								
+								{
+								"title": "Progress bars",
+								"breadcrumb": "Content > Progress bars",
+								"path": "content.html#progress_bars"
+								},
+							
+								
+								
+								{
+								"title": "Scrollspy",
+								"breadcrumb": "Content > Scrollspy",
+								"path": "content.html#scrollspy"
+								},
+							
+								
+								
+								{
+								"title": "SVG",
+								"breadcrumb": "Content > SVG",
+								"path": "content.html#svg"
+								},
+							
+								
+								
+								{
+								"title": "Tables",
+								"breadcrumb": "Content > Tables",
+								"path": "content.html#tables"
+								},
+							
+								
+								
+								{
+								"title": "Tabs",
+								"breadcrumb": "Content > Tabs",
+								"path": "content.html#tabs"
+								},
+							
+								
+								
+								{
+								"title": "Toggle",
+								"breadcrumb": "Content > Toggle",
+								"path": "content.html#toggle"
+								},
+							
+						
+					
+						
+							
+								
+								
+								{
+								"title": "Typography",
+								"breadcrumb": "Typography > Typography",
+								"path": "typography.html#7_typography"
+								},
+							
+								
+								
+								{
+								"title": "Headings",
+								"breadcrumb": "Typography > Headings",
+								"path": "typography.html#8_type"
+								},
+							
+								
+								
+								{
+								"title": "Default lists",
+								"breadcrumb": "Typography > Default lists",
+								"path": "typography.html#default_list"
+								},
+							
+								
+								
+								{
+								"title": "Inline list",
+								"breadcrumb": "Typography > Inline list",
+								"path": "typography.html#inline_list"
+								},
+							
+								
+								
+								{
+								"title": "Unstyled list",
+								"breadcrumb": "Typography > Unstyled list",
+								"path": "typography.html#unstyled_list"
+								},
+							
+						
+					
+						
+							
+								
+								
+								{
+								"title": "Callouts and prompts",
+								"breadcrumb": "Callouts and prompts > Callouts and prompts",
+								"path": "callouts_and_prompts.html#8_callouts"
+								},
+							
+								
+								
+								{
+								"title": "Modals",
+								"breadcrumb": "Callouts and prompts > Modals",
+								"path": "callouts_and_prompts.html#modals"
+								},
+							
+								
+								
+								{
+								"title": "Notifications",
+								"breadcrumb": "Callouts and prompts > Notifications",
+								"path": "callouts_and_prompts.html#notifications"
+								},
+							
+								
+								
+								{
+								"title": "Tooltips",
+								"breadcrumb": "Callouts and prompts > Tooltips",
+								"path": "callouts_and_prompts.html#tooltips"
+								},
+							
+						
+					
+						
+							
+								
+								
+								{
+								"title": "Responsive images",
+								"breadcrumb": "Responsive images > Responsive images",
+								"path": "responsive_images.html#8_responsive_images"
+								},
+							
+								
+								
+								{
+								"title": "Art direction",
+								"breadcrumb": "Responsive images > Art direction",
+								"path": "responsive_images.html#art_direction"
+								},
+							
+								
+								
+								{
+								"title": "Fixed dimensions",
+								"breadcrumb": "Responsive images > Fixed dimensions",
+								"path": "responsive_images.html#fixed_dimensions"
+								},
+							
+								
+								
+								{
+								"title": "Set background image",
+								"breadcrumb": "Responsive images > Set background image",
+								"path": "responsive_images.html#set_background_image"
+								},
+							
+								
+								
+								{
+								"title": "Variable width",
+								"breadcrumb": "Responsive images > Variable width",
+								"path": "responsive_images.html#variable_width"
+								},
+							
+						
+					
+						
+							
+								
+								
+								{
+								"title": "Javascript",
+								"breadcrumb": "Javascript > Javascript",
+								"path": "javascript.html#9_javascript"
+								},
+							
+								
+								
+								{
+								"title": "Delay image loading",
+								"breadcrumb": "Javascript > Delay image loading",
+								"path": "javascript.html#delay_image_loading"
+								},
+							
+								
+								
+								{
+								"title": "Disable hover",
+								"breadcrumb": "Javascript > Disable hover",
+								"path": "javascript.html#disable_hover"
+								},
+							
+								
+								
+								{
+								"title": "Fastclick",
+								"breadcrumb": "Javascript > Fastclick",
+								"path": "javascript.html#fastclick"
+								},
+							
+								
+								
+								{
+								"title": "Fitvids",
+								"breadcrumb": "Javascript > Fitvids",
+								"path": "javascript.html#fitvids"
+								},
+							
+								
+								
+								{
+								"title": "Group checkable",
+								"breadcrumb": "Javascript > Group checkable",
+								"path": "javascript.html#group_checkable"
+								},
+							
+								
+								
+								{
+								"title": "Jump",
+								"breadcrumb": "Javascript > Jump",
+								"path": "javascript.html#jump"
+								},
+							
+								
+								
+								{
+								"title": "Leave",
+								"breadcrumb": "Javascript > Leave",
+								"path": "javascript.html#leave"
+								},
+							
+						
+					
+						
+							
+								
+								
+								{
+								"title": "Getting started",
+								"breadcrumb": "Getting started > Getting started",
+								"path": "getting_started.html#1_getting_started"
+								},
+							
+						
+					
+				];
+
+			$(document).ready(function(){
+				var categories = new Array();
+				var categoryIds = new Object();
+
+				$.each( searchData, function ( index, product ) {
+					categories.push( product.title );
+					categoryIds[product.title] = product.path;
+				});
+
+				$('#search').typeahead({
+					hint: true,
+					highlight: true,
+					minLength: 2
+				},
+				{
+					name: 'searchData',
+					source: substringMatcher(categories),
+					templates: {
+						suggestion: function (data) {
+							return '<a class="tt-suggestion" href="' + categoryIds[data] + '">' + data + '</a>';
+						}
+					}
+				})
+				.on('typeahead:selected', function(e, data) {
+					e.preventDefault();
+					window.location.href = categoryIds[data];
+				});;
+			});
+		</script>
+
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

@@ -2,6 +2,12 @@
 ==========
 */
 
+.styleguide-container {
+	padding-top: rem(20px);
+	margin-left: initial;
+	margin-right: initial;
+}
+
 h1.styleguide,
 h2.styleguide,
 h3.styleguide,
@@ -38,6 +44,35 @@ a.styleguide {
 		&.scrollspy-nav--active:hover {
 			background: tint(map-get($off-canvas, bg-color), 10%);
 		}
+	}
+}
+
+.styleguide-search-box {
+	background: map-get($off-canvas, bg-color);
+	position: fixed;
+	top: 0;
+	left: rem(map-get($off-canvas, toggle-width));
+	width: calc(100% - #{rem(map-get($off-canvas, toggle-width))});
+	padding: rem(10px);
+	z-index: 999;
+
+	@include mq(epsilon-and-up) {
+		padding: rem(20px);
+		left: rem(map-get($off-canvas, width));
+		width: calc(100% - #{rem(map-get($off-canvas, width))});
+	}
+}
+
+.styleguide-search-box__input[type=text] {
+	border-radius: rem(22px);
+	padding-left: rem(20px);
+	padding-right: rem(20px);
+	background: lighten(map-get($off-canvas, bg-color), 10%);
+	border-color: lighten(map-get($off-canvas, bg-color), 20%);
+	color: white;
+
+	&:focus {
+		border-color: lighten(map-get($off-canvas, bg-color), 25%);
 	}
 }
 
@@ -96,7 +131,42 @@ a.styleguide {
 	word-wrap: normal;
 }
 
+.twitter-typeahead {
+	display: block !important;
+}
 
+.tt-query {
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+     -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+}
+
+.tt-hint {
+  color: #999
+}
+
+.tt-menu {
+  width: rem(500px);
+  margin-top: rem(10px);
+  background-color: #fff;
+  border-radius: rem(22px);
+  overflow: hidden;
+  box-shadow: 0 rem(5px) rem(30px) rgba(0,0,0,.2);
+}
+
+.tt-suggestion {
+  padding: rem(10px) rem(20px);
+}
+
+.tt-suggestion.tt-cursor,.tt-suggestion:hover {
+  background-color: shade(white, 5%);
+
+}
+
+.tt-suggestion {
+  margin: 0;
+  display: block;
+}
 
 
 /**

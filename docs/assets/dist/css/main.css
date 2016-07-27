@@ -4521,6 +4521,11 @@ for a smaller generated CSS file.
 /* Styleguide
 ==========
 */
+.styleguide-container {
+  padding-top: 1.25rem;
+  margin-left: initial;
+  margin-right: initial; }
+
 h1.styleguide,
 h2.styleguide,
 h3.styleguide,
@@ -4549,6 +4554,30 @@ a.styleguide {
   transition-delay: 0.05s; }
   .styleguide-nav__link.scrollspy-nav--active, .styleguide-nav__link.scrollspy-nav--active:hover {
     background: #33383e; }
+
+.styleguide-search-box {
+  background: #1C2228;
+  position: fixed;
+  top: 0;
+  left: 4rem;
+  width: calc(100% - 4rem);
+  padding: 0.625rem;
+  z-index: 999; }
+  @media (min-width: 62.5em) {
+    .styleguide-search-box {
+      padding: 1.25rem;
+      left: 16.25rem;
+      width: calc(100% - 16.25rem); } }
+
+.styleguide-search-box__input[type=text] {
+  border-radius: 1.375rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
+  background: #313c46;
+  border-color: #465564;
+  color: white; }
+  .styleguide-search-box__input[type=text]:focus {
+    border-color: #516273; }
 
 .exampleOutput {
   position: relative;
@@ -4594,6 +4623,33 @@ a.styleguide {
 
 .codeBlock pre {
   word-wrap: normal; }
+
+.twitter-typeahead {
+  display: block !important; }
+
+.tt-query {
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075); }
+
+.tt-hint {
+  color: #999; }
+
+.tt-menu {
+  width: 31.25rem;
+  margin-top: 0.625rem;
+  background-color: #fff;
+  border-radius: 1.375rem;
+  overflow: hidden;
+  box-shadow: 0 0.3125rem 1.875rem rgba(0, 0, 0, 0.2); }
+
+.tt-suggestion {
+  padding: 0.625rem 1.25rem; }
+
+.tt-suggestion.tt-cursor, .tt-suggestion:hover {
+  background-color: #f2f2f2; }
+
+.tt-suggestion {
+  margin: 0;
+  display: block; }
 
 /**
  * Copyright (c) 2013 Trulia, Inc.
@@ -4887,7 +4943,7 @@ hll {
   color: #009999; }
 
 /* Literal.Number.Integer.Long */
-/* Modals
+/* Modal
 ==========
 */
 .modal {
@@ -4987,7 +5043,7 @@ You can go both ways with the confirm modal. You could call it from your HTML wi
 
 ### Javascript call
 ```
-app.modals.confirm({
+app.modal.confirm({
 	modalTitle: 'title', // Title printed in the modal (optional)
 	modalText: 'text', // Text to explain the action (optional)
 	modalConfirmAction: 'http://google.nl', // URL for the confirm button
@@ -5021,7 +5077,7 @@ app.modals.confirm({
 Function to open a modal from Javascript.
 
 ```
-app.modals.openModal(this, options);
+app.modal.openModal(this, options);
 ```
 
 
@@ -5030,7 +5086,7 @@ app.modals.openModal(this, options);
 Function to close an open modal.
 
 ```
-app.modals.closeModal();
+app.modal.closeModal();
 ```
 
 */
@@ -6751,8 +6807,8 @@ The map is styled with the styles options, the style used for these docs is borr
   text-align: center;
   border: none;
   font-size: 1.875rem;
-  width: 3.125rem;
-  height: 3.125rem; }
+  width: 4rem;
+  height: 4rem; }
   @media (min-width: 62.5em) {
     .off-canvas-toggle-left,
     .off-canvas-toggle-right {
@@ -6768,14 +6824,14 @@ The map is styled with the styles options, the style used for these docs is borr
     outline: none; }
 
 .off-canvas-toggle-left {
-  right: -3.125rem; }
+  right: -4rem; }
   .off-canvas-toggle-left::before {
     content: ""; }
     .off-canvas-show-left .off-canvas-toggle-left::before {
       content: ""; }
 
 .off-canvas-toggle-right {
-  left: -3.125rem; }
+  left: -4rem; }
   .off-canvas-toggle-right::before {
     content: ""; }
     .off-canvas-show-right .off-canvas-toggle-right::before {
