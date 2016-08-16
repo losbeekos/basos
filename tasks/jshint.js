@@ -2,7 +2,8 @@ module.exports = {
 	files: [
 		'<%= basos.src %>/js/*.js',
 		'<%= basos.src %>/js/helpers/*.js',
-		'<%= basos.src %>/js/modules/*.js',
+		'<%= basos.src %>/js/app/*.js',
+		'<%= basos.src %>/js/core/*.js',
 		'!<%= basos.src %>/js/app.js'
 	],
 

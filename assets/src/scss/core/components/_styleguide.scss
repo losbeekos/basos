@@ -48,13 +48,14 @@ a.styleguide {
 }
 
 .styleguide-search-box {
-	background: map-get($off-canvas, bg-color);
+	background: #f5f5f5;
 	position: fixed;
 	top: 0;
 	left: rem(map-get($off-canvas, toggle-width));
 	width: calc(100% - #{rem(map-get($off-canvas, toggle-width))});
 	padding: rem(10px);
 	z-index: 999;
+	box-shadow: 0 0 rem(20px) rgba(0, 0, 0, 0.2);
 
 	@include mq(epsilon-and-up) {
 		padding: rem(20px);
@@ -67,12 +68,13 @@ a.styleguide {
 	border-radius: rem(22px);
 	padding-left: rem(20px);
 	padding-right: rem(20px);
-	background: lighten(map-get($off-canvas, bg-color), 10%);
-	border-color: lighten(map-get($off-canvas, bg-color), 20%);
-	color: white;
+	background: white;
+	border-color: darken(#f5f5f5, 10%);
+	color: map-get($color, text);
 
 	&:focus {
-		border-color: lighten(map-get($off-canvas, bg-color), 25%);
+		box-shadow: none;
+		border-color: darken(#f5f5f5, 20%);
 	}
 }
 

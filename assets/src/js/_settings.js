@@ -12,8 +12,8 @@ var app = app || {},
 
 app.settings = {
 	// Nodes
-	html: document.getElementsByTagName('html')[0],
-	body: document.getElementsByTagName('body')[0],
+	html: document.querySelector('html'),
+	body: document.body,
 
 	// jQuery objects
 	$document: $(document),
