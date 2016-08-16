@@ -56,11 +56,17 @@ a.styleguide {
 	padding: rem(10px);
 	z-index: 999;
 	box-shadow: 0 0 rem(20px) rgba(0, 0, 0, 0.2);
+	transform: translate3d(0, 0, 0);
+	transition: all 0.2s;
 
 	@include mq(epsilon-and-up) {
 		padding: rem(20px);
 		left: rem(map-get($off-canvas, width));
 		width: calc(100% - #{rem(map-get($off-canvas, width))});
+	}
+
+	.hide-search & {
+		transform: translate3d(0, -120%, 0);
 	}
 }
 

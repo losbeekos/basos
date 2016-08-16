@@ -4563,12 +4563,18 @@ a.styleguide {
   width: calc(100% - 4rem);
   padding: 0.625rem;
   z-index: 999;
-  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.2); }
+  box-shadow: 0 0 1.25rem rgba(0, 0, 0, 0.2);
+  -webkit-transform: translate3d(0, 0, 0);
+          transform: translate3d(0, 0, 0);
+  transition: all 0.2s; }
   @media (min-width: 62.5em) {
     .styleguide-search-box {
       padding: 1.25rem;
       left: 16.25rem;
       width: calc(100% - 16.25rem); } }
+  .hide-search .styleguide-search-box {
+    -webkit-transform: translate3d(0, -120%, 0);
+            transform: translate3d(0, -120%, 0); }
 
 .styleguide-search-box__input[type=text] {
   border-radius: 1.375rem;
