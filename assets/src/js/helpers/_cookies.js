@@ -1,5 +1,5 @@
 helper.cookies = {
-	create: function(name,value,days) {
+	create: function(name, value, days) {
 		var expires = "";
 
 		if (days) {

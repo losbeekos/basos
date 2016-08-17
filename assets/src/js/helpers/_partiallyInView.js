@@ -6,6 +6,6 @@ helper.partiallyInView = function(el) {
 	var rect = el.getBoundingClientRect();
 
 	return (
-		rect.bottom - (rect.height/2) <= app.settings.$window.height()
+		rect.bottom - (rect.height/2) <= document.body.clientHeight
 	);
 };

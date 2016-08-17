@@ -3904,8 +3904,8 @@ var app = app || {},
 
 app.settings = {
 	// Nodes
-	html: document.getElementsByTagName('html')[0],
-	body: document.getElementsByTagName('body')[0],
+	html: document.querySelector('html'),
+	body: document.body,
 
 	// jQuery objects
 	$document: $(document),
@@ -3921,24 +3921,25 @@ app.settings = {
 	windowHeight: $(window).height(),
 	windowWidth: $(window).width(),
 };
+
 app.mediaQueries = {
 	alphaAndUp: '(min-width: 0px)',
-	alpha: '(max-width: 600px)',
-	betaAndUp: '(min-width: 601px)',
-	beta: '(min-width: 600px) and (max-width: 700px)',
-	alphaAndBeta: '(max-width: 700px)',
-	gammaAndUp: '(min-width: 701px)',
-	gamma: '(min-width: 700px) and (max-width: 800px)',
-	deltaAndUp: '(min-width: 801px)',
-	delta: '(min-width: 800px) and (max-width: 900px)',
-	epsilonAndUp: '(min-width: 1001px)',
-	epsilon: '(min-width: 1000px) and (max-width: 1200px)',
-	zetaAndUp: '(min-width: 1201px)',
-	zeta: '(min-width: 1200px) and (max-width: 1400px)',
-	etaAndUp: '(min-width: 1401px)'
+	alphaAndBeta: '(max-width: 699px)',
+	alpha: '(max-width: 599px)',
+	betaAndUp: '(min-width: 600px)',
+	beta: '(min-width: 600px) and (max-width: 767px)',
+	gammaAndUp: '(min-width: 768px)',
+	gamma: '(min-width: 768px) and (max-width: 799px)',
+	deltaAndUp: '(min-width: 800px)',
+	delta: '(min-width: 800px) and (max-width: 999px)',
+	epsilonAndUp: '(min-width: 1000px)',
+	epsilon: '(min-width: 1000px) and (max-width: 1199px)',
+	zetaAndUp: '(min-width: 1200px)',
+	zeta: '(min-width: 1200px) and (max-width: 1399px)',
+	etaAndUp: '(min-width: 1400px)'
 };
 helper.cookies = {
-	create: function(name,value,days) {
+	create: function(name, value, days) {
 		var expires = "";
 
 		if (days) {
@@ -3983,7 +3984,7 @@ helper.inView = function(el) {
 
 	return (
 		rect.top >= 0 &&
-		rect.bottom <= app.settings.$window.height()
+		rect.bottom <= document.body.clientHeight
 	);
 };
 helper.outView = function(el) {
@@ -3995,7 +3996,7 @@ helper.outView = function(el) {
 
 	return (
 		rect.bottom < 0 ||
-		rect.top > app.settings.$window.height()
+		rect.top > document.body.clientHeight
 	);
 };
 helper.partiallyInView = function(el) {
@@ -4006,7 +4007,7 @@ helper.partiallyInView = function(el) {
 	var rect = el.getBoundingClientRect();
 
 	return (
-		rect.bottom - (rect.height/2) <= app.settings.$window.height()
+		rect.bottom - (rect.height/2) <= document.body.clientHeight
 	);
 };
 app.accordion = {
@@ -4204,35 +4205,39 @@ app.btnRipple = {
     },
 
     init: function() {
-        var $el, $btn, $ripple, x, y;
+        btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple');
 
-        app.btnRipple.settings.ripple === true ? $el = $('.btn') : $el = $('.btn--ripple');
-
-        $el
-            .each(function () {
-                $(this).append('<span class="btn__ripple"></span>');
-            })
-            .on('click', function (event) {
-                $btn = $(this);
-                $ripple = $btn.find('.btn__ripple');
+        btns.forEach(function (btn) {
+            btn.addEventListener('click', function (event) {
+                var ripple = this.querySelector('.btn__ripple');
                 
-                if($ripple.length === 0) {
-                    $btn.append('<span class="btn__ripple"></span>');
+                if(ripple === null) {
+                    ripple = app.btnRipple.appendRipple(btn);
                 }
 
-                $btn.removeClass('btn--ripple-animate');
-                
-                if(!$ripple.height() && !$ripple.width()) {
-                    d = Math.max($btn.outerWidth(), $btn.outerHeight());
-                    $ripple.css({height: d, width: d});
-                }
+                this.classList.remove('btn--ripple-animate');
 
-                x = event.pageX - $btn.offset().left - $ripple.width()/2;
-                y = event.pageY - $btn.offset().top - $ripple.height()/2;
-                
-                $ripple.css({top: y+'px', left: x+'px'});
-                $btn.addClass('btn--ripple-animate');
+                var size = Math.max(this.offsetWidth, this.offsetHeight),
+                    x = event.offsetX - size / 2,
+                    y = event.offsetY - size / 2;
+
+                ripple.style.width = size + 'px';
+                ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+
+                this.classList.add('btn--ripple-animate');
             });
+        });
+    },
+
+    appendRipple: function (btn) {
+        var ripple = document.createElement('div');
+
+        ripple.classList.add('btn__ripple');
+        btn.appendChild(ripple);
+
+        return ripple;
     }
 
 };
@@ -4357,7 +4362,7 @@ app.dropdowns = {
 
             event.stopPropagation();
 
-            if (app.settings.$html.hasClass('touch') || $this.data('dropdownTrigger')) {
+            if (app.settings.$html.hasClass('modernizr_touchevents') || $this.data('dropdownTrigger')) {
                 app.dropdowns.settings.$el.not($this).removeClass(app.dropdowns.settings.showClass);
                 $this.toggleClass(app.dropdowns.settings.showClass);
             }
@@ -4544,8 +4549,6 @@ app.formModules = {
 
             $input.on('change', function( e ) {
                 var fileName = '';
-
-                console.log('change');
 
                 if( this.files && this.files.length > 1 ) {
                     fileName = ( this.getAttribute('data-multiple-caption' ) || '').replace('{count}', this.files.length );
@@ -5597,7 +5600,7 @@ name: svg
 category: Content
 ---
 
-There are no SVG images present in basos but you can create an SVG workflow for your project. 
+There are no SVGs present in basos but you can create an SVG workflow for your project. 
 
 - Just drop SVG files in "/assets/src/img/svg/".
 - A grunt task will create an SVG sprite of these files with there filename as an ID.
@@ -5733,6 +5736,13 @@ app.tooltips = {
                 $tooltipContent.css({ top: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
                 break;
         }
+    }
+};
+app.yourModule = {
+    settings: {
+    },
+
+    init: function () {
     }
 };
 app.settings.$document.ready(function () {

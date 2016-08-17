@@ -4,35 +4,39 @@ app.btnRipple = {
     },
 
     init: function() {
-        var $el, $btn, $ripple, x, y;
+        btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple');
 
-        app.btnRipple.settings.ripple === true ? $el = $('.btn') : $el = $('.btn--ripple');
-
-        $el
-            .each(function () {
-                $(this).append('<span class="btn__ripple"></span>');
-            })
-            .on('click', function (event) {
-                $btn = $(this);
-                $ripple = $btn.find('.btn__ripple');
+        btns.forEach(function (btn) {
+            btn.addEventListener('click', function (event) {
+                var ripple = this.querySelector('.btn__ripple');
                 
-                if($ripple.length === 0) {
-                    $btn.append('<span class="btn__ripple"></span>');
+                if(ripple === null) {
+                    ripple = app.btnRipple.appendRipple(btn);
                 }
 
-                $btn.removeClass('btn--ripple-animate');
-                
-                if(!$ripple.height() && !$ripple.width()) {
-                    d = Math.max($btn.outerWidth(), $btn.outerHeight());
-                    $ripple.css({height: d, width: d});
-                }
+                this.classList.remove('btn--ripple-animate');
 
-                x = event.pageX - $btn.offset().left - $ripple.width()/2;
-                y = event.pageY - $btn.offset().top - $ripple.height()/2;
-                
-                $ripple.css({top: y+'px', left: x+'px'});
-                $btn.addClass('btn--ripple-animate');
+                var size = Math.max(this.offsetWidth, this.offsetHeight),
+                    x = event.offsetX - size / 2,
+                    y = event.offsetY - size / 2;
+
+                ripple.style.width = size + 'px';
+                ripple.style.height = size + 'px';
+                ripple.style.left = x + 'px';
+                ripple.style.top = y + 'px';
+
+                this.classList.add('btn--ripple-animate');
             });
+        });
+    },
+
+    appendRipple: function (btn) {
+        var ripple = document.createElement('div');
+
+        ripple.classList.add('btn__ripple');
+        btn.appendChild(ripple);
+
+        return ripple;
     }
 
 };

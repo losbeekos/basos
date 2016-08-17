@@ -7,6 +7,6 @@ helper.inView = function(el) {
 
 	return (
 		rect.top >= 0 &&
-		rect.bottom <= app.settings.$window.height()
+		rect.bottom <= document.body.clientHeight
 	);
 };

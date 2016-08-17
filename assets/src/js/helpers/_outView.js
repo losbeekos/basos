@@ -7,6 +7,6 @@ helper.outView = function(el) {
 
 	return (
 		rect.bottom < 0 ||
-		rect.top > app.settings.$window.height()
+		rect.top > document.body.clientHeight
 	);
 };
