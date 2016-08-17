@@ -38,7 +38,11 @@
 								<% file_path = block[:categories][0].to_s.gsub(' ', '_').downcase + '.html' %>
 								<% file_id = "#"+block[:name].to_s %>
 								<%= "{" %>
-								<%= "\"title\": \""+block[:title].to_s+"\"," %>
+								<% if block[:categories][0].to_s === block[:title].to_s %>
+									<%= "\"title\": \""+block[:title].to_s+"\"," %>
+								<% else %>
+									<%= "\"title\": \""+block[:categories][0].to_s+" • "+block[:title].to_s+"\"," %>
+								<% end %>
 								<%= "\"breadcrumb\": \""+block[:categories][0].to_s+" > "+block[:title]+"\"," %>
 								<%= "\"path\": \""+file_path+file_id+"\"" %>
 								<%= "}," %>
