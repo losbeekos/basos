@@ -4208,8 +4208,6 @@ app.btnRipple = {
         btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple');
 
         btns.forEach(function (btn) {
-            var test = 'test';
-
             btn.addEventListener('click', function (event) {
                 var ripple = this.querySelector('.btn__ripple');
                 
