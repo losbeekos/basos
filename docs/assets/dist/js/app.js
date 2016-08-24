@@ -4076,72 +4076,78 @@ app.accordion = {
 };
 app.affix = {
     settings: {
-        $el: $('[data-affix]'),
-        $navBar: $('#nav-bar, #off-canvas-nav-bar')
+        el: document.querySelectorAll('[data-affix]'),
+        navBar: document.querySelector('#nav-bar, #off-canvas-nav-bar')
     },
 
     init: function (_scrollTop) {
-        if (app.affix.settings.$el.length > 0) {
+        if (app.affix.settings.el.length > 0) {
             app.affix.resizeWidth();
             app.affix.updateOffsetTop(_scrollTop);
 
-            app.affix.settings.$el.each(function () {
-                var $affix = $(this),
-                    affixHeight = $affix.height();
+            app.affix.settings.el.forEach(function (affix) {
+                var affixHeight = affix.offsetHeight;
 
                 if (affixHeight < app.settings.windowHeight) {
-                    app.settings.$window.on('scroll', function () {
-                        app.affix.scroller($(this).scrollTop(), $affix);
-                    });
+                    window.onscroll = function () {
+                        app.affix.scroller(this.scrollY, affix);
+                    };
                 }
             });
+
+            window.onresize = function () {
+                app.affix.resizeWidth();
+            };
         }
     },
 
     scroller: function (_scrollTop, _el) {
-        var $container = _el.closest('.affix-container'),
-            affixOffsetTop = _el.attr('data-affix-offset'),
-            bottomTrigger = (($container.offset().top + $container.height()) - _el.height());
+        var $container = $(_el).closest('.affix-container'),
+            affixOffsetTop = _el.getAttribute('data-affix-offset'),
+            bottomTrigger = (($container.offset().top + $container.height()) - _el.offsetHeight);
 
         if (app.navBar.settings.$el.length > 0 && app.navBar.settings.$el.hasClass('app nav-bar--fixed')) {
             bottomTrigger = (bottomTrigger - app.navBar.settings.navBarHeight);
         }
 
-        if (_scrollTop >= affixOffsetTop && _scrollTop < bottomTrigger && _el.height() < $container.height()) {
-            _el.addClass('affix--fixed').removeClass('affix--absolute');
+        if (_scrollTop >= affixOffsetTop && _scrollTop < bottomTrigger && _el.offsetHeight < container.offsetHeight) {
+            _el.classList.add('affix--fixed');
+            _el.classList.remove('affix--absolute');
 
-             app.navBar.settings.$el.hasClass('app nav-bar--fixed') ? _el.css({top: app.affix.settings.$navBar.height()}) : _el.css({top: 0});
-
-        } else if (_scrollTop >= bottomTrigger && _el.height() < $container.height()) {
-            _el.removeClass('affix--fixed').addClass('affix--absolute');
+             app.navBar.settings.$el.hasClass('app nav-bar--fixed') ? _el.style.top = app.affix.settings.navBar.offsetHeight : _el.style.top = 0;
+        } else if (_scrollTop >= bottomTrigger && _el.offsetHeight < container.offsetHeight) {
+            _el.classList.remove('affix--fixed');
+            _el.classList.add('affix--absolute');
         } else {
-            _el.removeClass('affix--fixed').removeClass('affix--absolute');
-            _el.css({top: 0});
+            _el.classList.remove('affix--fixed');
+            _el.classList.remove('affix--absolute');
+            _el.style.top = 0;
         }
     },
 
     updateOffsetTop: function (_scrollTop) {
-        app.affix.settings.$el.each(function () {
-            var $this = $(this),
-                affixHeight = $this.height(),
-                offsetTop = $this.closest('.affix-container').offset().top;
+        app.affix.settings.el.forEach(function (affix) {
+            var affixHeight = affix.offsetHeight,
+                offsetTop = $(affix).closest('.affix-container').offset().top;
 
             if (affixHeight < app.settings.windowHeight) {
                 if (app.navBar.settings.$el.length > 0 && app.navBar.settings.$el.hasClass('app nav-bar--fixed')) {
-                    offsetTop = (offsetTop - app.affix.settings.$navBar.height());
+                    offsetTop = (offsetTop - app.affix.settings.navBar.outerHeight);
                 }
 
-                $this.attr('data-affix-offset', Math.round(offsetTop));
-                app.affix.scroller(_scrollTop, $this);
+                affix.setAttribute('data-affix-offset', Math.round(offsetTop));
+                app.affix.scroller(_scrollTop, affix);
             }
         });
     },
 
-    resizeWidth: function (_el) {
-        app.affix.settings.$el.each(function (){
-            var $affix = $(this);
-            
-            $affix.removeClass('affix--fixed').removeClass('affix--absolute').removeAttr('style').width($affix.width());
+    resizeWidth: function () {
+        app.affix.settings.el.forEach(function (affix) {
+            affix.classList.remove('affix--fixed');
+            affix.classList.remove('affix--absolute');
+            affix.style.top = '';
+            affix.style.width = '';
+            affix.style.width = affix.offsetWidth + 'px';
         });
     }
 };
@@ -5734,6 +5740,7 @@ app.settings.$document.ready(function () {
 	app.settings.html.classList.remove('no-js');
 	app.settings.html.classList.add('js');
 
+	app.affix.init();
 	app.svg.init();
 	app.scrollSpyNav.init(scrollTop);
 	app.fastClick.init();
@@ -5767,7 +5774,6 @@ app.settings.$window.ready(function () {
 		windowHeight = $this.height();
 
 	app.scrollSpy.init(scrollTop, windowHeight, true);
-	app.affix.init(scrollTop);
 	app.equalize.init();
 	app.delayedImageLoading.init();
 
@@ -5785,10 +5791,6 @@ app.settings.$window.on('scroll', function () {
 	app.scrollSpyNav.init(scrollTop);
 	app.navBar.scroller(scrollTop);
 	app.disableHover.init();
-
-	if (app.settings.$html.hasClass('modernizr_no-touchevents')) {
-		// app.affix.scroller(scrollTop);
-	}
 });
 
 app.settings.$window.on('touchmove', function(){
@@ -5796,7 +5798,6 @@ app.settings.$window.on('touchmove', function(){
 		scrollTop = $this.scrollTop(),
 		windowHeight = $this.height();
 
-	app.affix.scroller(scrollTop);
 	app.scrollSpy.init(scrollTop, windowHeight, false);
 	app.scrollSpyNav.init(scrollTop);
 });
@@ -5819,7 +5820,6 @@ app.settings.$window.on('resize', function () {
 		app.scrollSpyNav.init(scrollTop);
 		app.navBar.resize(scrollTop);
 		app.navBar.scroller(scrollTop);
-		app.affix.init(scrollTop);
 		app.responsiveImages.setBackgroundImage();
 
 		app.settings.$html.removeClass('disable-transitions');

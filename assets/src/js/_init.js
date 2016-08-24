@@ -5,6 +5,7 @@ app.settings.$document.ready(function () {
 	app.settings.html.classList.remove('no-js');
 	app.settings.html.classList.add('js');
 
+	app.affix.init();
 	app.svg.init();
 	app.scrollSpyNav.init(scrollTop);
 	app.fastClick.init();
@@ -38,7 +39,6 @@ app.settings.$window.ready(function () {
 		windowHeight = $this.height();
 
 	app.scrollSpy.init(scrollTop, windowHeight, true);
-	app.affix.init(scrollTop);
 	app.equalize.init();
 	app.delayedImageLoading.init();
 
@@ -56,10 +56,6 @@ app.settings.$window.on('scroll', function () {
 	app.scrollSpyNav.init(scrollTop);
 	app.navBar.scroller(scrollTop);
 	app.disableHover.init();
-
-	if (app.settings.$html.hasClass('modernizr_no-touchevents')) {
-		// app.affix.scroller(scrollTop);
-	}
 });
 
 app.settings.$window.on('touchmove', function(){
@@ -67,7 +63,6 @@ app.settings.$window.on('touchmove', function(){
 		scrollTop = $this.scrollTop(),
 		windowHeight = $this.height();
 
-	app.affix.scroller(scrollTop);
 	app.scrollSpy.init(scrollTop, windowHeight, false);
 	app.scrollSpyNav.init(scrollTop);
 });
@@ -90,7 +85,6 @@ app.settings.$window.on('resize', function () {
 		app.scrollSpyNav.init(scrollTop);
 		app.navBar.resize(scrollTop);
 		app.navBar.scroller(scrollTop);
-		app.affix.init(scrollTop);
 		app.responsiveImages.setBackgroundImage();
 
 		app.settings.$html.removeClass('disable-transitions');
