@@ -6155,7 +6155,7 @@ Tooltips are used as fancy title attributes to display some info about a certain
   .accordion__content {
     overflow: hidden;
     padding: 0 20px;
-    transition: all, 0.2s; }
+    transition: all 0.2s; }
     .lt-ie9 .accordion__content {
       height: 0; }
     .accordion__content > *:first-child {

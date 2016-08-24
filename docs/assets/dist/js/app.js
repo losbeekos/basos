@@ -4012,83 +4012,65 @@ helper.partiallyInView = function(el) {
 };
 app.accordion = {
     settings: {
-        $el: $('.accordion'),
-        $group: $('.accordion__group'),
-        $trigger: $('.accordion__trigger'),
+        el: document.querySelectorAll('.accordion'),
+        group: document.querySelectorAll('.accordion__group'),
+        trigger: document.querySelectorAll('.accordion__trigger'),
         contentShowClass: 'accordion-content-show'
     },
 
     init: function () {
-        var self = this;
-
-        if (app.accordion.settings.$el.length > 0) {
-            self.setGroupHeight();
-            self.toggler();
-            self.forceMaxheight();
+        if (app.accordion.settings.el.length > 0) {
+            app.accordion.setGroupHeight();
+            app.accordion.toggler();
+            
+            window.onresize = function() {
+                app.accordion.setGroupHeight();
+            };
         }
     },
 
     setGroupHeight: function () {
-        var self = this;
+        app.accordion.settings.group.forEach(function (group) {
+            var groupContent = group.querySelector('.accordion__content');
 
-        app.accordion.settings.$group.each(function () {
-            var $group = $(this),
-                $groupContent = $group.find('.accordion__content');
+            groupContent.setAttribute('style', '');
 
-            $groupContent.removeAttr('style');
+            var contentHeight = groupContent.offsetHeight;
 
-            var contentHeight = $groupContent.height();
-
-            $groupContent.attr('data-accordion-content-height', contentHeight);
-
-            if ($group.hasClass(app.accordion.settings.contentShowClass)) {
-                $groupContent.css({'max-height': contentHeight});
-            } else {
-                $groupContent.css({'max-height': 0});
-            }
+            groupContent.setAttribute('data-accordion-content-height', contentHeight);
+            group.classList.contains(app.accordion.settings.contentShowClass) ? groupContent.style.maxHeight = contentHeight : groupContent.style.maxHeight = 0;
         });
     },
 
     toggler: function () {
-        var self = this;
+        app.accordion.settings.trigger.forEach(function (trigger) {
+            trigger.addEventListener('click', function () {
+                var group = trigger.parentNode,
+                    content = trigger.nextElementSibling;
 
-        app.accordion.settings.$trigger.on('click', function () {
-            var $trigger = $(this),
-                $group = $trigger.parent(),
-                $content = $trigger.next();
-
-            if (!$group.hasClass(app.accordion.settings.contentShowClass)) {
-                self.hideGroup($trigger.closest('.accordion').find('.accordion__content'));
-                self.showGroup($trigger, $content);
-            } else {
-                self.hideGroup($content);
-            }
+                if (group.classList.contains(app.accordion.settings.contentShowClass)) {
+                    app.accordion.hideGroup(content);
+                } else {
+                    app.accordion.hideGroup(trigger);
+                    app.accordion.showGroup(trigger, content);
+                }
+            });
         });
     },
 
-    showGroup: function ($trigger, $content) {
-        var self = this;
-
-        $content
-            .css({'max-height': $trigger.next().data('accordionContentHeight')})
-            .parent()
-            .addClass(app.accordion.settings.contentShowClass);
+    showGroup: function (trigger, content) {
+        content.style.maxHeight = trigger.nextElementSibling.getAttribute('data-accordion-content-height') + 'px';
+        content.parentNode.classList.add(app.accordion.settings.contentShowClass);
     },
 
-    hideGroup: function ($content) {
-        var self = this;
+    hideGroup: function (trigger) {
+        var shownItem = document.querySelector('.accordion-content-show'),
+            content = document.querySelectorAll('.accordion__content');
 
-        $content
-            .css({'max-height': 0})
-            .parent()
-            .removeClass(app.accordion.settings.contentShowClass);
-    },
+        shownItem.classList.remove(app.accordion.settings.contentShowClass);
 
-    forceMaxheight: function () {
-        var self = this;
-
-        app.settings.$window.resize(function() {
-            self.setGroupHeight();
+        content.forEach(function (content) {
+            content.style.maxHeight = 0;
         });
     }
 };

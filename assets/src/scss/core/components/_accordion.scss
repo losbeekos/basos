@@ -57,7 +57,7 @@
 	&__content {
 		overflow: hidden;
 		padding: map-get($accordion, content-padding);
-		transition: all, map-get($accordion, transition-speed);
+		transition: all map-get($accordion, transition-speed);
 
 		.lt-ie9 & {
 			height: 0;

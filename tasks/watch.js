@@ -1,13 +1,13 @@
 module.exports = {
 	js: {
 		files: ['<%= jshint.files %>'],
-		tasks: ['jshint', 'concat'],
+		tasks: ['jshint', 'concat', 'docs'],
 	},
 
 	// Basos
 	sass: {
 		files: ['<%= basos.src %>/scss/**/*'],
-		tasks: ['sass:dev', 'postcss'],
+		tasks: ['sass:dev', 'postcss', 'docs'],
 	},
 
 	// Peanuts
@@ -18,16 +18,16 @@ module.exports = {
 
 	fonts: {
 		files: ['<%= basos.src %>/fonts/icons/*'],
-		tasks: ['clean:fonts', 'copy:fonts']
+		tasks: ['clean:fonts', 'copy:fonts', 'docs']
 	},
 
 	fontello: {
 		files: ['<%= basos.src %>/fonts/src/fontello/font/**'],
-		tasks: ['copy:fontello']
+		tasks: ['copy:fontello', 'docs']
 	},
 
 	images: {
 		files: ['<%= basos.src %>/img/**/*'],
-		tasks: ['clean:images', 'copy:images']
+		tasks: ['clean:images', 'copy:images', 'docs']
 	}
 }
