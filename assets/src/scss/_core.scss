@@ -1,3 +1,292 @@
+
+/* Vendor
+==========
+*/
+
+
+@import "core/vendor/normalize";
+@import "core/vendor/basos";
+
+
+/* Functions
+==========
+*/
+
+@import "core/functions/rem";
+@import "core/functions/tint";
+@import "core/functions/shade";
+@import "core/functions/strip_units";
+@import "core/functions/modular_scale";
+
+
+/* Mixins
+==========
+*/
+
+@import "core/mixins/vertical_rhythm";
+@import "core/mixins/media_queries";
+@import "core/mixins/grid_column";
+@import "core/mixins/arrow";
+
+
+/* Helpers
+==========
+*/
+
+@import "core/helpers/clearfix";
+@import "core/helpers/colors";
+@import "core/helpers/hide";
+@import "core/helpers/lists";
+@import "core/helpers/visually_hidden";
+@import "core/helpers/margin";
+@import "core/helpers/padding";
+@import "core/helpers/grid_margin";
+@import "core/helpers/float";
+@import "core/helpers/round";
+@import "core/helpers/vertical_align";
+@import "core/helpers/text_align";
+@import "core/helpers/text_transform";
+@import "core/helpers/font_style";
+@import "core/helpers/font_weight";
+@import "core/helpers/position";
+@import "core/helpers/display";
+@import "core/helpers/ellipsis";
+@import "core/helpers/break_word";
+@import "core/helpers/css_columns";
+@import "core/helpers/disable_transitions";
+@import "core/helpers/disable_hover";
+
+
+/* Animations
+==========
+*/
+
+@import "core/animations/animated";
+@import "core/animations/shake";
+@import "core/animations/bounceIn";
+@import "core/animations/bounceInDown";
+@import "core/animations/bounceInLeft";
+@import "core/animations/bounceInRight";
+@import "core/animations/bounceInUp";
+@import "core/animations/fadeIn";
+@import "core/animations/fadeInDown";
+@import "core/animations/fadeInDownBig";
+@import "core/animations/fadeInLeft";
+@import "core/animations/fadeInLeftBig";
+@import "core/animations/fadeInRight";
+@import "core/animations/fadeInRightBig";
+@import "core/animations/fadeInUp";
+@import "core/animations/fadeInUpBig";
+@import "core/animations/fadeInRotate";
+@import "core/animations/fadeOutUp";
+@import "core/animations/zoomIn";
+@import "core/animations/zoomInDown";
+@import "core/animations/zoomInLeft";
+@import "core/animations/zoomInRight";
+@import "core/animations/zoomInUp";
+@import "core/animations/flipInX";
+@import "core/animations/flipInY";
+
+
+/* Layout
+==========
+*/
+
+@import "core/layout/generic";
+@import "core/layout/containers";
+@import "core/layout/flexbox_grid";
+@import "core/layout/flexible_grid";
+@import "core/layout/grid";
+@import "core/layout/sections";
+@import "core/layout/typography";
+@import "core/layout/icons";
+@import "core/layout/styleguide"; // Remove this for production
+
+
+/* Optional components
+==========
+You can comment some of these out
+for a smaller generated CSS file.
+*/
+
+@import "core/components/breadcrumbs";
+@import "core/components/spinners";
+@import "core/components/scrollspy";
+@import "core/components/toggle";
+@import "core/components/affix";
+@import "core/components/google_maps";
+
+
+/* Dropdown
+==========
+*/
+
+@import "core/components/dropdown/base";
+@import "core/components/dropdown/content";
+@import "core/components/dropdown/list";
+@import "core/components/dropdown/item";
+@import "core/components/dropdown/link";
+
+
+/* Cards
+==========
+*/
+
+@import "core/components/cards/base";
+@import "core/components/cards/header";
+@import "core/components/cards/content";
+@import "core/components/cards/title";
+@import "core/components/cards/action";
+
+
+/* Cards
+==========
+*/
+
+@import "core/components/tooltips/base";
+@import "core/components/tooltips/content";
+@import "core/components/tooltips/position";
+
+
+/* Tabs
+==========
+*/
+
+@import "core/components/tabs/base";
+@import "core/components/tabs/tab";
+@import "core/components/tabs/item";
+@import "core/components/tabs/content";
+
+
+/* Modal
+==========
+*/
+
+@import "core/components/modal/base";
+@import "core/components/modal/content";
+@import "core/components/modal/overlay";
+@import "core/components/modal/close";
+
+
+/* Navigation bar
+==========
+*/
+
+@import "core/components/nav_bar/base";
+@import "core/components/nav_bar/transform";
+@import "core/components/nav_bar/transparent";
+@import "core/components/nav_bar/fixed";
+@import "core/components/nav_bar/container";
+@import "core/components/nav_bar/nav";
+@import "core/components/nav_bar/trigger";
+@import "core/components/nav_bar/list";
+@import "core/components/nav_bar/link";
+
+
+/* Off canvas
+==========
+*/
+
+@import "core/components/off_canvas/base";
+@import "core/components/off_canvas/toggle";
+@import "core/components/off_canvas/push";
+@import "core/components/off_canvas/nav";
+
+
+/* Tables
+==========
+*/
+
+@import "core/components/tables/base";
+@import "core/components/tables/bordered";
+@import "core/components/tables/hover";
+@import "core/components/tables/zebra";
+@import "core/components/tables/responsive";
+
+
+/* Accordion
+==========
+*/
+
+@import "core/components/accordion/base";
+@import "core/components/accordion/group";
+@import "core/components/accordion/trigger";
+@import "core/components/accordion/content";
+
+
+/* Media
+==========
+*/
+
+@import "core/components/media/base";
+@import "core/components/media/alpha";
+@import "core/components/media/beta";
+@import "core/components/media/list";
+
+
+/* Pricing table
+==========
+*/
+
+@import "core/components/pricing_table/base";
+@import "core/components/pricing_table/header";
+@import "core/components/pricing_table/content";
+@import "core/components/pricing_table/description";
+@import "core/components/pricing_table/price";
+
+
+/* Progress
+==========
+*/
+
+@import "core/components/progress/base";
+@import "core/components/progress/value";
+@import "core/components/progress/inderterminate";
+
+
+/* Buttons
+==========
+*/
+
+@import "core/components/buttons/container";
+@import "core/components/buttons/group";
+@import "core/components/buttons/sizes";
+@import "core/components/buttons/styles";
+@import "core/components/buttons/block";
+@import "core/components/buttons/mask";
+@import "core/components/buttons/ghost";
+@import "core/components/buttons/ripple";
+@import "core/components/buttons/reset_btn";
+@import "core/components/buttons/dropdown";
+
+
+/* Forms
+==========
+*/
+
+@import "core/components/form/form";
+@import "core/components/form/general";
+@import "core/components/form/placeholder";
+@import "core/components/form/checkbox";
+@import "core/components/form/radio";
+@import "core/components/form/file";
+@import "core/components/form/range";
+@import "core/components/form/validation";
+@import "core/components/form/password";
+@import "core/components/form/floating_label";
+
+
+/* Notifications
+==========
+*/
+
+@import "core/components/notifications/notification";
+@import "core/components/notifications/sizes";
+@import "core/components/notifications/styles";
+@import "core/components/notifications/identifiers";
+@import "core/components/notifications/cookie_notification";
+
+
 /*doc
  ---
  title: Vendor
@@ -13,9 +302,6 @@ Some HTML tag CSS enhancements are used from H5BP [https://html5boilerplate.com]
 And some things are borrowed from Twitter's bootstrap [Reboot](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss)
 
  */
-
-@import "core/vendor/normalize";
-@import "core/vendor/basos";
 
 /*doc
 ---
@@ -38,12 +324,6 @@ Shade is a better way to make a color darker instead of the standard Sass functi
 		color: shade( $color, $percentage );
 	}
 */
-
-@import "core/functions/rem";
-@import "core/functions/tint";
-@import "core/functions/shade";
-@import "core/functions/strip_units";
-@import "core/functions/modular_scale";
 
 
 /*doc
@@ -68,11 +348,6 @@ Direction values: up, right, bottom, left.
 
 
 */
-
-@import "core/mixins/vertical_rhythm";
-@import "core/mixins/media_queries";
-@import "core/mixins/grid_column";
-@import "core/mixins/arrow";
 
 
 /*doc
@@ -323,217 +598,6 @@ Break a word with a hyphen (hyphen not supported in Blink as of writing).
 
 */
 
-@import "core/helpers/clearfix";
-@import "core/helpers/colors";
-@import "core/helpers/hide";
-@import "core/helpers/lists";
-@import "core/helpers/visually_hidden";
-@import "core/helpers/margin";
-@import "core/helpers/padding";
-@import "core/helpers/grid_margin";
-@import "core/helpers/float";
-@import "core/helpers/round";
-@import "core/helpers/vertical_align";
-@import "core/helpers/text_align";
-@import "core/helpers/text_transform";
-@import "core/helpers/font_style";
-@import "core/helpers/font_weight";
-@import "core/helpers/position";
-@import "core/helpers/display";
-@import "core/helpers/ellipsis";
-@import "core/helpers/break_word";
-@import "core/helpers/css_columns";
-@import "core/helpers/disable_transitions";
-@import "core/helpers/disable_hover";
-
-
-/* Animations
-==========
-*/
-
-@import "core/animations/animated";
-@import "core/animations/shake";
-@import "core/animations/bounceIn";
-@import "core/animations/bounceInDown";
-@import "core/animations/bounceInLeft";
-@import "core/animations/bounceInRight";
-@import "core/animations/bounceInUp";
-@import "core/animations/fadeIn";
-@import "core/animations/fadeInDown";
-@import "core/animations/fadeInDownBig";
-@import "core/animations/fadeInLeft";
-@import "core/animations/fadeInLeftBig";
-@import "core/animations/fadeInRight";
-@import "core/animations/fadeInRightBig";
-@import "core/animations/fadeInUp";
-@import "core/animations/fadeInUpBig";
-@import "core/animations/fadeInRotate";
-@import "core/animations/fadeOutUp";
-@import "core/animations/zoomIn";
-@import "core/animations/zoomInDown";
-@import "core/animations/zoomInLeft";
-@import "core/animations/zoomInRight";
-@import "core/animations/zoomInUp";
-@import "core/animations/flipInX";
-@import "core/animations/flipInY";
-
-
-/* Layout
-==========
-*/
-
-@import "core/layout/generic";
-@import "core/layout/containers";
-@import "core/layout/flexbox_grid";
-@import "core/layout/flexible_grid";
-@import "core/layout/grid";
-@import "core/layout/sections";
-@import "core/layout/typography";
-@import "core/layout/icons";
-@import "core/layout/styleguide"; // Remove this for production
-
-
-/* Optional components
-==========
-You can comment some of these out
-for a smaller generated CSS file.
-*/
-
-@import "core/components/breadcrumbs";
-@import "core/components/spinners";
-@import "core/components/scrollspy";
-@import "core/components/toggle";
-@import "core/components/affix";
-@import "core/components/google_maps";
-
-
-/* Dropdown
-==========
-*/
-
-@import "core/components/dropdown/base";
-@import "core/components/dropdown/content";
-@import "core/components/dropdown/list";
-@import "core/components/dropdown/item";
-@import "core/components/dropdown/link";
-
-
-/* Cards
-==========
-*/
-
-@import "core/components/cards/base";
-@import "core/components/cards/header";
-@import "core/components/cards/content";
-@import "core/components/cards/title";
-@import "core/components/cards/action";
-
-
-/* Cards
-==========
-*/
-
-@import "core/components/tooltips/base";
-@import "core/components/tooltips/content";
-@import "core/components/tooltips/position";
-
-
-/* Tabs
-==========
-*/
-
-@import "core/components/tabs/base";
-@import "core/components/tabs/tab";
-@import "core/components/tabs/item";
-@import "core/components/tabs/content";
-
-
-/* Modal
-==========
-*/
-
-@import "core/components/modal/base";
-@import "core/components/modal/content";
-@import "core/components/modal/overlay";
-@import "core/components/modal/close";
-
-
-/* Navigation bar
-==========
-*/
-
-@import "core/components/nav_bar/base";
-@import "core/components/nav_bar/transform";
-@import "core/components/nav_bar/transparent";
-@import "core/components/nav_bar/fixed";
-@import "core/components/nav_bar/container";
-@import "core/components/nav_bar/nav";
-@import "core/components/nav_bar/trigger";
-@import "core/components/nav_bar/list";
-@import "core/components/nav_bar/link";
-
-
-/* Off canvas
-==========
-*/
-
-@import "core/components/off_canvas/base";
-@import "core/components/off_canvas/toggle";
-@import "core/components/off_canvas/push";
-@import "core/components/off_canvas/nav";
-
-
-/* Tables
-==========
-*/
-
-@import "core/components/tables/base";
-@import "core/components/tables/bordered";
-@import "core/components/tables/hover";
-@import "core/components/tables/zebra";
-@import "core/components/tables/responsive";
-
-
-/* Accordion
-==========
-*/
-
-@import "core/components/accordion/base";
-@import "core/components/accordion/group";
-@import "core/components/accordion/trigger";
-@import "core/components/accordion/content";
-
-
-/* Media
-==========
-*/
-
-@import "core/components/media/base";
-@import "core/components/media/alpha";
-@import "core/components/media/beta";
-@import "core/components/media/list";
-
-
-/* Pricing table
-==========
-*/
-
-@import "core/components/pricing_table/base";
-@import "core/components/pricing_table/header";
-@import "core/components/pricing_table/content";
-@import "core/components/pricing_table/description";
-@import "core/components/pricing_table/price";
-
-
-/* Progress
-==========
-*/
-
-@import "core/components/progress/base";
-@import "core/components/progress/value";
-@import "core/components/progress/inderterminate";
-
-	
 /*doc
 ---
 title: Buttons
@@ -542,42 +606,3 @@ category: Buttons
 ---
 
 */
-
-@import "core/components/buttons/container";
-@import "core/components/buttons/group";
-@import "core/components/buttons/sizes";
-@import "core/components/buttons/styles";
-@import "core/components/buttons/block";
-@import "core/components/buttons/mask";
-@import "core/components/buttons/ghost";
-@import "core/components/buttons/ripple";
-@import "core/components/buttons/reset_btn";
-@import "core/components/buttons/dropdown";
-
-
-/* Forms
-==========
-*/
-
-@import "core/components/form/form";
-@import "core/components/form/general";
-@import "core/components/form/placeholder";
-@import "core/components/form/checkbox";
-@import "core/components/form/radio";
-@import "core/components/form/file";
-@import "core/components/form/range";
-@import "core/components/form/validation";
-@import "core/components/form/password";
-@import "core/components/form/floating_label";
-
-
-/* Notifications
-==========
-*/
-
-@import "core/components/notifications/notification";
-@import "core/components/notifications/sizes";
-@import "core/components/notifications/styles";
-@import "core/components/notifications/identifiers";
-@import "core/components/notifications/cookie_notification";
-

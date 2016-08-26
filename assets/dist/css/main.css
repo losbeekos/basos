@@ -1,38 +1,4 @@
 @charset "UTF-8";
-/*doc
----
-title: Getting started
-name: 1_getting_started
-category: Getting started
----
-
-Make sure you have GruntJS and Bower.
-
-#### Bower dependencies
-Install the Bower dependencies, see bower.json.
-
-	$ bower install
-
-#### Node dependencies
-Install the Node dependencies, see package.json.
-
-	$ npm install
-
-#### Start server
-Start the web server which is used by BrowserSync.
-
-	$ grunt connect
-
-#### Run browserSync
-Run BrowserSync to auto reload when dist files change.
-
-	$ grunt browserSync
-
-#### Watch for changes
-
-	$ grunt watch
-
-*/
 /*
     Imports settings.scss and the grid dependency [Susy](http://susy.oddbird.net)
 */
@@ -142,21 +108,9 @@ input[type=radio] + label::after, .form__password-toggle::after, .notification::
   font-family: 'icons', 'arial', 'verdana';
   font-weight: normal; }
 
-/*doc
- ---
- title: Vendor
- name: 1_vendor
- category: Vendor
- ---
-
-## Normalize
-A modern, HTML5-ready alternative to CSS resets [https://necolas.github.io/normalize.css](https://necolas.github.io/normalize.css).
-
-## Basos
-Some HTML tag CSS enhancements are used from H5BP [https://html5boilerplate.com](https://html5boilerplate.com).
-And some things are borrowed from Twitter's bootstrap [Reboot](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss)
-
- */
+/* Vendor
+==========
+*/
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
 /**
  * 1. Change the default font family in all browsers (opinionated).
@@ -610,26 +564,8 @@ textarea {
 [hidden] {
   display: none !important; }
 
-/*doc
----
-title: Functions
-name: functions
-category: Structure
----
-
-## Tint
-Tint is a better way to make a color lighter instead of the standard Sass function "lighten".
-
-	.some-class {
-		color: tint( $color, $percentage );
-	}
-
-## Shade
-Shade is a better way to make a color darker instead of the standard Sass function "darken".
-
-	.some-class {
-		color: shade( $color, $percentage );
-	}
+/* Functions
+==========
 */
 /* Rem
 ==========
@@ -640,27 +576,8 @@ Shade is a better way to make a color darker instead of the standard Sass functi
 You can use this for margins and padding. Standard this is used for typography margin for example.
 
 */
-/*doc
----
-title: Mixins
-name: mixins
-category: Structure
----
-
-## Arrow
-This mixin will create a CSS triangle.
-Direction values: up, right, bottom, left.
-
-	@include arrow($width, $height, $direction, $color);
-
-```
-@access public
-@param {Color} $color - color to shade
-@param {Number} $percentage - percentage of `$color` in returned color
-@return {Color}
-````
-
-
+/* Mixins
+==========
 */
 /* Vertical rhythm
 ==========
@@ -707,252 +624,8 @@ You can nest the above code in your CSS selector like this.
 /* Arrow
 ==========
 */
-/*doc
----
-title: Helper classes
-name: helpers_classes
-category: Structure
----
-
-## Clearfix
-Clearfix container class, add this class to a wrapping element which contains floating elements.
-
-```html_example
-<div class="clearfix">
-	<div class="float-left"></div>
-	<div class="float-left"></div>
-</div>
-````
-
-You can also extend it in your SCSS files like this;
-
-```
-.your-class {
-	@extend .clearfix;
-}
-```
-
-## Hide
-Hide classes are used for responsive design, for some breakpoints you can hide content if you need to.
-
-```html_example
-<div class="hide-alpha">This will show on medium to large screens</div>
-<div class="hide-alpha-and-beta">This will show on larger screens</div>
-<div class="hide-beta-and-up">This will show on small screens</div>
-<div class="hide-gamma-and-up">This will show on even larger screens</div>
-```
-
-## Lists
-
-### Unordened list
-
-```html_example
-<ul>
-	<li>Lorem ipsum</li>
-	<li>Lorem ipsum</li>
-	<li>Lorem ipsum</li>
-</ul>
-```
-
-### Ordened list
-
-```html_example
-<ol>
-	<li>Lorem ipsum</li>
-	<li>Lorem ipsum</li>
-	<li>Lorem ipsum</li>
-</ol>
-```
-
-### Unstyled list
-
-```html_example
-<ul class="list-unstyled">
-	<li>Lorem ipsum</li>
-	<li>Lorem ipsum</li>
-	<li>Lorem ipsum</li>
-</ul>
-```
-
-### Inline list
-
-```html_example
-<ul class="list-inline">
-	<li>Lorem ipsum</li>
-	<li>Lorem ipsum</li>
-	<li>Lorem ipsum</li>
-</ul>
-```
-
-## Visually hidden
-Hide only visually, but have it available for screenreaders.
-
-	.visuallyhidden
-	.show-screenreaders
-
-
-### Grid margin
-
-```html_example
-<div class="grid-margin-top">Percentual grid margins</div>
-```
-
-## Margin
-These classes will give margin to any element. It will overrule the specified margin of the element.
-
-Keys available:
-
-- alpha (default: 10)
-- beta (default: 20)
-- gamma (default: 30)
-- delta (default: 40)
-- epsilon (default: 50)
-- zeta (default: 80)
-- eta (default: 100)
-
-### Default margin
-```html_example
-<div class="margin-alpha">Margin alpha all around</div>
-```
-
-### Left margin
-```html_example
-<div class="margin-beta-left">Margin beta left</div>
-```
-
-### Reset margin classes
-
-- no-margin
-- no-bottom-margin
-- no-top-margin
-- no-left-margin
-- no-right-margin
-- no-vertical-margin
-- no-horizontal-margin
-
-## Padding
-These classes will give padding to any element. It will overrule the specified padding of the element.
-
-Keys available:
-
-- alpha (default: 10)
-- beta (default: 20)
-- gamma (default: 30)
-- delta (default: 40)
-- epsilon (default: 50)
-- zeta (default: 80)
-- eta (default: 100)
-
-### Default padding
-```html_example
-<div class="padding-alpha">padding alpha all around</div>
-```
-
-### Left padding
-```html_example
-<div class="padding-beta-left">padding beta left</div>
-```
-
-### Reset padding classes
-
-- no-padding
-- no-bottom-padding
-- no-top-padding
-- no-left-padding
-- no-right-padding
-- no-vertical-padding
-- no-horizontal-padding
-
-
-## Float
-Give a float or disable float for an element.
-
-- float-left
-- float-right
-- float-none
-
-
-## Round
-Make something round, for an avatar for example.
-
-- round
-
-## Text align
-Align text. Available classes are;
-
-- text-align-left
-- text-align-center
-- text-align-right
-
-You can also use these classes with a media query appendix.
-
-- text-align-left-beta-and-up
-- text-align-left-gamma-and-up
-
-
-## Text transform
-
-- text-transform-caps
-- text-transform-thin
-- text-transform-small
-
-
-## Font style
-
-- font-style-normal
-- font-style-italic
-- font-style-bold
-
-## Position
-
-- position-relative
-- position-absolute
-
-## Display
-
-- display-inline
-- display-inline-block
-- display-block
-- display-none
-
-### Display table
-Display table class needs some an extra child if you need to vertically center content.
-
-```html_example
-<div class="display-table card" style="height: 100px;">
-	<div class="card__content display-table__middle">
-		This text will center align
-	</div>
-</div>
-```
-
-```html_example
-<div class="display-table card" style="height: 100px;">
-	<div class="card__content display-table__bottom">
-		This text will bottom align
-	</div>
-</div>
-```
-
-## Ellipsis
-Pure CSS ellipsis class
-
-```html_example
-<div class="ellipsis">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem, ullam magnam, esse numquam voluptatum culpa neque laboriosam officiis, sint animi beatae qui vero molestias aliquam dolore ea autem. Ipsam!
-</div>
-```
-
-## Break word
-Break a word with a hyphen (hyphen not supported in Blink as of writing).
-
-```html_example
-<div class="break-word" style="width: 200px">
-	Loremipsumdolorsitametconsecteturessenumquamvoluptatumculpa
-</div>
-```
-
-
+/* Helpers
+==========
 */
 /* Clearfix
 ==========
@@ -7140,13 +6813,8 @@ progress:not([value]) {
 .progress-bar__value:not([style]) {
   background-color: #f7f7f7; }
 
-/*doc
----
-title: Buttons
-name: 5_buttons
-category: Buttons
----
-
+/* Buttons
+==========
 */
 /* Button container
 ==========
@@ -9283,6 +8951,319 @@ app.notifications.add(target, message, size, type);
   .notification--cookie .notification__close {
     color: white; }
 
+/*doc
+ ---
+ title: Vendor
+ name: 1_vendor
+ category: Vendor
+ ---
+
+## Normalize
+A modern, HTML5-ready alternative to CSS resets [https://necolas.github.io/normalize.css](https://necolas.github.io/normalize.css).
+
+## Basos
+Some HTML tag CSS enhancements are used from H5BP [https://html5boilerplate.com](https://html5boilerplate.com).
+And some things are borrowed from Twitter's bootstrap [Reboot](https://github.com/twbs/bootstrap/blob/v4-dev/scss/_reboot.scss)
+
+ */
+/*doc
+---
+title: Functions
+name: functions
+category: Structure
+---
+
+## Tint
+Tint is a better way to make a color lighter instead of the standard Sass function "lighten".
+
+	.some-class {
+		color: tint( $color, $percentage );
+	}
+
+## Shade
+Shade is a better way to make a color darker instead of the standard Sass function "darken".
+
+	.some-class {
+		color: shade( $color, $percentage );
+	}
+*/
+/*doc
+---
+title: Mixins
+name: mixins
+category: Structure
+---
+
+## Arrow
+This mixin will create a CSS triangle.
+Direction values: up, right, bottom, left.
+
+	@include arrow($width, $height, $direction, $color);
+
+```
+@access public
+@param {Color} $color - color to shade
+@param {Number} $percentage - percentage of `$color` in returned color
+@return {Color}
+````
+
+
+*/
+/*doc
+---
+title: Helper classes
+name: helpers_classes
+category: Structure
+---
+
+## Clearfix
+Clearfix container class, add this class to a wrapping element which contains floating elements.
+
+```html_example
+<div class="clearfix">
+	<div class="float-left"></div>
+	<div class="float-left"></div>
+</div>
+````
+
+You can also extend it in your SCSS files like this;
+
+```
+.your-class {
+	@extend .clearfix;
+}
+```
+
+## Hide
+Hide classes are used for responsive design, for some breakpoints you can hide content if you need to.
+
+```html_example
+<div class="hide-alpha">This will show on medium to large screens</div>
+<div class="hide-alpha-and-beta">This will show on larger screens</div>
+<div class="hide-beta-and-up">This will show on small screens</div>
+<div class="hide-gamma-and-up">This will show on even larger screens</div>
+```
+
+## Lists
+
+### Unordened list
+
+```html_example
+<ul>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+</ul>
+```
+
+### Ordened list
+
+```html_example
+<ol>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+</ol>
+```
+
+### Unstyled list
+
+```html_example
+<ul class="list-unstyled">
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+</ul>
+```
+
+### Inline list
+
+```html_example
+<ul class="list-inline">
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+	<li>Lorem ipsum</li>
+</ul>
+```
+
+## Visually hidden
+Hide only visually, but have it available for screenreaders.
+
+	.visuallyhidden
+	.show-screenreaders
+
+
+### Grid margin
+
+```html_example
+<div class="grid-margin-top">Percentual grid margins</div>
+```
+
+## Margin
+These classes will give margin to any element. It will overrule the specified margin of the element.
+
+Keys available:
+
+- alpha (default: 10)
+- beta (default: 20)
+- gamma (default: 30)
+- delta (default: 40)
+- epsilon (default: 50)
+- zeta (default: 80)
+- eta (default: 100)
+
+### Default margin
+```html_example
+<div class="margin-alpha">Margin alpha all around</div>
+```
+
+### Left margin
+```html_example
+<div class="margin-beta-left">Margin beta left</div>
+```
+
+### Reset margin classes
+
+- no-margin
+- no-bottom-margin
+- no-top-margin
+- no-left-margin
+- no-right-margin
+- no-vertical-margin
+- no-horizontal-margin
+
+## Padding
+These classes will give padding to any element. It will overrule the specified padding of the element.
+
+Keys available:
+
+- alpha (default: 10)
+- beta (default: 20)
+- gamma (default: 30)
+- delta (default: 40)
+- epsilon (default: 50)
+- zeta (default: 80)
+- eta (default: 100)
+
+### Default padding
+```html_example
+<div class="padding-alpha">padding alpha all around</div>
+```
+
+### Left padding
+```html_example
+<div class="padding-beta-left">padding beta left</div>
+```
+
+### Reset padding classes
+
+- no-padding
+- no-bottom-padding
+- no-top-padding
+- no-left-padding
+- no-right-padding
+- no-vertical-padding
+- no-horizontal-padding
+
+
+## Float
+Give a float or disable float for an element.
+
+- float-left
+- float-right
+- float-none
+
+
+## Round
+Make something round, for an avatar for example.
+
+- round
+
+## Text align
+Align text. Available classes are;
+
+- text-align-left
+- text-align-center
+- text-align-right
+
+You can also use these classes with a media query appendix.
+
+- text-align-left-beta-and-up
+- text-align-left-gamma-and-up
+
+
+## Text transform
+
+- text-transform-caps
+- text-transform-thin
+- text-transform-small
+
+
+## Font style
+
+- font-style-normal
+- font-style-italic
+- font-style-bold
+
+## Position
+
+- position-relative
+- position-absolute
+
+## Display
+
+- display-inline
+- display-inline-block
+- display-block
+- display-none
+
+### Display table
+Display table class needs some an extra child if you need to vertically center content.
+
+```html_example
+<div class="display-table card" style="height: 100px;">
+	<div class="card__content display-table__middle">
+		This text will center align
+	</div>
+</div>
+```
+
+```html_example
+<div class="display-table card" style="height: 100px;">
+	<div class="card__content display-table__bottom">
+		This text will bottom align
+	</div>
+</div>
+```
+
+## Ellipsis
+Pure CSS ellipsis class
+
+```html_example
+<div class="ellipsis">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis rem, ullam magnam, esse numquam voluptatum culpa neque laboriosam officiis, sint animi beatae qui vero molestias aliquam dolore ea autem. Ipsam!
+</div>
+```
+
+## Break word
+Break a word with a hyphen (hyphen not supported in Blink as of writing).
+
+```html_example
+<div class="break-word" style="width: 200px">
+	Loremipsumdolorsitametconsecteturessenumquamvoluptatumculpa
+</div>
+```
+
+
+*/
+/*doc
+---
+title: Buttons
+name: 5_buttons
+category: Buttons
+---
+
+*/
 /*
 Imports the app specific SCSS modules, there are a few already made for you.
 You can add your own custom modules here which you'll need for the thing you're building.
@@ -9356,6 +9337,40 @@ You can add your own custom modules here which you'll need for the thing you're 
   h3 {
     page-break-after: avoid; } }
 
+/*doc
+---
+title: Getting started
+name: 1_getting_started
+category: Getting started
+---
+
+Make sure you have GruntJS and Bower.
+
+#### Bower dependencies
+Install the Bower dependencies, see bower.json.
+
+	$ bower install
+
+#### Node dependencies
+Install the Node dependencies, see package.json.
+
+	$ npm install
+
+#### Start server
+Start the web server which is used by BrowserSync.
+
+	$ grunt connect
+
+#### Run browserSync
+Run BrowserSync to auto reload when dist files change.
+
+	$ grunt browserSync
+
+#### Watch for changes
+
+	$ grunt watch
+
+*/
 /*doc
 ---
 title: Structure
