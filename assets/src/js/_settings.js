@@ -14,6 +14,7 @@ app.settings = {
 	// Nodes
 	html: document.querySelector('html'),
 	body: document.body,
+	container: document.getElementById('container'),
 
 	// jQuery objects
 	$document: $(document),

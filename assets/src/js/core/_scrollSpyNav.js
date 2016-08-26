@@ -17,8 +17,8 @@ app.scrollSpyNav = {
                     $next = $this.parent().next().find('[data-jumpto-extra-offset]'),
                     nextTop = app.settings.$document.height();
 
-                if (app.navBar.settings.$el.length > 0) {
-                    targetTop = targetTop - app.navBar.settings.$el.height();
+                if (app.navBar.settings.el.length > 0) {
+                    targetTop = targetTop - app.navBar.settings.el.offsetHeight;
                 }
 
                 $next.length === 0 ? nextTop = app.settings.$document.height() : nextTop = $next.position().top;

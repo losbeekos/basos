@@ -28,8 +28,8 @@ app.jump = {
 
         _extraOffset === undefined ? 0 : '';
 
-        if (app.navBar.settings.$el.length > 0) {
-            offsetTop = offsetTop - (app.navBar.settings.$el.height() + _extraOffset);
+        if (app.navBar.settings.el.length > 0) {
+            offsetTop = offsetTop - (app.navBar.settings.el.offsetHeight + _extraOffset);
         } else {
             offsetTop = offsetTop + _extraOffset;
         }

@@ -17,6 +17,7 @@ module.exports = {
 			// 'bower_components/jQuery.serializeObject/dist/jquery.serializeObject.min.js',
 
 			// Basos
+			'<%= basos.src %>/js/polyfills/*.js',
 			'<%= basos.src %>/js/_settings.js',
 			'<%= basos.src %>/js/_mediaQueries.js',
 			'<%= basos.src %>/js/helpers/*.js',
