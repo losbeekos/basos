@@ -1,0 +1,43 @@
+/* Off canvas nav
+==========
+*/
+
+.off-canvas-nav {
+	overflow-y: auto;
+	height: 100%;
+	max-height: 100%;
+	padding-top: rem(10px);
+	padding-bottom: rem(10px);
+}
+
+.off-canvas-nav__item {
+	border-top: rem(1px) solid map-get($off-canvas, item-border-top-color);
+	border-bottom: rem(1px) solid map-get($off-canvas, item-border-bottom-color);
+
+	&:first-child {
+		border-top: 0;
+	}
+
+	&:last-child {
+		border-bottom: 0;
+	}
+}
+
+.off-canvas-nav__header {
+	color: white;
+	padding: rem(20px) rem(20px) rem(10px) rem(20px);
+	font-size: rem(18px);
+}
+
+.off-canvas-nav__link {
+	display: block;
+	color: map-get($off-canvas, link-color);
+	padding: rem(map-get($off-canvas, link-padding-vertical)) rem(map-get($off-canvas, link-padding-horizontal));
+
+	&--active,
+	&.active,
+	&.scrollspy-nav--active {
+		background: tint(map-get($off-canvas, bg-color), 10%);
+		font-weight: 400;
+	}
+}

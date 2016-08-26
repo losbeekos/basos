@@ -1,0 +1,9 @@
+/* Table zebra
+==========
+*/
+
+.table--zebra {
+	tr:nth-child(even) td {
+		background: map-get($table, bg-color-zebra);
+	}
+}

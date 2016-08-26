@@ -1,0 +1,9 @@
+/* Pricing tables header
+==========
+*/
+
+.pricing-table__header {
+	background: map-get($pricing-table, header-bg-color);
+	color: white;
+	padding: rem(map-get($pricing-table, header-padding-vertical)) rem(map-get($pricing-table, header-padding-horizontal));
+}

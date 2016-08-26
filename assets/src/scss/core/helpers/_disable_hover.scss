@@ -1,0 +1,8 @@
+/* Layout hover
+==========
+*/
+
+.disable-hover,
+.disable-hover * {
+	pointer-events: none !important;
+}

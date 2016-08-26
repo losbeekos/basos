@@ -1,0 +1,40 @@
+/* Button ripple
+==========
+*/
+
+@keyframes btn-ripple {
+	100% {
+		opacity: 0; 
+		transform: scale(2.5);
+	}
+}
+
+.btn--ripple {
+	overflow: hidden;
+	position: relative;
+
+	&.tooltip {
+		overflow: visible;
+	}
+}
+
+.btn__ripple {
+	display: block; 
+	position: absolute;
+	background: rgba(255, 255, 255, 0.25);
+	border-radius: 100%;
+	transform: scale(0);
+
+	.btn--light &,
+	.btn--alpha & {
+		background: rgba(0, 0, 0, 0.2);
+	}
+
+	.btn--ripple-animate & {
+		animation: btn-ripple 0.4s linear;
+	}
+
+	.tooltip & {
+		display: none;
+	}
+}

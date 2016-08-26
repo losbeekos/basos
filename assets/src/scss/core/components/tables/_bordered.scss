@@ -1,0 +1,16 @@
+/* Table bordered
+==========
+*/
+
+.table--bordered {
+	border: rem(1px) solid map-get($table, border-color);
+
+	td,
+	th {
+		border-left: rem(1px) solid map-get($table, border-color);
+
+		&:first-child {
+			border-left: none;
+		}
+	}
+}

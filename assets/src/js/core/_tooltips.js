@@ -57,10 +57,6 @@ app.tooltips = {
             case 'top':
                 $tooltipContent.css({ bottom: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
                 break;
-            case 'right':
-            case 'left':
-                $tooltipContent.css({ 'margin-top': -(tooltipContentHeight/2) });
-                break;
             case 'bottom':
                 $tooltipContent.css({ top: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
                 break;

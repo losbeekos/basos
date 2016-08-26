@@ -1,0 +1,17 @@
+/* Tabs item
+==========
+*/
+
+.tab-item {
+	overflow: hidden;
+	height: 0;
+	width: 0;
+	opacity: 0;
+	transition: opacity map-get($tabs, item-transition-speed);
+
+	&.tab-item--active {
+		height: auto;
+		width: 100%;
+		opacity: 1;
+	}
+}

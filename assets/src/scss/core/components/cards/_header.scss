@@ -1,0 +1,19 @@
+/* Cards header
+==========
+*/
+
+.card__header {
+	background-color: transparent;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	color: white;
+	padding: rem(20px);
+	height: rem(220px);
+
+	@each $key, $value in $btn-bg {
+		&--#{$key} {
+			background-color: map-get($btn-bg, $key);
+		}
+	}
+}

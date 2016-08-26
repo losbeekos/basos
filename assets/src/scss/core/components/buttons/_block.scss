@@ -1,0 +1,24 @@
+/*doc
+---
+title: Block
+name: block
+category: Buttons
+---
+
+```html_example
+<div class="grid">
+	<div class="column-6">
+		<a class="btn btn--block btn--beta btn--large" href="#link">block button</a>
+	</div>
+	<div class="column-6">
+		<a class="btn btn--block btn--beta btn--large" href="#link">block button</a>
+	</div>
+</div>
+```
+
+*/
+
+.btn--block {
+	min-width: 100%;
+	display: block;
+}

@@ -1,0 +1,34 @@
+/*doc
+---
+title: Ghost
+name: ghost
+category: Buttons
+---
+
+Add more colors in the settings file under "buttons" if you need to.
+
+```html_example
+<a class="btn btn--ghost btn--dark btn--small" href="#link">black</a>
+```
+
+*/
+
+.btn--ghost {
+	background: transparent;
+	border-width: map-get($btn, ghost-border-width);
+	border-radius: map-get($btn, ghost-border-radius);
+	color: map-get($color, text);
+	text-shadow: none;
+	opacity: map-get($btn, ghost-opacity);
+
+	&:hover {
+		opacity: map-get($btn, ghost-opacity-hover);
+	}
+
+	&:hover,
+	&:active,
+	&:focus {
+		background: transparent;
+		color: map-get($color, text);
+	}
+}

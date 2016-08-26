@@ -1,0 +1,9 @@
+/* Cards content
+==========
+*/
+
+.card__content {
+	@extend .clearfix;
+
+	padding: rem(20px);
+}

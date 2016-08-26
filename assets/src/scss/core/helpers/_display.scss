@@ -20,17 +20,17 @@
 
 .display-table {
 	display: table !important;
-
-	&__middle,
-	&__bottom {
-		display: table-cell !important;
-	}
-
-	&__middle {
-		vertical-align: middle !important;
-	}
-
-	&__bottom {
-		vertical-align: bottom !important;
-	}
  }
+
+.display-table__middle,
+.display-table__bottom {
+	display: table-cell !important;
+}
+
+.display-table__middle {
+	vertical-align: middle !important;
+}
+
+.display-table__bottom {
+	vertical-align: bottom !important;
+}

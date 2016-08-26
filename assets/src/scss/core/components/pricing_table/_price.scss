@@ -1,0 +1,7 @@
+/* Pricing tables price
+==========
+*/
+
+.pricing-table__price {
+	font-size: rem(map-get($pricing-table, price-font-size));
+}

@@ -1,0 +1,181 @@
+.btn-dropdown {
+	position: relative;
+	display: inline-block;
+}
+
+.btn-dropdown__action {
+	float: left;
+	border-top-left-radius: map-get($btn, border-radius);
+	border-bottom-left-radius: map-get($btn, border-radius);
+
+	.btn-dropdown--action & {
+		float: none;
+		border-radius: map-get($btn, border-radius);
+	}
+
+	&::before {
+		color: map-get($color, kappa);
+	}
+
+	&::after {
+		@extend %font-icons;
+
+		color: map-get($color, kappa);
+
+		.btn-dropdown--action & {
+			content: '\e80a';
+			margin-left: rem(10px);
+
+			// transition: transform map-get($dropdown, transition-duration); // Creates a renderbug in chrome when rotating...
+		}
+
+		.btn-dropdown--action.btn-dropdown--open & {
+			transform: rotate(180deg);
+		}
+
+		.btn-dropdown--no-arrow & {
+			display: none;
+		}
+	}
+}
+
+.btn-dropdown__toggle {
+	@extend .icon;
+	@extend .icon--down;
+
+	margin-left: rem(-1px);
+	border-top-right-radius: map-get($btn, border-radius);
+	border-bottom-right-radius: map-get($btn, border-radius);
+
+	&::before {
+		// transition: transform map-get($dropdown, transition-duration); // Creates a renderbug in chrome when rotating...
+
+		.btn-dropdown--open & {
+			transform: rotate(180deg);
+		}
+	}
+}
+
+.btn-dropdown__dropdown {
+	@extend .list-unstyled;
+
+	overflow: hidden;
+	position: absolute;
+	left: 0;
+	margin-top: rem(1px);
+	visibility: hidden;
+	background-color: white;
+	border: map-get($dropdown, border);
+	opacity: 0;
+	z-index: 9999;
+	transition: all map-get($dropdown, transition-duration);
+	transform: map-get($dropdown, transform);
+	min-width: rem(map-get($dropdown, min-width));
+	max-width: rem(map-get($dropdown, max-width));
+	border-radius: rem(4px);
+
+	.btn-dropdown--open & {
+		visibility: visible;
+		opacity: 1;
+		transition: all map-get($dropdown, transition-duration);
+		transform: map-get($dropdown, transform-hover);
+	}
+}
+
+.btn-dropdown__dropdown--right {
+	left: inherit;
+	right: 0;
+}
+
+.btn-dropdown__list {
+	@extend .clearfix;
+	@extend .list-unstyled;
+}
+
+.btn-dropdown__list--border-bottom {
+	border-bottom: rem(1px) solid #e0e0e0;
+}
+
+.btn-dropdown__list--padding {
+	padding: rem(14px) rem(16px);
+}
+
+.btn-dropdown__item {
+	font-size: rem(14px);
+
+	.btn--small & {
+		font-size: rem(map-get($btn, font-size-small));
+	}
+
+	.btn--medium & {
+		font-size: rem(map-get($btn, font-size-medium));
+	}
+
+	.btn--large & {
+		font-size: rem(map-get($btn, font-size-large));
+	}
+
+	+ .btn-dropdown__item {
+		margin-top: rem(10px);
+	}
+}
+
+.btn-dropdown__link {
+	background-color: map-get($dropdown, link-bg-color);
+	display: block;
+	color: map-get($color, text);
+	font-size: rem(14px);
+	padding: rem(map-get($dropdown, link-padding-vertical)) rem(map-get($dropdown, link-padding-horizontal));
+
+	&:hover {
+		background-color: map-get($dropdown, link-bg-color-hover);
+	}
+}
+
+/*doc
+---
+title: Split
+name: split_button
+category: Buttons
+---
+
+```html_example
+<div class="btn-dropdown">
+	<button type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--cog icon--margin-alpha">Activate</button>
+	<button type="button" class="btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered" data-btn-dropdown-toggle aria-haspopup="true" aria-expanded="false"></button>
+	<div class="btn-dropdown__dropdown" data-btn-dropdown="allowPropagation">
+		<ul class="btn-dropdown__list btn-dropdown__list--border-bottom" data-btn-dropdown="allowPropagation">
+			<li><a class="btn-dropdown__link" href="#link">Deactivate</a></li>
+			<li><a class="btn-dropdown__link" href="#link">Concept</a></li>
+		</ul>
+		<a class="btn btn--mask btn--medium btn--block" href="#link">Delete</a>
+	</div>
+</div>
+```
+
+*/
+
+/*doc
+---
+title: Dropdown
+name: dropdown_button
+category: Buttons
+---
+
+```html_example
+<div class="btn-dropdown btn-dropdown--action">
+	<button type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--filter icon--margin-beta-before" data-btn-dropdown-toggle>Filter</button>
+	<div class="btn-dropdown__dropdown">
+		<ul class="btn-dropdown__list btn-dropdown__list--border-bottom btn-dropdown__list--padding">
+			<li class="btn-dropdown__item"><input name="checkbox-active" type="checkbox" id="checkbox-active"><label for="checkbox-active">Active</label></li>
+			<li class="btn-dropdown__item"><input name="checkbox-inactive" type="checkbox" id="checkbox-inactive"><label for="checkbox-inactive">Inactive</label></li>
+			<li class="btn-dropdown__item"><input name="checkbox-concept" type="checkbox" id="checkbox-concept"><label for="checkbox-concept">Concept</label></li>
+			<li class="btn-dropdown__item"><input name="checkbox-published" type="checkbox" id="checkbox-published"><label for="checkbox-published">Published</label></li>
+			<li class="btn-dropdown__item"><input name="checkbox-notpublished" type="checkbox" id="checkbox-notpublished"><label for="checkbox-notpublished">Unpublished</label></li>
+		</ul>
+		<a class="btn btn--mask btn--medium btn--block" data-status-clear-checkboxes>Remove filters</a>
+	</div>
+</div>
+```
+
+*/

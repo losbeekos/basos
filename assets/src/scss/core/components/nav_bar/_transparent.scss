@@ -1,0 +1,26 @@
+/* Navigation bar transparent
+==========
+*/
+
+.nav-bar--transparent {
+	&:not(.nav-bar--fixed) {
+		@include mq(map-get($nav-bar, mq)) {
+			background: transparent;
+
+			.nav-bar__link {
+				color: black;
+
+				&.nav-bar__link--active,
+				&.scrollspy-nav--active,
+				&:hover {
+					background: transparent;
+					color: map-get($color, beta);
+				}
+			}
+
+			.nav-bar--transparent & {
+				color: map-get($nav-bar, link-color);
+			}
+		}
+	}
+}

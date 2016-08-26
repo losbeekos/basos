@@ -1,0 +1,128 @@
+/* Media
+==========
+*/
+
+.media {
+	@extend .clearfix;
+
+	margin-bottom: rem(map-get($media, margin-bottom));
+
+	.media {
+		margin-bottom: rem(map-get($media, margin-bottom)/2);
+	}
+}
+
+/*doc
+---
+title: Media
+name: media
+category: Content
+---
+
+## Left
+
+```html_example
+<div class="media media--left">
+	<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+	<div class="media__beta">
+		<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
+		<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+	</div>
+</div>
+```
+
+## Right
+
+```html_example
+<div class="media media--right">
+	<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+	<div class="media__beta">
+		<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
+		<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+	</div>
+</div>
+```
+
+## Nested
+
+```html_example
+<div class="media media--left">
+	<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+	<div class="media__beta">
+		<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
+		<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+		<div class="media media--left">
+			<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+			<div class="media__beta">
+				<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
+				<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+			</div>
+		</div>
+		<div class="media media--left">
+			<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+			<div class="media__beta">
+				<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
+				<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+			</div>
+		</div>
+	</div>
+</div>
+```
+
+## List
+
+```html_example
+<ul class="media-list">
+	<li class="media media--left">
+		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+		<div class="media__beta">
+			<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
+			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+		</div>
+	</li>
+	<li class="media media--left">
+		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+		<div class="media__beta">
+			<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
+			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+		</div>
+	</li>
+</ul>
+```
+
+## Bordered list
+
+```html_example
+<ul class="media-list media-list--bordered">
+	<li class="media media--left">
+		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+		<div class="media__beta">
+			<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
+			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+		</div>
+	</li>
+	<li class="media media--left">
+		<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+		<div class="media__beta">
+			<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
+			<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+			<div class="media media--left">
+				<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+				<div class="media__beta">
+					<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
+					<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+				</div>
+			</div>
+			<div class="media media--left">
+				<div class="media__alpha"><img src="http://placehold.it/400x300/f1f1f1/cfcfcf&text=basos" alt=""></div>
+				<div class="media__beta">
+					<h2><a href="#link">You guys realize you live in a sewer, right?</a></h2>
+					<p>Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</p>
+				</div>
+			</div>
+		</div>
+	</li>
+</ul>
+```
+
+*/

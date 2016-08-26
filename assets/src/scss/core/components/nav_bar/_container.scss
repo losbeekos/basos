@@ -1,0 +1,32 @@
+/* Navigation bar container
+==========
+*/
+
+.nav-bar__container {
+	@extend .clearfix;
+
+	margin-left: map-get($container, margin-left);
+	margin-right: map-get($container, margin-right);
+	max-width: rem(map-get($container, max-width));
+	min-width: rem(map-get($container, min-width));
+
+	@include mq(map-get($nav-bar, mq)) {
+		padding-left: rem(map-get($container, padding)*4px);
+		padding-right: rem(map-get($container, padding)*4px);
+	}
+
+	&::before {
+		content: '';
+		background: map-get($nav-bar, bg-color);
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 1;
+		width: 100%;
+		height: 100%;
+
+		@include mq(map-get($nav-bar, mq)) {
+			display: none;
+		}
+	}
+}

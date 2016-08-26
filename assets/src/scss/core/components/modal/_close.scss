@@ -1,0 +1,16 @@
+/* Modal close
+==========
+*/
+
+.modal__close {
+	@extend .icon;
+	@extend .icon--cancel;
+	@extend .color-epsilon;
+
+	position: absolute;
+	top: rem(10px);
+	right: rem(10px);
+	padding: rem(10px);
+	font-size: rem(30px);
+	line-height: rem(30px);
+}

@@ -1,0 +1,8 @@
+/* Accordion group
+==========
+*/
+
+.accordion__group {
+	overflow: hidden;
+	margin-bottom: map-get($accordion, group-margin-bottom);
+}

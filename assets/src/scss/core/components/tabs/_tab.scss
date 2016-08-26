@@ -1,0 +1,30 @@
+/* Tabs tab
+==========
+*/
+
+.tab {
+	position: relative;
+	display: inline-block;
+	background: map-get($tabs, bg-color);
+	color: map-get($tabs, color);
+	border-top-left-radius: map-get($base, border-radius);
+	border-top-right-radius: map-get($base, border-radius);
+	user-select: none;
+	padding: rem(map-get($tabs, padding-vertical)) rem(map-get($tabs, padding-horizontal));
+
+	&:hover {
+		background: darken(map-get($tabs, bg-color), 5%);
+	}
+
+	&:focus {
+		outline: none;
+		color: map-get($color, text);
+		background: darken(map-get($tabs, bg-color), 10%);
+	}
+
+	&.tab--active {
+		background: map-get($tabs, bg-color-active);
+		border-bottom-color: map-get($tabs, bg-color-active);
+		color: map-get($color, text);
+	}
+}

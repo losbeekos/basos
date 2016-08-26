@@ -1,0 +1,20 @@
+/* Modal content
+==========
+*/
+
+.modal__content {
+	background: map-get($modal, content-bg-color);
+	border-radius: map-get($modal, content-border-radius);
+	position: relative;
+	margin: 0 auto;
+	opacity: 0;
+	height: 100%;
+	transform: scale(0.6);
+	transition: all 0.25s;
+	padding: rem(map-get($modal, content-padding));
+
+	.modal-show & {
+		opacity: 1;
+		transform: scale(1);
+	}
+}

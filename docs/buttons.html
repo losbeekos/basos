@@ -72,7 +72,7 @@
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#group" data-jumpto data-scrollspy-nav>Group</a></li>
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#inline" data-jumpto data-scrollspy-nav>Inline</a></li>
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#mask" data-jumpto data-scrollspy-nav>Mask</a></li>
-							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#no_btn_style" data-jumpto data-scrollspy-nav>No button style</a></li>
+							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#reset_button" data-jumpto data-scrollspy-nav>Reset button</a></li>
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#sizes" data-jumpto data-scrollspy-nav>Sizes</a></li>
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#split_button" data-jumpto data-scrollspy-nav>Split</a></li>
 							<li class="styleguide-nav__item"><a class="styleguide-nav__link" href="#styles" data-jumpto data-scrollspy-nav>Styles</a></li>
@@ -452,15 +452,15 @@
 	</div>
 </div>
 
-<h1 id="no_btn_style" class="styleguide">No button style</h1>
+<h1 id="reset_button" class="styleguide">Reset button</h1>
 <p class="styleguide">Commonly used for triggers. For example a navigation trigger</p><div class="codeExample">
 	<div class="exampleOutput">
-		<button class="no-btn-style">Button</button>
+		<button class="reset-button">Button</button>
 
 	</div>
 	<div class="codeBlock">
 		<div class="highlight">
-			<pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"no-btn-style"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span></pre>
+			<pre><span class="nt">&lt;button</span> <span class="na">class=</span><span class="s">"reset-button"</span><span class="nt">&gt;</span>Button<span class="nt">&lt;/button&gt;</span></pre>
 		</div>
 	</div>
 </div>
@@ -486,8 +486,8 @@
 <div class="codeExample">
 	<div class="exampleOutput">
 		<div class="btn-dropdown">
-    <button data-datatables-btn="action" type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--cog icon--margin-alpha">Activate</button>
-    <button data-datatables-btn="action" type="button" class="btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered" data-btn-dropdown-toggle aria-haspopup="true" aria-expanded="false"></button>
+    <button type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--cog icon--margin-alpha">Activate</button>
+    <button type="button" class="btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered" data-btn-dropdown-toggle aria-haspopup="true" aria-expanded="false"></button>
     <div class="btn-dropdown__dropdown" data-btn-dropdown="allowPropagation">
         <ul class="btn-dropdown__list btn-dropdown__list--border-bottom" data-btn-dropdown="allowPropagation">
             <li><a class="btn-dropdown__link" href="#link">Deactivate</a></li>
@@ -501,8 +501,8 @@
 	<div class="codeBlock">
 		<div class="highlight">
 			<pre><span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-dropdown"</span><span class="nt">&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">data-datatables-btn=</span><span class="s">"action"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--cog icon--margin-alpha"</span><span class="nt">&gt;</span>Activate<span class="nt">&lt;/button&gt;</span>
-    <span class="nt">&lt;button</span> <span class="na">data-datatables-btn=</span><span class="s">"action"</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered"</span> <span class="na">data-btn-dropdown-toggle</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--cog icon--margin-alpha"</span><span class="nt">&gt;</span>Activate<span class="nt">&lt;/button&gt;</span>
+    <span class="nt">&lt;button</span> <span class="na">type=</span><span class="s">"button"</span> <span class="na">class=</span><span class="s">"btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered"</span> <span class="na">data-btn-dropdown-toggle</span> <span class="na">aria-haspopup=</span><span class="s">"true"</span> <span class="na">aria-expanded=</span><span class="s">"false"</span><span class="nt">&gt;&lt;/button&gt;</span>
     <span class="nt">&lt;div</span> <span class="na">class=</span><span class="s">"btn-dropdown__dropdown"</span> <span class="na">data-btn-dropdown=</span><span class="s">"allowPropagation"</span><span class="nt">&gt;</span>
         <span class="nt">&lt;ul</span> <span class="na">class=</span><span class="s">"btn-dropdown__list btn-dropdown__list--border-bottom"</span> <span class="na">data-btn-dropdown=</span><span class="s">"allowPropagation"</span><span class="nt">&gt;</span>
             <span class="nt">&lt;li&gt;&lt;a</span> <span class="na">class=</span><span class="s">"btn-dropdown__link"</span> <span class="na">href=</span><span class="s">"#link"</span><span class="nt">&gt;</span>Deactivate<span class="nt">&lt;/a&gt;&lt;/li&gt;</span>
@@ -1026,10 +1026,10 @@
 								
 								{
 								
-									"title": "Buttons • No button style",
+									"title": "Buttons • Reset button",
 								
-								"breadcrumb": "Buttons > No button style",
-								"path": "buttons.html#no_btn_style"
+								"breadcrumb": "Buttons > Reset button",
+								"path": "buttons.html#reset_button"
 								},
 							
 								

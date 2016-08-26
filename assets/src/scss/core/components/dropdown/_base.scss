@@ -1,0 +1,84 @@
+/* Dropdowns
+==========
+*/
+
+.dropdown {
+	display: inline-block;
+	position: relative;
+
+	&:not([data-dropdown-trigger=click]):hover,
+	&.dropdown--show {
+		.dropdown__content {
+			visibility: visible;
+			opacity: 1;
+			transition: all map-get($dropdown, transition-duration) 0s;
+			transform: map-get($dropdown, transform-hover);
+		}
+	}
+
+	ul {
+		@extend .list-unstyled;
+	}
+
+	li {
+		display: block;
+		margin: 0;
+	}
+}
+
+/*doc
+---
+title: Dropdowns
+name: dropdowns
+category: Content
+---
+
+## Hover
+
+```html_example
+<div class="dropdown">
+	<a class="btn btn--alpha btn--small">dropdown</a>
+	<div class="dropdown__content">
+		<ul class="dropdown__list">
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+		</ul>
+	</div>
+</div>
+```
+
+## Click trigger
+
+```html_example
+<div class="dropdown" data-dropdown-trigger="click">
+	<a class="btn btn--alpha btn--small">dropdown</a>
+	<div class="dropdown__content">
+		<ul class="dropdown__list">
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+		</ul>
+	</div>
+</div>
+```
+
+## Right aligned
+
+```html_example
+<div class="dropdown dropdown--right">
+	<a class="btn btn--alpha btn--small">dropdown</a>
+	<div class="dropdown__content">
+		<ul class="dropdown__list">
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+		</ul>
+	</div>
+</div>
+```
+
+*/

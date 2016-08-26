@@ -1,0 +1,11 @@
+/* Table hover
+==========
+*/
+
+.table--hover {
+	tr:hover {
+		td {
+			background: map-get($table, bg-color-hover);
+		}
+	}
+}

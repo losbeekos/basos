@@ -1,0 +1,8 @@
+/* Tabs content
+==========
+*/
+
+.tab-content {
+	padding-top: rem(map-get($tabs, content-padding));
+	padding-bottom: rem(map-get($tabs, content-padding));
+}

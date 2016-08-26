@@ -13,6 +13,7 @@
 			border-radius: 0;
 		}
 	}
+}
 
 /*doc
 ---
@@ -34,76 +35,75 @@ These work with the button classes so you can use those to change color and size
 
 */
 
-	&--inline {
-		@extend .list-inline;
+.btn-group--inline {
+	@extend .list-inline;
 
-		> li {
-			margin-right: 0;
-			margin-left: 0;
-			float: left;
+	> li {
+		margin-right: 0;
+		margin-left: 0;
+		float: left;
 
-			// @include mq(alpha) {
-			// 	float: none;
-			// 	margin-left: 0;
+		// @include mq(alpha) {
+		// 	float: none;
+		// 	margin-left: 0;
 
-			// 	a,
-			// 	span {
-			// 		margin: rem(-1px) 0 0 0;
-			// 		display: block;
-			// 	}
-			// }
+		// 	a,
+		// 	span {
+		// 		margin: rem(-1px) 0 0 0;
+		// 		display: block;
+		// 	}
+		// }
 
-			&:first-child {
-				margin: 0;
-
-				a,
-				span {
-					border-radius: map-get($btn, group-border-radius) 0 0 map-get($btn, group-border-radius);
-				}
-			}
-
-			&:not(:first-child) {
-				a,
-				span {
-					border-left: 0;
-				}
-			}
-
-			&:last-child {
-				a,
-				span {
-					border-radius: 0 map-get($btn, group-border-radius) map-get($btn, group-border-radius) 0;
-				}
-			}
-		}
-	}
-
-	&--block {
-		@extend .list-unstyled;
-
-		> li {
-			margin-top: -1px;
+		&:first-child {
+			margin: 0;
 
 			a,
 			span {
-				display: block;
+				border-radius: map-get($btn, group-border-radius) 0 0 map-get($btn, group-border-radius);
 			}
+		}
 
-			&:first-child {
-				margin: 0;
-
-				a,
-				span {
-					border-top: 0;
-					border-radius: map-get($btn, group-border-radius) map-get($btn, group-border-radius) 0 0;
-				}
+		&:not(:first-child) {
+			a,
+			span {
+				border-left: 0;
 			}
+		}
 
-			&:last-child {
-				a,
-				span {
-					border-radius: 0 0 map-get($btn, group-border-radius) map-get($btn, group-border-radius);
-				}
+		&:last-child {
+			a,
+			span {
+				border-radius: 0 map-get($btn, group-border-radius) map-get($btn, group-border-radius) 0;
+			}
+		}
+	}
+}
+
+.btn-group--block {
+	@extend .list-unstyled;
+
+	> li {
+		margin-top: -1px;
+
+		a,
+		span {
+			display: block;
+		}
+
+		&:first-child {
+			margin: 0;
+
+			a,
+			span {
+				border-top: 0;
+				border-radius: map-get($btn, group-border-radius) map-get($btn, group-border-radius) 0 0;
+			}
+		}
+
+		&:last-child {
+			a,
+			span {
+				border-radius: 0 0 map-get($btn, group-border-radius) map-get($btn, group-border-radius);
 			}
 		}
 	}

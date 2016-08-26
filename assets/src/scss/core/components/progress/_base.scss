@@ -1,0 +1,57 @@
+/* Progress bar
+==========
+*/
+
+progress,
+.progress-bar {
+	background-color: map-get($progress-bar, bg-color);
+	position: relative;
+	border: 0;
+	width: 100%;
+	height: rem(15px);
+	overflow: hidden;
+	color: map-get($progress-bar, value-bg-color);
+	border-radius: map-get($base, border-radius);
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+
+progress[value]::-webkit-progress-bar {
+	background-color: map-get($progress-bar, bg-color);
+}
+
+/*doc
+---
+title: Progress bars
+name: progress_bars
+category: Content
+---
+
+## Indeterminate
+
+```html_example
+<progress>
+	<div class="progress-bar">
+		<div class="progress-bar__value"></div>
+	</div>
+</progress>
+<div class="progress-bar">
+	<div class="progress-bar__value"></div>
+</div>
+```
+
+
+## Determinate
+
+```html_example
+<progress max="100" value="80">
+	<div class="progress-bar">
+		<div class="progress-bar__value" style="width: 80%;"></div>
+	</div>
+</progress>
+<div class="progress-bar">
+	<div class="progress-bar__value" style="width: 80%;"></div>
+</div>
+```
+
+*/

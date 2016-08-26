@@ -55,7 +55,11 @@ app.accordion = {
         var shownItem = document.querySelector('.accordion-content-show'),
             content = document.querySelectorAll('.accordion__content');
 
-        shownItem.classList.remove(app.accordion.settings.contentShowClass);
+        if (shownItem === null)  {
+            trigger.classList.add(app.accordion.settings.contentShowClass);
+        } else {
+            shownItem.classList.remove(app.accordion.settings.contentShowClass);
+        }
 
         content.forEach(function (content) {
             content.style.maxHeight = 0;

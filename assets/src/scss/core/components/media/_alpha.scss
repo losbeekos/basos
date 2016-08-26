@@ -1,0 +1,18 @@
+/* Media alpha
+==========
+*/
+
+.media__alpha {
+	@extend .column-3;
+
+	float: left;
+	margin-bottom: rem(map-get($media, margin-bottom)/2);
+
+	@include mq(beta-and-up) {
+		margin-bottom: 0;
+	}
+
+	.media--right & {
+		float: right;
+	}
+}

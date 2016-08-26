@@ -6,14 +6,14 @@
 	overflow: hidden;
 	transition: all map-get($base, transition-speed);
 	max-height: rem(500px);
+}
 
-	&--no-animation {
-		transition: none;
-	}
+.toggle--no-animation {
+	transition: none;
+}
 
-	&--hide {
-		max-height: 0;
-	}
+.toggle--hide {
+	max-height: 0;
 }
 
 /*doc

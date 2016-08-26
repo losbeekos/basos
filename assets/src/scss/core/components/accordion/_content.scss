@@ -1,0 +1,13 @@
+/* Accordion content
+==========
+*/
+
+.accordion__content {
+	overflow: hidden;
+	padding: map-get($accordion, content-padding);
+	transition: all map-get($accordion, transition-speed);
+
+	> *:first-child {
+		margin-top: map-get($accordion, content-margin-top-first);
+	}
+}

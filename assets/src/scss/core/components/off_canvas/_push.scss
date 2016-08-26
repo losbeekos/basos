@@ -1,0 +1,35 @@
+/* Off canvas push
+==========
+*/
+
+.off-canvas-push {
+	transition: transform map-get($base, transition-speed);
+
+	.off-canvas-show-left & {
+		transform: translateX(map-get($off-canvas, width));
+	}
+
+	// &::after {
+	//     content: '';
+	//     background: black;
+	//     width: 100%;
+	//     height: 100%;
+	//     position: fixed;
+	//     top: 0;
+	//     left: 0;
+	//     z-index: 999;
+	//     visibility: hidden;
+	//     opacity: 0;
+	//     transition: transform map-get($base, transition-speed);
+
+	//     .off-canvas-show-left &,
+	//     .off-canvas-show-right & {
+	//         visibility: visible;
+	//         opacity: map-get($off-canvas, overlay-opacity);
+	//     }
+
+	//     .lt-ie10 & {
+	//         display: none;
+	//     }
+	// }
+}

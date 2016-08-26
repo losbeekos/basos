@@ -1,0 +1,38 @@
+/* Navigation bar trigger
+==========
+*/
+
+.nav-bar__trigger {
+	@extend %font-icons;
+
+	display: inline-block;
+	background: map-get($nav-bar, bg-color);
+	float: right;
+	text-align: center;
+	line-height: map-get($nav-bar, trigger-height);
+	position: absolute;
+	top: 0;
+	right: 0;
+	z-index: 2;
+	width: rem(map-get($nav-bar, trigger-height));
+	height: rem(map-get($nav-bar, trigger-height));
+
+	@include mq(map-get($nav-bar, mq)) {
+		display: none;
+	}
+
+	&:active,
+	&:hover {
+		background: lighten(map-get($nav-bar, trigger-bg-color), 10%);
+	}
+
+	&::before {
+		content: map-get($icon, nav-bar-trigger);
+		color: white;
+		font-size: rem(map-get($nav-bar, trigger-font-size));
+
+		.nav-bar--mobile-show & {
+			content: map-get($icon, nav-bar-trigger-close);
+		}
+	}
+}

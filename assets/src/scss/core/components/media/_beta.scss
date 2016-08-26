@@ -1,0 +1,16 @@
+/* Media beta
+==========
+*/
+
+.media__beta {
+	@extend .column-9;
+
+	.media--left & {
+		float: right;
+		margin: 0;
+	}
+
+	.media--right & {
+		float: left;
+	}
+}

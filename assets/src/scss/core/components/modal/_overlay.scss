@@ -1,0 +1,25 @@
+/* Modal overlay
+==========
+*/
+
+
+.modal__overlay {
+	background: map-get($modal, overlay-bg-color);
+	position: fixed;
+	visibility: hidden;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 1000;
+	opacity: 0;
+	transition-property: visibility opacity;
+	transition-delay: 0.1s;
+	transition-duration: map-get($modal, transition-duration);
+
+	.modal-show & {
+		visibility: visible;
+		opacity: map-get($modal, overlay-opacity);
+		transition: opacity map-get($modal, transition-duration);
+	}
+}

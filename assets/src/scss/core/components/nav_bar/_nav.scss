@@ -1,0 +1,24 @@
+/* Navigation bar nav
+==========
+*/
+
+.nav-bar__nav {
+	@extend .clearfix;
+
+	height: 0;
+
+	@include mq(map-get($nav-bar, mq)) {
+		@if map-get($nav-bar, nav-position) == left {
+			float: left;
+		} @else {
+			float: right;
+		}
+
+		height: auto;
+		margin-left: rem(map-get($nav-bar, nav-margin-left));
+	}
+
+	.nav-bar--mobile-show & {
+		height: auto;
+	}
+}

@@ -118,6 +118,30 @@ Run BrowserSync to auto reload when dist files change.
 /* Media
 ==========
 */
+/* Fonts
+==========
+*/
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300,600);
+body, h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: 'Open Sans', sans-serif; }
+
+@font-face {
+  font-family: 'icons';
+  font-style: normal;
+  font-weight: normal;
+  src: url("../fonts/icons/icons.woff2") format("woff2"), url("../fonts/icons/icons.woff") format("woff"); }
+
+.icon:before, .modal__close:before, .btn-dropdown__toggle:before, .form__file-input + label:before, .icon-after:after, .spinner::after, .nav-bar__trigger, .off-canvas-toggle-left,
+.off-canvas-toggle-right, .accordion__trigger::after, .btn-dropdown__action::after, .form__select::after, input[type=checkbox] + label::after,
+input[type=radio] + label::after, .form__password-toggle::after, .notification::before, .notification__close {
+  font-family: 'icons', 'arial', 'verdana';
+  font-weight: normal; }
+
 /*doc
  ---
  title: Vendor
@@ -138,7 +162,6 @@ And some things are borrowed from Twitter's bootstrap [Reboot](https://github.co
  * 1. Change the default font family in all browsers (opinionated).
  * 2. Prevent adjustments of font size after orientation changes in IE and iOS.
  */
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300,600);
 html {
   font-family: sans-serif;
   /* 1 */
@@ -934,27 +957,78 @@ Break a word with a hyphen (hyphen not supported in Blink as of writing).
 /* Clearfix
 ==========
 */
-.clearfix::before, .grid::before, [class|=column]::before, .flexible-grid-2::before, .flexible-grid-3::before, .flexible-grid-4::before, .container::before,
-.container-beta::before, .card__content::before, .tabs::before, .nav-bar::before, .nav-bar__container::before, .nav-bar__nav::before, .media::before, .off-canvas-nar-bar::before,
-.off-canvas-nar-bar__container::before,
-.off-canvas-nar-bar__nav::before,
-.off-canvas-nar-bar__list::before,
-.off-canvas-nar-bar__link::before, .btn-container::before, .btn-group::before, .btn-dropdown__list::before, form::before, .form__row::before, .clearfix::after, .grid::after, [class|=column]::after, .flexible-grid-2::after, .flexible-grid-3::after, .flexible-grid-4::after, .container::after,
-.container-beta::after, .card__content::after, .tabs::after, .nav-bar::after, .nav-bar__container::after, .nav-bar__nav::after, .media::after, .off-canvas-nar-bar::after,
-.off-canvas-nar-bar__container::after,
-.off-canvas-nar-bar__nav::after,
-.off-canvas-nar-bar__list::after,
-.off-canvas-nar-bar__link::after, .btn-container::after, .btn-group::after, .btn-dropdown__list::after, form::after, .form__row::after {
+.clearfix::before, .container::before,
+.container-beta::before, .flexible-grid-2::before,
+.flexible-grid-3::before,
+.flexible-grid-4::before, .grid::before, [class|=column]::before, .card__content::before, .tabs::before, .nav-bar::before, .nav-bar__container::before, .nav-bar__nav::before, .media::before, .btn-container::before, .btn-group::before, .btn-dropdown__list::before, form::before, .form__row::before, .clearfix::after, .container::after,
+.container-beta::after, .flexible-grid-2::after,
+.flexible-grid-3::after,
+.flexible-grid-4::after, .grid::after, [class|=column]::after, .card__content::after, .tabs::after, .nav-bar::after, .nav-bar__container::after, .nav-bar__nav::after, .media::after, .btn-container::after, .btn-group::after, .btn-dropdown__list::after, form::after, .form__row::after {
   content: '';
   display: table; }
 
-.clearfix::after, .grid::after, [class|=column]::after, .flexible-grid-2::after, .flexible-grid-3::after, .flexible-grid-4::after, .container::after,
-.container-beta::after, .card__content::after, .tabs::after, .nav-bar::after, .nav-bar__container::after, .nav-bar__nav::after, .media::after, .off-canvas-nar-bar::after,
-.off-canvas-nar-bar__container::after,
-.off-canvas-nar-bar__nav::after,
-.off-canvas-nar-bar__list::after,
-.off-canvas-nar-bar__link::after, .btn-container::after, .btn-group::after, .btn-dropdown__list::after, form::after, .form__row::after {
+.clearfix::after, .container::after,
+.container-beta::after, .flexible-grid-2::after,
+.flexible-grid-3::after,
+.flexible-grid-4::after, .grid::after, [class|=column]::after, .card__content::after, .tabs::after, .nav-bar::after, .nav-bar__container::after, .nav-bar__nav::after, .media::after, .btn-container::after, .btn-group::after, .btn-dropdown__list::after, form::after, .form__row::after {
   clear: both; }
+
+/* Colors
+==========
+*/
+.color-body {
+  color: #ffffff !important; }
+
+.color-text {
+  color: #333333 !important; }
+
+.color-placeholder {
+  color: #94adc4 !important; }
+
+.color-selection {
+  color: #d1e4fe !important; }
+
+.color-alpha {
+  color: #f7f7f7 !important; }
+
+.color-beta {
+  color: #293e4f !important; }
+
+.color-gamma {
+  color: #496d83 !important; }
+
+.color-delta {
+  color: #4A3A59 !important; }
+
+.color-epsilon, .modal__close {
+  color: #1C2228 !important; }
+
+.bg-color-body {
+  background: #ffffff !important; }
+
+.bg-color-text {
+  background: #333333 !important; }
+
+.bg-color-placeholder {
+  background: #94adc4 !important; }
+
+.bg-color-selection {
+  background: #d1e4fe !important; }
+
+.bg-color-alpha {
+  background: #f7f7f7 !important; }
+
+.bg-color-beta {
+  background: #293e4f !important; }
+
+.bg-color-gamma {
+  background: #496d83 !important; }
+
+.bg-color-delta {
+  background: #4A3A59 !important; }
+
+.bg-color-epsilon {
+  background: #1C2228 !important; }
 
 /* Hide classes
 ==========
@@ -1060,7 +1134,7 @@ category: Typography
 ```
 
 */
-.list-unstyled, .list-inline, .tabs, .nav-bar__list, .off-canvas-nar-bar__list, .btn-group--inline, .dropdown ul, .pricing-table, .media-list, .btn-group--block, .btn-dropdown__dropdown, .btn-dropdown__list, .parsley-container {
+.list-unstyled, .list-inline, .tabs, .nav-bar__list, .btn-group--inline, .dropdown ul, .media-list, .pricing-table, .btn-group--block, .btn-dropdown__dropdown, .btn-dropdown__list, .parsley-container {
   margin: 0;
   padding: 0;
   list-style-type: none; }
@@ -1082,7 +1156,7 @@ category: Typography
 ```
 
 */
-.list-inline li, .tabs li, .nav-bar__list li, .off-canvas-nar-bar__list li, .btn-group--inline li {
+.list-inline li, .tabs li, .nav-bar__list li, .btn-group--inline li {
   display: inline-block;
   margin-right: 0.625rem; }
 
@@ -1404,20 +1478,26 @@ category: Typography
 */
 .grid-margin {
   margin: 3.3112582781%; }
-  .grid-margin-vertical {
-    margin-top: 3.3112582781%;
-    margin-bottom: 3.3112582781%; }
-  .grid-margin-horizontal {
-    margin-left: 3.3112582781%;
-    margin-right: 3.3112582781%; }
-  .grid-margin-right {
-    margin-right: 3.3112582781%; }
-  .grid-margin-left {
-    margin-left: 3.3112582781%; }
-  .grid-margin-top {
-    margin-top: 3.3112582781%; }
-  .grid-margin-bottom {
-    margin-bottom: 3.3112582781%; }
+
+.grid-margin-vertical {
+  margin-top: 3.3112582781%;
+  margin-bottom: 3.3112582781%; }
+
+.grid-margin-horizontal {
+  margin-left: 3.3112582781%;
+  margin-right: 3.3112582781%; }
+
+.grid-margin-right {
+  margin-right: 3.3112582781%; }
+
+.grid-margin-left {
+  margin-left: 3.3112582781%; }
+
+.grid-margin-top {
+  margin-top: 3.3112582781%; }
+
+.grid-margin-bottom {
+  margin-bottom: 3.3112582781%; }
 
 /* Float
 ==========
@@ -1464,30 +1544,36 @@ category: Typography
 */
 .text-align-right {
   text-align: right; }
-  @media (min-width: 37.5em) {
-    .text-align-right-beta-and-up {
-      text-align: right; } }
-  @media (min-width: 43.75em) {
-    .text-align-right-gamma-and-up {
-      text-align: right; } }
+
+@media (min-width: 37.5em) {
+  .text-align-right-beta-and-up {
+    text-align: right; } }
+
+@media (min-width: 43.75em) {
+  .text-align-right-gamma-and-up {
+    text-align: right; } }
 
 .text-align-left {
   text-align: left; }
-  @media (min-width: 37.5em) {
-    .text-align-left-beta-and-up {
-      text-align: left; } }
-  @media (min-width: 43.75em) {
-    .text-align-left-gamma-and-up {
-      text-align: left; } }
+
+@media (min-width: 37.5em) {
+  .text-align-left-beta-and-up {
+    text-align: left; } }
+
+@media (min-width: 43.75em) {
+  .text-align-left-gamma-and-up {
+    text-align: left; } }
 
 .text-align-center {
   text-align: center; }
-  @media (min-width: 37.5em) {
-    .text-align-center-beta-and-up {
-      text-align: center; } }
-  @media (min-width: 43.75em) {
-    .text-align-center-gamma-and-up {
-      text-align: center; } }
+
+@media (min-width: 37.5em) {
+  .text-align-center-beta-and-up {
+    text-align: center; } }
+
+@media (min-width: 43.75em) {
+  .text-align-center-gamma-and-up {
+    text-align: center; } }
 
 /* Text transform
 ==========
@@ -1566,12 +1652,16 @@ category: Typography
 
 .display-table {
   display: table !important; }
-  .display-table__middle, .display-table__bottom {
-    display: table-cell !important; }
-  .display-table__middle {
-    vertical-align: middle !important; }
-  .display-table__bottom {
-    vertical-align: bottom !important; }
+
+.display-table__middle,
+.display-table__bottom {
+  display: table-cell !important; }
+
+.display-table__middle {
+  vertical-align: middle !important; }
+
+.display-table__bottom {
+  vertical-align: bottom !important; }
 
 /* Ellipsis
 ==========
@@ -1660,6 +1750,20 @@ With the avoid column modifier HTML tabs don't flow over the columns, so for exa
 ```
 
 */
+/* Disable transition
+==========
+*/
+.disable-transitions,
+.disable-transitions * {
+  transition: none !important; }
+
+/* Layout hover
+==========
+*/
+.disable-hover,
+.disable-hover * {
+  pointer-events: none !important; }
+
 /* Animations
 ==========
 */
@@ -2595,8 +2699,519 @@ Add this class to an element to fire an animation.
   -webkit-animation-name: flipInY;
           animation-name: flipInY; }
 
-/* Mandatory components
+/* Layout
 ==========
+*/
+/* Generic layour
+==========
+*/
+*,
+:before,
+:after {
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%; }
+
+html {
+  background-color: #ffffff;
+  overflow-x: hidden; }
+
+body {
+  color: #333333;
+  font-weight: 400;
+  transition: opacity 0.05s ease-in; }
+
+.background {
+  min-height: 100%; }
+
+a {
+  color: #293e4f;
+  text-decoration: none;
+  display: inline;
+  cursor: pointer;
+  transition: all 0.2s; }
+  a:hover {
+    color: #7f8b95; }
+
+a:not([class]) {
+  text-decoration: underline; }
+
+button {
+  transition: all 0.2s; }
+
+img {
+  max-width: 100%; }
+
+svg {
+  max-width: 100% !important;
+  height: initial !important; }
+
+address {
+  font-style: normal; }
+
+p,
+ul,
+ol,
+table,
+blockquote {
+  font-size: 0.875rem;
+  line-height: 1.41575rem; }
+  @media (min-width: 37.5em) {
+    p,
+    ul,
+    ol,
+    table,
+    blockquote {
+      font-size: 1rem;
+      line-height: 1.618rem; } }
+
+p {
+  margin-top: 0; }
+
+/* Container
+==========
+*/
+.container,
+.container-beta {
+  margin-left: auto;
+  margin-right: auto;
+  min-width: 16.25rem;
+  padding-left: 0.625rem;
+  padding-right: 0.625rem;
+  margin-top: 0rem;
+  margin-bottom: 0rem; }
+  @media (min-width: 37.5em) and (max-width: 43.6875em) {
+    .container,
+    .container-beta {
+      padding-left: 1.25rem;
+      padding-right: 1.25rem; } }
+  @media (min-width: 43.75em) {
+    .container,
+    .container-beta {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem; } }
+  .container .container,
+  .container .container-beta,
+  .container-beta .container,
+  .container-beta .container-beta {
+    min-width: auto; }
+
+.container {
+  max-width: 80rem; }
+
+.container-beta {
+  max-width: 50rem; }
+
+/*doc
+---
+title: Container
+name: container
+category: Structure
+---
+
+There are two containers available, 'container' and 'container-beta'. These containers will horizontally center the block with a specific min and max-width. Widths can be specified in the settings.scss file.
+
+	<div class="container">
+		your content
+	</div>
+
+*/
+/* Grid (flexbox)
+==========
+*/
+.flexbox-grid {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap; }
+
+.flexbox-grid--top {
+  -webkit-align-items: flex-start;
+      -ms-flex-align: start;
+              -ms-grid-row-align: flex-start;
+          align-items: flex-start; }
+
+.flexbox-grid--middle {
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+              -ms-grid-row-align: center;
+          align-items: center; }
+
+.flexbox-grid--bottom {
+  -webkit-align-items: flex-end;
+      -ms-flex-align: end;
+              -ms-grid-row-align: flex-end;
+          align-items: flex-end; }
+
+.flexbox-grid--stretch {
+  -webkit-align-items: stretch;
+      -ms-flex-align: stretch;
+              -ms-grid-row-align: stretch;
+          align-items: stretch; }
+
+.flexbox-grid--baseline {
+  -webkit-align-items: baseline;
+      -ms-flex-align: baseline;
+              -ms-grid-row-align: baseline;
+          align-items: baseline; }
+
+.flexbox-grid--left {
+  -webkit-justify-content: flex-start;
+      -ms-flex-pack: start;
+          justify-content: flex-start; }
+
+.flexbox-grid--center {
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center; }
+
+.flexbox-grid--right {
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end; }
+
+.flexbox-grid--between {
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+
+.flexbox-grid--around {
+  -webkit-justify-content: space-around;
+      -ms-flex-pack: distribute;
+          justify-content: space-around; }
+
+[class|=flexbox-column] {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0; }
+
+.flexbox-column-fill {
+  width: 0;
+  min-width: 0;
+  -webkit-flex-grow: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1; }
+
+.flexbox-column-1 {
+  width: calc(100% * 1 / 12); }
+
+.flexbox-column-2 {
+  width: calc(100% * 2 / 12); }
+
+.flexbox-column-3 {
+  width: calc(100% * 3 / 12); }
+
+.flexbox-column-4 {
+  width: calc(100% * 4 / 12); }
+
+.flexbox-column-5 {
+  width: calc(100% * 5 / 12); }
+
+.flexbox-column-6 {
+  width: calc(100% * 6 / 12); }
+
+.flexbox-column-7 {
+  width: calc(100% * 7 / 12); }
+
+.flexbox-column-8 {
+  width: calc(100% * 8 / 12); }
+
+.flexbox-column-9 {
+  width: calc(100% * 9 / 12); }
+
+.flexbox-column-10 {
+  width: calc(100% * 10 / 12); }
+
+.flexbox-column-11 {
+  width: calc(100% * 11 / 12); }
+
+.flexbox-column-12 {
+  width: 100%; }
+
+/*doc
+---
+title: Grid (flexbox)
+name: grid_flexbox
+category: Structure
+---
+
+You shouldn't use this grid for overall page layout, use the standard grid module in that case. In the future we can use the [CSS grids module](http://caniuse.com/#feat=css-grid) for overall layout, but it's not ready as of writing.
+
+This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm).
+
+## Simple
+
+```html_example
+<div class="flexbox-grid">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Top
+
+```html_example
+<div class="flexbox-grid flexbox-grid--top" style="height: 200px;">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Middle
+
+```html_example
+<div class="flexbox-grid flexbox-grid--middle" style="height: 200px;">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Buttom
+
+```html_example
+<div class="flexbox-grid flexbox-grid--bottom" style="height: 200px;">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Stretch
+
+```html_example
+<div class="flexbox-grid flexbox-grid--stretch" style="height: 200px;">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Baseline
+
+```html_example
+<div class="flexbox-grid flexbox-grid--baseline" style="height: 200px;">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Left
+
+```html_example
+<div class="flexbox-grid flexbox-grid--left">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Center
+
+```html_example
+<div class="flexbox-grid flexbox-grid--center">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Right
+
+```html_example
+<div class="flexbox-grid flexbox-grid--right">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Space between
+
+```html_example
+<div class="flexbox-grid flexbox-grid--between">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Space around
+
+```html_example
+<div class="flexbox-grid flexbox-grid--around">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+*/
+/* Flexible grid
+==========
+*/
+@media (min-width: 43.75em) {
+  .flexible-grid-2 {
+    margin-left: -2%;
+    margin-right: -2%; } }
+
+.flexible-grid-2 > * {
+  margin-bottom: 4%; }
+
+@media (min-width: 43.75em) {
+  .flexible-grid-2 > * {
+    width: 46%;
+    margin-left: 2%;
+    margin-right: 2%;
+    float: left; } }
+
+@media (min-width: 37.5em) {
+  .flexible-grid-3 {
+    margin-left: -1%;
+    margin-right: -1%; } }
+
+.flexible-grid-3 > * {
+  margin-bottom: 4%; }
+
+@media (min-width: 37.5em) {
+  .flexible-grid-3 > * {
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left; } }
+
+@media (min-width: 62.5em) {
+  .flexible-grid-3 > * {
+    width: 31.333339%;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left; } }
+
+@media (min-width: 37.5em) {
+  .flexible-grid-4 {
+    margin-left: -1%;
+    margin-right: -1%; } }
+
+.flexible-grid-4 > * {
+  margin-bottom: 4%; }
+
+@media (min-width: 37.5em) {
+  .flexible-grid-4 > * {
+    width: 48%;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left; } }
+
+@media (min-width: 62.5em) {
+  .flexible-grid-4 > * {
+    width: 23%;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left; } }
+
+/*doc
+---
+title: Flexible grid
+name: flexible_grid
+category: Structure
+---
+
+This module can be used to fancy yourself a flexible grid with evenly height elements, just drop these elements in the flexible grid element. 
+It's important to note twice that these elements need the same height, or you'll get in trouble. You could use the equalize module if you have variable content.
+
+```html_example
+<div class="flexible-grid-3">
+	<div class="card">
+		<div class="card__header card__header--beta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--gamma">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--delta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--beta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--gamma">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+	<div class="card">
+		<div class="card__header card__header--delta">
+			<div class="card__title">A title</div>
+		</div>
+		<div class="card__content">
+			Some content
+		</div>
+		<div class="card__action">
+			<button class="btn btn--beta btn--medium">action</a>
+		</div>
+	</div>
+</div>
+```
+
 */
 /* Grid
 ==========
@@ -3573,515 +4188,6 @@ The default grid is a 12 columns grid which you can change in the settings, even
 </div>
 ```
 */
-/* Grid (flexbox)
-==========
-*/
-.flexbox-grid {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap; }
-  .flexbox-grid--top {
-    -webkit-align-items: flex-start;
-        -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
-            align-items: flex-start; }
-  .flexbox-grid--middle {
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-                -ms-grid-row-align: center;
-            align-items: center; }
-  .flexbox-grid--bottom {
-    -webkit-align-items: flex-end;
-        -ms-flex-align: end;
-                -ms-grid-row-align: flex-end;
-            align-items: flex-end; }
-  .flexbox-grid--stretch {
-    -webkit-align-items: stretch;
-        -ms-flex-align: stretch;
-                -ms-grid-row-align: stretch;
-            align-items: stretch; }
-  .flexbox-grid--baseline {
-    -webkit-align-items: baseline;
-        -ms-flex-align: baseline;
-                -ms-grid-row-align: baseline;
-            align-items: baseline; }
-  .flexbox-grid--left {
-    -webkit-justify-content: flex-start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
-  .flexbox-grid--center {
-    -webkit-justify-content: center;
-        -ms-flex-pack: center;
-            justify-content: center; }
-  .flexbox-grid--right {
-    -webkit-justify-content: flex-end;
-        -ms-flex-pack: end;
-            justify-content: flex-end; }
-  .flexbox-grid--between {
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between; }
-  .flexbox-grid--around {
-    -webkit-justify-content: space-around;
-        -ms-flex-pack: distribute;
-            justify-content: space-around; }
-
-[class|=flexbox-column] {
-  -webkit-flex-shrink: 0;
-      -ms-flex-negative: 0;
-          flex-shrink: 0; }
-
-.flexbox-column-fill {
-  width: 0;
-  min-width: 0;
-  -webkit-flex-grow: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1; }
-
-.flexbox-column-1 {
-  width: calc(100% * 1 / 12); }
-
-.flexbox-column-2 {
-  width: calc(100% * 2 / 12); }
-
-.flexbox-column-3 {
-  width: calc(100% * 3 / 12); }
-
-.flexbox-column-4 {
-  width: calc(100% * 4 / 12); }
-
-.flexbox-column-5 {
-  width: calc(100% * 5 / 12); }
-
-.flexbox-column-6 {
-  width: calc(100% * 6 / 12); }
-
-.flexbox-column-7 {
-  width: calc(100% * 7 / 12); }
-
-.flexbox-column-8 {
-  width: calc(100% * 8 / 12); }
-
-.flexbox-column-9 {
-  width: calc(100% * 9 / 12); }
-
-.flexbox-column-10 {
-  width: calc(100% * 10 / 12); }
-
-.flexbox-column-11 {
-  width: calc(100% * 11 / 12); }
-
-.flexbox-column-12 {
-  width: 100%; }
-
-/*doc
----
-title: Grid (flexbox)
-name: grid_flexbox
-category: Structure
----
-
-You shouldn't use this grid for overall page layout, use the standard grid module in that case. In the future we can use the [CSS grids module](http://caniuse.com/#feat=css-grid) for overall layout, but it's not ready as of writing.
-
-This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm).
-
-## Simple
-
-```html_example
-<div class="flexbox-grid">
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-</div>
-```
-
-## Top
-
-```html_example
-<div class="flexbox-grid flexbox-grid--top" style="height: 200px;">
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-</div>
-```
-
-## Middle
-
-```html_example
-<div class="flexbox-grid flexbox-grid--middle" style="height: 200px;">
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-</div>
-```
-
-## Buttom
-
-```html_example
-<div class="flexbox-grid flexbox-grid--bottom" style="height: 200px;">
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-</div>
-```
-
-## Stretch
-
-```html_example
-<div class="flexbox-grid flexbox-grid--stretch" style="height: 200px;">
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-</div>
-```
-
-## Baseline
-
-```html_example
-<div class="flexbox-grid flexbox-grid--baseline" style="height: 200px;">
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-</div>
-```
-
-## Left
-
-```html_example
-<div class="flexbox-grid flexbox-grid--left">
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-</div>
-```
-
-## Center
-
-```html_example
-<div class="flexbox-grid flexbox-grid--center">
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-</div>
-```
-
-## Right
-
-```html_example
-<div class="flexbox-grid flexbox-grid--right">
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-</div>
-```
-
-## Space between
-
-```html_example
-<div class="flexbox-grid flexbox-grid--between">
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-</div>
-```
-
-## Space around
-
-```html_example
-<div class="flexbox-grid flexbox-grid--around">
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-	<div class="flexbox-column-3 card">
-		<div class="card__content">Flexy</div>
-	</div>
-</div>
-```
-
-*/
-/* Flexible grid
-==========
-*/
-@media (min-width: 43.75em) {
-  .flexible-grid-2 {
-    margin-left: -2%;
-    margin-right: -2%; } }
-
-.flexible-grid-2 > * {
-  margin-bottom: 4%; }
-
-@media (min-width: 43.75em) {
-  .flexible-grid-2 > * {
-    width: 46%;
-    margin-left: 2%;
-    margin-right: 2%;
-    float: left; } }
-
-@media (min-width: 37.5em) {
-  .flexible-grid-3 {
-    margin-left: -1%;
-    margin-right: -1%; } }
-
-.flexible-grid-3 > * {
-  margin-bottom: 4%; }
-
-@media (min-width: 37.5em) {
-  .flexible-grid-3 > * {
-    width: 48%;
-    margin-left: 1%;
-    margin-right: 1%;
-    float: left; } }
-
-@media (min-width: 62.5em) {
-  .flexible-grid-3 > * {
-    width: 31.333339%;
-    margin-left: 1%;
-    margin-right: 1%;
-    float: left; } }
-
-@media (min-width: 37.5em) {
-  .flexible-grid-4 {
-    margin-left: -1%;
-    margin-right: -1%; } }
-
-.flexible-grid-4 > * {
-  margin-bottom: 4%; }
-
-@media (min-width: 37.5em) {
-  .flexible-grid-4 > * {
-    width: 48%;
-    margin-left: 1%;
-    margin-right: 1%;
-    float: left; } }
-
-@media (min-width: 62.5em) {
-  .flexible-grid-4 > * {
-    width: 23%;
-    margin-left: 1%;
-    margin-right: 1%;
-    float: left; } }
-
-/*doc
----
-title: Flexible grid
-name: flexible_grid
-category: Structure
----
-
-This module can be used to fancy yourself a flexible grid with evenly height elements, just drop these elements in the flexible grid element. 
-It's important to note twice that these elements need the same height, or you'll get in trouble. You could use the equalize module if you have variable content.
-
-```html_example
-<div class="flexible-grid-3">
-	<div class="card">
-		<div class="card__header card__header--beta">
-			<div class="card__title">A title</div>
-		</div>
-		<div class="card__content">
-			Some content
-		</div>
-		<div class="card__action">
-			<button class="btn btn--beta btn--medium">action</a>
-		</div>
-	</div>
-	<div class="card">
-		<div class="card__header card__header--gamma">
-			<div class="card__title">A title</div>
-		</div>
-		<div class="card__content">
-			Some content
-		</div>
-		<div class="card__action">
-			<button class="btn btn--beta btn--medium">action</a>
-		</div>
-	</div>
-	<div class="card">
-		<div class="card__header card__header--delta">
-			<div class="card__title">A title</div>
-		</div>
-		<div class="card__content">
-			Some content
-		</div>
-		<div class="card__action">
-			<button class="btn btn--beta btn--medium">action</a>
-		</div>
-	</div>
-	<div class="card">
-		<div class="card__header card__header--beta">
-			<div class="card__title">A title</div>
-		</div>
-		<div class="card__content">
-			Some content
-		</div>
-		<div class="card__action">
-			<button class="btn btn--beta btn--medium">action</a>
-		</div>
-	</div>
-	<div class="card">
-		<div class="card__header card__header--gamma">
-			<div class="card__title">A title</div>
-		</div>
-		<div class="card__content">
-			Some content
-		</div>
-		<div class="card__action">
-			<button class="btn btn--beta btn--medium">action</a>
-		</div>
-	</div>
-	<div class="card">
-		<div class="card__header card__header--delta">
-			<div class="card__title">A title</div>
-		</div>
-		<div class="card__content">
-			Some content
-		</div>
-		<div class="card__action">
-			<button class="btn btn--beta btn--medium">action</a>
-		</div>
-	</div>
-</div>
-```
-
-*/
-/* Layout
-==========
-*/
-*,
-:before,
-:after {
-  box-sizing: border-box; }
-
-html,
-body {
-  height: 100%; }
-
-html {
-  background-color: #ffffff;
-  overflow-x: hidden; }
-
-body {
-  color: #333333;
-  font-weight: 400;
-  transition: opacity 0.05s ease-in; }
-
-.background {
-  min-height: 100%; }
-
-a {
-  color: #293e4f;
-  text-decoration: none;
-  display: inline;
-  cursor: pointer;
-  transition: all 0.2s; }
-  a:hover {
-    color: #7f8b95; }
-
-a:not([class]) {
-  text-decoration: underline; }
-
-button {
-  transition: all 0.2s; }
-
-img {
-  max-width: 100%; }
-
-svg {
-  max-width: 100% !important;
-  height: initial !important; }
-
-address {
-  font-style: normal; }
-
-p,
-ul,
-ol,
-table,
-blockquote {
-  font-size: 0.875rem;
-  line-height: 1.41575rem; }
-  @media (min-width: 37.5em) {
-    p,
-    ul,
-    ol,
-    table,
-    blockquote {
-      font-size: 1rem;
-      line-height: 1.618rem; } }
-
-p {
-  margin-top: 0; }
-
-.disable-hover,
-.disable-hover * {
-  pointer-events: none !important; }
-
-.disable-transitions,
-.disable-transitions * {
-  transition: none !important; }
-
-/* Container
-==========
-*/
-.container,
-.container-beta {
-  margin-left: auto;
-  margin-right: auto;
-  min-width: 16.25rem;
-  padding-left: 0.625rem;
-  padding-right: 0.625rem;
-  margin-top: 0rem;
-  margin-bottom: 0rem; }
-  @media (min-width: 37.5em) and (max-width: 43.6875em) {
-    .container,
-    .container-beta {
-      padding-left: 1.25rem;
-      padding-right: 1.25rem; } }
-  @media (min-width: 43.75em) {
-    .container,
-    .container-beta {
-      padding-left: 2.5rem;
-      padding-right: 2.5rem; } }
-  .container .container,
-  .container .container-beta,
-  .container-beta .container,
-  .container-beta .container-beta {
-    min-width: auto; }
-
-.container {
-  max-width: 80rem; }
-
-.container-beta {
-  max-width: 50rem; }
-
-/*doc
----
-title: Container
-name: container
-category: Structure
----
-
-There are two containers available, 'container' and 'container-beta'. These containers will horizontally center the block with a specific min and max-width. Widths can be specified in the settings.scss file.
-
-	<div class="container">
-		your content
-	</div>
-
-*/
 /* Sections
 ==========
 */
@@ -4109,8 +4215,9 @@ There are two containers available, 'container' and 'container-beta'. These cont
     background: #1C2228; }
   .section > .container > *:last-child {
     margin-bottom: 0; }
-  .section--alpha {
-    color: #333333; }
+
+.section--alpha {
+  color: #333333; }
 
 .section-img {
   background: url("../dist/img/someimage.jpg") center center fixed;
@@ -4180,29 +4287,6 @@ There are five colors defined for you as modifiers (section--alpha, section--bet
 ```
 
 */
-/* Fonts
-==========
-*/
-body, h1, .h1,
-h2, .h2,
-h3, .h3,
-h4, .h4,
-h5, .h5,
-h6, .h6 {
-  font-family: 'Open Sans', sans-serif; }
-
-@font-face {
-  font-family: 'icons';
-  font-style: normal;
-  font-weight: normal;
-  src: url("../fonts/icons/icons.woff2") format("woff2"), url("../fonts/icons/icons.woff") format("woff"); }
-
-.icon:before, .modal__close:before, .btn-dropdown__toggle:before, .form__file-input + label:before, .icon-after:after, .nav-bar__trigger, .accordion__trigger::after, .spinner::after, .off-canvas-toggle-left,
-.off-canvas-toggle-right, .btn-dropdown__action::after, .form__select::after, input[type=checkbox] + label::after,
-input[type=radio] + label::after, .form__password-toggle::after, .notification::before, .notification__close {
-  font-family: 'icons', 'arial', 'verdana';
-  font-weight: normal; }
-
 /*doc
 ---
 title: Typography
@@ -4276,63 +4360,6 @@ category: Typography
 ```
 
 */
-/*==============================
-=            Colors            =
-==============================*/
-.color-body {
-  color: #ffffff !important; }
-
-.color-text {
-  color: #333333 !important; }
-
-.color-placeholder {
-  color: #94adc4 !important; }
-
-.color-selection {
-  color: #d1e4fe !important; }
-
-.color-alpha {
-  color: #f7f7f7 !important; }
-
-.color-beta {
-  color: #293e4f !important; }
-
-.color-gamma {
-  color: #496d83 !important; }
-
-.color-delta {
-  color: #4A3A59 !important; }
-
-.color-epsilon, .modal__close {
-  color: #1C2228 !important; }
-
-.bg-color-body {
-  background: #ffffff !important; }
-
-.bg-color-text {
-  background: #333333 !important; }
-
-.bg-color-placeholder {
-  background: #94adc4 !important; }
-
-.bg-color-selection {
-  background: #d1e4fe !important; }
-
-.bg-color-alpha {
-  background: #f7f7f7 !important; }
-
-.bg-color-beta {
-  background: #293e4f !important; }
-
-.bg-color-gamma {
-  background: #496d83 !important; }
-
-.bg-color-delta {
-  background: #4A3A59 !important; }
-
-.bg-color-epsilon {
-  background: #1C2228 !important; }
-
 /* Icons
 ==========
 */
@@ -4512,11 +4539,6 @@ Margin modifiers available;
 ```html_example
 <a class="btn btn--beta btn--medium icon icon--menu icon--margin-alpha">just a button</a>
 ```
-*/
-/* Optional components
-==========
-You can comment some of these out
-for a smaller generated CSS file.
 */
 /* Styleguide
 ==========
@@ -4951,6 +4973,696 @@ hll {
   color: #009999; }
 
 /* Literal.Number.Integer.Long */
+/* Optional components
+==========
+You can comment some of these out
+for a smaller generated CSS file.
+*/
+/* Breadcrumbs
+==========
+*/
+.breadcrumbs {
+  background: #f5f5f5;
+  border-radius: 0;
+  padding: 0.9375rem 1.25rem;
+  margin-bottom: 2.5rem; }
+  .breadcrumbs a,
+  .breadcrumbs span {
+    display: inline-block; }
+  .breadcrumbs a {
+    margin-right: 0.625rem; }
+    .breadcrumbs a::after {
+      content: "/";
+      color: #cccccc;
+      margin-left: 0.625rem; }
+  .breadcrumbs span {
+    color: #aaaaaa; }
+
+/*doc
+---
+title: Breadcrumbs
+name: breadcrumbs
+category: Navigation
+---
+
+```html_example
+<div class="breadcrumbs">
+	<a class="breadcrubs__link" href="#link">Home</a>
+	<a class="breadcrubs__link" href="#link">Lorem</a>
+	<span>Ipsum dolir asmit emet</span>
+</div>
+```
+
+*/
+/* Spinners
+==========
+*/
+@-webkit-keyframes spinner {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+@keyframes spinner {
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg); } }
+
+.spinner {
+  display: inline-block;
+  -webkit-animation: spinner 1s infinite linear;
+          animation: spinner 1s infinite linear; }
+  .spinner::after {
+    font-size: 1.875rem; }
+
+.spinner--alpha::after {
+  content: ""; }
+
+/* Scrollspy
+==========
+*/
+[data-scrollspy] {
+  opacity: 0; }
+  [data-scrollspy].scrollspy--in-view {
+    opacity: 1; }
+
+/*doc
+---
+title: Scrollspy
+name: scrollspy
+category: Content
+---
+
+```html_example
+<div class="grid">
+	<div data-scrollspy data-scrollspy-repeat data-scrollspy-class="animation-bounceIn" class="column-12 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-8 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" class="column-7 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" data-scrollspy-delay="200" class="column-5 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-8 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="100" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+<div class="grid" data-equalize>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateAlpha" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateGamma" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateBeta" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+</div>
+```
+
+*/
+/* Toggle
+==========
+*/
+.toggle {
+  overflow: hidden;
+  transition: all 0.2s;
+  max-height: 31.25rem; }
+
+.toggle--no-animation {
+  transition: none; }
+
+.toggle--hide {
+  max-height: 0; }
+
+/*doc
+---
+title: Toggle
+name: toggle
+category: Content
+---
+
+You can add a no animation modifier to the target (toggle--no-animation).
+
+```html_example
+<button class="btn btn--alpha btn--small" data-toggle="#toggle-target">toggle</button>
+<div id="toggle-target" class="toggle toggle--hide">
+	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nemo nisi, pariatur doloremque itaque exercitationem odio libero odit dolores voluptate voluptas nulla voluptates nam nobis illo veritatis aperiam cupiditate dolor.</div>
+</div>
+```
+
+*/
+/* Affix
+==========
+*/
+.affix-container {
+  position: relative; }
+
+.affix {
+  position: relative; }
+
+.affix--fixed {
+  position: fixed;
+  top: 0;
+  z-index: 1; }
+
+.affix--absolute {
+  position: absolute;
+  top: inherit !important;
+  bottom: 0; }
+
+/*doc
+---
+title: Affix
+name: affix
+category: Navigation
+---
+
+```html_example
+<div class="grid affix-container">
+	<div class="column-3">
+		<div class="affix" data-affix>
+			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ducimus voluptates veniam a. Suscipit esse eaque nemo ratione voluptatibus amet maxime ipsam voluptas, reiciendis veniam, asperiores pariatur, dolorem at repellendus?
+		</div>
+	</div>
+	<div class="column-9">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
+	</div>
+</div>
+```
+
+*/
+/* Google maps
+==========
+*/
+.google-maps {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-bottom: 40%; }
+
+.google-maps__map {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; }
+
+/*doc
+---
+title: Google maps
+name: google_maps
+category: Content
+---
+
+The map is styled with the styles options, the style used for these docs is borrowed from [snazzymaps](https://snazzymaps.com).
+
+```html_example
+<div class="google-maps">
+	<div id="google-maps" class="google-maps__map"></div>
+</div>
+```
+
+*/
+/* Dropdown
+==========
+*/
+/* Dropdowns
+==========
+*/
+.dropdown {
+  display: inline-block;
+  position: relative; }
+  .dropdown:not([data-dropdown-trigger=click]):hover .dropdown__content, .dropdown.dropdown--show .dropdown__content {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s 0s;
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1); }
+  .dropdown li {
+    display: block;
+    margin: 0; }
+
+/*doc
+---
+title: Dropdowns
+name: dropdowns
+category: Content
+---
+
+## Hover
+
+```html_example
+<div class="dropdown">
+	<a class="btn btn--alpha btn--small">dropdown</a>
+	<div class="dropdown__content">
+		<ul class="dropdown__list">
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+		</ul>
+	</div>
+</div>
+```
+
+## Click trigger
+
+```html_example
+<div class="dropdown" data-dropdown-trigger="click">
+	<a class="btn btn--alpha btn--small">dropdown</a>
+	<div class="dropdown__content">
+		<ul class="dropdown__list">
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+		</ul>
+	</div>
+</div>
+```
+
+## Right aligned
+
+```html_example
+<div class="dropdown dropdown--right">
+	<a class="btn btn--alpha btn--small">dropdown</a>
+	<div class="dropdown__content">
+		<ul class="dropdown__list">
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
+		</ul>
+	</div>
+</div>
+```
+
+*/
+/* Dropdowns content
+==========
+*/
+.dropdown__content {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  visibility: hidden;
+  background-color: #f7f7f7;
+  border: 1px solid #eaeaea;
+  opacity: 0;
+  z-index: 999;
+  transition: all 0.2s 0.5s;
+  -webkit-transform: translate3d(0, 10%, 0) scale(0.8);
+          transform: translate3d(0, 10%, 0) scale(0.8);
+  min-width: 12.5rem;
+  max-width: 18.75rem; }
+  [data-dropdown-trigger=click] .dropdown__content {
+    transition-delay: 0s; }
+  .dropdown--right .dropdown__content {
+    left: auto;
+    right: 0; }
+  .dropdown__content a {
+    background-color: transparent;
+    display: block;
+    border-top: 0 solid #f4f4f4;
+    color: #333333;
+    padding: 0.625rem 0.9375rem; }
+    .dropdown__content a:hover {
+      background-color: #f2f2f2; }
+
+/* Dropdowns list
+==========
+*/
+/* Dropdowns item
+==========
+*/
+/* Dropdowns link
+==========
+*/
+/* Cards
+==========
+*/
+/* Cards
+==========
+*/
+.card {
+  position: relative;
+  display: block;
+  background: white;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2); }
+
+/*doc
+---
+title: Cards
+name: cards
+category: Content
+---
+
+Cards borrow the button color settings. Basic styling of the cards are heavily inspired by the MDL cards. 
+You could always remove some elements you won't be using such as action.
+
+## Color
+
+```html_example
+<div class="card">
+	<div class="card__header card__header--gamma">
+		<div class="card__title">A title</div>
+	</div>
+	<div class="card__content">
+		Some content
+	</div>
+	<div class="card__action">
+		<button class="btn btn--beta btn--medium">action</a>
+	</div>
+</div>
+```
+
+## Image
+```html_example
+<div class="card">
+	<div class="card__header card__header--gamma" style="background-image: url(http://www.placehold.it/640x480)">
+		<div class="card__title">A title</div>
+	</div>
+	<div class="card__content">
+		Some content
+	</div>
+	<div class="card__action">
+		<button class="btn btn--beta btn--medium">action</a>
+	</div>
+</div>
+```
+
+*/
+/* Cards header
+==========
+*/
+.card__header {
+  background-color: transparent;
+  background-size: cover;
+  background-position: center center;
+  position: relative;
+  color: white;
+  padding: 1.25rem;
+  height: 13.75rem; }
+  .card__header--light {
+    background-color: white; }
+  .card__header--dark {
+    background-color: black; }
+  .card__header--alpha {
+    background-color: #f7f7f7; }
+  .card__header--beta {
+    background-color: #293e4f; }
+  .card__header--gamma {
+    background-color: #496d83; }
+  .card__header--delta {
+    background-color: #4A3A59; }
+  .card__header--epsilon {
+    background-color: #1C2228; }
+
+/* Cards content
+==========
+*/
+.card__content {
+  padding: 1.25rem; }
+
+/* Cards title
+==========
+*/
+.card__title {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  font-size: 1.5rem; }
+
+/* Cards action
+==========
+*/
+.card__action {
+  border: 0.0625rem solid #eaeaea;
+  padding: 1.25rem; }
+
+/* Cards
+==========
+*/
+/* Tooltip
+==========
+*/
+.tooltip {
+  display: inline-block;
+  position: relative; }
+  .tooltip[data-tooltip-trigger=click] {
+    cursor: pointer; }
+  .tooltip.tooltip--active[data-tooltip-position=top] .tooltip__content, .tooltip.tooltip--active[data-tooltip-position=bottom] .tooltip__content {
+    -webkit-transform: translate(-50%, 0) scale(1);
+        -ms-transform: translate(-50%, 0) scale(1);
+            transform: translate(-50%, 0) scale(1); }
+  .tooltip.tooltip--active[data-tooltip-position=right] .tooltip__content {
+    -webkit-transform: translate(100%, -50%) scale(1);
+        -ms-transform: translate(100%, -50%) scale(1);
+            transform: translate(100%, -50%) scale(1); }
+  .tooltip.tooltip--active[data-tooltip-position=left] .tooltip__content {
+    -webkit-transform: translate(-100%, -50%) scale(1);
+        -ms-transform: translate(-100%, -50%) scale(1);
+            transform: translate(-100%, -50%) scale(1); }
+  .tooltip.tooltip--active .tooltip__content {
+    visibility: visible;
+    opacity: 1; }
+
+/*doc
+---
+title: Tooltips
+name: tooltips
+category: Callouts and prompts
+---
+
+Tooltips are used as fancy title attributes to display some info about a certain section.
+
+## Top position
+
+```html_example
+<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a>
+```
+
+## Right position
+
+```html_example
+<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="right" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">right</a>
+```
+
+## Bottom position
+
+```html_example
+<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="bottom" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">bottom</a>
+```
+
+## Left position
+
+```html_example
+<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="left" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">left</a>
+```
+
+## Click trigger
+
+```html_example
+<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness." data-tooltip-trigger="click">click trigger</a>
+```
+
+*/
+/* Tooltip content
+==========
+*/
+.tooltip .tooltip__content {
+  visibility: hidden;
+  position: absolute;
+  z-index: 100;
+  opacity: 0;
+  transition: all 0.2s;
+  text-align: center;
+  background: #293e4f;
+  color: white;
+  min-width: 150px;
+  padding: 10px;
+  border-radius: 0;
+  font-size: 0.75rem;
+  line-height: 1.2135rem; }
+  .tooltip .tooltip__content::after {
+    position: absolute;
+    content: '';
+    border: 5px solid transparent; }
+  .no-csstransforms .tooltip .tooltip__content {
+    width: 220px; }
+
+/* Tooltip position
+==========
+*/
+[data-tooltip-position=top] .tooltip__content,
+[data-tooltip-position=bottom] .tooltip__content {
+  left: 50%; }
+  [data-tooltip-position=top] .tooltip__content::after,
+  [data-tooltip-position=bottom] .tooltip__content::after {
+    left: 50%;
+    margin-left: -5px; }
+
+[data-tooltip-position=top] .tooltip__content {
+  -webkit-transform: translate(-50%, 10%) scale(0.5);
+      -ms-transform: translate(-50%, 10%) scale(0.5);
+          transform: translate(-50%, 10%) scale(0.5); }
+  [data-tooltip-position=top] .tooltip__content::after {
+    border-top-color: #293e4f;
+    bottom: -10px; }
+
+[data-tooltip-position=bottom] .tooltip__content {
+  -webkit-transform: translate(-50%, -10%) scale(0.5);
+      -ms-transform: translate(-50%, -10%) scale(0.5);
+          transform: translate(-50%, -10%) scale(0.5); }
+  [data-tooltip-position=bottom] .tooltip__content::after {
+    border-bottom-color: #293e4f;
+    top: -10px; }
+
+[data-tooltip-position=left] .tooltip__content,
+[data-tooltip-position=right] .tooltip__content {
+  top: 50%; }
+  [data-tooltip-position=left] .tooltip__content::after,
+  [data-tooltip-position=right] .tooltip__content::after {
+    top: 50%;
+    margin-top: -5px; }
+
+[data-tooltip-position=right] .tooltip__content {
+  right: -10px;
+  -webkit-transform: translate(90%, -50%) scale(0.5);
+      -ms-transform: translate(90%, -50%) scale(0.5);
+          transform: translate(90%, -50%) scale(0.5); }
+  [data-tooltip-position=right] .tooltip__content::after {
+    border-right-color: #293e4f;
+    left: -10px; }
+
+[data-tooltip-position=left] .tooltip__content {
+  left: -10px;
+  -webkit-transform: translate(-90%, -50%) scale(0.5);
+      -ms-transform: translate(-90%, -50%) scale(0.5);
+          transform: translate(-90%, -50%) scale(0.5); }
+  [data-tooltip-position=left] .tooltip__content::after {
+    border-left-color: #293e4f;
+    right: -10px; }
+
+/* Tabs
+==========
+*/
+/* Tabs
+==========
+*/
+.tabs li {
+  margin: 0;
+  float: left; }
+  .tabs li + li {
+    margin-left: 0rem; }
+
+/*doc
+---
+title: Tabs
+name: tabs
+category: Content
+---
+
+```html_example
+<ul class="tabs">
+	<li><a class="tab tab--active" href="#tab-home">Home</a></li>
+	<li><a class="tab" href="#tab-lorem">Lorem</a></li>
+	<li><a class="tab" href="#tab-ipsum">Ipsum</a></li>
+</ul>
+<div class="tab-content">
+	<div class="tab-item tab-item--active" id="tab-home">
+		<div class="grid">
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+		</div>
+	</div>
+	<div class="tab-item" id="tab-lorem">
+		<p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
+	</div>
+	<div class="tab-item" id="tab-ipsum">
+		<div class="grid">
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+		</div>
+		<div class="grid">
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
+		</div>
+	</div>
+</div>
+```
+
+*/
+/* Tabs tab
+==========
+*/
+.tab {
+  position: relative;
+  display: inline-block;
+  background: #f7f7f7;
+  color: #666666;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  padding: 0.9375rem 1.25rem; }
+  .tab:hover {
+    background: #eaeaea; }
+  .tab:focus {
+    outline: none;
+    color: #333333;
+    background: #dedede; }
+  .tab.tab--active {
+    background: white;
+    border-bottom-color: white;
+    color: #333333; }
+
+/* Tabs item
+==========
+*/
+.tab-item {
+  overflow: hidden;
+  height: 0;
+  width: 0;
+  opacity: 0;
+  transition: opacity 0.5s; }
+  .tab-item.tab-item--active {
+    height: auto;
+    width: 100%;
+    opacity: 1; }
+
+/* Tabs content
+==========
+*/
+.tab-content {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem; }
+
+/* Modal
+==========
+*/
 /* Modal
 ==========
 */
@@ -4981,50 +5693,6 @@ hll {
       max-width: 630px; } }
   .modal.modal-show {
     visibility: visible; }
-  .lt-ie9 .modal {
-    top: 0;
-    margin-left: -315px; }
-  .modal__content {
-    background: white;
-    border-radius: 0;
-    position: relative;
-    margin: 0 auto;
-    opacity: 0;
-    height: 100%;
-    -webkit-transform: scale(0.6);
-        -ms-transform: scale(0.6);
-            transform: scale(0.6);
-    transition: all 0.25s;
-    padding: 2.5rem; }
-    .modal-show .modal__content {
-      opacity: 1;
-      -webkit-transform: scale(1);
-          -ms-transform: scale(1);
-              transform: scale(1); }
-  .modal__overlay {
-    background: black;
-    position: fixed;
-    visibility: hidden;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 1000;
-    opacity: 0;
-    transition-property: visibility opacity;
-    transition-delay: 0.1s;
-    transition-duration: 0.5s; }
-    .modal-show .modal__overlay {
-      visibility: visible;
-      opacity: 0.4;
-      transition: opacity 0.5s; }
-  .modal__close {
-    position: absolute;
-    top: 0.625rem;
-    right: 0.625rem;
-    padding: 0.625rem;
-    font-size: 1.875rem;
-    line-height: 1.875rem; }
 
 /*doc
 ---
@@ -5098,172 +5766,61 @@ app.modal.closeModal();
 ```
 
 */
-/* Cards
+/* Modal content
 ==========
 */
-.card {
-  position: relative;
-  display: block;
+.modal__content {
   background: white;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.2); }
-  .card__header {
-    background-color: transparent;
-    background-size: cover;
-    background-position: center center;
-    position: relative;
-    color: white;
-    padding: 1.25rem;
-    height: 13.75rem; }
-    .card__header--light {
-      background-color: white; }
-    .card__header--dark {
-      background-color: black; }
-    .card__header--alpha {
-      background-color: #f7f7f7; }
-    .card__header--beta {
-      background-color: #293e4f; }
-    .card__header--gamma {
-      background-color: #496d83; }
-    .card__header--delta {
-      background-color: #4A3A59; }
-    .card__header--epsilon {
-      background-color: #1C2228; }
-  .card__content {
-    padding: 1.25rem; }
-  .card__action {
-    border: 0.0625rem solid #eaeaea;
-    padding: 1.25rem; }
-  .card__title {
-    position: absolute;
-    bottom: 1.25rem;
-    left: 1.25rem;
-    font-size: 1.5rem; }
+  border-radius: 0;
+  position: relative;
+  margin: 0 auto;
+  opacity: 0;
+  height: 100%;
+  -webkit-transform: scale(0.6);
+      -ms-transform: scale(0.6);
+          transform: scale(0.6);
+  transition: all 0.25s;
+  padding: 2.5rem; }
+  .modal-show .modal__content {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); }
 
-/*doc
----
-title: Cards
-name: cards
-category: Content
----
-
-Cards borrow the button color settings. Basic styling of the cards are heavily inspired by the MDL cards. 
-You could always remove some elements you won't be using such as action.
-
-## Color
-
-```html_example
-<div class="card">
-	<div class="card__header card__header--gamma">
-		<div class="card__title">A title</div>
-	</div>
-	<div class="card__content">
-		Some content
-	</div>
-	<div class="card__action">
-		<button class="btn btn--beta btn--medium">action</a>
-	</div>
-</div>
-```
-
-## Image
-```html_example
-<div class="card">
-	<div class="card__header card__header--gamma" style="background-image: url(http://www.placehold.it/640x480)">
-		<div class="card__title">A title</div>
-	</div>
-	<div class="card__content">
-		Some content
-	</div>
-	<div class="card__action">
-		<button class="btn btn--beta btn--medium">action</a>
-	</div>
-</div>
-```
-
-*/
-/* Tabs
+/* Modal overlay
 ==========
 */
-.tabs li {
-  margin: 0;
-  float: left; }
-  .tabs li + li {
-    margin-left: 0rem; }
-
-.tab {
-  position: relative;
-  display: inline-block;
-  background: #f7f7f7;
-  color: #666666;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  -webkit-user-select: none;
-     -moz-user-select: none;
-      -ms-user-select: none;
-          user-select: none;
-  padding: 0.9375rem 1.25rem; }
-  .tab:hover {
-    background: #eaeaea; }
-  .tab:focus {
-    outline: none;
-    color: #333333;
-    background: #dedede; }
-  .tab.tab--active {
-    background: white;
-    border-bottom-color: white;
-    color: #333333; }
-
-.tab-content {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem; }
-
-.tab-item {
-  overflow: hidden;
-  height: 0;
-  width: 0;
+.modal__overlay {
+  background: black;
+  position: fixed;
+  visibility: hidden;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
   opacity: 0;
-  transition: opacity 0.5s; }
-  .tab-item.tab-item--active {
-    height: auto;
-    width: 100%;
-    opacity: 1; }
+  transition-property: visibility opacity;
+  transition-delay: 0.1s;
+  transition-duration: 0.5s; }
+  .modal-show .modal__overlay {
+    visibility: visible;
+    opacity: 0.4;
+    transition: opacity 0.5s; }
 
-/*doc
----
-title: Tabs
-name: tabs
-category: Content
----
+/* Modal close
+==========
+*/
+.modal__close {
+  position: absolute;
+  top: 0.625rem;
+  right: 0.625rem;
+  padding: 0.625rem;
+  font-size: 1.875rem;
+  line-height: 1.875rem; }
 
-```html_example
-<ul class="tabs">
-	<li><a class="tab tab--active" href="#tab-home">Home</a></li>
-	<li><a class="tab" href="#tab-lorem">Lorem</a></li>
-	<li><a class="tab" href="#tab-ipsum">Ipsum</a></li>
-</ul>
-<div class="tab-content">
-	<div class="tab-item tab-item--active" id="tab-home">
-		<div class="grid">
-			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-		</div>
-	</div>
-	<div class="tab-item" id="tab-lorem">
-		<p>Ut pharetra ante id lobortis ullamcorper. Interdum et malesuada fames ac ante ipsum primis in faucibus. Vivamus ac sapien vel purus porta hendrerit. Nulla lacinia ac erat id tempor. Donec felis lorem, hendrerit eu placerat condimentum, faucibus sed metus. Nullam rutrum rutrum odio tempus convallis. Integer tempus lacus libero, non suscipit lacus mattis quis. Nam massa risus, scelerisque at libero non, dapibus lacinia neque. Quisque eu nulla at nunc blandit lobortis. Proin viverra metus tellus, non mollis est elementum ac. Proin elit dolor, gravida vel ipsum sit amet, varius aliquam ipsum</p>
-	</div>
-	<div class="tab-item" id="tab-ipsum">
-		<div class="grid">
-			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-		</div>
-		<div class="grid">
-			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-			<div class="column-6">You guys realize you live in a sewer, right? Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-		</div>
-	</div>
-</div>
-```
-
+/* Navigation bar
+==========
 */
 /* Navigation bar
 ==========
@@ -5279,13 +5836,6 @@ category: Content
           transform: translate3d(0, 0, 0);
   height: 3.125rem;
   min-width: 16.25rem; }
-  .csspositionsticky .nav-bar {
-    position: -webkit-sticky;
-    position: sticky;
-    top: 0;
-    left: 0; }
-  .no-csspositionsticky .nav-bar {
-    position: relative; }
   @media (min-width: 43.75em) {
     .nav-bar {
       max-height: inherit;
@@ -5305,126 +5855,6 @@ category: Content
         min-height: inherit;
         margin-top: 1.125rem;
         margin-bottom: 0; } }
-  .nav-bar--transform {
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0); }
-    .nav-bar--transform.nav-bar--show {
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0); }
-    @media (max-width: 37.4375em) {
-      .nav-bar--transform.nav-bar--always-show-on-mobile {
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0); } }
-  @media (min-width: 43.75em) {
-    .nav-bar--transparent:not(.nav-bar--fixed) {
-      background: transparent; }
-      .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
-        color: black; }
-        .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
-          background: transparent;
-          color: #293e4f; }
-      .nav-bar--transparent .nav-bar--transparent:not(.nav-bar--fixed) {
-        color: white; } }
-  .no-csspositionsticky .nav-bar--fixed {
-    position: fixed;
-    top: 0;
-    left: 0; }
-  .nav-bar__container {
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80rem;
-    min-width: 16.25rem; }
-    @media (min-width: 43.75em) {
-      .nav-bar__container {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem; } }
-    .nav-bar__container::before {
-      content: '';
-      background: #1C2228;
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: 1;
-      width: 100%;
-      height: 100%; }
-      @media (min-width: 43.75em) {
-        .nav-bar__container::before {
-          display: none; } }
-  .nav-bar__nav {
-    height: 0; }
-    @media (min-width: 43.75em) {
-      .nav-bar__nav {
-        float: right;
-        height: auto;
-        margin-left: 0rem; } }
-    .nav-bar--mobile-show .nav-bar__nav {
-      height: auto; }
-  .nav-bar__trigger {
-    display: inline-block;
-    background: #1C2228;
-    float: right;
-    text-align: center;
-    line-height: 50px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    z-index: 2;
-    width: 3.125rem;
-    height: 3.125rem; }
-    @media (min-width: 43.75em) {
-      .nav-bar__trigger {
-        display: none; } }
-    .nav-bar__trigger:active, .nav-bar__trigger:hover {
-      background: #313c46; }
-    .nav-bar__trigger::before {
-      content: "";
-      color: white;
-      font-size: 1.875rem; }
-      .nav-bar--mobile-show .nav-bar__trigger::before {
-        content: ""; }
-  .nav-bar__list {
-    background: #1C2228;
-    position: relative;
-    z-index: 0;
-    clear: both;
-    overflow-y: auto;
-    transition: all 0.2s;
-    -webkit-transform: translate3d(0, -100%, 0);
-            transform: translate3d(0, -100%, 0); }
-    @media (min-width: 43.75em) {
-      .nav-bar__list {
-        background: transparent;
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0);
-        float: right;
-        border-top: 0;
-        overflow-y: inherit; } }
-    .nav-bar--mobile-show .nav-bar__list {
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0); }
-    .nav-bar__list li {
-      display: block;
-      margin: 0; }
-      @media (min-width: 43.75em) {
-        .nav-bar__list li {
-          display: inline-block;
-          margin-right: -4px; } }
-  .nav-bar__link {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 1.25rem 1.875rem; }
-    @media (min-width: 43.75em) {
-      .nav-bar__link {
-        display: inline-block; } }
-    .touch .nav-bar__link {
-      transition: none; }
-    .nav-bar__link:hover {
-      background: #313c46;
-      color: white; }
-    .nav-bar__link.nav-bar__link--active, .nav-bar__link.scrollspy-nav--active {
-      background: #293e4f;
-      color: white; }
 
 /*doc
 ---
@@ -5450,6 +5880,314 @@ category: Navigation
 ```
 
 */
+/* Navigation bar transform
+==========
+*/
+.nav-bar--transform {
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0); }
+  .nav-bar--transform.nav-bar--show {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  @media (max-width: 37.4375em) {
+    .nav-bar--transform.nav-bar--always-show-on-mobile {
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0); } }
+
+/* Navigation bar transparent
+==========
+*/
+@media (min-width: 43.75em) {
+  .nav-bar--transparent:not(.nav-bar--fixed) {
+    background: transparent; }
+    .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
+      color: black; }
+      .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active, .nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
+        background: transparent;
+        color: #293e4f; }
+    .nav-bar--transparent .nav-bar--transparent:not(.nav-bar--fixed) {
+      color: white; } }
+
+/* Navigation bar fixed
+==========
+*/
+.nav-bar--fixed {
+  position: fixed;
+  top: 0;
+  left: 0; }
+
+/* Navigation bar container
+==========
+*/
+.nav-bar__container {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 80rem;
+  min-width: 16.25rem; }
+  @media (min-width: 43.75em) {
+    .nav-bar__container {
+      padding-left: 2.5rem;
+      padding-right: 2.5rem; } }
+  .nav-bar__container::before {
+    content: '';
+    background: #1C2228;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 100%; }
+    @media (min-width: 43.75em) {
+      .nav-bar__container::before {
+        display: none; } }
+
+/* Navigation bar nav
+==========
+*/
+.nav-bar__nav {
+  height: 0; }
+  @media (min-width: 43.75em) {
+    .nav-bar__nav {
+      float: right;
+      height: auto;
+      margin-left: 0rem; } }
+  .nav-bar--mobile-show .nav-bar__nav {
+    height: auto; }
+
+/* Navigation bar trigger
+==========
+*/
+.nav-bar__trigger {
+  display: inline-block;
+  background: #1C2228;
+  float: right;
+  text-align: center;
+  line-height: 50px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 2;
+  width: 3.125rem;
+  height: 3.125rem; }
+  @media (min-width: 43.75em) {
+    .nav-bar__trigger {
+      display: none; } }
+  .nav-bar__trigger:active, .nav-bar__trigger:hover {
+    background: #313c46; }
+  .nav-bar__trigger::before {
+    content: "";
+    color: white;
+    font-size: 1.875rem; }
+    .nav-bar--mobile-show .nav-bar__trigger::before {
+      content: ""; }
+
+/* Navigation bar list
+==========
+*/
+.nav-bar__list {
+  background: #1C2228;
+  position: relative;
+  z-index: 0;
+  clear: both;
+  overflow-y: auto;
+  transition: all 0.2s;
+  -webkit-transform: translate3d(0, -100%, 0);
+          transform: translate3d(0, -100%, 0); }
+  @media (min-width: 43.75em) {
+    .nav-bar__list {
+      background: transparent;
+      -webkit-transform: translate3d(0, 0, 0);
+              transform: translate3d(0, 0, 0);
+      float: right;
+      border-top: 0;
+      overflow-y: inherit; } }
+  .nav-bar--mobile-show .nav-bar__list {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  .nav-bar__list li {
+    display: block;
+    margin: 0; }
+    @media (min-width: 43.75em) {
+      .nav-bar__list li {
+        display: inline-block;
+        margin-right: -4px; } }
+
+/* Navigation bar link
+==========
+*/
+.nav-bar__link {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 1.25rem 1.875rem; }
+  @media (min-width: 43.75em) {
+    .nav-bar__link {
+      display: inline-block; } }
+  .touch .nav-bar__link {
+    transition: none; }
+  .nav-bar__link:hover {
+    background: #313c46;
+    color: white; }
+  .nav-bar__link.nav-bar__link--active, .nav-bar__link.scrollspy-nav--active {
+    background: #293e4f;
+    color: white; }
+
+/* Off canvas
+==========
+*/
+/* Off canvas
+==========
+*/
+@media (min-width: 62.5em) {
+  .off-canvas-body {
+    padding-left: 16.25rem; } }
+
+.off-canvas {
+  background: #1C2228;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 16.25rem;
+  height: 100%; }
+  .off-canvas a {
+    color: white; }
+    .off-canvas a:hover {
+      background: #33383e; }
+
+.off-canvas--left {
+  left: 0;
+  -webkit-transform: translate3d(-260px, 0, 0);
+          transform: translate3d(-260px, 0, 0);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; }
+  @media (min-width: 62.5em) {
+    .off-canvas--left {
+      -webkit-transform: translateX(0);
+          -ms-transform: translateX(0);
+              transform: translateX(0); } }
+  .off-canvas-show-left .off-canvas--left {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  .no-csstransforms3d .off-canvas--left {
+    left: -260px; }
+  .no-csstransforms3d.off-canvas-show-left .off-canvas--left {
+    left: 0; }
+
+.off-canvas--right {
+  right: 0;
+  -webkit-transform: translate3d(260px, 0, 0);
+          transform: translate3d(260px, 0, 0);
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; }
+  .off-canvas-show-right .off-canvas--right {
+    -webkit-transform: translate3d(0, 0, 0);
+            transform: translate3d(0, 0, 0); }
+  .no-csstransforms3d .off-canvas--right {
+    right: -260px; }
+  .no-csstransforms3d.off-canvas-show-left .off-canvas--right {
+    right: 0; }
+
+/*doc
+---
+title: Off canvas
+name: off_canvas
+category: Navigation
+---
+
+The docs has an off canvas for its menu.
+
+*/
+/* Off canvas toggle
+==========
+*/
+.off-canvas-toggle-left,
+.off-canvas-toggle-right {
+  background: #1C2228;
+  position: absolute;
+  top: 0;
+  z-index: 999;
+  color: white;
+  text-align: center;
+  border: none;
+  font-size: 1.875rem;
+  width: 4rem;
+  height: 4rem; }
+  @media (min-width: 62.5em) {
+    .off-canvas-toggle-left,
+    .off-canvas-toggle-right {
+      display: none; } }
+  .off-canvas-toggle-left:hover,
+  .off-canvas-toggle-right:hover {
+    background: #272f37;
+    color: white;
+    text-decoration: none; }
+  .off-canvas-toggle-left:active, .off-canvas-toggle-left:focus,
+  .off-canvas-toggle-right:active,
+  .off-canvas-toggle-right:focus {
+    outline: none; }
+
+.off-canvas-toggle-left {
+  right: -4rem; }
+  .off-canvas-toggle-left::before {
+    content: ""; }
+    .off-canvas-show-left .off-canvas-toggle-left::before {
+      content: ""; }
+
+.off-canvas-toggle-right {
+  left: -4rem; }
+  .off-canvas-toggle-right::before {
+    content: ""; }
+    .off-canvas-show-right .off-canvas-toggle-right::before {
+      content: ""; }
+
+/* Off canvas push
+==========
+*/
+.off-canvas-push {
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s; }
+  .off-canvas-show-left .off-canvas-push {
+    -webkit-transform: translateX(260px);
+        -ms-transform: translateX(260px);
+            transform: translateX(260px); }
+
+/* Off canvas nav
+==========
+*/
+.off-canvas-nav {
+  overflow-y: auto;
+  height: 100%;
+  max-height: 100%;
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem; }
+
+.off-canvas-nav__item {
+  border-top: 0.0625rem solid #1C2228;
+  border-bottom: 0.0625rem solid #1C2228; }
+  .off-canvas-nav__item:first-child {
+    border-top: 0; }
+  .off-canvas-nav__item:last-child {
+    border-bottom: 0; }
+
+.off-canvas-nav__header {
+  color: white;
+  padding: 1.25rem 1.25rem 0.625rem 1.25rem;
+  font-size: 1.125rem; }
+
+.off-canvas-nav__link {
+  display: block;
+  color: white;
+  padding: 0.625rem 1.25rem; }
+  .off-canvas-nav__link--active, .off-canvas-nav__link.active, .off-canvas-nav__link.scrollspy-nav--active {
+    background: #33383e;
+    font-weight: 400; }
+
+/* Tables
+==========
+*/
 /* Tables
 ==========
 */
@@ -5466,96 +6204,6 @@ category: Navigation
     font-size: 0.6875rem;
     text-transform: uppercase;
     background: #f7f7f7; }
-  .table--hover tr:hover td {
-    background: #f6f6f6; }
-  .table--zebra tr:nth-child(even) td {
-    background: #f8f8f8; }
-  .table--bordered {
-    border: 0.0625rem solid #dedede; }
-    .table--bordered td,
-    .table--bordered th {
-      border-left: 0.0625rem solid #dedede; }
-      .table--bordered td:first-child,
-      .table--bordered th:first-child {
-        border-left: none; }
-
-.responsive-table {
-  display: inline-block;
-  vertical-align: top;
-  max-width: 100%;
-  overflow-x: auto;
-  white-space: nowrap;
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-.responsive-table,
-.responsive-table--flip tbody {
-  background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 100% center;
-  -webkit-overflow-scrolling: touch;
-  background-size: 10px 100%, 10px 100%;
-  background-attachment: scroll, scroll;
-  background-repeat: no-repeat;
-  -webkit-overflow-scrolling: touch; }
-
-.responsive-table td:first-child,
-.responsive-table--flip tbody tr:first-child {
-  background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-size: 20px 100%; }
-
-.responsive-table td:last-child,
-.responsive-table--flip tbody tr:last-child {
-  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
-  background-repeat: no-repeat;
-  background-position: 100% 0;
-  background-size: 20px 100%; }
-
-.responsive-table--flip {
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  overflow: hidden;
-  background: none; }
-  .responsive-table--flip thead {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-            flex-shrink: 0;
-    min-width: -webkit-min-content;
-    min-width: -moz-min-content;
-    min-width: min-content; }
-  .responsive-table--flip tbody {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    position: relative;
-    overflow-x: auto;
-    overflow-y: hidden; }
-  .responsive-table--flip tr {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    min-width: -webkit-min-content;
-    min-width: -moz-min-content;
-    min-width: min-content;
-    -webkit-flex-shrink: 0;
-        -ms-flex-negative: 0;
-            flex-shrink: 0; }
-  .responsive-table--flip td,
-  .responsive-table--flip th {
-    display: block; }
-    .responsive-table--flip td:not(:last-child), .responsive-table--flip td:not(:last-child),
-    .responsive-table--flip th:not(:last-child),
-    .responsive-table--flip th:not(:last-child) {
-      border-bottom: 0; }
-  .responsive-table--flip td {
-    background-image: none !important;
-    border-left: 0; }
 
 /*doc
 ---
@@ -5875,246 +6523,113 @@ category: Content
 
 
 */
-/* Dropdowns
+/* Table bordered
 ==========
 */
-.dropdown {
-  display: inline-block;
-  position: relative; }
-  .dropdown:not([data-dropdown-trigger=click]):hover .dropdown__content, .dropdown.dropdown--show .dropdown__content {
-    visibility: visible;
-    opacity: 1;
-    transition: all 0.2s 0s;
-    -webkit-transform: translate3d(0, 0, 0) scale(1);
-            transform: translate3d(0, 0, 0) scale(1); }
-  .dropdown li {
-    display: block;
-    margin: 0; }
-  .dropdown__content {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    visibility: hidden;
-    background-color: #f7f7f7;
-    border: 1px solid #eaeaea;
-    opacity: 0;
-    z-index: 999;
-    transition: all 0.2s 0.5s;
-    -webkit-transform: translate3d(0, 10%, 0) scale(0.8);
-            transform: translate3d(0, 10%, 0) scale(0.8);
-    min-width: 12.5rem;
-    max-width: 18.75rem; }
-    [data-dropdown-trigger=click] .dropdown__content {
-      transition-delay: 0s; }
-    .dropdown--right .dropdown__content {
-      left: auto;
-      right: 0; }
-    .dropdown__content a {
-      background-color: transparent;
-      display: block;
-      border-top: 0 solid #f4f4f4;
-      color: #333333;
-      padding: 0.625rem 0.9375rem; }
-      .dropdown__content a:hover {
-        background-color: #f2f2f2; }
+.table--bordered {
+  border: 0.0625rem solid #dedede; }
+  .table--bordered td,
+  .table--bordered th {
+    border-left: 0.0625rem solid #dedede; }
+    .table--bordered td:first-child,
+    .table--bordered th:first-child {
+      border-left: none; }
 
-/*doc
----
-title: Dropdowns
-name: dropdowns
-category: Content
----
-
-## Hover
-
-```html_example
-<div class="dropdown">
-	<a class="btn btn--alpha btn--small">dropdown</a>
-	<div class="dropdown__content">
-		<ul>
-			<li><a href="#link">link</a></li>
-			<li><a href="#link">link</a></li>
-			<li><a href="#link">link</a></li>
-			<li><a href="#link">link</a></li>
-		</ul>
-	</div>
-</div>
-```
-
-## Click trigger
-
-```html_example
-<div class="dropdown" data-dropdown-trigger="click">
-	<a class="btn btn--alpha btn--small">dropdown</a>
-	<div class="dropdown__content">
-		<ul class="dropdown__list">
-			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
-		</ul>
-	</div>
-</div>
-```
-
-## Right aligned
-
-```html_example
-<div class="dropdown dropdown--right">
-	<a class="btn btn--alpha btn--small">dropdown</a>
-	<div class="dropdown__content">
-		<ul class="dropdown__list">
-			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
-			<li class="dropdown__item"><a class="dropdown__link" href="#link">link</a></li>
-		</ul>
-	</div>
-</div>
-```
-
-*/
-/* Tooltips
+/* Table hover
 ==========
 */
-.tooltip {
+.table--hover tr:hover td {
+  background: #f6f6f6; }
+
+/* Table zebra
+==========
+*/
+.table--zebra tr:nth-child(even) td {
+  background: #f8f8f8; }
+
+/* Table responsive
+==========
+*/
+.responsive-table {
   display: inline-block;
-  position: relative; }
-  .tooltip[data-tooltip-trigger=click] {
-    cursor: pointer; }
-  .tooltip .tooltip__content {
-    visibility: hidden;
-    position: absolute;
-    z-index: 100;
-    opacity: 0;
-    transition: all 0.2s; }
-  .tooltip.tooltip--active[data-tooltip-position=top] .tooltip__content, .tooltip.tooltip--active[data-tooltip-position=bottom] .tooltip__content {
-    -webkit-transform: translate(-50%, 0) scale(1);
-        -ms-transform: translate(-50%, 0) scale(1);
-            transform: translate(-50%, 0) scale(1); }
-  .tooltip.tooltip--active[data-tooltip-position=right] .tooltip__content {
-    -webkit-transform: translate(100%, 0) scale(1);
-        -ms-transform: translate(100%, 0) scale(1);
-            transform: translate(100%, 0) scale(1); }
-  .tooltip.tooltip--active[data-tooltip-position=left] .tooltip__content {
-    -webkit-transform: translate(-100%, 0) scale(1);
-        -ms-transform: translate(-100%, 0) scale(1);
-            transform: translate(-100%, 0) scale(1); }
-  .tooltip.tooltip--active .tooltip__content {
-    visibility: visible;
-    opacity: 1; }
-  .tooltip .tooltip__content {
-    text-align: center;
-    background: #293e4f;
-    color: white;
-    min-width: 150px;
-    padding: 10px;
-    border-radius: 0;
-    font-size: 0.75rem;
-    line-height: 1.2135rem; }
-    .tooltip .tooltip__content::after {
-      position: absolute;
-      content: '';
-      border: 5px solid transparent; }
-    .no-csstransforms .tooltip .tooltip__content {
-      width: 220px; }
+  vertical-align: top;
+  max-width: 100%;
+  overflow-x: auto;
+  white-space: nowrap;
+  border-collapse: collapse;
+  border-spacing: 0; }
 
-[data-tooltip-position=top] .tooltip__content,
-[data-tooltip-position=bottom] .tooltip__content {
-  left: 50%; }
-  [data-tooltip-position=top] .tooltip__content::after,
-  [data-tooltip-position=bottom] .tooltip__content::after {
-    left: 50%;
-    margin-left: -5px; }
-  .no-csstransforms [data-tooltip-position=top] .tooltip__content, .no-csstransforms
-  [data-tooltip-position=bottom] .tooltip__content {
-    margin-left: -110px; }
+.responsive-table,
+.responsive-table--flip tbody {
+  background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, transparent 75%) 100% center;
+  -webkit-overflow-scrolling: touch;
+  background-size: 10px 100%, 10px 100%;
+  background-attachment: scroll, scroll;
+  background-repeat: no-repeat;
+  -webkit-overflow-scrolling: touch; }
 
-[data-tooltip-position=top] .tooltip__content {
-  -webkit-transform: translate(-50%, 10%) scale(0.5);
-      -ms-transform: translate(-50%, 10%) scale(0.5);
-          transform: translate(-50%, 10%) scale(0.5); }
-  [data-tooltip-position=top] .tooltip__content::after {
-    border-top-color: #293e4f;
-    bottom: -10px; }
+.responsive-table td:first-child,
+.responsive-table--flip tbody tr:first-child {
+  background-image: linear-gradient(to right, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-size: 20px 100%; }
 
-[data-tooltip-position=bottom] .tooltip__content {
-  -webkit-transform: translate(-50%, -10%) scale(0.5);
-      -ms-transform: translate(-50%, -10%) scale(0.5);
-          transform: translate(-50%, -10%) scale(0.5); }
-  [data-tooltip-position=bottom] .tooltip__content::after {
-    border-bottom-color: #293e4f;
-    top: -10px; }
+.responsive-table td:last-child,
+.responsive-table--flip tbody tr:last-child {
+  background-image: linear-gradient(to left, white 50%, rgba(255, 255, 255, 0) 100%);
+  background-repeat: no-repeat;
+  background-position: 100% 0;
+  background-size: 20px 100%; }
 
-[data-tooltip-position=left] .tooltip__content,
-[data-tooltip-position=right] .tooltip__content {
-  top: 50%; }
-  [data-tooltip-position=left] .tooltip__content::after,
-  [data-tooltip-position=right] .tooltip__content::after {
-    top: 50%;
-    margin-top: -5px; }
+.responsive-table--flip {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  background: none; }
+  .responsive-table--flip thead {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content; }
+  .responsive-table--flip tbody {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: hidden; }
+  .responsive-table--flip tr {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-width: -webkit-min-content;
+    min-width: -moz-min-content;
+    min-width: min-content;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0; }
+  .responsive-table--flip td,
+  .responsive-table--flip th {
+    display: block; }
+    .responsive-table--flip td:not(:last-child), .responsive-table--flip td:not(:last-child),
+    .responsive-table--flip th:not(:last-child),
+    .responsive-table--flip th:not(:last-child) {
+      border-bottom: 0; }
+  .responsive-table--flip td {
+    background-image: none !important;
+    border-left: 0; }
 
-[data-tooltip-position=right] .tooltip__content {
-  right: -10px;
-  -webkit-transform: translate(90%, 0) scale(0.5);
-      -ms-transform: translate(90%, 0) scale(0.5);
-          transform: translate(90%, 0) scale(0.5); }
-  [data-tooltip-position=right] .tooltip__content::after {
-    border-right-color: #293e4f;
-    left: -10px; }
-  .no-csstransforms [data-tooltip-position=right] .tooltip__content {
-    right: -230px; }
-
-[data-tooltip-position=left] .tooltip__content {
-  left: -10px;
-  -webkit-transform: translate(-90%, 0) scale(0.5);
-      -ms-transform: translate(-90%, 0) scale(0.5);
-          transform: translate(-90%, 0) scale(0.5); }
-  [data-tooltip-position=left] .tooltip__content::after {
-    border-left-color: #293e4f;
-    right: -10px; }
-  .no-csstransforms [data-tooltip-position=left] .tooltip__content {
-    left: -230px; }
-
-/*doc
----
-title: Tooltips
-name: tooltips
-category: Callouts and prompts
----
-
-Tooltips are used as fancy title attributes to display some info about a certain section.
-
-## Top position
-
-```html_example
-<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">top</a>
-```
-
-## Right position
-
-```html_example
-<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="right" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">right</a>
-```
-
-## Bottom position
-
-```html_example
-<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="bottom" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">bottom</a>
-```
-
-## Left position
-
-```html_example
-<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="left" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness.">left</a>
-```
-
-## Click trigger
-
-```html_example
-<a class="btn btn--alpha btn--small tooltip" data-tooltip-position="top" title="Kids don't turn rotten just from watching TV. Why not indeed! Yeah, I do that with my stupidness." data-tooltip-trigger="click">click trigger</a>
-```
-
+/* Accordion
+==========
 */
 /* Accordion
 ==========
@@ -6122,47 +6637,6 @@ Tooltips are used as fancy title attributes to display some info about a certain
 .accordion {
   border-radius: 0;
   overflow: hidden; }
-  .accordion__group {
-    overflow: hidden;
-    margin-bottom: 0; }
-  .accordion__trigger {
-    display: block;
-    position: relative;
-    background-color: #f7f7f7;
-    color: #333333;
-    padding: 15px 20px;
-    border-bottom: 0.0625rem solid white; }
-    .accordion__trigger:hover {
-      background-color: #eaeaea;
-      color: #262626; }
-    .accordion-content-show .accordion__trigger {
-      background-color: #293e4f;
-      color: white; }
-    .accordion__trigger::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      color: #333333;
-      -webkit-transform: translate(0, -50%);
-          -ms-transform: translate(0, -50%);
-              transform: translate(0, -50%);
-      right: 1.25rem; }
-      .no-csstransforms .accordion__trigger::after {
-        margin-top: -10px; }
-      .accordion-content-show .accordion__trigger::after {
-        content: "";
-        color: white; }
-  .accordion__content {
-    overflow: hidden;
-    padding: 0 20px;
-    transition: all 0.2s; }
-    .lt-ie9 .accordion__content {
-      height: 0; }
-    .accordion__content > *:first-child {
-      margin-top: 20px; }
-    .lt-ie9 .accordion-content-show .accordion__content {
-      height: auto;
-      max-height: 1000px !important; }
 
 /*doc
 ---
@@ -6224,131 +6698,64 @@ category: Content
 ```
 
 */
-/* Breadcrumbs
+/* Accordion group
 ==========
 */
-.breadcrumbs {
-  background: #f5f5f5;
-  border-radius: 0;
-  padding: 0.9375rem 1.25rem;
-  margin-bottom: 2.5rem; }
-  .breadcrumbs a,
-  .breadcrumbs span {
-    display: inline-block; }
-  .breadcrumbs a {
-    margin-right: 0.625rem; }
-    .breadcrumbs a::after {
-      content: "/";
-      color: #cccccc;
-      margin-left: 0.625rem; }
-  .breadcrumbs span {
-    color: #aaaaaa; }
+.accordion__group {
+  overflow: hidden;
+  margin-bottom: 0; }
 
-/*doc
----
-title: Breadcrumbs
-name: breadcrumbs
-category: Navigation
----
-
-```html_example
-<div class="breadcrumbs">
-	<a class="breadcrubs__link" href="#link">Home</a>
-	<a class="breadcrubs__link" href="#link">Lorem</a>
-	<span>Ipsum dolir asmit emet</span>
-</div>
-```
-
-*/
-/* Pricing tables
+/* Accordion trigger
 ==========
 */
-.pricing-table {
-  border: 0.0625rem solid #eaeaea;
-  text-align: center;
-  border-radius: 0;
-  overflow: hidden; }
-  .pricing-table__header {
-    background: #333333;
-    color: white;
-    padding: 0.9375rem 1.25rem; }
-  .pricing-table__content {
-    padding: 0.625rem 1.25rem; }
-    .pricing-table__content--alpha {
-      background: #f7f7f7; }
-    .pricing-table__content + .pricing-table__content {
-      border-top: 0.0625rem solid #eaeaea; }
-  .pricing-table__price {
-    font-size: 1.875rem; }
-  .pricing-table__description {
-    color: #999999;
-    font-size: 1.25rem; }
-  .pricing-table__content--action {
-    padding-top: 1.25rem;
-    padding-bottom: 1.25rem; }
+.accordion__trigger {
+  display: block;
+  position: relative;
+  background-color: #f7f7f7;
+  color: #333333;
+  padding: 15px 20px;
+  border-bottom: 0.0625rem solid white; }
+  .accordion__trigger:hover {
+    background-color: #eaeaea;
+    color: #262626; }
+  .accordion-content-show .accordion__trigger {
+    background-color: #293e4f;
+    color: white; }
+  .accordion__trigger::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    color: #333333;
+    -webkit-transform: translate(0, -50%);
+        -ms-transform: translate(0, -50%);
+            transform: translate(0, -50%);
+    right: 1.25rem; }
+    .no-csstransforms .accordion__trigger::after {
+      margin-top: -10px; }
+    .accordion-content-show .accordion__trigger::after {
+      content: "";
+      color: white; }
 
-/*doc
----
-title: Pricing tables
-name: pricing_tables
-category: Content
----
+/* Accordion content
+==========
+*/
+.accordion__content {
+  overflow: hidden;
+  padding: 0 20px;
+  transition: all 0.2s; }
+  .accordion__content > *:first-child {
+    margin-top: 20px; }
 
-```html_example
-<ul class="pricing-table">
-	<li class="pricing-table__header">
-		Basos package
-	</li>
-	<li class="pricing-table__content pricing-table__content--alpha">
-		<div class="pricing-table__price">&euro; 500,-</div>
-	</li>
-	<li class="pricing-table__content pricing-table__content--beta">
-		<div class="pricing-table__description">Lorem ipsum dolor sit amet.</div>
-	</li>
-	<li class="pricing-table__content pricing-table__content--beta">
-		<div class="pricing-table__item">50 components</div>
-	</li>
-	<li class="pricing-table__content pricing-table__content--beta">
-		<div class="pricing-table__item">100 lorems</div>
-	</li>
-	<li class="pricing-table__content pricing-table__content--beta">
-		<div class="pricing-table__item">5 dolirs</div>
-	</li>
-	<li class="pricing-table__content pricing-table__content--beta price-table__content--action">
-		<a class="btn btn--beta btn--medium" href="">buy now</a>
-	</li>
-</ul>
-```
-
+/* Media
+==========
 */
 /* Media
 ==========
 */
-.media-list--bordered .media {
-  border-top: 1px solid #dedede;
-  margin-bottom: 0;
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem; }
-  .media-list--bordered .media .media {
-    margin: 0; }
-
 .media {
   margin-bottom: 2.5rem; }
   .media .media {
     margin-bottom: 1.25rem; }
-  .media__alpha {
-    float: left;
-    margin-bottom: 1.25rem; }
-    @media (min-width: 37.5em) {
-      .media__alpha {
-        margin-bottom: 0; } }
-    .media--right .media__alpha {
-      float: right; }
-  .media--left .media__beta {
-    float: right;
-    margin: 0; }
-  .media--right .media__beta {
-    float: left; }
 
 /*doc
 ---
@@ -6464,10 +6871,127 @@ category: Content
 ```
 
 */
+/* Media alpha
+==========
+*/
+.media__alpha {
+  float: left;
+  margin-bottom: 1.25rem; }
+  @media (min-width: 37.5em) {
+    .media__alpha {
+      margin-bottom: 0; } }
+  .media--right .media__alpha {
+    float: right; }
+
+/* Media beta
+==========
+*/
+.media--left .media__beta {
+  float: right;
+  margin: 0; }
+
+.media--right .media__beta {
+  float: left; }
+
+/* Media list
+==========
+*/
+.media-list--bordered .media {
+  border-top: 1px solid #dedede;
+  margin-bottom: 0;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem; }
+  .media-list--bordered .media .media {
+    margin: 0; }
+
+/* Pricing table
+==========
+*/
+/* Pricing table
+==========
+*/
+.pricing-table {
+  border: 0.0625rem solid #eaeaea;
+  text-align: center;
+  border-radius: 0;
+  overflow: hidden; }
+
+/*doc
+---
+title: Pricing tables
+name: pricing_tables
+category: Content
+---
+
+```html_example
+<ul class="pricing-table">
+	<li class="pricing-table__header">
+		Basos package
+	</li>
+	<li class="pricing-table__content pricing-table__content--alpha">
+		<div class="pricing-table__price">&euro; 500,-</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__description">Lorem ipsum dolor sit amet.</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__item">50 components</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__item">100 lorems</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__item">5 dolirs</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta price-table__content--action">
+		<a class="btn btn--beta btn--medium" href="">buy now</a>
+	</li>
+</ul>
+```
+
+*/
+/* Pricing tables header
+==========
+*/
+.pricing-table__header {
+  background: #333333;
+  color: white;
+  padding: 0.9375rem 1.25rem; }
+
+/* Pricing table content
+==========
+*/
+.pricing-table__content {
+  padding: 0.625rem 1.25rem; }
+  .pricing-table__content + .pricing-table__content {
+    border-top: 0.0625rem solid #eaeaea; }
+
+.pricing-table__content--alpha {
+  background: #f7f7f7; }
+
+.pricing-table__content--action {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem; }
+
+/* Pricing tables description
+==========
+*/
+.pricing-table__description {
+  color: #999999;
+  font-size: 1.25rem; }
+
+/* Pricing tables price
+==========
+*/
+.pricing-table__price {
+  font-size: 1.875rem; }
+
+/* Progress
+==========
+*/
 /* Progress bar
 ==========
 */
-/*==========  Bar  ==========*/
 progress,
 .progress-bar {
   background-color: #f7f7f7;
@@ -6484,7 +7008,44 @@ progress,
 progress[value]::-webkit-progress-bar {
   background-color: #f7f7f7; }
 
-/*==========  Value  ==========*/
+/*doc
+---
+title: Progress bars
+name: progress_bars
+category: Content
+---
+
+## Indeterminate
+
+```html_example
+<progress>
+	<div class="progress-bar">
+		<div class="progress-bar__value"></div>
+	</div>
+</progress>
+<div class="progress-bar">
+	<div class="progress-bar__value"></div>
+</div>
+```
+
+
+## Determinate
+
+```html_example
+<progress max="100" value="80">
+	<div class="progress-bar">
+		<div class="progress-bar__value" style="width: 80%;"></div>
+	</div>
+</progress>
+<div class="progress-bar">
+	<div class="progress-bar__value" style="width: 80%;"></div>
+</div>
+```
+
+*/
+/* Progress bar value
+==========
+*/
 @-webkit-keyframes progress-bar {
   100% {
     background-position: 100px 0; } }
@@ -6534,7 +7095,9 @@ progress[value]::-ms-fill {
   background-image: linear-gradient(-45deg, transparent, transparent 33%, rgba(0, 0, 0, 0.05) 33%, rgba(0, 0, 0, 0.05) 66%, transparent 66%);
   background-color: #293e4f; }
 
-/*==========  Inderterminate progress  ==========*/
+/* Progress bar indeterminate
+==========
+*/
 progress:not([value]) {
   background-size: 25px 15px, 100% 100%, 100% 100%;
   border-radius: 0;
@@ -6579,543 +7142,6 @@ progress:not([value]) {
 
 /*doc
 ---
-title: Progress bars
-name: progress_bars
-category: Content
----
-
-## Indeterminate
-
-```html_example
-<progress>
-	<div class="progress-bar">
-		<div class="progress-bar__value"></div>
-	</div>
-</progress>
-<div class="progress-bar">
-	<div class="progress-bar__value"></div>
-</div>
-```
-
-
-## Determinate
-
-```html_example
-<progress max="100" value="80">
-	<div class="progress-bar">
-		<div class="progress-bar__value" style="width: 80%;"></div>
-	</div>
-</progress>
-<div class="progress-bar">
-	<div class="progress-bar__value" style="width: 80%;"></div>
-</div>
-```
-
-*/
-/* Spinners
-==========
-*/
-@-webkit-keyframes spinner {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-@keyframes spinner {
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg); } }
-
-.spinner {
-  display: inline-block;
-  -webkit-animation: spinner 1s infinite linear;
-          animation: spinner 1s infinite linear; }
-  .spinner::after {
-    font-size: 1.875rem; }
-  .spinner--alpha:after {
-    content: ""; }
-
-/* Scrollspy
-==========
-*/
-[data-scrollspy] {
-  opacity: 0; }
-  [data-scrollspy].scrollspy--in-view {
-    opacity: 1; }
-
-/*doc
----
-title: Scrollspy
-name: scrollspy
-category: Content
----
-
-```html_example
-<div class="grid">
-	<div data-scrollspy data-scrollspy-repeat data-scrollspy-class="animation-bounceIn" class="column-12 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best. Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-</div>
-<div class="grid" data-equalize>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-6 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-</div>
-<div class="grid" data-equalize>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceIn" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-</div>
-<div class="grid" data-equalize>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there.</div>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-8 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-</div>
-<div class="grid" data-equalize>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" class="column-7 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInUp" data-scrollspy-delay="200" class="column-5 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-</div>
-<div class="grid" data-equalize>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" class="column-8 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInLeft" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-</div>
-<div class="grid" data-equalize>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="100" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-bounceInRight" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-</div>
-<div class="grid" data-equalize>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateAlpha" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateGamma" data-scrollspy-delay="200" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-	<div data-equalize-target data-scrollspy data-scrollspy-class="animation-fadeInRotateBeta" data-scrollspy-delay="400" class="column-4 block">Now Fry, it's been a few years since medical school, so remind me. Disemboweling in your species: fatal or non-fatal? I've been there. My folks were always on me to groom myself and wear underpants. What am I, the pope? Who am I making this out to? No! Don't jump! Bender, we're trying our best.</div>
-</div>
-```
-
-*/
-/* Toggle
-==========
-*/
-.toggle {
-  overflow: hidden;
-  transition: all 0.2s;
-  max-height: 31.25rem; }
-  .toggle--no-animation {
-    transition: none; }
-  .toggle--hide {
-    max-height: 0; }
-
-/*doc
----
-title: Toggle
-name: toggle
-category: Content
----
-
-You can add a no animation modifier to the target (toggle--no-animation).
-
-```html_example
-<button class="btn btn--alpha btn--small" data-toggle="#toggle-target">toggle</button>
-<div id="toggle-target" class="toggle toggle--hide">
-	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quibusdam nemo nisi, pariatur doloremque itaque exercitationem odio libero odit dolores voluptate voluptas nulla voluptates nam nobis illo veritatis aperiam cupiditate dolor.</div>
-</div>
-```
-
-*/
-/* Affix
-==========
-*/
-.affix-container {
-  position: relative; }
-
-.affix {
-  position: relative; }
-  .affix--fixed {
-    position: fixed;
-    top: 0;
-    z-index: 1; }
-  .affix--absolute {
-    position: absolute;
-    top: inherit !important;
-    bottom: 0; }
-
-/*doc
----
-title: Affix
-name: affix
-category: Navigation
----
-
-```html_example
-<div class="grid affix-container">
-	<div class="column-3">
-		<div class="affix" data-affix>
-			Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente ducimus voluptates veniam a. Suscipit esse eaque nemo ratione voluptatibus amet maxime ipsam voluptas, reiciendis veniam, asperiores pariatur, dolorem at repellendus?
-		</div>
-	</div>
-	<div class="column-9">
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam architecto quisquam tempore saepe accusantium sunt sit commodi dolores molestias officiis porro, ab blanditiis asperiores cumque. Sed dicta in voluptas id.</p>
-	</div>
-</div>
-```
-
-*/
-/* Google maps
-==========
-*/
-.google-maps {
-  position: relative;
-  width: 100%;
-  height: 0;
-  padding-bottom: 40%; }
-  .google-maps__map {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%; }
-
-/*doc
----
-title: Google maps
-name: google_maps
-category: Content
----
-
-The map is styled with the styles options, the style used for these docs is borrowed from [snazzymaps](https://snazzymaps.com).
-
-```html_example
-<div class="google-maps">
-	<div id="google-maps" class="google-maps__map"></div>
-</div>
-```
-
-*/
-/* Off canvas
-==========
-*/
-/* Off canvas
-==========
-*/
-@media (min-width: 62.5em) {
-  .off-canvas-body {
-    padding-left: 16.25rem; } }
-
-.off-canvas-toggle-left,
-.off-canvas-toggle-right {
-  background: #1C2228;
-  position: absolute;
-  top: 0;
-  z-index: 999;
-  color: white;
-  text-align: center;
-  border: none;
-  font-size: 1.875rem;
-  width: 4rem;
-  height: 4rem; }
-  @media (min-width: 62.5em) {
-    .off-canvas-toggle-left,
-    .off-canvas-toggle-right {
-      display: none; } }
-  .off-canvas-toggle-left:hover,
-  .off-canvas-toggle-right:hover {
-    background: #272f37;
-    color: white;
-    text-decoration: none; }
-  .off-canvas-toggle-left:active, .off-canvas-toggle-left:focus,
-  .off-canvas-toggle-right:active,
-  .off-canvas-toggle-right:focus {
-    outline: none; }
-
-.off-canvas-toggle-left {
-  right: -4rem; }
-  .off-canvas-toggle-left::before {
-    content: ""; }
-    .off-canvas-show-left .off-canvas-toggle-left::before {
-      content: ""; }
-
-.off-canvas-toggle-right {
-  left: -4rem; }
-  .off-canvas-toggle-right::before {
-    content: ""; }
-    .off-canvas-show-right .off-canvas-toggle-right::before {
-      content: ""; }
-
-.off-canvas {
-  background: #1C2228;
-  position: fixed;
-  z-index: 999;
-  top: 0;
-  width: 16.25rem;
-  height: 100%; }
-  .off-canvas--left {
-    left: 0;
-    -webkit-transform: translate3d(-260px, 0, 0);
-            transform: translate3d(-260px, 0, 0);
-    transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s; }
-    @media (min-width: 62.5em) {
-      .off-canvas--left {
-        -webkit-transform: translateX(0);
-            -ms-transform: translateX(0);
-                transform: translateX(0); } }
-    .off-canvas-show-left .off-canvas--left {
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0); }
-    .no-csstransforms3d .off-canvas--left {
-      left: -260px; }
-    .no-csstransforms3d.off-canvas-show-left .off-canvas--left {
-      left: 0; }
-  .off-canvas--right {
-    right: 0;
-    -webkit-transform: translate3d(260px, 0, 0);
-            transform: translate3d(260px, 0, 0);
-    transition: -webkit-transform 0.2s;
-    transition: transform 0.2s;
-    transition: transform 0.2s, -webkit-transform 0.2s; }
-    .off-canvas-show-right .off-canvas--right {
-      -webkit-transform: translate3d(0, 0, 0);
-              transform: translate3d(0, 0, 0); }
-    .no-csstransforms3d .off-canvas--right {
-      right: -260px; }
-    .no-csstransforms3d.off-canvas-show-left .off-canvas--right {
-      right: 0; }
-  .off-canvas a {
-    color: white; }
-    .off-canvas a:hover {
-      background: #33383e; }
-
-.off-canvas-push {
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s; }
-  .off-canvas-show-left .off-canvas-push {
-    -webkit-transform: translateX(260px);
-        -ms-transform: translateX(260px);
-            transform: translateX(260px); }
-
-.off-canvas-nav {
-  overflow-y: auto;
-  height: 100%;
-  max-height: 100%;
-  padding-top: 0.625rem;
-  padding-bottom: 0.625rem; }
-
-.off-canvas-nav__item {
-  border-top: 0.0625rem solid #1C2228;
-  border-bottom: 0.0625rem solid #1C2228; }
-  .off-canvas-nav__item:first-child {
-    border-top: 0; }
-  .off-canvas-nav__item:last-child {
-    border-bottom: 0; }
-
-.off-canvas-nav__header {
-  color: white;
-  padding: 1.25rem 1.25rem 0.625rem 1.25rem;
-  font-size: 1.125rem; }
-
-.off-canvas-nav__link {
-  display: block;
-  color: white;
-  padding: 0.625rem 1.25rem; }
-  .off-canvas-nav__link--active, .off-canvas-nav__link.active, .off-canvas-nav__link.scrollspy-nav--active {
-    background: #33383e;
-    font-weight: 400; }
-
-/*doc
----
-title: Off canvas
-name: off_canvas
-category: Navigation
----
-
-This demo site has an off canvas for its menu.
-
-*/
-/* Off canvas
-==========
-*/
-@media (max-width: 43.6875em) {
-  .off-canvas-nav-bar {
-    background: #1C2228;
-    position: fixed;
-    z-index: 9999;
-    top: 0;
-    width: 16.25rem;
-    height: 100%; }
-    .off-canvas-nav-bar--left {
-      left: 0;
-      -webkit-transform: translate3d(-260px, 0, 0);
-              transform: translate3d(-260px, 0, 0);
-      transition: -webkit-transform 0.2s;
-      transition: transform 0.2s;
-      transition: transform 0.2s, -webkit-transform 0.2s; }
-      .off-canvas-show-left .off-canvas-nav-bar--left {
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0); }
-      .no-csstransforms3d .off-canvas-nav-bar--left {
-        left: -260px; }
-      .no-csstransforms3d.off-canvas-show-left .off-canvas-nav-bar--left {
-        left: 0; }
-    .off-canvas-nav-bar--right {
-      right: 0;
-      -webkit-transform: translate3d(260px, 0, 0);
-              transform: translate3d(260px, 0, 0);
-      transition: -webkit-transform 0.2s;
-      transition: transform 0.2s;
-      transition: transform 0.2s, -webkit-transform 0.2s; }
-      .off-canvas-show-right .off-canvas-nav-bar--right {
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0); }
-      .no-csstransforms3d .off-canvas-nav-bar--right {
-        right: -260px; }
-      .no-csstransforms3d.off-canvas-show-left .off-canvas-nav-bar--right {
-        right: 0; } }
-
-@media (min-width: 43.75em) {
-  .off-canvas-nav-bar {
-    background: #1C2228;
-    width: 100%;
-    min-width: 16.25rem;
-    max-height: 100%;
-    overflow-y: auto;
-    z-index: 999;
-    transition: all 0.2s;
-    text-align: center; }
-    .csspositionsticky .off-canvas-nav-bar {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      left: 0; }
-    .no-csspositionsticky .off-canvas-nav-bar {
-      position: relative; } }
-  @media (min-width: 43.75em) and (min-width: 43.75em) {
-    .off-canvas-nav-bar {
-      max-height: inherit;
-      text-align: left; } }
-
-@media (min-width: 43.75em) {
-    .off-canvas-nav-bar .logo {
-      display: inline-block;
-      margin-bottom: -6px;
-      padding-top: 0.75rem;
-      min-height: 3.125rem; } }
-    @media (min-width: 43.75em) and (min-width: 43.75em) {
-      .off-canvas-nav-bar .logo {
-        float: left;
-        padding-top: 0;
-        min-height: inherit;
-        margin-top: 1.125rem;
-        margin-bottom: 0; } }
-
-@media (min-width: 43.75em) {
-    .off-canvas-nav-bar--transform {
-      -webkit-transform: translate3d(0, -100%, 0);
-              transform: translate3d(0, -100%, 0); }
-      .off-canvas-nav-bar--transform.nav-bar--show {
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0); } }
-    @media (min-width: 43.75em) and (max-width: 37.4375em) {
-      .off-canvas-nav-bar--transform.nav-bar--always-show-on-mobile {
-        -webkit-transform: translate3d(0, 0, 0);
-                transform: translate3d(0, 0, 0); } }
-  @media (min-width: 43.75em) and (min-width: 43.75em) {
-    .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
-      background: transparent; }
-      .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link {
-        color: black; }
-        .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.nav-bar__link--active, .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link.scrollspy-nav--active, .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) .nav-bar__link:hover {
-          background: transparent;
-          color: #293e4f; }
-      .nav-bar--transparent .off-canvas-nav-bar--transparent:not(.nav-bar--fixed) {
-        color: white; } }
-
-@media (min-width: 43.75em) {
-    .no-csspositionsticky .off-canvas-nav-bar--fixed {
-      position: fixed;
-      top: 0;
-      left: 0; }
-    .off-canvas-nav-bar__container {
-      margin-left: auto;
-      margin-right: auto;
-      min-width: 16.25rem;
-      max-width: 80rem; } }
-    @media (min-width: 43.75em) and (min-width: 43.75em) {
-      .off-canvas-nav-bar__container {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem; } }
-  @media (min-width: 43.75em) and (min-width: 43.75em) {
-    .off-canvas-nav-bar__nav {
-      float: right;
-      margin-left: 0rem; } }
-
-@media (min-width: 43.75em) {
-    .off-canvas-nav-bar__list {
-      clear: both;
-      border-top: 0.0625rem solid #313c46;
-      max-height: 0;
-      overflow: hidden;
-      transition: all 0.2s; } }
-    @media (min-width: 43.75em) and (min-width: 43.75em) {
-      .off-canvas-nav-bar__list {
-        overflow: inherit;
-        max-height: inherit;
-        float: right;
-        border-top: 0; } }
-
-@media (min-width: 43.75em) {
-      .nav-bar--mobile-show .off-canvas-nav-bar__list {
-        max-height: 50rem; }
-      .off-canvas-nav-bar__list li {
-        display: block;
-        margin: 0; } }
-      @media (min-width: 43.75em) and (min-width: 43.75em) {
-        .off-canvas-nav-bar__list li {
-          display: inline-block;
-          margin-right: -4px; } }
-
-@media (min-width: 43.75em) {
-    .off-canvas-nav-bar__link {
-      display: block;
-      color: white;
-      text-align: center;
-      padding: 1.25rem 1.875rem; } }
-    @media (min-width: 43.75em) and (min-width: 43.75em) {
-      .off-canvas-nav-bar__link {
-        display: inline-block; } }
-
-@media (min-width: 43.75em) {
-      .off-canvas-nav-bar__link:hover {
-        background: #313c46;
-        color: white; }
-      .off-canvas-nav-bar__link.nav-bar__link--active, .off-canvas-nav-bar__link.scrollspy-nav--active {
-        background: #293e4f;
-        color: white; } }
-
-@media (max-width: 43.6875em) {
-  .off-canvas-nav-bar__item {
-    border-top: 0.0625rem solid #1C2228;
-    border-bottom: 0.0625rem solid #1C2228; }
-    .off-canvas-nav-bar__item:first-child {
-      border-top: 0; }
-    .off-canvas-nav-bar__item:last-child {
-      border-bottom: 0; } }
-
-@media (max-width: 43.6875em) {
-  .off-canvas-nav-bar__link {
-    display: block;
-    color: white;
-    padding: 0.625rem 1.25rem; }
-    .off-canvas-nav-bar__link.active, .off-canvas-nav-bar__link:hover, .off-canvas-nav-bar__link.scrollspy-nav--active {
-      background: #222a31; } }
-
-/*doc
----
 title: Buttons
 name: 5_buttons
 category: Buttons
@@ -7129,21 +7155,27 @@ category: Buttons
   margin-bottom: 1.875rem; }
   .btn-container a {
     padding: 0.625rem 1.125rem; }
-  .btn-container--center {
-    text-align: center; }
-    .btn-container--center ul {
-      display: inline-block; }
-  .btn-container--right {
-    text-align: right; }
-    .btn-container--right ul {
-      float: right; }
+
+.btn-container--center {
+  text-align: center; }
+  .btn-container--center ul {
+    display: inline-block; }
+
+.btn-container--right {
+  text-align: right; }
+  .btn-container--right ul {
+    float: right; }
 
 /* Button group
 ==========
 */
 .btn-group {
-  margin-bottom: 1.875rem;
-  /*doc
+  margin-bottom: 1.875rem; }
+  .btn-group > li a,
+  .btn-group > li span {
+    border-radius: 0; }
+
+/*doc
 ---
 title: Inline
 name: inline
@@ -7161,39 +7193,37 @@ These work with the button classes so you can use those to change color and size
 </ul>
 ```
 
-*/ }
-  .btn-group > li a,
-  .btn-group > li span {
-    border-radius: 0; }
-  .btn-group--inline > li {
-    margin-right: 0;
-    margin-left: 0;
-    float: left; }
-    .btn-group--inline > li:first-child {
-      margin: 0; }
-      .btn-group--inline > li:first-child a,
-      .btn-group--inline > li:first-child span {
-        border-radius: 0 0 0 0; }
-    .btn-group--inline > li:not(:first-child) a,
-    .btn-group--inline > li:not(:first-child) span {
-      border-left: 0; }
-    .btn-group--inline > li:last-child a,
-    .btn-group--inline > li:last-child span {
+*/
+.btn-group--inline > li {
+  margin-right: 0;
+  margin-left: 0;
+  float: left; }
+  .btn-group--inline > li:first-child {
+    margin: 0; }
+    .btn-group--inline > li:first-child a,
+    .btn-group--inline > li:first-child span {
       border-radius: 0 0 0 0; }
-  .btn-group--block > li {
-    margin-top: -1px; }
-    .btn-group--block > li a,
-    .btn-group--block > li span {
-      display: block; }
-    .btn-group--block > li:first-child {
-      margin: 0; }
-      .btn-group--block > li:first-child a,
-      .btn-group--block > li:first-child span {
-        border-top: 0;
-        border-radius: 0 0 0 0; }
-    .btn-group--block > li:last-child a,
-    .btn-group--block > li:last-child span {
+  .btn-group--inline > li:not(:first-child) a,
+  .btn-group--inline > li:not(:first-child) span {
+    border-left: 0; }
+  .btn-group--inline > li:last-child a,
+  .btn-group--inline > li:last-child span {
+    border-radius: 0 0 0 0; }
+
+.btn-group--block > li {
+  margin-top: -1px; }
+  .btn-group--block > li a,
+  .btn-group--block > li span {
+    display: block; }
+  .btn-group--block > li:first-child {
+    margin: 0; }
+    .btn-group--block > li:first-child a,
+    .btn-group--block > li:first-child span {
+      border-top: 0;
       border-radius: 0 0 0 0; }
+  .btn-group--block > li:last-child a,
+  .btn-group--block > li:last-child span {
+    border-radius: 0 0 0 0; }
 
 /*doc
 ---
@@ -7507,52 +7537,7 @@ Add more colors in the settings file under "buttons" if you need to.
   line-height: 1rem;
   z-index: 1;
   background-color: #f7f7f7;
-  border-color: #eaeaea;
-  /*doc
----
-title: Mask
-name: mask
-category: Buttons
----
-
-```html_example
-<a class="btn btn--mask btn--medium" href="#link">button medium</a>
-```
-
-*/
-  /*doc
----
-title: Block
-name: block
-category: Buttons
----
-
-```html_example
-<div class="grid">
-	<div class="column-6">
-		<a class="btn btn--block btn--beta btn--large" href="#link">block button</a>
-	</div>
-	<div class="column-6">
-		<a class="btn btn--block btn--beta btn--large" href="#link">block button</a>
-	</div>
-</div>
-```
-
-*/
-  /*doc
----
-title: Ghost
-name: ghost
-category: Buttons
----
-
-Add more colors in the settings file under "buttons" if you need to.
-
-```html_example
-<a class="btn btn--ghost btn--dark btn--small" href="#link">black</a>
-```
-
-*/ }
+  border-color: #eaeaea; }
   .btn:hover, .form__file-input + label:hover {
     background-color: #f2f2f2; }
   .btn:active, .form__file-input + label:active, .btn:focus, .form__file-input + label:focus {
@@ -7582,248 +7567,404 @@ Add more colors in the settings file under "buttons" if you need to.
     opacity: 0.5; }
     .btn:disabled:focus, .form__file-input + label:disabled:focus, .btn:disabled:hover:focus, .form__file-input + label:disabled:hover:focus {
       box-shadow: none; }
-  .btn--beta, .btn--gamma, .btn--delta, .btn--epsilon {
+
+.btn--beta,
+.btn--gamma,
+.btn--delta,
+.btn--epsilon {
+  color: white;
+  text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2); }
+  .btn--beta:hover,
+  .btn--gamma:hover,
+  .btn--delta:hover,
+  .btn--epsilon:hover {
+    color: white; }
+  .btn--beta:disabled, .btn--beta:disabled:hover,
+  .btn--gamma:disabled,
+  .btn--gamma:disabled:hover,
+  .btn--delta:disabled,
+  .btn--delta:disabled:hover,
+  .btn--epsilon:disabled,
+  .btn--epsilon:disabled:hover {
+    color: #cccccc; }
+
+.btn--light {
+  background-color: white;
+  border-color: #f2f2f2; }
+  .btn--light:hover {
+    background-color: #fafafa; }
+  .btn--light:active, .btn--light:focus {
+    background-color: whitesmoke; }
+  .btn--light--divider:hover, .btn--light:disabled, .btn--light:disabled:hover {
+    background-color: white; }
+  .btn--light.btn--ghost {
     color: white;
-    text-shadow: 1px 0 1px rgba(0, 0, 0, 0.2); }
-    .btn--beta:hover, .btn--gamma:hover, .btn--delta:hover, .btn--epsilon:hover {
-      color: white; }
-    .btn--beta:disabled, .btn--beta:disabled:hover, .btn--gamma:disabled, .btn--gamma:disabled:hover, .btn--delta:disabled, .btn--delta:disabled:hover, .btn--epsilon:disabled, .btn--epsilon:disabled:hover {
-      color: #cccccc; }
-  .btn--mask {
-    background-color: transparent;
-    border-color: transparent; }
-    .btn--mask:hover {
-      background-color: transparent; }
-    .btn--mask:active, .btn--mask:focus {
-      background-color: transparent; }
-    .btn--mask--divider:hover, .btn--mask:disabled, .btn--mask:disabled:hover {
-      background-color: transparent; }
-    .btn--mask.btn--ghost {
-      color: transparent;
-      border-color: transparent; }
-      .btn--mask.btn--ghost:hover {
-        background: transparent;
-        color: white;
-        border-color: transparent; }
-      .btn--mask.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--mask.btn--ghost:hover, .btn--mask.btn--ghost.btn--light:hover {
-        color: #333333; }
-    .btn-group--block .btn--mask {
-      border-top: 0.0625rem solid rgba(8, 8, 8, 0); }
-    .btn--mask:hover {
-      background-color: #f2f2f2; }
-    .btn--mask:active, .btn--mask:focus {
-      background-color: #e6e6e6; }
-  .btn--block {
-    min-width: 100%;
-    display: block; }
-  .btn--divider {
-    cursor: default; }
-  .btn--light {
-    background-color: white;
-    border-color: #f2f2f2; }
-    .btn--light:hover {
-      background-color: #fafafa; }
-    .btn--light:active, .btn--light:focus {
-      background-color: whitesmoke; }
-    .btn--light--divider:hover, .btn--light:disabled, .btn--light:disabled:hover {
-      background-color: white; }
-    .btn--light.btn--ghost {
+    border-color: white; }
+    .btn--light.btn--ghost:hover {
+      background: white;
       color: white;
       border-color: white; }
-      .btn--light.btn--ghost:hover {
-        background: white;
-        color: white;
-        border-color: white; }
-      .btn--light.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--light.btn--ghost:hover, .btn--light.btn--ghost.btn--light:hover {
-        color: #333333; }
-    .btn-group--block .btn--light {
-      border-top: 0.0625rem solid white; }
-  .btn--dark {
-    background-color: black;
-    border-color: black; }
-    .btn--dark:hover {
-      background-color: black; }
-    .btn--dark:active, .btn--dark:focus {
-      background-color: black; }
-    .btn--dark--divider:hover, .btn--dark:disabled, .btn--dark:disabled:hover {
-      background-color: black; }
-    .btn--dark.btn--ghost {
-      color: black;
-      border-color: black; }
-      .btn--dark.btn--ghost:hover {
-        background: black;
-        color: white;
-        border-color: black; }
-      .btn--dark.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--dark.btn--ghost:hover, .btn--dark.btn--ghost.btn--light:hover {
-        color: #333333; }
-    .btn-group--block .btn--dark {
-      border-top: 0.0625rem solid #080808; }
-  .btn--alpha, .form__file-input + label {
-    background-color: #f7f7f7;
-    border-color: #eaeaea; }
-    .btn--alpha:hover, .form__file-input + label:hover {
-      background-color: #f2f2f2; }
-    .btn--alpha:active, .form__file-input + label:active, .btn--alpha:focus, .form__file-input + label:focus {
-      background-color: #ededed; }
-    .btn--alpha--divider:hover, .btn--alpha:disabled, .form__file-input + label:disabled, .btn--alpha:disabled:hover, .form__file-input + label:disabled:hover {
-      background-color: #f7f7f7; }
-    .btn--alpha.btn--ghost, .form__file-input + label.btn--ghost {
-      color: #f7f7f7;
-      border-color: #f7f7f7; }
-      .btn--alpha.btn--ghost:hover, .form__file-input + label.btn--ghost:hover {
-        background: #f7f7f7;
-        color: white;
-        border-color: #f7f7f7; }
-      .btn--alpha.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--ghost:hover, .btn--alpha.btn--ghost.btn--light:hover, .form__file-input + label.btn--ghost.btn--light:hover {
-        color: #333333; }
-    .btn-group--block .btn--alpha, .btn-group--block .form__file-input + label {
-      border-top: 0.0625rem solid white; }
-  .btn--beta {
-    background-color: #293e4f;
-    border-color: #20313e; }
-    .btn--beta:hover {
-      background-color: #263948; }
-    .btn--beta:active, .btn--beta:focus {
-      background-color: #223342; }
-    .btn--beta--divider:hover, .btn--beta:disabled, .btn--beta:disabled:hover {
-      background-color: #293e4f; }
-    .btn--beta.btn--ghost {
-      color: #293e4f;
-      border-color: #293e4f; }
-      .btn--beta.btn--ghost:hover {
-        background: #293e4f;
-        color: white;
-        border-color: #293e4f; }
-      .btn--beta.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--beta.btn--ghost:hover, .btn--beta.btn--ghost.btn--light:hover {
-        color: #333333; }
-    .btn-group--block .btn--beta {
-      border-top: 0.0625rem solid #2e4659; }
-  .btn--gamma {
-    background-color: #496d83;
-    border-color: #405f73; }
-    .btn--gamma:hover {
-      background-color: #45687c; }
-    .btn--gamma:active, .btn--gamma:focus {
-      background-color: #426276; }
-    .btn--gamma--divider:hover, .btn--gamma:disabled, .btn--gamma:disabled:hover {
-      background-color: #496d83; }
-    .btn--gamma.btn--ghost {
-      color: #496d83;
-      border-color: #496d83; }
-      .btn--gamma.btn--ghost:hover {
-        background: #496d83;
-        color: white;
-        border-color: #496d83; }
-      .btn--gamma.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--gamma.btn--ghost:hover, .btn--gamma.btn--ghost.btn--light:hover {
-        color: #333333; }
-    .btn-group--block .btn--gamma {
-      border-top: 0.0625rem solid #4e758d; }
-  .btn--delta {
-    background-color: #4A3A59;
-    border-color: #3d304a; }
-    .btn--delta:hover {
-      background-color: #453653; }
-    .btn--delta:active, .btn--delta:focus {
-      background-color: #40324d; }
-    .btn--delta--divider:hover, .btn--delta:disabled, .btn--delta:disabled:hover {
-      background-color: #4A3A59; }
-    .btn--delta.btn--ghost {
-      color: #4A3A59;
-      border-color: #4A3A59; }
-      .btn--delta.btn--ghost:hover {
-        background: #4A3A59;
-        color: white;
-        border-color: #4A3A59; }
-      .btn--delta.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--delta.btn--ghost:hover, .btn--delta.btn--ghost.btn--light:hover {
-        color: #333333; }
-    .btn-group--block .btn--delta {
-      border-top: 0.0625rem solid #524062; }
-  .btn--epsilon {
-    background-color: #1C2228;
-    border-color: #121519; }
-    .btn--epsilon:hover {
-      background-color: #181d22; }
-    .btn--epsilon:active, .btn--epsilon:focus {
-      background-color: #14181c; }
-    .btn--epsilon--divider:hover, .btn--epsilon:disabled, .btn--epsilon:disabled:hover {
-      background-color: #1C2228; }
-    .btn--epsilon.btn--ghost {
-      color: #1C2228;
-      border-color: #1C2228; }
-      .btn--epsilon.btn--ghost:hover {
-        background: #1C2228;
-        color: white;
-        border-color: #1C2228; }
-      .btn--epsilon.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--epsilon.btn--ghost:hover, .btn--epsilon.btn--ghost.btn--light:hover {
-        color: #333333; }
-    .btn-group--block .btn--epsilon {
-      border-top: 0.0625rem solid #222a31; }
-  .btn--ghost {
-    background: transparent;
-    border-width: 1px;
-    border-radius: 0px;
-    color: #333333;
-    text-shadow: none;
-    opacity: 1; }
-    .btn--ghost:hover, .btn--ghost:active, .btn--ghost:focus {
-      background: transparent;
+    .btn--light.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--light.btn--ghost:hover, .btn--light.btn--ghost.btn--light:hover {
       color: #333333; }
-  .btn--ripple {
-    overflow: hidden;
-    position: relative; }
-    .btn--ripple.tooltip {
-      overflow: visible; }
-  .btn__ripple {
-    display: block;
-    position: absolute;
-    background: rgba(255, 255, 255, 0.25);
-    border-radius: 100%;
-    -webkit-transform: scale(0);
-        -ms-transform: scale(0);
-            transform: scale(0); }
-    .btn--light .btn__ripple,
-    .btn--alpha .btn__ripple, .form__file-input + label .btn__ripple {
-      background: rgba(0, 0, 0, 0.2); }
-    .btn--ripple-animate .btn__ripple {
-      -webkit-animation: btn-ripple 0.4s linear;
-              animation: btn-ripple 0.4s linear; }
-    .tooltip .btn__ripple {
-      display: none; }
+  .btn-group--block .btn--light {
+    border-top: 0.0625rem solid white; }
 
+.btn--dark {
+  background-color: black;
+  border-color: black; }
+  .btn--dark:hover {
+    background-color: black; }
+  .btn--dark:active, .btn--dark:focus {
+    background-color: black; }
+  .btn--dark--divider:hover, .btn--dark:disabled, .btn--dark:disabled:hover {
+    background-color: black; }
+  .btn--dark.btn--ghost {
+    color: black;
+    border-color: black; }
+    .btn--dark.btn--ghost:hover {
+      background: black;
+      color: white;
+      border-color: black; }
+    .btn--dark.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--dark.btn--ghost:hover, .btn--dark.btn--ghost.btn--light:hover {
+      color: #333333; }
+  .btn-group--block .btn--dark {
+    border-top: 0.0625rem solid #080808; }
+
+.btn--alpha, .form__file-input + label {
+  background-color: #f7f7f7;
+  border-color: #eaeaea; }
+  .btn--alpha:hover, .form__file-input + label:hover {
+    background-color: #f2f2f2; }
+  .btn--alpha:active, .form__file-input + label:active, .btn--alpha:focus, .form__file-input + label:focus {
+    background-color: #ededed; }
+  .btn--alpha--divider:hover, .btn--alpha:disabled, .form__file-input + label:disabled, .btn--alpha:disabled:hover, .form__file-input + label:disabled:hover {
+    background-color: #f7f7f7; }
+  .btn--alpha.btn--ghost, .form__file-input + label.btn--ghost {
+    color: #f7f7f7;
+    border-color: #f7f7f7; }
+    .btn--alpha.btn--ghost:hover, .form__file-input + label.btn--ghost:hover {
+      background: #f7f7f7;
+      color: white;
+      border-color: #f7f7f7; }
+    .btn--alpha.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--ghost:hover, .btn--alpha.btn--ghost.btn--light:hover, .form__file-input + label.btn--ghost.btn--light:hover {
+      color: #333333; }
+  .btn-group--block .btn--alpha, .btn-group--block .form__file-input + label {
+    border-top: 0.0625rem solid white; }
+
+.btn--beta {
+  background-color: #293e4f;
+  border-color: #20313e; }
+  .btn--beta:hover {
+    background-color: #263948; }
+  .btn--beta:active, .btn--beta:focus {
+    background-color: #223342; }
+  .btn--beta--divider:hover, .btn--beta:disabled, .btn--beta:disabled:hover {
+    background-color: #293e4f; }
+  .btn--beta.btn--ghost {
+    color: #293e4f;
+    border-color: #293e4f; }
+    .btn--beta.btn--ghost:hover {
+      background: #293e4f;
+      color: white;
+      border-color: #293e4f; }
+    .btn--beta.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--beta.btn--ghost:hover, .btn--beta.btn--ghost.btn--light:hover {
+      color: #333333; }
+  .btn-group--block .btn--beta {
+    border-top: 0.0625rem solid #2e4659; }
+
+.btn--gamma {
+  background-color: #496d83;
+  border-color: #405f73; }
+  .btn--gamma:hover {
+    background-color: #45687c; }
+  .btn--gamma:active, .btn--gamma:focus {
+    background-color: #426276; }
+  .btn--gamma--divider:hover, .btn--gamma:disabled, .btn--gamma:disabled:hover {
+    background-color: #496d83; }
+  .btn--gamma.btn--ghost {
+    color: #496d83;
+    border-color: #496d83; }
+    .btn--gamma.btn--ghost:hover {
+      background: #496d83;
+      color: white;
+      border-color: #496d83; }
+    .btn--gamma.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--gamma.btn--ghost:hover, .btn--gamma.btn--ghost.btn--light:hover {
+      color: #333333; }
+  .btn-group--block .btn--gamma {
+    border-top: 0.0625rem solid #4e758d; }
+
+.btn--delta {
+  background-color: #4A3A59;
+  border-color: #3d304a; }
+  .btn--delta:hover {
+    background-color: #453653; }
+  .btn--delta:active, .btn--delta:focus {
+    background-color: #40324d; }
+  .btn--delta--divider:hover, .btn--delta:disabled, .btn--delta:disabled:hover {
+    background-color: #4A3A59; }
+  .btn--delta.btn--ghost {
+    color: #4A3A59;
+    border-color: #4A3A59; }
+    .btn--delta.btn--ghost:hover {
+      background: #4A3A59;
+      color: white;
+      border-color: #4A3A59; }
+    .btn--delta.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--delta.btn--ghost:hover, .btn--delta.btn--ghost.btn--light:hover {
+      color: #333333; }
+  .btn-group--block .btn--delta {
+    border-top: 0.0625rem solid #524062; }
+
+.btn--epsilon {
+  background-color: #1C2228;
+  border-color: #121519; }
+  .btn--epsilon:hover {
+    background-color: #181d22; }
+  .btn--epsilon:active, .btn--epsilon:focus {
+    background-color: #14181c; }
+  .btn--epsilon--divider:hover, .btn--epsilon:disabled, .btn--epsilon:disabled:hover {
+    background-color: #1C2228; }
+  .btn--epsilon.btn--ghost {
+    color: #1C2228;
+    border-color: #1C2228; }
+    .btn--epsilon.btn--ghost:hover {
+      background: #1C2228;
+      color: white;
+      border-color: #1C2228; }
+    .btn--epsilon.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--epsilon.btn--ghost:hover, .btn--epsilon.btn--ghost.btn--light:hover {
+      color: #333333; }
+  .btn-group--block .btn--epsilon {
+    border-top: 0.0625rem solid #222a31; }
+
+.btn--divider {
+  cursor: default; }
+
+/*doc
+---
+title: Block
+name: block
+category: Buttons
+---
+
+```html_example
+<div class="grid">
+	<div class="column-6">
+		<a class="btn btn--block btn--beta btn--large" href="#link">block button</a>
+	</div>
+	<div class="column-6">
+		<a class="btn btn--block btn--beta btn--large" href="#link">block button</a>
+	</div>
+</div>
+```
+
+*/
+.btn--block {
+  min-width: 100%;
+  display: block; }
+
+/*doc
+---
+title: Mask
+name: mask
+category: Buttons
+---
+
+```html_example
+<a class="btn btn--mask btn--medium" href="#link">button medium</a>
+```
+
+*/
+.btn--mask {
+  background-color: transparent;
+  border-color: transparent; }
+  .btn--mask:hover {
+    background-color: transparent; }
+  .btn--mask:active, .btn--mask:focus {
+    background-color: transparent; }
+  .btn--mask--divider:hover, .btn--mask:disabled, .btn--mask:disabled:hover {
+    background-color: transparent; }
+  .btn--mask.btn--ghost {
+    color: transparent;
+    border-color: transparent; }
+    .btn--mask.btn--ghost:hover {
+      background: transparent;
+      color: white;
+      border-color: transparent; }
+    .btn--mask.btn--ghost.btn--alpha:hover, .form__file-input + label.btn--mask.btn--ghost:hover, .btn--mask.btn--ghost.btn--light:hover {
+      color: #333333; }
+  .btn-group--block .btn--mask {
+    border-top: 0.0625rem solid rgba(8, 8, 8, 0); }
+  .btn--mask:hover {
+    background-color: #f2f2f2; }
+  .btn--mask:active, .btn--mask:focus {
+    background-color: #e6e6e6; }
+
+/*doc
+---
+title: Ghost
+name: ghost
+category: Buttons
+---
+
+Add more colors in the settings file under "buttons" if you need to.
+
+```html_example
+<a class="btn btn--ghost btn--dark btn--small" href="#link">black</a>
+```
+
+*/
+.btn--ghost {
+  background: transparent;
+  border-width: 1px;
+  border-radius: 0px;
+  color: #333333;
+  text-shadow: none;
+  opacity: 1; }
+  .btn--ghost:hover, .btn--ghost:active, .btn--ghost:focus {
+    background: transparent;
+    color: #333333; }
+
+/* Button ripple
+==========
+*/
 @-webkit-keyframes btn-ripple {
   100% {
     opacity: 0;
     -webkit-transform: scale(2.5);
             transform: scale(2.5); } }
-
 @keyframes btn-ripple {
   100% {
     opacity: 0;
     -webkit-transform: scale(2.5);
             transform: scale(2.5); } }
 
+.btn--ripple {
+  overflow: hidden;
+  position: relative; }
+  .btn--ripple.tooltip {
+    overflow: visible; }
+
+.btn__ripple {
+  display: block;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.25);
+  border-radius: 100%;
+  -webkit-transform: scale(0);
+      -ms-transform: scale(0);
+          transform: scale(0); }
+  .btn--light .btn__ripple,
+  .btn--alpha .btn__ripple, .form__file-input + label .btn__ripple {
+    background: rgba(0, 0, 0, 0.2); }
+  .btn--ripple-animate .btn__ripple {
+    -webkit-animation: btn-ripple 0.4s linear;
+            animation: btn-ripple 0.4s linear; }
+  .tooltip .btn__ripple {
+    display: none; }
+
 /*doc
 ---
-title: No button style
-name: no_btn_style
+title: Reset button
+name: reset_button
 category: Buttons
 ---
 
 Commonly used for triggers. For example a navigation trigger
 
 ```html_example
-<button class="no-btn-style">Button</button>
+<button class="reset-button">Button</button>
 ```
 
 */
-.no-btn-style {
+.reset-button {
   background: none;
   box-shadow: none;
   border: 0;
   padding: 0;
   text-shadow: none; }
-  .no-btn-style:active, .no-btn-style:focus {
+  .reset-button:active, .reset-button:focus {
     outline: none; }
+
+.btn-dropdown {
+  position: relative;
+  display: inline-block; }
+
+.btn-dropdown__action {
+  float: left;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0; }
+  .btn-dropdown--action .btn-dropdown__action {
+    float: none;
+    border-radius: 0; }
+  .btn-dropdown--action .btn-dropdown__action::after {
+    content: '\e80a';
+    margin-left: 0.625rem; }
+  .btn-dropdown--action.btn-dropdown--open .btn-dropdown__action::after {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .btn-dropdown--no-arrow .btn-dropdown__action::after {
+    display: none; }
+
+.btn-dropdown__toggle {
+  margin-left: -0.0625rem;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0; }
+  .btn-dropdown--open .btn-dropdown__toggle::before {
+    -webkit-transform: rotate(180deg);
+        -ms-transform: rotate(180deg);
+            transform: rotate(180deg); }
+
+.btn-dropdown__dropdown {
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  margin-top: 0.0625rem;
+  visibility: hidden;
+  background-color: white;
+  border: 1px solid #eaeaea;
+  opacity: 0;
+  z-index: 9999;
+  transition: all 0.2s;
+  -webkit-transform: translate3d(0, 10%, 0) scale(0.8);
+          transform: translate3d(0, 10%, 0) scale(0.8);
+  min-width: 12.5rem;
+  max-width: 18.75rem;
+  border-radius: 0.25rem; }
+  .btn-dropdown--open .btn-dropdown__dropdown {
+    visibility: visible;
+    opacity: 1;
+    transition: all 0.2s;
+    -webkit-transform: translate3d(0, 0, 0) scale(1);
+            transform: translate3d(0, 0, 0) scale(1); }
+
+.btn-dropdown__dropdown--right {
+  left: inherit;
+  right: 0; }
+
+.btn-dropdown__list--border-bottom {
+  border-bottom: 0.0625rem solid #e0e0e0; }
+
+.btn-dropdown__list--padding {
+  padding: 0.875rem 1rem; }
+
+.btn-dropdown__item {
+  font-size: 0.875rem; }
+  .btn--small .btn-dropdown__item {
+    font-size: 0.75rem; }
+  .btn--medium .btn-dropdown__item, .form__file-input + label .btn-dropdown__item {
+    font-size: 0.875rem; }
+  .btn--large .btn-dropdown__item {
+    font-size: 1rem; }
+  .btn-dropdown__item + .btn-dropdown__item {
+    margin-top: 0.625rem; }
+
+.btn-dropdown__link {
+  background-color: transparent;
+  display: block;
+  color: #333333;
+  font-size: 0.875rem;
+  padding: 0.625rem 0.9375rem; }
+  .btn-dropdown__link:hover {
+    background-color: #f2f2f2; }
 
 /*doc
 ---
@@ -7834,8 +7975,8 @@ category: Buttons
 
 ```html_example
 <div class="btn-dropdown">
-	<button data-datatables-btn="action" type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--cog icon--margin-alpha">Activate</button>
-	<button data-datatables-btn="action" type="button" class="btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered" data-btn-dropdown-toggle aria-haspopup="true" aria-expanded="false"></button>
+	<button type="button" class="btn-dropdown__action btn btn--medium btn--alpha btn--bordered icon icon--cog icon--margin-alpha">Activate</button>
+	<button type="button" class="btn-dropdown__toggle btn btn--medium btn--alpha btn--bordered" data-btn-dropdown-toggle aria-haspopup="true" aria-expanded="false"></button>
 	<div class="btn-dropdown__dropdown" data-btn-dropdown="allowPropagation">
 		<ul class="btn-dropdown__list btn-dropdown__list--border-bottom" data-btn-dropdown="allowPropagation">
 			<li><a class="btn-dropdown__link" href="#link">Deactivate</a></li>
@@ -7871,81 +8012,6 @@ category: Buttons
 ```
 
 */
-.btn-dropdown {
-  position: relative;
-  display: inline-block; }
-  .btn-dropdown__action {
-    float: left;
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0; }
-    .btn-dropdown--action .btn-dropdown__action {
-      float: none;
-      border-radius: 0; }
-    .btn-dropdown--action .btn-dropdown__action::after {
-      content: '\e80a';
-      margin-left: 0.625rem; }
-    .btn-dropdown--action.btn-dropdown--open .btn-dropdown__action::after {
-      -webkit-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-              transform: rotate(180deg); }
-    .btn-dropdown--no-arrow .btn-dropdown__action::after {
-      display: none; }
-  .btn-dropdown__toggle {
-    margin-left: -0.0625rem;
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0; }
-    .btn-dropdown--open .btn-dropdown__toggle::before {
-      -webkit-transform: rotate(180deg);
-          -ms-transform: rotate(180deg);
-              transform: rotate(180deg); }
-  .btn-dropdown__dropdown {
-    overflow: hidden;
-    position: absolute;
-    left: 0;
-    margin-top: 0.0625rem;
-    visibility: hidden;
-    background-color: white;
-    border: 1px solid #eaeaea;
-    opacity: 0;
-    z-index: 9999;
-    transition: all 0.2s;
-    -webkit-transform: translate3d(0, 10%, 0) scale(0.8);
-            transform: translate3d(0, 10%, 0) scale(0.8);
-    min-width: 12.5rem;
-    max-width: 18.75rem;
-    border-radius: 0.25rem; }
-    .btn-dropdown__dropdown--right {
-      left: inherit;
-      right: 0; }
-    .btn-dropdown--open .btn-dropdown__dropdown {
-      visibility: visible;
-      opacity: 1;
-      transition: all 0.2s;
-      -webkit-transform: translate3d(0, 0, 0) scale(1);
-              transform: translate3d(0, 0, 0) scale(1); }
-  .btn-dropdown__list--border-bottom {
-    border-bottom: 0.0625rem solid #e0e0e0; }
-  .btn-dropdown__list--padding {
-    padding: 0.875rem 1rem; }
-  .btn-dropdown__item {
-    font-size: 0.875rem; }
-    .btn--small .btn-dropdown__item {
-      font-size: 0.75rem; }
-    .btn--medium .btn-dropdown__item, .form__file-input + label .btn-dropdown__item {
-      font-size: 0.875rem; }
-    .btn--large .btn-dropdown__item {
-      font-size: 1rem; }
-    .btn-dropdown__item + .btn-dropdown__item {
-      margin-top: 0.625rem; }
-  .btn-dropdown__link {
-    background-color: transparent;
-    display: block;
-    color: #333333;
-    font-size: 0.875rem;
-    padding: 0.625rem 0.9375rem; }
-    .btn-dropdown__link:hover {
-      background-color: #f2f2f2; }
-
 /* Forms
 ==========
 */

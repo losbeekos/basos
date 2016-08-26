@@ -324,6 +324,7 @@ Break a word with a hyphen (hyphen not supported in Blink as of writing).
 */
 
 @import "core/helpers/clearfix";
+@import "core/helpers/colors";
 @import "core/helpers/hide";
 @import "core/helpers/lists";
 @import "core/helpers/visually_hidden";
@@ -342,6 +343,8 @@ Break a word with a hyphen (hyphen not supported in Blink as of writing).
 @import "core/helpers/ellipsis";
 @import "core/helpers/break_word";
 @import "core/helpers/css_columns";
+@import "core/helpers/disable_transitions";
+@import "core/helpers/disable_hover";
 
 
 /* Animations
@@ -375,20 +378,19 @@ Break a word with a hyphen (hyphen not supported in Blink as of writing).
 @import "core/animations/flipInY";
 
 
-/* Mandatory components
+/* Layout
 ==========
 */
 
-@import "core/components/grid";
-@import "core/components/flexbox_grid";
-@import "core/components/flexible_grid";
-@import "core/components/layout";
-@import "core/components/containers";
-@import "core/components/sections";
-@import "core/components/fonts";
-@import "core/components/typography";
-@import "core/components/colors";
-@import "core/components/icons";
+@import "core/layout/generic";
+@import "core/layout/containers";
+@import "core/layout/flexbox_grid";
+@import "core/layout/flexible_grid";
+@import "core/layout/grid";
+@import "core/layout/sections";
+@import "core/layout/typography";
+@import "core/layout/icons";
+@import "core/layout/styleguide"; // Remove this for production
 
 
 /* Optional components
@@ -397,30 +399,139 @@ You can comment some of these out
 for a smaller generated CSS file.
 */
 
-@import "core/components/styleguide";
-@import "core/components/modal";
-@import "core/components/card";
-@import "core/components/tabs";
-@import "core/components/nav_bar";
-@import "core/components/tables";
-@import "core/components/dropdowns";
-@import "core/components/tooltips";
-@import "core/components/accordion";
 @import "core/components/breadcrumbs";
-@import "core/components/pricing_tables";
-@import "core/components/media";
-@import "core/components/progress";
 @import "core/components/spinners";
 @import "core/components/scrollspy";
 @import "core/components/toggle";
 @import "core/components/affix";
 @import "core/components/google_maps";
 
+
+/* Dropdown
+==========
+*/
+
+@import "core/components/dropdown/base";
+@import "core/components/dropdown/content";
+@import "core/components/dropdown/list";
+@import "core/components/dropdown/item";
+@import "core/components/dropdown/link";
+
+
+/* Cards
+==========
+*/
+
+@import "core/components/cards/base";
+@import "core/components/cards/header";
+@import "core/components/cards/content";
+@import "core/components/cards/title";
+@import "core/components/cards/action";
+
+
+/* Cards
+==========
+*/
+
+@import "core/components/tooltips/base";
+@import "core/components/tooltips/content";
+@import "core/components/tooltips/position";
+
+
+/* Tabs
+==========
+*/
+
+@import "core/components/tabs/base";
+@import "core/components/tabs/tab";
+@import "core/components/tabs/item";
+@import "core/components/tabs/content";
+
+
+/* Modal
+==========
+*/
+
+@import "core/components/modal/base";
+@import "core/components/modal/content";
+@import "core/components/modal/overlay";
+@import "core/components/modal/close";
+
+
+/* Navigation bar
+==========
+*/
+
+@import "core/components/nav_bar/base";
+@import "core/components/nav_bar/transform";
+@import "core/components/nav_bar/transparent";
+@import "core/components/nav_bar/fixed";
+@import "core/components/nav_bar/container";
+@import "core/components/nav_bar/nav";
+@import "core/components/nav_bar/trigger";
+@import "core/components/nav_bar/list";
+@import "core/components/nav_bar/link";
+
+
 /* Off canvas
 ==========
 */
-@import "core/components/off_canvas/off_canvas";
-@import "core/components/off_canvas/off_canvas_navbar";
+
+@import "core/components/off_canvas/base";
+@import "core/components/off_canvas/toggle";
+@import "core/components/off_canvas/push";
+@import "core/components/off_canvas/nav";
+
+
+/* Tables
+==========
+*/
+
+@import "core/components/tables/base";
+@import "core/components/tables/bordered";
+@import "core/components/tables/hover";
+@import "core/components/tables/zebra";
+@import "core/components/tables/responsive";
+
+
+/* Accordion
+==========
+*/
+
+@import "core/components/accordion/base";
+@import "core/components/accordion/group";
+@import "core/components/accordion/trigger";
+@import "core/components/accordion/content";
+
+
+/* Media
+==========
+*/
+
+@import "core/components/media/base";
+@import "core/components/media/alpha";
+@import "core/components/media/beta";
+@import "core/components/media/list";
+
+
+/* Pricing table
+==========
+*/
+
+@import "core/components/pricing_table/base";
+@import "core/components/pricing_table/header";
+@import "core/components/pricing_table/content";
+@import "core/components/pricing_table/description";
+@import "core/components/pricing_table/price";
+
+
+/* Progress
+==========
+*/
+
+@import "core/components/progress/base";
+@import "core/components/progress/value";
+@import "core/components/progress/inderterminate";
 
 	
 /*doc
@@ -436,6 +547,12 @@ category: Buttons
 @import "core/components/buttons/group";
 @import "core/components/buttons/sizes";
 @import "core/components/buttons/styles";
+@import "core/components/buttons/block";
+@import "core/components/buttons/mask";
+@import "core/components/buttons/ghost";
+@import "core/components/buttons/ripple";
+@import "core/components/buttons/reset_btn";
+@import "core/components/buttons/dropdown";
 
 
 /* Forms

@@ -1,0 +1,47 @@
+/* Pricing table
+==========
+*/
+
+.pricing-table {
+	@extend .list-unstyled;
+
+	border: rem(1px) solid map-get($pricing-table, border-color);
+	text-align: center;
+	border-radius:map-get($base, border-radius);
+	overflow: hidden;
+}
+
+/*doc
+---
+title: Pricing tables
+name: pricing_tables
+category: Content
+---
+
+```html_example
+<ul class="pricing-table">
+	<li class="pricing-table__header">
+		Basos package
+	</li>
+	<li class="pricing-table__content pricing-table__content--alpha">
+		<div class="pricing-table__price">&euro; 500,-</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__description">Lorem ipsum dolor sit amet.</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__item">50 components</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__item">100 lorems</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta">
+		<div class="pricing-table__item">5 dolirs</div>
+	</li>
+	<li class="pricing-table__content pricing-table__content--beta price-table__content--action">
+		<a class="btn btn--beta btn--medium" href="">buy now</a>
+	</li>
+</ul>
+```
+
+*/

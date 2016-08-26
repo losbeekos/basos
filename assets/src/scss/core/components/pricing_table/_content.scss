@@ -1,0 +1,20 @@
+/* Pricing table content
+==========
+*/
+
+.pricing-table__content {
+	padding: rem(map-get($pricing-table, content-padding-vertical)) rem(map-get($pricing-table, content-padding-horizontal));
+
+	+ .pricing-table__content {
+		border-top: rem(1px) solid map-get($pricing-table, border-color);
+	}
+}
+
+.pricing-table__content--alpha {
+	background: map-get($color, alpha);
+}
+
+.pricing-table__content--action {
+	padding-top: rem(map-get($pricing-table, action-padding-top));
+	padding-bottom: rem(map-get($pricing-table, action-padding-bottom));
+}

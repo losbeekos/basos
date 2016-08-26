@@ -4067,7 +4067,11 @@ app.accordion = {
         var shownItem = document.querySelector('.accordion-content-show'),
             content = document.querySelectorAll('.accordion__content');
 
-        shownItem.classList.remove(app.accordion.settings.contentShowClass);
+        if (shownItem === null)  {
+            trigger.classList.add(app.accordion.settings.contentShowClass);
+        } else {
+            shownItem.classList.remove(app.accordion.settings.contentShowClass);
+        }
 
         content.forEach(function (content) {
             content.style.maxHeight = 0;
@@ -5119,14 +5123,12 @@ app.navBar = {
     },
 
     addClasses: function () {
-        if (app.settings.$html.hasClass('no-csspositionsticky')) {
-            if (app.navBar.settings.$el.hasClass(app.navBar.settings.fixedClass)) {
-                app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
-            }
+        if (app.navBar.settings.$el.hasClass(app.navBar.settings.fixedClass)) {
+            app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
+        }
 
-            if (app.settings.$window.scrollTop() >= (app.navBar.settings.navBarOffsetTop+1)) {
-                app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
-            }
+        if (app.settings.$window.scrollTop() >= (app.navBar.settings.navBarOffsetTop+1)) {
+            app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
         }
 
         if (app.navBar.settings.allwaysShowOnMobile) {
@@ -5137,10 +5139,7 @@ app.navBar = {
     scroller: function (_scrollTop) {
         if (_scrollTop >= app.navBar.settings.navBarOffsetTop) {
             app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
-
-            if (app.settings.$html.hasClass('no-csspositionsticky')) {
-                app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
-            }
+            app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
 
             if (app.navBar.settings.hideOnScroll && _scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
                 app.navBar.settings.$el.addClass(app.navBar.settings.transformClass);
@@ -5149,9 +5148,7 @@ app.navBar = {
         } else {
             app.navBar.settings.$el.removeClass(app.navBar.settings.fixedClass);
 
-            if (app.settings.$html.hasClass('no-csspositionsticky')) {
-                app.settings.$container.css({'padding-top': 0});
-            }
+            app.settings.$container.css({'padding-top': 0});
 
             if (app.navBar.settings.hideOnScroll) {
                 app.navBar.settings.$el.removeClass(app.navBar.settings.transformClass);
@@ -5715,10 +5712,6 @@ app.tooltips = {
         switch ($tooltipTrigger.data('tooltipPosition')) {
             case 'top':
                 $tooltipContent.css({ bottom: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
-                break;
-            case 'right':
-            case 'left':
-                $tooltipContent.css({ 'margin-top': -(tooltipContentHeight/2) });
                 break;
             case 'bottom':
                 $tooltipContent.css({ top: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });

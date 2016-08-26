@@ -10,20 +10,20 @@
 	a {
 		padding: rem(map-get($btn, container-btn-padding-vertical)) rem(map-get($btn, container-btn-padding-horizontal));
 	}
+}
 
-	&--center {
-		text-align: center;
+.btn-container--center {
+	text-align: center;
 
-		ul {
-			display: inline-block;
-		}
+	ul {
+		display: inline-block;
 	}
+}
 
-	&--right {
-		text-align: right;
+.btn-container--right {
+	text-align: right;
 
-		ul {
-			float: right;
-		}
+	ul {
+		float: right;
 	}
 }

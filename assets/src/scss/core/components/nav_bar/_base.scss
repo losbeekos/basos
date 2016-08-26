@@ -1,0 +1,66 @@
+/* Navigation bar
+==========
+*/
+
+.nav-bar {
+	@extend .clearfix;
+
+	background: map-get($nav-bar, bg-color);
+	width: 100%;
+	max-height: 100%;
+	z-index: 999;
+	transition: all map-get($base, transition-speed);
+	text-align: center;
+	transform: translate3d(0, 0, 0);
+	height: rem(50px);
+	min-width: rem(map-get($container, min-width));
+
+	@include mq(map-get($nav-bar, mq)) {
+		max-height: inherit;
+		text-align: left;
+		height: auto;
+	}
+
+	.logo {
+		position: relative;
+		z-index: 2;
+		display: inline-block;
+		margin-bottom: -6px;
+		padding-top: rem(12px);
+		min-height: rem(map-get($nav-bar, trigger-height));
+
+		@include mq(map-get($nav-bar, mq)) {
+			float: left;
+			padding-top: 0;
+			min-height: inherit;
+			margin-top: rem(18px);
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+/*doc
+---
+title: Nav bar
+name: nav_bar
+category: Navigation
+---
+
+```html_example
+<header id="nav-bar" class="nav-bar">
+	<div class="nav-bar__container">
+		<a class="logo" href="/"><img src="assets/dist/img/logo.png" alt=""></a>
+		<nav class="nav-bar__nav">
+			<a id="nav-bar-trigger" class="nav-bar__trigger hide-gamma-and-up"></a>
+			<ul class="nav-bar__list">
+				<li class="nav-bar__item"><a class="nav-bar__link" href="#link">link</a></li>
+				<li class="nav-bar__item"><a class="nav-bar__link" href="#link">link</a></li>
+				<li class="nav-bar__item"><a class="nav-bar__link" href="#link">link</a></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+```
+
+*/

@@ -1,0 +1,29 @@
+/* Navigation bar link
+==========
+*/
+
+.nav-bar__link {
+	display: block;
+	color: map-get($nav-bar, link-color);
+	text-align: map-get($nav-bar, link-text-align);
+	padding: rem(map-get($nav-bar, link-padding-vertical)) rem(map-get($nav-bar, link-padding-horizontal));
+
+	@include mq(map-get($nav-bar, mq)) {
+		display: inline-block;
+	}
+
+	.touch & {
+		transition: none;
+	}
+
+	&:hover {
+		background: lighten(map-get($nav-bar, bg-color), 10%);
+		color: map-get($nav-bar, link-color);
+	}
+
+	&.nav-bar__link--active,
+	&.scrollspy-nav--active {
+		background: map-get($color, beta);
+		color: map-get($nav-bar, link-color);
+	}
+}

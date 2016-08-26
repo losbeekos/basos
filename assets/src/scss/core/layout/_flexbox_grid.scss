@@ -1,0 +1,178 @@
+/* Grid (flexbox)
+==========
+*/
+
+.flexbox-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.flexbox-grid--top { align-items: flex-start; }
+.flexbox-grid--middle { align-items: center; }
+.flexbox-grid--bottom { align-items: flex-end; }
+.flexbox-grid--stretch { align-items: stretch; }
+.flexbox-grid--baseline { align-items: baseline; }
+.flexbox-grid--left { justify-content: flex-start; }
+.flexbox-grid--center { justify-content: center; }
+.flexbox-grid--right { justify-content: flex-end; }
+.flexbox-grid--between { justify-content: space-between; }
+.flexbox-grid--around { justify-content: space-around; }
+
+[class|=flexbox-column] {
+	flex-shrink: 0;
+}
+
+.flexbox-column-fill { 
+	width: 0;
+	min-width: 0;
+	flex-grow: 1;
+}
+
+@for $i from 1 through map-get($susy, columns) {
+	@if $i == 12 {
+		.flexbox-column-#{$i} { width: 100%; }
+	}
+
+	@else {
+		.flexbox-column-#{$i} { width: calc(100% * #{$i} / #{map-get($susy, columns)}); }
+	}
+}
+
+
+/*doc
+---
+title: Grid (flexbox)
+name: grid_flexbox
+category: Structure
+---
+
+You shouldn't use this grid for overall page layout, use the standard grid module in that case. In the future we can use the [CSS grids module](http://caniuse.com/#feat=css-grid) for overall layout, but it's not ready as of writing.
+
+This is perfect for things as [nav bars](http://codepen.io/chriscoyier/pen/FAbpm).
+
+## Simple
+
+```html_example
+<div class="flexbox-grid">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Top
+
+```html_example
+<div class="flexbox-grid flexbox-grid--top" style="height: 200px;">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Middle
+
+```html_example
+<div class="flexbox-grid flexbox-grid--middle" style="height: 200px;">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Buttom
+
+```html_example
+<div class="flexbox-grid flexbox-grid--bottom" style="height: 200px;">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Stretch
+
+```html_example
+<div class="flexbox-grid flexbox-grid--stretch" style="height: 200px;">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Baseline
+
+```html_example
+<div class="flexbox-grid flexbox-grid--baseline" style="height: 200px;">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Left
+
+```html_example
+<div class="flexbox-grid flexbox-grid--left">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Center
+
+```html_example
+<div class="flexbox-grid flexbox-grid--center">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Right
+
+```html_example
+<div class="flexbox-grid flexbox-grid--right">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Space between
+
+```html_example
+<div class="flexbox-grid flexbox-grid--between">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+## Space around
+
+```html_example
+<div class="flexbox-grid flexbox-grid--around">
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+	<div class="flexbox-column-3 card">
+		<div class="card__content">Flexy</div>
+	</div>
+</div>
+```
+
+*/

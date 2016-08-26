@@ -18,6 +18,8 @@
 		content: map-get($icon, spinner-alpha);
 		font-size: rem(map-get($spinner, font-size));
 	}
+}
 
-	&--alpha:after { content: map-get($icon, spinner); }
+.spinner--alpha::after { 
+	content: map-get($icon, spinner); 
 }

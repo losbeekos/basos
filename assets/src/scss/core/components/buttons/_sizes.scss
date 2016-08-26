@@ -2,28 +2,26 @@
 ==========
 */
 
-.btn {
-	&--small {
-		padding: rem(map-get($btn, padding-small-vertical)) rem(map-get($btn, padding-small-horizontal));
-		font-size: rem(map-get($btn, font-size-small));
+.btn--small {
+	padding: rem(map-get($btn, padding-small-vertical)) rem(map-get($btn, padding-small-horizontal));
+	font-size: rem(map-get($btn, font-size-small));
+}
+
+.btn--medium {
+	padding: rem(map-get($btn, padding-medium-vertical)) rem(map-get($btn, padding-medium-horizontal));
+
+	@include mq(beta-and-up) {
+		padding: rem(map-get($btn, padding-medium-beta-vertical)) rem(map-get($btn, padding-medium-beta-horizontal));
+		font-size: rem(map-get($btn, font-size-medium));
 	}
+}
 
-	&--medium {
-		padding: rem(map-get($btn, padding-medium-vertical)) rem(map-get($btn, padding-medium-horizontal));
+.btn--large {
+	padding: rem(map-get($btn, padding-large-vertical)) rem(map-get($btn, padding-large-horizontal));
 
-		@include mq(beta-and-up) {
-			padding: rem(map-get($btn, padding-medium-beta-vertical)) rem(map-get($btn, padding-medium-beta-horizontal));
-			font-size: rem(map-get($btn, font-size-medium));
-		}
-	}
-
-	&--large {
-		padding: rem(map-get($btn, padding-large-vertical)) rem(map-get($btn, padding-large-horizontal));
-
-		@include mq(beta-and-up) {
-			padding: rem(map-get($btn, padding-large-beta-vertical)) rem(map-get($btn, padding-large-beta-horizontal));
-			font-size: rem(map-get($btn, font-size-large));
-		}
+	@include mq(beta-and-up) {
+		padding: rem(map-get($btn, padding-large-beta-vertical)) rem(map-get($btn, padding-large-beta-horizontal));
+		font-size: rem(map-get($btn, font-size-large));
 	}
 }
 

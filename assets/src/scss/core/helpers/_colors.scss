@@ -1,0 +1,15 @@
+/* Colors
+==========
+*/
+
+@each $key, $value in $color {
+	.color-#{"" + $key} {
+		color: map-get($color, $key) !important;
+	}
+}
+
+@each $key, $value in $color {
+	.bg-color-#{"" + $key} {
+		background: map-get($color, $key) !important;
+	}
+}

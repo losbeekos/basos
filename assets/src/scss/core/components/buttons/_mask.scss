@@ -1,0 +1,25 @@
+/*doc
+---
+title: Mask
+name: mask
+category: Buttons
+---
+
+```html_example
+<a class="btn btn--mask btn--medium" href="#link">button medium</a>
+```
+
+*/
+
+.btn--mask {
+	@include btn-style(transparent);
+
+	&:hover {
+		background-color: darken(white, 5%);
+	}
+
+	&:active,
+	&:focus {
+		background-color: darken(white, 10%);
+	}
+}

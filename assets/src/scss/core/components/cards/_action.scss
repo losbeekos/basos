@@ -1,0 +1,8 @@
+/* Cards action
+==========
+*/
+
+.card__action {
+	border: rem(1px) solid darken(map-get($btn-bg, alpha), 5%);
+	padding: rem(20px);
+}

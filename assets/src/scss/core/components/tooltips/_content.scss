@@ -1,0 +1,30 @@
+/* Tooltip content
+==========
+*/
+
+.tooltip .tooltip__content {
+	visibility: hidden;
+	position: absolute;
+	z-index: 100;
+	opacity: 0;
+	transition: all map-get($tooltip, transition-speed);
+	text-align: center;
+	background: map-get($tooltip, bg-color);
+	color: map-get($tooltip, color);
+	min-width: map-get($tooltip, min-width);
+	max-width: map-get($tooltip, width);
+	padding: map-get($tooltip, padding);
+	border-radius: map-get($tooltip, border-radius);
+
+	@include vr($tooltip-font-size);
+
+	&::after {
+		position: absolute;
+		content: '';
+		border: map-get($tooltip, arrow-width) solid transparent;
+	}
+
+	.no-csstransforms & {
+		width: map-get($tooltip, max-width);
+	}
+}

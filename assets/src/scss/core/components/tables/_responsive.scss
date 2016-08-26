@@ -1,0 +1,82 @@
+/* Table responsive
+==========
+*/
+
+.responsive-table {
+	display: inline-block;
+	vertical-align: top;
+	max-width: 100%;
+	overflow-x: auto;
+	white-space: nowrap; // optional - looks better for small cell values
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+.responsive-table,
+.responsive-table--flip tbody {
+	background: radial-gradient(ellipse at left, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 0 center, radial-gradient(ellipse at right, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0) 75%) 100% center; -webkit-overflow-scrolling: touch;
+	background-size: 10px 100%, 10px 100%;
+	background-attachment: scroll, scroll;
+	background-repeat: no-repeat;
+	-webkit-overflow-scrolling: touch;
+}
+
+// change these gradients from white to your background colour if it differs
+// gradient on the first cells to hide the left shadow
+.responsive-table td:first-child,
+.responsive-table--flip tbody tr:first-child {
+	background-image: linear-gradient(to right, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+	background-repeat: no-repeat;
+	background-size: 20px 100%;
+}
+
+// gradient on the last cells to hide the right shadow
+.responsive-table td:last-child,
+.responsive-table--flip tbody tr:last-child {
+	background-image: linear-gradient(to left, rgba(255,255,255, 1) 50%, rgba(255,255,255, 0) 100%);
+	background-repeat: no-repeat;
+	background-position: 100% 0;
+	background-size: 20px 100%;
+}
+
+.responsive-table--flip {
+	display: flex;
+	overflow: hidden;
+	background: none;
+
+	thead {
+		display: flex;
+		flex-shrink: 0;
+		min-width: min-content;
+	}
+
+	tbody {
+		display: flex;
+		position: relative;
+		overflow-x: auto;
+		overflow-y: hidden;
+	}
+
+	tr {
+		display: flex;
+		flex-direction: column;
+		min-width: min-content;
+		flex-shrink: 0;
+	}
+
+	td,
+	th {
+		display: block;
+
+		&:not(:last-child),
+		&:not(:last-child) {
+			border-bottom: 0;
+		}
+	}
+
+	td {
+		background-image: none !important;
+		// border-collapse is no longer active
+		border-left: 0;
+	}
+}

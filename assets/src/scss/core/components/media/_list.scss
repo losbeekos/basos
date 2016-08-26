@@ -1,0 +1,20 @@
+/* Media list
+==========
+*/
+
+.media-list {
+	@extend .list-unstyled;
+}
+
+.media-list--bordered {
+	.media {
+		border-top: map-get($media, bordered-border-top);
+		margin-bottom: 0;
+		padding-top: rem(20px);
+		padding-bottom: rem(20px);
+
+		.media {
+			margin: 0;
+		}
+	}
+}

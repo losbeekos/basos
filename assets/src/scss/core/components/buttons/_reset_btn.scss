@@ -1,0 +1,27 @@
+/*doc
+---
+title: Reset button
+name: reset_button
+category: Buttons
+---
+
+Commonly used for triggers. For example a navigation trigger
+
+```html_example
+<button class="reset-button">Button</button>
+```
+
+*/
+
+.reset-button {
+	background: none;
+	box-shadow: none;
+	border: 0;
+	padding: 0;
+	text-shadow: none;
+
+	&:active,
+	&:focus {
+		outline: none;
+	}
+}

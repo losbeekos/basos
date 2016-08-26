@@ -41,14 +41,12 @@ app.navBar = {
     },
 
     addClasses: function () {
-        if (app.settings.$html.hasClass('no-csspositionsticky')) {
-            if (app.navBar.settings.$el.hasClass(app.navBar.settings.fixedClass)) {
-                app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
-            }
+        if (app.navBar.settings.$el.hasClass(app.navBar.settings.fixedClass)) {
+            app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
+        }
 
-            if (app.settings.$window.scrollTop() >= (app.navBar.settings.navBarOffsetTop+1)) {
-                app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
-            }
+        if (app.settings.$window.scrollTop() >= (app.navBar.settings.navBarOffsetTop+1)) {
+            app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
         }
 
         if (app.navBar.settings.allwaysShowOnMobile) {
@@ -59,10 +57,7 @@ app.navBar = {
     scroller: function (_scrollTop) {
         if (_scrollTop >= app.navBar.settings.navBarOffsetTop) {
             app.navBar.settings.$el.addClass(app.navBar.settings.fixedClass);
-
-            if (app.settings.$html.hasClass('no-csspositionsticky')) {
-                app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
-            }
+            app.settings.$container.css({'padding-top': app.navBar.settings.navBarHeight});
 
             if (app.navBar.settings.hideOnScroll && _scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
                 app.navBar.settings.$el.addClass(app.navBar.settings.transformClass);
@@ -71,9 +66,7 @@ app.navBar = {
         } else {
             app.navBar.settings.$el.removeClass(app.navBar.settings.fixedClass);
 
-            if (app.settings.$html.hasClass('no-csspositionsticky')) {
-                app.settings.$container.css({'padding-top': 0});
-            }
+            app.settings.$container.css({'padding-top': 0});
 
             if (app.navBar.settings.hideOnScroll) {
                 app.navBar.settings.$el.removeClass(app.navBar.settings.transformClass);

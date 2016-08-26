@@ -8,18 +8,18 @@
 
 .affix {
 	position: relative;
+}
 
-	&--fixed {
-		position: fixed;
-		top: 0;
-		z-index: 1;
-	}
+.affix--fixed {
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
 
-	&--absolute {
-		position: absolute;
-		top: inherit !important;
-		bottom: 0;
-	}
+.affix--absolute {
+	position: absolute;
+	top: inherit !important;
+	bottom: 0;
 }
 
 /*doc

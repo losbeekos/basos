@@ -1,0 +1,20 @@
+/* Progress bar indeterminate
+==========
+*/
+
+
+@mixin progress-indeterminate() {
+	background-color: map-get($progress-bar, bg-color);
+}
+
+progress:not([value]) {
+	@include progress-style();
+
+	&::-webkit-progress-bar { @include progress-style(); @include progress-indeterminate(); }
+	&::-moz-progress-bar    { @include progress-style(); @include progress-indeterminate(); }
+	&::-ms-fill             { @include progress-style(); @include progress-indeterminate(); animation-name: none; }
+}
+
+.progress-bar__value:not([style]) {
+	background-color: map-get($progress-bar, bg-color);
+}

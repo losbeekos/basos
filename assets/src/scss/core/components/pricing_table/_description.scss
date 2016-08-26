@@ -1,0 +1,8 @@
+/* Pricing tables description
+==========
+*/
+
+.pricing-table__description {
+	color: #999999;
+	font-size: rem(map-get($pricing-table, description-font-size));
+}

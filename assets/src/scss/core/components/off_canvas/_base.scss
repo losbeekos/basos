@@ -1,0 +1,77 @@
+/* Off canvas
+==========
+*/
+
+.off-canvas-body {
+	@include mq(epsilon-and-up) {
+		padding-left: rem(map-get($off-canvas, width));
+	}
+}
+
+.off-canvas {
+	background: map-get($off-canvas, bg-color);
+	position: fixed;
+	z-index: 999;
+	top: 0;
+	width: rem(map-get($off-canvas, width));
+	height: 100%;
+
+	a {
+		color: white;
+
+		&:hover {
+			background: tint(map-get($off-canvas, bg-color), 10%);
+		}
+	}
+}
+
+.off-canvas--left {
+	left: 0;
+	transform: translate3d(-#{map-get($off-canvas, width)}, 0, 0);
+	transition: transform map-get($base, transition-speed);
+
+	@include mq(epsilon-and-up) {
+		transform: translateX(0);
+	}
+
+	.off-canvas-show-left & {
+		transform: translate3d(0, 0, 0);
+	}
+
+	.no-csstransforms3d & {
+		left: -#{map-get($off-canvas, width)};
+	}
+
+	.no-csstransforms3d.off-canvas-show-left & {
+		left: 0;
+	}
+}
+
+.off-canvas--right {
+	right: 0;
+	transform: translate3d(map-get($off-canvas, width), 0, 0);
+	transition: transform map-get($base, transition-speed);
+
+	.off-canvas-show-right & {
+		transform: translate3d(0, 0, 0);
+	}
+
+	.no-csstransforms3d & {
+		right: -#{map-get($off-canvas, width)};
+	}
+
+	.no-csstransforms3d.off-canvas-show-left & {
+		right: 0;
+	}
+}
+
+/*doc
+---
+title: Off canvas
+name: off_canvas
+category: Navigation
+---
+
+The docs has an off canvas for its menu.
+
+*/
