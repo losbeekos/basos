@@ -4327,8 +4327,6 @@ app.cycle = {
     },
 
     init: function(){
-        var self = this;
-
         if(app.cycle.settings.$el.length > 0){
             app.cycle.settings.$el
                 .cycle({
@@ -4365,7 +4363,7 @@ app.delayedImageLoading = {
     },
 
     init: function() {
-        if (app.settings.$html.hasClass('modernizr_template') && document.querySelector(app.delayedImageLoading.settings.el) !== null) {
+        if (document.documentElement.classList.contains('modernizr_template') && document.querySelector(app.delayedImageLoading.settings.el) !== null) {
             var template = document.querySelector(app.delayedImageLoading.settings.el),
                 parent = template.parentNode,
                 contents = template.innerHTML;
@@ -4404,12 +4402,13 @@ app.disableHover = {
 
     init: function(){
         clearTimeout(app.disableHover.timer);
-        if(!app.settings.$body.hasClass('disable-hover')) {
-            app.settings.$body.addClass('disable-hover');
+
+        if(!document.body.classList.contains('disable-hover')) {
+            document.body.classList.add('disable-hover');
         }
 
         app.disableHover.timer = setTimeout(function(){
-            app.settings.$body.removeClass('disable-hover');
+            document.body.classList.remove('disable-hover');
         }, 100);
     }
 };
@@ -4427,62 +4426,69 @@ This class prevents pointer events so there won't be any hover effect repaints, 
 */
 app.dropdowns = {
     settings: {
-        $el: $('.dropdown'),
+        el: document.querySelectorAll('.dropdown'),
         showClass: 'dropdown--show'
     },
 
     init: function () {
-        app.dropdowns.settings.$el.on('click', function (event) {
-            var $this = $(this);
+        app.dropdowns.settings.el.forEach(function (dropdown) {
+            dropdown.addEventListener('click', function (event) {
+                event.stopPropagation();
 
-            event.stopPropagation();
-
-            if (app.settings.$html.hasClass('modernizr_touchevents') || $this.data('dropdownTrigger')) {
-                app.dropdowns.settings.$el.not($this).removeClass(app.dropdowns.settings.showClass);
-                $this.toggleClass(app.dropdowns.settings.showClass);
-            }
+                if (document.documentElement.classList.contains('modernizr_touchevents') || this.getAttribute('data-dropdown-trigger')) {
+                    this.classList.toggle(app.dropdowns.settings.showClass);
+                }
+            });
         });
 
-        app.settings.$body
-            .on('keydown', function(event){
-                if (event.keyCode === 27) {
-                    $('.dropdown').removeClass('dropdown--show');
-                }
-            })
-            .on('click', function () {
-                $('.dropdown').removeClass('dropdown--show');
-            });
+        document.body.onkeydown = function (event) {
+            if (event.keyCode === 27) {
+                app.dropdowns.closeAllDropdowns();
+            }
+        };
+
+        document.body.onclick = function (event) {
+            app.dropdowns.closeAllDropdowns();
+        };
+    },
+
+    closeAllDropdowns: function () {
+        document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+            dropdown.classList.remove('dropdown--show');
+        });
     }
 };
 app.equalize = {
     settings: {
-        $el: $('[data-equalize]')
+        el: document.querySelectorAll('[data-equalize]')
     },
 
     init: function(){
-        if (app.equalize.settings.$el.length > 0) {
-            app.equalize.settings.$el.each(function () {
+        if (app.equalize.settings.el !== null) {
+            app.equalize.settings.el.forEach(function (equalize) {
                 var currentHeight = 0,
-                    $this = $(this),
-                    mediaQuery = $this.attr('data-equalize');
-               
-                if (Modernizr.mq(app.mediaQueries[mediaQuery]) || app.mediaQueries[mediaQuery] === undefined) {
-                    $this.find('[data-equalize-target]')
-                        .each(function () {
-                            var $this = $(this),
-                                height = null;
+                    mediaQuery = equalize.getAttribute('data-equalize'),
+                    targets = equalize.querySelectorAll('[data-equalize-target]');
 
-                            $this.css({height: 'auto'});
+                if (Modernizr.mq(app.mediaQueries[mediaQuery]) === true || app.mediaQueries[mediaQuery] === undefined) {
+                    targets.forEach(function (target) {
+                        var height = null;
 
-                            height = $(this).height();
+                        target.style.height = 'auto';
+                        height = target.offsetHeight;
 
-                            if (height > currentHeight) {
-                                currentHeight = height;
-                            }
-                        })
-                        .height(currentHeight);
+                        if (height > currentHeight) {
+                            currentHeight = height;
+                        }
+                    });
+
+                    targets.forEach(function (target) {
+                        target.style.height = currentHeight + 'px';
+                    });
                 } else {
-                    $this.find('[data-equalize-target]').height('auto');
+                    targets.forEach(function (target) {
+                        target.style.height = 'auto';
+                    });
                 }
             });
         }
@@ -4521,7 +4527,7 @@ Equalize targets in just a snap. It can be everything not just columns or blocks
 You can also set a media query from where the equalizer has to kick in, like this.
 
 ```html_example
-<div class="grid" data-equalize="beta-and-up">
+<div class="grid" data-equalize="betaAndUp">
     <div class="column-4">
         <div data-equalize-target class="card">
             <div class="card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>

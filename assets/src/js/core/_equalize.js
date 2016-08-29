@@ -1,32 +1,34 @@
 app.equalize = {
     settings: {
-        $el: $('[data-equalize]')
+        el: document.querySelectorAll('[data-equalize]')
     },
 
     init: function(){
-        if (app.equalize.settings.$el.length > 0) {
-            app.equalize.settings.$el.each(function () {
+        if (app.equalize.settings.el !== null) {
+            app.equalize.settings.el.forEach(function (equalize) {
                 var currentHeight = 0,
-                    $this = $(this),
-                    mediaQuery = $this.attr('data-equalize');
-               
-                if (Modernizr.mq(app.mediaQueries[mediaQuery]) || app.mediaQueries[mediaQuery] === undefined) {
-                    $this.find('[data-equalize-target]')
-                        .each(function () {
-                            var $this = $(this),
-                                height = null;
+                    mediaQuery = equalize.getAttribute('data-equalize'),
+                    targets = equalize.querySelectorAll('[data-equalize-target]');
 
-                            $this.css({height: 'auto'});
+                if (Modernizr.mq(app.mediaQueries[mediaQuery]) === true || app.mediaQueries[mediaQuery] === undefined) {
+                    targets.forEach(function (target) {
+                        var height = null;
 
-                            height = $(this).height();
+                        target.style.height = 'auto';
+                        height = target.offsetHeight;
 
-                            if (height > currentHeight) {
-                                currentHeight = height;
-                            }
-                        })
-                        .height(currentHeight);
+                        if (height > currentHeight) {
+                            currentHeight = height;
+                        }
+                    });
+
+                    targets.forEach(function (target) {
+                        target.style.height = currentHeight + 'px';
+                    });
                 } else {
-                    $this.find('[data-equalize-target]').height('auto');
+                    targets.forEach(function (target) {
+                        target.style.height = 'auto';
+                    });
                 }
             });
         }
@@ -65,7 +67,7 @@ Equalize targets in just a snap. It can be everything not just columns or blocks
 You can also set a media query from where the equalizer has to kick in, like this.
 
 ```html_example
-<div class="grid" data-equalize="beta-and-up">
+<div class="grid" data-equalize="betaAndUp">
     <div class="column-4">
         <div data-equalize-target class="card">
             <div class="card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>

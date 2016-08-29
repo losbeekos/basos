@@ -9,8 +9,6 @@ app.cycle = {
     },
 
     init: function(){
-        var self = this;
-
         if(app.cycle.settings.$el.length > 0){
             app.cycle.settings.$el
                 .cycle({

@@ -4,7 +4,7 @@ app.delayedImageLoading = {
     },
 
     init: function() {
-        if (app.settings.$html.hasClass('modernizr_template') && document.querySelector(app.delayedImageLoading.settings.el) !== null) {
+        if (document.documentElement.classList.contains('modernizr_template') && document.querySelector(app.delayedImageLoading.settings.el) !== null) {
             var template = document.querySelector(app.delayedImageLoading.settings.el),
                 parent = template.parentNode,
                 contents = template.innerHTML;

@@ -3,12 +3,13 @@ app.disableHover = {
 
     init: function(){
         clearTimeout(app.disableHover.timer);
-        if(!app.settings.$body.hasClass('disable-hover')) {
-            app.settings.$body.addClass('disable-hover');
+
+        if(!document.body.classList.contains('disable-hover')) {
+            document.body.classList.add('disable-hover');
         }
 
         app.disableHover.timer = setTimeout(function(){
-            app.settings.$body.removeClass('disable-hover');
+            document.body.classList.remove('disable-hover');
         }, 100);
     }
 };

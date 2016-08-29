@@ -1,29 +1,34 @@
 app.dropdowns = {
     settings: {
-        $el: $('.dropdown'),
+        el: document.querySelectorAll('.dropdown'),
         showClass: 'dropdown--show'
     },
 
     init: function () {
-        app.dropdowns.settings.$el.on('click', function (event) {
-            var $this = $(this);
+        app.dropdowns.settings.el.forEach(function (dropdown) {
+            dropdown.addEventListener('click', function (event) {
+                event.stopPropagation();
 
-            event.stopPropagation();
-
-            if (app.settings.$html.hasClass('modernizr_touchevents') || $this.data('dropdownTrigger')) {
-                app.dropdowns.settings.$el.not($this).removeClass(app.dropdowns.settings.showClass);
-                $this.toggleClass(app.dropdowns.settings.showClass);
-            }
+                if (document.documentElement.classList.contains('modernizr_touchevents') || this.getAttribute('data-dropdown-trigger')) {
+                    this.classList.toggle(app.dropdowns.settings.showClass);
+                }
+            });
         });
 
-        app.settings.$body
-            .on('keydown', function(event){
-                if (event.keyCode === 27) {
-                    $('.dropdown').removeClass('dropdown--show');
-                }
-            })
-            .on('click', function () {
-                $('.dropdown').removeClass('dropdown--show');
-            });
+        document.body.onkeydown = function (event) {
+            if (event.keyCode === 27) {
+                app.dropdowns.closeAllDropdowns();
+            }
+        };
+
+        document.body.onclick = function (event) {
+            app.dropdowns.closeAllDropdowns();
+        };
+    },
+
+    closeAllDropdowns: function () {
+        document.querySelectorAll('.dropdown').forEach(function (dropdown) {
+            dropdown.classList.remove('dropdown--show');
+        });
     }
 };
