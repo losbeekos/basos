@@ -1,9 +1,6 @@
 app.groupCheckable = {
-    settings: {
-        el: document.querySelectorAll('[data-group-checkable')
-    },
     init: function () {
-        app.groupCheckable.settings.el.forEach(function (checkable) {
+        document.querySelectorAll('[data-group-checkable').forEach(function (checkable) {
             app.groupCheckable.toggleGroup(checkable);
 
             checkable.addEventListener('change', function () {

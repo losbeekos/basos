@@ -4863,11 +4863,8 @@ app.googleMaps = {
 
 };
 app.groupCheckable = {
-    settings: {
-        el: document.querySelectorAll('[data-group-checkable')
-    },
     init: function () {
-        app.groupCheckable.settings.el.forEach(function (checkable) {
+        document.querySelectorAll('[data-group-checkable').forEach(function (checkable) {
             app.groupCheckable.toggleGroup(checkable);
 
             checkable.addEventListener('change', function () {
@@ -4925,31 +4922,31 @@ app.jump = {
     },
 
     init: function () {
-        app.settings.$body.on('click', '[data-jumpto]', function (event) {
-            var $this = $(this),
-                data = $this.data(),
-                extraOffset = 0;
+        document.querySelectorAll('[data-jumpto]').forEach(function (jumper) {
+            jumper.addEventListener('click', function () {
+                var extraOffset = 0;
 
-            event.preventDefault();
+                event.preventDefault();
 
-            if (data.jumptoExtraOffset !== undefined) {
-                extraOffset = data.jumptoExtraOffset;
-            }
+                if (jumper.getAttribute('data-jumpto-extra-offset') !== undefined) {
+                    extraOffset = jumper.getAttribute('data-jumpto-extra-offset');
+                }
 
-            if (data.jumptoSpeed !== undefined) {
-                app.jump.settings.speed = data.jumptoSpeed;
-            }
+                if (jumper.getAttribute('data-jumpto-speed') !== undefined) {
+                    app.jump.settings.speed = jumper.getAttribute('data-jumpto-speed');
+                }
 
-            app.jump.to($(this).attr('href'), extraOffset, app.jump.settings.speed);
+                app.jump.to(jumper.getAttribute('href'), extraOffset, app.jump.settings.speed);
+            });
         });
     },
 
     to: function (_target, _extraOffset, _speed) {
-        var offsetTop = Math.round($(_target).offset().top);
+        var offsetTop = Math.round(helper.getCoords(document.querySelector(_target)).top);
 
         _extraOffset === undefined ? 0 : '';
 
-        if (app.navBar.settings.el.length > 0) {
+        if (app.navBar.settings.el !== null) {
             offsetTop = offsetTop - (app.navBar.settings.el.offsetHeight + _extraOffset);
         } else {
             offsetTop = offsetTop + _extraOffset;
@@ -4975,12 +4972,20 @@ category: Javascript
 */
 app.leave = {
     init: function () {
-        app.settings.$body.on('click', '[type=submit]', function () {
-            app.leave.inActive();
+        document.querySelectorAll('[type=submit]').forEach(function (el) {
+            el.addEventListener('click', function () {
+                app.leave.inActive();
+            });
         });
 
-        app.settings.$body.on('change input', '[data-leave-target], [data-leave-target] input:not(submit)', function () {
-            app.leave.active();
+        document.querySelectorAll('[data-leave-target], [data-leave-target] input:not(submit)').forEach(function (inputs) {
+            inputs.addEventListener('change', function () {
+                app.leave.active();
+            });
+
+            inputs.addEventListener('input', function () {
+                app.leave.active();
+            });
         });
     },
 
@@ -5276,11 +5281,11 @@ app.navBar = {
 };
 app.navPrimary = {
     settings: {
-        $el: $('.nav-primary')
+        el: document.getElementById('#nav-primary')
     },
 
     init: function(){
-        if(app.primaryNav.settings.$el.length > 0){
+        if(app.primaryNav.settings.el !== null){
         }
     }
 };
@@ -5448,17 +5453,17 @@ app.responsiveImages = {
     },
 
     setBackgroundImage: function () {
-        $('[data-responsive-bg-img]').each(function () {
-            app.responsiveImages.setBackgroundImageStyle($(this));
+        document.querySelectorAll('[data-responsive-bg-img]').forEach(function (el) {
+            app.responsiveImages.setBackgroundImageStyle(el);
         });
     },
 
     setBackgroundImageStyle: function (element) {
-        var domNode = element.find('picture img')[0],
+        var domNode = element.querySelector('img'),
             source = null;
 
         domNode.currentSrc === undefined ? source = domNode.src : source = domNode.currentSrc;
-        element.css({'background-image': 'url(' + source + ')'});
+        element.style.backgroundImage = 'url(' + source + ')';
     }
 };
 
@@ -5730,19 +5735,21 @@ app.tabs = {
 };
 app.toggle = {
     settings: {
-        $el: $('[data-toggle]')
+        el: document.querySelectorAll('[data-toggle]')
     },
 
     init: function () {
-        app.toggle.settings.$el.on('click', function (event) {
-            event.preventDefault();
+        app.toggle.settings.el.forEach(function (toggle) {
+            toggle.addEventListener('click', function (event) {
+                event.preventDefault();
 
-            app.toggle.toggler($($(this).data('toggle')));
+                app.toggle.toggler(document.querySelector(this.getAttribute('data-toggle')));
+            });
         });
     },
 
     toggler: function (_target) {
-        _target.toggleClass('toggle--hide');
+        _target.classList.toggle('toggle--hide');
     }
 };
 app.tooltips = {

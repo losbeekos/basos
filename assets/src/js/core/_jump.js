@@ -4,31 +4,31 @@ app.jump = {
     },
 
     init: function () {
-        app.settings.$body.on('click', '[data-jumpto]', function (event) {
-            var $this = $(this),
-                data = $this.data(),
-                extraOffset = 0;
+        document.querySelectorAll('[data-jumpto]').forEach(function (jumper) {
+            jumper.addEventListener('click', function () {
+                var extraOffset = 0;
 
-            event.preventDefault();
+                event.preventDefault();
 
-            if (data.jumptoExtraOffset !== undefined) {
-                extraOffset = data.jumptoExtraOffset;
-            }
+                if (jumper.getAttribute('data-jumpto-extra-offset') !== undefined) {
+                    extraOffset = jumper.getAttribute('data-jumpto-extra-offset');
+                }
 
-            if (data.jumptoSpeed !== undefined) {
-                app.jump.settings.speed = data.jumptoSpeed;
-            }
+                if (jumper.getAttribute('data-jumpto-speed') !== undefined) {
+                    app.jump.settings.speed = jumper.getAttribute('data-jumpto-speed');
+                }
 
-            app.jump.to($(this).attr('href'), extraOffset, app.jump.settings.speed);
+                app.jump.to(jumper.getAttribute('href'), extraOffset, app.jump.settings.speed);
+            });
         });
     },
 
     to: function (_target, _extraOffset, _speed) {
-        var offsetTop = Math.round($(_target).offset().top);
+        var offsetTop = Math.round(helper.getCoords(document.querySelector(_target)).top);
 
         _extraOffset === undefined ? 0 : '';
 
-        if (app.navBar.settings.el.length > 0) {
+        if (app.navBar.settings.el !== null) {
             offsetTop = offsetTop - (app.navBar.settings.el.offsetHeight + _extraOffset);
         } else {
             offsetTop = offsetTop + _extraOffset;

@@ -1,11 +1,19 @@
 app.leave = {
     init: function () {
-        app.settings.$body.on('click', '[type=submit]', function () {
-            app.leave.inActive();
+        document.querySelectorAll('[type=submit]').forEach(function (el) {
+            el.addEventListener('click', function () {
+                app.leave.inActive();
+            });
         });
 
-        app.settings.$body.on('change input', '[data-leave-target], [data-leave-target] input:not(submit)', function () {
-            app.leave.active();
+        document.querySelectorAll('[data-leave-target], [data-leave-target] input:not(submit)').forEach(function (inputs) {
+            inputs.addEventListener('change', function () {
+                app.leave.active();
+            });
+
+            inputs.addEventListener('input', function () {
+                app.leave.active();
+            });
         });
     },
 

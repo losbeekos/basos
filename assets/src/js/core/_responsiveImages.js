@@ -7,17 +7,17 @@ app.responsiveImages = {
     },
 
     setBackgroundImage: function () {
-        $('[data-responsive-bg-img]').each(function () {
-            app.responsiveImages.setBackgroundImageStyle($(this));
+        document.querySelectorAll('[data-responsive-bg-img]').forEach(function (el) {
+            app.responsiveImages.setBackgroundImageStyle(el);
         });
     },
 
     setBackgroundImageStyle: function (element) {
-        var domNode = element.find('picture img')[0],
+        var domNode = element.querySelector('img'),
             source = null;
 
         domNode.currentSrc === undefined ? source = domNode.src : source = domNode.currentSrc;
-        element.css({'background-image': 'url(' + source + ')'});
+        element.style.backgroundImage = 'url(' + source + ')';
     }
 };
 
