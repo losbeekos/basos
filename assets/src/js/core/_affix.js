@@ -28,7 +28,7 @@ app.affix = {
     scroller: function (_scrollTop, _el) {
         var container = _el.closest('.affix-container'),
             affixOffsetTop = _el.getAttribute('data-affix-offset'),
-            bottomTrigger = ((container.offsetTop + container.offsetHeight) - _el.offsetHeight);
+            bottomTrigger = ((helper.getCoords(container).top + container.offsetHeight) - _el.offsetHeight);
 
         if (app.navBar.settings.el && app.navBar.settings.el.classList.contains('nav-bar--fixed')) {
             bottomTrigger = (bottomTrigger - app.navBar.settings.navBarHeight);

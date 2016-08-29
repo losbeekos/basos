@@ -4015,6 +4015,30 @@ helper.cookies = {
 		helper.cookies.create(name,"",-1);
 	}
 };
+/**
+ * Get coordinates relative to the document,
+ * Just like jQuery's offset functiom.
+ */
+
+helper.getCoords = function(el) {
+	var box = el.getBoundingClientRect();
+
+	var body = document.body;
+	var docEl = document.documentElement;
+
+	var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+	var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+
+	var clientTop = docEl.clientTop || body.clientTop || 0;
+	var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+
+	var top  = box.top +  scrollTop - clientTop;
+	var left = box.left + scrollLeft - clientLeft;
+
+	return { 
+		top: Math.round(top), 
+		left: Math.round(left) };
+};
 helper.inView = function(el) {
 	if (el instanceof jQuery) {
 		el = el[0];
@@ -4148,7 +4172,7 @@ app.affix = {
     scroller: function (_scrollTop, _el) {
         var container = _el.closest('.affix-container'),
             affixOffsetTop = _el.getAttribute('data-affix-offset'),
-            bottomTrigger = ((container.offsetTop + container.offsetHeight) - _el.offsetHeight);
+            bottomTrigger = ((helper.getCoords(container).top + container.offsetHeight) - _el.offsetHeight);
 
         if (app.navBar.settings.el && app.navBar.settings.el.classList.contains('nav-bar--fixed')) {
             bottomTrigger = (bottomTrigger - app.navBar.settings.navBarHeight);
