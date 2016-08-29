@@ -4863,30 +4863,42 @@ app.googleMaps = {
 
 };
 app.groupCheckable = {
+    settings: {
+        el: document.querySelectorAll('[data-group-checkable')
+    },
     init: function () {
-        $('[data-group-checkable]').each(function () {
-            app.groupCheckable.toggleGroup($(this));
+        app.groupCheckable.settings.el.forEach(function (checkable) {
+            app.groupCheckable.toggleGroup(checkable);
+
+            checkable.addEventListener('change', function () {
+                app.groupCheckable.toggleGroup(checkable);
+            });
         });
 
-        $('[data-group-checkable]').on('change', function () {
-            app.groupCheckable.toggleGroup($(this));
-        });
+        document.querySelectorAll('[data-group-checkable-target]').forEach(function (target) {
+            target.addEventListener('change', function () {
+                var group = target.getAttribute('data-group-checkable-target'),
+                    targets = document.querySelectorAll('[data-group-checkable-target=' + group + ']'),
+                    trigger = document.querySelector('[data-group-checkable=' + group + ']'),
+                    checked = 0;
 
-        $('[data-group-checkable-target]').on('change', function () {
-            var $this = $(this),
-                group = $this.attr('data-group-checkable-target'),
-                $group = $('[data-group-checkable-target=' + group + ']'),
-                $groupChecked = $('[data-group-checkable-target=' + group + ']:checked'),
-                $trigger = $('[data-group-checkable=' + group + ']');
+                targets.forEach(function (target) {
+                    if (target.checked === true) {
+                        checked = checked+1;
+                    }
+                });
 
-            $group.length === $groupChecked.length ? $trigger.prop('checked', true) : $trigger.prop('checked', false);
+                targets.length === checked ? trigger.checked = 'checked' : trigger.checked = '';
+            });
         });
     },
 
-    toggleGroup: function ($this) {
-        var $group = $('[data-group-checkable-target=' + $this.attr('data-group-checkable') + ']');
+    toggleGroup: function (checkable) {
+        var group = document.querySelectorAll('[data-group-checkable-target=' + checkable.getAttribute('data-group-checkable') + ']');
 
-        $this.is(':checked') ? $group.prop('checked', true) : $group.prop('checked', false);
+        group.forEach(function (checkbox) {
+            checkable.checked ? checkbox.checked = 'checked' : checkbox.checked = '';
+        });
     }
 };
 
