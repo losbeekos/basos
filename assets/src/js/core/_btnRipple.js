@@ -4,9 +4,9 @@ app.btnRipple = {
     },
 
     init: function() {
-        btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple');
+        var btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple');
 
-        btns.forEach(function (btn) {
+        btns.forEach(btn => {
             btn.addEventListener('click', function (event) {
                 var ripple = this.querySelector('.btn__ripple');
                 

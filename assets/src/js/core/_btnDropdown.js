@@ -2,7 +2,7 @@ app.btnDropdown = {
     init: function() {
 
         // Dropdown toggler
-        document.querySelectorAll('[data-btn-dropdown-toggle]').forEach(function (toggle) {
+        document.querySelectorAll('[data-btn-dropdown-toggle]').forEach(toggle => {
             toggle.addEventListener('click', function (event) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -19,7 +19,7 @@ app.btnDropdown = {
         });
 
         // Do not close dropdown on dropdown content clicks
-        document.querySelectorAll('.btn-dropdown__dropdown, .btn-dropdown__list').forEach(function (btn) {
+        document.querySelectorAll('.btn-dropdown__dropdown, .btn-dropdown__list').forEach(btn => {
             btn.addEventListener('click', function (event) {
                 var allowProp = btn.getAttribute('data-btn-dropdown');
 
@@ -43,7 +43,7 @@ app.btnDropdown = {
     },
 
     closeOpenDropdown: function () {
-        document.querySelectorAll('.btn-dropdown--open').forEach(function (openDropdown) {
+        document.querySelectorAll('.btn-dropdown--open').forEach(openDropdown => {
             openDropdown.classList.remove('btn-dropdown--open');
         });
     }

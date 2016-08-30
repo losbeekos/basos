@@ -1,7 +1,7 @@
 module.exports = {
 	js: {
 		files: ['<%= jshint.files %>'],
-		tasks: ['jshint', 'concat'],
+		tasks: ['jshint', 'concat:app', 'babel', 'concat:all'],
 	},
 
 	// Basos

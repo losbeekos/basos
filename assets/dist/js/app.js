@@ -3283,6 +3283,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
   return parsley;
 });
+//# sourceMappingURL=parsley.js.map
 
 // Validation errors messages for Parsley
 // Load this after Parsley
@@ -3890,25 +3891,27 @@ Parsley.setLocale('nl');
 
 }));
 
+'use strict';
+
 /**
  * Return the closest element matching a selector up the DOM tree
  * Credit: https://github.com/jonathantneal/closest
  */
 
 if (typeof Element.prototype.closest !== 'function') {
-	Element.prototype.closest = function closest(selector) {
-		var element = this;
+    Element.prototype.closest = function closest(selector) {
+        var element = this;
 
-		while (element && element.nodeType === 1) {
-			if (element.matches(selector)) {
-				return element;
-			}
+        while (element && element.nodeType === 1) {
+            if (element.matches(selector)) {
+                return element;
+            }
 
-			element = element.parentNode;
-		}
+            element = element.parentNode;
+        }
 
-		return null;
-	};
+        return null;
+    };
 }
 /**
  * Method of testing whether or not a DOM element matches a given selector. 
@@ -3917,17 +3920,17 @@ if (typeof Element.prototype.closest !== 'function') {
  */
 
 if (typeof Element.prototype.matches !== 'function') {
-	Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.webkitMatchesSelector || function matches(selector) {
-		var element = this,
-			elements = (element.document || element.ownerDocument).querySelectorAll(selector),
-			index = 0;
+    Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.webkitMatchesSelector || function matches(selector) {
+        var element = this,
+            elements = (element.document || element.ownerDocument).querySelectorAll(selector),
+            index = 0;
 
-		while (elements[index] && elements[index] !== element) {
-			++index;
-		}
+        while (elements[index] && elements[index] !== element) {
+            ++index;
+        }
 
-		return Boolean(elements[index]);
-	};
+        return Boolean(elements[index]);
+    };
 }
 /*doc
 ---
@@ -3939,140 +3942,132 @@ category: Javascript
 */
 
 var app = app || {},
-	helper = helper || {};
+    helper = helper || {};
 
 app.settings = {
-	// Nodes
-	html: document.querySelector('html'),
-	body: document.body,
-	container: document.getElementById('container'),
+    // Nodes
+    html: document.querySelector('html'),
+    body: document.body,
+    container: document.getElementById('container'),
 
-	// jQuery objects
-	$document: $(document),
-	$window: $(window),
-	$html: $('html'),
-	$body: $('body'),
-	$htmlAndBody: $('html, body'),
-	$background: $('#background'),
-	$container: $('#container'),
-	$main: $('#main'),
+    // jQuery objects
+    $document: $(document),
+    $window: $(window),
+    $html: $('html'),
+    $body: $('body'),
+    $htmlAndBody: $('html, body'),
+    $background: $('#background'),
+    $container: $('#container'),
+    $main: $('#main'),
 
-	// Misc.
-	windowHeight: $(window).height(),
-	windowWidth: $(window).width(),
+    // Misc.
+    windowHeight: $(window).height(),
+    windowWidth: $(window).width()
 };
 
 app.mediaQueries = {
-	alphaAndUp: '(min-width: 0px)',
-	alphaAndBeta: '(max-width: 699px)',
-	alpha: '(max-width: 599px)',
-	betaAndUp: '(min-width: 600px)',
-	beta: '(min-width: 600px) and (max-width: 767px)',
-	gammaAndUp: '(min-width: 768px)',
-	gamma: '(min-width: 768px) and (max-width: 799px)',
-	deltaAndUp: '(min-width: 800px)',
-	delta: '(min-width: 800px) and (max-width: 999px)',
-	epsilonAndUp: '(min-width: 1000px)',
-	epsilon: '(min-width: 1000px) and (max-width: 1199px)',
-	zetaAndUp: '(min-width: 1200px)',
-	zeta: '(min-width: 1200px) and (max-width: 1399px)',
-	etaAndUp: '(min-width: 1400px)'
+    alphaAndUp: '(min-width: 0px)',
+    alphaAndBeta: '(max-width: 699px)',
+    alpha: '(max-width: 599px)',
+    betaAndUp: '(min-width: 600px)',
+    beta: '(min-width: 600px) and (max-width: 767px)',
+    gammaAndUp: '(min-width: 768px)',
+    gamma: '(min-width: 768px) and (max-width: 799px)',
+    deltaAndUp: '(min-width: 800px)',
+    delta: '(min-width: 800px) and (max-width: 999px)',
+    epsilonAndUp: '(min-width: 1000px)',
+    epsilon: '(min-width: 1000px) and (max-width: 1199px)',
+    zetaAndUp: '(min-width: 1200px)',
+    zeta: '(min-width: 1200px) and (max-width: 1399px)',
+    etaAndUp: '(min-width: 1400px)'
 };
 helper.cookies = {
-	create: function(name, value, days) {
-		var expires = "";
+    create: function create(name, value, days) {
+        var expires = "";
 
-		if (days) {
-			var date = new Date();
+        if (days) {
+            var date = new Date();
 
-			date.setTime(date.getTime()+(days*24*60*60*1000));
-			expires = "; expires="+date.toGMTString();
-		}
+            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+            expires = "; expires=" + date.toGMTString();
+        }
 
-		document.cookie = name + "=" + value + expires + "; path=/";
-	},
+        document.cookie = name + "=" + value + expires + "; path=/";
+    },
 
-	read: function(name) {
-		var nameEQ = name + "=",
-			ca = document.cookie.split(';');
+    read: function read(name) {
+        var nameEQ = name + "=",
+            ca = document.cookie.split(';');
 
-		for(var i=0;i < ca.length;i++) {
-			var c = ca[i];
+        for (var i = 0; i < ca.length; i++) {
+            var c = ca[i];
 
-			while (c.charAt(0) === ' ') {
-				c = c.substring(1,c.length);
-			}
+            while (c.charAt(0) === ' ') {
+                c = c.substring(1, c.length);
+            }
 
-			if (c.indexOf(nameEQ) === 0) {
-				return c.substring(nameEQ.length,c.length);
-			}
-		}
+            if (c.indexOf(nameEQ) === 0) {
+                return c.substring(nameEQ.length, c.length);
+            }
+        }
 
-		return null;
-	},
+        return null;
+    },
 
-	erase: function(name) {
-		helper.cookies.create(name,"",-1);
-	}
+    erase: function erase(name) {
+        helper.cookies.create(name, "", -1);
+    }
 };
 /**
  * Get coordinates relative to the document,
  * Just like jQuery's offset functiom.
  */
 
-helper.getCoords = function(el) {
-	var box = el.getBoundingClientRect();
+helper.getCoords = function (el) {
+    var box = el.getBoundingClientRect();
 
-	var body = document.body;
-	var docEl = document.documentElement;
+    var body = document.body;
+    var docEl = document.documentElement;
 
-	var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
-	var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+    var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+    var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
 
-	var clientTop = docEl.clientTop || body.clientTop || 0;
-	var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+    var clientTop = docEl.clientTop || body.clientTop || 0;
+    var clientLeft = docEl.clientLeft || body.clientLeft || 0;
 
-	var top  = box.top +  scrollTop - clientTop;
-	var left = box.left + scrollLeft - clientLeft;
+    var top = box.top + scrollTop - clientTop;
+    var left = box.left + scrollLeft - clientLeft;
 
-	return { 
-		top: Math.round(top), 
-		left: Math.round(left) };
+    return {
+        top: Math.round(top),
+        left: Math.round(left) };
 };
-helper.inView = function(el) {
-	if (el instanceof jQuery) {
-		el = el[0];
-	}
+helper.inView = function (el) {
+    if (el instanceof jQuery) {
+        el = el[0];
+    }
 
-	var rect = el.getBoundingClientRect();
+    var rect = el.getBoundingClientRect();
 
-	return (
-		rect.top >= 0 &&
-		rect.bottom <= document.body.clientHeight
-	);
+    return rect.top >= 0 && rect.bottom <= document.body.clientHeight;
 };
-helper.outView = function(el) {
-	if (el instanceof jQuery) {
-		el = el[0];
-	}
+helper.outView = function (el) {
+    if (el instanceof jQuery) {
+        el = el[0];
+    }
 
-	var rect = el.getBoundingClientRect();
+    var rect = el.getBoundingClientRect();
 
-	return (
-		rect.bottom < 0 ||
-		rect.top > document.body.clientHeight
-	);
+    return rect.bottom < 0 || rect.top > document.body.clientHeight;
 };
-helper.partiallyInView = function(el) {
-	if (el instanceof jQuery) {
-		el = el[0];
-	}
+helper.partiallyInView = function (el) {
+    if (el instanceof jQuery) {
+        el = el[0];
+    }
 
-	var rect = el.getBoundingClientRect();
+    var rect = el.getBoundingClientRect();
 
-	return (
-		rect.bottom - (rect.height/2) <= document.body.clientHeight
-	);
+    return rect.bottom - rect.height / 2 <= document.body.clientHeight;
 };
 app.accordion = {
     settings: {
@@ -4082,18 +4077,18 @@ app.accordion = {
         contentShowClass: 'accordion-content-show'
     },
 
-    init: function () {
+    init: function init() {
         if (app.accordion.settings.el.length > 0) {
             app.accordion.setGroupHeight();
             app.accordion.toggler();
-            
-            window.onresize = function() {
+
+            window.onresize = function () {
                 app.accordion.setGroupHeight();
             };
         }
     },
 
-    setGroupHeight: function () {
+    setGroupHeight: function setGroupHeight() {
         app.accordion.settings.group.forEach(function (group) {
             var groupContent = group.querySelector('.accordion__content');
 
@@ -4106,7 +4101,7 @@ app.accordion = {
         });
     },
 
-    toggler: function () {
+    toggler: function toggler() {
         app.accordion.settings.trigger.forEach(function (trigger) {
             trigger.addEventListener('click', function () {
                 var group = trigger.parentNode,
@@ -4122,23 +4117,23 @@ app.accordion = {
         });
     },
 
-    showGroup: function (trigger, content) {
+    showGroup: function showGroup(trigger, content) {
         content.style.maxHeight = trigger.nextElementSibling.getAttribute('data-accordion-content-height') + 'px';
         content.parentNode.classList.add(app.accordion.settings.contentShowClass);
     },
 
-    hideGroup: function (trigger) {
+    hideGroup: function hideGroup(trigger) {
         var shownItem = document.querySelector('.accordion-content-show'),
             content = document.querySelectorAll('.accordion__content');
 
-        if (shownItem === null)  {
+        if (shownItem === null) {
             trigger.classList.add(app.accordion.settings.contentShowClass);
         } else {
             shownItem.classList.remove(app.accordion.settings.contentShowClass);
         }
 
         content.forEach(function (content) {
-            content.style.maxHeight = 0;
+            return content.style.maxHeight = 0;
         });
     }
 };
@@ -4148,7 +4143,7 @@ app.affix = {
         navBar: document.getElementById('nav-bar')
     },
 
-    init: function (_scrollTop) {
+    init: function init(_scrollTop) {
         if (app.affix.settings.el.length > 0) {
             app.affix.resizeWidth();
             app.affix.updateOffsetTop(_scrollTop);
@@ -4169,27 +4164,27 @@ app.affix = {
         }
     },
 
-    scroller: function (_scrollTop, _el) {
+    scroller: function scroller(_scrollTop, _el) {
         var container = _el.closest('.affix-container'),
             affixOffsetTop = _el.getAttribute('data-affix-offset'),
-            bottomTrigger = ((helper.getCoords(container).top + container.offsetHeight) - _el.offsetHeight);
+            bottomTrigger = helper.getCoords(container).top + container.offsetHeight - _el.offsetHeight;
 
         if (app.navBar.settings.el && app.navBar.settings.el.classList.contains('nav-bar--fixed')) {
-            bottomTrigger = (bottomTrigger - app.navBar.settings.navBarHeight);
+            bottomTrigger = bottomTrigger - app.navBar.settings.navBarHeight;
         }
 
         // Make it stick
         if (_scrollTop >= affixOffsetTop && _scrollTop < bottomTrigger && _el.offsetHeight < container.offsetHeight) {
             _el.classList.add('affix--fixed');
             _el.classList.remove('affix--absolute');
-             app.navBar.settings.el.classList.contains('nav-bar--fixed') ? _el.style.top = app.affix.settings.navBar.offsetHeight : _el.style.top = 0;
+            app.navBar.settings.el.classList.contains('nav-bar--fixed') ? _el.style.top = app.affix.settings.navBar.offsetHeight : _el.style.top = 0;
 
-        // At the bottom so bottom align it
+            // At the bottom so bottom align it
         } else if (_scrollTop >= bottomTrigger && _el.offsetHeight < container.offsetHeight) {
             _el.classList.remove('affix--fixed');
             _el.classList.add('affix--absolute');
 
-        // Relative positioning
+            // Relative positioning
         } else {
             _el.classList.remove('affix--fixed');
             _el.classList.remove('affix--absolute');
@@ -4197,14 +4192,14 @@ app.affix = {
         }
     },
 
-    updateOffsetTop: function (_scrollTop) {
+    updateOffsetTop: function updateOffsetTop(_scrollTop) {
         app.affix.settings.el.forEach(function (affix) {
             var affixHeight = affix.offsetHeight,
                 offsetTop = affix.getBoundingClientRect().top;
 
             if (affixHeight < app.settings.windowHeight) {
                 if (app.navBar.settings.el && app.navBar.settings.el.classList.contains('nav-bar--fixed')) {
-                    offsetTop = (offsetTop - app.affix.settings.navBar.outerHeight);
+                    offsetTop = offsetTop - app.affix.settings.navBar.outerHeight;
                 }
 
                 affix.setAttribute('data-affix-offset', Math.round(offsetTop));
@@ -4213,7 +4208,7 @@ app.affix = {
         });
     },
 
-    resizeWidth: function () {
+    resizeWidth: function resizeWidth() {
         app.affix.settings.el.forEach(function (affix) {
             affix.classList.remove('affix--fixed');
             affix.classList.remove('affix--absolute');
@@ -4224,7 +4219,7 @@ app.affix = {
     }
 };
 app.btnDropdown = {
-    init: function() {
+    init: function init() {
 
         // Dropdown toggler
         document.querySelectorAll('[data-btn-dropdown-toggle]').forEach(function (toggle) {
@@ -4267,7 +4262,7 @@ app.btnDropdown = {
         });
     },
 
-    closeOpenDropdown: function () {
+    closeOpenDropdown: function closeOpenDropdown() {
         document.querySelectorAll('.btn-dropdown--open').forEach(function (openDropdown) {
             openDropdown.classList.remove('btn-dropdown--open');
         });
@@ -4279,14 +4274,14 @@ app.btnRipple = {
         ripple: true
     },
 
-    init: function() {
-        btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple');
+    init: function init() {
+        var btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple');
 
         btns.forEach(function (btn) {
             btn.addEventListener('click', function (event) {
                 var ripple = this.querySelector('.btn__ripple');
-                
-                if(ripple === null) {
+
+                if (ripple === null) {
                     ripple = app.btnRipple.appendRipple(btn);
                 }
 
@@ -4306,7 +4301,7 @@ app.btnRipple = {
         });
     },
 
-    appendRipple: function (btn) {
+    appendRipple: function appendRipple(btn) {
         var ripple = document.createElement('div');
 
         ripple.classList.add('btn__ripple');
@@ -4326,34 +4321,30 @@ app.cycle = {
         pagerActiveClass: 'cycle__pager--active'
     },
 
-    init: function(){
-        if(app.cycle.settings.$el.length > 0){
-            app.cycle.settings.$el
-                .cycle({
-                    slides           : app.cycle.settings.slides,
-                    pager            : app.cycle.settings.pager,
-                    prev             : app.cycle.settings.prev,
-                    next             : app.cycle.settings.next,
-                    pagerActiveClass : app.cycle.settings.pagerActiveClass,
-                    pauseOnHover     : true,
-                    swipe            : true,
-                    log              : false,
-                    paused           : true,
-                    fx               : 'none'
-                })
-                .on('cycle-update-view', function (event, optionHash, slideOptionsHash, currentSlideEl) {
-                    if (optionHash.slideCount > 1) {
-                        $(this).addClass('cycle-active');
-                    }
-                })
-                .on('cycle-before', function () {
-                    // $('.thumbnail-grid__item').each(function () {
-                    //     $(this).removeClass('scrollspy--in-view').removeClass('animation-fadeIn');
-                    // });
-                })
-                .on('cycle-after', function () {
-                    // app.scrollSpy.init();
-                });
+    init: function init() {
+        if (app.cycle.settings.$el.length > 0) {
+            app.cycle.settings.$el.cycle({
+                slides: app.cycle.settings.slides,
+                pager: app.cycle.settings.pager,
+                prev: app.cycle.settings.prev,
+                next: app.cycle.settings.next,
+                pagerActiveClass: app.cycle.settings.pagerActiveClass,
+                pauseOnHover: true,
+                swipe: true,
+                log: false,
+                paused: true,
+                fx: 'none'
+            }).on('cycle-update-view', function (event, optionHash, slideOptionsHash, currentSlideEl) {
+                if (optionHash.slideCount > 1) {
+                    $(this).addClass('cycle-active');
+                }
+            }).on('cycle-before', function () {
+                // $('.thumbnail-grid__item').each(function () {
+                //     $(this).removeClass('scrollspy--in-view').removeClass('animation-fadeIn');
+                // });
+            }).on('cycle-after', function () {
+                // app.scrollSpy.init();
+            });
         }
     }
 };
@@ -4362,7 +4353,7 @@ app.delayedImageLoading = {
         el: '[data-delay-image-loading]'
     },
 
-    init: function() {
+    init: function init() {
         if (document.documentElement.classList.contains('modernizr_template') && document.querySelector(app.delayedImageLoading.settings.el) !== null) {
             var template = document.querySelector(app.delayedImageLoading.settings.el),
                 parent = template.parentNode,
@@ -4400,14 +4391,14 @@ Idea is kindly borrowed from [Christian Heilmann](https://www.christianheilmann.
 app.disableHover = {
     timer: null,
 
-    init: function(){
+    init: function init() {
         clearTimeout(app.disableHover.timer);
 
-        if(!document.body.classList.contains('disable-hover')) {
+        if (!document.body.classList.contains('disable-hover')) {
             document.body.classList.add('disable-hover');
         }
 
-        app.disableHover.timer = setTimeout(function(){
+        app.disableHover.timer = setTimeout(function () {
             document.body.classList.remove('disable-hover');
         }, 100);
     }
@@ -4430,15 +4421,9 @@ app.dropdowns = {
         showClass: 'dropdown--show'
     },
 
-    init: function () {
+    init: function init() {
         app.dropdowns.settings.el.forEach(function (dropdown) {
-            dropdown.addEventListener('click', function (event) {
-                event.stopPropagation();
-
-                if (document.documentElement.classList.contains('modernizr_touchevents') || this.getAttribute('data-dropdown-trigger')) {
-                    this.classList.toggle(app.dropdowns.settings.showClass);
-                }
-            });
+            return app.dropdowns.clickEvent(dropdown);
         });
 
         document.body.onkeydown = function (event) {
@@ -4452,7 +4437,17 @@ app.dropdowns = {
         };
     },
 
-    closeAllDropdowns: function () {
+    clickEvent: function clickEvent(dropdown) {
+        dropdown.addEventListener('click', function (event) {
+            event.stopPropagation();
+
+            if (document.documentElement.classList.contains('modernizr_touchevents') || this.getAttribute('data-dropdown-trigger')) {
+                this.classList.toggle(app.dropdowns.settings.showClass);
+            }
+        });
+    },
+
+    closeAllDropdowns: function closeAllDropdowns() {
         document.querySelectorAll('.dropdown').forEach(function (dropdown) {
             dropdown.classList.remove('dropdown--show');
         });
@@ -4463,7 +4458,7 @@ app.equalize = {
         el: document.querySelectorAll('[data-equalize]')
     },
 
-    init: function(){
+    init: function init() {
         if (app.equalize.settings.el !== null) {
             app.equalize.settings.el.forEach(function (equalize) {
                 var currentHeight = 0,
@@ -4483,11 +4478,11 @@ app.equalize = {
                     });
 
                     targets.forEach(function (target) {
-                        target.style.height = currentHeight + 'px';
+                        return target.style.height = currentHeight + 'px';
                     });
                 } else {
                     targets.forEach(function (target) {
-                        target.style.height = 'auto';
+                        return target.style.height = 'auto';
                     });
                 }
             });
@@ -4548,7 +4543,7 @@ You can also set a media query from where the equalizer has to kick in, like thi
 
 */
 app.fastClick = {
-    init: function(){
+    init: function init() {
         FastClick.attach(document.body);
     }
 };
@@ -4568,7 +4563,7 @@ app.fitVids = {
         $el: $('.fitvids')
     },
 
-    init: function(){
+    init: function init() {
         if (app.fitVids.settings.$el.length > 0) {
             app.fitVids.settings.$el.fitVids();
         }
@@ -4595,7 +4590,7 @@ app.formModules = {
         $range: $('input[type=range]')
     },
 
-    init: function () {
+    init: function init() {
         app.formModules.range();
         app.formModules.customFileInput();
         app.formModules.validation();
@@ -4604,7 +4599,7 @@ app.formModules = {
         app.formModules.floatingLabel();
     },
 
-    range: function () {
+    range: function range() {
         if (!Modernizr.inputtypes.range) {
             app.formModules.settings.$range.rangeslider();
         }
@@ -4614,7 +4609,7 @@ app.formModules = {
                 data = $this.data(),
                 id = $this.attr('id'),
                 val = $this.val(),
-                $range = $('[data-range=' + id +']');
+                $range = $('[data-range=' + id + ']');
 
             if (id !== undefined) {
                 data.rangeMeasurement === undefined ? $range.html(val) : $range.html(val + data.rangeMeasurement);
@@ -4622,79 +4617,79 @@ app.formModules = {
         });
     },
 
-    customFileInput: function () {
-        $('.form__file-input').each( function() {
-            var $input = $( this ),
+    customFileInput: function customFileInput() {
+        $('.form__file-input').each(function () {
+            var $input = $(this),
                 $label = $input.next('label'),
                 labelVal = $label.html();
 
-            $input.on('change', function( e ) {
+            $input.on('change', function (e) {
                 var fileName = '';
 
-                if( this.files && this.files.length > 1 ) {
-                    fileName = ( this.getAttribute('data-multiple-caption' ) || '').replace('{count}', this.files.length );
-                }
-                else if( e.target.value ) {
-                    fileName = e.target.value.split( '\\' ).pop();
+                if (this.files && this.files.length > 1) {
+                    fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+                } else if (e.target.value) {
+                    fileName = e.target.value.split('\\').pop();
                 }
 
-                if( fileName ) {
-                    $label.find('span').html( fileName );
-                }
-                else {
-                    $label.html( labelVal );
+                if (fileName) {
+                    $label.find('span').html(fileName);
+                } else {
+                    $label.html(labelVal);
                 }
             });
 
             // Firefox bug fix
-            $input
-                .on('focus', function(){ $input.addClass('has-focus'); })
-                .on('blur', function(){ $input.removeClass('has-focus'); });
+            $input.on('focus', function () {
+                $input.addClass('has-focus');
+            }).on('blur', function () {
+                $input.removeClass('has-focus');
+            });
         });
     },
 
-    password: function () {
+    password: function password() {
         app.formModules.settings.$passwordToggle.on('click', function () {
             var $this = $(this),
                 $formPassword = $this.closest('.form__input'),
                 $formInput = $formPassword.find('input'),
                 formType = $formInput.attr('type');
 
-            $formInput.attr('type', formType === 'text' ? 'password': 'text');
+            $formInput.attr('type', formType === 'text' ? 'password' : 'text');
             $formPassword.toggleClass(app.formModules.settings.passwordShowClass);
         });
     },
 
-    validation: function(){
+    validation: function validation() {
         var parsleyOptions = {
-                errorClass: 'form__input--error',
-                successClass: 'form__input--success',
-                errorsWrapper: '<div class="parsley-container"></div>',
-                errorTemplate: '<div></div>',
-                trigger: 'change',
+            errorClass: 'form__input--error',
+            successClass: 'form__input--success',
+            errorsWrapper: '<div class="parsley-container"></div>',
+            errorTemplate: '<div></div>',
+            trigger: 'change',
 
-                classHandler: function (element){
-                    var $element = element.$element[0];
+            classHandler: function classHandler(element) {
+                var $element = element.$element[0];
 
-                    if ($element.localName === 'select') {
-                        element.$element.closest('.form__input').addClass('form__input--select-validated');
-                    }
-
-                    if ($element.localName === 'input' && $element.type === 'checkbox' || $element.localName === 'input' && $element.type === 'radio') {
-                        return element.$element.closest('.form__input-list');
-                    } else {
-                        return element.$element.closest('.form__input');
-                    }
-                },
-
-                errorsContainer: function (element) {
-                    var $container = element.$element.closest('.form__input');
-
-                    return $container;
+                if ($element.localName === 'select') {
+                    element.$element.closest('.form__input').addClass('form__input--select-validated');
                 }
-            };
 
-        if(app.formModules.settings.$validation.length > 0) {
+                if ($element.localName === 'input' && $element.type === 'checkbox' || $element.localName === 'input' && $element.type === 'radio') {
+                    return element.$element.closest('.form__input-list');
+                } else {
+                    return element.$element.closest('.form__input');
+                }
+            },
+
+            errorsContainer: function errorsContainer(element) {
+                var $container = element.$element.closest('.form__input');
+
+                return $container;
+            }
+        };
+
+        if (app.formModules.settings.$validation.length > 0) {
             app.formModules.settings.$validation.each(function () {
                 $(this).parsley(parsleyOptions);
             });
@@ -4703,7 +4698,7 @@ app.formModules = {
         }
     },
 
-    ajaxForm: function () {
+    ajaxForm: function ajaxForm() {
         app.settings.$body.on('submit', '[data-form-ajax]', function (event) {
             var $form = $(this),
                 action = $form.attr('action'),
@@ -4721,7 +4716,7 @@ app.formModules = {
                     action: action,
                     method: data.formAjaxMethod,
                     dataType: data.formAjaxDatatype,
-                    success: function (response) {
+                    success: function success(response) {
 
                         switch (response.status) {
                             case 200:
@@ -4740,12 +4735,12 @@ app.formModules = {
         });
     },
 
-    emptyForm: function (_form) {
+    emptyForm: function emptyForm(_form) {
         _form.find('input[type=text], input[type=password], textarea, select').val('');
         _form.find('input[type=radio], input[type=checkbox]').prop('checked', false);
     },
 
-    floatingLabel: function () {
+    floatingLabel: function floatingLabel() {
         app.formModules.floatingLabelSetClass($('.form__input--floating-label input'));
 
         app.settings.$body.on('change', '.form__input--floating-label input', function () {
@@ -4753,7 +4748,7 @@ app.formModules = {
         });
     },
 
-    floatingLabelSetClass: function ($input) {
+    floatingLabelSetClass: function floatingLabelSetClass($input) {
         if ($input.length > 0) {
             $input.val().length > 0 ? $input.addClass('is-filled') : $input.removeClass('is-filled');
         }
@@ -4769,21 +4764,18 @@ app.googleMaps = {
         centerLon: 5.784693
     },
 
-    markerData: [
-        {
-            'lat': '53.199027',
-            'lng': '5.784693',
-            'content': '<b>Company HQ</b><br />Some address 23<br />1234 AB Leeuwarden'
-        },
-        {
-            'lat': '53.199810',
-            'lng': '5.774750',
-            'content': '<b>Company</b><br />Some address 1<br />1234 AB Leeuwarden'
-        }
-    ],
+    markerData: [{
+        'lat': '53.199027',
+        'lng': '5.784693',
+        'content': '<b>Company HQ</b><br />Some address 23<br />1234 AB Leeuwarden'
+    }, {
+        'lat': '53.199810',
+        'lng': '5.774750',
+        'content': '<b>Company</b><br />Some address 1<br />1234 AB Leeuwarden'
+    }],
 
-    init: function() {
-        if(app.googleMaps.settings.$el.length > 0){
+    init: function init() {
+        if (app.googleMaps.settings.$el.length > 0) {
             var script = document.createElement('script');
 
             script.type = 'text/javascript';
@@ -4792,7 +4784,7 @@ app.googleMaps = {
         }
     },
 
-    map: function () {
+    map: function map() {
         var mapOptions = {
             zoom: 16,
             center: new google.maps.LatLng(app.googleMaps.settings.centerLat, app.googleMaps.settings.centerLon),
@@ -4805,7 +4797,7 @@ app.googleMaps = {
             panControl: false,
 
             // Styles from https://snazzymaps.com
-            styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#81a2be"},{"visibility":"on"}]}]
+            styles: [{ "featureType": "administrative", "elementType": "labels.text.fill", "stylers": [{ "color": "#444444" }] }, { "featureType": "landscape", "elementType": "all", "stylers": [{ "color": "#f2f2f2" }] }, { "featureType": "poi", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "all", "stylers": [{ "saturation": -100 }, { "lightness": 45 }] }, { "featureType": "road.highway", "elementType": "all", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "road.arterial", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "color": "#81a2be" }, { "visibility": "on" }] }]
         };
 
         if (app.settings.$html.hasClass('touch')) {
@@ -4822,12 +4814,12 @@ app.googleMaps = {
 
         app.googleMaps.setMarkers(app.googleMaps.settings.map);
 
-        google.maps.event.addListener(app.googleMaps.settings.map, 'click', function() {
+        google.maps.event.addListener(app.googleMaps.settings.map, 'click', function () {
             app.googleMaps.settings.markers[app.googleMaps.settings.openInfoWindow].infowindow.close();
         });
     },
 
-    setMarkers: function (map, marker) {
+    setMarkers: function setMarkers(map, marker) {
         var bounds = new google.maps.LatLngBounds();
         // var markerIcon = new google.maps.MarkerImage("/res/assets/dist/img/maps-pointer.png", new google.maps.Size(12, 12), new google.maps.Point(0, 0), new google.maps.Point(6, 6));
 
@@ -4841,14 +4833,14 @@ app.googleMaps = {
                 position: latLng,
                 // icon: markerIcon,
                 map: map,
-                title: data.title,
+                title: data.title
             });
 
             marker.infowindow = new google.maps.InfoWindow({
                 content: data.content
             });
 
-            marker.addListener('click', function() {
+            marker.addListener('click', function () {
                 if (app.googleMaps.settings.openInfoWindow) {
                     app.googleMaps.settings.markers[app.googleMaps.settings.openInfoWindow].infowindow.close();
                 }
@@ -4863,39 +4855,50 @@ app.googleMaps = {
 
 };
 app.groupCheckable = {
-    init: function () {
+    init: function init() {
+
+        // Master checkbox
+        var checkableDelegate = function checkableDelegate(checkable) {
+            return app.groupCheckable.toggleGroup(checkable);
+        };
+
         document.querySelectorAll('[data-group-checkable').forEach(function (checkable) {
-            app.groupCheckable.toggleGroup(checkable);
+            checkableDelegate(checkable);
 
             checkable.addEventListener('change', function () {
-                app.groupCheckable.toggleGroup(checkable);
+                return checkableDelegate(checkable);
             });
         });
 
-        document.querySelectorAll('[data-group-checkable-target]').forEach(function (target) {
-            target.addEventListener('change', function () {
-                var group = target.getAttribute('data-group-checkable-target'),
-                    targets = document.querySelectorAll('[data-group-checkable-target=' + group + ']'),
-                    trigger = document.querySelector('[data-group-checkable=' + group + ']'),
-                    checked = 0;
+        // Target checkboxes
+        var delegateCheckedCount = function delegateCheckedCount(target) {
+            return target.checked;
+        },
+            delegateGroupCheckable = function delegateGroupCheckable(target) {
+            var group = target.getAttribute('data-group-checkable-target'),
+                targets = [].slice.call(document.querySelectorAll('[data-group-checkable-target=' + group + ']')),
+                trigger = document.querySelector('[data-group-checkable=' + group + ']'),
+                checkedCount = targets.filter(delegateCheckedCount).length;
 
-                targets.forEach(function (target) {
-                    if (target.checked === true) {
-                        checked = checked+1;
-                    }
-                });
-
-                targets.length === checked ? trigger.checked = 'checked' : trigger.checked = '';
+            trigger.checked = targets.length === checkedCount ? 'checked' : '';
+        },
+            checkableEventHandler = function checkableEventHandler(target) {
+            target.addEventListener('change', function (event) {
+                return delegateGroupCheckable(target);
             });
-        });
+        };
+
+        document.querySelectorAll('[data-group-checkable-target]').forEach(checkableEventHandler);
     },
 
-    toggleGroup: function (checkable) {
-        var group = document.querySelectorAll('[data-group-checkable-target=' + checkable.getAttribute('data-group-checkable') + ']');
+    toggleGroup: function toggleGroup(checkable) {
+        var group = document.querySelectorAll('[data-group-checkable-target=' + checkable.getAttribute('data-group-checkable') + ']'),
+            delegateGroup = function delegateGroup(checkbox) {
+            return checkbox.checked = checkable.checked === true ? 'checked' : '';
+        };
 
-        group.forEach(function (checkbox) {
-            checkable.checked ? checkbox.checked = 'checked' : checkbox.checked = '';
-        });
+        // Check or uncheck boxes based on the checked state of the group checkbox.
+        group.forEach(delegateGroup);
     }
 };
 
@@ -4909,9 +4912,9 @@ category: Javascript
 ```html_example
 <input name="checkbox" type="checkbox" id="checkbox" data-group-checkable="checkable-example" /><label for="checkbox">Check all</label>
 <ul class="form__input-list list-unstyled">
-    <li><input name="checkbox" type="checkbox" id="checkbox1" data-group-checkable-target="checkable-example" /><label for="checkbox1">Checkbox</label></li>
-    <li><input name="checkbox" type="checkbox" id="checkbox2" data-group-checkable-target="checkable-example" /><label for="checkbox2">Checkbox</label></li>
-    <li><input name="checkbox" type="checkbox" id="checkbox3" data-group-checkable-target="checkable-example" /><label for="checkbox3">Checkbox</label></li>
+	<li><input name="checkbox" type="checkbox" id="checkbox1" data-group-checkable-target="checkable-example" /><label for="checkbox1">Checkbox</label></li>
+	<li><input name="checkbox" type="checkbox" id="checkbox2" data-group-checkable-target="checkable-example" /><label for="checkbox2">Checkbox</label></li>
+	<li><input name="checkbox" type="checkbox" id="checkbox3" data-group-checkable-target="checkable-example" /><label for="checkbox3">Checkbox</label></li>
 </ul>
 ```
 
@@ -4921,7 +4924,7 @@ app.jump = {
         speed: 300
     },
 
-    init: function () {
+    init: function init() {
         document.querySelectorAll('[data-jumpto]').forEach(function (jumper) {
             jumper.addEventListener('click', function () {
                 var extraOffset = 0;
@@ -4941,7 +4944,7 @@ app.jump = {
         });
     },
 
-    to: function (_target, _extraOffset, _speed) {
+    to: function to(_target, _extraOffset, _speed) {
         var offsetTop = Math.round(helper.getCoords(document.querySelector(_target)).top);
 
         _extraOffset === undefined ? 0 : '';
@@ -4952,7 +4955,7 @@ app.jump = {
             offsetTop = offsetTop + _extraOffset;
         }
 
-        app.settings.$htmlAndBody.animate({scrollTop: offsetTop}, _speed, function () {
+        app.settings.$htmlAndBody.animate({ scrollTop: offsetTop }, _speed, function () {
             window.location.hash = _target;
         });
     }
@@ -4971,7 +4974,7 @@ category: Javascript
 
 */
 app.leave = {
-    init: function () {
+    init: function init() {
         document.querySelectorAll('[type=submit]').forEach(function (el) {
             el.addEventListener('click', function () {
                 app.leave.inActive();
@@ -4989,17 +4992,17 @@ app.leave = {
         });
     },
 
-    active: function (_message) {
+    active: function active(_message) {
         if (_message === undefined) {
             _message = 'You didn\'t save your changes.';
         }
 
-        window.onbeforeunload = function() {
+        window.onbeforeunload = function () {
             return _message;
         };
     },
 
-    inActive: function () {
+    inActive: function inActive() {
         window.onbeforeunload = undefined;
     }
 };
@@ -5034,12 +5037,12 @@ app.modal = {
         $modal: $('.modal')
     },
 
-    init: function () {
+    init: function init() {
         app.settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
         app.modal.triggers();
     },
 
-    triggers: function () {
+    triggers: function triggers() {
         app.settings.$body.on('click', '.modal__trigger', function (event) {
             event.preventDefault();
 
@@ -5049,19 +5052,19 @@ app.modal = {
             data.modal === 'ajax' ? app.modal.ajax(data.modalAjaxActivity, data.modalAjaxSection) : app.modal.open($trigger, data);
         });
 
-        app.settings.$body.on('keydown', function(event){
+        app.settings.$body.on('keydown', function (event) {
             if (event.keyCode === 27) {
                 app.modal.close();
             }
         });
 
-        app.settings.$body.on('click', '[data-modal-close]', function(event) {
+        app.settings.$body.on('click', '[data-modal-close]', function (event) {
             event.preventDefault();
             app.modal.close();
         });
     },
 
-    create: function (_triggerData, _targetModal) {
+    create: function create(_triggerData, _targetModal) {
         var html = '<div id="' + _triggerData.modalId + '" class="modal"><div class="modal__content">';
 
         if (_triggerData.modal === 'ajax') {
@@ -5069,7 +5072,7 @@ app.modal = {
             html += '<a class="modal__close" data-modal-close></a>';
         } else {
             if (_triggerData.modalTitle !== undefined) {
-                html +='<h2>' + _triggerData.modalTitle + '</h2>';
+                html += '<h2>' + _triggerData.modalTitle + '</h2>';
             }
 
             if (_triggerData.modalText !== undefined) {
@@ -5080,7 +5083,7 @@ app.modal = {
 
             if (_triggerData.modalCloseBtn !== undefined) {
                 if (_triggerData.modal === 'confirm') {
-                    if ( typeof _triggerData.modalConfirmAction === "function") {
+                    if (typeof _triggerData.modalConfirmAction === "function") {
                         html += '<li><a class="btn btn--beta btn--medium confirm-ok" href="javascript:void(0)" data-modal-close>' + _triggerData.modalConfirmBtn + '</a></li>';
                     } else {
                         html += '<li><a class="btn btn--beta btn--medium" href="' + _triggerData.modalConfirmAction + '">' + _triggerData.modalConfirmBtn + '</a></li>';
@@ -5098,14 +5101,14 @@ app.modal = {
 
         app.settings.$body.append(html);
 
-        if ( app.settings.$html.find('.confirm-ok').length ) {
+        if (app.settings.$html.find('.confirm-ok').length) {
             app.settings.$body.find('#' + _triggerData.modalId + ' .confirm-ok').click(_triggerData.modalConfirmAction);
         }
     },
 
-    open: function (_trigger, _triggerData) {
+    open: function open(_trigger, _triggerData) {
         var scrollTopPosition = app.settings.$window.scrollTop(),
-            $targetModal = (typeof _triggerData === 'string') ? $('#' + _triggerData) : $('#' + _triggerData.modalId);
+            $targetModal = typeof _triggerData === 'string' ? $('#' + _triggerData) : $('#' + _triggerData.modalId);
 
         app.modal.settings.scrollTopPosition = scrollTopPosition;
 
@@ -5120,7 +5123,7 @@ app.modal = {
         }
     },
 
-    show: function (_targetModal, _scrollTopPosition, _modalOpenCallback) {
+    show: function show(_targetModal, _scrollTopPosition, _modalOpenCallback) {
         app.settings.$html.addClass('modal-show');
         _targetModal.addClass('modal-show');
 
@@ -5132,20 +5135,20 @@ app.modal = {
         }
     },
 
-    close: function () {
+    close: function close() {
         $('.modal-show').removeClass('modal-show');
 
         //app.settings.$window.scrollTop(app.modal.settings.scrollTopPosition);
     },
 
-    confirm: function (_options) {
+    confirm: function confirm(_options) {
         var modalId = 'js-modal-confirm',
             options = $.extend({
-                            modal: 'confirm',
-                            modalId: modalId,
-                            modalConfirmBtn: 'bevestigen',
-                            modalCloseBtn: 'annuleren',
-                        }, _options);
+            modal: 'confirm',
+            modalId: modalId,
+            modalConfirmBtn: 'bevestigen',
+            modalCloseBtn: 'annuleren'
+        }, _options);
 
         $('#' + modalId).remove();
 
@@ -5155,7 +5158,7 @@ app.modal = {
     /**
      * @TODO: Needs work..
      */
-    ajax: function (activity, request) {
+    ajax: function ajax(activity, request) {
         var modalId = 'js-modal-ajax';
 
         $('#' + modalId).remove();
@@ -5163,7 +5166,7 @@ app.modal = {
         $.ajax({
             url: 'modal-ajax.html',
             method: 'GET',
-            success: function (data) {
+            success: function success(data) {
                 app.modal.open(this, {
                     modal: 'ajax',
                     modalId: modalId,
@@ -5173,7 +5176,7 @@ app.modal = {
         });
     },
 
-    setSize: function (_targetModal) {
+    setSize: function setSize(_targetModal) {
         // Adding even width and height
         // Because of subpixel rendering in Webkit
         // http://martinkool.com/post/27618832225/beware-of-half-pixels-in-css
@@ -5181,8 +5184,8 @@ app.modal = {
         _targetModal.removeAttr('style');
 
         _targetModal.css({
-            width: (2 * Math.ceil(_targetModal.width() / 2)),
-            height: (2 * Math.ceil(_targetModal.height() / 2))
+            width: 2 * Math.ceil(_targetModal.width() / 2),
+            height: 2 * Math.ceil(_targetModal.height() / 2)
         });
     }
 };
@@ -5202,7 +5205,7 @@ app.navBar = {
         allwaysShowOnMobileClass: 'nav-bar--always-show-on-mobile'
     },
 
-    init: function(_scrollTop){
+    init: function init(_scrollTop) {
         if (app.navBar.settings.el !== null) {
             app.navBar.resize();
             app.navBar.addClasses();
@@ -5211,19 +5214,18 @@ app.navBar = {
         }
     },
 
-    resize: function () {
+    resize: function resize() {
         if (app.navBar.settings.el !== null) {
-            app.navBar.settings.navBarOffsetTop = Math.round(app.navBar.settings.el.getBoundingClientRect().top),
-            app.navBar.settings.navBarHeight = app.navBar.settings.el.offsetHeight;
+            app.navBar.settings.navBarOffsetTop = Math.round(app.navBar.settings.el.getBoundingClientRect().top), app.navBar.settings.navBarHeight = app.navBar.settings.el.offsetHeight;
         }
     },
 
-    addClasses: function () {
+    addClasses: function addClasses() {
         if (app.navBar.settings.el.classList.contains(app.navBar.settings.fixedClass)) {
             app.settings.container.style.marginTop = app.navBar.settings.navBarHeight + 'px';
         }
 
-        if (window.scrollY >= (app.navBar.settings.navBarOffsetTop+1)) {
+        if (window.scrollY >= app.navBar.settings.navBarOffsetTop + 1) {
             app.navBar.settings.el.classList.add(app.navBar.settings.fixedClass);
         }
 
@@ -5232,13 +5234,13 @@ app.navBar = {
         }
     },
 
-    scroller: function (_scrollTop) {
+    scroller: function scroller(_scrollTop) {
         if (app.navBar.settings.el !== null) {
             if (_scrollTop >= app.navBar.settings.navBarOffsetTop) {
                 app.navBar.settings.el.classList.add(app.navBar.settings.fixedClass);
                 app.settings.container.style.marginTop = app.navBar.settings.navBarHeight + 'px';
 
-                if (app.navBar.settings.hideOnScroll && _scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
+                if (app.navBar.settings.hideOnScroll && _scrollTop >= app.navBar.settings.navBarOffsetTop + app.navBar.settings.navBarHeight) {
                     app.navBar.settings.el.classList.add(app.navBar.settings.transformClass);
                     app.navBar.settings.el.classList.add(app.navBar.settings.showClass);
                 }
@@ -5252,17 +5254,17 @@ app.navBar = {
             }
 
             if (_scrollTop > app.navBar.settings.lastWindowScrollTop) {
-                if (app.navBar.settings.hideOnScroll && _scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
+                if (app.navBar.settings.hideOnScroll && _scrollTop >= app.navBar.settings.navBarOffsetTop + app.navBar.settings.navBarHeight) {
                     app.navBar.settings.el.classList.remove(app.navBar.settings.showClass);
                 }
-                if (!app.navBar.settings.hideOnScroll){
+                if (!app.navBar.settings.hideOnScroll) {
                     app.navBar.settings.el.classList.remove(app.navBar.settings.showClass);
                 }
             } else {
-                if (app.navBar.settings.hideOnScroll && _scrollTop >= (app.navBar.settings.navBarOffsetTop+app.navBar.settings.navBarHeight)) {
+                if (app.navBar.settings.hideOnScroll && _scrollTop >= app.navBar.settings.navBarOffsetTop + app.navBar.settings.navBarHeight) {
                     app.navBar.settings.el.classList.add(app.navBar.settings.showClass);
                 }
-                if (!app.navBar.settings.hideOnScroll){
+                if (!app.navBar.settings.hideOnScroll) {
                     app.navBar.settings.el.classList.add(app.navBar.settings.showClass);
                 }
             }
@@ -5271,7 +5273,7 @@ app.navBar = {
         }
     },
 
-    trigger: function () {
+    trigger: function trigger() {
         app.navBar.settings.trigger.addEventListener('click', function (event) {
             event.preventDefault();
 
@@ -5284,9 +5286,8 @@ app.navPrimary = {
         el: document.getElementById('#nav-primary')
     },
 
-    init: function(){
-        if(app.primaryNav.settings.el !== null){
-        }
+    init: function init() {
+        if (app.primaryNav.settings.el !== null) {}
     }
 };
 app.notifications = {
@@ -5301,18 +5302,18 @@ app.notifications = {
         }
     },
 
-    init: function () {
+    init: function init() {
         var self = this;
 
         self.close();
         // self.cookieLaw.init(); // Uncomment if you need the notification
     },
 
-    add: function (_target, _message, _size, _type) {
+    add: function add(_target, _message, _size, _type) {
         $(_target).html('<div class="notification notification--' + _size + ' notification--' + _type + '"><div class="notification__text">' + _message + '</div></div>');
     },
 
-    close: function () {
+    close: function close() {
         var self = this;
 
         app.settings.$body.on('click', '[data-notification-close]', function (event) {
@@ -5334,11 +5335,10 @@ app.notifications = {
         });
     },
 
-
     /*==========  Cookie law  ==========*/
 
     cookieLaw: {
-        init: function () {
+        init: function init() {
             var self = this,
                 cookieValue = helper.cookies.read('cookieNotification'),
                 info = '';
@@ -5350,10 +5350,7 @@ app.notifications = {
                     info = '<a class="btn btn--alpha btn--small" href="' + app.notifications.settings.cookieLaw.infoBtnLink + '">' + app.notifications.settings.cookieLaw.infoBtnText + '</a>';
                 }
 
-                var html = '<div id="notification-cookie" class="notification notification--alpha notification--cookie">'+
-                           '<div class="notification__text">' + app.notifications.settings.cookieLaw.notificationText + '</div>'+
-                           '<a class="btn btn--beta btn--small" data-notification-close>' + app.notifications.settings.cookieLaw.approveBtnText + '</a> '+ info +
-                           '</div>';
+                var html = '<div id="notification-cookie" class="notification notification--alpha notification--cookie">' + '<div class="notification__text">' + app.notifications.settings.cookieLaw.notificationText + '</div>' + '<a class="btn btn--beta btn--small" data-notification-close>' + app.notifications.settings.cookieLaw.approveBtnText + '</a> ' + info + '</div>';
 
                 app.settings.$background.prepend(html);
 
@@ -5373,9 +5370,9 @@ app.offCanvas = {
         $link: $('.off-canvas-nav__link, .off-canvas-nav-bar__link')
     },
 
-    init: function () {
+    init: function init() {
 
-        app.offCanvas.settings.$link.on('click', function(event) {
+        app.offCanvas.settings.$link.on('click', function (event) {
             event.preventDefault();
 
             var href = window.location,
@@ -5390,11 +5387,11 @@ app.offCanvas = {
             }, 400);
         });
 
-        app.settings.$html.on('click', app.offCanvas.settings.toggleLeft, function(event) {
+        app.settings.$html.on('click', app.offCanvas.settings.toggleLeft, function (event) {
             app.offCanvas.toggleLeft();
         });
 
-        app.settings.$html.on('click', app.offCanvas.settings.toggleRight, function(event) {
+        app.settings.$html.on('click', app.offCanvas.settings.toggleRight, function (event) {
             app.offCanvas.toggleRight();
         });
 
@@ -5402,63 +5399,57 @@ app.offCanvas = {
             app.offCanvas.hideLeftAndRight();
         });
 
-        app.settings.$body
-            .on('keydown', function(event){
-                if (event.keyCode === 27) {
-                    app.offCanvas.hideLeftAndRight();
-                }
-            });
+        app.settings.$body.on('keydown', function (event) {
+            if (event.keyCode === 27) {
+                app.offCanvas.hideLeftAndRight();
+            }
+        });
     },
 
-    hideLeftAndRight: function () {
-        app.settings.$html
-            .removeClass('off-canvas-show-left')
-            .removeClass('off-canvas-show-right')
-            .removeClass('off-canvas-nav-bar-show-left')
-            .removeClass('off-canvas-nav-bar-show-right');
+    hideLeftAndRight: function hideLeftAndRight() {
+        app.settings.$html.removeClass('off-canvas-show-left').removeClass('off-canvas-show-right').removeClass('off-canvas-nav-bar-show-left').removeClass('off-canvas-nav-bar-show-right');
     },
 
-    showLeft: function () {
+    showLeft: function showLeft() {
         app.settings.$html.addClass('off-canvas-show-left').addClass('off-canvas-nav-bar-show-left');
     },
 
-    hideLeft: function () {
+    hideLeft: function hideLeft() {
         app.settings.$html.removeClass('off-canvas-show-left').removeClass('off-canvas-nav-bar-show-left');
     },
 
-    toggleLeft: function () {
+    toggleLeft: function toggleLeft() {
         app.offCanvas.hideRight();
         app.settings.$html.toggleClass('off-canvas-show-left').toggleClass('off-canvas-nav-bar-show-left');
     },
 
-    showRight: function () {
+    showRight: function showRight() {
         app.settings.$html.addClass('off-canvas-show-right').addClass('off-canvas-nav-bar-show-right');
     },
 
-    hideRight: function () {
+    hideRight: function hideRight() {
         app.settings.$html.removeClass('off-canvas-show-right').removeClass('off-canvas-nav-bar-show-right');
     },
 
-    toggleRight: function () {
+    toggleRight: function toggleRight() {
         app.offCanvas.hideLeft();
         app.settings.$html.toggleClass('off-canvas-show-right').toggleClass('off-canvas-nav-bar-show-right');
     }
 };
 app.responsiveImages = {
-    settings: {
-    },
+    settings: {},
 
-    init: function () {
+    init: function init() {
         app.responsiveImages.setBackgroundImage();
     },
 
-    setBackgroundImage: function () {
+    setBackgroundImage: function setBackgroundImage() {
         document.querySelectorAll('[data-responsive-bg-img]').forEach(function (el) {
             app.responsiveImages.setBackgroundImageStyle(el);
         });
     },
 
-    setBackgroundImageStyle: function (element) {
+    setBackgroundImageStyle: function setBackgroundImageStyle(element) {
         var domNode = element.querySelector('img'),
             source = null;
 
@@ -5479,7 +5470,6 @@ If you're new to responsive images check out [this article](https://dev.opera.co
 Picturefill is used for wider browser support. There is a Picturefill [JavaScript API](https://scottjehl.github.io/picturefill/#api) available.
 
 */
-
 
 /*doc
 ---
@@ -5586,7 +5576,7 @@ app.scrollSpy = {
         repeat: true
     },
 
-    init: function (_scrollTop, _windowHeight, _load) {
+    init: function init(_scrollTop, _windowHeight, _load) {
         var self = this,
             windowHeight = app.settings.$window.height();
 
@@ -5599,7 +5589,7 @@ app.scrollSpy = {
                     outView = helper.outView($this),
                     partiallyInView = helper.partiallyInView($this),
                     data = $this.data(),
-                    combinedClasses = (data.scrollspyClass === undefined) ? app.scrollSpy.settings.defaultClass : data.scrollspyClass;
+                    combinedClasses = data.scrollspyClass === undefined ? app.scrollSpy.settings.defaultClass : data.scrollspyClass;
 
                 combinedClasses += ' scrollspy--in-view';
 
@@ -5607,13 +5597,17 @@ app.scrollSpy = {
                     $this.addClass(combinedClasses);
                 } else {
                     var hasCombinedClasses = $this.hasClass(combinedClasses),
-                        delay = (data.scrollspyDelay > 0) ? data.scrollspyDelay : 0;
+                        delay = data.scrollspyDelay > 0 ? data.scrollspyDelay : 0;
 
-                    inView && !hasCombinedClasses ? setTimeout(function () { $this.addClass(combinedClasses); }, delay) : '';
-                    _load && partiallyInView && data.scrollspyPartiallyInView !== undefined ? setTimeout(function () { $this.addClass(combinedClasses); }, delay) : '';
+                    inView && !hasCombinedClasses ? setTimeout(function () {
+                        $this.addClass(combinedClasses);
+                    }, delay) : '';
+                    _load && partiallyInView && data.scrollspyPartiallyInView !== undefined ? setTimeout(function () {
+                        $this.addClass(combinedClasses);
+                    }, delay) : '';
 
                     if (data.scrollspyRepeat !== undefined || app.scrollSpy.settings.repeat) {
-                        outView && hasCombinedClasses ?  $this.removeClass(combinedClasses) : '';
+                        outView && hasCombinedClasses ? $this.removeClass(combinedClasses) : '';
                     }
 
                     $this.outerHeight() > windowHeight ? $this.addClass(combinedClasses) : '';
@@ -5625,11 +5619,11 @@ app.scrollSpy = {
 app.scrollSpyNav = {
     settings: {
         $el: $('[data-scrollspy-nav]'),
-        navLength: ($('[data-scrollspy-nav]').length-1),
+        navLength: $('[data-scrollspy-nav]').length - 1,
         currentNav: 0
     },
 
-    init: function (_scrollTop) {
+    init: function init(_scrollTop) {
         var self = this,
             windowHeight = app.settings.$window.height();
 
@@ -5656,7 +5650,7 @@ app.scrollSpyNav = {
             app.scrollSpyNav.settings.$el.parent().each(function (index) {
                 var $item = $(this);
 
-                if (_scrollTop === (app.settings.$document.height()-windowHeight)) {
+                if (_scrollTop === app.settings.$document.height() - windowHeight) {
                     $('.scrollspy-nav--active').removeClass('scrollspy-nav--active');
                     app.scrollSpyNav.settings.$el.parent().eq(app.scrollSpyNav.settings.navLength).find('[data-scrollspy-nav]').addClass('scrollspy-nav--active');
                 }
@@ -5666,10 +5660,9 @@ app.scrollSpyNav = {
 };
 app.svg = {
 
-    init: function() {
+    init: function init() {
 
         svg4everybody(); // SVG support for IE9-11
-
     }
 
 };
@@ -5711,7 +5704,7 @@ app.tabs = {
         tab: document.querySelectorAll('.tab')
     },
 
-    init: function () {
+    init: function init() {
         app.tabs.settings.tab.forEach(function (tab) {
             tab.addEventListener('click', function (event) {
                 var item = document.querySelector(tab.getAttribute('href')),
@@ -5720,9 +5713,8 @@ app.tabs = {
                 event.preventDefault();
 
                 app.tabs.settings.tab.forEach(function (tab) {
-                    tab.classList.remove('tab--active');
+                    return tab.classList.remove('tab--active');
                 });
-
                 tab.classList.add('tab--active');
 
                 content.querySelector('.tab-item--active').classList.remove('tab-item--active');
@@ -5736,7 +5728,7 @@ app.toggle = {
         el: document.querySelectorAll('[data-toggle]')
     },
 
-    init: function () {
+    init: function init() {
         app.toggle.settings.el.forEach(function (toggle) {
             toggle.addEventListener('click', function (event) {
                 event.preventDefault();
@@ -5746,7 +5738,7 @@ app.toggle = {
         });
     },
 
-    toggler: function (_target) {
+    toggler: function toggler(_target) {
         _target.classList.toggle('toggle--hide');
     }
 };
@@ -5759,7 +5751,7 @@ app.tooltips = {
         tooltipTrigger: null
     },
 
-    init: function () {
+    init: function init() {
         if (app.tooltips.settings.$el.length > 0) {
             app.tooltips.settings.$el.each(function () {
                 var $tooltipTrigger = $(this);
@@ -5776,21 +5768,19 @@ app.tooltips = {
         }
     },
 
-    appendContent: function ($tooltipTrigger) {
-        $tooltipTrigger
-            .append('<div class="' + app.tooltips.settings.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
-            .removeAttr('title');
+    appendContent: function appendContent($tooltipTrigger) {
+        $tooltipTrigger.append('<div class="' + app.tooltips.settings.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>').removeAttr('title');
 
         app.tooltips.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip__content'));
     },
 
-    triggers: function ($tooltipTrigger) {
+    triggers: function triggers($tooltipTrigger) {
         if (app.tooltips.settings.tooltipTrigger === 'hover') {
             $tooltipTrigger.on({
-                mouseenter: function () {
+                mouseenter: function mouseenter() {
                     $(this).addClass(app.tooltips.settings.tooltipActiveClass);
                 },
-                mouseleave: function () {
+                mouseleave: function mouseleave() {
                     $(this).removeClass(app.tooltips.settings.tooltipActiveClass);
                 }
             });
@@ -5801,7 +5791,7 @@ app.tooltips = {
         }
     },
 
-    calculatePosition: function ($tooltipTrigger, $tooltipContent) {
+    calculatePosition: function calculatePosition($tooltipTrigger, $tooltipContent) {
         var tooltipTriggerHeight = $tooltipTrigger.outerHeight(),
             tooltipContentHeight = $tooltipContent.outerHeight();
 
@@ -5816,102 +5806,98 @@ app.tooltips = {
     }
 };
 app.yourModule = {
-    settings: {
-    },
+    settings: {},
 
-    init: function () {
-    }
+    init: function init() {}
 };
 app.settings.$document.ready(function () {
-	var $this = $(this),
-		scrollTop = $this.scrollTop();
+    var $this = $(this),
+        scrollTop = $this.scrollTop();
 
-	app.settings.html.classList.remove('no-js');
-	app.settings.html.classList.add('js');
+    app.settings.html.classList.remove('no-js');
+    app.settings.html.classList.add('js');
 
-	app.affix.init();
-	app.svg.init();
-	app.scrollSpyNav.init(scrollTop);
-	app.fastClick.init();
-	app.fitVids.init();
-	app.navBar.init(scrollTop);
-	app.dropdowns.init();
-	app.formModules.init();
-	app.jump.init();
-	app.modal.init();
-	app.tooltips.init();
-	app.accordion.init();
-	app.tabs.init();
-	app.notifications.init();
-	app.offCanvas.init();
-	app.toggle.init();
-	app.groupCheckable.init();
-	app.leave.init();
-	app.btnDropdown.init();
-	app.btnRipple.init();
-	app.googleMaps.init();
+    app.affix.init();
+    app.svg.init();
+    app.scrollSpyNav.init(scrollTop);
+    app.fastClick.init();
+    app.fitVids.init();
+    app.navBar.init(scrollTop);
+    app.dropdowns.init();
+    app.formModules.init();
+    app.jump.init();
+    app.modal.init();
+    app.tooltips.init();
+    app.accordion.init();
+    app.tabs.init();
+    app.notifications.init();
+    app.offCanvas.init();
+    app.toggle.init();
+    app.groupCheckable.init();
+    app.leave.init();
+    app.btnDropdown.init();
+    app.btnRipple.init();
+    app.googleMaps.init();
 
-	//app.cycle.init();
-	//app.fancybox.init();
-	//app.navPrimary.init();
-
+    //app.cycle.init();
+    //app.fancybox.init();
+    //app.navPrimary.init();
 });
 
 app.settings.$window.ready(function () {
-	var $this = $(this),
-		scrollTop = $this.scrollTop(),
-		windowHeight = $this.height();
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        windowHeight = $this.height();
 
-	app.scrollSpy.init(scrollTop, windowHeight, true);
-	app.equalize.init();
-	app.delayedImageLoading.init();
+    app.scrollSpy.init(scrollTop, windowHeight, true);
+    app.equalize.init();
+    app.delayedImageLoading.init();
 
-	setTimeout(function () {
-		app.responsiveImages.setBackgroundImage();
-	}, 10);
+    setTimeout(function () {
+        app.responsiveImages.setBackgroundImage();
+    }, 10);
 });
 
 app.settings.$window.on('scroll', function () {
-	var $this = $(this),
-		scrollTop = $this.scrollTop(),
-		windowHeight = $this.height();
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        windowHeight = $this.height();
 
-	app.scrollSpy.init(scrollTop, windowHeight, false);
-	app.scrollSpyNav.init(scrollTop);
-	app.navBar.scroller(scrollTop);
-	app.disableHover.init();
+    app.scrollSpy.init(scrollTop, windowHeight, false);
+    app.scrollSpyNav.init(scrollTop);
+    app.navBar.scroller(scrollTop);
+    app.disableHover.init();
 });
 
-app.settings.$window.on('touchmove', function(){
-	var $this = $(this),
-		scrollTop = $this.scrollTop(),
-		windowHeight = $this.height();
+app.settings.$window.on('touchmove', function () {
+    var $this = $(this),
+        scrollTop = $this.scrollTop(),
+        windowHeight = $this.height();
 
-	app.scrollSpy.init(scrollTop, windowHeight, false);
-	app.scrollSpyNav.init(scrollTop);
+    app.scrollSpy.init(scrollTop, windowHeight, false);
+    app.scrollSpyNav.init(scrollTop);
 });
 
 app.settings.$window.on('resize', function () {
 
-	app.settings.$html.addClass('disable-transitions');
+    app.settings.$html.addClass('disable-transitions');
 
-	if(this.resizeTo) {
-		clearTimeout(this.resizeTo);
-	}
+    if (this.resizeTo) {
+        clearTimeout(this.resizeTo);
+    }
 
-	this.resizeTo = setTimeout(function() {
-		var $this = $(this),
-			scrollTop = $this.scrollTop(),
-			windowHeight = $this.height();
+    this.resizeTo = setTimeout(function () {
+        var $this = $(this),
+            scrollTop = $this.scrollTop(),
+            windowHeight = $this.height();
 
-		app.equalize.init();
-		app.scrollSpy.init(scrollTop, windowHeight, true);
-		app.scrollSpyNav.init(scrollTop);
-		app.navBar.resize(scrollTop);
-		app.navBar.scroller(scrollTop);
-		app.responsiveImages.setBackgroundImage();
+        app.equalize.init();
+        app.scrollSpy.init(scrollTop, windowHeight, true);
+        app.scrollSpyNav.init(scrollTop);
+        app.navBar.resize(scrollTop);
+        app.navBar.scroller(scrollTop);
+        app.responsiveImages.setBackgroundImage();
 
-		app.settings.$html.removeClass('disable-transitions');
-	}, 500);
+        app.settings.$html.removeClass('disable-transitions');
+    }, 500);
 });
-//# sourceMappingURL=app.js.map

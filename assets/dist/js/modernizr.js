@@ -1,6 +1,6 @@
 /*!
  * modernizr v3.3.1
- * Build http://modernizr.com/download?-ellipsis-inputtypes-supports-template-touchevents-addtest-fnbind-mq-printshiv-setclasses-testprop-dontmin-cssclassprefix:modernizr_
+ * Build http://modernizr.com/download?-checked-contains-ellipsis-inputtypes-supports-template-touchevents-addtest-fnbind-mq-printshiv-setclasses-testprop-dontmin-cssclassprefix:modernizr_
  *
  * Copyright (c)
  *  Faruk Ates
@@ -1967,6 +1967,43 @@ Modernizr.inputtypes.week
     }
     return inputs;
   })(inputtypes);
+
+/*!
+{
+  "name": "CSS :checked pseudo-selector",
+  "caniuse": "css-sel3",
+  "property": "checked",
+  "tags": ["css"],
+  "notes": [{
+    "name": "Related Github Issue",
+    "href": "https://github.com/Modernizr/Modernizr/pull/879"
+  }]
+}
+!*/
+
+  Modernizr.addTest('checked', function() {
+    return testStyles('#modernizr {position:absolute} #modernizr input {margin-left:10px} #modernizr :checked {margin-left:20px;display:block}', function(elem) {
+      var cb = createElement('input');
+      cb.setAttribute('type', 'checkbox');
+      cb.setAttribute('checked', 'checked');
+      elem.appendChild(cb);
+      return cb.offsetLeft === 20;
+    });
+  });
+
+/*!
+{
+  "name": "ES5 String.prototype.contains",
+  "property": "contains",
+  "authors": ["Robert Kowalski"],
+  "tags": ["es6"]
+}
+!*/
+/* DOC
+Check if browser implements ECMAScript 6 `String.prototype.contains` per specification.
+*/
+
+  Modernizr.addTest('contains', is(String.prototype.contains, 'function'));
 
 
   // Run each test

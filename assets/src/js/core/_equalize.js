@@ -5,13 +5,13 @@ app.equalize = {
 
     init: function(){
         if (app.equalize.settings.el !== null) {
-            app.equalize.settings.el.forEach(function (equalize) {
+            app.equalize.settings.el.forEach(equalize => {
                 var currentHeight = 0,
                     mediaQuery = equalize.getAttribute('data-equalize'),
                     targets = equalize.querySelectorAll('[data-equalize-target]');
 
                 if (Modernizr.mq(app.mediaQueries[mediaQuery]) === true || app.mediaQueries[mediaQuery] === undefined) {
-                    targets.forEach(function (target) {
+                    targets.forEach(target => {
                         var height = null;
 
                         target.style.height = 'auto';
@@ -22,13 +22,9 @@ app.equalize = {
                         }
                     });
 
-                    targets.forEach(function (target) {
-                        target.style.height = currentHeight + 'px';
-                    });
+                    targets.forEach(target => target.style.height = currentHeight + 'px');
                 } else {
-                    targets.forEach(function (target) {
-                        target.style.height = 'auto';
-                    });
+                    targets.forEach(target => target.style.height = 'auto');
                 }
             });
         }

@@ -1,38 +1,39 @@
 app.groupCheckable = {
-    init: function () {
-        document.querySelectorAll('[data-group-checkable').forEach(function (checkable) {
-            app.groupCheckable.toggleGroup(checkable);
+	init: function () {
 
-            checkable.addEventListener('change', function () {
-                app.groupCheckable.toggleGroup(checkable);
-            });
-        });
+		// Master checkbox
+		let checkableDelegate = checkable => app.groupCheckable.toggleGroup(checkable);
 
-        document.querySelectorAll('[data-group-checkable-target]').forEach(function (target) {
-            target.addEventListener('change', function () {
-                var group = target.getAttribute('data-group-checkable-target'),
-                    targets = document.querySelectorAll('[data-group-checkable-target=' + group + ']'),
-                    trigger = document.querySelector('[data-group-checkable=' + group + ']'),
-                    checked = 0;
+		document.querySelectorAll('[data-group-checkable').forEach(checkable => {
+			checkableDelegate(checkable);
 
-                targets.forEach(function (target) {
-                    if (target.checked === true) {
-                        checked = checked+1;
-                    }
-                });
+			checkable.addEventListener('change', () => checkableDelegate(checkable));
+		});
 
-                targets.length === checked ? trigger.checked = 'checked' : trigger.checked = '';
-            });
-        });
-    },
+		// Target checkboxes
+		let delegateCheckedCount = target => target.checked,
+			delegateGroupCheckable = target => {
+				let group = target.getAttribute('data-group-checkable-target'),
+					targets = [].slice.call(document.querySelectorAll('[data-group-checkable-target=' + group + ']')),
+					trigger = document.querySelector('[data-group-checkable=' + group + ']'),
+					checkedCount = targets.filter(delegateCheckedCount).length;
 
-    toggleGroup: function (checkable) {
-        var group = document.querySelectorAll('[data-group-checkable-target=' + checkable.getAttribute('data-group-checkable') + ']');
+				trigger.checked = targets.length === checkedCount ?  'checked' : '';
+			},
+			checkableEventHandler = target => {
+				target.addEventListener('change', event => delegateGroupCheckable(target));
+			};
 
-        group.forEach(function (checkbox) {
-            checkable.checked ? checkbox.checked = 'checked' : checkbox.checked = '';
-        });
-    }
+		document.querySelectorAll('[data-group-checkable-target]').forEach(checkableEventHandler);
+	},
+
+	toggleGroup: function (checkable) {
+		let group = document.querySelectorAll('[data-group-checkable-target=' + checkable.getAttribute('data-group-checkable') + ']'),
+			delegateGroup = checkbox => checkbox.checked = checkable.checked === true ? 'checked' : '';
+
+		// Check or uncheck boxes based on the checked state of the group checkbox.
+		group.forEach(delegateGroup);
+	}
 };
 
 /*doc
@@ -45,9 +46,9 @@ category: Javascript
 ```html_example
 <input name="checkbox" type="checkbox" id="checkbox" data-group-checkable="checkable-example" /><label for="checkbox">Check all</label>
 <ul class="form__input-list list-unstyled">
-    <li><input name="checkbox" type="checkbox" id="checkbox1" data-group-checkable-target="checkable-example" /><label for="checkbox1">Checkbox</label></li>
-    <li><input name="checkbox" type="checkbox" id="checkbox2" data-group-checkable-target="checkable-example" /><label for="checkbox2">Checkbox</label></li>
-    <li><input name="checkbox" type="checkbox" id="checkbox3" data-group-checkable-target="checkable-example" /><label for="checkbox3">Checkbox</label></li>
+	<li><input name="checkbox" type="checkbox" id="checkbox1" data-group-checkable-target="checkable-example" /><label for="checkbox1">Checkbox</label></li>
+	<li><input name="checkbox" type="checkbox" id="checkbox2" data-group-checkable-target="checkable-example" /><label for="checkbox2">Checkbox</label></li>
+	<li><input name="checkbox" type="checkbox" id="checkbox3" data-group-checkable-target="checkable-example" /><label for="checkbox3">Checkbox</label></li>
 </ul>
 ```
 

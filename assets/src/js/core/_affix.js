@@ -9,7 +9,7 @@ app.affix = {
             app.affix.resizeWidth();
             app.affix.updateOffsetTop(_scrollTop);
 
-            app.affix.settings.el.forEach(function (affix) {
+            app.affix.settings.el.forEach(affix => {
                 var affixHeight = affix.offsetHeight;
 
                 if (affixHeight < app.settings.windowHeight) {
@@ -54,7 +54,7 @@ app.affix = {
     },
 
     updateOffsetTop: function (_scrollTop) {
-        app.affix.settings.el.forEach(function (affix) {
+        app.affix.settings.el.forEach(affix => {
             var affixHeight = affix.offsetHeight,
                 offsetTop = affix.getBoundingClientRect().top;
 
@@ -70,7 +70,7 @@ app.affix = {
     },
 
     resizeWidth: function () {
-        app.affix.settings.el.forEach(function (affix) {
+        app.affix.settings.el.forEach(affix => {
             affix.classList.remove('affix--fixed');
             affix.classList.remove('affix--absolute');
             affix.style.top = '';

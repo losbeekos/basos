@@ -18,7 +18,7 @@ app.accordion = {
     },
 
     setGroupHeight: function () {
-        app.accordion.settings.group.forEach(function (group) {
+        app.accordion.settings.group.forEach(group => {
             var groupContent = group.querySelector('.accordion__content');
 
             groupContent.setAttribute('style', '');
@@ -31,7 +31,7 @@ app.accordion = {
     },
 
     toggler: function () {
-        app.accordion.settings.trigger.forEach(function (trigger) {
+        app.accordion.settings.trigger.forEach(trigger => {
             trigger.addEventListener('click', function () {
                 var group = trigger.parentNode,
                     content = trigger.nextElementSibling;
@@ -61,8 +61,6 @@ app.accordion = {
             shownItem.classList.remove(app.accordion.settings.contentShowClass);
         }
 
-        content.forEach(function (content) {
-            content.style.maxHeight = 0;
-        });
+        content.forEach(content => content.style.maxHeight = 0);
     }
 };

@@ -1,42 +1,44 @@
 {
-	"name": "basos",
-	"version": "1.0.2",
-	"description": "Basos frontend framework.",
-	"main": "index.js",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/losbeekos/basos.git"
-	},
-	"author": "Jeroen van Beek",
-	"license": "BSD-2-Clause",
-	"bugs": {
-		"url": "https://github.com/losbeekos/basos/issues"
-	},
-	"devDependencies": {
-		"autoprefixer": "^6.3.7",
-		"grunt": "^1.0.0",
-		"grunt-browser-sync": "^2.2.0",
-		"grunt-contrib-clean": "^1.0.0",
-		"grunt-contrib-concat": "^1.0.1",
-		"grunt-contrib-connect": "^1.0.2",
-		"grunt-contrib-copy": "^1.0.0",
-		"grunt-contrib-cssmin": "^1.0.1",
-		"grunt-contrib-imagemin": "^1.0.1",
-		"grunt-contrib-jshint": "^1.0.0",
-		"grunt-contrib-uglify": "^2.0.0",
-		"grunt-contrib-watch": "^1.0.0",
-		"grunt-css-wrap": "^0.1.3",
-		"grunt-hologram": "0.0.7",
-		"grunt-imageoptim": "^1.4.1",
-		"grunt-modernizr": "^1.0.2",
-		"grunt-postcss": "^0.8.0",
-		"grunt-sass": "^1.2.0",
-		"grunt-svg-sprite": "^1.3.3",
-		"jit-grunt": "^0.10.0",
-		"postcss-flexbugs-fixes": "^2.0.0",
-		"time-grunt": "^1.3.0"
-	},
-	"dependencies": {
-		"connect": "^3.4.1"
-	}
+  "name": "basos",
+  "version": "1.0.2",
+  "description": "Basos frontend framework.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/losbeekos/basos.git"
+  },
+  "author": "Jeroen van Beek",
+  "license": "BSD-2-Clause",
+  "bugs": {
+    "url": "https://github.com/losbeekos/basos/issues"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.7",
+    "babel-preset-es2015": "^6.14.0",
+    "grunt": "^1.0.0",
+    "grunt-babel": "^6.0.0",
+    "grunt-browser-sync": "^2.2.0",
+    "grunt-contrib-clean": "^1.0.0",
+    "grunt-contrib-concat": "^1.0.1",
+    "grunt-contrib-connect": "^1.0.2",
+    "grunt-contrib-copy": "^1.0.0",
+    "grunt-contrib-cssmin": "^1.0.1",
+    "grunt-contrib-imagemin": "^1.0.1",
+    "grunt-contrib-jshint": "^1.0.0",
+    "grunt-contrib-uglify": "^2.0.0",
+    "grunt-contrib-watch": "^1.0.0",
+    "grunt-css-wrap": "^0.1.3",
+    "grunt-hologram": "0.0.7",
+    "grunt-imageoptim": "^1.4.1",
+    "grunt-modernizr": "^1.0.2",
+    "grunt-postcss": "^0.8.0",
+    "grunt-sass": "^1.2.0",
+    "grunt-svg-sprite": "^1.3.3",
+    "jit-grunt": "^0.10.0",
+    "postcss-flexbugs-fixes": "^2.0.0",
+    "time-grunt": "^1.3.0"
+  },
+  "dependencies": {
+    "connect": "^3.4.1"
+  }
 }
