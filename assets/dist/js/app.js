@@ -5708,29 +5708,27 @@ There are no SVGs present in basos but you can create an SVG workflow for your p
 */
 app.tabs = {
     settings: {
-        $nav: $('.tabs'),
-        $tab: $('.tab'),
-        $content: $('.tab-content')
+        tab: document.querySelectorAll('.tab')
     },
 
-    init: function(){
-        var self = this;
-
-        if (app.tabs.settings.$tab.length > 0) {
-            app.tabs.settings.$tab.on('click', function (event) {
-                var $tab = $(this);
+    init: function () {
+        app.tabs.settings.tab.forEach(function (tab) {
+            tab.addEventListener('click', function (event) {
+                var item = document.querySelector(tab.getAttribute('href')),
+                    content = item.closest('.tab-content');
 
                 event.preventDefault();
 
-                app.tabs.settings.$tab.removeClass('tab--active');
-                $tab.addClass('tab--active');
+                app.tabs.settings.tab.forEach(function (tab) {
+                    tab.classList.remove('tab--active');
+                });
 
-                $($tab.attr('href'))
-                    .addClass('tab-item--active')
-                    .siblings()
-                    .removeClass('tab-item--active');
+                tab.classList.add('tab--active');
+
+                content.querySelector('.tab-item--active').classList.remove('tab-item--active');
+                item.classList.add('tab-item--active');
             });
-        }
+        });
     }
 };
 app.toggle = {
