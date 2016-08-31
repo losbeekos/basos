@@ -1,13 +1,13 @@
 app.fitVids = {
-    settings: {
-        $el: $('.fitvids')
-    },
+	settings: {
+		$el: $('.fitvids')
+	},
 
-    init: function(){
-        if (app.fitVids.settings.$el.length > 0) {
-            app.fitVids.settings.$el.fitVids();
-        }
-    }
+	init: function(){
+		if (app.fitVids.settings.$el.length > 0) {
+			app.fitVids.settings.$el.fitVids();
+		}
+	}
 };
 
 /*doc

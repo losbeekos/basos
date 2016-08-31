@@ -1,6 +1,6 @@
 app.tooltips = {
     settings: {
-        $el: $('.tooltip'),
+        el: document.querySelectorAll('.tooltip'),
         tooltipActiveClass: 'tooltip--active',
         tooltipContentClass: 'tooltip__content',
         arrowWidth: 8,
@@ -8,57 +8,58 @@ app.tooltips = {
     },
 
     init: function () {
-        if (app.tooltips.settings.$el.length > 0) {
-            app.tooltips.settings.$el.each(function () {
-                var $tooltipTrigger = $(this);
-
-                if ($tooltipTrigger.data('tooltipTrigger') === 'click' || app.settings.$html.hasClass('touch')) {
+        if (app.tooltips.settings.el.length > 0) {
+            let delegate = el => {
+                if (el.getAttribute('data-tooltip-trigger') === 'click' || document.documentElement.classList.contains('modernizr_touchevents')) {
                     app.tooltips.settings.tooltipTrigger = 'click';
                 } else {
                     app.tooltips.settings.tooltipTrigger = 'hover';
                 }
 
-                app.tooltips.triggers($tooltipTrigger);
-                app.tooltips.appendContent($tooltipTrigger);
-            });
+                app.tooltips.triggers(el);
+                app.tooltips.appendContent(el);
+            };
+
+            app.tooltips.settings.el.forEach(delegate);
         }
     },
 
-    appendContent: function ($tooltipTrigger) {
-        $tooltipTrigger
-            .append('<div class="' + app.tooltips.settings.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>')
-            .removeAttr('title');
+    appendContent: function (tooltipTrigger) {
+        let content = document.createElement('div');
 
-        app.tooltips.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip__content'));
+        content.classList.add(app.tooltips.settings.tooltipContentClass);
+        content.innerHTML = tooltipTrigger.getAttribute('title');
+
+        tooltipTrigger.appendChild(content);
+        tooltipTrigger.setAttribute('title', '');
+        app.tooltips.calculatePosition(tooltipTrigger, tooltipTrigger.querySelector('.tooltip__content'));
     },
 
-    triggers: function ($tooltipTrigger) {
+    triggers: function (tooltipTrigger) {
         if (app.tooltips.settings.tooltipTrigger === 'hover') {
-            $tooltipTrigger.on({
-                mouseenter: function () {
-                    $(this).addClass(app.tooltips.settings.tooltipActiveClass);
-                },
-                mouseleave: function () {
-                    $(this).removeClass(app.tooltips.settings.tooltipActiveClass);
-                }
+            tooltipTrigger.addEventListener('mouseover', function () {
+                this.classList.add(app.tooltips.settings.tooltipActiveClass);
+            });
+
+            tooltipTrigger.addEventListener('mouseout', function () {
+                this.classList.remove(app.tooltips.settings.tooltipActiveClass);
             });
         } else {
-            $tooltipTrigger.on('click', function () {
-                $(this).toggleClass(app.tooltips.settings.tooltipActiveClass);
+            tooltipTrigger.addEventListener('click', function () {
+                this.classList.toggle(app.tooltips.settings.tooltipActiveClass);
             });
         }
     },
 
-    calculatePosition: function ($tooltipTrigger, $tooltipContent) {
-        var tooltipTriggerHeight = $tooltipTrigger.outerHeight(),
-            tooltipContentHeight = $tooltipContent.outerHeight();
+    calculatePosition: function (tooltipTrigger, tooltipContent) {
+        let position = tooltipTrigger.offsetHeight + app.tooltips.settings.arrowWidth + 'px';
 
-        switch ($tooltipTrigger.data('tooltipPosition')) {
+        switch (tooltipTrigger.getAttribute('data-tooltip-position')) {
             case 'top':
-                $tooltipContent.css({ bottom: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
+                tooltipContent.style.bottom = position;
                 break;
             case 'bottom':
-                $tooltipContent.css({ top: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
+                tooltipContent.style.top = position;
                 break;
         }
     }

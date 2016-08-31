@@ -1,17 +1,17 @@
 app.disableHover = {
-    timer: null,
+	timer: null,
 
-    init: function(){
-        clearTimeout(app.disableHover.timer);
+	init: function () {
+		clearTimeout(app.disableHover.timer);
 
-        if(!document.body.classList.contains('disable-hover')) {
-            document.body.classList.add('disable-hover');
-        }
+		if (!document.body.classList.contains('disable-hover')) {
+			document.body.classList.add('disable-hover');
+		}
 
-        app.disableHover.timer = setTimeout(function(){
-            document.body.classList.remove('disable-hover');
-        }, 100);
-    }
+		app.disableHover.timer = setTimeout(function(){
+			document.body.classList.remove('disable-hover');
+		}, 100);
+	}
 };
 
 /*doc

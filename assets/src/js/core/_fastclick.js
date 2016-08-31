@@ -1,7 +1,7 @@
 app.fastClick = {
-    init: function(){
-        FastClick.attach(document.body);
-    }
+	init: function(){
+		FastClick.attach(document.body);
+	}
 };
 
 /*doc

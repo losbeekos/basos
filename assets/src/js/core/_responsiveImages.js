@@ -7,9 +7,9 @@ app.responsiveImages = {
     },
 
     setBackgroundImage: function () {
-        document.querySelectorAll('[data-responsive-bg-img]').forEach(function (el) {
-            app.responsiveImages.setBackgroundImageStyle(el);
-        });
+        let setDelegate = el => app.responsiveImages.setBackgroundImageStyle(el);
+
+        document.querySelectorAll('[data-responsive-bg-img]').forEach(setDelegate);
     },
 
     setBackgroundImageStyle: function (element) {

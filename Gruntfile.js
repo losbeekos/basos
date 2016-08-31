@@ -35,6 +35,7 @@ module.exports = function(grunt) {
 		copy: config('copy'),
 		concat: config('concat'),
 		jshint: config('jshint'),
+		babel: config('babel'),
 		sass: config('sass'),
 		postcss: config('postcss'),
 		cssmin: config('cssmin'),
@@ -47,25 +48,7 @@ module.exports = function(grunt) {
 		hologram: config('hologram'),
 		css_wrap: config('cssWrap'),
 		modernizr: config('modernizr'),
-		svg_sprite: config('svgSprite'),
-
-		babel: {
-			options: {
-				// sourceMap: true,
-				// inputSourceMap: grunt.file.readJSON('assets/dist/js/app.js.map'),
-				presets: ['es2015']
-			},
-
-			dist: {
-				files: [{
-					'expand': true,
-					'cwd': '<%= basos.dist %>/js/',
-					'src': ['app.js'],
-					'dest': '<%= basos.dist %>/js/',
-					'ext': '.js'
-				}]
-			}
-		}
+		svg_sprite: config('svgSprite')
 	});
 
 	if (peanuts === true) {

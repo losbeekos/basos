@@ -3405,492 +3405,6 @@ Parsley.setLocale('nl');
     }
     return svg4everybody;
 });
-/*! rangeslider.js - v2.1.1 | (c) 2016 @andreruffert | MIT license | https://github.com/andreruffert/rangeslider.js */
-(function(factory) {
-    'use strict';
-
-    if (typeof define === 'function' && define.amd) {
-        // AMD. Register as an anonymous module.
-        define(['jquery'], factory);
-    } else if (typeof exports === 'object') {
-        // CommonJS
-        module.exports = factory(require('jquery'));
-    } else {
-        // Browser globals
-        factory(jQuery);
-    }
-}(function($) {
-    'use strict';
-
-    // Polyfill Number.isNaN(value)
-    // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Number/isNaN
-    Number.isNaN = Number.isNaN || function(value) {
-        return typeof value === 'number' && value !== value;
-    };
-
-    /**
-     * Range feature detection
-     * @return {Boolean}
-     */
-    function supportsRange() {
-        var input = document.createElement('input');
-        input.setAttribute('type', 'range');
-        return input.type !== 'text';
-    }
-
-    var pluginName = 'rangeslider',
-        pluginIdentifier = 0,
-        hasInputRangeSupport = supportsRange(),
-        defaults = {
-            polyfill: true,
-            orientation: 'horizontal',
-            rangeClass: 'rangeslider',
-            disabledClass: 'rangeslider--disabled',
-            horizontalClass: 'rangeslider--horizontal',
-            verticalClass: 'rangeslider--vertical',
-            fillClass: 'rangeslider__fill',
-            handleClass: 'rangeslider__handle',
-            startEvent: ['mousedown', 'touchstart', 'pointerdown'],
-            moveEvent: ['mousemove', 'touchmove', 'pointermove'],
-            endEvent: ['mouseup', 'touchend', 'pointerup']
-        },
-        constants = {
-            orientation: {
-                horizontal: {
-                    dimension: 'width',
-                    direction: 'left',
-                    directionStyle: 'left',
-                    coordinate: 'x'
-                },
-                vertical: {
-                    dimension: 'height',
-                    direction: 'top',
-                    directionStyle: 'bottom',
-                    coordinate: 'y'
-                }
-            }
-        };
-
-    /**
-     * Delays a function for the given number of milliseconds, and then calls
-     * it with the arguments supplied.
-     *
-     * @param  {Function} fn   [description]
-     * @param  {Number}   wait [description]
-     * @return {Function}
-     */
-    function delay(fn, wait) {
-        var args = Array.prototype.slice.call(arguments, 2);
-        return setTimeout(function(){ return fn.apply(null, args); }, wait);
-    }
-
-    /**
-     * Returns a debounced function that will make sure the given
-     * function is not triggered too much.
-     *
-     * @param  {Function} fn Function to debounce.
-     * @param  {Number}   debounceDuration OPTIONAL. The amount of time in milliseconds for which we will debounce the function. (defaults to 100ms)
-     * @return {Function}
-     */
-    function debounce(fn, debounceDuration) {
-        debounceDuration = debounceDuration || 100;
-        return function() {
-            if (!fn.debouncing) {
-                var args = Array.prototype.slice.apply(arguments);
-                fn.lastReturnVal = fn.apply(window, args);
-                fn.debouncing = true;
-            }
-            clearTimeout(fn.debounceTimeout);
-            fn.debounceTimeout = setTimeout(function(){
-                fn.debouncing = false;
-            }, debounceDuration);
-            return fn.lastReturnVal;
-        };
-    }
-
-    /**
-     * Check if a `element` is visible in the DOM
-     *
-     * @param  {Element}  element
-     * @return {Boolean}
-     */
-    function isHidden(element) {
-        return (
-            element && (
-                element.offsetWidth === 0 ||
-                element.offsetHeight === 0 ||
-                // Also Consider native `<details>` elements.
-                element.open === false
-            )
-        );
-    }
-
-    /**
-     * Get hidden parentNodes of an `element`
-     *
-     * @param  {Element} element
-     * @return {[type]}
-     */
-    function getHiddenParentNodes(element) {
-        var parents = [],
-            node    = element.parentNode;
-
-        while (isHidden(node)) {
-            parents.push(node);
-            node = node.parentNode;
-        }
-        return parents;
-    }
-
-    /**
-     * Returns dimensions for an element even if it is not visible in the DOM.
-     *
-     * @param  {Element} element
-     * @param  {String}  key     (e.g. offsetWidth …)
-     * @return {Number}
-     */
-    function getDimension(element, key) {
-        var hiddenParentNodes       = getHiddenParentNodes(element),
-            hiddenParentNodesLength = hiddenParentNodes.length,
-            inlineStyle             = [],
-            dimension               = element[key];
-
-        // Used for native `<details>` elements
-        function toggleOpenProperty(element) {
-            if (typeof element.open !== 'undefined') {
-                element.open = (element.open) ? false : true;
-            }
-        }
-
-        if (hiddenParentNodesLength) {
-            for (var i = 0; i < hiddenParentNodesLength; i++) {
-
-                // Cache style attribute to restore it later.
-                inlineStyle[i] = hiddenParentNodes[i].style.cssText;
-
-                // visually hide
-                if (hiddenParentNodes[i].style.setProperty) {
-                    hiddenParentNodes[i].style.setProperty('display', 'block', 'important');
-                } else {
-                    hiddenParentNodes[i].style.cssText += ';display: block !important';
-                }
-                hiddenParentNodes[i].style.height = '0';
-                hiddenParentNodes[i].style.overflow = 'hidden';
-                hiddenParentNodes[i].style.visibility = 'hidden';
-                toggleOpenProperty(hiddenParentNodes[i]);
-            }
-
-            // Update dimension
-            dimension = element[key];
-
-            for (var j = 0; j < hiddenParentNodesLength; j++) {
-
-                // Restore the style attribute
-                hiddenParentNodes[j].style.cssText = inlineStyle[j];
-                toggleOpenProperty(hiddenParentNodes[j]);
-            }
-        }
-        return dimension;
-    }
-
-    /**
-     * Returns the parsed float or the default if it failed.
-     *
-     * @param  {String}  str
-     * @param  {Number}  defaultValue
-     * @return {Number}
-     */
-    function tryParseFloat(str, defaultValue) {
-        var value = parseFloat(str);
-        return Number.isNaN(value) ? defaultValue : value;
-    }
-
-    /**
-     * Capitalize the first letter of string
-     *
-     * @param  {String} str
-     * @return {String}
-     */
-    function ucfirst(str) {
-        return str.charAt(0).toUpperCase() + str.substr(1);
-    }
-
-    /**
-     * Plugin
-     * @param {String} element
-     * @param {Object} options
-     */
-    function Plugin(element, options) {
-        this.$window            = $(window);
-        this.$document          = $(document);
-        this.$element           = $(element);
-        this.options            = $.extend( {}, defaults, options );
-        this.polyfill           = this.options.polyfill;
-        this.orientation        = this.$element[0].getAttribute('data-orientation') || this.options.orientation;
-        this.onInit             = this.options.onInit;
-        this.onSlide            = this.options.onSlide;
-        this.onSlideEnd         = this.options.onSlideEnd;
-        this.DIMENSION          = constants.orientation[this.orientation].dimension;
-        this.DIRECTION          = constants.orientation[this.orientation].direction;
-        this.DIRECTION_STYLE    = constants.orientation[this.orientation].directionStyle;
-        this.COORDINATE         = constants.orientation[this.orientation].coordinate;
-
-        // Plugin should only be used as a polyfill
-        if (this.polyfill) {
-            // Input range support?
-            if (hasInputRangeSupport) { return false; }
-        }
-
-        this.identifier = 'js-' + pluginName + '-' +(pluginIdentifier++);
-        this.startEvent = this.options.startEvent.join('.' + this.identifier + ' ') + '.' + this.identifier;
-        this.moveEvent  = this.options.moveEvent.join('.' + this.identifier + ' ') + '.' + this.identifier;
-        this.endEvent   = this.options.endEvent.join('.' + this.identifier + ' ') + '.' + this.identifier;
-        this.toFixed    = (this.step + '').replace('.', '').length - 1;
-        this.$fill      = $('<div class="' + this.options.fillClass + '" />');
-        this.$handle    = $('<div class="' + this.options.handleClass + '" />');
-        this.$range     = $('<div class="' + this.options.rangeClass + ' ' + this.options[this.orientation + 'Class'] + '" id="' + this.identifier + '" />').insertAfter(this.$element).prepend(this.$fill, this.$handle);
-
-        // visually hide the input
-        this.$element.css({
-            'position': 'absolute',
-            'width': '1px',
-            'height': '1px',
-            'overflow': 'hidden',
-            'opacity': '0'
-        });
-
-        // Store context
-        this.handleDown = $.proxy(this.handleDown, this);
-        this.handleMove = $.proxy(this.handleMove, this);
-        this.handleEnd  = $.proxy(this.handleEnd, this);
-
-        this.init();
-
-        // Attach Events
-        var _this = this;
-        this.$window.on('resize.' + this.identifier, debounce(function() {
-            // Simulate resizeEnd event.
-            delay(function() { _this.update(false, false); }, 300);
-        }, 20));
-
-        this.$document.on(this.startEvent, '#' + this.identifier + ':not(.' + this.options.disabledClass + ')', this.handleDown);
-
-        // Listen to programmatic value changes
-        this.$element.on('change.' + this.identifier, function(e, data) {
-            if (data && data.origin === _this.identifier) {
-                return;
-            }
-
-            var value = e.target.value,
-                pos = _this.getPositionFromValue(value);
-            _this.setPosition(pos);
-        });
-    }
-
-    Plugin.prototype.init = function() {
-        this.update(true, false);
-
-        if (this.onInit && typeof this.onInit === 'function') {
-            this.onInit();
-        }
-    };
-
-    Plugin.prototype.update = function(updateAttributes, triggerSlide) {
-        updateAttributes = updateAttributes || false;
-
-        if (updateAttributes) {
-            this.min    = tryParseFloat(this.$element[0].getAttribute('min'), 0);
-            this.max    = tryParseFloat(this.$element[0].getAttribute('max'), 100);
-            this.value  = tryParseFloat(this.$element[0].value, Math.round(this.min + (this.max-this.min)/2));
-            this.step   = tryParseFloat(this.$element[0].getAttribute('step'), 1);
-        }
-
-        this.handleDimension    = getDimension(this.$handle[0], 'offset' + ucfirst(this.DIMENSION));
-        this.rangeDimension     = getDimension(this.$range[0], 'offset' + ucfirst(this.DIMENSION));
-        this.maxHandlePos       = this.rangeDimension - this.handleDimension;
-        this.grabPos            = this.handleDimension / 2;
-        this.position           = this.getPositionFromValue(this.value);
-
-        // Consider disabled state
-        if (this.$element[0].disabled) {
-            this.$range.addClass(this.options.disabledClass);
-        } else {
-            this.$range.removeClass(this.options.disabledClass);
-        }
-
-        this.setPosition(this.position, triggerSlide);
-    };
-
-    Plugin.prototype.handleDown = function(e) {
-        this.$document.on(this.moveEvent, this.handleMove);
-        this.$document.on(this.endEvent, this.handleEnd);
-
-        // If we click on the handle don't set the new position
-        if ((' ' + e.target.className + ' ').replace(/[\n\t]/g, ' ').indexOf(this.options.handleClass) > -1) {
-            return;
-        }
-
-        var pos         = this.getRelativePosition(e),
-            rangePos    = this.$range[0].getBoundingClientRect()[this.DIRECTION],
-            handlePos   = this.getPositionFromNode(this.$handle[0]) - rangePos,
-            setPos      = (this.orientation === 'vertical') ? (this.maxHandlePos - (pos - this.grabPos)) : (pos - this.grabPos);
-
-        this.setPosition(setPos);
-
-        if (pos >= handlePos && pos < handlePos + this.handleDimension) {
-            this.grabPos = pos - handlePos;
-        }
-    };
-
-    Plugin.prototype.handleMove = function(e) {
-        e.preventDefault();
-        var pos = this.getRelativePosition(e);
-        var setPos = (this.orientation === 'vertical') ? (this.maxHandlePos - (pos - this.grabPos)) : (pos - this.grabPos);
-        this.setPosition(setPos);
-    };
-
-    Plugin.prototype.handleEnd = function(e) {
-        e.preventDefault();
-        this.$document.off(this.moveEvent, this.handleMove);
-        this.$document.off(this.endEvent, this.handleEnd);
-
-        // Ok we're done fire the change event
-        this.$element.trigger('change', { origin: this.identifier });
-
-        if (this.onSlideEnd && typeof this.onSlideEnd === 'function') {
-            this.onSlideEnd(this.position, this.value);
-        }
-    };
-
-    Plugin.prototype.cap = function(pos, min, max) {
-        if (pos < min) { return min; }
-        if (pos > max) { return max; }
-        return pos;
-    };
-
-    Plugin.prototype.setPosition = function(pos, triggerSlide) {
-        var value, newPos;
-
-        if (triggerSlide === undefined) {
-            triggerSlide = true;
-        }
-
-        // Snapping steps
-        value = this.getValueFromPosition(this.cap(pos, 0, this.maxHandlePos));
-        newPos = this.getPositionFromValue(value);
-
-        // Update ui
-        this.$fill[0].style[this.DIMENSION] = (newPos + this.grabPos) + 'px';
-        this.$handle[0].style[this.DIRECTION_STYLE] = newPos + 'px';
-        this.setValue(value);
-
-        // Update globals
-        this.position = newPos;
-        this.value = value;
-
-        if (triggerSlide && this.onSlide && typeof this.onSlide === 'function') {
-            this.onSlide(newPos, value);
-        }
-    };
-
-    // Returns element position relative to the parent
-    Plugin.prototype.getPositionFromNode = function(node) {
-        var i = 0;
-        while (node !== null) {
-            i += node.offsetLeft;
-            node = node.offsetParent;
-        }
-        return i;
-    };
-
-    Plugin.prototype.getRelativePosition = function(e) {
-        // Get the offset DIRECTION relative to the viewport
-        var ucCoordinate = ucfirst(this.COORDINATE),
-            rangePos = this.$range[0].getBoundingClientRect()[this.DIRECTION],
-            pageCoordinate = 0;
-
-        if (typeof e['page' + ucCoordinate] !== 'undefined') {
-            pageCoordinate = e['client' + ucCoordinate];
-        }
-        else if (typeof e.originalEvent['client' + ucCoordinate] !== 'undefined') {
-            pageCoordinate = e.originalEvent['client' + ucCoordinate];
-        }
-        else if (e.originalEvent.touches && e.originalEvent.touches[0] && typeof e.originalEvent.touches[0]['client' + ucCoordinate] !== 'undefined') {
-            pageCoordinate = e.originalEvent.touches[0]['client' + ucCoordinate];
-        }
-        else if(e.currentPoint && typeof e.currentPoint[this.COORDINATE] !== 'undefined') {
-            pageCoordinate = e.currentPoint[this.COORDINATE];
-        }
-
-        return pageCoordinate - rangePos;
-    };
-
-    Plugin.prototype.getPositionFromValue = function(value) {
-        var percentage, pos;
-        percentage = (value - this.min)/(this.max - this.min);
-        pos = (!Number.isNaN(percentage)) ? percentage * this.maxHandlePos : 0;
-        return pos;
-    };
-
-    Plugin.prototype.getValueFromPosition = function(pos) {
-        var percentage, value;
-        percentage = ((pos) / (this.maxHandlePos || 1));
-        value = this.step * Math.round(percentage * (this.max - this.min) / this.step) + this.min;
-        return Number((value).toFixed(this.toFixed));
-    };
-
-    Plugin.prototype.setValue = function(value) {
-        if (value === this.value && this.$element[0].value !== '') {
-            return;
-        }
-
-        // Set the new value and fire the `input` event
-        this.$element
-            .val(value)
-            .trigger('input', { origin: this.identifier });
-    };
-
-    Plugin.prototype.destroy = function() {
-        this.$document.off('.' + this.identifier);
-        this.$window.off('.' + this.identifier);
-
-        this.$element
-            .off('.' + this.identifier)
-            .removeAttr('style')
-            .removeData('plugin_' + pluginName);
-
-        // Remove the generated markup
-        if (this.$range && this.$range.length) {
-            this.$range[0].parentNode.removeChild(this.$range[0]);
-        }
-    };
-
-    // A really lightweight plugin wrapper around the constructor,
-    // preventing against multiple instantiations
-    $.fn[pluginName] = function(options) {
-        var args = Array.prototype.slice.call(arguments, 1);
-
-        return this.each(function() {
-            var $this = $(this),
-                data  = $this.data('plugin_' + pluginName);
-
-            // Create a new instance.
-            if (!data) {
-                $this.data('plugin_' + pluginName, (data = new Plugin(this, options)));
-            }
-
-            // Make it possible to access methods from public.
-            // e.g `$element.rangeslider('method');`
-            if (typeof options === 'string') {
-                data[options].apply(data, args);
-            }
-        });
-    };
-
-    return 'rangeslider.js is available in jQuery context e.g $(selector).rangeslider(options);';
-
-}));
-
 'use strict';
 
 /**
@@ -3931,6 +3445,20 @@ if (typeof Element.prototype.matches !== 'function') {
 
         return Boolean(elements[index]);
     };
+}
+/**
+ * Transform HTML collections and Nodes to arrays, so the methods are available.
+ * @type {Array}
+ */
+
+var methods = ['forEach', 'filter'];
+
+for (var n in methods) {
+    var method = methods[n];
+
+    if (typeof NodeList.prototype[method] !== 'function') {
+        NodeList.prototype[method] = Array.prototype[method];
+    }
 }
 /*doc
 ---
@@ -4089,7 +3617,7 @@ app.accordion = {
     },
 
     setGroupHeight: function setGroupHeight() {
-        app.accordion.settings.group.forEach(function (group) {
+        var groupDelegate = function groupDelegate(group) {
             var groupContent = group.querySelector('.accordion__content');
 
             groupContent.setAttribute('style', '');
@@ -4098,11 +3626,13 @@ app.accordion = {
 
             groupContent.setAttribute('data-accordion-content-height', contentHeight);
             group.classList.contains(app.accordion.settings.contentShowClass) ? groupContent.style.maxHeight = contentHeight : groupContent.style.maxHeight = 0;
-        });
+        };
+
+        app.accordion.settings.group.forEach(groupDelegate);
     },
 
     toggler: function toggler() {
-        app.accordion.settings.trigger.forEach(function (trigger) {
+        var triggerEventHandler = function triggerEventHandler(trigger) {
             trigger.addEventListener('click', function () {
                 var group = trigger.parentNode,
                     content = trigger.nextElementSibling;
@@ -4114,7 +3644,9 @@ app.accordion = {
                     app.accordion.showGroup(trigger, content);
                 }
             });
-        });
+        };
+
+        app.accordion.settings.trigger.forEach(triggerEventHandler);
     },
 
     showGroup: function showGroup(trigger, content) {
@@ -4124,7 +3656,10 @@ app.accordion = {
 
     hideGroup: function hideGroup(trigger) {
         var shownItem = document.querySelector('.accordion-content-show'),
-            content = document.querySelectorAll('.accordion__content');
+            content = document.querySelectorAll('.accordion__content'),
+            contentDelegate = function contentDelegate(content) {
+            return content.style.maxHeight = 0;
+        };
 
         if (shownItem === null) {
             trigger.classList.add(app.accordion.settings.contentShowClass);
@@ -4132,9 +3667,7 @@ app.accordion = {
             shownItem.classList.remove(app.accordion.settings.contentShowClass);
         }
 
-        content.forEach(function (content) {
-            return content.style.maxHeight = 0;
-        });
+        content.forEach(contentDelegate);
     }
 };
 app.affix = {
@@ -4145,10 +3678,7 @@ app.affix = {
 
     init: function init(_scrollTop) {
         if (app.affix.settings.el.length > 0) {
-            app.affix.resizeWidth();
-            app.affix.updateOffsetTop(_scrollTop);
-
-            app.affix.settings.el.forEach(function (affix) {
+            var delegate = function delegate(affix) {
                 var affixHeight = affix.offsetHeight;
 
                 if (affixHeight < app.settings.windowHeight) {
@@ -4156,7 +3686,11 @@ app.affix = {
                         app.affix.scroller(this.scrollY, affix);
                     };
                 }
-            });
+            };
+
+            app.affix.resizeWidth();
+            app.affix.updateOffsetTop(_scrollTop);
+            app.affix.settings.el.forEach(delegate);
 
             window.onresize = function () {
                 app.affix.resizeWidth();
@@ -4193,7 +3727,7 @@ app.affix = {
     },
 
     updateOffsetTop: function updateOffsetTop(_scrollTop) {
-        app.affix.settings.el.forEach(function (affix) {
+        var delegate = function delegate(affix) {
             var affixHeight = affix.offsetHeight,
                 offsetTop = affix.getBoundingClientRect().top;
 
@@ -4205,24 +3739,27 @@ app.affix = {
                 affix.setAttribute('data-affix-offset', Math.round(offsetTop));
                 app.affix.scroller(_scrollTop, affix);
             }
-        });
+        };
+
+        app.affix.settings.el.forEach(delegate);
     },
 
     resizeWidth: function resizeWidth() {
-        app.affix.settings.el.forEach(function (affix) {
+        var delegate = function delegate(affix) {
             affix.classList.remove('affix--fixed');
             affix.classList.remove('affix--absolute');
             affix.style.top = '';
             affix.style.width = '';
             affix.style.width = affix.offsetWidth + 'px';
-        });
+        };
+
+        app.affix.settings.el.forEach(delegate);
     }
 };
 app.btnDropdown = {
     init: function init() {
-
         // Dropdown toggler
-        document.querySelectorAll('[data-btn-dropdown-toggle]').forEach(function (toggle) {
+        var toggleEventHandler = function toggleEventHandler(toggle) {
             toggle.addEventListener('click', function (event) {
                 event.preventDefault();
                 event.stopPropagation();
@@ -4236,10 +3773,12 @@ app.btnDropdown = {
                     btnDropdown.classList.add('btn-dropdown--open');
                 }
             });
-        });
+        };
+
+        document.querySelectorAll('[data-btn-dropdown-toggle]').forEach(toggleEventHandler);
 
         // Do not close dropdown on dropdown content clicks
-        document.querySelectorAll('.btn-dropdown__dropdown, .btn-dropdown__list').forEach(function (btn) {
+        var dropdownEventHandler = function dropdownEventHandler(btn) {
             btn.addEventListener('click', function (event) {
                 var allowProp = btn.getAttribute('data-btn-dropdown');
 
@@ -4247,25 +3786,33 @@ app.btnDropdown = {
                     event.stopPropagation();
                 }
             });
-        });
+        };
+
+        document.querySelectorAll('.btn-dropdown__dropdown, .btn-dropdown__list').forEach(dropdownEventHandler);
 
         // Close all dropdowns on escape keydown
+        var eventCloseDelegate = function eventCloseDelegate(event) {
+            return app.btnDropdown.closeOpenDropdown();
+        };
+
         document.onkeydown = function (event) {
             if (event.keyCode === 27) {
-                app.btnDropdown.closeOpenDropdown();
+                eventCloseDelegate();
             }
         };
 
         // Close all dropdowns on body click
         document.body.addEventListener('click', function () {
-            app.btnDropdown.closeOpenDropdown();
+            eventCloseDelegate();
         });
     },
 
     closeOpenDropdown: function closeOpenDropdown() {
-        document.querySelectorAll('.btn-dropdown--open').forEach(function (openDropdown) {
+        var openDelegate = function openDelegate(openDropdown) {
             openDropdown.classList.remove('btn-dropdown--open');
-        });
+        };
+
+        document.querySelectorAll('.btn-dropdown--open').forEach(openDelegate);
     }
 
 };
@@ -4275,9 +3822,8 @@ app.btnRipple = {
     },
 
     init: function init() {
-        var btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple');
-
-        btns.forEach(function (btn) {
+        var btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple'),
+            btnEventHandler = function btnEventHandler(btn) {
             btn.addEventListener('click', function (event) {
                 var ripple = this.querySelector('.btn__ripple');
 
@@ -4298,7 +3844,9 @@ app.btnRipple = {
 
                 this.classList.add('btn--ripple-animate');
             });
-        });
+        };
+
+        btns.forEach(btnEventHandler);
     },
 
     appendRipple: function appendRipple(btn) {
@@ -4378,12 +3926,12 @@ Idea is kindly borrowed from [Christian Heilmann](https://www.christianheilmann.
 
 ```html_example
 <ul class="list-unstyled">
-    <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf" /></li>
-    <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf" /></li>
-    <template data-delay-image-loading>
-        <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed" /></li>
-        <li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed" /></li>
-    </template>
+	<li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf" /></li>
+	<li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf" /></li>
+	<template data-delay-image-loading>
+		<li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed" /></li>
+		<li><img src="http://placehold.it/400x100/f1f1f1/cfcfcf?text=delayed" /></li>
+	</template>
 </ul>
 ```
 
@@ -4422,35 +3970,39 @@ app.dropdowns = {
     },
 
     init: function init() {
-        app.dropdowns.settings.el.forEach(function (dropdown) {
-            return app.dropdowns.clickEvent(dropdown);
-        });
+        if (app.dropdowns.settings.el.length > 0) {
+            var dropdownDelegate = function dropdownDelegate(dropdown) {
+                return dropdown.addEventListener('click', function (event) {
+                    event.stopPropagation();
 
-        document.body.onkeydown = function (event) {
-            if (event.keyCode === 27) {
+                    if (document.documentElement.classList.contains('modernizr_touchevents') || this.getAttribute('data-dropdown-trigger')) {
+                        this.classList.toggle(app.dropdowns.settings.showClass);
+                    }
+                });
+            };
+
+            app.dropdowns.settings.el.forEach(dropdownDelegate);
+
+            document.body.onkeydown = function (event) {
+                if (event.keyCode === 27) {
+                    app.dropdowns.closeAllDropdowns();
+                }
+            };
+
+            document.body.onclick = function (event) {
                 app.dropdowns.closeAllDropdowns();
-            }
-        };
-
-        document.body.onclick = function (event) {
-            app.dropdowns.closeAllDropdowns();
-        };
-    },
-
-    clickEvent: function clickEvent(dropdown) {
-        dropdown.addEventListener('click', function (event) {
-            event.stopPropagation();
-
-            if (document.documentElement.classList.contains('modernizr_touchevents') || this.getAttribute('data-dropdown-trigger')) {
-                this.classList.toggle(app.dropdowns.settings.showClass);
-            }
-        });
+            };
+        }
     },
 
     closeAllDropdowns: function closeAllDropdowns() {
-        document.querySelectorAll('.dropdown').forEach(function (dropdown) {
-            dropdown.classList.remove('dropdown--show');
-        });
+        if (app.dropdowns.settings.el.length > 0) {
+            var closeDelegate = function closeDelegate(dropdown) {
+                return dropdown.classList.remove('dropdown--show');
+            };
+
+            document.querySelectorAll('.dropdown').forEach(closeDelegate);
+        }
     }
 };
 app.equalize = {
@@ -4460,7 +4012,7 @@ app.equalize = {
 
     init: function init() {
         if (app.equalize.settings.el !== null) {
-            app.equalize.settings.el.forEach(function (equalize) {
+            var equalizeDelegate = function equalizeDelegate(equalize) {
                 var currentHeight = 0,
                     mediaQuery = equalize.getAttribute('data-equalize'),
                     targets = equalize.querySelectorAll('[data-equalize-target]');
@@ -4485,7 +4037,9 @@ app.equalize = {
                         return target.style.height = 'auto';
                     });
                 }
-            });
+            };
+
+            app.equalize.settings.el.forEach(equalizeDelegate);
         }
     }
 };
@@ -4501,21 +4055,21 @@ Equalize targets in just a snap. It can be everything not just columns or blocks
 
 ```html_example
 <div class="grid" data-equalize>
-    <div class="column-4">
-        <div data-equalize-target class="card">
-            <div class="card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
-        </div>
-    </div>
-    <div class="column-4">
-        <div data-equalize-target class="card">
-            <div class="card__content">Lorem ipsum.</div>
-        </div>
-    </div>
-    <div class="column-4">
-        <div data-equalize-target class="card">
-            <div class="card__content">Lorem ipsum.</div>
-        </div>
-    </div>
+	<div class="column-4">
+		<div data-equalize-target class="card">
+			<div class="card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
+		</div>
+	</div>
+	<div class="column-4">
+		<div data-equalize-target class="card">
+			<div class="card__content">Lorem ipsum.</div>
+		</div>
+	</div>
+	<div class="column-4">
+		<div data-equalize-target class="card">
+			<div class="card__content">Lorem ipsum.</div>
+		</div>
+	</div>
 </div>
 ```
 
@@ -4523,21 +4077,21 @@ You can also set a media query from where the equalizer has to kick in, like thi
 
 ```html_example
 <div class="grid" data-equalize="betaAndUp">
-    <div class="column-4">
-        <div data-equalize-target class="card">
-            <div class="card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
-        </div>
-    </div>
-    <div class="column-4">
-        <div data-equalize-target class="card">
-            <div class="card__content">Lorem ipsum.</div>
-        </div>
-    </div>
-    <div class="column-4">
-        <div data-equalize-target class="card">
-            <div class="card__content">Lorem ipsum.</div>
-        </div>
-    </div>
+	<div class="column-4">
+		<div data-equalize-target class="card">
+			<div class="card__content">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis, beatae, alias? Necessitatibus nulla sint voluptate perspiciatis excepturi, architecto et, incidunt itaque iusto inventore porro! Eum ullam placeat quam, eius aperiam!</div>
+		</div>
+	</div>
+	<div class="column-4">
+		<div data-equalize-target class="card">
+			<div class="card__content">Lorem ipsum.</div>
+		</div>
+	</div>
+	<div class="column-4">
+		<div data-equalize-target class="card">
+			<div class="card__content">Lorem ipsum.</div>
+		</div>
+	</div>
 </div>
 ```
 
@@ -4581,17 +4135,20 @@ A lightweight, easy-to-use jQuery plugin for fluid width video embeds.
 Use the class fitvids as a container for your video and the plugin will take care of the rest.
 
 */
+/**
+ * This module is depended on jQuery.
+ * Plugin used: Parsley (validation engine).
+ */
+
 app.formModules = {
     settings: {
         $passwordToggle: $('.form__password-toggle'),
         passwordShowClass: 'form__input--show-password',
         $validation: $('[data-form-validate]'),
-        validationLanguage: 'nl',
-        $range: $('input[type=range]')
+        validationLanguage: 'nl'
     },
 
     init: function init() {
-        app.formModules.range();
         app.formModules.customFileInput();
         app.formModules.validation();
         app.formModules.password();
@@ -4599,53 +4156,39 @@ app.formModules = {
         app.formModules.floatingLabel();
     },
 
-    range: function range() {
-        if (!Modernizr.inputtypes.range) {
-            app.formModules.settings.$range.rangeslider();
-        }
-
-        app.formModules.settings.$range.on('input', function () {
-            var $this = $(this),
-                data = $this.data(),
-                id = $this.attr('id'),
-                val = $this.val(),
-                $range = $('[data-range=' + id + ']');
-
-            if (id !== undefined) {
-                data.rangeMeasurement === undefined ? $range.html(val) : $range.html(val + data.rangeMeasurement);
-            }
-        });
-    },
-
     customFileInput: function customFileInput() {
-        $('.form__file-input').each(function () {
-            var $input = $(this),
-                $label = $input.next('label'),
-                labelVal = $label.html();
+        var fileInput = document.querySelectorAll('.form__file-input');
 
-            $input.on('change', function (e) {
-                var fileName = '';
+        if (fileInput.length > 0) {
+            fileInput.forEach(function (input) {
+                var label = input.nextElementSibling,
+                    labelVal = label.innerHTML;
 
-                if (this.files && this.files.length > 1) {
-                    fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
-                } else if (e.target.value) {
-                    fileName = e.target.value.split('\\').pop();
-                }
+                input.addEventListener('change', function (event) {
+                    var fileName = '';
 
-                if (fileName) {
-                    $label.find('span').html(fileName);
-                } else {
-                    $label.html(labelVal);
-                }
+                    if (this.files && this.files.length > 1) {
+                        fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+                    } else if (event.target.value) {
+                        fileName = event.target.value.split('\\').pop();
+                    }
+
+                    if (fileName) {
+                        label.querySelector('span').innerHTML = fileName;
+                    } else {
+                        label.html(labelVal);
+                    }
+                });
+
+                // Firefox bug fix
+                input.addEventListener('focus', function (el) {
+                    return el.classList.add('has-focus');
+                });
+                input.addEventListener('blur', function (el) {
+                    return el.classList.remove('has-focus');
+                });
             });
-
-            // Firefox bug fix
-            $input.on('focus', function () {
-                $input.addClass('has-focus');
-            }).on('blur', function () {
-                $input.removeClass('has-focus');
-            });
-        });
+        }
     },
 
     password: function password() {
@@ -5444,9 +4987,11 @@ app.responsiveImages = {
     },
 
     setBackgroundImage: function setBackgroundImage() {
-        document.querySelectorAll('[data-responsive-bg-img]').forEach(function (el) {
-            app.responsiveImages.setBackgroundImageStyle(el);
-        });
+        var setDelegate = function setDelegate(el) {
+            return app.responsiveImages.setBackgroundImageStyle(el);
+        };
+
+        document.querySelectorAll('[data-responsive-bg-img]').forEach(setDelegate);
     },
 
     setBackgroundImageStyle: function setBackgroundImageStyle(element) {
@@ -5659,12 +5204,9 @@ app.scrollSpyNav = {
     }
 };
 app.svg = {
-
     init: function init() {
-
         svg4everybody(); // SVG support for IE9-11
     }
-
 };
 
 /*doc
@@ -5682,19 +5224,19 @@ There are no SVGs present in basos but you can create an SVG workflow for your p
 
 ```parse_html_example
 <div class="notification notification--alpha">
-    <div class="notification__text">All the SVG files dropped in the src/svg folder will be copied to the dist/svg map so you can use them separately in your document.</div>
+	<div class="notification__text">All the SVG files dropped in the src/svg folder will be copied to the dist/svg map so you can use them separately in your document.</div>
 </div>
 ```
 
 ```parse_html_example
 <div class="notification notification--alpha">
-    <div class="notification__text">We use svg4everybody for IE9-11 support.</div>
+	<div class="notification__text">We use svg4everybody for IE9-11 support.</div>
 </div>
 ```
 
 ```html_example
 <svg width="20px" height="20px">
-    <use xlink:href="assets/dist/img/sprite.svg#ID" />
+	<use xlink:href="assets/dist/img/sprite.svg#ID" />
 </svg>
 ```
 
@@ -5705,7 +5247,7 @@ app.tabs = {
     },
 
     init: function init() {
-        app.tabs.settings.tab.forEach(function (tab) {
+        var tabsEventHandler = function tabsEventHandler(tab) {
             tab.addEventListener('click', function (event) {
                 var item = document.querySelector(tab.getAttribute('href')),
                     content = item.closest('.tab-content');
@@ -5720,7 +5262,9 @@ app.tabs = {
                 content.querySelector('.tab-item--active').classList.remove('tab-item--active');
                 item.classList.add('tab-item--active');
             });
-        });
+        };
+
+        app.tabs.settings.tab.forEach(tabsEventHandler);
     }
 };
 app.toggle = {
@@ -5729,13 +5273,15 @@ app.toggle = {
     },
 
     init: function init() {
-        app.toggle.settings.el.forEach(function (toggle) {
+        var toggleEventHandler = function toggleEventHandler(toggle) {
             toggle.addEventListener('click', function (event) {
                 event.preventDefault();
 
                 app.toggle.toggler(document.querySelector(this.getAttribute('data-toggle')));
             });
-        });
+        };
+
+        app.toggle.settings.el.forEach(toggleEventHandler);
     },
 
     toggler: function toggler(_target) {
@@ -5744,7 +5290,7 @@ app.toggle = {
 };
 app.tooltips = {
     settings: {
-        $el: $('.tooltip'),
+        el: document.querySelectorAll('.tooltip'),
         tooltipActiveClass: 'tooltip--active',
         tooltipContentClass: 'tooltip__content',
         arrowWidth: 8,
@@ -5752,55 +5298,58 @@ app.tooltips = {
     },
 
     init: function init() {
-        if (app.tooltips.settings.$el.length > 0) {
-            app.tooltips.settings.$el.each(function () {
-                var $tooltipTrigger = $(this);
-
-                if ($tooltipTrigger.data('tooltipTrigger') === 'click' || app.settings.$html.hasClass('touch')) {
+        if (app.tooltips.settings.el.length > 0) {
+            var delegate = function delegate(el) {
+                if (el.getAttribute('data-tooltip-trigger') === 'click' || document.documentElement.classList.contains('modernizr_touchevents')) {
                     app.tooltips.settings.tooltipTrigger = 'click';
                 } else {
                     app.tooltips.settings.tooltipTrigger = 'hover';
                 }
 
-                app.tooltips.triggers($tooltipTrigger);
-                app.tooltips.appendContent($tooltipTrigger);
-            });
+                app.tooltips.triggers(el);
+                app.tooltips.appendContent(el);
+            };
+
+            app.tooltips.settings.el.forEach(delegate);
         }
     },
 
-    appendContent: function appendContent($tooltipTrigger) {
-        $tooltipTrigger.append('<div class="' + app.tooltips.settings.tooltipContentClass + '">' + $tooltipTrigger.attr('title') + '</div>').removeAttr('title');
+    appendContent: function appendContent(tooltipTrigger) {
+        var content = document.createElement('div');
 
-        app.tooltips.calculatePosition($tooltipTrigger, $tooltipTrigger.find('.tooltip__content'));
+        content.classList.add(app.tooltips.settings.tooltipContentClass);
+        content.innerHTML = tooltipTrigger.getAttribute('title');
+
+        tooltipTrigger.appendChild(content);
+        tooltipTrigger.setAttribute('title', '');
+        app.tooltips.calculatePosition(tooltipTrigger, tooltipTrigger.querySelector('.tooltip__content'));
     },
 
-    triggers: function triggers($tooltipTrigger) {
+    triggers: function triggers(tooltipTrigger) {
         if (app.tooltips.settings.tooltipTrigger === 'hover') {
-            $tooltipTrigger.on({
-                mouseenter: function mouseenter() {
-                    $(this).addClass(app.tooltips.settings.tooltipActiveClass);
-                },
-                mouseleave: function mouseleave() {
-                    $(this).removeClass(app.tooltips.settings.tooltipActiveClass);
-                }
+            tooltipTrigger.addEventListener('mouseover', function () {
+                this.classList.add(app.tooltips.settings.tooltipActiveClass);
+            });
+
+            tooltipTrigger.addEventListener('mouseout', function () {
+                this.classList.remove(app.tooltips.settings.tooltipActiveClass);
             });
         } else {
-            $tooltipTrigger.on('click', function () {
-                $(this).toggleClass(app.tooltips.settings.tooltipActiveClass);
+            tooltipTrigger.addEventListener('click', function () {
+                this.classList.toggle(app.tooltips.settings.tooltipActiveClass);
             });
         }
     },
 
-    calculatePosition: function calculatePosition($tooltipTrigger, $tooltipContent) {
-        var tooltipTriggerHeight = $tooltipTrigger.outerHeight(),
-            tooltipContentHeight = $tooltipContent.outerHeight();
+    calculatePosition: function calculatePosition(tooltipTrigger, tooltipContent) {
+        var position = tooltipTrigger.offsetHeight + app.tooltips.settings.arrowWidth + 'px';
 
-        switch ($tooltipTrigger.data('tooltipPosition')) {
+        switch (tooltipTrigger.getAttribute('data-tooltip-position')) {
             case 'top':
-                $tooltipContent.css({ bottom: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
+                tooltipContent.style.bottom = position;
                 break;
             case 'bottom':
-                $tooltipContent.css({ top: tooltipTriggerHeight + app.tooltips.settings.arrowWidth });
+                tooltipContent.style.top = position;
                 break;
         }
     }

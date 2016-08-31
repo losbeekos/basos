@@ -7,7 +7,6 @@
 		"jquery": "~3.*",
 		"parsleyjs": "~2.4.3",
 		"picturefill": "~3.0.2",
-		"rangeslider.js": "~2.1.1",
 		"susy": "~2.2.7",
 		"svg4everybody": "~2.1.0"
 	},

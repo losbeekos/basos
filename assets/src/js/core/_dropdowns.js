@@ -1,36 +1,38 @@
 app.dropdowns = {
-    settings: {
-        el: document.querySelectorAll('.dropdown'),
-        showClass: 'dropdown--show'
-    },
+	settings: {
+		el: document.querySelectorAll('.dropdown'),
+		showClass: 'dropdown--show'
+	},
 
-    init: function () {
-        app.dropdowns.settings.el.forEach(dropdown => app.dropdowns.clickEvent(dropdown));
+	init: function () {
+		if (app.dropdowns.settings.el.length > 0) {
+			let dropdownDelegate = dropdown => dropdown.addEventListener('click', function (event) {
+				event.stopPropagation();
 
-        document.body.onkeydown = function (event) {
-            if (event.keyCode === 27) {
-                app.dropdowns.closeAllDropdowns();
-            }
-        };
+				if (document.documentElement.classList.contains('modernizr_touchevents') || this.getAttribute('data-dropdown-trigger')) {
+					this.classList.toggle(app.dropdowns.settings.showClass);
+				}
+			});
 
-        document.body.onclick = function (event) {
-            app.dropdowns.closeAllDropdowns();
-        };
-    },
+			app.dropdowns.settings.el.forEach(dropdownDelegate);
 
-    clickEvent: function (dropdown) {
-        dropdown.addEventListener('click', function (event) {
-            event.stopPropagation();
+			document.body.onkeydown = function (event) {
+				if (event.keyCode === 27) {
+					app.dropdowns.closeAllDropdowns();
+				}
+			};
 
-            if (document.documentElement.classList.contains('modernizr_touchevents') || this.getAttribute('data-dropdown-trigger')) {
-                this.classList.toggle(app.dropdowns.settings.showClass);
-            }
-        });
-    },
+			document.body.onclick = function (event) {
+				app.dropdowns.closeAllDropdowns();
+			};
+		}
+	},
 
-    closeAllDropdowns: function () {
-        document.querySelectorAll('.dropdown').forEach(function (dropdown) {
-            dropdown.classList.remove('dropdown--show');
-        });
-    }
+	closeAllDropdowns: function () {
+		if (app.dropdowns.settings.el.length > 0) {
+			let closeDelegate = dropdown => dropdown.classList.remove('dropdown--show');
+
+			document.querySelectorAll('.dropdown').forEach(closeDelegate);
+		}
+	}
 };

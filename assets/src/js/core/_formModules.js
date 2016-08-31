@@ -1,14 +1,17 @@
+/**
+ * This module is depended on jQuery.
+ * Plugin used: Parsley (validation engine).
+ */
+
 app.formModules = {
     settings: {
         $passwordToggle: $('.form__password-toggle'),
         passwordShowClass: 'form__input--show-password',
         $validation: $('[data-form-validate]'),
-        validationLanguage: 'nl',
-        $range: $('input[type=range]')
+        validationLanguage: 'nl'
     },
 
     init: function () {
-        app.formModules.range();
         app.formModules.customFileInput();
         app.formModules.validation();
         app.formModules.password();
@@ -16,53 +19,37 @@ app.formModules = {
         app.formModules.floatingLabel();
     },
 
-    range: function () {
-        if (!Modernizr.inputtypes.range) {
-            app.formModules.settings.$range.rangeslider();
-        }
-
-        app.formModules.settings.$range.on('input', function () {
-            var $this = $(this),
-                data = $this.data(),
-                id = $this.attr('id'),
-                val = $this.val(),
-                $range = $('[data-range=' + id +']');
-
-            if (id !== undefined) {
-                data.rangeMeasurement === undefined ? $range.html(val) : $range.html(val + data.rangeMeasurement);
-            }
-        });
-    },
-
     customFileInput: function () {
-        $('.form__file-input').each( function() {
-            var $input = $( this ),
-                $label = $input.next('label'),
-                labelVal = $label.html();
+        let fileInput = document.querySelectorAll('.form__file-input');
 
-            $input.on('change', function( e ) {
-                var fileName = '';
+        if(fileInput.length > 0) {
+            fileInput.forEach(input => {
+                var label = input.nextElementSibling,
+                    labelVal = label.innerHTML;
 
-                if( this.files && this.files.length > 1 ) {
-                    fileName = ( this.getAttribute('data-multiple-caption' ) || '').replace('{count}', this.files.length );
-                }
-                else if( e.target.value ) {
-                    fileName = e.target.value.split( '\\' ).pop();
-                }
+                input.addEventListener('change', function(event) {
+                    var fileName = '';
 
-                if( fileName ) {
-                    $label.find('span').html( fileName );
-                }
-                else {
-                    $label.html( labelVal );
-                }
+                    if (this.files && this.files.length > 1) {
+                        fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
+                    }
+                    else if (event.target.value) {
+                        fileName = event.target.value.split('\\').pop();
+                    }
+
+                    if (fileName) {
+                        label.querySelector('span').innerHTML = fileName;
+                    }
+                    else {
+                        label.html(labelVal);
+                    }
+                });
+
+                // Firefox bug fix
+                input.addEventListener('focus', el => el.classList.add('has-focus'));
+                input.addEventListener('blur', el => el.classList.remove('has-focus'));
             });
-
-            // Firefox bug fix
-            $input
-                .on('focus', function(){ $input.addClass('has-focus'); })
-                .on('blur', function(){ $input.removeClass('has-focus'); });
-        });
+        }
     },
 
     password: function () {
@@ -106,7 +93,7 @@ app.formModules = {
                 }
             };
 
-        if(app.formModules.settings.$validation.length > 0) {
+        if (app.formModules.settings.$validation.length > 0) {
             app.formModules.settings.$validation.each(function () {
                 $(this).parsley(parsleyOptions);
             });
