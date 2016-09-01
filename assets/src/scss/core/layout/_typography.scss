@@ -21,7 +21,7 @@ h6, .h6 {
 
 h1, .h1 {
 	margin: ms(0) 0;
-	font-weight: 800;
+	font-weight: 700;
 
 	@include vr($h1-font-size, map-get($ratio, fourth));
 }

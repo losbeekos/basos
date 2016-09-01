@@ -2,14 +2,14 @@
 ==========
 */
 
-
 // Custom font
-@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300,600);
+// @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,300,600);
 
 %font-custom {
-	font-family: 'Open Sans', sans-serif;
+	// We don't load any custom font initially
+	// font-family: 'Open Sans', sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 }
-
 
 // Icons
 @font-face {

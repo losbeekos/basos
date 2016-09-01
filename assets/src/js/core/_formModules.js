@@ -5,10 +5,11 @@
 
 app.formModules = {
     settings: {
-        $passwordToggle: $('.form__password-toggle'),
+        passwordToggle: document.querySelectorAll('.form__password-toggle'),
         passwordShowClass: 'form__input--show-password',
         $validation: $('[data-form-validate]'),
-        validationLanguage: 'nl'
+        validationLanguage: 'nl',
+        range: document.querySelectorAll('input[type=range]')
     },
 
     init: function () {
@@ -17,6 +18,24 @@ app.formModules = {
         app.formModules.password();
         app.formModules.ajaxForm();
         app.formModules.floatingLabel();
+        app.formModules.range();
+    },
+
+    range: function () {
+        let rangeEventHandler = range => {
+            range.addEventListener('input', function () {
+                let id = this.getAttribute('id'),
+                    val = this.value,
+                    measurement = this.getAttribute('data-range-measurement'),
+                    range = document.querySelector('[data-range=' + id +']');
+
+                if (id !== undefined) {
+                    range.innerHTML = measurement === undefined ? val : val + measurement;
+                }
+            });
+        };
+
+        app.formModules.settings.range.forEach(rangeEventHandler);
     },
 
     customFileInput: function () {
@@ -53,15 +72,19 @@ app.formModules = {
     },
 
     password: function () {
-        app.formModules.settings.$passwordToggle.on('click', function () {
-            var $this = $(this),
-                $formPassword = $this.closest('.form__input'),
-                $formInput = $formPassword.find('input'),
-                formType = $formInput.attr('type');
+        let eventHandler = el => {
+            el.addEventListener('click', function () {
+                var $this = $(this),
+                    $formPassword = $this.closest('.form__input'),
+                    $formInput = $formPassword.find('input'),
+                    formType = $formInput.attr('type');
 
-            $formInput.attr('type', formType === 'text' ? 'password': 'text');
-            $formPassword.toggleClass(app.formModules.settings.passwordShowClass);
-        });
+                $formInput.attr('type', formType === 'text' ? 'password': 'text');
+                $formPassword.toggleClass(app.formModules.settings.passwordShowClass);
+            });
+        };
+
+        app.formModules.settings.passwordToggle.forEach(eventHandler);
     },
 
     validation: function(){

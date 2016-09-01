@@ -3451,22 +3451,13 @@ if (typeof Element.prototype.matches !== 'function') {
  * @type {Array}
  */
 
-var methodsArray = ['forEach', 'filter'];
+var methods = ['forEach', 'filter'];
 
-for (var n in methodsArray) {
-    var method = methodsArray[n];
+for (var n in methods) {
+    var method = methods[n];
 
     if (typeof NodeList.prototype[method] !== 'function') {
         NodeList.prototype[method] = Array.prototype[method];
-    }
-}
-var methods = ['forEach', 'filter'];
-
-for (var _n in methods) {
-    var _method = methods[_n];
-
-    if (typeof NodeList.prototype[_method] !== 'function') {
-        NodeList.prototype[_method] = Array.prototype[_method];
     }
 }
 /*doc
@@ -3708,6 +3699,7 @@ app.affix = {
     },
 
     scroller: function scroller(_scrollTop, _el) {
+        console.log('affix');
         var container = _el.closest('.affix-container'),
             affixOffsetTop = _el.getAttribute('data-affix-offset'),
             bottomTrigger = helper.getCoords(container).top + container.offsetHeight - _el.offsetHeight;
@@ -4151,10 +4143,11 @@ Use the class fitvids as a container for your video and the plugin will take car
 
 app.formModules = {
     settings: {
-        $passwordToggle: $('.form__password-toggle'),
+        passwordToggle: document.querySelectorAll('.form__password-toggle'),
         passwordShowClass: 'form__input--show-password',
         $validation: $('[data-form-validate]'),
-        validationLanguage: 'nl'
+        validationLanguage: 'nl',
+        range: document.querySelectorAll('input[type=range]')
     },
 
     init: function init() {
@@ -4163,6 +4156,24 @@ app.formModules = {
         app.formModules.password();
         app.formModules.ajaxForm();
         app.formModules.floatingLabel();
+        app.formModules.range();
+    },
+
+    range: function range() {
+        var rangeEventHandler = function rangeEventHandler(range) {
+            range.addEventListener('input', function () {
+                var id = this.getAttribute('id'),
+                    val = this.value,
+                    measurement = this.getAttribute('data-range-measurement'),
+                    range = document.querySelector('[data-range=' + id + ']');
+
+                if (id !== undefined) {
+                    range.innerHTML = measurement === undefined ? val : val + measurement;
+                }
+            });
+        };
+
+        app.formModules.settings.range.forEach(rangeEventHandler);
     },
 
     customFileInput: function customFileInput() {
@@ -4201,15 +4212,19 @@ app.formModules = {
     },
 
     password: function password() {
-        app.formModules.settings.$passwordToggle.on('click', function () {
-            var $this = $(this),
-                $formPassword = $this.closest('.form__input'),
-                $formInput = $formPassword.find('input'),
-                formType = $formInput.attr('type');
+        var eventHandler = function eventHandler(el) {
+            el.addEventListener('click', function () {
+                var $this = $(this),
+                    $formPassword = $this.closest('.form__input'),
+                    $formInput = $formPassword.find('input'),
+                    formType = $formInput.attr('type');
 
-            $formInput.attr('type', formType === 'text' ? 'password' : 'text');
-            $formPassword.toggleClass(app.formModules.settings.passwordShowClass);
-        });
+                $formInput.attr('type', formType === 'text' ? 'password' : 'text');
+                $formPassword.toggleClass(app.formModules.settings.passwordShowClass);
+            });
+        };
+
+        app.formModules.settings.passwordToggle.forEach(eventHandler);
     },
 
     validation: function validation() {
