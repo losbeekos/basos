@@ -1,7 +1,7 @@
 app.yourModule = {
-    settings: {
-    },
+	settings: {
+	},
 
-    init: function () {
-    }
+	init: function () {
+	}
 };

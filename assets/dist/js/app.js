@@ -3413,19 +3413,19 @@ Parsley.setLocale('nl');
  */
 
 if (typeof Element.prototype.closest !== 'function') {
-    Element.prototype.closest = function closest(selector) {
-        var element = this;
+	Element.prototype.closest = function closest(selector) {
+		var element = this;
 
-        while (element && element.nodeType === 1) {
-            if (element.matches(selector)) {
-                return element;
-            }
+		while (element && element.nodeType === 1) {
+			if (element.matches(selector)) {
+				return element;
+			}
 
-            element = element.parentNode;
-        }
+			element = element.parentNode;
+		}
 
-        return null;
-    };
+		return null;
+	};
 }
 /**
  * Method of testing whether or not a DOM element matches a given selector. 
@@ -3434,17 +3434,17 @@ if (typeof Element.prototype.closest !== 'function') {
  */
 
 if (typeof Element.prototype.matches !== 'function') {
-    Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.webkitMatchesSelector || function matches(selector) {
-        var element = this,
-            elements = (element.document || element.ownerDocument).querySelectorAll(selector),
-            index = 0;
+	Element.prototype.matches = Element.prototype.msMatchesSelector || Element.prototype.mozMatchesSelector || Element.prototype.webkitMatchesSelector || function matches(selector) {
+		var element = this,
+		    elements = (element.document || element.ownerDocument).querySelectorAll(selector),
+		    index = 0;
 
-        while (elements[index] && elements[index] !== element) {
-            ++index;
-        }
+		while (elements[index] && elements[index] !== element) {
+			++index;
+		}
 
-        return Boolean(elements[index]);
-    };
+		return Boolean(elements[index]);
+	};
 }
 /**
  * Transform HTML collections and Nodes to arrays, so the methods are available.
@@ -3454,11 +3454,11 @@ if (typeof Element.prototype.matches !== 'function') {
 var methods = ['forEach', 'filter'];
 
 for (var n in methods) {
-    var method = methods[n];
+	var method = methods[n];
 
-    if (typeof NodeList.prototype[method] !== 'function') {
-        NodeList.prototype[method] = Array.prototype[method];
-    }
+	if (typeof NodeList.prototype[method] !== 'function') {
+		NodeList.prototype[method] = Array.prototype[method];
+	}
 }
 /*doc
 ---
@@ -3473,78 +3473,78 @@ var app = app || {},
     helper = helper || {};
 
 app.settings = {
-    // Nodes
-    html: document.querySelector('html'),
-    body: document.body,
-    container: document.getElementById('container'),
+	// Nodes
+	html: document.querySelector('html'),
+	body: document.body,
+	container: document.getElementById('container'),
 
-    // jQuery objects
-    $document: $(document),
-    $window: $(window),
-    $html: $('html'),
-    $body: $('body'),
-    $htmlAndBody: $('html, body'),
-    $background: $('#background'),
-    $container: $('#container'),
-    $main: $('#main'),
+	// jQuery objects
+	$document: $(document),
+	$window: $(window),
+	$html: $('html'),
+	$body: $('body'),
+	$htmlAndBody: $('html, body'),
+	$background: $('#background'),
+	$container: $('#container'),
+	$main: $('#main'),
 
-    // Misc.
-    windowHeight: $(window).height(),
-    windowWidth: $(window).width()
+	// Misc.
+	windowHeight: $(window).height(),
+	windowWidth: $(window).width()
 };
 
 app.mediaQueries = {
-    alphaAndUp: '(min-width: 0px)',
-    alphaAndBeta: '(max-width: 699px)',
-    alpha: '(max-width: 599px)',
-    betaAndUp: '(min-width: 600px)',
-    beta: '(min-width: 600px) and (max-width: 767px)',
-    gammaAndUp: '(min-width: 768px)',
-    gamma: '(min-width: 768px) and (max-width: 799px)',
-    deltaAndUp: '(min-width: 800px)',
-    delta: '(min-width: 800px) and (max-width: 999px)',
-    epsilonAndUp: '(min-width: 1000px)',
-    epsilon: '(min-width: 1000px) and (max-width: 1199px)',
-    zetaAndUp: '(min-width: 1200px)',
-    zeta: '(min-width: 1200px) and (max-width: 1399px)',
-    etaAndUp: '(min-width: 1400px)'
+	alphaAndUp: '(min-width: 0px)',
+	alphaAndBeta: '(max-width: 699px)',
+	alpha: '(max-width: 599px)',
+	betaAndUp: '(min-width: 600px)',
+	beta: '(min-width: 600px) and (max-width: 767px)',
+	gammaAndUp: '(min-width: 768px)',
+	gamma: '(min-width: 768px) and (max-width: 799px)',
+	deltaAndUp: '(min-width: 800px)',
+	delta: '(min-width: 800px) and (max-width: 999px)',
+	epsilonAndUp: '(min-width: 1000px)',
+	epsilon: '(min-width: 1000px) and (max-width: 1199px)',
+	zetaAndUp: '(min-width: 1200px)',
+	zeta: '(min-width: 1200px) and (max-width: 1399px)',
+	etaAndUp: '(min-width: 1400px)'
 };
 helper.cookies = {
-    create: function create(name, value, days) {
-        var expires = "";
+	create: function create(name, value, days) {
+		var expires = "";
 
-        if (days) {
-            var date = new Date();
+		if (days) {
+			var date = new Date();
 
-            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-            expires = "; expires=" + date.toGMTString();
-        }
+			date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+			expires = "; expires=" + date.toGMTString();
+		}
 
-        document.cookie = name + "=" + value + expires + "; path=/";
-    },
+		document.cookie = name + "=" + value + expires + "; path=/";
+	},
 
-    read: function read(name) {
-        var nameEQ = name + "=",
-            ca = document.cookie.split(';');
+	read: function read(name) {
+		var nameEQ = name + "=",
+		    ca = document.cookie.split(';');
 
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
+		for (var i = 0; i < ca.length; i++) {
+			var c = ca[i];
 
-            while (c.charAt(0) === ' ') {
-                c = c.substring(1, c.length);
-            }
+			while (c.charAt(0) === ' ') {
+				c = c.substring(1, c.length);
+			}
 
-            if (c.indexOf(nameEQ) === 0) {
-                return c.substring(nameEQ.length, c.length);
-            }
-        }
+			if (c.indexOf(nameEQ) === 0) {
+				return c.substring(nameEQ.length, c.length);
+			}
+		}
 
-        return null;
-    },
+		return null;
+	},
 
-    erase: function erase(name) {
-        helper.cookies.create(name, "", -1);
-    }
+	erase: function erase(name) {
+		helper.cookies.create(name, "", -1);
+	}
 };
 /**
  * Get coordinates relative to the document,
@@ -3552,365 +3552,365 @@ helper.cookies = {
  */
 
 helper.getCoords = function (el) {
-    var box = el.getBoundingClientRect();
+	var box = el.getBoundingClientRect();
 
-    var body = document.body;
-    var docEl = document.documentElement;
+	var body = document.body;
+	var docEl = document.documentElement;
 
-    var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
-    var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
+	var scrollTop = window.pageYOffset || docEl.scrollTop || body.scrollTop;
+	var scrollLeft = window.pageXOffset || docEl.scrollLeft || body.scrollLeft;
 
-    var clientTop = docEl.clientTop || body.clientTop || 0;
-    var clientLeft = docEl.clientLeft || body.clientLeft || 0;
+	var clientTop = docEl.clientTop || body.clientTop || 0;
+	var clientLeft = docEl.clientLeft || body.clientLeft || 0;
 
-    var top = box.top + scrollTop - clientTop;
-    var left = box.left + scrollLeft - clientLeft;
+	var top = box.top + scrollTop - clientTop;
+	var left = box.left + scrollLeft - clientLeft;
 
-    return {
-        top: Math.round(top),
-        left: Math.round(left) };
+	return {
+		top: Math.round(top),
+		left: Math.round(left) };
 };
 helper.inView = function (el) {
-    if (el instanceof jQuery) {
-        el = el[0];
-    }
+	if (el instanceof jQuery) {
+		el = el[0];
+	}
 
-    var rect = el.getBoundingClientRect();
+	var rect = el.getBoundingClientRect();
 
-    return rect.top >= 0 && rect.bottom <= document.body.clientHeight;
+	return rect.top >= 0 && rect.bottom <= document.body.clientHeight;
 };
 helper.outView = function (el) {
-    if (el instanceof jQuery) {
-        el = el[0];
-    }
+	if (el instanceof jQuery) {
+		el = el[0];
+	}
 
-    var rect = el.getBoundingClientRect();
+	var rect = el.getBoundingClientRect();
 
-    return rect.bottom < 0 || rect.top > document.body.clientHeight;
+	return rect.bottom < 0 || rect.top > document.body.clientHeight;
 };
 helper.partiallyInView = function (el) {
-    if (el instanceof jQuery) {
-        el = el[0];
-    }
+	if (el instanceof jQuery) {
+		el = el[0];
+	}
 
-    var rect = el.getBoundingClientRect();
+	var rect = el.getBoundingClientRect();
 
-    return rect.bottom - rect.height / 2 <= document.body.clientHeight;
+	return rect.bottom - rect.height / 2 <= document.body.clientHeight;
 };
 app.accordion = {
-    settings: {
-        el: document.querySelectorAll('.accordion'),
-        group: document.querySelectorAll('.accordion__group'),
-        trigger: document.querySelectorAll('.accordion__trigger'),
-        contentShowClass: 'accordion-content-show'
-    },
+	settings: {
+		el: document.querySelectorAll('.accordion'),
+		group: document.querySelectorAll('.accordion__group'),
+		trigger: document.querySelectorAll('.accordion__trigger'),
+		contentShowClass: 'accordion-content-show'
+	},
 
-    init: function init() {
-        if (app.accordion.settings.el.length > 0) {
-            app.accordion.setGroupHeight();
-            app.accordion.toggler();
+	init: function init() {
+		if (app.accordion.settings.el.length > 0) {
+			app.accordion.setGroupHeight();
+			app.accordion.toggler();
 
-            window.onresize = function () {
-                app.accordion.setGroupHeight();
-            };
-        }
-    },
+			window.onresize = function () {
+				app.accordion.setGroupHeight();
+			};
+		}
+	},
 
-    setGroupHeight: function setGroupHeight() {
-        var groupDelegate = function groupDelegate(group) {
-            var groupContent = group.querySelector('.accordion__content');
+	setGroupHeight: function setGroupHeight() {
+		var groupDelegate = function groupDelegate(group) {
+			var groupContent = group.querySelector('.accordion__content');
 
-            groupContent.setAttribute('style', '');
+			groupContent.setAttribute('style', '');
 
-            var contentHeight = groupContent.offsetHeight;
+			var contentHeight = groupContent.offsetHeight;
 
-            groupContent.setAttribute('data-accordion-content-height', contentHeight);
-            group.classList.contains(app.accordion.settings.contentShowClass) ? groupContent.style.maxHeight = contentHeight : groupContent.style.maxHeight = 0;
-        };
+			groupContent.setAttribute('data-accordion-content-height', contentHeight);
+			group.classList.contains(app.accordion.settings.contentShowClass) ? groupContent.style.maxHeight = contentHeight : groupContent.style.maxHeight = 0;
+		};
 
-        app.accordion.settings.group.forEach(groupDelegate);
-    },
+		app.accordion.settings.group.forEach(groupDelegate);
+	},
 
-    toggler: function toggler() {
-        var triggerEventHandler = function triggerEventHandler(trigger) {
-            trigger.addEventListener('click', function () {
-                var group = trigger.parentNode,
-                    content = trigger.nextElementSibling;
+	toggler: function toggler() {
+		var triggerEventHandler = function triggerEventHandler(trigger) {
+			trigger.addEventListener('click', function () {
+				var group = trigger.parentNode,
+				    content = trigger.nextElementSibling;
 
-                if (group.classList.contains(app.accordion.settings.contentShowClass)) {
-                    app.accordion.hideGroup(content);
-                } else {
-                    app.accordion.hideGroup(trigger);
-                    app.accordion.showGroup(trigger, content);
-                }
-            });
-        };
+				if (group.classList.contains(app.accordion.settings.contentShowClass)) {
+					app.accordion.hideGroup(content);
+				} else {
+					app.accordion.hideGroup(trigger);
+					app.accordion.showGroup(trigger, content);
+				}
+			});
+		};
 
-        app.accordion.settings.trigger.forEach(triggerEventHandler);
-    },
+		app.accordion.settings.trigger.forEach(triggerEventHandler);
+	},
 
-    showGroup: function showGroup(trigger, content) {
-        content.style.maxHeight = trigger.nextElementSibling.getAttribute('data-accordion-content-height') + 'px';
-        content.parentNode.classList.add(app.accordion.settings.contentShowClass);
-    },
+	showGroup: function showGroup(trigger, content) {
+		content.style.maxHeight = trigger.nextElementSibling.getAttribute('data-accordion-content-height') + 'px';
+		content.parentNode.classList.add(app.accordion.settings.contentShowClass);
+	},
 
-    hideGroup: function hideGroup(trigger) {
-        var shownItem = document.querySelector('.accordion-content-show'),
-            content = document.querySelectorAll('.accordion__content'),
-            contentDelegate = function contentDelegate(content) {
-            return content.style.maxHeight = 0;
-        };
+	hideGroup: function hideGroup(trigger) {
+		var shownItem = document.querySelector('.accordion-content-show'),
+		    content = document.querySelectorAll('.accordion__content'),
+		    contentDelegate = function contentDelegate(content) {
+			return content.style.maxHeight = 0;
+		};
 
-        if (shownItem === null) {
-            trigger.classList.add(app.accordion.settings.contentShowClass);
-        } else {
-            shownItem.classList.remove(app.accordion.settings.contentShowClass);
-        }
+		if (shownItem === null) {
+			trigger.classList.add(app.accordion.settings.contentShowClass);
+		} else {
+			shownItem.classList.remove(app.accordion.settings.contentShowClass);
+		}
 
-        content.forEach(contentDelegate);
-    }
+		content.forEach(contentDelegate);
+	}
 };
 app.affix = {
-    settings: {
-        el: document.querySelectorAll('[data-affix]'),
-        navBar: document.getElementById('nav-bar')
-    },
+	settings: {
+		el: document.querySelectorAll('[data-affix]'),
+		navBar: document.getElementById('nav-bar')
+	},
 
-    init: function init(_scrollTop) {
-        if (app.affix.settings.el.length > 0) {
-            var delegate = function delegate(affix) {
-                var affixHeight = affix.offsetHeight;
+	init: function init(_scrollTop) {
+		if (app.affix.settings.el.length > 0) {
+			var delegate = function delegate(affix) {
+				var affixHeight = affix.offsetHeight;
 
-                if (affixHeight < app.settings.windowHeight) {
-                    window.onscroll = function () {
-                        app.affix.scroller(this.scrollY, affix);
-                    };
-                }
-            };
+				if (affixHeight < app.settings.windowHeight) {
+					window.onscroll = function () {
+						app.affix.scroller(this.scrollY, affix);
+					};
+				}
+			};
 
-            app.affix.resizeWidth();
-            app.affix.updateOffsetTop(_scrollTop);
-            app.affix.settings.el.forEach(delegate);
+			app.affix.resizeWidth();
+			app.affix.updateOffsetTop(_scrollTop);
+			app.affix.settings.el.forEach(delegate);
 
-            window.onresize = function () {
-                app.affix.resizeWidth();
-            };
-        }
-    },
+			window.onresize = function () {
+				app.affix.resizeWidth();
+			};
+		}
+	},
 
-    scroller: function scroller(_scrollTop, _el) {
-        var container = _el.closest('.affix-container'),
-            affixOffsetTop = _el.getAttribute('data-affix-offset'),
-            bottomTrigger = helper.getCoords(container).top + container.offsetHeight - _el.offsetHeight;
+	scroller: function scroller(_scrollTop, _el) {
+		var container = _el.closest('.affix-container'),
+		    affixOffsetTop = _el.getAttribute('data-affix-offset'),
+		    bottomTrigger = helper.getCoords(container).top + container.offsetHeight - _el.offsetHeight;
 
-        if (app.navBar.settings.el && app.navBar.settings.el.classList.contains('nav-bar--fixed')) {
-            bottomTrigger = bottomTrigger - app.navBar.settings.navBarHeight;
-        }
+		if (app.navBar.settings.el && app.navBar.settings.el.classList.contains('nav-bar--fixed')) {
+			bottomTrigger = bottomTrigger - app.navBar.settings.navBarHeight;
+		}
 
-        // Make it stick
-        if (_scrollTop >= affixOffsetTop && _scrollTop < bottomTrigger && _el.offsetHeight < container.offsetHeight) {
-            _el.classList.add('affix--fixed');
-            _el.classList.remove('affix--absolute');
-            app.navBar.settings.el.classList.contains('nav-bar--fixed') ? _el.style.top = app.affix.settings.navBar.offsetHeight : _el.style.top = 0;
+		// Make it stick
+		if (_scrollTop >= affixOffsetTop && _scrollTop < bottomTrigger && _el.offsetHeight < container.offsetHeight) {
+			_el.classList.add('affix--fixed');
+			_el.classList.remove('affix--absolute');
+			app.navBar.settings.el.classList.contains('nav-bar--fixed') ? _el.style.top = app.affix.settings.navBar.offsetHeight : _el.style.top = 0;
 
-            // At the bottom so bottom align it
-        } else if (_scrollTop >= bottomTrigger && _el.offsetHeight < container.offsetHeight) {
-            _el.classList.remove('affix--fixed');
-            _el.classList.add('affix--absolute');
+			// At the bottom so bottom align it
+		} else if (_scrollTop >= bottomTrigger && _el.offsetHeight < container.offsetHeight) {
+			_el.classList.remove('affix--fixed');
+			_el.classList.add('affix--absolute');
 
-            // Relative positioning
-        } else {
-            _el.classList.remove('affix--fixed');
-            _el.classList.remove('affix--absolute');
-            _el.style.top = 0;
-        }
-    },
+			// Relative positioning
+		} else {
+			_el.classList.remove('affix--fixed');
+			_el.classList.remove('affix--absolute');
+			_el.style.top = 0;
+		}
+	},
 
-    updateOffsetTop: function updateOffsetTop(_scrollTop) {
-        var delegate = function delegate(affix) {
-            var affixHeight = affix.offsetHeight,
-                offsetTop = affix.getBoundingClientRect().top;
+	updateOffsetTop: function updateOffsetTop(_scrollTop) {
+		var delegate = function delegate(affix) {
+			var affixHeight = affix.offsetHeight,
+			    offsetTop = affix.getBoundingClientRect().top;
 
-            if (affixHeight < app.settings.windowHeight) {
-                if (app.navBar.settings.el && app.navBar.settings.el.classList.contains('nav-bar--fixed')) {
-                    offsetTop = offsetTop - app.affix.settings.navBar.outerHeight;
-                }
+			if (affixHeight < app.settings.windowHeight) {
+				if (app.navBar.settings.el && app.navBar.settings.el.classList.contains('nav-bar--fixed')) {
+					offsetTop = offsetTop - app.affix.settings.navBar.outerHeight;
+				}
 
-                affix.setAttribute('data-affix-offset', Math.round(offsetTop));
-                app.affix.scroller(_scrollTop, affix);
-            }
-        };
+				affix.setAttribute('data-affix-offset', Math.round(offsetTop));
+				app.affix.scroller(_scrollTop, affix);
+			}
+		};
 
-        app.affix.settings.el.forEach(delegate);
-    },
+		app.affix.settings.el.forEach(delegate);
+	},
 
-    resizeWidth: function resizeWidth() {
-        var delegate = function delegate(affix) {
-            affix.classList.remove('affix--fixed');
-            affix.classList.remove('affix--absolute');
-            affix.style.top = '';
-            affix.style.width = '';
-            affix.style.width = affix.offsetWidth + 'px';
-        };
+	resizeWidth: function resizeWidth() {
+		var delegate = function delegate(affix) {
+			affix.classList.remove('affix--fixed');
+			affix.classList.remove('affix--absolute');
+			affix.style.top = '';
+			affix.style.width = '';
+			affix.style.width = affix.offsetWidth + 'px';
+		};
 
-        app.affix.settings.el.forEach(delegate);
-    }
+		app.affix.settings.el.forEach(delegate);
+	}
 };
 app.btnDropdown = {
-    init: function init() {
-        // Dropdown toggler
-        var toggleEventHandler = function toggleEventHandler(toggle) {
-            toggle.addEventListener('click', function (event) {
-                event.preventDefault();
-                event.stopPropagation();
+	init: function init() {
+		// Dropdown toggler
+		var toggleEventHandler = function toggleEventHandler(toggle) {
+			toggle.addEventListener('click', function (event) {
+				event.preventDefault();
+				event.stopPropagation();
 
-                btnDropdown = this.closest('.btn-dropdown');
+				btnDropdown = this.closest('.btn-dropdown');
 
-                if (btnDropdown.classList.contains('btn-dropdown--open')) {
-                    btnDropdown.classList.remove('btn-dropdown--open');
-                } else {
-                    app.btnDropdown.closeOpenDropdown();
-                    btnDropdown.classList.add('btn-dropdown--open');
-                }
-            });
-        };
+				if (btnDropdown.classList.contains('btn-dropdown--open')) {
+					btnDropdown.classList.remove('btn-dropdown--open');
+				} else {
+					app.btnDropdown.closeOpenDropdown();
+					btnDropdown.classList.add('btn-dropdown--open');
+				}
+			});
+		};
 
-        document.querySelectorAll('[data-btn-dropdown-toggle]').forEach(toggleEventHandler);
+		document.querySelectorAll('[data-btn-dropdown-toggle]').forEach(toggleEventHandler);
 
-        // Do not close dropdown on dropdown content clicks
-        var dropdownEventHandler = function dropdownEventHandler(btn) {
-            btn.addEventListener('click', function (event) {
-                var allowProp = btn.getAttribute('data-btn-dropdown');
+		// Do not close dropdown on dropdown content clicks
+		var dropdownEventHandler = function dropdownEventHandler(btn) {
+			btn.addEventListener('click', function (event) {
+				var allowProp = btn.getAttribute('data-btn-dropdown');
 
-                if (allowProp !== 'allowPropagation') {
-                    event.stopPropagation();
-                }
-            });
-        };
+				if (allowProp !== 'allowPropagation') {
+					event.stopPropagation();
+				}
+			});
+		};
 
-        document.querySelectorAll('.btn-dropdown__dropdown, .btn-dropdown__list').forEach(dropdownEventHandler);
+		document.querySelectorAll('.btn-dropdown__dropdown, .btn-dropdown__list').forEach(dropdownEventHandler);
 
-        // Close all dropdowns on escape keydown
-        var eventCloseDelegate = function eventCloseDelegate(event) {
-            return app.btnDropdown.closeOpenDropdown();
-        };
+		// Close all dropdowns on escape keydown
+		var eventCloseDelegate = function eventCloseDelegate(event) {
+			return app.btnDropdown.closeOpenDropdown();
+		};
 
-        document.onkeydown = function (event) {
-            if (event.keyCode === 27) {
-                eventCloseDelegate();
-            }
-        };
+		document.onkeydown = function (event) {
+			if (event.keyCode === 27) {
+				eventCloseDelegate();
+			}
+		};
 
-        // Close all dropdowns on body click
-        document.body.addEventListener('click', function () {
-            eventCloseDelegate();
-        });
-    },
+		// Close all dropdowns on body click
+		document.body.addEventListener('click', function () {
+			eventCloseDelegate();
+		});
+	},
 
-    closeOpenDropdown: function closeOpenDropdown() {
-        var openDelegate = function openDelegate(openDropdown) {
-            openDropdown.classList.remove('btn-dropdown--open');
-        };
+	closeOpenDropdown: function closeOpenDropdown() {
+		var openDelegate = function openDelegate(openDropdown) {
+			openDropdown.classList.remove('btn-dropdown--open');
+		};
 
-        document.querySelectorAll('.btn-dropdown--open').forEach(openDelegate);
-    }
+		document.querySelectorAll('.btn-dropdown--open').forEach(openDelegate);
+	}
 
 };
 app.btnRipple = {
-    settings: {
-        ripple: true
-    },
+	settings: {
+		ripple: true
+	},
 
-    init: function init() {
-        var btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple'),
-            btnEventHandler = function btnEventHandler(btn) {
-            btn.addEventListener('click', function (event) {
-                var ripple = this.querySelector('.btn__ripple');
+	init: function init() {
+		var btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple'),
+		    btnEventHandler = function btnEventHandler(btn) {
+			btn.addEventListener('click', function (event) {
+				var ripple = this.querySelector('.btn__ripple');
 
-                if (ripple === null) {
-                    ripple = app.btnRipple.appendRipple(btn);
-                }
+				if (ripple === null) {
+					ripple = app.btnRipple.appendRipple(btn);
+				}
 
-                this.classList.remove('btn--ripple-animate');
+				this.classList.remove('btn--ripple-animate');
 
-                var size = Math.max(this.offsetWidth, this.offsetHeight),
-                    x = event.offsetX - size / 2,
-                    y = event.offsetY - size / 2;
+				var size = Math.max(this.offsetWidth, this.offsetHeight),
+				    x = event.offsetX - size / 2,
+				    y = event.offsetY - size / 2;
 
-                ripple.style.width = size + 'px';
-                ripple.style.height = size + 'px';
-                ripple.style.left = x + 'px';
-                ripple.style.top = y + 'px';
+				ripple.style.width = size + 'px';
+				ripple.style.height = size + 'px';
+				ripple.style.left = x + 'px';
+				ripple.style.top = y + 'px';
 
-                this.classList.add('btn--ripple-animate');
-            });
-        };
+				this.classList.add('btn--ripple-animate');
+			});
+		};
 
-        btns.forEach(btnEventHandler);
-    },
+		btns.forEach(btnEventHandler);
+	},
 
-    appendRipple: function appendRipple(btn) {
-        var ripple = document.createElement('div');
+	appendRipple: function appendRipple(btn) {
+		var ripple = document.createElement('div');
 
-        ripple.classList.add('btn__ripple');
-        btn.appendChild(ripple);
+		ripple.classList.add('btn__ripple');
+		btn.appendChild(ripple);
 
-        return ripple;
-    }
+		return ripple;
+	}
 
 };
 app.cycle = {
-    settings: {
-        $el: $('.cycle__wrap', '.cycle'),
-        slides: '> .cycle__item',
-        pager: '> .cycle__pager',
-        prev: '> .cycle__prev',
-        next: '> .cycle__next',
-        pagerActiveClass: 'cycle__pager--active'
-    },
+	settings: {
+		$el: $('.cycle__wrap', '.cycle'),
+		slides: '> .cycle__item',
+		pager: '> .cycle__pager',
+		prev: '> .cycle__prev',
+		next: '> .cycle__next',
+		pagerActiveClass: 'cycle__pager--active'
+	},
 
-    init: function init() {
-        if (app.cycle.settings.$el.length > 0) {
-            app.cycle.settings.$el.cycle({
-                slides: app.cycle.settings.slides,
-                pager: app.cycle.settings.pager,
-                prev: app.cycle.settings.prev,
-                next: app.cycle.settings.next,
-                pagerActiveClass: app.cycle.settings.pagerActiveClass,
-                pauseOnHover: true,
-                swipe: true,
-                log: false,
-                paused: true,
-                fx: 'none'
-            }).on('cycle-update-view', function (event, optionHash, slideOptionsHash, currentSlideEl) {
-                if (optionHash.slideCount > 1) {
-                    $(this).addClass('cycle-active');
-                }
-            }).on('cycle-before', function () {
-                // $('.thumbnail-grid__item').each(function () {
-                //     $(this).removeClass('scrollspy--in-view').removeClass('animation-fadeIn');
-                // });
-            }).on('cycle-after', function () {
-                // app.scrollSpy.init();
-            });
-        }
-    }
+	init: function init() {
+		if (app.cycle.settings.$el.length > 0) {
+			app.cycle.settings.$el.cycle({
+				slides: app.cycle.settings.slides,
+				pager: app.cycle.settings.pager,
+				prev: app.cycle.settings.prev,
+				next: app.cycle.settings.next,
+				pagerActiveClass: app.cycle.settings.pagerActiveClass,
+				pauseOnHover: true,
+				swipe: true,
+				log: false,
+				paused: true,
+				fx: 'none'
+			}).on('cycle-update-view', function (event, optionHash, slideOptionsHash, currentSlideEl) {
+				if (optionHash.slideCount > 1) {
+					$(this).addClass('cycle-active');
+				}
+			}).on('cycle-before', function () {
+				// $('.thumbnail-grid__item').each(function () {
+				//     $(this).removeClass('scrollspy--in-view').removeClass('animation-fadeIn');
+				// });
+			}).on('cycle-after', function () {
+				// app.scrollSpy.init();
+			});
+		}
+	}
 };
 app.delayedImageLoading = {
-    settings: {
-        el: '[data-delay-image-loading]'
-    },
+	settings: {
+		el: '[data-delay-image-loading]'
+	},
 
-    init: function init() {
-        if (document.documentElement.classList.contains('modernizr_template') && document.querySelector(app.delayedImageLoading.settings.el) !== null) {
-            var template = document.querySelector(app.delayedImageLoading.settings.el),
-                parent = template.parentNode,
-                contents = template.innerHTML;
+	init: function init() {
+		if (document.documentElement.classList.contains('modernizr_template') && document.querySelector(app.delayedImageLoading.settings.el) !== null) {
+			var template = document.querySelector(app.delayedImageLoading.settings.el),
+			    parent = template.parentNode,
+			    contents = template.innerHTML;
 
-            parent.removeChild(template);
-            parent.innerHTML += contents;
-        }
-    }
+			parent.removeChild(template);
+			parent.innerHTML += contents;
+		}
+	}
 };
 
 /*doc
@@ -3937,19 +3937,19 @@ Idea is kindly borrowed from [Christian Heilmann](https://www.christianheilmann.
 
 */
 app.disableHover = {
-    timer: null,
+	timer: null,
 
-    init: function init() {
-        clearTimeout(app.disableHover.timer);
+	init: function init() {
+		clearTimeout(app.disableHover.timer);
 
-        if (!document.body.classList.contains('disable-hover')) {
-            document.body.classList.add('disable-hover');
-        }
+		if (!document.body.classList.contains('disable-hover')) {
+			document.body.classList.add('disable-hover');
+		}
 
-        app.disableHover.timer = setTimeout(function () {
-            document.body.classList.remove('disable-hover');
-        }, 100);
-    }
+		app.disableHover.timer = setTimeout(function () {
+			document.body.classList.remove('disable-hover');
+		}, 100);
+	}
 };
 
 /*doc
@@ -3964,84 +3964,84 @@ This class prevents pointer events so there won't be any hover effect repaints, 
 
 */
 app.dropdowns = {
-    settings: {
-        el: document.querySelectorAll('.dropdown'),
-        showClass: 'dropdown--show'
-    },
+	settings: {
+		el: document.querySelectorAll('.dropdown'),
+		showClass: 'dropdown--show'
+	},
 
-    init: function init() {
-        if (app.dropdowns.settings.el.length > 0) {
-            var dropdownDelegate = function dropdownDelegate(dropdown) {
-                return dropdown.addEventListener('click', function (event) {
-                    event.stopPropagation();
+	init: function init() {
+		if (app.dropdowns.settings.el.length > 0) {
+			var dropdownDelegate = function dropdownDelegate(dropdown) {
+				return dropdown.addEventListener('click', function (event) {
+					event.stopPropagation();
 
-                    if (document.documentElement.classList.contains('modernizr_touchevents') || this.getAttribute('data-dropdown-trigger')) {
-                        this.classList.toggle(app.dropdowns.settings.showClass);
-                    }
-                });
-            };
+					if (document.documentElement.classList.contains('modernizr_touchevents') || this.getAttribute('data-dropdown-trigger')) {
+						this.classList.toggle(app.dropdowns.settings.showClass);
+					}
+				});
+			};
 
-            app.dropdowns.settings.el.forEach(dropdownDelegate);
+			app.dropdowns.settings.el.forEach(dropdownDelegate);
 
-            document.body.onkeydown = function (event) {
-                if (event.keyCode === 27) {
-                    app.dropdowns.closeAllDropdowns();
-                }
-            };
+			document.body.onkeydown = function (event) {
+				if (event.keyCode === 27) {
+					app.dropdowns.closeAllDropdowns();
+				}
+			};
 
-            document.body.onclick = function (event) {
-                app.dropdowns.closeAllDropdowns();
-            };
-        }
-    },
+			document.body.onclick = function (event) {
+				app.dropdowns.closeAllDropdowns();
+			};
+		}
+	},
 
-    closeAllDropdowns: function closeAllDropdowns() {
-        if (app.dropdowns.settings.el.length > 0) {
-            var closeDelegate = function closeDelegate(dropdown) {
-                return dropdown.classList.remove('dropdown--show');
-            };
+	closeAllDropdowns: function closeAllDropdowns() {
+		if (app.dropdowns.settings.el.length > 0) {
+			var closeDelegate = function closeDelegate(dropdown) {
+				return dropdown.classList.remove('dropdown--show');
+			};
 
-            document.querySelectorAll('.dropdown').forEach(closeDelegate);
-        }
-    }
+			document.querySelectorAll('.dropdown').forEach(closeDelegate);
+		}
+	}
 };
 app.equalize = {
-    settings: {
-        el: document.querySelectorAll('[data-equalize]')
-    },
+	settings: {
+		el: document.querySelectorAll('[data-equalize]')
+	},
 
-    init: function init() {
-        if (app.equalize.settings.el !== null) {
-            var equalizeDelegate = function equalizeDelegate(equalize) {
-                var currentHeight = 0,
-                    mediaQuery = equalize.getAttribute('data-equalize'),
-                    targets = equalize.querySelectorAll('[data-equalize-target]');
+	init: function init() {
+		if (app.equalize.settings.el !== null) {
+			var equalizeDelegate = function equalizeDelegate(equalize) {
+				var currentHeight = 0,
+				    mediaQuery = equalize.getAttribute('data-equalize'),
+				    targets = equalize.querySelectorAll('[data-equalize-target]');
 
-                if (Modernizr.mq(app.mediaQueries[mediaQuery]) === true || app.mediaQueries[mediaQuery] === undefined) {
-                    targets.forEach(function (target) {
-                        var height = null;
+				if (Modernizr.mq(app.mediaQueries[mediaQuery]) === true || app.mediaQueries[mediaQuery] === undefined) {
+					targets.forEach(function (target) {
+						var height = null;
 
-                        target.style.height = 'auto';
-                        height = target.offsetHeight;
+						target.style.height = 'auto';
+						height = target.offsetHeight;
 
-                        if (height > currentHeight) {
-                            currentHeight = height;
-                        }
-                    });
+						if (height > currentHeight) {
+							currentHeight = height;
+						}
+					});
 
-                    targets.forEach(function (target) {
-                        return target.style.height = currentHeight + 'px';
-                    });
-                } else {
-                    targets.forEach(function (target) {
-                        return target.style.height = 'auto';
-                    });
-                }
-            };
+					targets.forEach(function (target) {
+						return target.style.height = currentHeight + 'px';
+					});
+				} else {
+					targets.forEach(function (target) {
+						return target.style.height = 'auto';
+					});
+				}
+			};
 
-            app.equalize.settings.el.forEach(equalizeDelegate);
-        }
-    }
+			app.equalize.settings.el.forEach(equalizeDelegate);
+		}
+	}
 };
 
 /*doc
@@ -4097,9 +4097,9 @@ You can also set a media query from where the equalizer has to kick in, like thi
 
 */
 app.fastClick = {
-    init: function init() {
-        FastClick.attach(document.body);
-    }
+	init: function init() {
+		FastClick.attach(document.body);
+	}
 };
 
 /*doc
@@ -4113,15 +4113,15 @@ Polyfill to remove click delays on browsers with touch UIs
 
 */
 app.fitVids = {
-    settings: {
-        $el: $('.fitvids')
-    },
+	settings: {
+		$el: $('.fitvids')
+	},
 
-    init: function init() {
-        if (app.fitVids.settings.$el.length > 0) {
-            app.fitVids.settings.$el.fitVids();
-        }
-    }
+	init: function init() {
+		if (app.fitVids.settings.$el.length > 0) {
+			app.fitVids.settings.$el.fitVids();
+		}
+	}
 };
 
 /*doc
@@ -4141,322 +4141,322 @@ Use the class fitvids as a container for your video and the plugin will take car
  */
 
 app.formModules = {
-    settings: {
-        passwordToggle: document.querySelectorAll('.form__password-toggle'),
-        passwordShowClass: 'form__input--show-password',
-        $validation: $('[data-form-validate]'),
-        validationLanguage: 'nl',
-        range: document.querySelectorAll('input[type=range]')
-    },
+	settings: {
+		passwordToggle: document.querySelectorAll('.form__password-toggle'),
+		passwordShowClass: 'form__input--show-password',
+		$validation: $('[data-form-validate]'),
+		validationLanguage: 'nl',
+		range: document.querySelectorAll('input[type=range]')
+	},
 
-    init: function init() {
-        app.formModules.customFileInput();
-        app.formModules.validation();
-        app.formModules.password();
-        app.formModules.ajaxForm();
-        app.formModules.floatingLabel();
-        app.formModules.range();
-    },
+	init: function init() {
+		app.formModules.customFileInput();
+		app.formModules.validation();
+		app.formModules.password();
+		app.formModules.ajaxForm();
+		app.formModules.floatingLabel();
+		app.formModules.range();
+	},
 
-    range: function range() {
-        var rangeEventHandler = function rangeEventHandler(range) {
-            range.addEventListener('input', function () {
-                var id = this.getAttribute('id'),
-                    val = this.value,
-                    measurement = this.getAttribute('data-range-measurement'),
-                    range = document.querySelector('[data-range=' + id + ']');
+	range: function range() {
+		var rangeEventHandler = function rangeEventHandler(range) {
+			range.addEventListener('input', function () {
+				var id = this.getAttribute('id'),
+				    val = this.value,
+				    measurement = this.getAttribute('data-range-measurement'),
+				    range = document.querySelector('[data-range=' + id + ']');
 
-                if (id !== undefined) {
-                    range.innerHTML = measurement === undefined ? val : val + measurement;
-                }
-            });
-        };
+				if (id !== undefined) {
+					range.innerHTML = measurement === undefined ? val : val + measurement;
+				}
+			});
+		};
 
-        app.formModules.settings.range.forEach(rangeEventHandler);
-    },
+		app.formModules.settings.range.forEach(rangeEventHandler);
+	},
 
-    customFileInput: function customFileInput() {
-        var fileInput = document.querySelectorAll('.form__file-input');
+	customFileInput: function customFileInput() {
+		var fileInput = document.querySelectorAll('.form__file-input');
 
-        if (fileInput.length > 0) {
-            fileInput.forEach(function (input) {
-                var label = input.nextElementSibling,
-                    labelVal = label.innerHTML;
+		if (fileInput.length > 0) {
+			fileInput.forEach(function (input) {
+				var label = input.nextElementSibling,
+				    labelVal = label.innerHTML;
 
-                input.addEventListener('change', function (event) {
-                    var fileName = '';
+				input.addEventListener('change', function (event) {
+					var fileName = '';
 
-                    fileName = this.files && this.files.length > 1 ? (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length) : event.target.value.split('\\').pop();
-                    fileName ? label.querySelector('span').innerHTML = fileName : label.html(labelVal);
-                });
+					fileName = this.files && this.files.length > 1 ? (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length) : event.target.value.split('\\').pop();
+					fileName ? label.querySelector('span').innerHTML = fileName : label.html(labelVal);
+				});
 
-                // Firefox bug fix
-                input.addEventListener('focus', function (el) {
-                    return el.classList.add('has-focus');
-                });
-                input.addEventListener('blur', function (el) {
-                    return el.classList.remove('has-focus');
-                });
-            });
-        }
-    },
+				// Firefox bug fix
+				input.addEventListener('focus', function (el) {
+					return el.classList.add('has-focus');
+				});
+				input.addEventListener('blur', function (el) {
+					return el.classList.remove('has-focus');
+				});
+			});
+		}
+	},
 
-    password: function password() {
-        var eventHandler = function eventHandler(el) {
-            el.addEventListener('click', function () {
-                var $this = $(this),
-                    $formPassword = $this.closest('.form__input'),
-                    $formInput = $formPassword.find('input'),
-                    formType = $formInput.attr('type');
+	password: function password() {
+		var eventHandler = function eventHandler(el) {
+			el.addEventListener('click', function () {
+				var $this = $(this),
+				    $formPassword = $this.closest('.form__input'),
+				    $formInput = $formPassword.find('input'),
+				    formType = $formInput.attr('type');
 
-                $formInput.attr('type', formType === 'text' ? 'password' : 'text');
-                $formPassword.toggleClass(app.formModules.settings.passwordShowClass);
-            });
-        };
+				$formInput.attr('type', formType === 'text' ? 'password' : 'text');
+				$formPassword.toggleClass(app.formModules.settings.passwordShowClass);
+			});
+		};
 
-        app.formModules.settings.passwordToggle.forEach(eventHandler);
-    },
+		app.formModules.settings.passwordToggle.forEach(eventHandler);
+	},
 
-    validation: function validation() {
-        var parsleyOptions = {
-            errorClass: 'form__input--error',
-            successClass: 'form__input--success',
-            errorsWrapper: '<div class="parsley-container"></div>',
-            errorTemplate: '<div></div>',
-            trigger: 'change',
+	validation: function validation() {
+		var parsleyOptions = {
+			errorClass: 'form__input--error',
+			successClass: 'form__input--success',
+			errorsWrapper: '<div class="parsley-container"></div>',
+			errorTemplate: '<div></div>',
+			trigger: 'change',
 
-            classHandler: function classHandler(element) {
-                var $element = element.$element[0];
+			classHandler: function classHandler(element) {
+				var $element = element.$element[0];
 
-                if ($element.localName === 'select') {
-                    element.$element.closest('.form__input').addClass('form__input--select-validated');
-                }
+				if ($element.localName === 'select') {
+					element.$element.closest('.form__input').addClass('form__input--select-validated');
+				}
 
-                if ($element.localName === 'input' && $element.type === 'checkbox' || $element.localName === 'input' && $element.type === 'radio') {
-                    return element.$element.closest('.form__input-list');
-                } else {
-                    return element.$element.closest('.form__input');
-                }
-            },
+				if ($element.localName === 'input' && $element.type === 'checkbox' || $element.localName === 'input' && $element.type === 'radio') {
+					return element.$element.closest('.form__input-list');
+				} else {
+					return element.$element.closest('.form__input');
+				}
+			},
 
-            errorsContainer: function errorsContainer(element) {
-                var $container = element.$element.closest('.form__input');
+			errorsContainer: function errorsContainer(element) {
+				var $container = element.$element.closest('.form__input');
 
-                return $container;
-            }
-        };
+				return $container;
+			}
+		};
 
-        if (app.formModules.settings.$validation.length > 0) {
-            app.formModules.settings.$validation.each(function () {
-                $(this).parsley(parsleyOptions);
-            });
+		if (app.formModules.settings.$validation.length > 0) {
+			app.formModules.settings.$validation.each(function () {
+				$(this).parsley(parsleyOptions);
+			});
 
-            window.Parsley.setLocale(app.formModules.settings.validationLanguage);
-        }
-    },
+			window.Parsley.setLocale(app.formModules.settings.validationLanguage);
+		}
+	},
 
-    ajaxForm: function ajaxForm() {
-        app.settings.$body.on('submit', '[data-form-ajax]', function (event) {
-            var $form = $(this),
-                action = $form.attr('action'),
-                data = $form.data(),
-                url = null;
+	ajaxForm: function ajaxForm() {
+		app.settings.$body.on('submit', '[data-form-ajax]', function (event) {
+			var $form = $(this),
+			    action = $form.attr('action'),
+			    data = $form.data(),
+			    url = null;
 
-            event.preventDefault();
+			event.preventDefault();
 
-            url === undefined ? url = window.location : url = data.formAjaxUrl;
+			url === undefined ? url = window.location : url = data.formAjaxUrl;
 
-            if ($form.parsley().isValid()) {
-                $.ajax({
-                    url: url,
-                    data: $form.serialize(),
-                    action: action,
-                    method: data.formAjaxMethod,
-                    dataType: data.formAjaxDatatype,
-                    success: function success(response) {
+			if ($form.parsley().isValid()) {
+				$.ajax({
+					url: url,
+					data: $form.serialize(),
+					action: action,
+					method: data.formAjaxMethod,
+					dataType: data.formAjaxDatatype,
+					success: function success(response) {
 
-                        switch (response.status) {
-                            case 200:
-                                app.notifications.add(data.formAjaxMsgContainer, response.message, 'beta', 'success');
-                                app.formModules.emptyForm($form);
-                                break;
-                            case 500:
-                                app.notifications.add(data.formAjaxMsgContainer, response.message, 'beta', 'error');
-                                break;
-                        }
+						switch (response.status) {
+							case 200:
+								app.notifications.add(data.formAjaxMsgContainer, response.message, 'beta', 'success');
+								app.formModules.emptyForm($form);
+								break;
+							case 500:
+								app.notifications.add(data.formAjaxMsgContainer, response.message, 'beta', 'error');
+								break;
+						}
 
-                        app.jump.to(data.formAjaxMsgContainer, 40);
-                    }
-                });
-            }
-        });
-    },
+						app.jump.to(data.formAjaxMsgContainer, 40);
+					}
+				});
+			}
+		});
+	},
 
-    emptyForm: function emptyForm(_form) {
-        _form.find('input[type=text], input[type=password], textarea, select').val('');
-        _form.find('input[type=radio], input[type=checkbox]').prop('checked', false);
-    },
+	emptyForm: function emptyForm(_form) {
+		_form.find('input[type=text], input[type=password], textarea, select').val('');
+		_form.find('input[type=radio], input[type=checkbox]').prop('checked', false);
+	},
 
-    floatingLabel: function floatingLabel() {
-        app.formModules.floatingLabelSetClass($('.form__input--floating-label input'));
+	floatingLabel: function floatingLabel() {
+		app.formModules.floatingLabelSetClass($('.form__input--floating-label input'));
 
-        app.settings.$body.on('change', '.form__input--floating-label input', function () {
-            app.formModules.floatingLabelSetClass($(this));
-        });
-    },
+		app.settings.$body.on('change', '.form__input--floating-label input', function () {
+			app.formModules.floatingLabelSetClass($(this));
+		});
+	},
 
-    floatingLabelSetClass: function floatingLabelSetClass($input) {
-        if ($input.length > 0) {
-            $input.val().length > 0 ? $input.addClass('is-filled') : $input.removeClass('is-filled');
-        }
-    }
+	floatingLabelSetClass: function floatingLabelSetClass($input) {
+		if ($input.length > 0) {
+			$input.val().length > 0 ? $input.addClass('is-filled') : $input.removeClass('is-filled');
+		}
+	}
 };
 app.googleMaps = {
-    settings: {
-        el: document.getElementById('google-maps'),
-        map: null,
-        markers: [],
-        openInfoWindow: null,
-        centerLat: 53.199027,
-        centerLon: 5.784693
-    },
+	settings: {
+		el: document.getElementById('google-maps'),
+		map: null,
+		markers: [],
+		openInfoWindow: null,
+		centerLat: 53.199027,
+		centerLon: 5.784693
+	},
 
-    markerData: [{
-        'lat': '53.199027',
-        'lng': '5.784693',
-        'content': '<b>Company HQ</b><br />Some address 23<br />1234 AB Leeuwarden'
-    }, {
-        'lat': '53.199810',
-        'lng': '5.774750',
-        'content': '<b>Company</b><br />Some address 1<br />1234 AB Leeuwarden'
-    }],
+	markerData: [{
+		'lat': '53.199027',
+		'lng': '5.784693',
+		'content': '<b>Company HQ</b><br />Some address 23<br />1234 AB Leeuwarden'
+	}, {
+		'lat': '53.199810',
+		'lng': '5.774750',
+		'content': '<b>Company</b><br />Some address 1<br />1234 AB Leeuwarden'
+	}],
 
-    init: function init() {
-        if (app.googleMaps.settings.el !== null) {
-            var script = document.createElement('script');
+	init: function init() {
+		if (app.googleMaps.settings.el !== null) {
+			var script = document.createElement('script');
 
-            script.type = 'text/javascript';
-            script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' + '&callback=app.googleMaps.map';
-            document.body.appendChild(script);
-        }
-    },
+			script.type = 'text/javascript';
+			script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' + '&callback=app.googleMaps.map';
+			document.body.appendChild(script);
+		}
+	},
 
-    map: function map() {
-        var mapOptions = {
-            zoom: 16,
-            center: new google.maps.LatLng(app.googleMaps.settings.centerLat, app.googleMaps.settings.centerLon),
-            scrollwheel: false,
-            navigationControl: false,
-            mapTypeControl: false,
-            scaleControl: false,
-            draggable: true,
-            zoomControl: false,
-            panControl: false,
+	map: function map() {
+		var mapOptions = {
+			zoom: 16,
+			center: new google.maps.LatLng(app.googleMaps.settings.centerLat, app.googleMaps.settings.centerLon),
+			scrollwheel: false,
+			navigationControl: false,
+			mapTypeControl: false,
+			scaleControl: false,
+			draggable: true,
+			zoomControl: false,
+			panControl: false,
 
-            // Styles from https://snazzymaps.com
-            styles: [{ "featureType": "administrative", "elementType": "labels.text.fill", "stylers": [{ "color": "#444444" }] }, { "featureType": "landscape", "elementType": "all", "stylers": [{ "color": "#f2f2f2" }] }, { "featureType": "poi", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "all", "stylers": [{ "saturation": -100 }, { "lightness": 45 }] }, { "featureType": "road.highway", "elementType": "all", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "road.arterial", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "color": "#81a2be" }, { "visibility": "on" }] }]
-        };
+			// Styles from https://snazzymaps.com
+			styles: [{ "featureType": "administrative", "elementType": "labels.text.fill", "stylers": [{ "color": "#444444" }] }, { "featureType": "landscape", "elementType": "all", "stylers": [{ "color": "#f2f2f2" }] }, { "featureType": "poi", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "all", "stylers": [{ "saturation": -100 }, { "lightness": 45 }] }, { "featureType": "road.highway", "elementType": "all", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "road.arterial", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "color": "#81a2be" }, { "visibility": "on" }] }]
+		};
 
-        if (document.documentElement.classList.contains('modernizr_touchevents')) {
-            mapOptions.draggable = false;
-        }
+		if (document.documentElement.classList.contains('modernizr_touchevents')) {
+			mapOptions.draggable = false;
+		}
 
-        app.googleMaps.settings.map = new google.maps.Map(app.googleMaps.settings.el, mapOptions);
+		app.googleMaps.settings.map = new google.maps.Map(app.googleMaps.settings.el, mapOptions);
 
-        var geocoder = new google.maps.Geocoder();
+		var geocoder = new google.maps.Geocoder();
 
-        // Creating a global infoWindow object that will be reused by all markers
-        var infoWindow = new google.maps.InfoWindow();
+		// Creating a global infoWindow object that will be reused by all markers
+		var infoWindow = new google.maps.InfoWindow();
 
-        app.googleMaps.setMarkers(app.googleMaps.settings.map);
+		app.googleMaps.setMarkers(app.googleMaps.settings.map);
 
-        google.maps.event.addListener(app.googleMaps.settings.map, 'click', function () {
-            app.googleMaps.settings.markers[app.googleMaps.settings.openInfoWindow].infowindow.close();
-        });
-    },
+		google.maps.event.addListener(app.googleMaps.settings.map, 'click', function () {
+			app.googleMaps.settings.markers[app.googleMaps.settings.openInfoWindow].infowindow.close();
+		});
+	},
 
-    setMarkers: function setMarkers(map, marker) {
-        var bounds = new google.maps.LatLngBounds();
-        // let markerIcon = new google.maps.MarkerImage("/res/assets/dist/img/maps-pointer.png", new google.maps.Size(12, 12), new google.maps.Point(0, 0), new google.maps.Point(6, 6));
+	setMarkers: function setMarkers(map, marker) {
+		var bounds = new google.maps.LatLngBounds();
+		// let markerIcon = new google.maps.MarkerImage("/res/assets/dist/img/maps-pointer.png", new google.maps.Size(12, 12), new google.maps.Point(0, 0), new google.maps.Point(6, 6));
 
 
-        app.googleMaps.markerData.forEach(function (item, index, array) {
-            var latLng = new google.maps.LatLng(item.lat, item.lng);
+		app.googleMaps.markerData.forEach(function (item, index, array) {
+			var latLng = new google.maps.LatLng(item.lat, item.lng);
 
-            bounds.extend(latLng);
+			bounds.extend(latLng);
 
-            // Creating a marker and putting it on the map
-            var marker = new google.maps.Marker({
-                position: latLng,
-                // icon: markerIcon,
-                map: map,
-                title: item.title
-            });
+			// Creating a marker and putting it on the map
+			var marker = new google.maps.Marker({
+				position: latLng,
+				// icon: markerIcon,
+				map: map,
+				title: item.title
+			});
 
-            marker.infowindow = new google.maps.InfoWindow({
-                content: item.content
-            });
+			marker.infowindow = new google.maps.InfoWindow({
+				content: item.content
+			});
 
-            marker.addListener('click', function () {
-                if (app.googleMaps.settings.openInfoWindow) {
-                    app.googleMaps.settings.markers[app.googleMaps.settings.openInfoWindow].infowindow.close();
-                }
+			marker.addListener('click', function () {
+				if (app.googleMaps.settings.openInfoWindow) {
+					app.googleMaps.settings.markers[app.googleMaps.settings.openInfoWindow].infowindow.close();
+				}
 
-                app.googleMaps.settings.openInfoWindow = index;
-                marker.infowindow.open(map, marker);
-            });
+				app.googleMaps.settings.openInfoWindow = index;
+				marker.infowindow.open(map, marker);
+			});
 
-            app.googleMaps.settings.markers.push(marker);
-        });
-    }
+			app.googleMaps.settings.markers.push(marker);
+		});
+	}
 
 };
 app.groupCheckable = {
-    init: function init() {
+	init: function init() {
 
-        // Master checkbox
-        var checkableDelegate = function checkableDelegate(checkable) {
-            return app.groupCheckable.toggleGroup(checkable);
-        };
+		// Master checkbox
+		var checkableDelegate = function checkableDelegate(checkable) {
+			return app.groupCheckable.toggleGroup(checkable);
+		};
 
-        document.querySelectorAll('[data-group-checkable').forEach(function (checkable) {
-            checkableDelegate(checkable);
+		document.querySelectorAll('[data-group-checkable').forEach(function (checkable) {
+			checkableDelegate(checkable);
 
-            checkable.addEventListener('change', function () {
-                return checkableDelegate(checkable);
-            });
-        });
+			checkable.addEventListener('change', function () {
+				return checkableDelegate(checkable);
+			});
+		});
 
-        // Target checkboxes
-        var delegateCheckedCount = function delegateCheckedCount(target) {
-            return target.checked;
-        },
-            delegateGroupCheckable = function delegateGroupCheckable(target) {
-            var group = target.getAttribute('data-group-checkable-target'),
-                targets = [].slice.call(document.querySelectorAll('[data-group-checkable-target=' + group + ']')),
-                trigger = document.querySelector('[data-group-checkable=' + group + ']'),
-                checkedCount = targets.filter(delegateCheckedCount).length;
+		// Target checkboxes
+		var delegateCheckedCount = function delegateCheckedCount(target) {
+			return target.checked;
+		},
+		    delegateGroupCheckable = function delegateGroupCheckable(target) {
+			var group = target.getAttribute('data-group-checkable-target'),
+			    targets = [].slice.call(document.querySelectorAll('[data-group-checkable-target=' + group + ']')),
+			    trigger = document.querySelector('[data-group-checkable=' + group + ']'),
+			    checkedCount = targets.filter(delegateCheckedCount).length;
 
-            trigger.checked = targets.length === checkedCount ? 'checked' : '';
-        },
-            checkableEventHandler = function checkableEventHandler(target) {
-            target.addEventListener('change', function (event) {
-                return delegateGroupCheckable(target);
-            });
-        };
+			trigger.checked = targets.length === checkedCount ? 'checked' : '';
+		},
+		    checkableEventHandler = function checkableEventHandler(target) {
+			target.addEventListener('change', function (event) {
+				return delegateGroupCheckable(target);
+			});
+		};
 
-        document.querySelectorAll('[data-group-checkable-target]').forEach(checkableEventHandler);
-    },
+		document.querySelectorAll('[data-group-checkable-target]').forEach(checkableEventHandler);
+	},
 
-    toggleGroup: function toggleGroup(checkable) {
-        var group = document.querySelectorAll('[data-group-checkable-target=' + checkable.getAttribute('data-group-checkable') + ']'),
-            delegateGroup = function delegateGroup(checkbox) {
-            return checkbox.checked = checkable.checked === true ? 'checked' : '';
-        };
+	toggleGroup: function toggleGroup(checkable) {
+		var group = document.querySelectorAll('[data-group-checkable-target=' + checkable.getAttribute('data-group-checkable') + ']'),
+		    delegateGroup = function delegateGroup(checkbox) {
+			return checkbox.checked = checkable.checked === true ? 'checked' : '';
+		};
 
-        // Check or uncheck boxes based on the checked state of the group checkbox.
-        group.forEach(delegateGroup);
-    }
+		// Check or uncheck boxes based on the checked state of the group checkbox.
+		group.forEach(delegateGroup);
+	}
 };
 
 /*doc
@@ -4477,45 +4477,45 @@ category: Javascript
 
 */
 app.jump = {
-    settings: {
-        speed: 300
-    },
+	settings: {
+		speed: 300
+	},
 
-    init: function init() {
-        document.querySelectorAll('[data-jumpto]').forEach(function (jumper) {
-            jumper.addEventListener('click', function () {
-                var extraOffset = 0;
+	init: function init() {
+		document.querySelectorAll('[data-jumpto]').forEach(function (jumper) {
+			jumper.addEventListener('click', function () {
+				var extraOffset = 0;
 
-                event.preventDefault();
+				event.preventDefault();
 
-                if (jumper.getAttribute('data-jumpto-extra-offset') !== undefined) {
-                    extraOffset = jumper.getAttribute('data-jumpto-extra-offset');
-                }
+				if (jumper.getAttribute('data-jumpto-extra-offset') !== undefined) {
+					extraOffset = jumper.getAttribute('data-jumpto-extra-offset');
+				}
 
-                if (jumper.getAttribute('data-jumpto-speed') !== undefined) {
-                    app.jump.settings.speed = jumper.getAttribute('data-jumpto-speed');
-                }
+				if (jumper.getAttribute('data-jumpto-speed') !== undefined) {
+					app.jump.settings.speed = jumper.getAttribute('data-jumpto-speed');
+				}
 
-                app.jump.to(jumper.getAttribute('href'), extraOffset, app.jump.settings.speed);
-            });
-        });
-    },
+				app.jump.to(jumper.getAttribute('href'), extraOffset, app.jump.settings.speed);
+			});
+		});
+	},
 
-    to: function to(_target, _extraOffset, _speed) {
-        var offsetTop = Math.round(helper.getCoords(document.querySelector(_target)).top);
+	to: function to(_target, _extraOffset, _speed) {
+		var offsetTop = Math.round(helper.getCoords(document.querySelector(_target)).top);
 
-        _extraOffset === undefined ? 0 : '';
+		_extraOffset === undefined ? 0 : '';
 
-        if (app.navBar.settings.el !== null) {
-            offsetTop = offsetTop - (app.navBar.settings.el.offsetHeight + _extraOffset);
-        } else {
-            offsetTop = offsetTop + _extraOffset;
-        }
+		if (app.navBar.settings.el !== null) {
+			offsetTop = offsetTop - (app.navBar.settings.el.offsetHeight + _extraOffset);
+		} else {
+			offsetTop = offsetTop + _extraOffset;
+		}
 
-        app.settings.$htmlAndBody.animate({ scrollTop: offsetTop }, _speed, function () {
-            window.location.hash = _target;
-        });
-    }
+		app.settings.$htmlAndBody.animate({ scrollTop: offsetTop }, _speed, function () {
+			window.location.hash = _target;
+		});
+	}
 };
 
 /*doc
@@ -4531,37 +4531,37 @@ category: Javascript
 
 */
 app.leave = {
-    init: function init() {
-        document.querySelectorAll('[type=submit]').forEach(function (el) {
-            el.addEventListener('click', function () {
-                app.leave.inActive();
-            });
-        });
+	init: function init() {
+		document.querySelectorAll('[type=submit]').forEach(function (el) {
+			el.addEventListener('click', function () {
+				app.leave.inActive();
+			});
+		});
 
-        document.querySelectorAll('[data-leave-target], [data-leave-target] input:not(submit)').forEach(function (inputs) {
-            inputs.addEventListener('change', function () {
-                app.leave.active();
-            });
+		document.querySelectorAll('[data-leave-target], [data-leave-target] input:not(submit)').forEach(function (inputs) {
+			inputs.addEventListener('change', function () {
+				app.leave.active();
+			});
 
-            inputs.addEventListener('input', function () {
-                app.leave.active();
-            });
-        });
-    },
+			inputs.addEventListener('input', function () {
+				app.leave.active();
+			});
+		});
+	},
 
-    active: function active(_message) {
-        if (_message === undefined) {
-            _message = 'You didn\'t save your changes.';
-        }
+	active: function active(_message) {
+		if (_message === undefined) {
+			_message = 'You didn\'t save your changes.';
+		}
 
-        window.onbeforeunload = function () {
-            return _message;
-        };
-    },
+		window.onbeforeunload = function () {
+			return _message;
+		};
+	},
 
-    inActive: function inActive() {
-        window.onbeforeunload = undefined;
-    }
+	inActive: function inActive() {
+		window.onbeforeunload = undefined;
+	}
 };
 
 /*doc
@@ -4581,440 +4581,440 @@ Show a message when leaving the page and form elements are edited.
 ## Entire form
 ```html_example
 <form data-leave-target />
-    <input type="text" />
-    <input type="text" />
+	<input type="text" />
+	<input type="text" />
 </form>
 ```
 
 */
 app.modal = {
-    settings: {
-        scrollTopPosition: null,
-        $trigger: $('.modal__trigger'),
-        $modal: $('.modal')
-    },
+	settings: {
+		scrollTopPosition: null,
+		$trigger: $('.modal__trigger'),
+		$modal: $('.modal')
+	},
 
-    init: function init() {
-        app.settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
-        app.modal.triggers();
-    },
+	init: function init() {
+		app.settings.$body.append('<div class="modal__overlay" data-modal-close></div>');
+		app.modal.triggers();
+	},
 
-    triggers: function triggers() {
-        app.settings.$body.on('click', '.modal__trigger', function (event) {
-            event.preventDefault();
+	triggers: function triggers() {
+		app.settings.$body.on('click', '.modal__trigger', function (event) {
+			event.preventDefault();
 
-            var $trigger = $(this),
-                data = $trigger.data();
+			var $trigger = $(this),
+			    data = $trigger.data();
 
-            data.modal === 'ajax' ? app.modal.ajax(data.modalAjaxActivity, data.modalAjaxSection) : app.modal.open($trigger, data);
-        });
+			data.modal === 'ajax' ? app.modal.ajax(data.modalAjaxActivity, data.modalAjaxSection) : app.modal.open($trigger, data);
+		});
 
-        app.settings.$body.on('keydown', function (event) {
-            if (event.keyCode === 27) {
-                app.modal.close();
-            }
-        });
+		app.settings.$body.on('keydown', function (event) {
+			if (event.keyCode === 27) {
+				app.modal.close();
+			}
+		});
 
-        app.settings.$body.on('click', '[data-modal-close]', function (event) {
-            event.preventDefault();
-            app.modal.close();
-        });
-    },
+		app.settings.$body.on('click', '[data-modal-close]', function (event) {
+			event.preventDefault();
+			app.modal.close();
+		});
+	},
 
-    create: function create(_triggerData, _targetModal) {
-        var html = '<div id="' + _triggerData.modalId + '" class="modal"><div class="modal__content">';
+	create: function create(_triggerData, _targetModal) {
+		var html = '<div id="' + _triggerData.modalId + '" class="modal"><div class="modal__content">';
 
-        if (_triggerData.modal === 'ajax') {
-            html += _triggerData.modalAjaxContent;
-            html += '<a class="modal__close" data-modal-close></a>';
-        } else {
-            if (_triggerData.modalTitle !== undefined) {
-                html += '<h2>' + _triggerData.modalTitle + '</h2>';
-            }
+		if (_triggerData.modal === 'ajax') {
+			html += _triggerData.modalAjaxContent;
+			html += '<a class="modal__close" data-modal-close></a>';
+		} else {
+			if (_triggerData.modalTitle !== undefined) {
+				html += '<h2>' + _triggerData.modalTitle + '</h2>';
+			}
 
-            if (_triggerData.modalText !== undefined) {
-                html += '<p>' + _triggerData.modalText + '</p>';
-            }
+			if (_triggerData.modalText !== undefined) {
+				html += '<p>' + _triggerData.modalText + '</p>';
+			}
 
-            html += '<ul class="list-inline">';
+			html += '<ul class="list-inline">';
 
-            if (_triggerData.modalCloseBtn !== undefined) {
-                if (_triggerData.modal === 'confirm') {
-                    if (typeof _triggerData.modalConfirmAction === "function") {
-                        html += '<li><a class="btn btn--beta btn--medium confirm-ok" href="javascript:void(0)" data-modal-close>' + _triggerData.modalConfirmBtn + '</a></li>';
-                    } else {
-                        html += '<li><a class="btn btn--beta btn--medium" href="' + _triggerData.modalConfirmAction + '">' + _triggerData.modalConfirmBtn + '</a></li>';
-                    }
-                    html += '<li><button class="btn btn--alpha btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button></li>';
-                } else {
-                    html += '<li><button class="btn btn--beta btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button></li>';
-                }
-            }
+			if (_triggerData.modalCloseBtn !== undefined) {
+				if (_triggerData.modal === 'confirm') {
+					if (typeof _triggerData.modalConfirmAction === "function") {
+						html += '<li><a class="btn btn--beta btn--medium confirm-ok" href="javascript:void(0)" data-modal-close>' + _triggerData.modalConfirmBtn + '</a></li>';
+					} else {
+						html += '<li><a class="btn btn--beta btn--medium" href="' + _triggerData.modalConfirmAction + '">' + _triggerData.modalConfirmBtn + '</a></li>';
+					}
+					html += '<li><button class="btn btn--alpha btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button></li>';
+				} else {
+					html += '<li><button class="btn btn--beta btn--medium" data-modal-close>' + _triggerData.modalCloseBtn + '</button></li>';
+				}
+			}
 
-            html += '</ul>';
-        }
+			html += '</ul>';
+		}
 
-        html += '</div></div>';
+		html += '</div></div>';
 
-        app.settings.$body.append(html);
+		app.settings.$body.append(html);
 
-        if (app.settings.$html.find('.confirm-ok').length) {
-            app.settings.$body.find('#' + _triggerData.modalId + ' .confirm-ok').click(_triggerData.modalConfirmAction);
-        }
-    },
+		if (app.settings.$html.find('.confirm-ok').length) {
+			app.settings.$body.find('#' + _triggerData.modalId + ' .confirm-ok').click(_triggerData.modalConfirmAction);
+		}
+	},
 
-    open: function open(_trigger, _triggerData) {
-        var scrollTopPosition = app.settings.$window.scrollTop(),
-            $targetModal = typeof _triggerData === 'string' ? $('#' + _triggerData) : $('#' + _triggerData.modalId);
+	open: function open(_trigger, _triggerData) {
+		var scrollTopPosition = app.settings.$window.scrollTop(),
+		    $targetModal = typeof _triggerData === 'string' ? $('#' + _triggerData) : $('#' + _triggerData.modalId);
 
-        app.modal.settings.scrollTopPosition = scrollTopPosition;
+		app.modal.settings.scrollTopPosition = scrollTopPosition;
 
-        if ($targetModal.length > 0) {
-            app.modal.show($targetModal, scrollTopPosition, _triggerData.modalOpenCallback);
-        } else {
-            app.modal.create(_triggerData, $targetModal);
+		if ($targetModal.length > 0) {
+			app.modal.show($targetModal, scrollTopPosition, _triggerData.modalOpenCallback);
+		} else {
+			app.modal.create(_triggerData, $targetModal);
 
-            setTimeout(function () {
-                app.modal.show($('#' + _triggerData.modalId), scrollTopPosition, _triggerData.modalOpenCallback);
-            }, 100);
-        }
-    },
+			setTimeout(function () {
+				app.modal.show($('#' + _triggerData.modalId), scrollTopPosition, _triggerData.modalOpenCallback);
+			}, 100);
+		}
+	},
 
-    show: function show(_targetModal, _scrollTopPosition, _modalOpenCallback) {
-        app.settings.$html.addClass('modal-show');
-        _targetModal.addClass('modal-show');
+	show: function show(_targetModal, _scrollTopPosition, _modalOpenCallback) {
+		app.settings.$html.addClass('modal-show');
+		_targetModal.addClass('modal-show');
 
-        //app.settings.$background.scrollTop(_scrollTopPosition);
-        app.modal.setSize(_targetModal);
+		//app.settings.$background.scrollTop(_scrollTopPosition);
+		app.modal.setSize(_targetModal);
 
-        if (_modalOpenCallback && typeof _modalOpenCallback === 'function') {
-            _modalOpenCallback();
-        }
-    },
+		if (_modalOpenCallback && typeof _modalOpenCallback === 'function') {
+			_modalOpenCallback();
+		}
+	},
 
-    close: function close() {
-        $('.modal-show').removeClass('modal-show');
+	close: function close() {
+		$('.modal-show').removeClass('modal-show');
 
-        //app.settings.$window.scrollTop(app.modal.settings.scrollTopPosition);
-    },
+		//app.settings.$window.scrollTop(app.modal.settings.scrollTopPosition);
+	},
 
-    confirm: function confirm(_options) {
-        var modalId = 'js-modal-confirm',
-            options = $.extend({
-            modal: 'confirm',
-            modalId: modalId,
-            modalConfirmBtn: 'bevestigen',
-            modalCloseBtn: 'annuleren'
-        }, _options);
+	confirm: function confirm(_options) {
+		var modalId = 'js-modal-confirm',
+		    options = $.extend({
+			modal: 'confirm',
+			modalId: modalId,
+			modalConfirmBtn: 'bevestigen',
+			modalCloseBtn: 'annuleren'
+		}, _options);
 
-        $('#' + modalId).remove();
+		$('#' + modalId).remove();
 
-        app.modal.open(this, options);
-    },
+		app.modal.open(this, options);
+	},
 
-    /**
-     * @TODO: Needs work..
-     */
-    ajax: function ajax(activity, request) {
-        var modalId = 'js-modal-ajax';
+	/**
+  * @TODO: Needs work..
+  */
+	ajax: function ajax(activity, request) {
+		var modalId = 'js-modal-ajax';
 
-        $('#' + modalId).remove();
+		$('#' + modalId).remove();
 
-        $.ajax({
-            url: 'modal-ajax.html',
-            method: 'GET',
-            success: function success(data) {
-                app.modal.open(this, {
-                    modal: 'ajax',
-                    modalId: modalId,
-                    modalAjaxContent: data
-                });
-            }
-        });
-    },
+		$.ajax({
+			url: 'modal-ajax.html',
+			method: 'GET',
+			success: function success(data) {
+				app.modal.open(this, {
+					modal: 'ajax',
+					modalId: modalId,
+					modalAjaxContent: data
+				});
+			}
+		});
+	},
 
-    setSize: function setSize(_targetModal) {
-        // Adding even width and height
-        // Because of subpixel rendering in Webkit
-        // http://martinkool.com/post/27618832225/beware-of-half-pixels-in-css
+	setSize: function setSize(_targetModal) {
+		// Adding even width and height
+		// Because of subpixel rendering in Webkit
+		// http://martinkool.com/post/27618832225/beware-of-half-pixels-in-css
 
-        _targetModal.removeAttr('style');
+		_targetModal.removeAttr('style');
 
-        _targetModal.css({
-            width: 2 * Math.ceil(_targetModal.width() / 2),
-            height: 2 * Math.ceil(_targetModal.height() / 2)
-        });
-    }
+		_targetModal.css({
+			width: 2 * Math.ceil(_targetModal.width() / 2),
+			height: 2 * Math.ceil(_targetModal.height() / 2)
+		});
+	}
 };
 app.navBar = {
-    settings: {
-        el: document.getElementById('nav-bar'),
-        trigger: document.getElementById('nav-bar-trigger'),
-        navBarOffsetTop: null,
-        navBarHeight: null,
-        lastWindowScrollTop: 0,
-        hideOnScroll: false,
-        fixedClass: 'nav-bar--fixed',
-        showClass: 'nav-bar--show',
-        mobileShowClass: 'nav-bar--mobile-show',
-        transformClass: 'nav-bar--transform',
-        allwaysShowOnMobile: true,
-        allwaysShowOnMobileClass: 'nav-bar--always-show-on-mobile'
-    },
+	settings: {
+		el: document.getElementById('nav-bar'),
+		trigger: document.getElementById('nav-bar-trigger'),
+		navBarOffsetTop: null,
+		navBarHeight: null,
+		lastWindowScrollTop: 0,
+		hideOnScroll: false,
+		fixedClass: 'nav-bar--fixed',
+		showClass: 'nav-bar--show',
+		mobileShowClass: 'nav-bar--mobile-show',
+		transformClass: 'nav-bar--transform',
+		allwaysShowOnMobile: true,
+		allwaysShowOnMobileClass: 'nav-bar--always-show-on-mobile'
+	},
 
-    init: function init(_scrollTop) {
-        if (app.navBar.settings.el !== null) {
-            app.navBar.resize();
-            app.navBar.addClasses();
-            app.navBar.scroller(_scrollTop);
-            app.navBar.trigger();
-        }
-    },
+	init: function init(_scrollTop) {
+		if (app.navBar.settings.el !== null) {
+			app.navBar.resize();
+			app.navBar.addClasses();
+			app.navBar.scroller(_scrollTop);
+			app.navBar.trigger();
+		}
+	},
 
-    resize: function resize() {
-        if (app.navBar.settings.el !== null) {
-            app.navBar.settings.navBarOffsetTop = Math.round(app.navBar.settings.el.getBoundingClientRect().top), app.navBar.settings.navBarHeight = app.navBar.settings.el.offsetHeight;
-        }
-    },
+	resize: function resize() {
+		if (app.navBar.settings.el !== null) {
+			app.navBar.settings.navBarOffsetTop = Math.round(app.navBar.settings.el.getBoundingClientRect().top), app.navBar.settings.navBarHeight = app.navBar.settings.el.offsetHeight;
+		}
+	},
 
-    addClasses: function addClasses() {
-        if (app.navBar.settings.el.classList.contains(app.navBar.settings.fixedClass)) {
-            app.settings.container.style.marginTop = app.navBar.settings.navBarHeight + 'px';
-        }
+	addClasses: function addClasses() {
+		if (app.navBar.settings.el.classList.contains(app.navBar.settings.fixedClass)) {
+			app.settings.container.style.marginTop = app.navBar.settings.navBarHeight + 'px';
+		}
 
-        if (window.scrollY >= app.navBar.settings.navBarOffsetTop + 1) {
-            app.navBar.settings.el.classList.add(app.navBar.settings.fixedClass);
-        }
+		if (window.scrollY >= app.navBar.settings.navBarOffsetTop + 1) {
+			app.navBar.settings.el.classList.add(app.navBar.settings.fixedClass);
+		}
 
-        if (app.navBar.settings.allwaysShowOnMobile) {
-            app.navBar.settings.el.classList.add(app.navBar.settings.allwaysShowOnMobileClass);
-        }
-    },
+		if (app.navBar.settings.allwaysShowOnMobile) {
+			app.navBar.settings.el.classList.add(app.navBar.settings.allwaysShowOnMobileClass);
+		}
+	},
 
-    scroller: function scroller(_scrollTop) {
-        if (app.navBar.settings.el !== null) {
-            if (_scrollTop >= app.navBar.settings.navBarOffsetTop) {
-                app.navBar.settings.el.classList.add(app.navBar.settings.fixedClass);
-                app.settings.container.style.marginTop = app.navBar.settings.navBarHeight + 'px';
+	scroller: function scroller(_scrollTop) {
+		if (app.navBar.settings.el !== null) {
+			if (_scrollTop >= app.navBar.settings.navBarOffsetTop) {
+				app.navBar.settings.el.classList.add(app.navBar.settings.fixedClass);
+				app.settings.container.style.marginTop = app.navBar.settings.navBarHeight + 'px';
 
-                if (app.navBar.settings.hideOnScroll && _scrollTop >= app.navBar.settings.navBarOffsetTop + app.navBar.settings.navBarHeight) {
-                    app.navBar.settings.el.classList.add(app.navBar.settings.transformClass);
-                    app.navBar.settings.el.classList.add(app.navBar.settings.showClass);
-                }
-            } else {
-                app.navBar.settings.el.classList.remove(app.navBar.settings.fixedClass);
-                app.settings.container.style.marginTop = 0 + 'px';
+				if (app.navBar.settings.hideOnScroll && _scrollTop >= app.navBar.settings.navBarOffsetTop + app.navBar.settings.navBarHeight) {
+					app.navBar.settings.el.classList.add(app.navBar.settings.transformClass);
+					app.navBar.settings.el.classList.add(app.navBar.settings.showClass);
+				}
+			} else {
+				app.navBar.settings.el.classList.remove(app.navBar.settings.fixedClass);
+				app.settings.container.style.marginTop = 0 + 'px';
 
-                if (app.navBar.settings.hideOnScroll) {
-                    app.navBar.settings.el.classList.remove(app.navBar.settings.transformClass);
-                }
-            }
+				if (app.navBar.settings.hideOnScroll) {
+					app.navBar.settings.el.classList.remove(app.navBar.settings.transformClass);
+				}
+			}
 
-            if (_scrollTop > app.navBar.settings.lastWindowScrollTop) {
-                if (app.navBar.settings.hideOnScroll && _scrollTop >= app.navBar.settings.navBarOffsetTop + app.navBar.settings.navBarHeight) {
-                    app.navBar.settings.el.classList.remove(app.navBar.settings.showClass);
-                }
-                if (!app.navBar.settings.hideOnScroll) {
-                    app.navBar.settings.el.classList.remove(app.navBar.settings.showClass);
-                }
-            } else {
-                if (app.navBar.settings.hideOnScroll && _scrollTop >= app.navBar.settings.navBarOffsetTop + app.navBar.settings.navBarHeight) {
-                    app.navBar.settings.el.classList.add(app.navBar.settings.showClass);
-                }
-                if (!app.navBar.settings.hideOnScroll) {
-                    app.navBar.settings.el.classList.add(app.navBar.settings.showClass);
-                }
-            }
+			if (_scrollTop > app.navBar.settings.lastWindowScrollTop) {
+				if (app.navBar.settings.hideOnScroll && _scrollTop >= app.navBar.settings.navBarOffsetTop + app.navBar.settings.navBarHeight) {
+					app.navBar.settings.el.classList.remove(app.navBar.settings.showClass);
+				}
+				if (!app.navBar.settings.hideOnScroll) {
+					app.navBar.settings.el.classList.remove(app.navBar.settings.showClass);
+				}
+			} else {
+				if (app.navBar.settings.hideOnScroll && _scrollTop >= app.navBar.settings.navBarOffsetTop + app.navBar.settings.navBarHeight) {
+					app.navBar.settings.el.classList.add(app.navBar.settings.showClass);
+				}
+				if (!app.navBar.settings.hideOnScroll) {
+					app.navBar.settings.el.classList.add(app.navBar.settings.showClass);
+				}
+			}
 
-            app.navBar.settings.lastWindowScrollTop = _scrollTop;
-        }
-    },
+			app.navBar.settings.lastWindowScrollTop = _scrollTop;
+		}
+	},
 
-    trigger: function trigger() {
-        app.navBar.settings.trigger.addEventListener('click', function (event) {
-            event.preventDefault();
+	trigger: function trigger() {
+		app.navBar.settings.trigger.addEventListener('click', function (event) {
+			event.preventDefault();
 
-            app.navBar.settings.el.classList.toggle(app.navBar.settings.mobileShowClass);
-        });
-    }
+			app.navBar.settings.el.classList.toggle(app.navBar.settings.mobileShowClass);
+		});
+	}
 };
 app.navPrimary = {
-    settings: {
-        el: document.getElementById('#nav-primary')
-    },
+	settings: {
+		el: document.getElementById('#nav-primary')
+	},
 
-    init: function init() {
-        if (app.primaryNav.settings.el !== null) {}
-    }
+	init: function init() {
+		if (app.primaryNav.settings.el !== null) {}
+	}
 };
 app.notifications = {
-    settings: {
-        cookieLaw: {
-            position: 'bottom',
-            approveBtnText: 'ok, ik snap het',
-            infoBtnShow: true,
-            infoBtnLink: '/cookiewet',
-            infoBtnText: 'meer informatie',
-            notificationText: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren en statistieken bij te houden.'
-        }
-    },
+	settings: {
+		cookieLaw: {
+			position: 'bottom',
+			approveBtnText: 'ok, ik snap het',
+			infoBtnShow: true,
+			infoBtnLink: '/cookiewet',
+			infoBtnText: 'meer informatie',
+			notificationText: 'Wij gebruiken cookies om uw gebruikerservaring te verbeteren en statistieken bij te houden.'
+		}
+	},
 
-    init: function init() {
-        var self = this;
+	init: function init() {
+		var self = this;
 
-        self.close();
-        // self.cookieLaw.init(); // Uncomment if you need the notification
-    },
+		self.close();
+		// self.cookieLaw.init(); // Uncomment if you need the notification
+	},
 
-    add: function add(_target, _message, _size, _type) {
-        $(_target).html('<div class="notification notification--' + _size + ' notification--' + _type + '"><div class="notification__text">' + _message + '</div></div>');
-    },
+	add: function add(_target, _message, _size, _type) {
+		$(_target).html('<div class="notification notification--' + _size + ' notification--' + _type + '"><div class="notification__text">' + _message + '</div></div>');
+	},
 
-    close: function close() {
-        var self = this;
+	close: function close() {
+		var self = this;
 
-        app.settings.$body.on('click', '[data-notification-close]', function (event) {
-            event.preventDefault();
+		app.settings.$body.on('click', '[data-notification-close]', function (event) {
+			event.preventDefault();
 
-            var $close = $(this),
-                $notification = $close.parent(),
-                notificationId = $notification.attr('id');
+			var $close = $(this),
+			    $notification = $close.parent(),
+			    notificationId = $notification.attr('id');
 
-            $notification.addClass('notification--close');
+			$notification.addClass('notification--close');
 
-            if (notificationId === 'notification-cookie') {
-                helper.cookies.create('cookieNotification', 'approved', 365);
-            }
+			if (notificationId === 'notification-cookie') {
+				helper.cookies.create('cookieNotification', 'approved', 365);
+			}
 
-            setTimeout(function () {
-                $notification.remove();
-            }, 500);
-        });
-    },
+			setTimeout(function () {
+				$notification.remove();
+			}, 500);
+		});
+	},
 
-    /*==========  Cookie law  ==========*/
+	/*==========  Cookie law  ==========*/
 
-    cookieLaw: {
-        init: function init() {
-            var self = this,
-                cookieValue = helper.cookies.read('cookieNotification'),
-                info = '';
+	cookieLaw: {
+		init: function init() {
+			var self = this,
+			    cookieValue = helper.cookies.read('cookieNotification'),
+			    info = '';
 
-            if (cookieValue !== 'approved' && navigator.CookiesOK === undefined) {
-                app.settings.$html.attr('notification-cookie-position', app.notifications.settings.cookieLaw.position);
+			if (cookieValue !== 'approved' && navigator.CookiesOK === undefined) {
+				app.settings.$html.attr('notification-cookie-position', app.notifications.settings.cookieLaw.position);
 
-                if (app.notifications.settings.cookieLaw.infoBtnShow) {
-                    info = '<a class="btn btn--alpha btn--small" href="' + app.notifications.settings.cookieLaw.infoBtnLink + '">' + app.notifications.settings.cookieLaw.infoBtnText + '</a>';
-                }
+				if (app.notifications.settings.cookieLaw.infoBtnShow) {
+					info = '<a class="btn btn--alpha btn--small" href="' + app.notifications.settings.cookieLaw.infoBtnLink + '">' + app.notifications.settings.cookieLaw.infoBtnText + '</a>';
+				}
 
-                var html = '<div id="notification-cookie" class="notification notification--alpha notification--cookie">' + '<div class="notification__text">' + app.notifications.settings.cookieLaw.notificationText + '</div>' + '<a class="btn btn--beta btn--small" data-notification-close>' + app.notifications.settings.cookieLaw.approveBtnText + '</a> ' + info + '</div>';
+				var html = '<div id="notification-cookie" class="notification notification--alpha notification--cookie">' + '<div class="notification__text">' + app.notifications.settings.cookieLaw.notificationText + '</div>' + '<a class="btn btn--beta btn--small" data-notification-close>' + app.notifications.settings.cookieLaw.approveBtnText + '</a> ' + info + '</div>';
 
-                app.settings.$background.prepend(html);
+				app.settings.$background.prepend(html);
 
-                setTimeout(function () {
-                    app.settings.$html.addClass('notification-cookie-show');
-                }, 0);
-            }
-        }
-    }
+				setTimeout(function () {
+					app.settings.$html.addClass('notification-cookie-show');
+				}, 0);
+			}
+		}
+	}
 };
 app.offCanvas = {
-    settings: {
-        toggleLeft: '#off-canvas-toggle-left',
-        toggleRight: '#off-canvas-toggle-right',
-        width: $('.off-canvas, .off-canvas-nav-bar').outerWidth(),
-        $el: $('.off-canvas, .off-canvas-nav-bar'),
-        $link: $('.off-canvas-nav__link, .off-canvas-nav-bar__link')
-    },
+	settings: {
+		toggleLeft: '#off-canvas-toggle-left',
+		toggleRight: '#off-canvas-toggle-right',
+		width: $('.off-canvas, .off-canvas-nav-bar').outerWidth(),
+		$el: $('.off-canvas, .off-canvas-nav-bar'),
+		$link: $('.off-canvas-nav__link, .off-canvas-nav-bar__link')
+	},
 
-    init: function init() {
+	init: function init() {
 
-        app.offCanvas.settings.$link.on('click', function (event) {
-            event.preventDefault();
+		app.offCanvas.settings.$link.on('click', function (event) {
+			event.preventDefault();
 
-            var href = window.location,
-                linkHref = $(this).attr('href');
+			var href = window.location,
+			    linkHref = $(this).attr('href');
 
-            app.offCanvas.hideLeftAndRight();
+			app.offCanvas.hideLeftAndRight();
 
-            setTimeout(function () {
-                if (href !== linkHref) {
-                    window.location = linkHref;
-                }
-            }, 400);
-        });
+			setTimeout(function () {
+				if (href !== linkHref) {
+					window.location = linkHref;
+				}
+			}, 400);
+		});
 
-        app.settings.$html.on('click', app.offCanvas.settings.toggleLeft, function (event) {
-            app.offCanvas.toggleLeft();
-        });
+		app.settings.$html.on('click', app.offCanvas.settings.toggleLeft, function (event) {
+			app.offCanvas.toggleLeft();
+		});
 
-        app.settings.$html.on('click', app.offCanvas.settings.toggleRight, function (event) {
-            app.offCanvas.toggleRight();
-        });
+		app.settings.$html.on('click', app.offCanvas.settings.toggleRight, function (event) {
+			app.offCanvas.toggleRight();
+		});
 
-        app.settings.$container.on('click', function () {
-            app.offCanvas.hideLeftAndRight();
-        });
+		app.settings.$container.on('click', function () {
+			app.offCanvas.hideLeftAndRight();
+		});
 
-        app.settings.$body.on('keydown', function (event) {
-            if (event.keyCode === 27) {
-                app.offCanvas.hideLeftAndRight();
-            }
-        });
-    },
+		app.settings.$body.on('keydown', function (event) {
+			if (event.keyCode === 27) {
+				app.offCanvas.hideLeftAndRight();
+			}
+		});
+	},
 
-    hideLeftAndRight: function hideLeftAndRight() {
-        app.settings.$html.removeClass('off-canvas-show-left').removeClass('off-canvas-show-right').removeClass('off-canvas-nav-bar-show-left').removeClass('off-canvas-nav-bar-show-right');
-    },
+	hideLeftAndRight: function hideLeftAndRight() {
+		app.settings.$html.removeClass('off-canvas-show-left').removeClass('off-canvas-show-right').removeClass('off-canvas-nav-bar-show-left').removeClass('off-canvas-nav-bar-show-right');
+	},
 
-    showLeft: function showLeft() {
-        app.settings.$html.addClass('off-canvas-show-left').addClass('off-canvas-nav-bar-show-left');
-    },
+	showLeft: function showLeft() {
+		app.settings.$html.addClass('off-canvas-show-left').addClass('off-canvas-nav-bar-show-left');
+	},
 
-    hideLeft: function hideLeft() {
-        app.settings.$html.removeClass('off-canvas-show-left').removeClass('off-canvas-nav-bar-show-left');
-    },
+	hideLeft: function hideLeft() {
+		app.settings.$html.removeClass('off-canvas-show-left').removeClass('off-canvas-nav-bar-show-left');
+	},
 
-    toggleLeft: function toggleLeft() {
-        app.offCanvas.hideRight();
-        app.settings.$html.toggleClass('off-canvas-show-left').toggleClass('off-canvas-nav-bar-show-left');
-    },
+	toggleLeft: function toggleLeft() {
+		app.offCanvas.hideRight();
+		app.settings.$html.toggleClass('off-canvas-show-left').toggleClass('off-canvas-nav-bar-show-left');
+	},
 
-    showRight: function showRight() {
-        app.settings.$html.addClass('off-canvas-show-right').addClass('off-canvas-nav-bar-show-right');
-    },
+	showRight: function showRight() {
+		app.settings.$html.addClass('off-canvas-show-right').addClass('off-canvas-nav-bar-show-right');
+	},
 
-    hideRight: function hideRight() {
-        app.settings.$html.removeClass('off-canvas-show-right').removeClass('off-canvas-nav-bar-show-right');
-    },
+	hideRight: function hideRight() {
+		app.settings.$html.removeClass('off-canvas-show-right').removeClass('off-canvas-nav-bar-show-right');
+	},
 
-    toggleRight: function toggleRight() {
-        app.offCanvas.hideLeft();
-        app.settings.$html.toggleClass('off-canvas-show-right').toggleClass('off-canvas-nav-bar-show-right');
-    }
+	toggleRight: function toggleRight() {
+		app.offCanvas.hideLeft();
+		app.settings.$html.toggleClass('off-canvas-show-right').toggleClass('off-canvas-nav-bar-show-right');
+	}
 };
 app.responsiveImages = {
-    settings: {},
+	settings: {},
 
-    init: function init() {
-        app.responsiveImages.setBackgroundImage();
-    },
+	init: function init() {
+		app.responsiveImages.setBackgroundImage();
+	},
 
-    setBackgroundImage: function setBackgroundImage() {
-        var setDelegate = function setDelegate(el) {
-            return app.responsiveImages.setBackgroundImageStyle(el);
-        };
+	setBackgroundImage: function setBackgroundImage() {
+		var setDelegate = function setDelegate(el) {
+			return app.responsiveImages.setBackgroundImageStyle(el);
+		};
 
-        document.querySelectorAll('[data-responsive-bg-img]').forEach(setDelegate);
-    },
+		document.querySelectorAll('[data-responsive-bg-img]').forEach(setDelegate);
+	},
 
-    setBackgroundImageStyle: function setBackgroundImageStyle(element) {
-        var domNode = element.querySelector('img'),
-            source = null;
+	setBackgroundImageStyle: function setBackgroundImageStyle(element) {
+		var domNode = element.querySelector('img'),
+		    source = null;
 
-        domNode.currentSrc === undefined ? source = domNode.src : source = domNode.currentSrc;
-        element.style.backgroundImage = 'url(' + source + ')';
-    }
+		domNode.currentSrc === undefined ? source = domNode.src : source = domNode.currentSrc;
+		element.style.backgroundImage = 'url(' + source + ')';
+	}
 };
 
 /*doc
@@ -5043,9 +5043,9 @@ This tells the browser the width of each image, the browser decides which image 
 
 ```html_example
 <img srcset="http://placehold.it/400x200 400w,
-            http://placehold.it/800x400 800w,
-            http://placehold.it/1200x600 1024w"
-    alt="Responsive image" />
+			http://placehold.it/800x400 800w,
+			http://placehold.it/1200x600 1024w"
+	alt="Responsive image" />
 ```
 
 ## Retina example
@@ -5053,11 +5053,11 @@ Rendered with a width of 200 pixels, different size of images are shown based on
 
 ```html_example
 <img
-    srcset="http://placehold.it/200x200 1x,
-            http://placehold.it/400x400 2x,
-            http://placehold.it/600x600 3x"
-    alt="Responsive image"
-    width="200" />
+	srcset="http://placehold.it/200x200 1x,
+			http://placehold.it/400x400 2x,
+			http://placehold.it/600x600 3x"
+	alt="Responsive image"
+	width="200" />
 ```
 
 
@@ -5075,12 +5075,12 @@ Here we hint the browser how the image will be displayed eventually based on the
 
 ```html_example
 <img sizes="(max-width: 30em) 100vw,
-            (max-width: 50em) 50vw,
-            60vw"
-    srcset="http://placehold.it/400x200 400w,
-            http://placehold.it/800x400 800w,
-            http://placehold.it/1600x800 1600w"
-    alt="Responsive image" />
+			(max-width: 50em) 50vw,
+			60vw"
+	srcset="http://placehold.it/400x200 400w,
+			http://placehold.it/800x400 800w,
+			http://placehold.it/1600x800 1600w"
+	alt="Responsive image" />
 ```
 
 */
@@ -5095,9 +5095,9 @@ This is used when you need to explicity set an image for a certian media query, 
 
 ```html_example
 <picture>
-    <source srcset="http://placehold.it/1000x400" media="(min-width: 1000px)" />
-    <source srcset="http://placehold.it/800x400" media="(min-width: 800px)" />
-    <img srcset="http://placehold.it/600x400" alt="" />
+	<source srcset="http://placehold.it/1000x400" media="(min-width: 1000px)" />
+	<source srcset="http://placehold.it/800x400" media="(min-width: 800px)" />
+	<img srcset="http://placehold.it/600x400" alt="" />
 </picture>
 ```
 
@@ -5113,114 +5113,114 @@ Background image is set with the data-responsive-bg-img attribute, it reads the 
 
 ```parse_html_example
 <div class="notification notification--alpha">
-    <div class="notification__text">The header class is added to add some demo styling, you could and probably should remove it in your code.</div>
+	<div class="notification__text">The header class is added to add some demo styling, you could and probably should remove it in your code.</div>
 </div>
 ```
 
 ```html_example
 <div class="header" data-responsive-bg-img>
-    <picture class="display-none">
-        <source srcset="responsive-bg-img/1200.png" media="(min-width: 800px)" />
-        <source srcset="responsive-bg-img/800.png" media="(min-width: 400px)" />
-        <img srcset="responsive-bg-img/400.png" />
-    </picture>
+	<picture class="display-none">
+		<source srcset="responsive-bg-img/1200.png" media="(min-width: 800px)" />
+		<source srcset="responsive-bg-img/800.png" media="(min-width: 400px)" />
+		<img srcset="responsive-bg-img/400.png" />
+	</picture>
 </div>
 ```
 
 */
 app.scrollSpy = {
-    settings: {
-        $el: $('[data-scrollspy]'),
-        defaultClass: 'animation-bounceIn',
-        repeat: true
-    },
+	settings: {
+		$el: $('[data-scrollspy]'),
+		defaultClass: 'animation-bounceIn',
+		repeat: true
+	},
 
-    init: function init(_scrollTop, _windowHeight, _load) {
-        var self = this,
-            windowHeight = app.settings.$window.height();
+	init: function init(_scrollTop, _windowHeight, _load) {
+		var self = this,
+		    windowHeight = app.settings.$window.height();
 
-        if (app.scrollSpy.settings.$el.length > 0) {
-            app.scrollSpy.settings.$el.each(function (index) {
-                var $this = $(this),
-                    elPositionTop = Math.round($this.offset().top),
-                    elHeight = $this.height(),
-                    inView = helper.inView($this),
-                    outView = helper.outView($this),
-                    partiallyInView = helper.partiallyInView($this),
-                    data = $this.data(),
-                    combinedClasses = data.scrollspyClass === undefined ? app.scrollSpy.settings.defaultClass : data.scrollspyClass;
+		if (app.scrollSpy.settings.$el.length > 0) {
+			app.scrollSpy.settings.$el.each(function (index) {
+				var $this = $(this),
+				    elPositionTop = Math.round($this.offset().top),
+				    elHeight = $this.height(),
+				    inView = helper.inView($this),
+				    outView = helper.outView($this),
+				    partiallyInView = helper.partiallyInView($this),
+				    data = $this.data(),
+				    combinedClasses = data.scrollspyClass === undefined ? app.scrollSpy.settings.defaultClass : data.scrollspyClass;
 
-                combinedClasses += ' scrollspy--in-view';
+				combinedClasses += ' scrollspy--in-view';
 
-                if (app.settings.$html.hasClass('touch')) {
-                    $this.addClass(combinedClasses);
-                } else {
-                    var hasCombinedClasses = $this.hasClass(combinedClasses),
-                        delay = data.scrollspyDelay > 0 ? data.scrollspyDelay : 0;
+				if (app.settings.$html.hasClass('touch')) {
+					$this.addClass(combinedClasses);
+				} else {
+					var hasCombinedClasses = $this.hasClass(combinedClasses),
+					    delay = data.scrollspyDelay > 0 ? data.scrollspyDelay : 0;
 
-                    inView && !hasCombinedClasses ? setTimeout(function () {
-                        $this.addClass(combinedClasses);
-                    }, delay) : '';
-                    _load && partiallyInView && data.scrollspyPartiallyInView !== undefined ? setTimeout(function () {
-                        $this.addClass(combinedClasses);
-                    }, delay) : '';
+					inView && !hasCombinedClasses ? setTimeout(function () {
+						$this.addClass(combinedClasses);
+					}, delay) : '';
+					_load && partiallyInView && data.scrollspyPartiallyInView !== undefined ? setTimeout(function () {
+						$this.addClass(combinedClasses);
+					}, delay) : '';
 
-                    if (data.scrollspyRepeat !== undefined || app.scrollSpy.settings.repeat) {
-                        outView && hasCombinedClasses ? $this.removeClass(combinedClasses) : '';
-                    }
+					if (data.scrollspyRepeat !== undefined || app.scrollSpy.settings.repeat) {
+						outView && hasCombinedClasses ? $this.removeClass(combinedClasses) : '';
+					}
 
-                    $this.outerHeight() > windowHeight ? $this.addClass(combinedClasses) : '';
-                }
-            });
-        }
-    }
+					$this.outerHeight() > windowHeight ? $this.addClass(combinedClasses) : '';
+				}
+			});
+		}
+	}
 };
 app.scrollSpyNav = {
-    settings: {
-        $el: $('[data-scrollspy-nav]'),
-        navLength: $('[data-scrollspy-nav]').length - 1,
-        currentNav: 0
-    },
+	settings: {
+		$el: $('[data-scrollspy-nav]'),
+		navLength: $('[data-scrollspy-nav]').length - 1,
+		currentNav: 0
+	},
 
-    init: function init(_scrollTop) {
-        var self = this,
-            windowHeight = app.settings.$window.height();
+	init: function init(_scrollTop) {
+		var self = this,
+		    windowHeight = app.settings.$window.height();
 
-        if (app.scrollSpyNav.settings.$el.length > 0) {
-            app.scrollSpyNav.settings.$el.each(function () {
-                var $this = $(this),
-                    $target = $($this.attr('href')),
-                    targetTop = Math.round($target.position().top),
-                    $next = $this.parent().next().find('[data-jumpto-extra-offset]'),
-                    nextTop = app.settings.$document.height();
+		if (app.scrollSpyNav.settings.$el.length > 0) {
+			app.scrollSpyNav.settings.$el.each(function () {
+				var $this = $(this),
+				    $target = $($this.attr('href')),
+				    targetTop = Math.round($target.position().top),
+				    $next = $this.parent().next().find('[data-jumpto-extra-offset]'),
+				    nextTop = app.settings.$document.height();
 
-                if (app.navBar.settings.el !== null) {
-                    targetTop = targetTop - app.navBar.settings.el.offsetHeight;
-                }
+				if (app.navBar.settings.el !== null) {
+					targetTop = targetTop - app.navBar.settings.el.offsetHeight;
+				}
 
-                $next.length === 0 ? nextTop = app.settings.$document.height() : nextTop = $next.position().top;
+				$next.length === 0 ? nextTop = app.settings.$document.height() : nextTop = $next.position().top;
 
-                if (_scrollTop >= targetTop) {
-                    $('.scrollspy-nav--active').not($this).removeClass('scrollspy-nav--active');
-                    $this.addClass('scrollspy-nav--active');
-                }
-            });
+				if (_scrollTop >= targetTop) {
+					$('.scrollspy-nav--active').not($this).removeClass('scrollspy-nav--active');
+					$this.addClass('scrollspy-nav--active');
+				}
+			});
 
-            app.scrollSpyNav.settings.$el.parent().each(function (index) {
-                var $item = $(this);
+			app.scrollSpyNav.settings.$el.parent().each(function (index) {
+				var $item = $(this);
 
-                if (_scrollTop === app.settings.$document.height() - windowHeight) {
-                    $('.scrollspy-nav--active').removeClass('scrollspy-nav--active');
-                    app.scrollSpyNav.settings.$el.parent().eq(app.scrollSpyNav.settings.navLength).find('[data-scrollspy-nav]').addClass('scrollspy-nav--active');
-                }
-            });
-        }
-    }
+				if (_scrollTop === app.settings.$document.height() - windowHeight) {
+					$('.scrollspy-nav--active').removeClass('scrollspy-nav--active');
+					app.scrollSpyNav.settings.$el.parent().eq(app.scrollSpyNav.settings.navLength).find('[data-scrollspy-nav]').addClass('scrollspy-nav--active');
+				}
+			});
+		}
+	}
 };
 app.svg = {
-    init: function init() {
-        svg4everybody(); // SVG support for IE9-11
-    }
+	init: function init() {
+		svg4everybody(); // SVG support for IE9-11
+	}
 };
 
 /*doc
@@ -5256,211 +5256,211 @@ There are no SVGs present in basos but you can create an SVG workflow for your p
 
 */
 app.tabs = {
-    settings: {
-        tab: document.querySelectorAll('.tab')
-    },
+	settings: {
+		tab: document.querySelectorAll('.tab')
+	},
 
-    init: function init() {
-        var tabsEventHandler = function tabsEventHandler(tab) {
-            tab.addEventListener('click', function (event) {
-                var item = document.querySelector(tab.getAttribute('href')),
-                    content = item.closest('.tab-content');
+	init: function init() {
+		var tabsEventHandler = function tabsEventHandler(tab) {
+			tab.addEventListener('click', function (event) {
+				var item = document.querySelector(tab.getAttribute('href')),
+				    content = item.closest('.tab-content');
 
-                event.preventDefault();
+				event.preventDefault();
 
-                app.tabs.settings.tab.forEach(function (tab) {
-                    return tab.classList.remove('tab--active');
-                });
-                tab.classList.add('tab--active');
+				app.tabs.settings.tab.forEach(function (tab) {
+					return tab.classList.remove('tab--active');
+				});
+				tab.classList.add('tab--active');
 
-                content.querySelector('.tab-item--active').classList.remove('tab-item--active');
-                item.classList.add('tab-item--active');
-            });
-        };
+				content.querySelector('.tab-item--active').classList.remove('tab-item--active');
+				item.classList.add('tab-item--active');
+			});
+		};
 
-        app.tabs.settings.tab.forEach(tabsEventHandler);
-    }
+		app.tabs.settings.tab.forEach(tabsEventHandler);
+	}
 };
 app.toggle = {
-    settings: {
-        el: document.querySelectorAll('[data-toggle]')
-    },
+	settings: {
+		el: document.querySelectorAll('[data-toggle]')
+	},
 
-    init: function init() {
-        var toggleEventHandler = function toggleEventHandler(toggle) {
-            toggle.addEventListener('click', function (event) {
-                event.preventDefault();
+	init: function init() {
+		var toggleEventHandler = function toggleEventHandler(toggle) {
+			toggle.addEventListener('click', function (event) {
+				event.preventDefault();
 
-                app.toggle.toggler(document.querySelector(this.getAttribute('data-toggle')));
-            });
-        };
+				app.toggle.toggler(document.querySelector(this.getAttribute('data-toggle')));
+			});
+		};
 
-        app.toggle.settings.el.forEach(toggleEventHandler);
-    },
+		app.toggle.settings.el.forEach(toggleEventHandler);
+	},
 
-    toggler: function toggler(_target) {
-        _target.classList.toggle('toggle--hide');
-    }
+	toggler: function toggler(_target) {
+		_target.classList.toggle('toggle--hide');
+	}
 };
 app.tooltips = {
-    settings: {
-        el: document.querySelectorAll('.tooltip'),
-        tooltipActiveClass: 'tooltip--active',
-        tooltipContentClass: 'tooltip__content',
-        arrowWidth: 8,
-        tooltipTrigger: null
-    },
+	settings: {
+		el: document.querySelectorAll('.tooltip'),
+		tooltipActiveClass: 'tooltip--active',
+		tooltipContentClass: 'tooltip__content',
+		arrowWidth: 8,
+		tooltipTrigger: null
+	},
 
-    init: function init() {
-        if (app.tooltips.settings.el.length > 0) {
-            var delegate = function delegate(el) {
-                if (el.getAttribute('data-tooltip-trigger') === 'click' || document.documentElement.classList.contains('modernizr_touchevents')) {
-                    app.tooltips.settings.tooltipTrigger = 'click';
-                } else {
-                    app.tooltips.settings.tooltipTrigger = 'hover';
-                }
+	init: function init() {
+		if (app.tooltips.settings.el.length > 0) {
+			var delegate = function delegate(el) {
+				if (el.getAttribute('data-tooltip-trigger') === 'click' || document.documentElement.classList.contains('modernizr_touchevents')) {
+					app.tooltips.settings.tooltipTrigger = 'click';
+				} else {
+					app.tooltips.settings.tooltipTrigger = 'hover';
+				}
 
-                app.tooltips.triggers(el);
-                app.tooltips.appendContent(el);
-            };
+				app.tooltips.triggers(el);
+				app.tooltips.appendContent(el);
+			};
 
-            app.tooltips.settings.el.forEach(delegate);
-        }
-    },
+			app.tooltips.settings.el.forEach(delegate);
+		}
+	},
 
-    appendContent: function appendContent(tooltipTrigger) {
-        var content = document.createElement('div');
+	appendContent: function appendContent(tooltipTrigger) {
+		var content = document.createElement('div');
 
-        content.classList.add(app.tooltips.settings.tooltipContentClass);
-        content.innerHTML = tooltipTrigger.getAttribute('title');
+		content.classList.add(app.tooltips.settings.tooltipContentClass);
+		content.innerHTML = tooltipTrigger.getAttribute('title');
 
-        tooltipTrigger.appendChild(content);
-        tooltipTrigger.setAttribute('title', '');
-        app.tooltips.calculatePosition(tooltipTrigger, tooltipTrigger.querySelector('.tooltip__content'));
-    },
+		tooltipTrigger.appendChild(content);
+		tooltipTrigger.setAttribute('title', '');
+		app.tooltips.calculatePosition(tooltipTrigger, tooltipTrigger.querySelector('.tooltip__content'));
+	},
 
-    triggers: function triggers(tooltipTrigger) {
-        if (app.tooltips.settings.tooltipTrigger === 'hover') {
-            tooltipTrigger.addEventListener('mouseover', function () {
-                this.classList.add(app.tooltips.settings.tooltipActiveClass);
-            });
+	triggers: function triggers(tooltipTrigger) {
+		if (app.tooltips.settings.tooltipTrigger === 'hover') {
+			tooltipTrigger.addEventListener('mouseover', function () {
+				this.classList.add(app.tooltips.settings.tooltipActiveClass);
+			});
 
-            tooltipTrigger.addEventListener('mouseout', function () {
-                this.classList.remove(app.tooltips.settings.tooltipActiveClass);
-            });
-        } else {
-            tooltipTrigger.addEventListener('click', function () {
-                this.classList.toggle(app.tooltips.settings.tooltipActiveClass);
-            });
-        }
-    },
+			tooltipTrigger.addEventListener('mouseout', function () {
+				this.classList.remove(app.tooltips.settings.tooltipActiveClass);
+			});
+		} else {
+			tooltipTrigger.addEventListener('click', function () {
+				this.classList.toggle(app.tooltips.settings.tooltipActiveClass);
+			});
+		}
+	},
 
-    calculatePosition: function calculatePosition(tooltipTrigger, tooltipContent) {
-        var position = tooltipTrigger.offsetHeight + app.tooltips.settings.arrowWidth + 'px';
+	calculatePosition: function calculatePosition(tooltipTrigger, tooltipContent) {
+		var position = tooltipTrigger.offsetHeight + app.tooltips.settings.arrowWidth + 'px';
 
-        switch (tooltipTrigger.getAttribute('data-tooltip-position')) {
-            case 'top':
-                tooltipContent.style.bottom = position;
-                break;
-            case 'bottom':
-                tooltipContent.style.top = position;
-                break;
-        }
-    }
+		switch (tooltipTrigger.getAttribute('data-tooltip-position')) {
+			case 'top':
+				tooltipContent.style.bottom = position;
+				break;
+			case 'bottom':
+				tooltipContent.style.top = position;
+				break;
+		}
+	}
 };
 app.yourModule = {
-    settings: {},
+	settings: {},
 
-    init: function init() {}
+	init: function init() {}
 };
 app.settings.$document.ready(function () {
-    var $this = $(this),
-        scrollTop = $this.scrollTop();
+	var $this = $(this),
+	    scrollTop = $this.scrollTop();
 
-    app.settings.html.classList.remove('no-js');
-    app.settings.html.classList.add('js');
+	app.settings.html.classList.remove('no-js');
+	app.settings.html.classList.add('js');
 
-    app.affix.init();
-    app.svg.init();
-    app.scrollSpyNav.init(scrollTop);
-    app.fastClick.init();
-    app.fitVids.init();
-    app.navBar.init(scrollTop);
-    app.dropdowns.init();
-    app.formModules.init();
-    app.jump.init();
-    app.modal.init();
-    app.tooltips.init();
-    app.accordion.init();
-    app.tabs.init();
-    app.notifications.init();
-    app.offCanvas.init();
-    app.toggle.init();
-    app.groupCheckable.init();
-    app.leave.init();
-    app.btnDropdown.init();
-    app.btnRipple.init();
-    app.googleMaps.init();
+	app.affix.init();
+	app.svg.init();
+	app.scrollSpyNav.init(scrollTop);
+	app.fastClick.init();
+	app.fitVids.init();
+	app.navBar.init(scrollTop);
+	app.dropdowns.init();
+	app.formModules.init();
+	app.jump.init();
+	app.modal.init();
+	app.tooltips.init();
+	app.accordion.init();
+	app.tabs.init();
+	app.notifications.init();
+	app.offCanvas.init();
+	app.toggle.init();
+	app.groupCheckable.init();
+	app.leave.init();
+	app.btnDropdown.init();
+	app.btnRipple.init();
+	app.googleMaps.init();
 
-    //app.cycle.init();
-    //app.fancybox.init();
-    //app.navPrimary.init();
+	//app.cycle.init();
+	//app.fancybox.init();
+	//app.navPrimary.init();
 });
 
 app.settings.$window.ready(function () {
-    var $this = $(this),
-        scrollTop = $this.scrollTop(),
-        windowHeight = $this.height();
+	var $this = $(this),
+	    scrollTop = $this.scrollTop(),
+	    windowHeight = $this.height();
 
-    app.scrollSpy.init(scrollTop, windowHeight, true);
-    app.equalize.init();
-    app.delayedImageLoading.init();
+	app.scrollSpy.init(scrollTop, windowHeight, true);
+	app.equalize.init();
+	app.delayedImageLoading.init();
 
-    setTimeout(function () {
-        app.responsiveImages.setBackgroundImage();
-    }, 10);
+	setTimeout(function () {
+		app.responsiveImages.setBackgroundImage();
+	}, 10);
 });
 
 app.settings.$window.on('scroll', function () {
-    var $this = $(this),
-        scrollTop = $this.scrollTop(),
-        windowHeight = $this.height();
+	var $this = $(this),
+	    scrollTop = $this.scrollTop(),
+	    windowHeight = $this.height();
 
-    app.scrollSpy.init(scrollTop, windowHeight, false);
-    app.scrollSpyNav.init(scrollTop);
-    app.navBar.scroller(scrollTop);
-    app.disableHover.init();
+	app.scrollSpy.init(scrollTop, windowHeight, false);
+	app.scrollSpyNav.init(scrollTop);
+	app.navBar.scroller(scrollTop);
+	app.disableHover.init();
 });
 
 app.settings.$window.on('touchmove', function () {
-    var $this = $(this),
-        scrollTop = $this.scrollTop(),
-        windowHeight = $this.height();
+	var $this = $(this),
+	    scrollTop = $this.scrollTop(),
+	    windowHeight = $this.height();
 
-    app.scrollSpy.init(scrollTop, windowHeight, false);
-    app.scrollSpyNav.init(scrollTop);
+	app.scrollSpy.init(scrollTop, windowHeight, false);
+	app.scrollSpyNav.init(scrollTop);
 });
 
 app.settings.$window.on('resize', function () {
 
-    app.settings.$html.addClass('disable-transitions');
+	app.settings.$html.addClass('disable-transitions');
 
-    if (this.resizeTo) {
-        clearTimeout(this.resizeTo);
-    }
+	if (this.resizeTo) {
+		clearTimeout(this.resizeTo);
+	}
 
-    this.resizeTo = setTimeout(function () {
-        var $this = $(this),
-            scrollTop = $this.scrollTop(),
-            windowHeight = $this.height();
+	this.resizeTo = setTimeout(function () {
+		var $this = $(this),
+		    scrollTop = $this.scrollTop(),
+		    windowHeight = $this.height();
 
-        app.equalize.init();
-        app.scrollSpy.init(scrollTop, windowHeight, true);
-        app.scrollSpyNav.init(scrollTop);
-        app.navBar.resize(scrollTop);
-        app.navBar.scroller(scrollTop);
-        app.responsiveImages.setBackgroundImage();
+		app.equalize.init();
+		app.scrollSpy.init(scrollTop, windowHeight, true);
+		app.scrollSpyNav.init(scrollTop);
+		app.navBar.resize(scrollTop);
+		app.navBar.scroller(scrollTop);
+		app.responsiveImages.setBackgroundImage();
 
-        app.settings.$html.removeClass('disable-transitions');
-    }, 500);
+		app.settings.$html.removeClass('disable-transitions');
+	}, 500);
 });
