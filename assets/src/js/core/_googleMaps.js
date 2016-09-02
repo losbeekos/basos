@@ -1,6 +1,6 @@
 app.googleMaps = {
     settings: {
-        $el: $('#google-maps'),
+        el: document.getElementById('google-maps'),
         map: null,
         markers: [],
         openInfoWindow: null,
@@ -22,8 +22,8 @@ app.googleMaps = {
     ],
 
     init: function() {
-        if(app.googleMaps.settings.$el.length > 0){
-            var script = document.createElement('script');
+        if (app.googleMaps.settings.el !== null){
+            let script = document.createElement('script');
 
             script.type = 'text/javascript';
             script.src = 'https://maps.googleapis.com/maps/api/js?v=3.exp' + '&callback=app.googleMaps.map';
@@ -32,7 +32,7 @@ app.googleMaps = {
     },
 
     map: function () {
-        var mapOptions = {
+        let mapOptions = {
             zoom: 16,
             center: new google.maps.LatLng(app.googleMaps.settings.centerLat, app.googleMaps.settings.centerLon),
             scrollwheel: false,
@@ -47,17 +47,16 @@ app.googleMaps = {
             styles: [{"featureType":"administrative","elementType":"labels.text.fill","stylers":[{"color":"#444444"}]},{"featureType":"landscape","elementType":"all","stylers":[{"color":"#f2f2f2"}]},{"featureType":"poi","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"road","elementType":"all","stylers":[{"saturation":-100},{"lightness":45}]},{"featureType":"road.highway","elementType":"all","stylers":[{"visibility":"simplified"}]},{"featureType":"road.arterial","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"all","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#81a2be"},{"visibility":"on"}]}]
         };
 
-        if (app.settings.$html.hasClass('touch')) {
+        if (document.documentElement.classList.contains('modernizr_touchevents')) {
             mapOptions.draggable = false;
         }
 
-        var mapElement = document.getElementById('google-maps');
-        app.googleMaps.settings.map = new google.maps.Map(mapElement, mapOptions);
+        app.googleMaps.settings.map = new google.maps.Map(app.googleMaps.settings.el, mapOptions);
 
-        var geocoder = new google.maps.Geocoder();
+        let geocoder = new google.maps.Geocoder();
 
         // Creating a global infoWindow object that will be reused by all markers
-        var infoWindow = new google.maps.InfoWindow();
+        let infoWindow = new google.maps.InfoWindow();
 
         app.googleMaps.setMarkers(app.googleMaps.settings.map);
 
@@ -67,24 +66,25 @@ app.googleMaps = {
     },
 
     setMarkers: function (map, marker) {
-        var bounds = new google.maps.LatLngBounds();
-        // var markerIcon = new google.maps.MarkerImage("/res/assets/dist/img/maps-pointer.png", new google.maps.Size(12, 12), new google.maps.Point(0, 0), new google.maps.Point(6, 6));
+        let bounds = new google.maps.LatLngBounds();
+        // let markerIcon = new google.maps.MarkerImage("/res/assets/dist/img/maps-pointer.png", new google.maps.Size(12, 12), new google.maps.Point(0, 0), new google.maps.Point(6, 6));
 
-        $.each(app.googleMaps.markerData, function (marker, data) {
-            var index = marker;
-            var latLng = new google.maps.LatLng(data.lat, data.lng);
+
+        app.googleMaps.markerData.forEach(function (item, index, array) {
+            let latLng = new google.maps.LatLng(item.lat, item.lng);
+
             bounds.extend(latLng);
 
             // Creating a marker and putting it on the map
-            marker = new google.maps.Marker({
+            let marker = new google.maps.Marker({
                 position: latLng,
                 // icon: markerIcon,
                 map: map,
-                title: data.title,
+                title: item.title,
             });
 
             marker.infowindow = new google.maps.InfoWindow({
-                content: data.content
+                content: item.content
             });
 
             marker.addListener('click', function() {

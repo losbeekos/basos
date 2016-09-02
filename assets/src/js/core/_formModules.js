@@ -43,25 +43,14 @@ app.formModules = {
 
         if(fileInput.length > 0) {
             fileInput.forEach(input => {
-                var label = input.nextElementSibling,
+                let label = input.nextElementSibling,
                     labelVal = label.innerHTML;
 
                 input.addEventListener('change', function(event) {
-                    var fileName = '';
+                    let fileName = '';
 
-                    if (this.files && this.files.length > 1) {
-                        fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
-                    }
-                    else if (event.target.value) {
-                        fileName = event.target.value.split('\\').pop();
-                    }
-
-                    if (fileName) {
-                        label.querySelector('span').innerHTML = fileName;
-                    }
-                    else {
-                        label.html(labelVal);
-                    }
+                    fileName = this.files && this.files.length > 1 ? (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length) : event.target.value.split('\\').pop();
+                    fileName ? label.querySelector('span').innerHTML = fileName : label.html(labelVal);
                 });
 
                 // Firefox bug fix
@@ -74,7 +63,7 @@ app.formModules = {
     password: function () {
         let eventHandler = el => {
             el.addEventListener('click', function () {
-                var $this = $(this),
+                let $this = $(this),
                     $formPassword = $this.closest('.form__input'),
                     $formInput = $formPassword.find('input'),
                     formType = $formInput.attr('type');
@@ -88,7 +77,7 @@ app.formModules = {
     },
 
     validation: function(){
-        var parsleyOptions = {
+        let parsleyOptions = {
                 errorClass: 'form__input--error',
                 successClass: 'form__input--success',
                 errorsWrapper: '<div class="parsley-container"></div>',
@@ -96,7 +85,7 @@ app.formModules = {
                 trigger: 'change',
 
                 classHandler: function (element){
-                    var $element = element.$element[0];
+                    let $element = element.$element[0];
 
                     if ($element.localName === 'select') {
                         element.$element.closest('.form__input').addClass('form__input--select-validated');
@@ -110,7 +99,7 @@ app.formModules = {
                 },
 
                 errorsContainer: function (element) {
-                    var $container = element.$element.closest('.form__input');
+                    let $container = element.$element.closest('.form__input');
 
                     return $container;
                 }
@@ -127,7 +116,7 @@ app.formModules = {
 
     ajaxForm: function () {
         app.settings.$body.on('submit', '[data-form-ajax]', function (event) {
-            var $form = $(this),
+            let $form = $(this),
                 action = $form.attr('action'),
                 data = $form.data(),
                 url = null;

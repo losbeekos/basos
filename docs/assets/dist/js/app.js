@@ -3699,7 +3699,6 @@ app.affix = {
     },
 
     scroller: function scroller(_scrollTop, _el) {
-        console.log('affix');
         var container = _el.closest('.affix-container'),
             affixOffsetTop = _el.getAttribute('data-affix-offset'),
             bottomTrigger = helper.getCoords(container).top + container.offsetHeight - _el.offsetHeight;
@@ -4187,17 +4186,8 @@ app.formModules = {
                 input.addEventListener('change', function (event) {
                     var fileName = '';
 
-                    if (this.files && this.files.length > 1) {
-                        fileName = (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length);
-                    } else if (event.target.value) {
-                        fileName = event.target.value.split('\\').pop();
-                    }
-
-                    if (fileName) {
-                        label.querySelector('span').innerHTML = fileName;
-                    } else {
-                        label.html(labelVal);
-                    }
+                    fileName = this.files && this.files.length > 1 ? (this.getAttribute('data-multiple-caption') || '').replace('{count}', this.files.length) : event.target.value.split('\\').pop();
+                    fileName ? label.querySelector('span').innerHTML = fileName : label.html(labelVal);
                 });
 
                 // Firefox bug fix
@@ -4323,7 +4313,7 @@ app.formModules = {
 };
 app.googleMaps = {
     settings: {
-        $el: $('#google-maps'),
+        el: document.getElementById('google-maps'),
         map: null,
         markers: [],
         openInfoWindow: null,
@@ -4342,7 +4332,7 @@ app.googleMaps = {
     }],
 
     init: function init() {
-        if (app.googleMaps.settings.$el.length > 0) {
+        if (app.googleMaps.settings.el !== null) {
             var script = document.createElement('script');
 
             script.type = 'text/javascript';
@@ -4367,12 +4357,11 @@ app.googleMaps = {
             styles: [{ "featureType": "administrative", "elementType": "labels.text.fill", "stylers": [{ "color": "#444444" }] }, { "featureType": "landscape", "elementType": "all", "stylers": [{ "color": "#f2f2f2" }] }, { "featureType": "poi", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "road", "elementType": "all", "stylers": [{ "saturation": -100 }, { "lightness": 45 }] }, { "featureType": "road.highway", "elementType": "all", "stylers": [{ "visibility": "simplified" }] }, { "featureType": "road.arterial", "elementType": "labels.icon", "stylers": [{ "visibility": "off" }] }, { "featureType": "transit", "elementType": "all", "stylers": [{ "visibility": "off" }] }, { "featureType": "water", "elementType": "all", "stylers": [{ "color": "#81a2be" }, { "visibility": "on" }] }]
         };
 
-        if (app.settings.$html.hasClass('touch')) {
+        if (document.documentElement.classList.contains('modernizr_touchevents')) {
             mapOptions.draggable = false;
         }
 
-        var mapElement = document.getElementById('google-maps');
-        app.googleMaps.settings.map = new google.maps.Map(mapElement, mapOptions);
+        app.googleMaps.settings.map = new google.maps.Map(app.googleMaps.settings.el, mapOptions);
 
         var geocoder = new google.maps.Geocoder();
 
@@ -4388,23 +4377,24 @@ app.googleMaps = {
 
     setMarkers: function setMarkers(map, marker) {
         var bounds = new google.maps.LatLngBounds();
-        // var markerIcon = new google.maps.MarkerImage("/res/assets/dist/img/maps-pointer.png", new google.maps.Size(12, 12), new google.maps.Point(0, 0), new google.maps.Point(6, 6));
+        // let markerIcon = new google.maps.MarkerImage("/res/assets/dist/img/maps-pointer.png", new google.maps.Size(12, 12), new google.maps.Point(0, 0), new google.maps.Point(6, 6));
 
-        $.each(app.googleMaps.markerData, function (marker, data) {
-            var index = marker;
-            var latLng = new google.maps.LatLng(data.lat, data.lng);
+
+        app.googleMaps.markerData.forEach(function (item, index, array) {
+            var latLng = new google.maps.LatLng(item.lat, item.lng);
+
             bounds.extend(latLng);
 
             // Creating a marker and putting it on the map
-            marker = new google.maps.Marker({
+            var marker = new google.maps.Marker({
                 position: latLng,
                 // icon: markerIcon,
                 map: map,
-                title: data.title
+                title: item.title
             });
 
             marker.infowindow = new google.maps.InfoWindow({
-                content: data.content
+                content: item.content
             });
 
             marker.addListener('click', function () {
