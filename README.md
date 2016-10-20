@@ -7,9 +7,9 @@ Install the Bower dependencies, see bower.json.
 	$ bower install
 
 #### Node dependencies
-Install the Node dependencies, see package.json.
+Install the Node dependencies, see package.json. You can use [npm](https://www.npmjs.com) or [yarn](https://yarnpkg.com).
 
-	$ npm install
+	$ npm/yarn install
 
 #### Start server
 Start the web server which is used by BrowserSync.
