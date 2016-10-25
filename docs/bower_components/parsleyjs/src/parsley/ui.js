@@ -33,7 +33,7 @@ ParsleyUI.Form = {
 
   _actualizeTriggers: function () {
     this.$element.on('submit.Parsley', evt => { this.onSubmitValidate(evt); });
-    this.$element.on('click.Parsley', 'input[type="submit"], button[type="submit"]', evt => { this.onSubmitButton(evt); });
+    this.$element.on('click.Parsley', ParsleyUtils._SubmitSelector, evt => { this.onSubmitButton(evt); });
 
     // UI could be disabled
     if (false === this.options.uiEnabled)
@@ -267,7 +267,11 @@ ParsleyUI.Field = {
     if ('undefined' !== typeof $handler && $handler.length)
       return $handler;
 
-    // Otherwise, if simple element (input, texatrea, select...) it will perfectly host the classes
+    return this._inputHolder();
+  },
+
+  _inputHolder: function() {
+    // if simple element (input, texatrea, select...) it will perfectly host the classes and precede the error container
     if (!this.options.multiple || this.$element.is('select'))
       return this.$element;
 
@@ -293,10 +297,7 @@ ParsleyUI.Field = {
     if ('undefined' !== typeof $errorsContainer && $errorsContainer.length)
       return $errorsContainer.append(this._ui.$errorsWrapper);
 
-    var $from = this.$element;
-    if (this.options.multiple)
-      $from = $from.parent();
-    return $from.after(this._ui.$errorsWrapper);
+    return this._inputHolder().after(this._ui.$errorsWrapper);
   },
 
   _actualizeTriggers: function () {

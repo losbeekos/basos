@@ -30,7 +30,7 @@
     "tag": "2.2.12",
     "commit": "edcded39bf4626b072d7768b70b26a9dfee02d17"
   },
-  "_source": "git://github.com/ericam/susy.git",
+  "_source": "https://github.com/ericam/susy.git",
   "_target": "~2.2.7",
   "_originalSource": "susy"
 }

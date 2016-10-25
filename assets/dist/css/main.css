@@ -2504,31 +2504,26 @@ There are two containers available, 'container' and 'container-beta'. These cont
 .flexbox-grid--top {
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
-              -ms-grid-row-align: flex-start;
           align-items: flex-start; }
 
 .flexbox-grid--middle {
   -webkit-align-items: center;
       -ms-flex-align: center;
-              -ms-grid-row-align: center;
           align-items: center; }
 
 .flexbox-grid--bottom {
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
-              -ms-grid-row-align: flex-end;
           align-items: flex-end; }
 
 .flexbox-grid--stretch {
   -webkit-align-items: stretch;
       -ms-flex-align: stretch;
-              -ms-grid-row-align: stretch;
           align-items: stretch; }
 
 .flexbox-grid--baseline {
   -webkit-align-items: baseline;
       -ms-flex-align: baseline;
-              -ms-grid-row-align: baseline;
           align-items: baseline; }
 
 .flexbox-grid--left {

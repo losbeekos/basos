@@ -910,7 +910,7 @@
 
 /*!
 * Parsley.js
-* Version 2.4.3 - built Sat, Jun 18th 2016, 9:01 pm
+* Version 2.4.4 - built Thu, Aug 4th 2016, 9:54 pm
 * http://parsleyjs.org
 * Guillaume Potier - <guillaume@wisembly.com>
 * Marc-Andre Lafortune - <petroselinum@marc-andre.ca>
@@ -1057,7 +1057,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         Object.prototype = null;
         return result;
       };
-    })()
+    })(),
+
+    _SubmitSelector: 'input[type="submit"], button:submit'
   };
 
   var ParsleyUtils__default = ParsleyUtils__ParsleyUtils;
@@ -1752,7 +1754,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       this.$element.on('submit.Parsley', function (evt) {
         _this2.onSubmitValidate(evt);
       });
-      this.$element.on('click.Parsley', 'input[type="submit"], button[type="submit"]', function (evt) {
+      this.$element.on('click.Parsley', ParsleyUtils__default._SubmitSelector, function (evt) {
         _this2.onSubmitButton(evt);
       });
 
@@ -1965,7 +1967,11 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       // If this function returned a valid existing DOM element, go for it
       if ('undefined' !== typeof $handler && $handler.length) return $handler;
 
-      // Otherwise, if simple element (input, texatrea, select...) it will perfectly host the classes
+      return this._inputHolder();
+    },
+
+    _inputHolder: function _inputHolder() {
+      // if simple element (input, texatrea, select...) it will perfectly host the classes and precede the error container
       if (!this.options.multiple || this.$element.is('select')) return this.$element;
 
       // But if multiple element (radio, checkbox), that would be their parent
@@ -1984,9 +1990,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
       if ('undefined' !== typeof $errorsContainer && $errorsContainer.length) return $errorsContainer.append(this._ui.$errorsWrapper);
 
-      var $from = this.$element;
-      if (this.options.multiple) $from = $from.parent();
-      return $from.after(this._ui.$errorsWrapper);
+      return this._inputHolder().after(this._ui.$errorsWrapper);
     },
 
     _actualizeTriggers: function _actualizeTriggers() {
@@ -2077,7 +2081,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       if (true === event.parsley) return;
 
       // If we didn't come here through a submit button, use the first one in the form
-      var $submitSource = this._$submitSource || this.$element.find('input[type="submit"], button[type="submit"]').first();
+      var $submitSource = this._$submitSource || this.$element.find(ParsleyUtils__default._SubmitSelector).first();
       this._$submitSource = null;
       this.$element.find('.parsley-synthetic-submit-button').prop('disabled', true);
       if ($submitSource.is('[formnovalidate]')) return;
@@ -2782,7 +2786,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
   ParsleyFactory.prototype = {
     init: function init(options) {
       this.__class__ = 'Parsley';
-      this.__version__ = '2.4.3';
+      this.__version__ = '2.4.4';
       this.__id__ = ParsleyUtils__default.generateID();
 
       // Pre-compute options
@@ -2904,7 +2908,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     actualizeOptions: null,
     _resetOptions: null,
     Factory: ParsleyFactory,
-    version: '2.4.3'
+    version: '2.4.4'
   });
 
   // Supplement ParsleyField and Form with ParsleyAbstract
@@ -3316,7 +3320,10 @@ Parsley.setLocale('nl');
     "function" == typeof define && define.amd ? // AMD. Register as an anonymous module unless amdModuleId is set
     define([], function() {
         return root.svg4everybody = factory();
-    }) : "object" == typeof exports ? module.exports = factory() : root.svg4everybody = factory();
+    }) : "object" == typeof exports ? // Node. Does not work with strict CommonJS, but
+    // only CommonJS-like environments that support module.exports,
+    // like Node.
+    module.exports = factory() : root.svg4everybody = factory();
 }(this, function() {
     /*! svg4everybody v2.1.0 | github.com/jonathantneal/svg4everybody */
     function embed(svg, target) {
@@ -3406,8 +3413,6 @@ Parsley.setLocale('nl');
     return svg4everybody;
 });
 'use strict';
-
-function _newArrowCheck(innerThis, boundThis) { if (innerThis !== boundThis) { throw new TypeError("Cannot instantiate an arrow function"); } }
 
 /**
  * Return the closest element matching a selector up the DOM tree
@@ -3619,11 +3624,7 @@ app.accordion = {
 	},
 
 	setGroupHeight: function setGroupHeight() {
-		var _this = this;
-
-		var groupDelegate = function (group) {
-			_newArrowCheck(this, _this);
-
+		var groupDelegate = function groupDelegate(group) {
 			var groupContent = group.querySelector('.accordion__content');
 
 			groupContent.setAttribute('style', '');
@@ -3632,17 +3633,13 @@ app.accordion = {
 
 			groupContent.setAttribute('data-accordion-content-height', contentHeight);
 			group.classList.contains(app.accordion.settings.contentShowClass) ? groupContent.style.maxHeight = contentHeight : groupContent.style.maxHeight = 0;
-		}.bind(this);
+		};
 
 		app.accordion.settings.group.forEach(groupDelegate);
 	},
 
 	toggler: function toggler() {
-		var _this2 = this;
-
-		var triggerEventHandler = function (trigger) {
-			_newArrowCheck(this, _this2);
-
+		var triggerEventHandler = function triggerEventHandler(trigger) {
 			trigger.addEventListener('click', function () {
 				var group = trigger.parentNode,
 				    content = trigger.nextElementSibling;
@@ -3654,7 +3651,7 @@ app.accordion = {
 					app.accordion.showGroup(trigger, content);
 				}
 			});
-		}.bind(this);
+		};
 
 		app.accordion.settings.trigger.forEach(triggerEventHandler);
 	},
@@ -3665,15 +3662,11 @@ app.accordion = {
 	},
 
 	hideGroup: function hideGroup(trigger) {
-		var _this3 = this;
-
 		var shownItem = document.querySelector('.accordion-content-show'),
 		    content = document.querySelectorAll('.accordion__content'),
-		    contentDelegate = function (content) {
-			_newArrowCheck(this, _this3);
-
+		    contentDelegate = function contentDelegate(content) {
 			return content.style.maxHeight = 0;
-		}.bind(this);
+		};
 
 		if (shownItem === null) {
 			trigger.classList.add(app.accordion.settings.contentShowClass);
@@ -3691,12 +3684,8 @@ app.affix = {
 	},
 
 	init: function init(_scrollTop) {
-		var _this4 = this;
-
 		if (app.affix.settings.el.length > 0) {
-			var delegate = function (affix) {
-				_newArrowCheck(this, _this4);
-
+			var delegate = function delegate(affix) {
 				var affixHeight = affix.offsetHeight;
 
 				if (affixHeight < app.settings.windowHeight) {
@@ -3704,7 +3693,7 @@ app.affix = {
 						app.affix.scroller(this.scrollY, affix);
 					};
 				}
-			}.bind(this);
+			};
 
 			app.affix.resizeWidth();
 			app.affix.updateOffsetTop(_scrollTop);
@@ -3745,11 +3734,7 @@ app.affix = {
 	},
 
 	updateOffsetTop: function updateOffsetTop(_scrollTop) {
-		var _this5 = this;
-
-		var delegate = function (affix) {
-			_newArrowCheck(this, _this5);
-
+		var delegate = function delegate(affix) {
 			var affixHeight = affix.offsetHeight,
 			    offsetTop = affix.getBoundingClientRect().top;
 
@@ -3761,35 +3746,27 @@ app.affix = {
 				affix.setAttribute('data-affix-offset', Math.round(offsetTop));
 				app.affix.scroller(_scrollTop, affix);
 			}
-		}.bind(this);
+		};
 
 		app.affix.settings.el.forEach(delegate);
 	},
 
 	resizeWidth: function resizeWidth() {
-		var _this6 = this;
-
-		var delegate = function (affix) {
-			_newArrowCheck(this, _this6);
-
+		var delegate = function delegate(affix) {
 			affix.classList.remove('affix--fixed');
 			affix.classList.remove('affix--absolute');
 			affix.style.top = '';
 			affix.style.width = '';
 			affix.style.width = affix.offsetWidth + 'px';
-		}.bind(this);
+		};
 
 		app.affix.settings.el.forEach(delegate);
 	}
 };
 app.btnDropdown = {
 	init: function init() {
-		var _this7 = this;
-
 		// Dropdown toggler
-		var toggleEventHandler = function (toggle) {
-			_newArrowCheck(this, _this7);
-
+		var toggleEventHandler = function toggleEventHandler(toggle) {
 			toggle.addEventListener('click', function (event) {
 				event.preventDefault();
 				event.stopPropagation();
@@ -3803,14 +3780,12 @@ app.btnDropdown = {
 					btnDropdown.classList.add('btn-dropdown--open');
 				}
 			});
-		}.bind(this);
+		};
 
 		document.querySelectorAll('[data-btn-dropdown-toggle]').forEach(toggleEventHandler);
 
 		// Do not close dropdown on dropdown content clicks
-		var dropdownEventHandler = function (btn) {
-			_newArrowCheck(this, _this7);
-
+		var dropdownEventHandler = function dropdownEventHandler(btn) {
 			btn.addEventListener('click', function (event) {
 				var allowProp = btn.getAttribute('data-btn-dropdown');
 
@@ -3818,16 +3793,14 @@ app.btnDropdown = {
 					event.stopPropagation();
 				}
 			});
-		}.bind(this);
+		};
 
 		document.querySelectorAll('.btn-dropdown__dropdown, .btn-dropdown__list').forEach(dropdownEventHandler);
 
 		// Close all dropdowns on escape keydown
-		var eventCloseDelegate = function (event) {
-			_newArrowCheck(this, _this7);
-
+		var eventCloseDelegate = function eventCloseDelegate(event) {
 			return app.btnDropdown.closeOpenDropdown();
-		}.bind(this);
+		};
 
 		document.onkeydown = function (event) {
 			if (event.keyCode === 27) {
@@ -3842,13 +3815,9 @@ app.btnDropdown = {
 	},
 
 	closeOpenDropdown: function closeOpenDropdown() {
-		var _this8 = this;
-
-		var openDelegate = function (openDropdown) {
-			_newArrowCheck(this, _this8);
-
+		var openDelegate = function openDelegate(openDropdown) {
 			openDropdown.classList.remove('btn-dropdown--open');
-		}.bind(this);
+		};
 
 		document.querySelectorAll('.btn-dropdown--open').forEach(openDelegate);
 	}
@@ -3860,12 +3829,8 @@ app.btnRipple = {
 	},
 
 	init: function init() {
-		var _this9 = this;
-
 		var btns = app.btnRipple.settings.ripple === true ? document.querySelectorAll('.btn') : $('.btn--ripple'),
-		    btnEventHandler = function (btn) {
-			_newArrowCheck(this, _this9);
-
+		    btnEventHandler = function btnEventHandler(btn) {
 			btn.addEventListener('click', function (event) {
 				var ripple = this.querySelector('.btn__ripple');
 
@@ -3886,7 +3851,7 @@ app.btnRipple = {
 
 				this.classList.add('btn--ripple-animate');
 			});
-		}.bind(this);
+		};
 
 		btns.forEach(btnEventHandler);
 	},
@@ -4012,12 +3977,8 @@ app.dropdowns = {
 	},
 
 	init: function init() {
-		var _this10 = this;
-
 		if (app.dropdowns.settings.el.length > 0) {
-			var dropdownDelegate = function (dropdown) {
-				_newArrowCheck(this, _this10);
-
+			var dropdownDelegate = function dropdownDelegate(dropdown) {
 				return dropdown.addEventListener('click', function (event) {
 					event.stopPropagation();
 
@@ -4025,7 +3986,7 @@ app.dropdowns = {
 						this.classList.toggle(app.dropdowns.settings.showClass);
 					}
 				});
-			}.bind(this);
+			};
 
 			app.dropdowns.settings.el.forEach(dropdownDelegate);
 
@@ -4042,14 +4003,10 @@ app.dropdowns = {
 	},
 
 	closeAllDropdowns: function closeAllDropdowns() {
-		var _this11 = this;
-
 		if (app.dropdowns.settings.el.length > 0) {
-			var closeDelegate = function (dropdown) {
-				_newArrowCheck(this, _this11);
-
+			var closeDelegate = function closeDelegate(dropdown) {
 				return dropdown.classList.remove('dropdown--show');
-			}.bind(this);
+			};
 
 			document.querySelectorAll('.dropdown').forEach(closeDelegate);
 		}
@@ -4061,20 +4018,14 @@ app.equalize = {
 	},
 
 	init: function init() {
-		var _this12 = this;
-
 		if (app.equalize.settings.el !== null) {
-			var equalizeDelegate = function (equalize) {
-				_newArrowCheck(this, _this12);
-
+			var equalizeDelegate = function equalizeDelegate(equalize) {
 				var currentHeight = 0,
 				    mediaQuery = equalize.getAttribute('data-equalize'),
 				    targets = equalize.querySelectorAll('[data-equalize-target]');
 
 				if (Modernizr.mq(app.mediaQueries[mediaQuery]) === true || app.mediaQueries[mediaQuery] === undefined) {
 					targets.forEach(function (target) {
-						_newArrowCheck(this, _this12);
-
 						var height = null;
 
 						target.style.height = 'auto';
@@ -4083,21 +4034,17 @@ app.equalize = {
 						if (height > currentHeight) {
 							currentHeight = height;
 						}
-					}.bind(this));
+					});
 
 					targets.forEach(function (target) {
-						_newArrowCheck(this, _this12);
-
 						return target.style.height = currentHeight + 'px';
-					}.bind(this));
+					});
 				} else {
 					targets.forEach(function (target) {
-						_newArrowCheck(this, _this12);
-
 						return target.style.height = 'auto';
-					}.bind(this));
+					});
 				}
-			}.bind(this);
+			};
 
 			app.equalize.settings.el.forEach(equalizeDelegate);
 		}
@@ -4219,11 +4166,7 @@ app.formModules = {
 	},
 
 	range: function range() {
-		var _this13 = this;
-
-		var rangeEventHandler = function (range) {
-			_newArrowCheck(this, _this13);
-
+		var rangeEventHandler = function rangeEventHandler(range) {
 			range.addEventListener('input', function () {
 				var id = this.getAttribute('id'),
 				    val = this.value,
@@ -4234,20 +4177,16 @@ app.formModules = {
 					range.innerHTML = measurement === undefined ? val : val + measurement;
 				}
 			});
-		}.bind(this);
+		};
 
 		app.formModules.settings.range.forEach(rangeEventHandler);
 	},
 
 	customFileInput: function customFileInput() {
-		var _this14 = this;
-
 		var fileInput = document.querySelectorAll('.form__file-input');
 
 		if (fileInput.length > 0) {
 			fileInput.forEach(function (input) {
-				_newArrowCheck(this, _this14);
-
 				var label = input.nextElementSibling,
 				    labelVal = label.innerHTML;
 
@@ -4260,25 +4199,17 @@ app.formModules = {
 
 				// Firefox bug fix
 				input.addEventListener('focus', function (el) {
-					_newArrowCheck(this, _this14);
-
 					return el.classList.add('has-focus');
-				}.bind(this));
+				});
 				input.addEventListener('blur', function (el) {
-					_newArrowCheck(this, _this14);
-
 					return el.classList.remove('has-focus');
-				}.bind(this));
-			}.bind(this));
+				});
+			});
 		}
 	},
 
 	password: function password() {
-		var _this15 = this;
-
-		var eventHandler = function (el) {
-			_newArrowCheck(this, _this15);
-
+		var eventHandler = function eventHandler(el) {
 			el.addEventListener('click', function () {
 				var $this = $(this),
 				    $formPassword = $this.closest('.form__input'),
@@ -4288,7 +4219,7 @@ app.formModules = {
 				$formInput.attr('type', formType === 'text' ? 'password' : 'text');
 				$formPassword.toggleClass(app.formModules.settings.passwordShowClass);
 			});
-		}.bind(this);
+		};
 
 		app.formModules.settings.passwordToggle.forEach(eventHandler);
 	},
@@ -4489,65 +4420,46 @@ app.googleMaps = {
 };
 app.groupCheckable = {
 	init: function init() {
-		var _this16 = this;
 
 		// Master checkbox
-		var checkableDelegate = function (checkable) {
-			_newArrowCheck(this, _this16);
-
+		var checkableDelegate = function checkableDelegate(checkable) {
 			return app.groupCheckable.toggleGroup(checkable);
-		}.bind(this);
+		};
 
-		document.querySelectorAll('[data-group-checkable').forEach(function (checkable) {
-			_newArrowCheck(this, _this16);
-
+		document.querySelectorAll('[data-group-checkable]').forEach(function (checkable) {
 			checkableDelegate(checkable);
 
 			checkable.addEventListener('change', function () {
-				_newArrowCheck(this, _this16);
-
 				return checkableDelegate(checkable);
-			}.bind(this));
-		}.bind(this));
+			});
+		});
 
 		// Target checkboxes
-		var delegateCheckedCount = function (target) {
-			_newArrowCheck(this, _this16);
-
+		var delegateCheckedCount = function delegateCheckedCount(target) {
 			return target.checked;
-		}.bind(this),
-		    delegateGroupCheckable = function (target) {
-			_newArrowCheck(this, _this16);
-
+		},
+		    delegateGroupCheckable = function delegateGroupCheckable(target) {
 			var group = target.getAttribute('data-group-checkable-target'),
 			    targets = [].slice.call(document.querySelectorAll('[data-group-checkable-target=' + group + ']')),
 			    trigger = document.querySelector('[data-group-checkable=' + group + ']'),
 			    checkedCount = targets.filter(delegateCheckedCount).length;
 
 			trigger.checked = targets.length === checkedCount ? 'checked' : '';
-		}.bind(this),
-		    checkableEventHandler = function (target) {
-			_newArrowCheck(this, _this16);
-
+		},
+		    checkableEventHandler = function checkableEventHandler(target) {
 			target.addEventListener('change', function (event) {
-				_newArrowCheck(this, _this16);
-
 				return delegateGroupCheckable(target);
-			}.bind(this));
-		}.bind(this);
+			});
+		};
 
 		document.querySelectorAll('[data-group-checkable-target]').forEach(checkableEventHandler);
 	},
 
 	toggleGroup: function toggleGroup(checkable) {
-		var _this17 = this;
-
 		var group = document.querySelectorAll('[data-group-checkable-target=' + checkable.getAttribute('data-group-checkable') + ']'),
-		    delegateGroup = function (checkbox) {
-			_newArrowCheck(this, _this17);
-
+		    delegateGroup = function delegateGroup(checkbox) {
 			return checkbox.checked = checkable.checked === true ? 'checked' : '';
-		}.bind(this);
+		};
 
 		// Check or uncheck boxes based on the checked state of the group checkbox.
 		group.forEach(delegateGroup);
@@ -4955,21 +4867,19 @@ app.notifications = {
 	},
 
 	init: function init() {
-		app.notifications.close();
-		// app.notifications.cookieLaw.init(); // Uncomment if you need the notification
+		var self = this;
+
+		self.close();
+		// self.cookieLaw.init(); // Uncomment if you need the notification
 	},
 
-	add: function add(target, message, size, type) {
-		var notification = document.createElement('div');
-
-		console.log('notification--${size}');
-		notification.classList.add('notification', 'notification--${size}', 'notification--${type}');
-		notification.innerHTML = message;
-
-		target.appendChild(notification);
+	add: function add(_target, _message, _size, _type) {
+		$(_target).html('<div class="notification notification--' + _size + ' notification--' + _type + '"><div class="notification__text">' + _message + '</div></div>');
 	},
 
 	close: function close() {
+		var self = this;
+
 		app.settings.$body.on('click', '[data-notification-close]', function (event) {
 			event.preventDefault();
 
@@ -4993,7 +4903,8 @@ app.notifications = {
 
 	cookieLaw: {
 		init: function init() {
-			var cookieValue = helper.cookies.read('cookieNotification'),
+			var self = this,
+			    cookieValue = helper.cookies.read('cookieNotification'),
 			    info = '';
 
 			if (cookieValue !== 'approved' && navigator.CookiesOK === undefined) {
@@ -5097,13 +5008,9 @@ app.responsiveImages = {
 	},
 
 	setBackgroundImage: function setBackgroundImage() {
-		var _this18 = this;
-
-		var setDelegate = function (el) {
-			_newArrowCheck(this, _this18);
-
+		var setDelegate = function setDelegate(el) {
 			return app.responsiveImages.setBackgroundImageStyle(el);
-		}.bind(this);
+		};
 
 		document.querySelectorAll('[data-responsive-bg-img]').forEach(setDelegate);
 	},
@@ -5361,30 +5268,22 @@ app.tabs = {
 	},
 
 	init: function init() {
-		var _this19 = this;
-
-		var tabsEventHandler = function (tab) {
-			_newArrowCheck(this, _this19);
-
+		var tabsEventHandler = function tabsEventHandler(tab) {
 			tab.addEventListener('click', function (event) {
-				var _this20 = this;
-
 				var item = document.querySelector(tab.getAttribute('href')),
 				    content = item.closest('.tab-content');
 
 				event.preventDefault();
 
 				app.tabs.settings.tab.forEach(function (tab) {
-					_newArrowCheck(this, _this20);
-
 					return tab.classList.remove('tab--active');
-				}.bind(this));
+				});
 				tab.classList.add('tab--active');
 
 				content.querySelector('.tab-item--active').classList.remove('tab-item--active');
 				item.classList.add('tab-item--active');
 			});
-		}.bind(this);
+		};
 
 		app.tabs.settings.tab.forEach(tabsEventHandler);
 	}
@@ -5395,17 +5294,13 @@ app.toggle = {
 	},
 
 	init: function init() {
-		var _this21 = this;
-
-		var toggleEventHandler = function (toggle) {
-			_newArrowCheck(this, _this21);
-
+		var toggleEventHandler = function toggleEventHandler(toggle) {
 			toggle.addEventListener('click', function (event) {
 				event.preventDefault();
 
 				app.toggle.toggler(document.querySelector(this.getAttribute('data-toggle')));
 			});
-		}.bind(this);
+		};
 
 		app.toggle.settings.el.forEach(toggleEventHandler);
 	},
@@ -5424,12 +5319,8 @@ app.tooltips = {
 	},
 
 	init: function init() {
-		var _this22 = this;
-
 		if (app.tooltips.settings.el.length > 0) {
-			var delegate = function (el) {
-				_newArrowCheck(this, _this22);
-
+			var delegate = function delegate(el) {
 				if (el.getAttribute('data-tooltip-trigger') === 'click' || document.documentElement.classList.contains('modernizr_touchevents')) {
 					app.tooltips.settings.tooltipTrigger = 'click';
 				} else {
@@ -5438,7 +5329,7 @@ app.tooltips = {
 
 				app.tooltips.triggers(el);
 				app.tooltips.appendContent(el);
-			}.bind(this);
+			};
 
 			app.tooltips.settings.el.forEach(delegate);
 		}

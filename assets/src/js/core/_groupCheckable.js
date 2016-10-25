@@ -4,7 +4,7 @@ app.groupCheckable = {
 		// Master checkbox
 		let checkableDelegate = checkable => app.groupCheckable.toggleGroup(checkable);
 
-		document.querySelectorAll('[data-group-checkable').forEach(checkable => {
+		document.querySelectorAll('[data-group-checkable]').forEach(checkable => {
 			checkableDelegate(checkable);
 
 			checkable.addEventListener('change', () => checkableDelegate(checkable));

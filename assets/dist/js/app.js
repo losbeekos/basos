@@ -910,7 +910,7 @@
 
 /*!
 * Parsley.js
-* Version 2.4.3 - built Sat, Jun 18th 2016, 9:01 pm
+* Version 2.4.4 - built Thu, Aug 4th 2016, 9:54 pm
 * http://parsleyjs.org
 * Guillaume Potier - <guillaume@wisembly.com>
 * Marc-Andre Lafortune - <petroselinum@marc-andre.ca>
@@ -1057,7 +1057,9 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
         Object.prototype = null;
         return result;
       };
-    })()
+    })(),
+
+    _SubmitSelector: 'input[type="submit"], button:submit'
   };
 
   var ParsleyUtils__default = ParsleyUtils__ParsleyUtils;
@@ -1752,7 +1754,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       this.$element.on('submit.Parsley', function (evt) {
         _this2.onSubmitValidate(evt);
       });
-      this.$element.on('click.Parsley', 'input[type="submit"], button[type="submit"]', function (evt) {
+      this.$element.on('click.Parsley', ParsleyUtils__default._SubmitSelector, function (evt) {
         _this2.onSubmitButton(evt);
       });
 
@@ -1965,7 +1967,11 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       // If this function returned a valid existing DOM element, go for it
       if ('undefined' !== typeof $handler && $handler.length) return $handler;
 
-      // Otherwise, if simple element (input, texatrea, select...) it will perfectly host the classes
+      return this._inputHolder();
+    },
+
+    _inputHolder: function _inputHolder() {
+      // if simple element (input, texatrea, select...) it will perfectly host the classes and precede the error container
       if (!this.options.multiple || this.$element.is('select')) return this.$element;
 
       // But if multiple element (radio, checkbox), that would be their parent
@@ -1984,9 +1990,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
 
       if ('undefined' !== typeof $errorsContainer && $errorsContainer.length) return $errorsContainer.append(this._ui.$errorsWrapper);
 
-      var $from = this.$element;
-      if (this.options.multiple) $from = $from.parent();
-      return $from.after(this._ui.$errorsWrapper);
+      return this._inputHolder().after(this._ui.$errorsWrapper);
     },
 
     _actualizeTriggers: function _actualizeTriggers() {
@@ -2077,7 +2081,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
       if (true === event.parsley) return;
 
       // If we didn't come here through a submit button, use the first one in the form
-      var $submitSource = this._$submitSource || this.$element.find('input[type="submit"], button[type="submit"]').first();
+      var $submitSource = this._$submitSource || this.$element.find(ParsleyUtils__default._SubmitSelector).first();
       this._$submitSource = null;
       this.$element.find('.parsley-synthetic-submit-button').prop('disabled', true);
       if ($submitSource.is('[formnovalidate]')) return;
@@ -2782,7 +2786,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
   ParsleyFactory.prototype = {
     init: function init(options) {
       this.__class__ = 'Parsley';
-      this.__version__ = '2.4.3';
+      this.__version__ = '2.4.4';
       this.__id__ = ParsleyUtils__default.generateID();
 
       // Pre-compute options
@@ -2904,7 +2908,7 @@ function _toConsumableArray(arr) { if (Array.isArray(arr)) { for (var i = 0, arr
     actualizeOptions: null,
     _resetOptions: null,
     Factory: ParsleyFactory,
-    version: '2.4.3'
+    version: '2.4.4'
   });
 
   // Supplement ParsleyField and Form with ParsleyAbstract
@@ -3316,7 +3320,10 @@ Parsley.setLocale('nl');
     "function" == typeof define && define.amd ? // AMD. Register as an anonymous module unless amdModuleId is set
     define([], function() {
         return root.svg4everybody = factory();
-    }) : "object" == typeof exports ? module.exports = factory() : root.svg4everybody = factory();
+    }) : "object" == typeof exports ? // Node. Does not work with strict CommonJS, but
+    // only CommonJS-like environments that support module.exports,
+    // like Node.
+    module.exports = factory() : root.svg4everybody = factory();
 }(this, function() {
     /*! svg4everybody v2.1.0 | github.com/jonathantneal/svg4everybody */
     function embed(svg, target) {
@@ -4419,7 +4426,7 @@ app.groupCheckable = {
 			return app.groupCheckable.toggleGroup(checkable);
 		};
 
-		document.querySelectorAll('[data-group-checkable').forEach(function (checkable) {
+		document.querySelectorAll('[data-group-checkable]').forEach(function (checkable) {
 			checkableDelegate(checkable);
 
 			checkable.addEventListener('change', function () {

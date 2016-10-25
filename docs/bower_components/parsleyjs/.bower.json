@@ -37,12 +37,12 @@
   "license": "MIT",
   "main": "dist/parsley.js",
   "homepage": "https://github.com/guillaumepotier/Parsley.js",
-  "version": "2.4.3",
-  "_release": "2.4.3",
+  "version": "2.4.4",
+  "_release": "2.4.4",
   "_resolution": {
     "type": "version",
-    "tag": "2.4.3",
-    "commit": "099e30e3870767834a0ceed84b1cae573840fa49"
+    "tag": "2.4.4",
+    "commit": "29b8a31e7b16a82b8fad4ba1e9c953db505c4c31"
   },
   "_source": "https://github.com/guillaumepotier/Parsley.js.git",
   "_target": "~2.4.3",

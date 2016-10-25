@@ -29,12 +29,12 @@
     "dist/svg4everybody.js",
     "dist/svg4everybody.legacy.js"
   ],
-  "version": "2.1.0",
-  "_release": "2.1.0",
+  "version": "2.1.1",
+  "_release": "2.1.1",
   "_resolution": {
     "type": "version",
-    "tag": "v2.1.0",
-    "commit": "79e188a4710006540c24f3360c8feffdaba9a6e9"
+    "tag": "v2.1.1",
+    "commit": "77348e395d11d8904b7db6fb49604a1d3fe19a21"
   },
   "_source": "https://github.com/jonathantneal/svg4everybody.git",
   "_target": "~2.1.0",
