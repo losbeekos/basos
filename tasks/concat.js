@@ -1,9 +1,8 @@
 module.exports = {
 	app: {
 		options: {
-			sourceMap: false,
-			// sourceMap: true,
-			// sourceMapStyle: 'link'
+			sourceMap: true,
+			sourceMapStyle: 'inline'
 		}, 
 
 		src: [
@@ -19,6 +18,11 @@ module.exports = {
 	},
 
 	all: {
+		options: {
+			sourceMap: true,
+			sourceMapStyle: 'inline'
+		},
+
 		src: [
 			'bower_components/fastclick/lib/fastclick.js',
 			'bower_components/fitvids/jquery.fitvids.js',

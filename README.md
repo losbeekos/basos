@@ -7,7 +7,7 @@ Install the Bower dependencies, see bower.json.
 	$ bower install
 
 #### Node dependencies
-Install the Node dependencies, see package.json. You can use [npm](https://www.npmjs.com) or [yarn](https://yarnpkg.com).
+Install the Node dependencies by either using [npm](https://www.npmjs.com) or [yarn](https://yarnpkg.com). See package.json for details. 
 
 	$ npm/yarn install
 

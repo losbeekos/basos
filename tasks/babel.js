@@ -1,6 +1,6 @@
 module.exports = {
 	options: {
-		sourceMap: false,
+		sourceMap: 'inline',
 		presets: ['es2015']
 	},
 

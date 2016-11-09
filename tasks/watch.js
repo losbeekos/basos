@@ -28,6 +28,6 @@ module.exports = {
 
 	images: {
 		files: ['<%= basos.src %>/img/**/*'],
-		tasks: ['clean:images', 'copy:images']
+		tasks: ['clean:images', 'copy:images', 'svg_sprite']
 	}
 }
